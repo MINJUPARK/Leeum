@@ -1,0 +1,80 @@
+// 반응형과 관련된 중단점 설정
+@mixin responsive($break) {
+    @if $break == mobile-screens {
+        @media screen and (min-width:$break-mobile) {
+            @content;
+        }
+    }
+
+    @else if $break == tablet-screens {
+        @media screen and(min-width:$break-tablet) {
+            @content;
+        }
+    }
+
+    @else if $break == pc-screens {
+        @media screen and(min-width:$break-pc) {
+            @content;
+        }
+    }
+}
+
+// 폰트설정 1) pretendard JP : light(200), Regular(400), Medium(500), SemiBold(600), Bold(700) 
+@mixin gothic_font($family, $size: 16px) {
+    font-size: $size;
+
+    @if ($family == light)    { font-weight: 200; }
+    @if ($family == regular)  { font-weight: 400; }
+    @if ($family == medium)   { font-weight: 500; }
+    @if ($family == semibold) { font-weight: 600; }
+    @if ($family == bold)     { font-weight: 700; }
+}
+
+// 폰트설정 2) kopubBatang : light(300), Medium(400), Bold(700)
+@mixin batang_font($weight, $size: 16px) {
+    font-family: 'KoPub Batang';
+    font-size: $size;
+
+    @if($weight == light)  { font-weight: 300; }
+    @if($weight == medium) { font-weight: 400; }
+    @if($weight == bold)   { font-weight: 700; }
+
+}
+
+@mixin flex_between() {
+    display: flex;
+    justify-content: space-between;
+}
+
+// 영역에 맞게 배경 채우기
+@mixin full_bg($url) {
+    background: url(#{$imgPath}#{$url});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+// 요소 정중앙 정렬 (상위 태그에 relative 선언 필수)
+@mixin element_center() {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 검정색 오버레이 적용
+@mixin overlay_bk($opacity) {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, $opacity);   
+}
+
+// 아이콘 회전 (클래스 이름 : active, toggleclass 와 함께 사용)
+@mixin icon_rotate($deg) {
+    transition: .3s;
+
+    &.active {
+        transform: rotate($deg);
+    }
+}

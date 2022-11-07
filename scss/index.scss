@@ -1,0 +1,15 @@
+@charset 'utf-8';
+@import './style.scss';
+@import './common.scss';
+@import './mixin.scss';
+@import './mixin_header.scss'; 
+@import './mixin_footer.scss';
+
+header {
+    @include header_common();
+    @include header_sub();
+}
+
+footer {
+    @include footer();
+}
