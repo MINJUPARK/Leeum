@@ -178,7 +178,7 @@
             </div>
         </div>
         <div class="sub-title">
-            <p class="eng">location</p>
+            <p class="eng">about map</p>
             <h2 class="kor">오시는 길</h2>
         </div>
         <div class="breadcrumb-wrap">
@@ -200,13 +200,13 @@
                     </li>
                     <li class="loc">
                         <div class="step">
-                            <a href="">오시는 길</a><img src="/image/icon_dropdown.svg" class="dropdown">
+                            <a href="">관람 안내</a><img src="/image/icon_dropdown.svg" class="dropdown">
                         </div>
                         <ul class="opt">
                             <li><a href="../about/about_intro.html">미술관 소개</a></li>
-                            <li><a href="../about/about_guide.html">관람 안내</a></li>
+                            <li><a href="../about/about_guide.html" class="on">관람 안내</a></li>
                             <li><a href="../about/about_facility.html">시설 안내</a></li>
-                            <li><a href="../about/about_map.html" class="on">오시는 길</a></li>
+                            <li><a href="../about/about_map.html">오시는 길</a></li>
                             <li><a href="../about/about_membership.html">리움 멤버십</a></li>
                         </ul>
                     </li>
@@ -215,9 +215,25 @@
         </div>
     </header>
     <main>
-        <section>
-
-        </section>
+        <div class="map-wrap">
+            <div class="container">
+                <h2>오시는 길</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.7073603597432!2d126.99707631531098!3d37.53839507980321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca31be3dcde53%3A0xfbec8b809878a1bb!2z66as7JuA66-47Iig6rSA!5e0!3m2!1sko!2skr!4v1667886967100!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="way">
+                    <div class="own-car">
+                        <img src="./image/icon_car.svg" alt="승용차 아이콘">
+                        <address>서울특별시 용산구 이태원로 55길 60-16 (한남동, 리움미술관)</address>
+                        <a href="tel:02-2014-6901">
+                            <img src="" alt="전화아이콘">
+                            02-2014-6901</a>
+                    </div>
+                    <div class="public-transport">
+                        <img src="./image/icon_bus.svg" alt="버스 아이콘">
+                        <p><span class="subway-num">6</span><span class="subway-txt">한강진역</span> 1번 출구에서 이태원 방향으로 100m 이동 후, 오른쪽 첫번째 골목에서 우회전하여 언덕길로 약 5분 정도 올라옵니다.</p>
+                    </div>
+                </div> <!-- way -->
+            </div> <!-- container -->
+        </div> <!-- map-wrap -->
     </main>
     <footer>
         <div class="sitemap-banner-wrap">
