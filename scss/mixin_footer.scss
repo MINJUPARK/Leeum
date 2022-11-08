@@ -69,7 +69,7 @@
                 }
                 .banner-box {
                     width: 360px; height: 230px;
-                    @include full_bg('footer_membership_banner.png');
+                    @include full_bg('footer_membership_banner.png', '/image/');
     
                     .banner-txt-wrap {
                         position: relative;
@@ -182,7 +182,7 @@
     
     
     .leeum-info-wrap {
-        @include full_bg('footer_bg_pattern_v2.png');
+        @include full_bg('footer_bg_pattern.png','/image/');
         background-position: -700px 0;
         background-color: #000;
         padding: 40px 0 30px;
@@ -214,9 +214,11 @@
             }
     
             .place {
+                
                 h5 {
                     display: inline-block;
                 }
+
                 @include responsive(tablet-screens) {
                     width: calc((480/1400)*100%);
                 }

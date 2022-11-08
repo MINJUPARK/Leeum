@@ -1,11 +1,7 @@
 $(document).ready(function() {
 
-    // a 링크 모두 target="_blank" 적용
-    var a = document.getElementsByTagName('a'); 
-
-    for(var i = 0; i < a.length; i++) { 
-        a[i].target = "_blank"; 
-    }
+    // 특정 a 링크만 blank 적용
+    $('.mini-menu a, .reserve, footer a').attr('target', '_blank');
 
     // 모바일 메뉴
     $('.mobile-menu-popup').hide();

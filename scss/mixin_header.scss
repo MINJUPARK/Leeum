@@ -1,4 +1,4 @@
-@mixin header_common() { // 모든 페이지 공통 헤더 (수정 금지)
+@mixin header_common() {
     
     position: relative;
     height: 280px;
@@ -38,7 +38,7 @@
             .logo {
 
                 a {
-                    @include full_bg('logo_leeum_horizon.svg');
+                    @include full_bg('logo_leeum_horizon.svg', '/image/');
                     width: 100px; height: 30px;
 
                     @include responsive(pc-screens) {
@@ -143,9 +143,9 @@
                                     a {
                                         width: 24px; height: 24px;
 
-                                        &.login   { @include full_bg('icon_user.svg'); }
-                                        &.reserve { @include full_bg('icon_reserve.svg'); width: 32px; }
-                                        &.search  { @include full_bg('icon_search.svg'); filter: $svg-white; }
+                                        &.login   { @include full_bg('icon_user.svg', '/image/'); }
+                                        &.reserve { @include full_bg('icon_reserve.svg', '/image/'); width: 32px; }
+                                        &.search  { @include full_bg('icon_search.svg', '/image/'); filter: $svg-white; }
                                     }
                                 }
 
@@ -333,9 +333,7 @@
     }
 }
 
-@mixin header_sub() { // 서브 페이지 헤더 요소 (전체 배경만 변경, ★ 표시)
-
-    @include full_bg('header_antique.jpg'); // ★ 
+@mixin header_sub() {
 
     .sub-title {
         @include element_center();
@@ -376,7 +374,7 @@
                     border-top: 0; border-bottom: 0;
 
                     a {
-                        @include full_bg('icon_home.svg');
+                        @include full_bg('icon_home.svg', '/image/');
                         width: 18px; height: 18px;
                         vertical-align: middle;
                     }

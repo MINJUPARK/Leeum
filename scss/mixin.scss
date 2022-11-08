@@ -47,7 +47,7 @@
 }
 
 // 영역에 맞게 배경 채우기
-@mixin full_bg($url) {
+@mixin full_bg($url, $imgPath: '../image/') {
     background: url(#{$imgPath}#{$url});
     background-repeat: no-repeat;
     background-position: center;
@@ -78,3 +78,5 @@
         transform: rotate($deg);
     }
 }
+
+/* ---------------------------------------------------------- */
