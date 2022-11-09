@@ -8,9 +8,37 @@
 header {
     @include header_common();
 
-    // @include full_bg('header_antique.jpg');
+    #logo-menu .logo a {
+        @include full_bg('logo_leeum_horizon.svg'); 
+    }
+
+    #icon-menu li a {
+        &.login   { @include full_bg('icon_user.svg'); }
+        &.reserve { @include full_bg('icon_reserve.svg'); }
+        &.search  { @include full_bg('icon_search.svg'); }
+    }
 }
 
 footer {
     @include footer();
+    
+    .leeum-info-wrap {
+        @include full_bg('footer_bg_pattern.png', '../image/');
+        @include footer_bg();
+    }
+
+    .site-info #i2 {
+
+        @include responsive(pc-screens) {
+
+            select[name=family] {
+                background: url('../image/icon_arrow.svg') no-repeat right 20px center;
+                @include familySite();
+            }
+        }
+    }
+
+    #banner-box {
+        @include full_bg('footer_membership_banner.png', '../image/');
+    }
 }

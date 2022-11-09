@@ -65,7 +65,7 @@
                 }
                 .banner-box {
                     width: 360px; height: 230px;
-                    @include full_bg('footer_membership_banner.png', '/image/');
+                    @include full_bg('footer_membership_banner.png', '../../../image/');
     
                     .banner-txt-wrap {
                         position: relative;
@@ -157,11 +157,8 @@
                     display: inline-block;
     
                     select[name=family] {
-                        width: 160px; height: 40px;
-                        padding: 0 20px;
-                        background: url('/image/icon_arrow.svg') no-repeat right 20px center;
-                        background-size: 10px;
-                        filter: $svg-black;
+                        background: url('../../../image/icon_arrow.svg') no-repeat right 20px center;
+                        @include familySite();
                     }
                 }
             }
@@ -178,21 +175,8 @@
     
     
     .leeum-info-wrap {
-        @include full_bg('footer_bg_pattern.png','/image/');
-        background-position: -700px 0;
-        background-color: #000;
-        padding: 40px 0 30px;
-    
-        @include responsive(tablet-screens) {
-            background-position-x: 0;
-            background-position: center;
-            background-size: 1920px;
-        }
-    
-        @include responsive(pc-screens) {
-            height: 280px;
-            padding: 65px 0 90px;
-        }
+        @include full_bg('footer_bg_pattern.png','../../../image/');
+        @include footer_bg();
     
         .leeum-info {
             @include flex_between();
@@ -276,5 +260,28 @@
                 }
             }
         }
+    }
+}
+
+@mixin familySite() {
+    background-size: 10px;
+    filter: $svg-black;
+    width: 160px; height: 40px;
+    padding: 0 20px;
+}
+@mixin footer_bg() {
+    background-position: -700px 0;
+    background-color: #000;
+    padding: 40px 0 30px;
+
+    @include responsive(tablet-screens) {
+        background-position-x: 0;
+        background-position: center;
+        background-size: 1920px;
+    }
+
+    @include responsive(pc-screens) {
+        height: 280px;
+        padding: 65px 0 90px;
     }
 }

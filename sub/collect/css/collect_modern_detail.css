@@ -25,9 +25,16 @@ body {
   letter-spacing: -0.04em;
 }
 
-main {
-  padding-top: 120px;
-  padding-bottom: 200px;
+header {
+  margin-bottom: 6%;
+}
+
+section > h2 {
+  font-size: 0;
+}
+
+footer {
+  margin-top: 12%;
 }
 
 ul, ol {
@@ -49,11 +56,25 @@ img {
   vertical-align: middle;
 }
 
+address {
+  font-style: normal;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 select {
+  background: url("/image/icon_arrow.svg") no-repeat right 20px center;
+  background-size: 10px;
+  filter: brightness(0) saturate(100%);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 5px;
 }
 select::-ms-expand {
   display: none;
@@ -63,16 +84,8 @@ textarea {
   resize: none;
 }
 
-address {
-  font-style: normal;
-}
-
-button {
-  cursor: pointer;
-}
-
-input:focus {
-  outline: none;
+input, button, select, textarea {
+  border-radius: 5px;
 }
 
 h1 {
@@ -150,11 +163,11 @@ header .logo-menu-wrap .logo-menu {
   }
 }
 header .logo-menu-wrap .logo-menu .logo a {
-  background: url(/image/logo_leeum_horizon.svg);
+  background: url(../../../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 100px;
+  width: 102px;
   height: 30px;
 }
 @media screen and (min-width: 1440px) {
@@ -260,20 +273,20 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     height: 24px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.login {
-    background: url(/image/icon_user.svg);
+    background: url(../../../image/icon_user.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.reserve {
-    background: url(/image/icon_reserve.svg);
+    background: url(../../../image/icon_reserve.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 32px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.search {
-    background: url(/image/icon_search.svg);
+    background: url(../../../image/icon_search.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -511,7 +524,7 @@ header .breadcrumb-wrap {
     border-bottom: 0;
   }
   header .breadcrumb-wrap .breadcrumb .home a {
-    background: url(/image/icon_home.svg);
+    background: url(../../../image/icon_home.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -561,11 +574,6 @@ header .breadcrumb-wrap {
   }
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 @media screen and (min-width: 1440px) {
   footer {
     position: static;
@@ -631,7 +639,7 @@ footer .sitemap-banner-wrap {
   footer .sitemap-banner-wrap .sob .banner-box {
     width: 360px;
     height: 230px;
-    background: url(/image/footer_membership_banner.png);
+    background: url(../../../image/footer_membership_banner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -734,12 +742,12 @@ footer .site-info-wrap .site-info .i2 {
     display: inline-block;
   }
   footer .site-info-wrap .site-info .i2 select[name=family] {
+    background: url("../../../image/icon_arrow.svg") no-repeat right 20px center;
+    background-size: 10px;
+    filter: brightness(0) saturate(100%);
     width: 160px;
     height: 40px;
     padding: 0 20px;
-    background: url("/image/icon_arrow.svg") no-repeat right 20px center;
-    background-size: 10px;
-    filter: brightness(0) saturate(100%);
   }
 }
 footer .site-info-wrap .site-info .contact {
@@ -751,7 +759,7 @@ footer .site-info-wrap .site-info .contact {
   }
 }
 footer .leeum-info-wrap {
-  background: url(/image/footer_bg_pattern.png);
+  background: url(../../../image/footer_bg_pattern.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

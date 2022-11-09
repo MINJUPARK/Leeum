@@ -7,9 +7,9 @@
 header {
     @include header_common();
     @include full_bg('intro_header.png');
-    height: 100vh;
+    height: 100vh !important;
 
     &:before {
-        background-color: transparent;
+        background: transparent;
     }
 }
