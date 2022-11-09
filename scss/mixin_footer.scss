@@ -1,8 +1,4 @@
 @mixin footer() { // 모든 페이지 공통 푸터 (수정 금지)
-    
-    @include responsive(pc-screens) {
-        position: static;
-    }
 
     .sitemap-banner-wrap {
         display: none;
@@ -269,6 +265,7 @@
     width: 160px; height: 40px;
     padding: 0 20px;
 }
+
 @mixin footer_bg() {
     background-position: -700px 0;
     background-color: #000;
