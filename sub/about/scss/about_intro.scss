@@ -2,3 +2,14 @@
 @import '../../../scss/style.scss';
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
+@import '../../../scss/mixin_header.scss';
+
+header {
+    @include header_common();
+    @include full_bg('intro_header.png');
+    height: 100vh;
+
+    &:before {
+        background-color: transparent;
+    }
+}
