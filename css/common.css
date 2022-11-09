@@ -24,6 +24,10 @@ body {
   letter-spacing: -0.04em;
 }
 
+section > h2 {
+  font-size: 0;
+}
+
 main {
   padding-top: 120px;
   padding-bottom: 200px;
@@ -48,11 +52,22 @@ img {
   vertical-align: middle;
 }
 
+address {
+  font-style: normal;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 5px;
 }
 select::-ms-expand {
   display: none;
@@ -62,16 +77,8 @@ textarea {
   resize: none;
 }
 
-address {
-  font-style: normal;
-}
-
-button {
-  cursor: pointer;
-}
-
-input:focus {
-  outline: none;
+input, button, select, textarea {
+  border-radius: 5px;
 }
 
 h1 {

@@ -1,9 +1,5 @@
 @mixin footer() { // 모든 페이지 공통 푸터 (수정 금지)
     
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    
     @include responsive(pc-screens) {
         position: static;
     }

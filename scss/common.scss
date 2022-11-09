@@ -29,9 +29,16 @@ body {
     letter-spacing: -0.04em;
 }
 
-main {
-    padding-top: 120px;
-    padding-bottom: 200px;
+header {
+    margin-bottom: 6%;
+}
+
+section > h2 {
+    font-size: 0;
+}
+
+footer {
+    margin-top: 12%;
 }
 
 ul, ol {
@@ -54,7 +61,23 @@ img {
     vertical-align: middle;
 }
 
+address {
+    font-style: normal;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
 select {
+    background: url('/image/icon_arrow.svg') no-repeat right 20px center;
+    background-size: 10px;
+    filter: $svg-black;
+
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
@@ -62,24 +85,15 @@ select {
     &::-ms-expand {
         display:none;
     }
-
-    border-radius: 5px;
+    
 }
 
 textarea {
     resize: none;
 }
 
-address {
-    font-style: normal;
-}
-
-button {
-    cursor: pointer;
-}
-
-input:focus {
-    outline: none;
+input, button, select, textarea {
+    border-radius: 5px;
 }
 
 h1 { font-size: 46px; }

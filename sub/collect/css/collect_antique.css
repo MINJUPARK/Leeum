@@ -25,9 +25,16 @@ body {
   letter-spacing: -0.04em;
 }
 
-main {
-  padding-top: 120px;
-  padding-bottom: 200px;
+header {
+  margin-bottom: 5%;
+}
+
+section > h2 {
+  font-size: 0;
+}
+
+footer {
+  margin-top: 10%;
 }
 
 ul, ol {
@@ -49,11 +56,25 @@ img {
   vertical-align: middle;
 }
 
+address {
+  font-style: normal;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 select {
+  background: url("/image/icon_arrow.svg") no-repeat right 20px center;
+  background-size: 10px;
+  filter: brightness(0) saturate(100%);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 5px;
 }
 select::-ms-expand {
   display: none;
@@ -63,16 +84,8 @@ textarea {
   resize: none;
 }
 
-address {
-  font-style: normal;
-}
-
-button {
-  cursor: pointer;
-}
-
-input:focus {
-  outline: none;
+input, button, select, textarea {
+  border-radius: 5px;
 }
 
 h1 {
@@ -561,11 +574,6 @@ header .breadcrumb-wrap {
   }
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 @media screen and (min-width: 1440px) {
   footer {
     position: static;
