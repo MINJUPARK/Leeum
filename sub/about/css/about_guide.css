@@ -123,7 +123,7 @@ header {
   height: 280px;
   padding-top: 30px;
   /* 모바일 메뉴 팝업 */
-  background: url(../image/header_guide.jpg);
+  background: url(../image/../image/header_guide.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -302,7 +302,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -568,6 +577,77 @@ header .breadcrumb-wrap {
   header .breadcrumb-wrap .breadcrumb .loc ul.opt li a.on {
     font-weight: bold;
   }
+}
+
+main .fee-time-wrap h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #ac3f21;
+}
+@media screen and (min-width: 768px) {
+  main .fee-time-wrap h3 {
+    border-left-width: 5px;
+  }
+}
+main .fee-time-wrap .fee-time {
+  margin-top: 90px;
+}
+main .fee-time-wrap .fee-time .time {
+  margin-bottom: 60px;
+}
+main .fee-time-wrap .fee-time .time p {
+  font-size: 16px;
+  font-weight: 600;
+}
+main .fee-time-wrap .fee-time .time p b {
+  color: #f44321;
+}
+main .fee-time-wrap .fee-time .time span {
+  color: #3c3c3c;
+}
+main .fee-time-wrap .fee-time .fee table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid #5c5c5c;
+  border-bottom: 1px solid #5c5c5c;
+}
+main .fee-time-wrap .fee-time .fee table th, main .fee-time-wrap .fee-time .fee table td {
+  padding: 20px 0;
+  border-left: 1px solid #c5c5c5;
+}
+main .fee-time-wrap .fee-time .fee table th:first-child, main .fee-time-wrap .fee-time .fee table td:first-child {
+  border-left: 0;
+}
+main .fee-time-wrap .fee-time .fee table th {
+  width: 25%;
+  background-color: #f3f3f3;
+}
+main .fee-time-wrap .fee-time .fee table th:first-child {
+  width: 50%;
+}
+main .fee-time-wrap .fee-time .fee table th span {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .fee-time-wrap .fee-time .fee table th span {
+    display: inline;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .fee-time-wrap .fee-time .fee table th br {
+    display: none;
+  }
+}
+main .fee-time-wrap .fee-time .fee table td {
+  text-align: center;
+  border-top: 1px solid #c5c5c5;
+}
+main .fee-time-wrap .fee-time .fee table td span {
+  color: #5c5c5c;
+}
+main .fee-time-wrap .fee-time .ticketing {
+  margin-top: 60px;
 }
 
 footer .sitemap-banner-wrap {
