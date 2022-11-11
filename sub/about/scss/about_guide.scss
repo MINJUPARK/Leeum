@@ -9,7 +9,101 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_guide.jpg');
+    @include full_bg('../image/header_guide.png');
+}
+
+main {
+
+    .fee-time-wrap {
+        
+        h3 {
+            font-size: 20px;
+            margin-bottom: 20px ;
+            padding-left: 20px;
+            border-left: 3px solid $red-brown;
+
+            @include responsive (tablet-screens) {
+            border-left-width: 5px;
+            }
+        }
+
+        .fee-time {
+            margin-top: 90px;
+             
+            .time {
+                margin-bottom: 60px;
+                
+                p {
+
+                    @include gothic_font(semibold);
+
+                    b {
+                        color: #f44321;
+                    }
+                }
+                
+                span {
+                    color: $bk1;
+                }
+            } // time
+            
+            .fee {
+    
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    border-top: 1px solid $bk2;
+                    border-bottom: 1px solid $bk2;
+    
+                    th, td {
+                        padding: 20px 0;
+                        border-left: 1px solid $bk4;
+                        
+                        &:first-child {
+                            border-left: 0;
+                        }
+                    }
+                    
+                    th {
+                        width: 25%;
+                        background-color: $bk5;
+                        
+                        &:first-child {
+                            width: 50%;
+                        }
+                        
+                        span {
+                            display: none;
+    
+                            @include responsive (pc-screens) {
+                                display: inline;
+                            }
+                        }
+                        
+                        br {
+    
+                            @include responsive (pc-screens) {
+                                display: none;
+                            }
+                        }
+                    }
+                    
+                    td {
+                        text-align: center;
+                        border-top: 1px solid $bk4;
+                        
+                        span {
+                            color: $bk2;
+                        }
+                    }
+                }
+            } // fee
+
+            .ticketing {
+                margin-top: 60px;
+            }
+        } // fee-time
+    } // fee-time-wrap
 }
 
 footer {

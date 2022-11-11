@@ -36,12 +36,21 @@ header {
 
 main {
   margin-bottom: 12%;
+<<<<<<< HEAD
 }
 
 section > h2 {
   font-size: 0;
 }
 
+=======
+}
+
+section > h2 {
+  font-size: 0;
+}
+
+>>>>>>> ae9c90cfed5e32fb758ab66f517efaa8ded58aaf
 ul, ol {
   list-style: none;
   -webkit-padding-start: 0;
@@ -312,7 +321,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
