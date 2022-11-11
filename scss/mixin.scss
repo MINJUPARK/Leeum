@@ -47,7 +47,11 @@
 }
 
 // 영역에 맞게 배경 채우기
-@mixin full_bg($url, $imgPath: '../image/') {
+@mixin full_bg($url, $imgPath: sub) {
+
+    @if ($imgPath == sub)   { $imgPath: '../image/'; }      // (기본) 서브 페이지 전용 이미지일 때 
+    @if ($imgPath == index) { $imgPath: '../../../image/'; } // (매개변수 필수) 공통으로 사용하는 아미지일 때
+
     background: url(#{$imgPath}#{$url});
     background-repeat: no-repeat;
     background-position: center;

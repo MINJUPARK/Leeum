@@ -23,7 +23,7 @@ footer {
     @include footer();
     
     .leeum-info-wrap {
-        @include full_bg('footer_bg_pattern.png', '../image/');
+        @include full_bg('footer_bg_pattern.png');
         @include footer_bg();
     }
 
@@ -39,6 +39,6 @@ footer {
     }
 
     #banner-box {
-        @include full_bg('footer_membership_banner.png', '../image/');
+        @include full_bg('footer_membership_banner.png');
     }
 }

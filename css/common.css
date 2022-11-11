@@ -23,7 +23,7 @@ html, body {
   height: 100%;
 }
 
-body {
+body, button, input {
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   letter-spacing: -0.04em;
@@ -43,13 +43,13 @@ section > h2 {
 
 ul, ol {
   list-style: none;
+  -webkit-padding-start: 0;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
   color: black;
-  cursor: pointer;
 }
 a:hover {
   font-weight: bold;
@@ -64,18 +64,28 @@ address {
   font-style: normal;
 }
 
+button {
+  border: 0;
+}
+
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  zoom: 1.2;
+}
 input:focus {
   outline: none;
 }
 
-button {
+a, input, button, select, label {
   cursor: pointer;
 }
 
+input, select {
+  border: 1px solid #acacac;
+  color: #5c5c5c;
+}
+
 select {
-  background: url("/image/icon_arrow.svg") no-repeat right 20px center;
-  background-size: 10px;
-  filter: brightness(0) saturate(100%);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

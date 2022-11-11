@@ -10,28 +10,6 @@
   padding: 0 20px;
 }
 
-#wrapper {
-  height: auto;
-  min-height: 100%;
-  padding-bottom: 350px;
-}
-@media screen and (min-width: 1440px) {
-  #wrapper {
-    padding-bottom: 650px;
-  }
-}
-
-footer {
-  position: relative;
-  height: 350px;
-  transform: translateY(-100%);
-}
-@media screen and (min-width: 1440px) {
-  footer {
-    height: 650px;
-  }
-}
-
 .hidden {
   display: none !important;
 }
@@ -46,7 +24,7 @@ html, body {
   height: 100%;
 }
 
-body {
+body, button, input {
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   letter-spacing: -0.04em;
@@ -56,23 +34,23 @@ header {
   margin-bottom: 6%;
 }
 
+main {
+  margin-bottom: 12%;
+}
+
 section > h2 {
   font-size: 0;
 }
 
-footer {
-  margin-top: 12%;
-}
-
 ul, ol {
   list-style: none;
+  -webkit-padding-start: 0;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
   color: black;
-  cursor: pointer;
 }
 a:hover {
   font-weight: bold;
@@ -87,18 +65,28 @@ address {
   font-style: normal;
 }
 
+button {
+  border: 0;
+}
+
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  zoom: 1.2;
+}
 input:focus {
   outline: none;
 }
 
-button {
+a, input, button, select, label {
   cursor: pointer;
 }
 
+input, select {
+  border: 1px solid #acacac;
+  color: #5c5c5c;
+}
+
 select {
-  background: url("/image/icon_arrow.svg") no-repeat right 20px center;
-  background-size: 10px;
-  filter: brightness(0) saturate(100%);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -582,7 +570,7 @@ header .breadcrumb-wrap {
     padding: 0 20px;
   }
   header .breadcrumb-wrap .breadcrumb .loc ul.opt li:hover {
-    background: #f3f3f3;
+    background: #d4d4d4;
   }
   header .breadcrumb-wrap .breadcrumb .loc ul.opt li a {
     color: #000;
@@ -592,11 +580,6 @@ header .breadcrumb-wrap {
   }
 }
 
-@media screen and (min-width: 1440px) {
-  footer {
-    position: static;
-  }
-}
 footer .sitemap-banner-wrap {
   display: none;
 }

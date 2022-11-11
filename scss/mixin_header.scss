@@ -38,7 +38,7 @@
             .logo {
 
                 a {
-                    @include full_bg('logo_leeum_horizon.svg', '../../../image/');
+                    @include full_bg('logo_leeum_horizon.svg', index);
                     width: 102px; height: 30px;
 
                     @include responsive(pc-screens) {
@@ -143,9 +143,9 @@
                                     a {
                                         width: 24px; height: 24px;
 
-                                        &.login   { @include full_bg('icon_user.svg', '../../../image/'); }
-                                        &.reserve { @include full_bg('icon_reserve.svg', '../../../image/'); width: 32px; }
-                                        &.search  { @include full_bg('icon_search.svg', '../../../image/'); filter: $svg-white; }
+                                        &.login   { @include full_bg('icon_user.svg', index); }
+                                        &.reserve { @include full_bg('icon_reserve.svg', index); width: 32px; }
+                                        &.search  { @include full_bg('icon_search.svg', index); filter: $svg-white; }
                                     }
                                 }
 
@@ -374,7 +374,7 @@
                     border-top: 0; border-bottom: 0;
 
                     a {
-                        @include full_bg('icon_home.svg', '../../../image/');
+                        @include full_bg('icon_home.svg', index);
                         width: 18px; height: 18px;
                         vertical-align: middle;
                     }

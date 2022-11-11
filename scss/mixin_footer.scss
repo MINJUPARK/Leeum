@@ -61,7 +61,7 @@
                 }
                 .banner-box {
                     width: 360px; height: 230px;
-                    @include full_bg('footer_membership_banner.png', '../../../image/');
+                    @include full_bg('footer_membership_banner.png', index);
     
                     .banner-txt-wrap {
                         position: relative;
@@ -171,7 +171,7 @@
     
     
     .leeum-info-wrap {
-        @include full_bg('footer_bg_pattern.png','../../../image/');
+        @include full_bg('footer_bg_pattern.png', index);
         @include footer_bg();
     
         .leeum-info {

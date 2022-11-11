@@ -25,7 +25,7 @@ html, body {
     height: 100%;
 }
 
-body {
+body, button, input {
 
     font: {
         size: 16px;
@@ -49,13 +49,13 @@ section > h2 {
 
 ul, ol {
     list-style: none;
+    -webkit-padding-start: 0;
 }
 
 a {
     display: inline-block;
     text-decoration: none;
     color: black;
-    cursor: pointer;
 
     &:hover {
         font-weight: bold;
@@ -71,19 +71,34 @@ address {
     font-style: normal;
 }
 
-input:focus {
-    outline: none;
-}
+
 
 button {
+    border: 0;
+}
+
+input {
+
+    &[type=checkbox], &[type=radio] {
+        vertical-align: middle;
+        zoom: 1.2;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+a, input, button, select, label {
     cursor: pointer;
 }
 
-select {
-    background: url('/image/icon_arrow.svg') no-repeat right 20px center;
-    background-size: 10px;
-    filter: $svg-black;
+input, select {
+    border: 1px solid $bk3;
+    color: $bk2;
+}
 
+select {
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
