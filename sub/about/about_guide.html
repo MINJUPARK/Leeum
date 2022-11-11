@@ -374,7 +374,7 @@
         </div><!-- container -->
     </section><!-- fee-time-wrap -->
 
-    <section id="FloorInfo" class="floor-info-wrap">
+    <section id="FloorInfo" class="vr-floor-wrap">
         <h2>층별안내</h2>
         <div class="container">
             <section class="vr">
@@ -384,66 +384,85 @@
                 </div>
                 <iframe id="eazel-player" src="https://mpembed.com/show/?m=RXZGsoaNKJs&mpu=1275"  width="100%" height="677"  frameborder="0" scrolling="NO"></iframe>
             </section>
+
             <section class="floor-info">
                 <h3>층별 안내</h3>
-                <div class="cultural_center">
-                    <div class="floor-select">
-                        <h4>아동교육문화센터</h4>
-                        <span>기획전</span>
-                        <img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기">
-                        <ul>
-                            <li>1F <span class="floor-titile">블랙박스 라운지 키즈랩</span></li>
-                            <li>B1 <span class="floor-titile">블랙박스</span></li>
-                            <li>B2 <span class="floor-titile">그라운드 갤러리 강당</span></li>
-                            <li>B3 <span class="floor-titile">고객주차장</span></li>
+                <div class="cultural-center">
+                    <div class="floor-select-group">
+                        <div class="group-title">
+                            <h4>아동교육문화센터</h4>
+                            <span>기획전</span>
+                            <img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기">
+                        </div>
+                        <ul class="floor-option">
+                            <li>1F <span>블랙박스 라운지 키즈랩</span></li>
+                            <li>B1 <span>블랙박스</span></li>
+                            <li>B2 <span>그라운드 갤러리 강당</span></li>
+                            <li>B3 <span>고객주차장</span></li>
                         </ul>
                     </div>
                     <div class="floor-con">
                         <ul class="floor-img">
-                            <li><img src="./image/guide_floor_cultural_center(1).png" alt="블랙박스 라운지"></li>
+                            <li class="selected"><img src="./image/guide_floor_cultural_center(1).png" alt="블랙박스 라운지"></li>
                             <li><img src="./image/guide_floor_cultural_center(2).png" alt="블랙박스 외관"></li>
                             <li><img src="./image/guide_floor_cultural_center(3).png" alt="그라운드 갤러리 전시 작품"></li>
                             <li><img src="./image/guide_floor_cultural_center(4).png" alt="주차장"></li>
                         </ul>
-                        <ul class="floor-txt1">
-                            <li>
-                                <strong>1F <span class="floor-titile">블랙박스 라운지 키즈랩</span></strong>
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
+                        <ul class="floor-txt">
+                            <li class="selected">
+                                <div class="floor-title">
+                                    <strong>1F</strong><b>블랙박스 라운지 키즈랩</b>
+                                    <div class="toilet">
+                                        <img src="./image/icon_man.svg" alt="남자화장실">
+                                        <img src="./image/icon_woman.svg" alt="여자화장실">
+                                    </div>
+                                </div>
+                                <p>블랙박스 라운지 키즈랩에서는 어린이들을 위한 프로그램이 진행됩니다.</p>
                             </li>
                             <li>
-                                <strong>B1 <span class="floor-titile">블랙박스</span></strong>
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
+                                <div class="floor-title">
+                                    <strong>B1</strong><b>블랙박스</b>
+                                    <div class="toilet">
+                                        <img src="./image/icon_man.svg" alt="남자화장실">
+                                        <img src="./image/icon_woman.svg" alt="여자화장실">
+                                    </div>
+                                </div>
+                                <p>블랙박스에서는 외부와 단절된 독립적인 분위기와 조형작품들을 감상하실 수 있습니다.</p>
                             </li>
                             <li>
-                                <strong>B2 <span class="floor-titile">그라운드 갤러리 강당</span></strong>
-                                <img src="./image/icon_baby_room.svg" alt="수유실">
-                                <img src="./image/icon_disabled.svg" alt="장애인화장실">
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
+                                <div class="floor-title">
+                                    <strong>B2</strong><b>그라운드 갤러리 강당</b>
+                                    <div class="toilet">
+                                        <img src="./image/icon_baby_room.svg" alt="수유실">
+                                        <img src="./image/icon_disabled.svg" alt="장애인화장실">
+                                        <img src="./image/icon_man.svg" alt="남자화장실">
+                                        <img src="./image/icon_woman.svg" alt="여자화장실">
+                                    </div>
+                                </div>
+                                <p>그라운드 갤러리에서는 시기별로 달라지는 기획전시와 독특한 건축구조를 감상하실 수 있습니다.</p>
                             </li>
                             <li>
-                                <strong>B3 <span class="floor-titile">고객주차장</span></strong>
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
+                                <div class="floor-title">
+                                    <strong>B3</strong><b>고객주차장</b>
+                                    <div class="toilet">
+                                        <img src="./image/icon_man.svg" alt="남자화장실">
+                                        <img src="./image/icon_woman.svg" alt="여자화장실">
+                                    </div>
+                                </div>
+                                <p>리움 미술관 고객 전용 주차장입니다.</p>
                             </li>
                         </ul>
-                        <ul class="floor-txt2">
-                            <li>블랙박스 라운지 키즈랩에서는 어린이들을 위한 프로그램이 진행됩니다.</li>
-                            <li>블랙박스에서는 외부와 단절된 독립적인 분위기와 조형작품들을 감상하실 수 있습니다.</li>
-                            <li>그라운드 갤러리에서는 시기별로 달라지는 기획전시와 독특한 건축구조를 감상하실 수 있습니다.</li>
-                            <li>리움 미술관 고객 전용 주차장입니다.</li>
-                        </ul>
-                    </div>
+                    </div><!-- floor-con -->
                 </div><!-- cultural_center -->
 
                 <div class="m1">
-                    <div class="floor-select">
-                        <h4>M1 고미술</h4>
-                        <span>상설전</span>
-                        <img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기">
-                        <ul>
+                    <div class="floor-select-group">
+                        <div class="group-title">
+                            <h4>M1 고미술</h4>
+                            <span>상설전</span>
+                            <img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기">
+                        </div>
+                        <ul class="floor-option">
                             <li>4F <span class="floor-titile">푸른빛 문양 한 점</span>   </li>
                             <li>3F <span class="floor-titile">흰빛의 여정</span></li>
                             <li>2F <span class="floor-titile">감상과 취향</span></li>
@@ -458,51 +477,61 @@
                             <li><img src="./image/guide_floor_m1(4).png" alt="고미술 조각 전시장"></li>
                             <li><img src="./image/guide_floor_m1(5).png" alt="로비"></li>
                         </ul>
-                        <ul class="floor-txt1">
+                        <ul class="floor-txt">
                             <li>
-                                <strong>4F <span class="floor-titile">푸른빛 문양 한 점</span></strong>
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
+                                <strong>4F</strong><b>푸른빛 문양 한 점</b>
+                                <div class="toilet">
+                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                </div>
+                                <p>고려시대 청자의 세계가 펼쳐진다.</p>
                             </li>
                             <li>
-                                <strong>3F <span class="floor-titile">흰빛의 여정</span></strong>
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
+                                <strong>3F</strong><b>흰빛의 여정</b>
+                                <div class="toilet">
+                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                </div>
+                                <p>조선시대 분청사기와 백자를 감상할 수 있습니다.</p>
                             </li>
                             <li>
-                                <strong>2F <span class="floor-titile">감상과 취향</span></strong>
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
+                                <strong>2F</strong><b>감상과 취향</b>
+                                <div class="toilet">
+                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                </div>
+                                <p>다양한 기법과 주제의 고서화를 볼 수 있습니다.</p>
                             </li>
                             <li>
-                                <strong>1F <span class="floor-titile">권위와 취향, 화려함의 세계</span></strong>
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
+                                <strong>1F</strong><b>권위와 취향, 화려함의 세계</b>
+                                <div class="toilet">
+                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                </div>
+                                <p>불교미술, 금속공예, 나전칠기 등에 구현된 선조들의 정신세계와 미감을 느낄 수 있습니다.</p>
                             </li>
                             <li>
-                                <strong>B1 <span class="floor-titile">로비</span></strong>
-                                <img src="./image/icon_baby_room.svg" alt="수유실">
-                                <img src="./image/icon_disabled.svg" alt="장애인화장실">
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
+                                <strong>B1</strong><b>로비</b>
+                                <div class="toilet">
+                                    <img src="./image/icon_baby_room.svg" alt="수유실">
+                                    <img src="./image/icon_disabled.svg" alt="장애인화장실">
+                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                </div>
+                                <p>매표&안내 데스크와 리움스토어, 카페, 물품보관함, 미디어룸이 있습니다.</p>
                             </li>
-                        </ul>
-                        <ul class="floor-txt2">
-                            <li>고려시대 청자의 세계가 펼쳐진다.</li>
-                            <li>조선시대 분청사기와 백자를 감상할 수 있습니다.</li>
-                            <li>다양한 기법과 주제의 고서화를 볼 수 있습니다.</li>
-                            <li>불교미술, 금속공예, 나전칠기 등에 구현된 선조들의 정신세계와 미감을 느낄 수 있습니다.</li>
-                            <li>매표&안내 데스크와 리움스토어, 카페, 물품보관함, 미디어룸이 있습니다.</li>
                         </ul>
                     </div>
                 </div><!-- m1 -->
                 
                 <div class="m2">
-                    <div class="floor-select">
-                        <h4>M2 현대미술</h4>
-                        <span>상설전</span>
-                        <img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기">
-                        <ul>
+                    <div class="floor-select-group">
+                        <div class="group-title">
+                            <h4>M2 현대미술</h4>
+                            <span>상설전</span>
+                            <img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기">
+                        </div>
+                        <ul class="floor-option">
                             <li>2F <span class="floor-titile">검은 공백</span></li>
                             <li>1F <span class="floor-titile">중력의 역방향</span></li>
                             <li>B1 <span class="floor-titile">이상한 행성</span></li>
@@ -516,23 +545,25 @@
                         </ul>
                         <ul class="floor-txt1">
                             <li>
-                                <strong>2F <span class="floor-titile">검은 공백</span></strong>
+                                <strong>2F</strong><b>검은 공백</b>
+                                <p>우리의 삶과 예술 전반에 투영된 검정색의 깊고 풍부한 의미를 살펴보는 전시로 M2의 건축적 환경과 어우러지는 전시입니다.</p>
                             </li>
                             <li>
-                                <strong>1F <span class="floor-titile">중력의 역방향</span></strong>
-                                <img src="./image/icon_man.svg" alt="남자화장실">
-                                <img src="./image/icon_disabled.svg" alt="장애인화장실">
+                                <strong>1F</strong><b>중력의 역방향</b>
+                                <div class="toilet">
+                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                    <img src="./image/icon_disabled.svg" alt="장애인화장실">
+                                </div>
+                                <p>빛과 움직임 등 비물질 영역으로 확장된 작품들을 소개한다.</p>
                             </li>
                             <li>
-                                <strong>B1 <span class="floor-titile">이상한 행성</span></strong>
-                                <img src="./image/icon_woman.svg" alt="여자화장실">
-                                <img src="./image/icon_disabled.svg" alt="장애인화장실">
+                                <strong>B1</strong><b>이상한 행성</b>
+                                <div class="toilet">
+                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                    <img src="./image/icon_disabled.svg" alt="장애인화장실">
+                                </div>
+                                <p>예술을 통한 자유로운 상상과 사유의 시간으로 우리를 인도하며 다채로운 현대미술의 세계를 체험할 수 있게 할 것이다.</p>
                             </li>
-                        </ul>
-                        <ul class="floor-txt2">
-                            <li>우리의 삶과 예술 전반에 투영된 검정색의 깊고 풍부한 의미를 살펴보는 전시로 M2의 건축적 환경과 어우러지는 전시입니다.</li>
-                            <li>빛과 움직임 등 비물질 영역으로 확장된 작품들을 소개한다.</li>
-                            <li>예술을 통한 자유로운 상상과 사유의 시간으로 우리를 인도하며 다채로운 현대미술의 세계를 체험할 수 있게 할 것이다.</li>
                         </ul>
                     </div>
                 </div><!-- m2 -->
