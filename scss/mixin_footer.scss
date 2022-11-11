@@ -133,7 +133,7 @@
                         @include responsive(pc-screens) {
                             justify-content: baseline;
     
-                            &:first-child  {margin-right: 28px; }
+                            &:first-child  { margin-right: 28px; }
                             &:nth-child(2) { margin-right: 125px; }
                             &:nth-child(3) { margin-right: 40px; }
                             
@@ -252,7 +252,7 @@
     
                 p {
                     font-size: 12px;
-                    margin-top: 20px;
+                    margin-top: 20px; 
                 }
             }
         }
@@ -260,10 +260,10 @@
 }
 
 @mixin familySite() {
+    width: 160px; height: 40px; 
+    padding: 0 20px;
     background-size: 10px;
     filter: $svg-black;
-    width: 160px; height: 40px;
-    padding: 0 20px;
 }
 
 @mixin footer_bg() {

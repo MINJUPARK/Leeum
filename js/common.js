@@ -74,4 +74,26 @@ $(document).ready(function() {
     $('select[name=family]').change(function() {
         window.open($(this).val());
     });
+
+    
+    // sub 필터 상세검색 열기 & 닫기
+    $('.ds-btn').click(function() {
+        const status = $(this).children('.status');
+
+        if (status.text() == '열기') { status.text('닫기'); } 
+        else                         { status.text('열기'); }
+        $(this).children('img').toggleClass('active');
+        $(this).next().slideToggle();
+    });
+
+    // 상세 검색 옵션 선택
+    $('.detail-search .opt li').click(function() {
+        $(this).toggleClass('on');
+    });
+
+    // 필터 초기화 버튼
+    $('.detail-search button[type=reset]').click(function() {
+        $('.detail-search .opt li').removeClass('on');
+        $('.chk-box input[type=checkbox]').attr('checked', false);
+    });
 })

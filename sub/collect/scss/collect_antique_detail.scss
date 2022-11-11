@@ -9,9 +9,19 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_antique.jpg');
+    @include full_bg('antique_header.jpg');
 }
 
+main {
+    
+    .item-box {
+        @include item_box();
+    }
+
+    .loc {
+        @include loc_label();
+    }
+}
 footer {
     @include footer();
 }

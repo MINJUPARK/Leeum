@@ -24,9 +24,14 @@ html, body {
   height: 100%;
 }
 
-body, button, input {
+body {
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  letter-spacing: -0.04em;
+}
+
+input, textarea, button, select, pre {
+  font-family: inherit;
   letter-spacing: -0.04em;
 }
 
@@ -52,7 +57,8 @@ a {
   text-decoration: none;
   color: black;
 }
-a:hover {
+
+header a:hover, footer a:hover {
   font-weight: bold;
 }
 
@@ -67,6 +73,7 @@ address {
 
 button {
   border: 0;
+  background: transparent;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -75,6 +82,10 @@ input[type=checkbox], input[type=radio] {
 }
 input:focus {
   outline: none;
+}
+
+input[type=checkbox] + label {
+  color: #3c3c3c;
 }
 
 a, input, button, select, label {
@@ -312,16 +323,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -579,7 +581,7 @@ header .breadcrumb-wrap {
     padding: 0 20px;
   }
   header .breadcrumb-wrap .breadcrumb .loc ul.opt li:hover {
-    background: #d4d4d4;
+    background: #f3f3f3;
   }
   header .breadcrumb-wrap .breadcrumb .loc ul.opt li a {
     color: #000;
@@ -631,7 +633,7 @@ main .fee-time-wrap .fee-time .fee table th:first-child, main .fee-time-wrap .fe
 }
 main .fee-time-wrap .fee-time .fee table th {
   width: 25%;
-  background-color: #f3f3f3;
+  background-color: #d4d4d4;
 }
 main .fee-time-wrap .fee-time .fee table th:first-child {
   width: 50%;
@@ -824,11 +826,11 @@ footer .site-info-wrap .site-info .i2 {
   }
   footer .site-info-wrap .site-info .i2 select[name=family] {
     background: url("../../../image/icon_arrow.svg") no-repeat right 20px center;
-    background-size: 10px;
-    filter: brightness(0) saturate(100%);
     width: 160px;
     height: 40px;
     padding: 0 20px;
+    background-size: 10px;
+    filter: brightness(0) saturate(100%);
   }
 }
 footer .site-info-wrap .site-info .contact {
