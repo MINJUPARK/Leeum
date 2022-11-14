@@ -531,4 +531,256 @@ header .mobile-menu-popup .popup .wh-menu .opt li a:hover {
 }
 header:before {
   background: transparent;
+}
+
+main {
+  word-break: keep-all;
+}
+@media screen and (min-width: 768px) {
+  main {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main {
+    font-size: 22px;
+  }
+}
+main div h2 {
+  font-size: calc(1em + 16px);
+}
+@media screen and (min-width: 1440px) {
+  main div h2 {
+    font-size: 56px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .pc-hidden {
+    display: none;
+  }
+}
+main section.intro-mission-wrap p {
+  line-height: 28px;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap p {
+    line-height: 44px;
+  }
+}
+main section.intro-mission-wrap p b {
+  font-size: calc(1em + 2px);
+  color: #ac3f21;
+}
+main section.intro-mission-wrap .intro {
+  margin-top: 60px;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .intro {
+    margin-top: 110px;
+  }
+}
+main section.intro-mission-wrap .intro > strong {
+  display: block;
+  text-align: center;
+  font-family: "KoPub Batang";
+  font-size: 28px;
+  line-height: 44px;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .intro > strong {
+    text-align: left;
+    font-size: 56px;
+    line-height: 86px;
+  }
+}
+main section.intro-mission-wrap .intro .info-img1,
+main section.intro-mission-wrap .intro .info-img2 {
+  margin-top: 60px;
+  width: calc(100% + 20px);
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .intro .info-img1,
+main section.intro-mission-wrap .intro .info-img2 {
+    border-radius: 5px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .intro .info-absolute {
+    position: absolute;
+    right: 0;
+    width: 720px;
+  }
+}
+main section.intro-mission-wrap .intro .info-absolute .info-img1 {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .intro .info-absolute .info-img1 {
+    width: 100%;
+    margin-top: 116px;
+  }
+}
+main section.intro-mission-wrap .intro .info-absolute .info-img1 img {
+  width: 100%;
+}
+main section.intro-mission-wrap .intro .info-absolute p {
+  margin-top: 30px;
+}
+main section.intro-mission-wrap .intro .info-img2 {
+  position: relative;
+  transform: translateX(-20px);
+  aspect-ratio: 37/24;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .intro .info-img2 {
+    width: 460px;
+    height: 740px;
+    margin-top: 276px;
+    transform: translateX(0);
+  }
+}
+main section.intro-mission-wrap .intro .info-img2 img {
+  position: absolute;
+  bottom: 0;
+  width: 114.8717948718%;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .intro .info-img2 img {
+    margin-left: -191px;
+    width: 987px;
+  }
+}
+main section.intro-mission-wrap .mission {
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .mission h2, main section.intro-mission-wrap .mission p {
+    margin-left: 80px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .mission .mission-txt {
+    position: relative;
+    margin-top: 50px;
+  }
+}
+main section.intro-mission-wrap .mission .mission-txt p {
+  margin-top: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .mission .mission-txt p {
+    width: 716px;
+    margin-top: 0;
+  }
+}
+main section.intro-mission-wrap .mission .mission-txt .mobile-relative {
+  position: relative;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .mission .mission-txt .mobile-relative {
+    position: static;
+  }
+}
+main section.intro-mission-wrap .mission .mission-txt .mobile-relative p {
+  width: 54.2857142857%;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .mission .mission-txt .mobile-relative p {
+    width: 716px;
+  }
+}
+main section.intro-mission-wrap .mission .mission-txt .mobile-relative img {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 43.5897435897%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro-mission-wrap .mission .mission-txt .mobile-relative img {
+    right: 100px;
+    width: 380px;
+  }
+}
+main section.core-value-wrap {
+  position: relative;
+  margin-top: 100px;
+  background: url(../image/intro_value.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #000;
+}
+@media screen and (min-width: 1440px) {
+  main section.core-value-wrap {
+    margin-top: 420px;
+  }
+}
+main section.core-value-wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main section.core-value-wrap .core-value {
+  text-align: center;
+  color: #fff;
+}
+main section.core-value-wrap .core-value h2 {
+  margin-top: 56px;
+}
+main section.core-value-wrap .core-value ul {
+  margin-top: 30px;
+}
+main section.core-value-wrap .core-value ul li {
+  position: relative;
+  margin: 0 auto;
+  width: 54.2857142857%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+main section.core-value-wrap .core-value ul li:nth-child(2), main section.core-value-wrap .core-value ul li:last-child {
+  margin-top: -11.4285714286%;
+}
+main section.core-value-wrap .core-value ul li .vlaue {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main section.core-value-wrap .core-value ul li .vlaue span {
+  display: block;
+}
+main section.core-value-wrap .core-value ul li .vlaue span.eng-val {
+  font-size: calc(1em + 14px);
+  font-weight: 600;
+}
+main section.core-value-wrap .core-value ul li .vlaue span.ko-val {
+  font-size: calc(1em + 4px);
+}
+main section.core-value-wrap .core-value .val-text {
+  margin-top: 56px;
+  padding-bottom: 80px;
+}
+main section.core-value-wrap .core-value .val-text strong {
+  font-size: calc(1em + 6px);
+  font-weight: 500;
+}
+main section.core-value-wrap .core-value .val-text p {
+  margin-top: 40px;
+  line-height: 28px;
+}
+@media screen and (min-width: 1440px) {
+  main section.core-value-wrap .core-value .val-text p {
+    line-height: 44px;
+  }
 }/*# sourceMappingURL=about_intro.css.map */
