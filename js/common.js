@@ -125,4 +125,8 @@ $(document).ready(function() {
         $('.detail-search .opt li').removeClass('on');
         $('.chk-box input[type=checkbox]').attr('checked', false);
     });
+
+    // $('.more-btn').click(function() {
+    //     $('.item-box').height($('.item-box').height() + 770);
+    // });
 })

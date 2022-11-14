@@ -52,7 +52,7 @@
     }
 }
 
-// 탈그리드 설정
+// 탈그리드 설정 (main 안에 overflow-x: hidden; 필수)
 @mixin out_container() {
     position: relative;
     left: 50%; right: 50%;
@@ -474,8 +474,8 @@
             .bg {
                 width: 100%; height: 100%;
                 object-fit: cover;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
+                // border-top-left-radius: 5px;
+                // border-top-right-radius: 5px;
             }
             .bm_btn {
                 position: absolute;

@@ -25,7 +25,6 @@ html, body {
 }
 
 body {
-  position: relative;
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   letter-spacing: -0.04em;
@@ -63,8 +62,11 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img {
+img, span, label {
   display: inline-block;
+}
+
+img {
   vertical-align: middle;
 }
 
@@ -204,12 +206,12 @@ header .logo-menu-wrap {
   left: 0;
   top: 30px;
   right: 0;
+  z-index: 98;
 }
 header .logo-menu-wrap.menu-sc {
   top: 0;
   padding: 30px 0 10px 0;
   background-color: #000;
-  z-index: 98;
 }
 header .logo-menu-wrap .logo-menu {
   display: flex;
@@ -1083,8 +1085,6 @@ main section.itemList .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 main section.itemList .item-box .item .i-pic .bm_btn {
   position: absolute;

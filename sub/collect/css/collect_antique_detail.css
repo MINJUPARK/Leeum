@@ -62,8 +62,11 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img {
+img, span, label {
   display: inline-block;
+}
+
+img {
   vertical-align: middle;
 }
 
@@ -866,8 +869,6 @@ main section.similarItem .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 main section.similarItem .item-box .item .i-pic .bm_btn {
   position: absolute;
