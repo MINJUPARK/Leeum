@@ -183,6 +183,7 @@ main {
                             padding-left: 11px;
                             margin-bottom: 20px;
                             font-size: calc(1em - 2px);
+                            line-height: calc(1em - 2px + 10px);
                             background: url(../image/icon_bullet_dot.svg) no-repeat left 0.5em;
                             background-size: 2px;
                             
@@ -349,18 +350,8 @@ main {
         } // fee-time
     } // fee-time-wrap
 
-    .vr-floor-wrap {
-        display: none;
-
-        section.vr,
-        section.floor-info {
-            margin-top: 80px;
-    
-            @include responsive (tablet-screens) {
-                margin-top: 160px;
-            }
-        }
-
+    .vr-floor-info-wrap {
+        // display: none;
 
         h3 {
             text-align: center;  
@@ -369,9 +360,18 @@ main {
             @include responsive (tablet-screens) {
                 text-align: left;
             } 
-
+            
             @include responsive (pc-screens) {
                 font-size: 36px;
+            }
+        }
+
+        section.vr,
+        section.floor-info {
+            margin-top: 80px;
+    
+            @include responsive (tablet-screens) {
+                margin-top: 160px;
             }
         }
 
@@ -418,14 +418,15 @@ main {
                     }
 
                     .group-title {
-                        display: flex;
-                        justify-content: space-between;
-                        padding: 0 10px;
-                        margin-bottom: 14px;
+                        @include flex_between();
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        padding-bottom: 14px;
+                        border-bottom: 2px solid #000;
 
                         @include responsive(tablet-screens) {
                             padding: 0;
-                            margin-bottom: 36px;
+                            padding-bottom: 36px;
                         }
 
                         h4 {
@@ -458,7 +459,9 @@ main {
 
                     .group-option {
                         margin-bottom: 30px;
-                        border-top: 2px solid #000;
+
+                        // height: 0;
+                        // visibility: hidden;
                         
                         li {
                             height: 52px;
@@ -529,9 +532,13 @@ main {
                             // display: flex;
                             // justify-content: space-between;
 
+                            strong, b {
+                                line-height: 24px;
+                            }
+
                             strong {
-                                font-size: 24px;
                                 width: 40px / 350px * 100%;
+                                font-size: 24px;
                             }
                             
                             b {
@@ -549,7 +556,11 @@ main {
                         }
 
                         p {
+                            margin-top: 10px;
+                            margin-left: 40px / 350px * 100%;
+                            margin-right: 60px / 350px * 100%;
                             font-size: calc(1em - 2px);
+                            line-height: calc(1em - 2px + 10px);
                         }
                     } // floor-txt
                 } // floor-con-group
@@ -558,7 +569,8 @@ main {
     } // vr-floor-wrap
 
     section.digital-guide-did-wrap {
-        // display: none;
+        display: none;
+
         overflow: hidden;
         margin-top: 70px;
         text-align: center;
@@ -610,7 +622,7 @@ main {
             }
 
             .guide-intro-wrap {
-               
+                
                 .guide-intro {
                     
                     @include responsive(pc-screens) {
@@ -628,7 +640,7 @@ main {
     
                     .guide-intro-txt {
                         margin-top: 30px; 
-                        background-color: dodgerblue;
+                        // background-color: dodgerblue;
     
                         @include responsive(pc-screens) {
                             order: 1;
@@ -693,7 +705,7 @@ main {
 
                 .guide-point-txt {
                     margin-bottom: 20px;
-                    background-color: yellow;
+                    // background-color: yellow;
 
                     @include responsive(pc-screens) {
                         position: absolute;
@@ -709,7 +721,7 @@ main {
                     }
                     
                     > li {
-                        background-color: rosybrown;
+                        // background-color: rosybrown;
                         
                         @include responsive(pc-screens) {
                             height: 300px;
@@ -721,7 +733,7 @@ main {
                             display: block;
                             font-size: calc(1em + 2px);
                             color: $red-brown;
-                            background-color: aquamarine;
+                            // background-color: aquamarine;
 
                             @include responsive(pc-screens) {
                                 font-size: 26px; 
@@ -733,14 +745,19 @@ main {
                             margin: 20px auto;
                             line-height: 28px;
 
+                            @include responsive(tablet-screens) {
+                                line-height: calc(1em + 6px + 10px);
+                            }
+
                             @include responsive(pc-screens) {
-                                margin-bottom: 40px;
+                                line-height: calc(1em + 6px);
+                                margin-bottom: 30px;
                             }
 
                         }
                         
                         .p {
-                            background-color: aquamarine;
+                            // background-color: aquamarine;
 
                             @include responsive(pc-screens) {
                                 line-height: 36px;
@@ -750,7 +767,7 @@ main {
                 } // guide-point-txt
 
                 .guide-point-img {
-                    background-color: aqua;
+                    // background-color: aqua;
 
                     @include responsive(pc-screens) {
                         order: 1;
@@ -783,6 +800,17 @@ main {
                 }
             }
 
+            .mobile-hidden {
+                display: none;
+                @include responsive(pc-screens) { display: inline; }
+            }
+
+            .pc-hidden { 
+                @include responsive(pc-screens) { 
+                    display: none; 
+                } 
+            }
+
             .did-awards {
                 position: relative;
                 
@@ -793,18 +821,13 @@ main {
                         justify-content: space-between;
                     }
 
-                    .mobile-hidden {
-                        display: none;
-                        @include responsive(pc-screens) { display: inline; }
-                    }
-
                     .awards-txt {
                         position: absolute;
                         padding-top: 30px / 350px * 100%;
                         padding-left: 20px / 350px * 100%;
                         text-align: left;
                         color: #fff;
-                        background-color: cornflowerblue;
+                        // background-color: cornflowerblue;
                         
                         @include responsive(pc-screens) {
                             position: static;
@@ -824,16 +847,10 @@ main {
     
                         p {
                             margin-top: 30px / 350px * 100%;
-                            background-color: saddlebrown;
+                            // background-color: saddlebrown;
                             
                             @include responsive(pc-screens) {
                                 margin-top: 0;
-                            }
-
-                            .pc-hidden { 
-                                @include responsive(pc-screens) { 
-                                    display: none; 
-                                } 
                             }
                         }
                     } // awards-txt
@@ -848,36 +865,49 @@ main {
                 } // awards-flex
                 
                 .did-img2 {
-                    // content: '';
-                    width: 100%;
+                    overflow: hidden;
                     aspect-ratio: 35 / 36;
-                    background: #000 url(../image/guide_did_photo_\(2\).PNG) no-repeat center;
-                    background-size: cover; 
+                    background-color: #000;
                     border-radius: 20px;
 
                     @include responsive(pc-screens) {
                         position: absolute;
                         top: 370px;
+                        width: 480px;
+                        aspect-ratio: 24 / 29;
                     }
-                }
 
-                // picture {
-
-                // }
+                    img {
+                        width: 640px / 350px * 100%;
+                        margin-left: 52px / 640px * -100%;
+                        margin-top: 32px / 360px * 100%;
+                        
+                        @include responsive(pc-screens) {
+                            width: 1026px;
+                            margin-left: -262px;
+                            margin-top: 0;
+                        }
+    
+                    }
+                } // did-img2
             } // did-awards
 
             .did-point,
             .did-video {
-                 margin-top: 80px;
+                margin-top: 80px;
 
                 strong, h5 {
                     display: block;
                     margin-bottom: 30px;
+
+                    // @include responsive(pc-screens) {
+                    //     margin-bottom: 40px;
+                    // }
                 }
 
                 p {
                     margin-bottom: 40px;
-                    background-color: violet;
+                    // background-color: violet;
                 }
             }
             
@@ -888,17 +918,14 @@ main {
                     margin-top: 180px;
                     margin-left: 580px;
                 }
-                
-                strong {
-                    
+
+                p {
+                    margin-bottom: 40px;
+                    // background-color: violet;
+
                     @include responsive(pc-screens) {
                         margin-bottom: 50px;
                     }
-                }
-
-                p {
-                    padding-left: 10px / 350px * 100%;
-                    padding-right: 10px / 350px * 100%;
                 }
             } // did-point
             
@@ -907,18 +934,11 @@ main {
                 @include responsive(pc-screens) {
                     margin-top: 130px;
                 }
-
-                h5 {
-    
-                    @include responsive(pc-screens) {
-                        margin-bottom: 40px;
-                    }
-                }
                 
                 .video-frame {
                     position: relative;
                     width: 100%;
-                    padding-bottom: 56.25%;
+                    aspect-ratio: 16 / 9;
                     
                     iframe {
                         position: absolute;
