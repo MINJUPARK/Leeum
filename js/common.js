@@ -1,7 +1,26 @@
 $(document).ready(function() {
 
+    // sub 메뉴 중 detail 페이지의 footer 위치 재조정 (서브헤더가 가려짐에 따라)
+    if($('footer').hasClass('sub')) {
+
+        $(window).on('load resize', function() {
+            
+            const header_height = $('header').outerHeight(true);
+            const main_height = $('main').outerHeight(true);
+            const footer = main_height - header_height;
+            const header = header_height * (-1);
+
+            $('main, footer.sub').css({
+                'position' : 'relative',
+                'top' : `${header}px`
+            });
+        });
+    }
+
+
     // 특정 a 링크만 blank 적용
     $('.mini-menu a, .reserve, footer a').attr('target', '_blank');
+
 
     // 모바일 메뉴
     $('.mobile-menu-popup').hide();
@@ -23,6 +42,7 @@ $(document).ready(function() {
         $(this).siblings().slideToggle();
     });
 
+
     // PC 메뉴 서브
     $('.pc-menu .group').mouseover(function() {
             $('.pc-menu .opt').addClass('hidden');
@@ -38,11 +58,13 @@ $(document).ready(function() {
         $(this).addClass('hidden');
     });
 
+
     // PC 검색 메뉴
     $('.icon-menu .search').click(function() {
         $(this).siblings().toggleClass('hidden');
         $(this).siblings().children('.searchbar').focus();
     });
+
 
     // 상단 메뉴 고정 (모바일 + PC)
     $(window).scroll(function() {
@@ -60,6 +82,7 @@ $(document).ready(function() {
         }
     });
 
+
     // 언어변경, 브레드크럼 드롭다운 목록
     $('.mini-menu .lang').click(function() {
             $(this).children('.dropdown').toggleClass('active');
@@ -70,12 +93,16 @@ $(document).ready(function() {
         $(this).parent().siblings().slideToggle();
     });
 
+
     // 패밀리 사이트 이동
     $('select[name=family]').change(function() {
         window.open($(this).val());
     });
 
     
+    /* ----------------------------------------------------------*/
+
+
     // sub 필터 상세검색 열기 & 닫기
     $('.ds-btn').click(function() {
         const status = $(this).children('.status');
@@ -86,10 +113,12 @@ $(document).ready(function() {
         $(this).next().slideToggle();
     });
 
+
     // 상세 검색 옵션 선택
     $('.detail-search .opt li').click(function() {
         $(this).toggleClass('on');
     });
+
 
     // 필터 초기화 버튼
     $('.detail-search button[type=reset]').click(function() {

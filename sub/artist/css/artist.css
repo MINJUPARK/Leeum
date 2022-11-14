@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
-/* ---------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
   width: 100%;
@@ -25,6 +25,7 @@ html, body {
 }
 
 body {
+  position: relative;
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   letter-spacing: -0.04em;
@@ -76,12 +77,44 @@ button {
   background: transparent;
 }
 
-input[type=checkbox], input[type=radio] {
-  vertical-align: middle;
-  zoom: 1.2;
-}
 input:focus {
   outline: none;
+}
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  zoom: 1.1;
+}
+input[type=checkbox] {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  outline: none !important;
+  border: 1px solid #c5c5c5;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=checkbox]:hover {
+  background: #d4d4d4;
+}
+input[type=checkbox]:checked {
+  color: white;
+  background-color: #ac3f21;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+input[type=checkbox]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+input[type=checkbox]::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  transform: scale(0) translate(-50%, -50%);
+  overflow: hidden;
 }
 
 input[type=checkbox] + label {
@@ -138,13 +171,13 @@ h6 {
   font-size: 18px;
 }
 
-/* ---------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
 header {
   position: relative;
   height: 280px;
   padding-top: 30px;
   /* 모바일 메뉴 팝업 */
-  background: url(../image/header_artist.jpg);
+  background: url(../image/artist_header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -591,6 +624,610 @@ header .breadcrumb-wrap {
   }
 }
 
+main section.intro .intro-wrap {
+  text-align: center;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro .intro-wrap h3 {
+    font-size: 46px;
+  }
+}
+main section.intro .intro-wrap .des {
+  line-height: 1.8em;
+}
+main section.intro .intro-wrap .des.top {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+main section.intro .intro-wrap .des .vert-bar {
+  display: block;
+  width: 1px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: #acacac;
+}
+main section.intro .intro-wrap .des span {
+  display: block;
+}
+@media screen and (min-width: 1440px) {
+  main section.intro .intro-wrap .des span {
+    display: inline-block;
+  }
+}
+main section.intro .intro-wrap .preview {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 300px;
+  background-color: bisque;
+}
+main section.filter {
+  margin-top: 200px;
+  background: #f3f3f3;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+  }
+}
+main section.filter .filter-wrap {
+  padding: 40px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap {
+    width: 100%;
+    border-radius: 5px;
+    padding: 40px 80px;
+    background: #f3f3f3;
+  }
+}
+main section.filter .filter-wrap h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+main section.filter .filter-wrap .speed-search {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #c5c5c5;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main section.filter .filter-wrap .speed-search h6 {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search h6 {
+    display: inline-block;
+    width: 120px;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] {
+    width: calc(100% - 120px);
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] * {
+  height: 50px;
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] select {
+  background: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 20px center;
+  background-color: #fff;
+  background-size: 10px;
+  width: 37%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] select {
+    width: 15.5172413793%;
+    flex-wrap: nowrap;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] input {
+  width: 60%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] input {
+    width: 67.2413793103%;
+    flex-wrap: nowrap;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] button {
+    width: 13.7931034483%;
+    margin-top: 0;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] button img {
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .ds-btn {
+    margin-bottom: 40px;
+    text-align: right;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn img {
+  width: 10px;
+  margin-left: 10px;
+  filter: brightness(0) saturate(100%);
+  transition: 0.3s;
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn img.active {
+  transform: rotate(180deg);
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search {
+  display: none;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] h6 {
+  margin: 20px 0 12px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85.9375%;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box h6 {
+    margin: 0;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul {
+    width: calc(100% - 120px);
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: #3c3c3c;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li {
+  width: 25%;
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  border: 1px solid #acacac;
+  background: #fff;
+  cursor: pointer;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li:not(:first-child) {
+  border-left: 0;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li.on {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #3c3c3c;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box {
+    flex-wrap: nowrap;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp {
+  width: 50%;
+  border: 1px solid #c5c5c5;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+  border-bottom: 0;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(odd) {
+  border-right: 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+    border-bottom: 1px solid #c5c5c5;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+    border-right: 0;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp li.title {
+  height: 45px;
+  line-height: 45px;
+  padding-left: 20px;
+  background-color: #eeeeee;
+  font-size: 16px;
+  font-weight: 600;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list {
+  height: 125px;
+  padding: 10px 20px;
+  background: #fff;
+  overflow-y: auto;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 225px;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list li {
+  height: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list li {
+    width: 30%;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list li label {
+  margin-left: 5px;
+  font-size: 14px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
+    display: inline-block;
+    text-align: center;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 120px;
+  height: 50px;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
+    margin: 0 auto;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button img {
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 5px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=submit] {
+  width: 74%;
+  background: #000;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=submit] {
+    width: 150px;
+    margin-right: 1%;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=reset] {
+  width: 24%;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=reset] {
+    width: 150px;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search {
+  display: block;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt {
+  flex-wrap: wrap;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li {
+  width: 20%;
+}
+main section.artistList {
+  margin-top: 80px;
+}
+main section.artistList .list-control {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #c5c5c5;
+}
+@media screen and (min-width: 1440px) {
+  main section.artistList .list-control {
+    padding-bottom: 20px;
+  }
+}
+main section.artistList .list-control .count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+main section.artistList .list-control .count b {
+  margin-right: 2px;
+}
+main section.artistList .list-control .count span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+main section.artistList .list-control .count label[for=now] {
+  color: #ac3f21;
+  margin-left: 5px;
+}
+main section.artistList .list-control .view-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+main section.artistList .list-control .view-type .sort {
+  font-size: 15px;
+  text-align: right;
+}
+main section.artistList .list-control .view-type .sort img {
+  height: 14px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.artistList .list-control .view-type .sort span, main section.artistList .list-control .view-type .sort img {
+    display: none;
+  }
+}
+main section.artistList .list-control .view-type .sort .sort-list {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 25px;
+}
+@media screen and (min-width: 1440px) {
+  main section.artistList .list-control .view-type .sort .sort-list {
+    position: static;
+  }
+}
+main section.artistList .list-control .view-type .sort .sort-list li {
+  font-size: 14px;
+  padding-left: 15px;
+  color: #3c3c3c;
+}
+main section.artistList .list-control .view-type .sort .sort-list li:hover {
+  text-decoration: underline;
+}
+main section.artistList .list-control .view-type .sort .sort-list li.on {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #3c3c3c;
+}
+main section.artistList .list-control .view-type select[name=nth-view] {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.artistList .list-control .view-type select[name=nth-view] {
+    display: block;
+    width: 120px;
+    height: 30px;
+    padding: 0 10px;
+    background: url(../../../image/icon_arrow_bk.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: right 10px center;
+    background-size: 8px;
+  }
+}
+main section.artistList .item-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+}
+main section.artistList .item-box .item {
+  width: 48%;
+  margin-bottom: 20px;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+}
+main section.artistList .item-box .item a {
+  display: block;
+}
+@media screen and (min-width: 1440px) {
+  main section.artistList .item-box .item {
+    width: 23.5%;
+    margin-bottom: 40px;
+  }
+}
+main section.artistList .item-box .item .i-pic {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.artistList .item-box .item .i-pic {
+    height: 480px;
+  }
+}
+main section.artistList .item-box .item .i-pic .bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+main section.artistList .item-box .item .i-pic .bm_btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 20px;
+}
+main section.artistList .item-box .item .i-pic .bm_btn .bookmark {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  opacity: 1;
+  z-index: 97;
+}
+main section.artistList .item-box .item .i-pic .bm_btn .bookmark.on {
+  filter: none;
+}
+main section.artistList .item-box .item .i-des {
+  padding: 10px 20px 15px;
+}
+@media screen and (min-width: 768px) {
+  main section.artistList .item-box .item .i-des {
+    padding: 20px 30px 25px;
+  }
+}
+main section.artistList .item-box .item .i-des strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  main section.artistList .item-box .item .i-des strong {
+    font-size: 20px;
+  }
+}
+main section.artistList .item-box .item .i-des p {
+  margin: 5px 0 20px;
+  font-size: 13px;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 768px) {
+  main section.artistList .item-box .item .i-des p {
+    margin: 10px 0 30px;
+    font-size: 15px;
+  }
+}
+main section.artistList .item-box .item .i-des p .vert-bar {
+  padding: 0 5px;
+  color: #acacac;
+}
+@media screen and (min-width: 768px) {
+  main section.artistList .item-box .item .i-des p .vert-bar {
+    padding: 0 8px;
+  }
+}
+main section.artistList .item-box .item .i-des .loc {
+  position: relative;
+  width: 80px;
+  height: 22px;
+  margin-left: auto;
+  font-size: 11px;
+  line-height: 22px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main section.artistList .item-box .item .i-des .loc {
+    width: 80px;
+    height: 26px;
+    font-size: 13px;
+    line-height: 26px;
+  }
+}
+main section.artistList .item-box .item .i-des .loc:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #3c3c3c;
+  border-radius: 3px;
+}
+main section.artistList .item-box .item .i-des .loc div {
+  position: absolute;
+}
+main section.artistList .item-box .item .i-des .loc div.tag {
+  left: 0;
+  width: 32px;
+  color: #fff;
+  background: #3c3c3c;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+main section.artistList .item-box .item .i-des .loc div:last-child {
+  right: 0;
+  width: 48px;
+}
+main section.artistList .item-box .item a {
+  position: relative;
+}
+main section.artistList .item-box .item a .i-pic::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 0) 0%, hsla(0deg, 0%, 0%, 0.013) 14.5%, hsla(0deg, 0%, 0%, 0.049) 27.7%, hsla(0deg, 0%, 0%, 0.104) 39.6%, hsla(0deg, 0%, 0%, 0.175) 50.2%, hsla(0deg, 0%, 0%, 0.259) 59.7%, hsla(0deg, 0%, 0%, 0.352) 68%, hsla(0deg, 0%, 0%, 0.45) 75.3%, hsla(0deg, 0%, 0%, 0.55) 81.5%, hsla(0deg, 0%, 0%, 0.648) 86.7%, hsla(0deg, 0%, 0%, 0.741) 91%, hsla(0deg, 0%, 0%, 0.825) 94.3%, hsla(0deg, 0%, 0%, 0.896) 96.9%, hsla(0deg, 0%, 0%, 0.951) 98.7%, hsla(0deg, 0%, 0%, 0.987) 99.7%, hsl(0deg, 0%, 0%) 100%);
+}
+main section.artistList .item-box .item a .i-des {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (min-width: 1440px) {
+  footer.sub {
+    position: static !important;
+    top: 0 !important;
+  }
+}
 footer .sitemap-banner-wrap {
   display: none;
 }

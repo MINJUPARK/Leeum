@@ -187,7 +187,7 @@
                     <li class="home"><a href="/../../index.html"></a></li>
                     <li class="loc">
                         <div class="step">
-                            <a href="">소장품</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                            <a href="../collect/collect_antique.html">소장품</a><img src="../../image/icon_dropdown.svg" class="dropdown">
                         </div>
                         <ul class="opt">
                             <li><a href="../about/about_intro.html">리움</a></li>
@@ -218,30 +218,35 @@
             <h2>작품 상세정보</h2>
             <div class="container">
                 <div class="item-wrap">
-                    <div class="i-pic">
-                        <img src="./image/antique_item1.jpg" width="600" height="740">
+                    <div class="i-slide">
+                        <div class="main-pic">
+                            <img src="./image/antique_item(1).jpg" alt="청자철화 보상화당초문 매병">
+                        </div>
+                        <div class="sub-pic">
+                            <img src="./image/antique_item(1).jpg" alt="정면">
+                            <img src="./image/antique_detail_sub(1).jpg" alt="측면">
+                            <img src="./image/antique_detail_sub(2).jpg" alt="밑면">
+                        </div>
                     </div>
                     <div class="i-des">
-                        <div style="border-bottom: 1px solid #000;">
+                        <div class="loc-icon">
                             <div class="loc">
                                 <div class="tag">전시</div><div>M1 4층</div>
                             </div>
-                            <div class="btn-box">
-                                <button type="button"><img src="../../image/icon_bookmark.svg">북마크</button>
-                                <button type="button"><img src="../../image/icon_print.svg">프린트</button>
-                                <button type="button" onclick="window.print()"><img src="../../image/icon_share.svg">공유</button>
+                            
+                            <div class="icon-box">
+                                <button type="button"><img src="../../image/icon_bookmark.svg"></button>
+                                <button type="button" onclick="window.print()"><img src="../../image/icon_print.svg"></button>
+                                <button type="button"><img src="../../image/icon_share.svg"></button>
                             </div>
                         </div>
-                        <div>
-                            <div>
+                        <div class="tit-exp">
+                            <div class="tit">
                                 <h2>청자철화 보상화당초문 매병</h2>
-                                <p>靑磁 鐵畵草蟲鳥文 梅甁</p>
+                                <p class="lang">靑磁 鐵畵草蟲鳥文 梅甁</p>
                             </div>
-                            <div>
-                                <table>
-                                    <colgroup>
-                                        <col span="3">
-                                    </colgroup>
+                            <div class="exp">
+                                <table class="mini-box">
                                     <tr>
                                         <th>시대</th>
                                         <td>고려 12세기</td>
@@ -255,14 +260,14 @@
                                         <td>높이 24.7cm, 입지름 5.6cm, 굽지름 8.2cm</td>
                                     </tr>
                                 </table>
+                                <p>
+                                    철화 기법은 철 안료를 물과 섞어 붓에 찍어 청자의 표면에 그림을 그려 장식하는
+                                    기법으로 음각이나 양각, 상감기법보다는 더욱 회화와 가까운 특징을 보입니다. 
+                                    이 작품의 장식에서도 꽃과 잎의 가장자리 곳곳에 붓을 사용한 흔적이 잘 나타납니다. 
+                                    장식의 소재는 상상 속의 꽃인 보상화와 덩굴이 결합된 것으로
+                                    고려 시대에는 철화 장식뿐만 아니라 음각이나 양각기법에서도 즐겨 사용되었습니다.
+                                </p>
                             </div>
-                            <p style="line-height:2em;">
-                                철화 기법은 철 안료를 물과 섞어 붓에 찍어 청자의 표면에 그림을 그려 장식하는
-                                기법으로 음각이나 양각, 상감기법보다는 더욱 회화와 가까운 특징을 보입니다. 
-                                이 작품의 장식에서도 꽃과 잎의 가장자리 곳곳에 붓을 사용한 흔적이 잘 나타납니다. 
-                                장식의 소재는 상상 속의 꽃인 보상화와 덩굴이 결합된 것으로
-                                고려 시대에는 철화 장식뿐만 아니라 음각이나 양각기법에서도 즐겨 사용되었습니다.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -272,16 +277,16 @@
             <h2>이 작품과 유사한 소장품</h2>
             <div class="container">
                 <div class="similarItem-wrap">
-                    <h5>이 작품과 유사한 소장품</h5>
+                    <h6>이 작품과 유사한 소장품</h6>
                     <div class="item-box">
                         <div class="item">
                             <a href="./collect_antique_detail.html">
                                 <div class="i-pic">
-                                    <img src="../../image/icon_bookmark_on.svg" class="bookmark on">
-                                    <img src="./image/antique_item1.jpg" alt="청자철화 보상화당초문 매병" class="bg">
+                                    <button type="button" class="bm_btn"><img src="../../image/icon_bookmark.svg" class="bookmark"></button>
+                                    <img src="./image/antique_detail_item(1).jpg" alt="청자철화 보상화문 주자" class="bg">
                                 </div>
                                 <div class="i-des">
-                                    <strong>청자철화 보상화당초문 매병</strong>
+                                    <strong>청자철화 보상화문 주자</strong>
                                     <p>고려 12세기<span class="vert-bar">&vert;</span>점토(粘土)</p>
                                     <div class="loc">
                                         <div class="tag">전시</div><div>M1 4층</div>
@@ -292,11 +297,11 @@
                         <div class="item">
                             <a href="./collect_antique_detail.html">
                                 <div class="i-pic">
-                                    <img src="../../image/icon_bookmark_on.svg" class="bookmark on">
-                                    <img src="./image/antique_item1.jpg" alt="청자철화 보상화당초문 매병" class="bg">
+                                    <button type="button" class="bm_btn"><img src="../../image/icon_bookmark.svg" class="bookmark"></button>
+                                    <img src="./image/antique_detail_item(2).jpg" alt="백자청화 모란문 주자" class="bg">
                                 </div>
                                 <div class="i-des">
-                                    <strong>청자철화 보상화당초문 매병</strong>
+                                    <strong>청자철화 초문 반</strong>
                                     <p>고려 12세기<span class="vert-bar">&vert;</span>점토(粘土)</p>
                                     <div class="loc">
                                         <div class="tag">전시</div><div>M1 4층</div>
@@ -307,11 +312,11 @@
                         <div class="item">
                             <a href="./collect_antique_detail.html">
                                 <div class="i-pic">
-                                    <img src="../../image/icon_bookmark_on.svg" class="bookmark on">
-                                    <img src="./image/antique_item1.jpg" alt="청자철화 보상화당초문 매병" class="bg">
+                                    <button type="button" class="bm_btn"><img src="../../image/icon_bookmark.svg" class="bookmark"></button>
+                                    <img src="./image/antique_detail_item(3).jpg" alt="청자철화 초문 유병" class="bg">
                                 </div>
                                 <div class="i-des">
-                                    <strong>청자철화 보상화당초문 매병</strong>
+                                    <strong>청자철화 초문 유병</strong>
                                     <p>고려 12세기<span class="vert-bar">&vert;</span>점토(粘土)</p>
                                     <div class="loc">
                                         <div class="tag">전시</div><div>M1 4층</div>
@@ -322,11 +327,11 @@
                         <div class="item">
                             <a href="./collect_antique_detail.html">
                                 <div class="i-pic">
-                                    <img src="../../image/icon_bookmark_on.svg" class="bookmark on">
-                                    <img src="./image/antique_item1.jpg" alt="청자철화 보상화당초문 매병" class="bg">
+                                    <button type="button" class="bm_btn"><img src="../../image/icon_bookmark.svg" class="bookmark"></button>
+                                    <img src="./image/antique_detail_item(4).jpg" alt="청자철화 초문 호" class="bg">
                                 </div>
                                 <div class="i-des">
-                                    <strong>청자철화 보상화당초문 매병</strong>
+                                    <strong>청자철화 초문 호</strong>
                                     <p>고려 12세기<span class="vert-bar">&vert;</span>점토(粘土)</p>
                                     <div class="loc">
                                         <div class="tag">전시</div><div>M1 4층</div>
@@ -342,20 +347,22 @@
             <h2>페이지 이동</h2>
             <div class="container">
                 <div class="movePage-wrap">
-                    <a href="#">
-                        <img src="../../image/icon_arrow_tail.svg">이전 소장품
-                        <span class="vert-bar">&vert;</span><span class="title">환두대도 편</span>
+                    <a href="#" class="prev">
+                        <img src="../../image/icon_arrow_tail.svg">
+                        <label>이전 소장품</label>
+                        <p class="hidden"><span class="vert-bar">&vert;</span><span class="title">환두대도 편</span></p>
                     </a>
-                    <a href="../collect/collect_antique.html">목록으로</a>
-                    <a href="#">
-                        <img src="../../image/icon_arrow_tail.svg">다음 소장품
-                        <span class="vert-bar">&vert;</span><span class="title">분청사기상감 용문 매병</span>
+                    <a href="../collect/collect_antique.html" class="home">목록으로</a>
+                    <a href="#" class="next">
+                        <p class="hidden"><span class="title">분청사기상감 용문 매병</span><span class="vert-bar">&vert;</span></p>
+                        <label>다음 소장품</label>
+                        <img src="../../image/icon_arrow_tail.svg">
                     </a>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="sub">
         <div class="sitemap-banner-wrap">
             <div class="container">
                 <div class="sob">

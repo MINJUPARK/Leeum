@@ -15,308 +15,51 @@ header {
 main {
     
     section.filter {
-        background: $bk6;
-        
-        @include responsive(pc-screens) {
-            @include flex_between();
-            align-items: center;
-            background: transparent;
-        }
+        @include section_filter();
 
         .filter-wrap {
-            padding: 40px 0;
-
-            @include responsive(pc-screens) {
-                width: 100%;
-                border-radius: 5px;
-                padding: 40px 80px;
-                background: $bk6;
-            }
-
-            h6 {
-                @include gothic_font(semibold, $h6);
-            }
-
+            @include filter_wrap();
+            
             .speed-search {
-                padding-bottom: 30px;
-                margin-bottom: 20px;
-                border-bottom: 1px solid $bk4;
-                
-                @include responsive(pc-screens) {
-                    @include flex_between_center();
-                }
-
-                h6 { 
-                    display: none;
-
-                    @include responsive(pc-screens) {
-                        display: inline-block;
-                        width: 120px;
-                    }
-                }
-
-                form[name=keyword] {
-                    @include flex_between();
-                    align-items: center;
-                    flex-wrap: wrap;
-
-                    @include responsive(pc-screens) {
-                        width: calc(100% - 120px);
-                    }
-
-                    & * {
-                        height: 50px;
-                    }
-
-                    select {
-                        @include full_bg('icon_arrow_bk.svg', index);
-                        background-position: right 20px center;
-                        background-color: #fff;
-                        background-size: 10px;
-                        width: 37%;
-                        padding: 0 20px;
-
-                        @include responsive(pc-screens) {
-                            width: 15.51724137931034%;
-                            flex-wrap: nowrap;
-                        }
-                    }
-
-                    input {
-                        width: 60%;
-                        padding: 0 20px;
-                        @include responsive(pc-screens) {
-                            width: 67.24137931034483%;
-                            flex-wrap: nowrap;
-                        }
-                    }
-
-                    button {
-                        @include gothic_font(medium);
-                        width: 100%;
-                        margin-top: 20px;
-                        background: #000;
-                        color: #fff;
-
-                        @include responsive(pc-screens) {
-                            width: 13.79310344827586%;
-                            margin-top: 0;
-                        }
-
-                        img {
-                            height: 18px;
-                            padding-bottom: 3px;
-                            margin-right: 8px;
-                            filter: $svg-white;
-                        }
-                    }
-                }
+                @include speed_search();
             }
 
             .detail-search-wrap {
-                
-                .ds-btn {
-                    display: block;
-                    width: 100%;
-                    margin-bottom: 20px;
-                    text-align: center;
-                    @include gothic_font(medium, 14px);
+                @include detail_search();
 
-                    @include responsive(pc-screens) {
-                        margin-bottom: 40px;
-                        text-align: right;
-                    }
-                    
-                    img {
-                        width: 10px;
-                        margin-left: 10px;
-                        filter: $svg-black;
-                        @include icon_rotate(180deg);
-                    }
-                }
+                form[name=detail] .opt-box {
 
-                .detail-search {
-                    display: none;
-
-                    form[name=detail] {
-                        @include flex_between();
-                        flex-direction: column;
-                        width: 100%;
-
-                        h6 {
-                            margin: 20px 0 12px;
+                    .type {
+    
+                        @include responsive(pc-screens) {
+                            @include flex_between_center();
+                            width: 58.18181818181818%;
                         }
-
-                        .opt-box {
+                    }
+    
+                    .space {
+    
+                        @include responsive(pc-screens) {
+                            @include flex_between_center();
+                            width: 32.7272727%;
+                        }
+    
+                        ul.opt {
+    
                             @include responsive(pc-screens) {
-                                @include flex_between_center();
-                                width: 85.9375%;
-
-                                h6 {
-                                    margin: 0;
-                                }
-
-                                ul {
-                                    width: calc(100% - 120px);
-                                }
+                                width: 72.22222222222222%;
                             }
-
-                            .type {
-                                @include responsive(pc-screens) {
-                                    @include flex_between_center();
-                                    width: 58.18181818181818%;
-                                }
-                                
+    
+                            h6 {
+                                width: calc(100% - 72.22222222222222%);
                             }
-
-                            .space {
-
-                                ul.opt {
-
-                                    h6 {
-                                        width: calc(100% - 72.22222222222222%);
-                                    }
-                                    
-                                    li {
-                                        width: 50%;
-                                    }
-
-                                    @include responsive(pc-screens) {
-                                        width: 72.22222222222222%;
-                                    }
-                                }
-                                
-                                @include responsive(pc-screens) {
-                                    @include flex_between_center();
-                                    width: 32.7272727%;
-                                }
-                            }
-
-                            ul.opt {
-                                @include flex_between();
-                                height: 45px;
-                                line-height: 45px;
-                                text-align: center;
-                                color: $bk1;
-                                
-                                li {
-                                    width: 25%;
-                                    font-size: 14px;
-                                    border: 1px solid $bk3;
-                                    background: #fff;
-                                    cursor: pointer;
-                                    
-                                    &:not(:first-child) {
-                                        border-left: 0;
-                                    }
-
-                                    &:first-child {
-                                        border-top-left-radius: 5px;
-                                        border-bottom-left-radius: 5px;
-                                    }
-            
-                                    &:last-child {
-                                        border-top-right-radius: 5px;
-                                        border-bottom-right-radius: 5px;
-                                    }
-            
-                                    &.on {
-                                        @include gothic_font(medium, 14px);
-                                        color: #fff;
-                                        background: $bk1;
-                                    }
-                                }
-                            }
-                        }
                             
-
-                        .chk-box {
-                            @include flex_between();
-                            flex-wrap: wrap;
-                            margin-top: 40px;
-
-                            @include responsive(pc-screens) {
-                                flex-wrap: nowrap;
-                            }
-
-                            ul.grp {
-                                width: 50%; 
-                                border: 1px solid $bk4;
-
-                                &:first-child, &:nth-child(2) { border-bottom: 0; }
-                                &:nth-child(odd)              { border-right: 0; }
-
-                                @include responsive(pc-screens) {
-                                    &:first-child, &:nth-child(2) { border-bottom: 1px solid $bk4; }
-                                    &:nth-child(2) { border-right: 0; }
-                                }
-                                
-                                li.title {
-                                    height: 45px;
-                                    line-height: 45px;
-                                    padding-left: 20px;
-                                    background-color: $bk7;
-                                    @include gothic_font(semibold);
-                                }
-                                
-                                ul.list { 
-                                    height: 125px;
-                                    padding: 10px 20px;
-                                    background: #fff;
-                                    overflow-y: auto;
-
-                                    @include responsive(pc-screens) {
-                                        display: flex;
-                                        flex-wrap: wrap;
-                                        align-content: flex-start;
-                                        height: 225px;
-                                    }
-        
-                                    li {
-                                        height: 30px;
-                                        
-                                        @include responsive(pc-screens) {
-                                            width: 30%;
-                                        }
-
-                                        label {
-                                            margin-left: 5px;
-                                            font-size: 14px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .btn-box {
-                            margin-top: 30px;
-                            text-align: center;
-        
-                            button {
-                                @include gothic_font(medium, 14px);
-                                width: 120px; height: 50px;
-                                margin: 0 auto;
-                                color: #fff;
-        
-                                img {
-                                    height: 18px;
-                                    padding-bottom: 3px;
-                                    margin-right: 5px;
-                                    filter: $svg-white;
-                                }
-            
-                                &[type=submit] {
-                                    margin-right: 10px;
-                                    background: #000;
-                                }
-            
-                                &[type=reset] {
-                                    background: rgba(0, 0, 0, 0.5);
-                                }
+                            li {
+                                width: 50%;
                             }
                         }
                     }
-                }
+                }  
             }
         }
     }
@@ -325,93 +68,11 @@ main {
         margin-top: 80px;
 
         .list-control {
-            @include flex_between();
-            width: 100%; height: 35px; line-height: 35px;
-            border-bottom: 1px solid $bk4;
-            
-            @include responsive(pc-screens) {
-                padding-bottom: 20px;
-            }
-
-            .count {
-                @include flex_between_center();
-                font-size: 15px;
-
-                b {
-                    margin-right: 2px;
-                }
-
-                span { 
-                    @include gothic_font(medium); 
-                    margin-right: 20px; 
-                }
-                
-                label[for=now] { 
-                    margin-left: 5px; 
-                }
-            }
-
-            .view-type {
-                @include flex_between_center();
-                column-gap: 20px;
-                
-                .sort {
-                    font-size: 15px;
-                    text-align: right;
-    
-                    img { 
-                        height: 14px; 
-                        margin-right: 10px; 
-                    }
-    
-                    @include responsive(pc-screens) {
-                        span, img { display: none };
-                    }
-    
-                    .sort-list {
-                        @include flex_between();
-                        position: relative;
-                        top: 25px;
-                        
-                        @include responsive(pc-screens) {
-                            position: static;
-                        }
-    
-                        li {
-                            font-size: 14px;
-                            padding-left: 15px;
-                            color: $bk1;
-                            
-                            &:hover {
-                                text-decoration: underline;
-                            }
-
-                            &.on {
-                                @include gothic_font(medium, 14px);
-                                text-decoration: underline;
-                                color: $bk1;
-                            }
-                        }
-                    }
-                }
-    
-                select[name=nth-view] {
-                    display: none;
-
-                    @include responsive(pc-screens) {
-                        display: block;
-                        width: 120px; height: 30px;
-                        padding: 0 10px;
-                        @include full_bg('icon_arrow_bk.svg', index);
-                        background-position: right 10px center;
-                        background-size: 8px;
-                    }
-                }
-            }
+            @include list_control();
         }
 
         .item-box {
-            @include item_box();
+            @include itemList_box();
         }
     }
 

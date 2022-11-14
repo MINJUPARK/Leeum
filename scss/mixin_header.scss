@@ -19,12 +19,12 @@
     .logo-menu-wrap {
         position: fixed;
         left: 0; top: 30px; right: 0;
+        z-index: 98;
 
         &.menu-sc {
             top: 0;
             padding: 30px 0 10px 0;
             background-color: #000;
-            z-index: 98;
         }
 
         .logo-menu {
@@ -334,7 +334,7 @@
 }
 
 @mixin header_sub() {
-
+    
     .sub-title {
         @include element_center();
         text-align: center;

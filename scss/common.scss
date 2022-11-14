@@ -26,7 +26,7 @@ html, body {
 }
 
 body {
-
+    // position: relative;
     font: {
         size: 16px;
         family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -78,22 +78,55 @@ address {
     font-style: normal;
 }
 
-
-
 button {
     border: 0;
     background: transparent;
 }
 
 input {
+    
+    &:focus {
+        outline: none;
+    }
 
     &[type=checkbox], &[type=radio] {
         vertical-align: middle;
-        zoom: 1.2;
+        zoom: 1.1;
     }
 
-    &:focus {
-        outline: none;
+    &[type=checkbox] {
+        position: relative;
+        width: 14px; height: 14px;
+        outline: none !important;
+        border: 1px solid $bk4;
+        border-radius: 2px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        
+        &:hover {
+            background: $bk5;
+        }
+        
+        &:checked {
+            color: white;
+            background-color: $red-brown;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        &:checked::before {
+            border-radius: 2px;
+            transform: scale(1) translate(-50%, -50%);
+        }
+
+        &::before {
+            content: "\2713";
+            position: absolute;
+            top: 50%; left: 50%;
+            line-height: 1;
+            transform: scale(0) translate(-50%, -50%);
+            overflow: hidden;
+        }
     }
 }
 
@@ -111,12 +144,12 @@ input, select {
 }
 
 select {
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     
     &::-ms-expand {
-        display:none;
+        display: none;
     }
     
 }

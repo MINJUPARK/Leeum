@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
-/* ---------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
   width: 100%;
@@ -25,6 +25,7 @@ html, body {
 }
 
 body {
+  position: relative;
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   letter-spacing: -0.04em;
@@ -76,12 +77,44 @@ button {
   background: transparent;
 }
 
-input[type=checkbox], input[type=radio] {
-  vertical-align: middle;
-  zoom: 1.2;
-}
 input:focus {
   outline: none;
+}
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  zoom: 1.1;
+}
+input[type=checkbox] {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  outline: none !important;
+  border: 1px solid #c5c5c5;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=checkbox]:hover {
+  background: #d4d4d4;
+}
+input[type=checkbox]:checked {
+  color: white;
+  background-color: #ac3f21;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+input[type=checkbox]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+input[type=checkbox]::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  transform: scale(0) translate(-50%, -50%);
+  overflow: hidden;
 }
 
 input[type=checkbox] + label {
@@ -138,7 +171,7 @@ h6 {
   font-size: 18px;
 }
 
-/* ---------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
 header {
   position: relative;
   height: 280px;
@@ -591,6 +624,12 @@ header .breadcrumb-wrap {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  footer.sub {
+    position: static !important;
+    top: 0 !important;
+  }
+}
 footer .sitemap-banner-wrap {
   display: none;
 }

@@ -9,7 +9,138 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_artist.jpg');
+    @include full_bg('artist_header.jpg');
+}
+
+main {
+    section.intro {
+
+        .intro-wrap {
+            text-align: center;
+
+            h3 {
+                @include responsive(pc-screens) {
+                    font-size: $h1;
+                }
+            }
+
+            .des { 
+                line-height: 1.8em;
+
+                &.top {
+                    margin-top: 30px;
+                    margin-bottom: 50px;
+                }
+
+                .vert-bar {
+                    display: block;
+                    width: 1px; height: 100px;
+                    margin: 0 auto;
+                    background-color: $bk3;
+                }
+                span {
+                    display: block;
+
+                    @include responsive(pc-screens) {
+                        display: inline-block;
+                    }
+                }
+            }
+            
+            .preview {
+                @include out_container();
+                height: 300px;
+                background-color: bisque;
+            }
+        }
+    }
+
+    section.filter {
+        margin-top: 200px;
+        @include section_filter();
+
+        .filter-wrap {
+            @include filter_wrap();
+            
+            .speed-search {
+                @include speed_search();
+            }
+
+            .detail-search-wrap {
+                @include detail_search();
+                
+                .detail-search {
+                    display: block;
+
+                    form[name=detail] .opt-box {
+
+                        ul.opt {
+                            flex-wrap: wrap;
+    
+                            li {
+                                width: 20%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.artistList {
+        margin-top: 80px;
+
+        .list-control {
+            @include list_control();
+        }
+
+        .item-box {
+            @include itemList_box();
+
+            .item a {
+                position: relative;
+
+                .i-pic {
+            
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(
+                                    to bottom,
+                                    hsla(0, 0%, 0%, 0) 0%,
+                                    hsla(0, 0%, 0%, 0.013) 14.5%,
+                                    hsla(0, 0%, 0%, 0.049) 27.7%,
+                                    hsla(0, 0%, 0%, 0.104) 39.6%,
+                                    hsla(0, 0%, 0%, 0.175) 50.2%,
+                                    hsla(0, 0%, 0%, 0.259) 59.7%,
+                                    hsla(0, 0%, 0%, 0.352) 68%,
+                                    hsla(0, 0%, 0%, 0.45) 75.3%,
+                                    hsla(0, 0%, 0%, 0.55) 81.5%,
+                                    hsla(0, 0%, 0%, 0.648) 86.7%,
+                                    hsla(0, 0%, 0%, 0.741) 91%,
+                                    hsla(0, 0%, 0%, 0.825) 94.3%,
+                                    hsla(0, 0%, 0%, 0.896) 96.9%,
+                                    hsla(0, 0%, 0%, 0.951) 98.7%,
+                                    hsla(0, 0%, 0%, 0.987) 99.7%,
+                                    hsl(0, 0%, 0%) 100%
+                        );
+                    }
+                }
+
+                .i-des {
+                    position: absolute;
+                    bottom: 40px;
+                    width: 100%;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+        }
+    }
 }
 
 footer {

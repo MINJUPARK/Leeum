@@ -1,5 +1,12 @@
 @mixin footer() { // 모든 페이지 공통 푸터 (수정 금지)
 
+    &.sub {
+        @include responsive(pc-screens) {
+            position: static !important;
+            top: 0 !important;
+        }
+    }
+
     .sitemap-banner-wrap {
         display: none;
     

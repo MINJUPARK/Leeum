@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
-/* ---------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
   width: 100%;
@@ -25,6 +25,7 @@ html, body {
 }
 
 body {
+  position: relative;
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   letter-spacing: -0.04em;
@@ -76,12 +77,44 @@ button {
   background: transparent;
 }
 
-input[type=checkbox], input[type=radio] {
-  vertical-align: middle;
-  zoom: 1.2;
-}
 input:focus {
   outline: none;
+}
+input[type=checkbox], input[type=radio] {
+  vertical-align: middle;
+  zoom: 1.1;
+}
+input[type=checkbox] {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  outline: none !important;
+  border: 1px solid #c5c5c5;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=checkbox]:hover {
+  background: #d4d4d4;
+}
+input[type=checkbox]:checked {
+  color: white;
+  background-color: #ac3f21;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+input[type=checkbox]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+input[type=checkbox]::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  transform: scale(0) translate(-50%, -50%);
+  overflow: hidden;
 }
 
 input[type=checkbox] + label {
@@ -138,7 +171,7 @@ h6 {
   font-size: 18px;
 }
 
-/* ---------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
 header {
   position: relative;
   height: 280px;
@@ -748,43 +781,16 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
     width: calc(100% - 120px);
   }
 }
-@media screen and (min-width: 1440px) {
-  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 58.1818181818%;
-  }
-}
-main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .space ul.opt h6 {
-  width: 27.7777777778%;
-}
-main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .space ul.opt li {
-  width: 50%;
-}
-@media screen and (min-width: 1440px) {
-  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .space ul.opt {
-    width: 72.2222222222%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .space {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 32.7272727%;
-  }
-}
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt {
   display: flex;
   justify-content: space-between;
-  height: 45px;
-  line-height: 45px;
   text-align: center;
   color: #3c3c3c;
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li {
   width: 25%;
+  height: 45px;
+  line-height: 45px;
   font-size: 14px;
   border: 1px solid #acacac;
   background: #fff;
@@ -871,16 +877,27 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
   font-size: 14px;
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
+  display: flex;
+  justify-content: space-between;
   margin-top: 30px;
-  text-align: center;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
+    display: inline-block;
+    text-align: center;
+  }
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   width: 120px;
   height: 50px;
-  margin: 0 auto;
   color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
+    margin: 0 auto;
+  }
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button img {
   height: 18px;
@@ -889,11 +906,50 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=submit] {
-  margin-right: 10px;
+  width: 74%;
   background: #000;
 }
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=submit] {
+    width: 150px;
+    margin-right: 1%;
+  }
+}
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=reset] {
+  width: 24%;
   background: rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=reset] {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap form[name=detail] .opt-box .type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 58.1818181818%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap form[name=detail] .opt-box .space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 32.7272727%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap form[name=detail] .opt-box .space ul.opt {
+    width: 72.2222222222%;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap form[name=detail] .opt-box .space ul.opt h6 {
+  width: 27.7777777778%;
+}
+main section.filter .filter-wrap .detail-search-wrap form[name=detail] .opt-box .space ul.opt li {
+  width: 50%;
 }
 main section.itemList {
   margin-top: 80px;
@@ -926,6 +982,7 @@ main section.itemList .list-control .count span {
   margin-right: 20px;
 }
 main section.itemList .list-control .count label[for=now] {
+  color: #ac3f21;
   margin-left: 5px;
 }
 main section.itemList .list-control .view-type {
@@ -1029,16 +1086,18 @@ main section.itemList .item-box .item .i-pic .bg {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-main section.itemList .item-box .item .i-pic .bookmark {
+main section.itemList .item-box .item .i-pic .bm_btn {
   position: absolute;
   top: 18px;
   right: 18px;
   width: 20px;
+}
+main section.itemList .item-box .item .i-pic .bm_btn .bookmark {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
   opacity: 1;
   z-index: 97;
 }
-main section.itemList .item-box .item .i-pic .bookmark.on {
+main section.itemList .item-box .item .i-pic .bm_btn .bookmark.on {
   filter: none;
 }
 main section.itemList .item-box .item .i-des {
@@ -1120,6 +1179,9 @@ main section.itemList .item-box .item .i-des .loc div:last-child {
   right: 0;
   width: 48px;
 }
+main section.paging {
+  margin: 30px 0 60px;
+}
 main section.paging ul {
   display: flex;
   justify-content: space-between;
@@ -1174,6 +1236,12 @@ main section.paging ul li a.next {
   transform: rotate(-90deg);
 }
 
+@media screen and (min-width: 1440px) {
+  footer.sub {
+    position: static !important;
+    top: 0 !important;
+  }
+}
 footer .sitemap-banner-wrap {
   display: none;
 }
