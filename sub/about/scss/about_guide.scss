@@ -13,6 +13,47 @@ header {
 }
 
 main {
+
+    .tab-menu-wrap {
+
+        .tab-menu {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 75px;
+            
+            li {
+                width: (100%/3);
+                text-align: center;
+                
+                a {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 13px;
+                    border-bottom: 1px solid #9c9c9c;
+                    
+                    @include responsive(tablet-screens) {
+                        padding-bottom: 13px * 2;
+                        font-size: 24px;
+                    }
+                    
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        content: '';
+                        display: block;
+                        width: 0; height: 2px;
+                        background-color: #000;
+
+                        transition: all 1s;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            } // li
+        } // tab-menu
+    } // tab-menu-wrap
     
     .fee-time-wrap {
         display: none;
@@ -49,22 +90,22 @@ main {
             }
 
             h3 {
-               font-size: calc(1em + 4px);
-               margin-bottom: 20px ;
-               padding-left: 20px;
-               border-left: 3px solid $red-brown;
+                font-size: calc(1em + 4px);
+                margin-bottom: 20px ;
+                padding-left: 20px;
+                border-left: 3px solid $red-brown;
     
-               @include responsive (tablet-screens) {
+                @include responsive (tablet-screens) {
                     height: 34px;
                     margin-bottom: 50px;
                     border-left-width: 5px;
-               }
-           }
+                }
+            }
 
-           span {
+            span {
                 color: $bk1;
                 font-size: calc(1em - 2px);
-           }
+            }
 
             .time {
                 
@@ -309,6 +350,7 @@ main {
     } // fee-time-wrap
 
     .vr-floor-wrap {
+        display: none;
 
         section.vr,
         section.floor-info {
@@ -325,8 +367,11 @@ main {
             font-size: 26px;
 
             @include responsive (tablet-screens) {
-                font-size: 36px;
                 text-align: left;
+            } 
+
+            @include responsive (pc-screens) {
+                font-size: 36px;
             }
         }
 
@@ -349,6 +394,10 @@ main {
 
         section.floor-info {
 
+            @include responsive(pc-screens) {
+                font-size: 24px;
+            }
+
             h3 {
                 margin-bottom: 60px;
             }
@@ -370,34 +419,91 @@ main {
 
                     .group-title {
                         display: flex;
+                        justify-content: space-between;
+                        padding: 0 10px;
                         margin-bottom: 14px;
-                        background-color: coral;
+
+                        @include responsive(tablet-screens) {
+                            padding: 0;
+                            margin-bottom: 36px;
+                        }
 
                         h4 {
-                            font-size: 20px;
+                            @include gothic_font(semibold, 20px);
+
+                            @include responsive(pc-screens) {
+                                font-size: 30px;
+                            }
+
+                            span {
+                                margin-left: 10px;
+                                color: $bk2;
+                                @include gothic_font(regular, calc(1em - 6px));
+
+                                @include responsive(pc-screens) {
+                                    margin-left: 20px;
+                                    // font-size: 24px;
+                                }
+                            }
                         }
 
                         img {
-                            width: 3.076923076923077%;
+                            width: 12px / 350px * 100%;
     
                             @include responsive(tablet-screens) {
                                 display: none;
                             }
                         }
-                    }
+                    } // group-title
 
-                    .floor-option {
+                    .group-option {
                         margin-bottom: 30px;
-                        border-top: 1px solid #000;
+                        border-top: 2px solid #000;
                         
                         li {
                             height: 52px;
+                            line-height: 52px;
+                            padding: 0 10px;
+                            font-size: 20px;
+                            color: $bk2;
                             border-bottom: 1px solid $bk4;
+
+                            @include responsive(tablet-screens) {
+                                height: 52px * 1.5;
+                                line-height: 52px * 1.5;
+                                font-size: 20px + 5px;
+                            }
+
+                            @include responsive(pc-screens) {
+                                height: 52px * 2;
+                                line-height: 52px * 2;
+                                padding: 0 20px;
+                                font-size: 20px + 5px + 5px;
+                            }
+                            
+                            &:hover {
+                                font-weight: 600;
+                                color: #000;
+                                background-color: $bk6;
+                                
+                                @include responsive(tablet-screens) {
+                                    background-image: url(../../../image/icon_arrow_tail.svg);
+                                    background-repeat: no-repeat ;
+                                    background-position: center right;
+                                    background-origin: content-box;
+                                    background-size: 37px 28px;
+                                }
+                            }
+
+                            span {
+                                vertical-align: top;
+                                font-size: calc(1em - 4px);
+                            }
                         }
-                    }
-                    
-                }
-                .floor-con {
+                    } // group-option
+                } // floor-select-group
+
+                .floor-con-group {
 
                     @include responsive(tablet-screens) {
                         width: 800px / 1440px * 100%;
@@ -414,13 +520,14 @@ main {
                                 margin-bottom: 25px;
                             }
                         }
-                    }
+                    } // floor-img
 
                     .floor-txt {
                         
-                        .floor-title {
-                            display: flex;
-                            justify-content: space-between;
+                        .txt-flex {
+                            @include flex_between();
+                            // display: flex;
+                            // justify-content: space-between;
 
                             strong {
                                 font-size: 24px;
@@ -444,16 +551,386 @@ main {
                         p {
                             font-size: calc(1em - 2px);
                         }
-                    }
-                }
-            }
+                    } // floor-txt
+                } // floor-con-group
+            } // > div
         } // section.floor-info
     } // vr-floor-wrap
 
     section.digital-guide-did-wrap {
-        display: none;
-    }
-}
+        // display: none;
+        overflow: hidden;
+        margin-top: 70px;
+        text-align: center;
+        word-break: keep-all; // 단어를 기준으로 줄바꿈
+        // background-color: wheat;
+
+        @include responsive(tablet-screens) {
+            font-size: 22px;
+        }
+        
+        @include responsive(pc-screens) {
+            text-align: left;
+            margin-top: 190px;
+        }
+        
+        h3, h4 { @include responsive(pc-screens) { text-align: center; } }
+        
+        h3 { 
+            font-size: calc(1em + 10px);
+            
+            @include responsive(pc-screens) { font-size: 46px; }
+        }
+        
+        h4 {
+            margin-bottom: 50px;
+            color: $bk4;
+            @include gothic_font(regular, calc(1em + 4px));
+            
+            @include responsive(pc-screens) { margin-bottom: 120px; }
+        }
+
+        img { 
+            width: 100%;
+            border-radius: 20px; 
+        }
+
+        strong, h5 {
+            font-size: calc(1em + 1.538461538vw);
+
+            @include responsive(pc-screens) { font-size: 38px; }
+        }
+
+        section.digital-guide {
+
+            p, .p {
+                font-size: calc(1em - 2px);
+                line-height: calc(1em - 2px + 10px);
+                color: $bk1;
+            }
+
+            .guide-intro-wrap {
+               
+                .guide-intro {
+                    
+                    @include responsive(pc-screens) {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+    
+                    .guide-intro-img {
+    
+                        @include responsive(pc-screens) {
+                            order: 2;
+                            width: 700px / 1400px * 100%;
+                        }
+                    } // guide-intro-img
+    
+                    .guide-intro-txt {
+                        margin-top: 30px; 
+                        background-color: dodgerblue;
+    
+                        @include responsive(pc-screens) {
+                            order: 1;
+                            margin-top: 0; 
+                        }
+                        
+                        strong {
+                            display: block;
+                            line-height: calc(1em + 6px + 10px);
+    
+                            @include responsive(pc-screens) {
+                                line-height: 55px;
+                            }
+                        }
+                        
+                        p {
+                            margin-top: 30px; 
+
+                            @include responsive(pc-screens) {
+                                line-height: 32px;
+                            }
+
+                            span {
+                                color: $red-brown;
+                                @include gothic_font(semibold);
+                            }
+                        }
+                    } // guide-intro-txt
+                } // guide-intro
+            } // guide-intro-wrap
+
+            .guide-point-wrap {
+                margin-top: 100px;
+                margin-bottom: 140px;
+
+                @include responsive(pc-screens) {
+                    position: relative;
+                    margin-top: 30px;
+                }
+
+                .guide-point-txt,
+                .guide-point-img {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 580px / 350px * 100%; 
+                    padding-left: 80px / 350px * 100%;
+                    padding-right: 80px / 350px * 100%;
+                    
+                    @include responsive(pc-screens) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+
+                    > li {
+                        width: 190px / 420px * 100%;
+
+                        @include responsive(pc-screens) {
+                            width: 100%;
+                        }
+                    }
+                } // .guide-point-txt, .guide-point-img
+
+                .guide-point-txt {
+                    margin-bottom: 20px;
+                    background-color: yellow;
+
+                    @include responsive(pc-screens) {
+                        position: absolute;
+                        right: 0; bottom: 0;
+                        display: block;
+                        width: 626px / 1400px * 100%;
+                        margin-bottom: 0;
+                        order: 2;
+                    }
+                    
+                    li.hidden { // 토글
+                        visibility: hidden;
+                    }
+                    
+                    > li {
+                        background-color: rosybrown;
+                        
+                        @include responsive(pc-screens) {
+                            height: 300px;
+                        }
+
+                        br { @include responsive(pc-screens) { display: none; } }
+                        
+                        span {
+                            display: block;
+                            font-size: calc(1em + 2px);
+                            color: $red-brown;
+                            background-color: aquamarine;
+
+                            @include responsive(pc-screens) {
+                                font-size: 26px; 
+                            }
+                        }
+
+                        strong {
+                            display: block;
+                            margin: 20px auto;
+                            line-height: 28px;
+
+                            @include responsive(pc-screens) {
+                                margin-bottom: 40px;
+                            }
+
+                        }
+                        
+                        .p {
+                            background-color: aquamarine;
+
+                            @include responsive(pc-screens) {
+                                line-height: 36px;
+                            }
+                        }
+                    }
+                } // guide-point-txt
+
+                .guide-point-img {
+                    background-color: aqua;
+
+                    @include responsive(pc-screens) {
+                        order: 1;
+                        width: 620px / 1400px * 100%;
+                    }
+
+                    li {
+
+                        &:first-child {
+
+                            @include responsive(pc-screens) {
+                                margin-top: 107px;
+                            }
+                        }
+
+                        img { width: 100% }
+                    }
+                } // guide-point-img
+            } // guide-point-wrap 
+        } // section.digital-guide
+
+        .did {
+
+            p {
+                font-size: calc(1em - 2px);
+                line-height: calc(1em - 2px + 10px);
+
+                @include responsive(pc-screens) {
+                    line-height: 40px;
+                }
+            }
+
+            .did-awards {
+                position: relative;
+                
+                .awards-flex {
+                    
+                    @include responsive(pc-screens) {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .mobile-hidden {
+                        display: none;
+                        @include responsive(pc-screens) { display: inline; }
+                    }
+
+                    .awards-txt {
+                        position: absolute;
+                        padding-top: 30px / 350px * 100%;
+                        padding-left: 20px / 350px * 100%;
+                        text-align: left;
+                        color: #fff;
+                        background-color: cornflowerblue;
+                        
+                        @include responsive(pc-screens) {
+                            position: static;
+                            width: 500px;
+                            padding-top: 0;
+                            padding-left: 0;
+                            color: #000;
+                        }
+    
+                        strong {
+    
+                            @include responsive(pc-screens) {
+                                display: block;
+                                margin-bottom: 30px;
+                            }
+                        }
+    
+                        p {
+                            margin-top: 30px / 350px * 100%;
+                            background-color: saddlebrown;
+                            
+                            @include responsive(pc-screens) {
+                                margin-top: 0;
+                            }
+
+                            .pc-hidden { 
+                                @include responsive(pc-screens) { 
+                                    display: none; 
+                                } 
+                            }
+                        }
+                    } // awards-txt
+    
+                    img {
+                        
+                        @include responsive(pc-screens) {
+                            display: block;
+                            width: 680px;
+                        }
+                    }
+                } // awards-flex
+                
+                .did-img2 {
+                    // content: '';
+                    width: 100%;
+                    aspect-ratio: 35 / 36;
+                    background: #000 url(../image/guide_did_photo_\(2\).PNG) no-repeat center;
+                    background-size: cover; 
+                    border-radius: 20px;
+
+                    @include responsive(pc-screens) {
+                        position: absolute;
+                        top: 370px;
+                    }
+                }
+
+                // picture {
+
+                // }
+            } // did-awards
+
+            .did-point,
+            .did-video {
+                 margin-top: 80px;
+
+                strong, h5 {
+                    display: block;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    margin-bottom: 40px;
+                    background-color: violet;
+                }
+            }
+            
+            .did-point {
+                
+                @include responsive(pc-screens) {
+                    width: 700px;
+                    margin-top: 180px;
+                    margin-left: 580px;
+                }
+                
+                strong {
+                    
+                    @include responsive(pc-screens) {
+                        margin-bottom: 50px;
+                    }
+                }
+
+                p {
+                    padding-left: 10px / 350px * 100%;
+                    padding-right: 10px / 350px * 100%;
+                }
+            } // did-point
+            
+            .did-video {
+                
+                @include responsive(pc-screens) {
+                    margin-top: 130px;
+                }
+
+                h5 {
+    
+                    @include responsive(pc-screens) {
+                        margin-bottom: 40px;
+                    }
+                }
+                
+                .video-frame {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 56.25%;
+                    
+                    iframe {
+                        position: absolute;
+                        left: 0; top: 0;
+                        width: 100%; height: 100%;
+                        border-radius: 20px;
+                    }
+                }
+            } // did-video
+        } // did
+    } // section.digital-guide-did-wrap
+} // main
 
 footer {
     @include footer();
