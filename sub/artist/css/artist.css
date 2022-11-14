@@ -670,7 +670,7 @@ main section.intro .intro-wrap .des span {
     display: block;
   }
 }
-main section.intro .intro-wrap .preview {
+main section.intro .intro-wrap git update-git-for-windows .preview {
   position: relative;
   left: 50%;
   right: 50%;
@@ -687,7 +687,7 @@ main section.intro .intro-wrap .preview {
     will-change: transform;
   }
 }
-main section.intro .intro-wrap .preview .slider {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider {
   position: relative;
   width: 100%;
   height: 400px;
@@ -695,10 +695,10 @@ main section.intro .intro-wrap .preview .slider {
   overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
-  main section.intro .intro-wrap .preview .slider {
+  main section.intro .intro-wrap git update-git-for-windows .preview .slider {
     width: 1440px;
   }
-  main section.intro .intro-wrap .preview .slider::before, main section.intro .intro-wrap .preview .slider::after {
+  main section.intro .intro-wrap git update-git-for-windows .preview .slider::before, main section.intro .intro-wrap git update-git-for-windows .preview .slider::after {
     content: "";
     position: absolute;
     width: 200px;
@@ -706,35 +706,35 @@ main section.intro .intro-wrap .preview .slider {
     background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 2;
   }
-  main section.intro .intro-wrap .preview .slider::after {
+  main section.intro .intro-wrap git update-git-for-windows .preview .slider::after {
     top: 0;
     right: 0;
     transform: rotateZ(180deg);
   }
-  main section.intro .intro-wrap .preview .slider::before {
+  main section.intro .intro-wrap git update-git-for-windows .preview .slider::before {
     top: 0;
     left: 0;
   }
 }
-main section.intro .intro-wrap .preview .slider .slide-track {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track {
   display: flex;
   width: 2720px;
   height: 400px;
   animation: scroll 20s linear infinite;
 }
-main section.intro .intro-wrap .preview .slider .slide-track .slide {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide {
   display: flex;
   width: 170px;
   margin: 0 20px;
 }
-main section.intro .intro-wrap .preview .slider .slide-track .slide:nth-child(even) {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide:nth-child(even) {
   align-items: flex-end;
 }
-main section.intro .intro-wrap .preview .slider .slide-track .slide .item {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item {
   position: relative;
   height: 260px;
 }
-main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-pic::after {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-pic::after {
   content: "";
   position: absolute;
   left: 0;
@@ -745,35 +745,35 @@ main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-pic
   border-bottom-right-radius: 5px;
   background: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 0) 0%, hsla(0deg, 0%, 0%, 0.01) 5.6%, hsla(0deg, 0%, 0%, 0.037) 12.4%, hsla(0deg, 0%, 0%, 0.079) 20%, hsla(0deg, 0%, 0%, 0.135) 28.3%, hsla(0deg, 0%, 0%, 0.201) 37%, hsla(0deg, 0%, 0%, 0.277) 46%, hsla(0deg, 0%, 0%, 0.359) 55%, hsla(0deg, 0%, 0%, 0.446) 63.7%, hsla(0deg, 0%, 0%, 0.536) 72%, hsla(0deg, 0%, 0%, 0.625) 79.6%, hsla(0deg, 0%, 0%, 0.713) 86.4%, hsla(0deg, 0%, 0%, 0.796) 92%, hsla(0deg, 0%, 0%, 0.873) 96.3%, hsla(0deg, 0%, 0%, 0.942) 99%, hsl(0deg, 0%, 0%) 100%);
 }
-main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-pic .bg {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-pic .bg {
   width: 170px;
   height: 260px;
   border-radius: 5px;
 }
-main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-des {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des {
   position: absolute;
   bottom: 20px;
   width: 100%;
   text-align: center;
   color: #fff;
 }
-main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-des h6 {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des h6 {
   font-size: 18px;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
-  main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-des h6 {
+  main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des h6 {
     font-size: 24px;
   }
 }
-main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-des span {
+main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des span {
   font-size: 14px;
   font-weight: 200;
   margin-top: 5px;
   opacity: 0.7;
 }
 @media screen and (min-width: 768px) {
-  main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-des span {
+  main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des span {
     font-size: 16px;
   }
 }

@@ -906,4 +906,42 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
+}
+
+.construction-container {
+  width: 100%;
+  max-width: 1440px;
+}
+.construction-container .tap-box .tap-flexbox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 20px 40px 20px;
+}
+.construction-container .tap-box .tap-flexbox li {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 11px;
+}
+.construction-container .tap-box .tap-flexbox li:first-child {
+  padding-left: 10px;
+}
+.construction-container .tap-box .tap-flexbox li:last-child {
+  padding-right: 30px;
+}
+.construction-container .tap-box .tap-flexbox li a {
+  color: #9c9c9c;
+  border-bottom: 2px solid #c5c5c5;
+}
+.construction-container .tap-box .tap-flexbox li a:hover {
+  color: #000000;
+  border-color: #000000;
+}
+.construction-container .main-img img {
+  width: 100%;
+}
+.construction-container .title p {
+  font-family: "KoPub Batang";
+  font-size: 22px;
+  font-weight: 400;
 }/*# sourceMappingURL=about_facility.css.map */

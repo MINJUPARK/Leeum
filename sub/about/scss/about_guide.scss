@@ -13,6 +13,47 @@ header {
 }
 
 main {
+
+    .tab-menu-wrap {
+
+        .tab-menu {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 75px;
+            
+            li {
+                width: (100%/3);
+                text-align: center;
+                
+                a {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 13px;
+                    border-bottom: 1px solid #9c9c9c;
+                    
+                    @include responsive(tablet-screens) {
+                        padding-bottom: 13px * 2;
+                        font-size: 24px;
+                    }
+                    
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        content: '';
+                        display: block;
+                        width: 0; height: 2px;
+                        background-color: #000;
+
+                        transition: all 1s;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            } // li
+        } // tab-menu
+    } // tab-menu-wrap
     
     .fee-time-wrap {
         display: none;
@@ -49,22 +90,22 @@ main {
             }
 
             h3 {
-               font-size: calc(1em + 4px);
-               margin-bottom: 20px ;
-               padding-left: 20px;
-               border-left: 3px solid $red-brown;
+                font-size: calc(1em + 4px);
+                margin-bottom: 20px ;
+                padding-left: 20px;
+                border-left: 3px solid $red-brown;
     
-               @include responsive (tablet-screens) {
+                @include responsive (tablet-screens) {
                     height: 34px;
                     margin-bottom: 50px;
                     border-left-width: 5px;
-               }
-           }
+                }
+            }
 
-           span {
+            span {
                 color: $bk1;
                 font-size: calc(1em - 2px);
-           }
+            }
 
             .time {
                 
@@ -142,6 +183,7 @@ main {
                             padding-left: 11px;
                             margin-bottom: 20px;
                             font-size: calc(1em - 2px);
+                            line-height: calc(1em - 2px + 10px);
                             background: url(../image/icon_bullet_dot.svg) no-repeat left 0.5em;
                             background-size: 2px;
                             
@@ -308,7 +350,21 @@ main {
         } // fee-time
     } // fee-time-wrap
 
-    .vr-floor-wrap {
+    .vr-floor-info-wrap {
+        // display: none;
+
+        h3 {
+            text-align: center;  
+            font-size: 26px;
+
+            @include responsive (tablet-screens) {
+                text-align: left;
+            } 
+            
+            @include responsive (pc-screens) {
+                font-size: 36px;
+            }
+        }
 
         section.vr,
         section.floor-info {
@@ -316,17 +372,6 @@ main {
     
             @include responsive (tablet-screens) {
                 margin-top: 160px;
-            }
-        }
-
-
-        h3 {
-            text-align: center;  
-            font-size: 26px;
-
-            @include responsive (tablet-screens) {
-                font-size: 36px;
-                text-align: left;
             }
         }
 
@@ -349,6 +394,10 @@ main {
 
         section.floor-info {
 
+            @include responsive(pc-screens) {
+                font-size: 24px;
+            }
+
             h3 {
                 margin-bottom: 60px;
             }
@@ -369,35 +418,95 @@ main {
                     }
 
                     .group-title {
-                        display: flex;
-                        margin-bottom: 14px;
-                        background-color: coral;
+                        @include flex_between();
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        padding-bottom: 14px;
+                        border-bottom: 2px solid #000;
+
+                        @include responsive(tablet-screens) {
+                            padding: 0;
+                            padding-bottom: 36px;
+                        }
 
                         h4 {
-                            font-size: 20px;
+                            @include gothic_font(semibold, 20px);
+
+                            @include responsive(pc-screens) {
+                                font-size: 30px;
+                            }
+
+                            span {
+                                margin-left: 10px;
+                                color: $bk2;
+                                @include gothic_font(regular, calc(1em - 6px));
+
+                                @include responsive(pc-screens) {
+                                    margin-left: 20px;
+                                    // font-size: 24px;
+                                }
+                            }
                         }
 
                         img {
-                            width: 3.076923076923077%;
+                            width: 12px / 350px * 100%;
     
                             @include responsive(tablet-screens) {
                                 display: none;
                             }
                         }
-                    }
+                    } // group-title
 
-                    .floor-option {
+                    .group-option {
                         margin-bottom: 30px;
-                        border-top: 1px solid #000;
+
+                        // height: 0;
+                        // visibility: hidden;
                         
                         li {
                             height: 52px;
+                            line-height: 52px;
+                            padding: 0 10px;
+                            font-size: 20px;
+                            color: $bk2;
                             border-bottom: 1px solid $bk4;
+
+                            @include responsive(tablet-screens) {
+                                height: 52px * 1.5;
+                                line-height: 52px * 1.5;
+                                font-size: 20px + 5px;
+                            }
+
+                            @include responsive(pc-screens) {
+                                height: 52px * 2;
+                                line-height: 52px * 2;
+                                padding: 0 20px;
+                                font-size: 20px + 5px + 5px;
+                            }
+                            
+                            &:hover {
+                                font-weight: 600;
+                                color: #000;
+                                background-color: $bk6;
+                                
+                                @include responsive(tablet-screens) {
+                                    background-image: url(../../../image/icon_arrow_tail.svg);
+                                    background-repeat: no-repeat ;
+                                    background-position: center right;
+                                    background-origin: content-box;
+                                    background-size: 37px 28px;
+                                }
+                            }
+
+                            span {
+                                vertical-align: top;
+                                font-size: calc(1em - 4px);
+                            }
                         }
-                    }
-                    
-                }
-                .floor-con {
+                    } // group-option
+                } // floor-select-group
+
+                .floor-con-group {
 
                     @include responsive(tablet-screens) {
                         width: calc(800px / 1440px * 100%);
@@ -414,17 +523,27 @@ main {
                                 margin-bottom: 25px;
                             }
                         }
-                    }
+                    } // floor-img
 
                     .floor-txt {
                         
-                        .floor-title {
-                            display: flex;
-                            justify-content: space-between;
+                        .txt-flex {
+                            @include flex_between();
+                            // display: flex;
+                            // justify-content: space-between;
+
+                            strong, b {
+                                line-height: 24px;
+                            }
 
                             strong {
+<<<<<<< HEAD
                                 font-size: 24px;
                                 width: calc(40px / 350px * 100%);
+=======
+                                width: 40px / 350px * 100%;
+                                font-size: 24px;
+>>>>>>> 54516ea8d4f739fdecb723d8f7472b2c1b6179f7
                             }
                             
                             b {
@@ -442,18 +561,401 @@ main {
                         }
 
                         p {
+                            margin-top: 10px;
+                            margin-left: 40px / 350px * 100%;
+                            margin-right: 60px / 350px * 100%;
                             font-size: calc(1em - 2px);
+                            line-height: calc(1em - 2px + 10px);
                         }
-                    }
-                }
-            }
+                    } // floor-txt
+                } // floor-con-group
+            } // > div
         } // section.floor-info
     } // vr-floor-wrap
 
     section.digital-guide-did-wrap {
         display: none;
-    }
-}
+
+        overflow: hidden;
+        margin-top: 70px;
+        text-align: center;
+        word-break: keep-all; // 단어를 기준으로 줄바꿈
+        // background-color: wheat;
+
+        @include responsive(tablet-screens) {
+            font-size: 22px;
+        }
+        
+        @include responsive(pc-screens) {
+            text-align: left;
+            margin-top: 190px;
+        }
+        
+        h3, h4 { @include responsive(pc-screens) { text-align: center; } }
+        
+        h3 { 
+            font-size: calc(1em + 10px);
+            
+            @include responsive(pc-screens) { font-size: 46px; }
+        }
+        
+        h4 {
+            margin-bottom: 50px;
+            color: $bk4;
+            @include gothic_font(regular, calc(1em + 4px));
+            
+            @include responsive(pc-screens) { margin-bottom: 120px; }
+        }
+
+        img { 
+            width: 100%;
+            border-radius: 20px; 
+        }
+
+        strong, h5 {
+            font-size: calc(1em + 1.538461538vw);
+
+            @include responsive(pc-screens) { font-size: 38px; }
+        }
+
+        section.digital-guide {
+
+            p, .p {
+                font-size: calc(1em - 2px);
+                line-height: calc(1em - 2px + 10px);
+                color: $bk1;
+            }
+
+            .guide-intro-wrap {
+                
+                .guide-intro {
+                    
+                    @include responsive(pc-screens) {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+    
+                    .guide-intro-img {
+    
+                        @include responsive(pc-screens) {
+                            order: 2;
+                            width: 700px / 1400px * 100%;
+                        }
+                    } // guide-intro-img
+    
+                    .guide-intro-txt {
+                        margin-top: 30px; 
+                        // background-color: dodgerblue;
+    
+                        @include responsive(pc-screens) {
+                            order: 1;
+                            margin-top: 0; 
+                        }
+                        
+                        strong {
+                            display: block;
+                            line-height: calc(1em + 6px + 10px);
+    
+                            @include responsive(pc-screens) {
+                                line-height: 55px;
+                            }
+                        }
+                        
+                        p {
+                            margin-top: 30px; 
+
+                            @include responsive(pc-screens) {
+                                line-height: 32px;
+                            }
+
+                            span {
+                                color: $red-brown;
+                                @include gothic_font(semibold);
+                            }
+                        }
+                    } // guide-intro-txt
+                } // guide-intro
+            } // guide-intro-wrap
+
+            .guide-point-wrap {
+                margin-top: 100px;
+                margin-bottom: 140px;
+
+                @include responsive(pc-screens) {
+                    position: relative;
+                    margin-top: 30px;
+                }
+
+                .guide-point-txt,
+                .guide-point-img {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 580px / 350px * 100%; 
+                    padding-left: 80px / 350px * 100%;
+                    padding-right: 80px / 350px * 100%;
+                    
+                    @include responsive(pc-screens) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+
+                    > li {
+                        width: 190px / 420px * 100%;
+
+                        @include responsive(pc-screens) {
+                            width: 100%;
+                        }
+                    }
+                } // .guide-point-txt, .guide-point-img
+
+                .guide-point-txt {
+                    margin-bottom: 20px;
+                    // background-color: yellow;
+
+                    @include responsive(pc-screens) {
+                        position: absolute;
+                        right: 0; bottom: 0;
+                        display: block;
+                        width: 626px / 1400px * 100%;
+                        margin-bottom: 0;
+                        order: 2;
+                    }
+                    
+                    li.hidden { // 토글
+                        visibility: hidden;
+                    }
+                    
+                    > li {
+                        // background-color: rosybrown;
+                        
+                        @include responsive(pc-screens) {
+                            height: 300px;
+                        }
+
+                        br { @include responsive(pc-screens) { display: none; } }
+                        
+                        span {
+                            display: block;
+                            font-size: calc(1em + 2px);
+                            color: $red-brown;
+                            // background-color: aquamarine;
+
+                            @include responsive(pc-screens) {
+                                font-size: 26px; 
+                            }
+                        }
+
+                        strong {
+                            display: block;
+                            margin: 20px auto;
+                            line-height: 28px;
+
+                            @include responsive(tablet-screens) {
+                                line-height: calc(1em + 6px + 10px);
+                            }
+
+                            @include responsive(pc-screens) {
+                                line-height: calc(1em + 6px);
+                                margin-bottom: 30px;
+                            }
+
+                        }
+                        
+                        .p {
+                            // background-color: aquamarine;
+
+                            @include responsive(pc-screens) {
+                                line-height: 36px;
+                            }
+                        }
+                    }
+                } // guide-point-txt
+
+                .guide-point-img {
+                    // background-color: aqua;
+
+                    @include responsive(pc-screens) {
+                        order: 1;
+                        width: 620px / 1400px * 100%;
+                    }
+
+                    li {
+
+                        &:first-child {
+
+                            @include responsive(pc-screens) {
+                                margin-top: 107px;
+                            }
+                        }
+
+                        img { width: 100% }
+                    }
+                } // guide-point-img
+            } // guide-point-wrap 
+        } // section.digital-guide
+
+        .did {
+
+            p {
+                font-size: calc(1em - 2px);
+                line-height: calc(1em - 2px + 10px);
+
+                @include responsive(pc-screens) {
+                    line-height: 40px;
+                }
+            }
+
+            .mobile-hidden {
+                display: none;
+                @include responsive(pc-screens) { display: inline; }
+            }
+
+            .pc-hidden { 
+                @include responsive(pc-screens) { 
+                    display: none; 
+                } 
+            }
+
+            .did-awards {
+                position: relative;
+                
+                .awards-flex {
+                    
+                    @include responsive(pc-screens) {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .awards-txt {
+                        position: absolute;
+                        padding-top: 30px / 350px * 100%;
+                        padding-left: 20px / 350px * 100%;
+                        text-align: left;
+                        color: #fff;
+                        // background-color: cornflowerblue;
+                        
+                        @include responsive(pc-screens) {
+                            position: static;
+                            width: 500px;
+                            padding-top: 0;
+                            padding-left: 0;
+                            color: #000;
+                        }
+    
+                        strong {
+    
+                            @include responsive(pc-screens) {
+                                display: block;
+                                margin-bottom: 30px;
+                            }
+                        }
+    
+                        p {
+                            margin-top: 30px / 350px * 100%;
+                            // background-color: saddlebrown;
+                            
+                            @include responsive(pc-screens) {
+                                margin-top: 0;
+                            }
+                        }
+                    } // awards-txt
+    
+                    img {
+                        
+                        @include responsive(pc-screens) {
+                            display: block;
+                            width: 680px;
+                        }
+                    }
+                } // awards-flex
+                
+                .did-img2 {
+                    overflow: hidden;
+                    aspect-ratio: 35 / 36;
+                    background-color: #000;
+                    border-radius: 20px;
+
+                    @include responsive(pc-screens) {
+                        position: absolute;
+                        top: 370px;
+                        width: 480px;
+                        aspect-ratio: 24 / 29;
+                    }
+
+                    img {
+                        width: 640px / 350px * 100%;
+                        margin-left: 52px / 640px * -100%;
+                        margin-top: 32px / 360px * 100%;
+                        
+                        @include responsive(pc-screens) {
+                            width: 1026px;
+                            margin-left: -262px;
+                            margin-top: 0;
+                        }
+    
+                    }
+                } // did-img2
+            } // did-awards
+
+            .did-point,
+            .did-video {
+                margin-top: 80px;
+
+                strong, h5 {
+                    display: block;
+                    margin-bottom: 30px;
+
+                    // @include responsive(pc-screens) {
+                    //     margin-bottom: 40px;
+                    // }
+                }
+
+                p {
+                    margin-bottom: 40px;
+                    // background-color: violet;
+                }
+            }
+            
+            .did-point {
+                
+                @include responsive(pc-screens) {
+                    width: 700px;
+                    margin-top: 180px;
+                    margin-left: 580px;
+                }
+
+                p {
+                    margin-bottom: 40px;
+                    // background-color: violet;
+
+                    @include responsive(pc-screens) {
+                        margin-bottom: 50px;
+                    }
+                }
+            } // did-point
+            
+            .did-video {
+                
+                @include responsive(pc-screens) {
+                    margin-top: 130px;
+                }
+                
+                .video-frame {
+                    position: relative;
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                    
+                    iframe {
+                        position: absolute;
+                        left: 0; top: 0;
+                        width: 100%; height: 100%;
+                        border-radius: 20px;
+                    }
+                }
+            } // did-video
+        } // did
+    } // section.digital-guide-did-wrap
+} // main
 
 footer {
     @include footer();
