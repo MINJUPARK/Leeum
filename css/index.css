@@ -25,7 +25,6 @@ html, body {
 }
 
 body {
-  position: relative;
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   letter-spacing: -0.04em;
@@ -200,12 +199,12 @@ header .logo-menu-wrap {
   left: 0;
   top: 30px;
   right: 0;
+  z-index: 98;
 }
 header .logo-menu-wrap.menu-sc {
   top: 0;
   padding: 30px 0 10px 0;
   background-color: #000;
-  z-index: 98;
 }
 header .logo-menu-wrap .logo-menu {
   display: flex;
@@ -352,7 +351,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
