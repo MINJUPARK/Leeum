@@ -12,6 +12,188 @@ header {
     @include full_bg('header_notice.jpg');
 }
 
+main {
+
+    .tab-menu .gnb {
+        @include flex_between();
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        background-color: $bk6;
+
+        @media screen and(min-width:$break-pc) {
+            width: 64.28571428571429%;
+        }
+        
+        li {
+            width: 25%;
+            font-size: 15px;
+            border-top: 1px solid $bk3;
+            border-right: 1px solid $bk3;
+            border-bottom: 1px solid $bk3;
+            cursor: pointer;
+        }
+
+        .border {
+            border-top : 5px solid #000;
+            border-bottom: none;
+            background-color: #fff;
+        }
+    }
+
+    .tab-menu {
+        @media screen and(min-width:$break-pc) {
+            display: flex;
+        }
+
+        span {
+
+            @media screen and(min-width:$break-pc) {
+                margin: auto 0;
+                padding-left: 430px;
+                /* width: 20%; */
+                /* width: 500px; */
+            }
+        }
+    }
+
+    .tab-menu span {
+        display: none;
+        @media screen and(min-width:$break-pc) {
+            display: block;
+        }
+    }
+    
+    .content {
+        display: flex;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid $bk4;
+        @media screen and(min-width:$break-pc) {
+            padding: 20px;
+            height: 80px;
+            text-align: center;
+        }
+
+        span:first-child {
+            padding-left: 0;
+            font-size: 14px;
+            width: 30px;
+            @media screen and(min-width:$break-pc) {
+                width: 60px;
+                font-size: 22px;
+                padding: 5px;
+            }
+        }
+
+        span.brown {
+            white-space: nowrap;
+            color: #fff;
+            width: 80px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: $dark-brown;
+            font-size: 12px;
+
+            @media screen and(min-width:$break-pc) {
+                padding: 10px;
+                width: 110px;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+
+        span.red-brown {
+            white-space: nowrap;
+            color: #fff;
+            width: 80px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: $red-brown;
+            font-size: 12px;
+            text-align: center;
+            display: block;
+
+            @media screen and(min-width:$break-pc) {
+                padding: 10px;
+                width: 110px;
+                font-size: 18px;
+            }
+        }
+
+        span.yellow-brown {
+            white-space: nowrap;
+            color: #fff;
+            width: 80px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: $yellow-brown;
+            font-size: 12px;
+
+
+            @media screen and(min-width:$break-pc) {
+                padding: 10px;
+                width: 110px;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+
+        span.yellow {
+            white-space: nowrap;
+            width: 80px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: #f3cf7a;
+            color: #000;
+            font-size: 12px;
+
+            @media screen and(min-width:$break-pc) {
+                padding: 10px;
+                width: 110px;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+
+        p {
+            display: flex;
+            white-space: nowrap;
+            padding: 10px;
+            font-size: 15px;
+            margin-left: 120px;
+
+            @media screen and(min-width:$break-pc) {
+                width: 1110px;
+                padding: 5px 0 5px 60px;
+                margin-left: 0;
+                font-size: 22px;
+            }
+        }
+
+        span {
+            padding: 10px;
+            font-size: 15px;
+            white-space: nowrap;
+
+            @media screen and(min-width:$break-pc) {
+                padding-right: 0;
+                font-size: 18px;
+            }
+        }
+
+    }
+
+}
+
 footer {
     @include footer();
 }
