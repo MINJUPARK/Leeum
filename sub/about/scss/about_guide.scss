@@ -413,8 +413,8 @@ main {
                 .floor-select-group {
 
                     @include responsive(tablet-screens) {
-                        width: 480px / 1440px * 100%;
-                        margin-right: 100px / 1440px * 100%;
+                        width: calc(480px / 1440px * 100%);
+                        margin-right: calc(100px / 1440px * 100%);
                     }
 
                     .group-title {
@@ -509,7 +509,7 @@ main {
                 .floor-con-group {
 
                     @include responsive(tablet-screens) {
-                        width: 800px / 1440px * 100%;
+                        width: calc(800px / 1440px * 100%);
                     }
                     
                     ul { li {display: none;} .selected {display: block} }
@@ -537,16 +537,21 @@ main {
                             }
 
                             strong {
+<<<<<<< HEAD
+                                font-size: 24px;
+                                width: calc(40px / 350px * 100%);
+=======
                                 width: 40px / 350px * 100%;
                                 font-size: 24px;
+>>>>>>> 54516ea8d4f739fdecb723d8f7472b2c1b6179f7
                             }
                             
                             b {
-                                width: 250px / 350px *100%;
+                                width: calc(250px / 350px *100%);
                             }
                             
                             .toilet {
-                                width: 60px / 350px * 100%;
+                                width: calc(60px / 350px * 100%);
                                 text-align: right;
                                 
                                 img {

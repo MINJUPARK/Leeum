@@ -62,8 +62,11 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img {
+img, span, label {
   display: inline-block;
+}
+
+img {
   vertical-align: middle;
 }
 

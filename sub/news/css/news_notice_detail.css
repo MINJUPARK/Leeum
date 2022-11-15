@@ -62,8 +62,11 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img {
+img, span, label {
   display: inline-block;
+}
+
+img {
   vertical-align: middle;
 }
 
@@ -630,6 +633,168 @@ header .breadcrumb-wrap {
   header .breadcrumb-wrap .breadcrumb .loc ul.opt li a.on {
     font-weight: bold;
   }
+}
+
+main .content-title {
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #c5c5c5;
+}
+@media screen and (min-width: 1440px) {
+  main .content-title {
+    /* padding: 20px; */
+    /* height: 80px; */
+    text-align: center;
+  }
+}
+main .content-title span:first-child {
+  padding-left: 0;
+  font-size: 14px;
+  /* width: 30px; */
+}
+@media screen and (min-width: 1440px) {
+  main .content-title span:first-child {
+    /* padding: 10px; */
+    width: 60px;
+    font-size: 22px;
+  }
+}
+main .content-title span.red-brown {
+  white-space: nowrap;
+  color: #fff;
+  width: 80px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ac3f21;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+@media screen and (min-width: 1440px) {
+  main .content-title span.red-brown {
+    padding: 15px;
+    width: 110px;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+main .content-title p {
+  display: flex;
+  white-space: nowrap;
+  padding: 10px;
+  font-size: 15px;
+}
+@media screen and (min-width: 1440px) {
+  main .content-title p {
+    width: 1110px;
+    padding-left: 60px;
+    font-size: 26px;
+  }
+}
+main .content-title span {
+  padding: 10px;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1440px) {
+  main .content-title span {
+    padding-right: 0;
+    font-size: 22px;
+  }
+}
+main img {
+  width: 100%;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1440px) {
+  main img {
+    width: 1240px;
+    height: 380px;
+  }
+}
+main .pic {
+  text-align: center;
+}
+@media screen and (min-width: 1440px) {
+  main .text {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .text > div {
+    margin-top: 60px;
+  }
+}
+main .normal-text {
+  padding-top: 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .normal-text {
+    width: 60%;
+    padding: 0 80px;
+    font-size: 24px;
+  }
+}
+main .normal-text p {
+  line-height: 40px;
+}
+main .import-text {
+  margin-top: 60px;
+  padding: 24px 30px;
+  background-color: #f3f3f3;
+  line-height: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main .import-text {
+    width: 480px;
+    height: 116px;
+    font-size: 20px;
+    line-height: 65px;
+  }
+}
+main .import-text p:first-child {
+  line-height: 20px;
+}
+main .import-text .first {
+  padding-right: 70px;
+}
+main .import-text .third {
+  padding-right: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main .import-text .third {
+    padding-right: 20px;
+  }
+}
+main .announce {
+  text-align: right;
+  padding-top: 24px;
+  padding-left: 20px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main .announce {
+    font-size: 20px;
+    padding-right: 80px;
+    margin-top: -80px;
+    padding-bottom: 80px;
+  }
+}
+main .announce a {
+  color: #be6a15;
+}
+main .announce a .program {
+  padding-right: 20px;
+}
+main .announce a img {
+  width: 12px;
+  height: 12px;
+  margin-bottom: 20px;
+  filter: #be6a15;
 }
 
 @media screen and (min-width: 1440px) {
