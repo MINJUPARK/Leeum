@@ -183,7 +183,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh !important;
+  height: 60vh !important;
 }
 header:before {
   content: "";
@@ -885,7 +885,7 @@ main section.mi-wrap .mi {
   text-align: center;
 }
 main section.mi-wrap .mi p {
-  margin-top: 8.5714285714%;
+  margin-top: 30px;
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
@@ -933,8 +933,8 @@ main section.mi-wrap .mi .mi-grid img {
 }
 main section.mi-wrap .mi .mi-view {
   width: 100%;
-  aspect-ratio: 7/5;
-  margin-top: 12.8571428571%;
+  height: 250px;
+  margin-top: 45px;
 }
 @media screen and (min-width: 1440px) {
   main section.mi-wrap .mi .mi-view {
@@ -946,7 +946,7 @@ main section.mi-wrap .mi .mi-view {
   }
 }
 main section.mi-wrap .mi .mi-view .mi-grid > img {
-  width: 48.5714285714%;
+  width: 170px;
 }
 @media screen and (min-width: 1440px) {
   main section.mi-wrap .mi .mi-view .mi-grid > img {
@@ -969,7 +969,7 @@ main section.mi-wrap .mi .mi-type strong {
   display: block;
   text-align: left;
   font-size: calc(1em + 8px);
-  margin-bottom: 5.7142857143%;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
   main section.mi-wrap .mi .mi-type strong {
@@ -984,7 +984,7 @@ main section.mi-wrap .mi .mi-type strong {
 }
 main section.mi-wrap .mi .mi-type > .col-type .col-view {
   width: 100%;
-  aspect-ratio: 35/22;
+  height: 220px;
 }
 @media screen and (min-width: 1440px) {
   main section.mi-wrap .mi .mi-type > .col-type .col-view {
@@ -992,7 +992,7 @@ main section.mi-wrap .mi .mi-type > .col-type .col-view {
   }
 }
 main section.mi-wrap .mi .mi-type > .col-type .col-view .mi-grid > img {
-  width: 33.1428571429%;
+  width: 116px;
 }
 @media screen and (min-width: 1440px) {
   main section.mi-wrap .mi .mi-type > .col-type .col-view .mi-grid > img {
@@ -1010,7 +1010,7 @@ main section.mi-wrap .mi .mi-type > .row-type {
 }
 main section.mi-wrap .mi .mi-type > .row-type .row-view {
   width: 100%;
-  aspect-ratio: 35/17;
+  height: 170px;
 }
 @media screen and (min-width: 1440px) {
   main section.mi-wrap .mi .mi-type > .row-type .row-view {
@@ -1018,7 +1018,7 @@ main section.mi-wrap .mi .mi-type > .row-type .row-view {
   }
 }
 main section.mi-wrap .mi .mi-type > .row-type .row-view .mi-grid > img {
-  width: 77.1428571429%;
+  width: 270px;
   filter: brightness(0) saturate(100%);
 }
 @media screen and (min-width: 1440px) {

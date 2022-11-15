@@ -8,7 +8,7 @@
 header {
     @include header_common();
     @include full_bg('intro_header.png');
-    height: 100vh !important;
+    height: 60vh !important;
 
     &:before {
         background: transparent;
@@ -343,7 +343,7 @@ main {
             text-align: center;
             
             p {
-                margin-top: 30px / 350px * 100%;
+                margin-top: 30px;
                 @include gothic_font(medium);
                 line-height: 28px;
                 color: $bk1;
@@ -382,9 +382,8 @@ main {
             }
             
             .mi-view {
-                width: 100%;
-                aspect-ratio: 7 / 5;
-                margin-top: 45px / 350px * 100%;
+                width: 100%; height: 250px;
+                margin-top: 45px;
                 
                 @include responsive(pc-screens) {
                     width: 1160px; height: 426px;
@@ -395,7 +394,7 @@ main {
                 }
                 
                 .mi-grid > img {
-                    width: 170px / 350px * 100%;
+                    width: 170px;
 
                     @include responsive(pc-screens) {
                         width: 324px;
@@ -417,7 +416,7 @@ main {
                     display: block;
                     text-align: left;
                     font-size: calc(1em + 8px);
-                    margin-bottom: 20px / 350px * 100%;
+                    margin-bottom: 20px;
                     
                     @include responsive(pc-screens) {
                         font-size: 36px;
@@ -433,15 +432,14 @@ main {
                     }
                     
                     .col-view {
-                        width: 100%;
-                        aspect-ratio: 35 / 22;
+                        width: 100%; height: 220px;
 
                         @include responsive(pc-screens) {
                             height: 446px;
                         }
 
                         .mi-grid > img {
-                            width: 116px / 350px * 100%;
+                            width: 116px;
 
                             @include responsive(pc-screens) {
                                 width: 211px;
@@ -459,15 +457,14 @@ main {
                     }
 
                     .row-view {
-                        width: 100%;
-                        aspect-ratio: 35 / 17;
+                        width: 100%; height: 170px;
 
                         @include responsive(pc-screens) {
                             height: 446px;
                         }
                         
                         .mi-grid > img {
-                            width: 270px / 350px * 100%;
+                            width: 270px;
                             filter: $svg-black;
 
                             @include responsive(pc-screens) {
