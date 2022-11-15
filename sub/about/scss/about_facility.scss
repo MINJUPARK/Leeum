@@ -58,8 +58,14 @@ main {
         .info {
 
             .title {
+                margin-top:30px;
                 line-height: 36px;
                 @include batang_font(medium, 22px);
+
+                @include responsive(pc-screens) {
+                    @include batang_font(medium, 46px);
+                    line-height: 76px;
+                }
 
                 br {
                     @include responsive(pc-screens) {
@@ -77,10 +83,22 @@ main {
             } //title
 
             .des {
-                @include gothic_font(regular,16px);
+                @include gothic_font(regular);
                 line-height: 26px;
                 margin-top: 44px;
                 margin-bottom: 77px;
+
+                @include responsive(pc-screens) {
+                    @include gothic_font(regular,22px);
+                    line-height: 44px;
+                }
+
+
+                br {
+                    @include responsive(pc-screens) {
+                        display: none !important;
+                    }
+                }
             }
         } //info
 
@@ -88,13 +106,25 @@ main {
             
             img {
                 width:100%;
-                height:222px;
                 overflow-x: hidden;
                 @include out_container();
+
+                @include responsive(pc-screens) {
+                    @include in_container();
+                    width:100%;
+                }
             }
 
             .sub {
                 display: none;
+                @include responsive(pc-screens) {
+                    display: block;
+                    text-align: right;
+                    
+                    @include gothic_font(light,18px);
+                    color: $bk2;
+                    margin-top:22px;
+                }
             }
 
             .M1-constructor {
@@ -106,21 +136,38 @@ main {
                     width: 195px;
                     height:195px;
                     
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-250px; left:120px;
+                        width:400px;
+                        height:400px;
+                    }
                 }
                 
                 .name {
                     margin-top: -55px;
                     text-align: center;
                     
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-160px; left:-380px;
+                    }
                     p:first-child {
                         @include gothic_font(bold,22px);
                         
+                        @include responsive(pc-screens) {
+                            @include gothic_font(bold,34px);
+                        }
                     }
 
                     p:last-child {
-                        @include gothic_font(light,16px);
+                        @include gothic_font(light);
                         color: $bk2;
                         margin-top: 10px;
+
+                        @include responsive(pc-screens) {
+                            @include gothic_font(light,26px);  
+                        }
                     }
                 }         
             } // M1-constructor
@@ -133,27 +180,69 @@ main {
                     @include gothic_font(semibold,28px);
                     text-align: center;
                     margin: 30px 0;
-
+                    
+                    @include responsive(pc-screens) {
+                        @include gothic_font(semibold,56px);  
+                        position: relative;
+                        top:-444px;
+                    }
+                    
                 }
 
                 p:last-of-type {
-                    @include gothic_font(regular,16px);
+                    @include gothic_font(regular);
                     text-align: center;
                     line-height: 26px;
                     color: $bk1;
+
+                    br {
+                        @include responsive(pc-screens) {
+                            display: none !important;
+                        }
+                    }
+    
+                    span {
+                        display: inline;
+    
+                        @include responsive(pc-screens) {
+                            display: block;
+                        }
+                    }
+
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-460px; left:660px;
+                        text-align: left; 
+                        line-height: 46px; 
+                        @include gothic_font(regular,22px);       
+                    }
                 }
 
-                a{
+                a {
                     position: relative;
                     left:205px;
                     @include gothic_font(semibold,14px);
                     margin: 35px 0 100px 0;
                     
-                    img{  
+                    @include responsive(pc-screens) {
+                        @include gothic_font(semibold,20px);
+                        position: relative;
+                        top:-480px; left:660px;
+                        
+                    }
+
+                    img {  
                         position: absolute;
                         left:290px;
                         width: 17px;
-                        height: 13px;   
+                        height: 13px;
+                        
+                        @include responsive(pc-screens) {
+                            width: 20px;
+                            height: 15px;
+                            position: relative;
+                            top: -2px; left:10px;
+                        }
                     }
                 }
             }//M1-detail
@@ -193,7 +282,7 @@ main {
                     }
 
                     p:last-child {
-                        @include gothic_font(light,16px);
+                        @include gothic_font(light);
                         color: $bk2;
                         margin-top: 10px;
                     }
@@ -212,13 +301,13 @@ main {
                 }
 
                 p:last-of-type {
-                    @include gothic_font(regular,16px);
+                    @include gothic_font(regular);
                     text-align: center;
                     line-height: 26px;
                     color: $bk1;
                 }
 
-                a{
+                a {
                     position: relative;
                     left:205px;
                     @include gothic_font(semibold,14px);
@@ -268,7 +357,7 @@ main {
                     }
 
                     p:last-child {
-                        @include gothic_font(light,16px);
+                        @include gothic_font(light);
                         color: $bk2;
                         margin-top: 10px;
                     }
@@ -287,13 +376,13 @@ main {
                 }
 
                 p:last-of-type {
-                    @include gothic_font(regular,16px);
+                    @include gothic_font(regular);
                     text-align: center;
                     line-height: 26px;
                     color: $bk1;
                 }
 
-                a{
+                a {
                     position: relative;
                     left:205px;
                     @include gothic_font(semibold,14px);
@@ -318,7 +407,7 @@ main {
                 
                 p {
                     &:first-of-type {
-                        @include gothic_font(semibold,16px);  
+                        @include gothic_font(semibold);  
                         margin :19px 0 23px 0;   
                     }
 
@@ -331,7 +420,6 @@ main {
                     span {
                         @include gothic_font(bold,26px);
                         margin-right: 14px;
-
                     }
                 }
                 .leeumstore-detail-flexbox {
@@ -374,7 +462,7 @@ main {
                 
                 p {
                     &:first-of-type {
-                        @include gothic_font(semibold,16px);  
+                        @include gothic_font(semibold);  
                         margin :19px 0 23px 0;   
                     }
 
@@ -429,7 +517,7 @@ main {
                 }
                 p {
                     &:first-of-type {
-                        @include gothic_font(semibold,16px);  
+                        @include gothic_font(semibold);  
                         margin :19px 0 23px 0;   
                     }
 
@@ -457,7 +545,7 @@ main {
                 }
                 p {
                     &:first-of-type {
-                        @include gothic_font(semibold,16px);  
+                        @include gothic_font(semibold);  
                         margin :19px 0 23px 0;   
                     }
 
@@ -483,7 +571,7 @@ main {
 
                 p {
                     &:first-of-type {
-                        @include gothic_font(semibold,16px);  
+                        @include gothic_font(semibold);  
                         margin :19px 0 23px 0;   
                     }
 
@@ -507,6 +595,7 @@ main {
 
                 .parking-detail {
                     margin-bottom: 64px;
+                    
                     a {
                         position: relative;
                         left:310px;
@@ -530,7 +619,7 @@ main {
                 
                 p {
                     &:first-of-type {
-                        @include gothic_font(semibold,16px);  
+                        @include gothic_font(semibold);  
                         margin :19px 0 23px 0;   
                         
                         span {
@@ -566,11 +655,11 @@ main {
                     height:549px;
                 }
 
-                h3{
+                h3 {
                     position: absolute;
                     left:210px;
                     top:200px;
-                    color: #ffffff;
+                    color: #fff;
                     line-height: 48px;
                     @include gothic_font(bold,30px);
                 }
@@ -579,7 +668,7 @@ main {
                     position: absolute;
                     left:200px;
                     top:240px;           
-                    color: #ffffff;
+                    color: #fff;
                     line-height: 30px;
                     @include gothic_font(light,14px);
                 }
@@ -599,15 +688,15 @@ main {
                 }
             }
             .renewal-info {
-                p{
-                    @include gothic_font(regular,16px);
+                p {
+                    @include gothic_font(regular);
                     line-height: 28px;
 
                     &:first-of-type {
                         margin : 40px 0 60px 0;
                         
                         span {
-                            @include gothic_font(semibold,16px);
+                            @include gothic_font(semibold);
                         }
                     }
 
@@ -623,7 +712,7 @@ main {
                     margin-bottom:30px;
                 }
 
-                ul{
+                ul {
                     li {
                         img {
                             @include out_container();
@@ -639,7 +728,7 @@ main {
                             }
 
                             &:last-of-type {
-                                @include gothic_font(light,16px);
+                                @include gothic_font(light);
                                 line-height:26px;
                                 margin-bottom: 60px;
                             }
