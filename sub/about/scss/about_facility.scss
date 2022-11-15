@@ -12,54 +12,645 @@ header {
     @include full_bg('about_facility.jpg');
 }
 
-footer {
-    @include footer();
-}
+main {
 
-.construction-container {
-    width:100%;
-    max-width:1440px;
-    .tap-box {
-        .tap-flexbox {
-            display: flex;
-            width:100%;
-            justify-content: space-between;
-            margin: 0 20px 40px 20px;
-            
+    section.construction {
 
-            li {
-                @include gothic_font(medium,24px);        
-                padding-bottom:11px;
+        .tap-box {
+
+            .tap-flexbox {
+                @include flex_between();
+                width: 100%;
+                margin: 0 20px 40px 20px;
                 
-
-                &:first-child {
-                    padding-left:10px;
-                }
-                &:last-child{
-                    padding-right: 30px;
-                }
-                a{
-                    color:#9c9c9c;
-                    border-bottom: 2px solid $bk4;
+    
+                li {
+                    @include gothic_font(medium,24px);        
+                    padding-bottom:11px;
                     
-                    &:hover{
-                        color:#000000;
-                        border-color: #000000;
+                    &:first-child {
+                        padding-left:10px;
+                    }
+                    &:last-child {
+                        padding-right: 30px;
+                    }
+                    a {
+                        color:#9c9c9c;
+                        border-bottom: 2px solid $bk4;
+                        
+                        &:hover {
+                            color:#000000;
+                            border-color: #000000;
+                        }
+                    }
+                }
+            } //tap-flexbox
+        } // tap-box
+    
+        .main-img {
+
+            img {
+                width:100%;
+            }
+        } //main-img
+    
+        
+        .info {
+
+            .title {
+                line-height: 36px;
+                @include batang_font(medium, 22px);
+
+                br {
+                    @include responsive(pc-screens) {
+                        display: none !important;
+                    }
+                }
+
+                span {
+                    display: inline;
+
+                    @include responsive(pc-screens) {
+                        display: block;
+                    }
+                }
+            } //title
+
+            .des {
+                @include gothic_font(regular,16px);
+                line-height: 26px;
+                margin-top: 44px;
+                margin-bottom: 77px;
+            }
+        } //info
+
+        .M1 {
+            
+            img {
+                width:100%;
+                height:222px;
+                overflow-x: hidden;
+                @include out_container();
+            }
+
+            .sub {
+                display: none;
+            }
+
+            .M1-constructor {
+                justify-content: center;
+                
+                img {
+                    position: relative;
+                    top:-80px; left:370px;
+                    width: 195px;
+                    height:195px;
+                    
+                }
+                
+                .name {
+                    margin-top: -55px;
+                    text-align: center;
+                    
+                    p:first-child {
+                        @include gothic_font(bold,22px);
+                        
+                    }
+
+                    p:last-child {
+                        @include gothic_font(light,16px);
+                        color: $bk2;
+                        margin-top: 10px;
+                    }
+                }         
+            } // M1-constructor
+
+            .M1-detail {
+                display: flex;
+                flex-direction: column;
+                
+                p:first-of-type {
+                    @include gothic_font(semibold,28px);
+                    text-align: center;
+                    margin: 30px 0;
+
+                }
+
+                p:last-of-type {
+                    @include gothic_font(regular,16px);
+                    text-align: center;
+                    line-height: 26px;
+                    color: $bk1;
+                }
+
+                a{
+                    position: relative;
+                    left:205px;
+                    @include gothic_font(semibold,14px);
+                    margin: 35px 0 100px 0;
+                    
+                    img{  
+                        position: absolute;
+                        left:290px;
+                        width: 17px;
+                        height: 13px;   
+                    }
+                }
+            }//M1-detail
+        } //M1
+
+        .M2 {
+            
+            img {
+                width:100%;
+                height:222px;
+                overflow-x: hidden;
+                @include out_container();
+            }
+
+            .sub {
+                display: none;
+            }
+
+            .M2-constructor {
+                justify-content: center;
+                
+                img {
+                    position: relative;
+                    top:-80px; left:370px;
+                    width: 195px;
+                    height:195px;
+                    
+                }
+                
+                .name {
+                    margin-top: -55px;
+                    text-align: center;
+                    
+                    p:first-child {
+                        @include gothic_font(bold,22px);
+                        
+                    }
+
+                    p:last-child {
+                        @include gothic_font(light,16px);
+                        color: $bk2;
+                        margin-top: 10px;
+                    }
+                }         
+            } // M2-constructor
+
+            .M2-detail {
+                display: flex;
+                flex-direction: column;
+                
+                p:first-of-type {
+                    @include gothic_font(semibold,28px);
+                    text-align: center;
+                    margin: 30px 0;
+
+                }
+
+                p:last-of-type {
+                    @include gothic_font(regular,16px);
+                    text-align: center;
+                    line-height: 26px;
+                    color: $bk1;
+                }
+
+                a{
+                    position: relative;
+                    left:205px;
+                    @include gothic_font(semibold,14px);
+                    margin: 35px 0 100px 0;
+                    
+                    img {  
+                        position: absolute;
+                        left:290px;
+                        width: 17px;
+                        height: 13px;   
+                    }
+                }
+            }// M2-detail
+        } //M2
+
+        .Kid {
+            
+            img {
+                width:100%;
+                height:222px;
+                overflow-x: hidden;
+                @include out_container();
+            }
+
+            .sub {
+                display: none;
+            }
+
+            .Kidstudy-constructor {
+                justify-content: center;
+                
+                img {
+                    position: relative;
+                    top:-80px; left:370px;
+                    width: 195px;
+                    height:195px;
+                    
+                }
+                
+                .name {
+                    margin-top: -55px;
+                    text-align: center;
+                    
+                    p:first-child {
+                        @include gothic_font(bold,22px);
+                        
+                    }
+
+                    p:last-child {
+                        @include gothic_font(light,16px);
+                        color: $bk2;
+                        margin-top: 10px;
+                    }
+                }         
+            }//Kidstudy-constructor
+
+            .Kid-detail {
+                display: flex;
+                flex-direction: column;
+                
+                p:first-of-type {
+                    @include gothic_font(semibold,28px);
+                    text-align: center;
+                    margin: 30px 0;
+
+                }
+
+                p:last-of-type {
+                    @include gothic_font(regular,16px);
+                    text-align: center;
+                    line-height: 26px;
+                    color: $bk1;
+                }
+
+                a{
+                    position: relative;
+                    left:205px;
+                    @include gothic_font(semibold,14px);
+                    margin: 35px 0 100px 0;
+                    
+                    img {  
+                        position: absolute;
+                        left:290px;
+                        width: 17px;
+                        height: 13px;   
+                    }
+                }
+            } //Kid-detail
+        } //Kid
+
+        .container {
+            .leeumstore {
+                img {
+                    width:100%;
+                    height:269px;
+                }
+                
+                p {
+                    &:first-of-type {
+                        @include gothic_font(semibold,16px);  
+                        margin :19px 0 23px 0;   
+                    }
+
+                    &:nth-of-type(2) {
+                        @include gothic_font(regular,14px);
+                        line-height: 26px;
+                        margin-bottom: 67px;
+                    }
+                    
+                    span {
+                        @include gothic_font(bold,26px);
+                        margin-right: 14px;
+
+                    }
+                }
+                .leeumstore-detail-flexbox {
+                    
+                    .leeumstore-detail {
+                        margin-bottom: 64px;
+                        
+                        img {
+                            width:22px;
+                            height:22px;
+                        }
+
+                        p {
+                            display: inline;
+                            @include gothic_font(medium,14px);
+                            
+                        }
+
+                        a {
+                            position: relative;
+                            left:195px;
+                            @include gothic_font(semibold,14px);
+                            color: $yellow-brown;
+
+                            img {
+                                width:11px;
+                                height:11px;
+                                filter: $svg-yellowbrown; 
+                            }
+                        }
+                    }// leeumstore-detail
+                } // leeumstore-detail-flexbox
+            }// leeumstore
+
+            .Champcoffee {
+                img {
+                    width:100%;
+                    height:269px;
+                }
+                
+                p {
+                    &:first-of-type {
+                        @include gothic_font(semibold,16px);  
+                        margin :19px 0 23px 0;   
+                    }
+
+                    &:nth-of-type(2) {
+                        @include gothic_font(regular,14px);
+                        line-height: 26px;
+                        margin-bottom: 67px;
+                    }
+                    
+                    span {
+                        @include gothic_font(bold,26px);
+                        margin-right: 14px;
+
+                    }
+                }
+                .Champcoffee-detail-flexbox {
+                    
+                    .Champcoffee-detail {
+                        margin-bottom: 64px;
+                        
+                        img {
+                            width:22px;
+                            height:22px;
+                        }
+
+                        p {
+                            display: inline;
+                            @include gothic_font(medium,14px);
+                            
+                        }
+
+                        a {
+                            position: relative;
+                            left:205px;
+                            @include gothic_font(semibold,14px);
+                            color: $yellow-brown;
+
+                            img {
+                                width:11px;
+                                height:11px;
+                                filter: $svg-yellowbrown; 
+                            }
+                        }
+                    }// Champcoffee-detail
+                } // Champcoffee-detail-flexbox
+            }// Champcoffee
+            
+            .Locker {
+                img {
+                    width:100%;
+                    height:269px;
+                }
+                p {
+                    &:first-of-type {
+                        @include gothic_font(semibold,16px);  
+                        margin :19px 0 23px 0;   
+                    }
+
+                    &:nth-of-type(2) {
+                        @include gothic_font(regular,14px);
+                        line-height: 26px;
+                        margin-bottom: 67px;
+                            span {
+                                @include gothic_font(semibold,14px);
+                            }
+                    }
+                    
+                    span {
+                        @include gothic_font(bold,26px);
+                        margin-right: 14px;
+
+                    }
+                }
+            }//locker
+
+            .ticketing-machine {
+                img {
+                    width:100%;
+                    height:269px;
+                }
+                p {
+                    &:first-of-type {
+                        @include gothic_font(semibold,16px);  
+                        margin :19px 0 23px 0;   
+                    }
+
+                    &:nth-of-type(2) {
+                        @include gothic_font(regular,14px);
+                        line-height: 26px;
+                        margin-bottom: 67px;
+                    }
+                    
+                    span {
+                        @include gothic_font(bold,26px);
+                        margin-right: 14px;
+
+                    }
+                }
+            }//ticketing-machine
+            
+            .parking {
+                img {
+                    width:100%;
+                    height:269px;
+                }
+
+                p {
+                    &:first-of-type {
+                        @include gothic_font(semibold,16px);  
+                        margin :19px 0 23px 0;   
+                    }
+
+                    &:nth-of-type(2) {
+                        @include gothic_font(regular,14px);
+                        line-height: 26px;
+                        margin-bottom: 67px;
+
+                        span {
+                            @include gothic_font(semibold,14px);
+                        }
+                    }
+                    
+                    span {
+                        @include gothic_font(bold,26px);
+                        margin-right: 14px;
+
+                    }
+                    
+                }
+
+                .parking-detail {
+                    margin-bottom: 64px;
+                    a {
+                        position: relative;
+                        left:310px;
+                        @include gothic_font(semibold,14px);
+                        color: $yellow-brown;
+
+                        img{
+                            width:11px;
+                            height:11px;
+                            filter: $svg-yellowbrown; 
+                        }
+                    }
+                }//parking-detail
+            }//parking
+
+            .others {
+                img {
+                    width:100%;
+                    height:269px;
+                }
+                
+                p {
+                    &:first-of-type {
+                        @include gothic_font(semibold,16px);  
+                        margin :19px 0 23px 0;   
+                        
+                        span {
+                            @include gothic_font(bold,26px);
+                            margin-right: 14px;
+    
+                        }
+                    }
+
+                    &:nth-of-type(2) {
+                        @include gothic_font(regular,14px);
+                        line-height: 26px;
+                        margin-bottom: 67px;
+                        
+                    }
+                    
+                }
+            }//others
+        }//container
+        
+        .container {
+            .director {
+                .background {
+                    @include out_container();
+                    height:431px;
+                }
+                
+                .director {
+                    position: absolute;
+                    top:-60px;
+                    left:100px;
+                    width:300px;
+                    height:549px;
+                }
+
+                h3{
+                    position: absolute;
+                    left:210px;
+                    top:200px;
+                    color: #ffffff;
+                    line-height: 48px;
+                    @include gothic_font(bold,30px);
+                }
+                
+                p {
+                    position: absolute;
+                    left:200px;
+                    top:240px;           
+                    color: #ffffff;
+                    line-height: 30px;
+                    @include gothic_font(light,14px);
+                }
+                
+                .award {
+                    display: none;
+                }
+                
+                .director-info {
+                    position: absolute;
+                    left:120px;
+                    top:290px;
+                    @include gothic_font(light,14px);
+                    line-height: 26px;
+                    text-align: center;
+                    color:#ffffff;
+                }
+            }
+            .renewal-info {
+                p{
+                    @include gothic_font(regular,16px);
+                    line-height: 28px;
+
+                    &:first-of-type {
+                        margin : 40px 0 60px 0;
+                        
+                        span {
+                            @include gothic_font(semibold,16px);
+                        }
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 100px;
+                    }
+                }
+            }//renewal-info
+
+            .renewal-detail {
+                h4 {
+                    @include gothic_font(semibold,18px);
+                    margin-bottom:30px;
+                }
+
+                ul{
+                    li {
+                        img {
+                            @include out_container();
+                            height:238px;
+                        }
+                        p {
+                            text-align: center;
+
+                            &:first-of-type {
+                                @include gothic_font(semibold,24px);
+                                line-height:34px;
+                                margin-top: 24px;
+                            }
+
+                            &:last-of-type {
+                                @include gothic_font(light,16px);
+                                line-height:26px;
+                                margin-bottom: 60px;
+                            }
+                        }
                     }
                 }
             }
         }
     }
+}
 
-    .main-img {
-        img{
-            width:100%;
-        }
-    }
-
-    .title{
-        p{
-            @include batang_font(medium, 22px);
-        }
-    }
+footer {
+    @include footer();
 }
