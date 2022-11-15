@@ -12,6 +12,122 @@ header {
     @include full_bg('header_program.jpg');
 }
 
+main {
+    h1 {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        /* width: 390px; */
+        padding-top: 60px;
+
+        @include responsive(pc-screens) {
+            padding-left: 240px;
+            padding-right: 240px;
+            height: 810px;
+        }
+    }
+
+    .text {
+        p {
+            font-size: 20px;
+            color: $yellow-brown;
+            padding-top: 50px;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            @include gothic_font(bold, 30px);
+        }
+    }
+
+    .request {
+        p {
+        margin: 40px 0;
+        padding: 13px;
+        border-radius: 5px;
+        text-align: center;
+        color: $red-brown;
+        border: 1px solid $red-brown;
+        }
+    }
+
+    .request-desc {
+        background-color: $bk6;
+        padding: 30px 0;
+        
+
+        .content {
+            span {
+                @include gothic_font(semibold, 15px);
+                padding-top: 20px;
+            }
+            
+            p {
+                padding: 20px 0;
+                border-bottom: 1px solid $bk4;
+            }
+
+            &:last-child p {
+                border-bottom: 0;
+            }
+        }
+
+
+    }
+
+    .outline {
+        text-align: justify;
+
+        span {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            @include gothic_font(semibold, 18px);
+        }
+
+        .outline1 {
+            margin-bottom: 30px;
+            line-height: 28px;;
+        }   
+
+        .outline2 {
+            line-height: 28px;
+            margin-bottom: 40px;
+        } 
+    }
+
+    .intro {
+        span {
+            @include gothic_font(semibold, 18px);
+            margin-bottom: 30px;
+        }
+
+        .first {
+            @include gothic_font(semibold);
+            margin-bottom: 20px;
+            // border: 1px solid #000;
+        }
+
+        .second {
+            line-height: 28px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .precaution {
+        span {
+            @include gothic_font(semibold, 18px);
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
 footer {
     @include footer();
 }
