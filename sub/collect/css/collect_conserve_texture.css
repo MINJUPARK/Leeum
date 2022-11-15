@@ -128,7 +128,15 @@ a, input, button, select, label {
 }
 
 input, select {
+<<<<<<< HEAD
   border: 1px solid #acacac;
+=======
+<<<<<<< HEAD
+  border: 1px solid #d4d4d4;
+=======
+  border: 1px solid #acacac;
+>>>>>>> 3798f243f4fd88759e3041571bda735a4be43c37
+>>>>>>> 956971ac982c2f0023485cffe551095d704e28da
   color: #5c5c5c;
 }
 
@@ -145,7 +153,15 @@ textarea {
   resize: none;
 }
 
+<<<<<<< HEAD
 input, button, select, textarea {
+=======
+<<<<<<< HEAD
+input, button, select, textarea, video {
+=======
+input, button, select, textarea {
+>>>>>>> 3798f243f4fd88759e3041571bda735a4be43c37
+>>>>>>> 956971ac982c2f0023485cffe551095d704e28da
   border-radius: 5px;
 }
 
@@ -203,11 +219,30 @@ header a {
 }
 header .logo-menu-wrap {
   position: fixed;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 98;
+}
+@media screen and (min-width: 1440px) {
+  header .logo-menu-wrap {
+    position: static;
+  }
+}
+=======
+>>>>>>> 956971ac982c2f0023485cffe551095d704e28da
   left: 0;
   top: 30px;
   right: 0;
   z-index: 98;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 3798f243f4fd88759e3041571bda735a4be43c37
+>>>>>>> 956971ac982c2f0023485cffe551095d704e28da
 header .logo-menu-wrap.menu-sc {
   top: 0;
   padding: 30px 0 10px 0;
@@ -358,6 +393,12 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    animation: stretch-w 0.5s;
+=======
+>>>>>>> 956971ac982c2f0023485cffe551095d704e28da
     -webkit-animation: stretch-w 0.5s;
             animation: stretch-w 0.5s;
   }
@@ -368,6 +409,10 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     to {
       width: 220px;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> 3798f243f4fd88759e3041571bda735a4be43c37
+>>>>>>> 956971ac982c2f0023485cffe551095d704e28da
   }
   @keyframes stretch-w {
     from {

@@ -12,6 +12,131 @@ header {
     @include full_bg('artist_header.jpg');
 }
 
+main {
+    @include main_sub();
+    overflow-x: hidden;
+    // margin-top: 245px;
+
+    section.info {
+        @include detail_info();
+
+        .item-wrap {
+
+            .i-slide {
+
+                @include responsive(pc-screens) {
+                    width: 60%;
+                }
+
+                .main-pic {
+                    height: auto;
+        
+                    video {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .i-des {
+
+                .loc-icon .loc-box {
+                    display: flex;
+                    column-gap: 15px;
+    
+                    .loc {
+    
+                        div {
+                            
+                            &.tag {
+                                width: 50px;
+                            }
+        
+                            &:last-child {
+                                width: calc(80px - 50px);
+                            }
+                        }
+                    }
+                }
+
+                @include responsive(pc-screens) {
+                    width: 35%;
+                }
+    
+                .tit-exp {
+                    margin-bottom: 50px;
+
+                    @include responsive(pc-screens) {
+                        padding: 0 10px;
+                    }
+
+                    .tit {
+                        text-align: center;
+    
+                        @include responsive(pc-screens) {
+                            text-align: left;
+                        }
+                    }
+
+                    .exp table.mini-box th {
+
+                        @include responsive(pc-screens) {
+                            width: 20%;
+                        }
+                    } 
+                }  
+            }
+            
+            .interview {
+                // order: 4;
+                margin-bottom: 100px;
+
+                .question {
+                    
+                    @include responsive(pc-screens) {
+                        // margin-bottom: 00;
+                    }
+
+                    .mark {
+                        font-size: 130%;
+                        margin-right: 5px;
+                        color: $yellow-brown;
+                    }
+    
+                    .nextline {
+                        display: block;
+                        margin: 5px 0 20px 36px;
+
+                        @include responsive(pc-screens) {
+                            display: inline-block;
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .answer p {
+                    @include content_align(justify);
+
+                    @include responsive(pc-screens) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.work {
+        
+        .item-box {
+            @include itemList_box();
+            margin-top: 30px;
+        }
+    }
+
+    section.movePage {
+        @include move_page();
+    }
+}
+
 footer {
     @include footer();
 }

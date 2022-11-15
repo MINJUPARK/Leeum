@@ -17,9 +17,14 @@
     }
 
     .logo-menu-wrap {
+
         position: fixed;
-        left: 0; top: 30px; right: 0;
+        top: 30px; left: 0; right: 0;
         z-index: 98;
+
+        @include responsive(pc-screens) {
+            position: static;
+        }
 
         &.menu-sc {
             top: 0;

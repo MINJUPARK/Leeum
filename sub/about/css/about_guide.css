@@ -128,7 +128,7 @@ a, input, button, select, label {
 }
 
 input, select {
-  border: 1px solid #acacac;
+  border: 1px solid #d4d4d4;
   color: #5c5c5c;
 }
 
@@ -145,7 +145,7 @@ textarea {
   resize: none;
 }
 
-input, button, select, textarea {
+input, button, select, textarea, video {
   border-radius: 5px;
 }
 
@@ -203,10 +203,15 @@ header a {
 }
 header .logo-menu-wrap {
   position: fixed;
-  left: 0;
   top: 30px;
+  left: 0;
   right: 0;
   z-index: 98;
+}
+@media screen and (min-width: 1440px) {
+  header .logo-menu-wrap {
+    position: static;
+  }
 }
 header .logo-menu-wrap.menu-sc {
   top: 0;
@@ -358,16 +363,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -1097,8 +1093,8 @@ main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .t
   line-height: 24px;
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex strong {
-  width: 11.4285714286%;
   font-size: 24px;
+  width: 11.4285714286%;
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
   width: 71.4285714286%;

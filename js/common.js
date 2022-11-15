@@ -77,8 +77,9 @@ $(document).ready(function() {
             if(sc_top > 240) { $('.logo-menu-wrap').addClass('menu-sc'); } 
             else             { $('.logo-menu-wrap').removeClass('menu-sc'); }
         } else {
-            if(sc_top > 380) { $('.logo-menu-wrap').addClass('menu-sc'); } 
-            else             { $('.logo-menu-wrap').removeClass('menu-sc'); }
+            $('.logo-menu-wrap').removeClass('menu-sc');
+            // if(sc_top > 380) { $('.logo-menu-wrap').addClass('menu-sc'); } 
+            // else             { $('.logo-menu-wrap').removeClass('menu-sc'); }
         }
     });
 
@@ -99,6 +100,13 @@ $(document).ready(function() {
         window.open($(this).val());
     });
 
+    // $('video').hover(function toggleControls() {
+    //     if (this.hasAttribute("controls")) {
+    //         this.removeAttribute("controls")
+    //     } else {
+    //         this.setAttribute("controls", "controls")
+    //     }
+    // })
     
     /* ----------------------------------------------------------*/
 
