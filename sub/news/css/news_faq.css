@@ -635,6 +635,34 @@ header .breadcrumb-wrap {
   }
 }
 
+main h2 {
+  display: none;
+}
+main ul {
+  border-bottom: 1px solid #c5c5c5;
+}
+main .text-arrow {
+  display: flex;
+  padding: 20px;
+}
+main .text-arrow:first-child {
+  border-top: 1px solid #c5c5c5;
+}
+main .text-arrow p {
+  white-space: nowrap;
+  font-size: 21px;
+  font-weight: 500;
+}
+main .text-arrow p span {
+  margin-right: 10px;
+}
+main .text-arrow img {
+  width: 17px;
+}
+main .text-arrow span {
+  color: #ac3f21;
+}
+
 @media screen and (min-width: 1440px) {
   footer.sub {
     position: static !important;
