@@ -128,7 +128,7 @@ a, input, button, select, label {
 }
 
 input, select {
-  border: 1px solid #acacac;
+  border: 1px solid #d4d4d4;
   color: #5c5c5c;
 }
 
@@ -145,7 +145,7 @@ textarea {
   resize: none;
 }
 
-input, button, select, textarea {
+input, button, select, textarea, video {
   border-radius: 5px;
 }
 
@@ -203,10 +203,15 @@ header a {
 }
 header .logo-menu-wrap {
   position: fixed;
-  left: 0;
   top: 30px;
+  left: 0;
   right: 0;
   z-index: 98;
+}
+@media screen and (min-width: 1440px) {
+  header .logo-menu-wrap {
+    position: static;
+  }
 }
 header .logo-menu-wrap.menu-sc {
   top: 0;
@@ -358,7 +363,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -642,13 +656,14 @@ main section.intro .intro-wrap h3 {
 }
 main section.intro .intro-wrap .des {
   line-height: 1.8em;
+  color: #3c3c3c;
 }
 main section.intro .intro-wrap .des.top {
-  margin-top: 30px;
-  margin-bottom: 50px;
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 main section.intro .intro-wrap .des.bottom {
-  margin-top: 20px;
+  margin-top: 80px;
 }
 main section.intro .intro-wrap .des.bottom .vert-bar {
   display: block;
@@ -659,7 +674,7 @@ main section.intro .intro-wrap .des.bottom .vert-bar {
 }
 @media screen and (min-width: 1440px) {
   main section.intro .intro-wrap .des br {
-    display: none !important;
+    display: none;
   }
 }
 main section.intro .intro-wrap .des span {
@@ -670,7 +685,7 @@ main section.intro .intro-wrap .des span {
     display: block;
   }
 }
-main section.intro .intro-wrap git update-git-for-windows .preview {
+main section.intro .intro-wrap .preview {
   position: relative;
   left: 50%;
   right: 50%;
@@ -678,7 +693,7 @@ main section.intro .intro-wrap git update-git-for-windows .preview {
   margin-left: -50vw;
   margin-right: -50vw;
 }
-@keyframes scroll {
+@-webkit-keyframes scroll {
   0% {
     transform: translateX(0);
   }
@@ -687,7 +702,16 @@ main section.intro .intro-wrap git update-git-for-windows .preview {
     will-change: transform;
   }
 }
-main section.intro .intro-wrap git update-git-for-windows .preview .slider {
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2712px);
+    will-change: transform;
+  }
+}
+main section.intro .intro-wrap .preview .slider {
   position: relative;
   width: 100%;
   height: 400px;
@@ -695,10 +719,7 @@ main section.intro .intro-wrap git update-git-for-windows .preview .slider {
   overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
-  main section.intro .intro-wrap git update-git-for-windows .preview .slider {
-    width: 1440px;
-  }
-  main section.intro .intro-wrap git update-git-for-windows .preview .slider::before, main section.intro .intro-wrap git update-git-for-windows .preview .slider::after {
+  main section.intro .intro-wrap .preview .slider::before, main section.intro .intro-wrap .preview .slider::after {
     content: "";
     position: absolute;
     width: 200px;
@@ -706,35 +727,36 @@ main section.intro .intro-wrap git update-git-for-windows .preview .slider {
     background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 2;
   }
-  main section.intro .intro-wrap git update-git-for-windows .preview .slider::after {
+  main section.intro .intro-wrap .preview .slider::after {
     top: 0;
     right: 0;
     transform: rotateZ(180deg);
   }
-  main section.intro .intro-wrap git update-git-for-windows .preview .slider::before {
+  main section.intro .intro-wrap .preview .slider::before {
     top: 0;
     left: 0;
   }
 }
-main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track {
+main section.intro .intro-wrap .preview .slider .slide-track {
   display: flex;
-  width: 2720px;
+  width: 5424px;
   height: 400px;
-  animation: scroll 20s linear infinite;
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
 }
-main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide {
+main section.intro .intro-wrap .preview .slider .slide-track .slide {
   display: flex;
-  width: 170px;
+  width: 226px;
   margin: 0 20px;
 }
-main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide:nth-child(even) {
+main section.intro .intro-wrap .preview .slider .slide-track .slide:nth-child(even) {
   align-items: flex-end;
 }
-main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item {
+main section.intro .intro-wrap .preview .slider .slide-track .slide .item {
   position: relative;
-  height: 260px;
+  height: 320px;
 }
-main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-pic::after {
+main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-pic::after {
   content: "";
   position: absolute;
   left: 0;
@@ -745,37 +767,26 @@ main section.intro .intro-wrap git update-git-for-windows .preview .slider .slid
   border-bottom-right-radius: 5px;
   background: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 0) 0%, hsla(0deg, 0%, 0%, 0.01) 5.6%, hsla(0deg, 0%, 0%, 0.037) 12.4%, hsla(0deg, 0%, 0%, 0.079) 20%, hsla(0deg, 0%, 0%, 0.135) 28.3%, hsla(0deg, 0%, 0%, 0.201) 37%, hsla(0deg, 0%, 0%, 0.277) 46%, hsla(0deg, 0%, 0%, 0.359) 55%, hsla(0deg, 0%, 0%, 0.446) 63.7%, hsla(0deg, 0%, 0%, 0.536) 72%, hsla(0deg, 0%, 0%, 0.625) 79.6%, hsla(0deg, 0%, 0%, 0.713) 86.4%, hsla(0deg, 0%, 0%, 0.796) 92%, hsla(0deg, 0%, 0%, 0.873) 96.3%, hsla(0deg, 0%, 0%, 0.942) 99%, hsl(0deg, 0%, 0%) 100%);
 }
-main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-pic .bg {
-  width: 170px;
-  height: 260px;
+main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-pic .bg {
+  height: 320px;
   border-radius: 5px;
 }
-main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des {
+main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-des {
   position: absolute;
   bottom: 20px;
   width: 100%;
   text-align: center;
   color: #fff;
 }
-main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des h6 {
+main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-des h6 {
   font-size: 18px;
   font-weight: 600;
 }
-@media screen and (min-width: 768px) {
-  main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des h6 {
-    font-size: 24px;
-  }
-}
-main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des span {
+main section.intro .intro-wrap .preview .slider .slide-track .slide .item .i-des span {
   font-size: 14px;
   font-weight: 200;
   margin-top: 5px;
   opacity: 0.7;
-}
-@media screen and (min-width: 768px) {
-  main section.intro .intro-wrap git update-git-for-windows .preview .slider .slide-track .slide .item .i-des span {
-    font-size: 16px;
-  }
 }
 main section.filter {
   background: #f3f3f3;
@@ -787,11 +798,6 @@ main section.filter {
     justify-content: space-between;
     align-items: center;
     background: transparent;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main section.filter {
-    margin-top: 200px;
   }
 }
 main section.filter .filter-wrap {
@@ -812,7 +818,7 @@ main section.filter .filter-wrap h6 {
 main section.filter .filter-wrap .speed-search {
   padding-bottom: 30px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #c5c5c5;
+  border-bottom: 1px solid #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .speed-search {
@@ -959,7 +965,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
   height: 45px;
   line-height: 45px;
   font-size: 14px;
-  border: 1px solid #acacac;
+  border: 1px solid #d4d4d4;
   background: #fff;
   cursor: pointer;
 }
@@ -993,7 +999,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp {
   width: 50%;
-  border: 1px solid #c5c5c5;
+  border: 1px solid #d4d4d4;
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
   border-bottom: 0;
@@ -1003,7 +1009,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
-    border-bottom: 1px solid #c5c5c5;
+    border-bottom: 1px solid #d4d4d4;
   }
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
     border-right: 0;
@@ -1128,7 +1134,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
   border-bottom: 0;
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(6), main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(11) {
-  border-left: 1px solid #acacac;
+  border-left: 1px solid #c5c5c5;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:first-child {
@@ -1144,7 +1150,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
     border-top-right-radius: 5px;
   }
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(n+1):nth-child(-n+10) {
-    border-bottom: 1px solid #acacac;
+    border-bottom: 1px solid #c5c5c5;
   }
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(6), main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(11) {
     border-left: 0;
@@ -1159,7 +1165,7 @@ main section.artistList .list-control {
   width: 100%;
   height: 35px;
   line-height: 35px;
-  border-bottom: 1px solid #c5c5c5;
+  border-bottom: 1px solid #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
   main section.artistList .list-control {
@@ -1188,7 +1194,8 @@ main section.artistList .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 main section.artistList .list-control .view-type .sort {
   font-size: 15px;
@@ -1258,7 +1265,7 @@ main section.artistList .item-box {
 main section.artistList .item-box .item {
   width: 48%;
   margin-bottom: 20px;
-  border: 1px solid #c5c5c5;
+  border: 1px solid #d4d4d4;
   border-radius: 5px;
 }
 main section.artistList .item-box .item a {
@@ -1284,7 +1291,14 @@ main section.artistList .item-box .item .i-pic {
 main section.artistList .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+=======
+  -o-object-fit: cover;
+     object-fit: cover;
+>>>>>>> 3798f243f4fd88759e3041571bda735a4be43c37
 }
 main section.artistList .item-box .item .i-pic .bm_btn {
   position: absolute;
@@ -1379,6 +1393,15 @@ main section.artistList .item-box .item .i-des .loc div:last-child {
   right: 0;
   width: 48px;
 }
+main section.artistList .item-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 310px;
+  background: linear-gradient(to bottom, hsla(0deg, 0%, 100%, 0) 0%, hsla(0deg, 0%, 100%, 0.187) 1.3%, hsla(0deg, 0%, 100%, 0.349) 4.9%, hsla(0deg, 0%, 100%, 0.488) 10.4%, hsla(0deg, 0%, 100%, 0.606) 17.5%, hsla(0deg, 0%, 100%, 0.704) 25.9%, hsla(0deg, 0%, 100%, 0.784) 35.2%, hsla(0deg, 0%, 100%, 0.848) 45%, hsla(0deg, 0%, 100%, 0.898) 55%, hsla(0deg, 0%, 100%, 0.936) 64.8%, hsla(0deg, 0%, 100%, 0.963) 74.1%, hsla(0deg, 0%, 100%, 0.981) 82.5%, hsla(0deg, 0%, 100%, 0.992) 89.6%, hsla(0deg, 0%, 100%, 0.998) 95.1%, hsl(0deg, 0%, 100%) 98.7%, hsl(0deg, 0%, 100%) 100%);
+}
 main section.artistList .item-box .item {
   border: 0;
   transition: 0.3s;
@@ -1434,24 +1457,6 @@ main section.artistList .item-box .item .i-des span {
   main section.artistList .item-box .item .i-des span {
     font-size: 16px;
   }
-}
-main section.artistList .item-box .gradient-wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 280px;
-}
-main section.artistList .item-box .gradient-wrap::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, hsla(0deg, 0%, 100%, 0) 0%, hsla(0deg, 0%, 100%, 0.187) 1.3%, hsla(0deg, 0%, 100%, 0.349) 4.9%, hsla(0deg, 0%, 100%, 0.488) 10.4%, hsla(0deg, 0%, 100%, 0.606) 17.5%, hsla(0deg, 0%, 100%, 0.704) 25.9%, hsla(0deg, 0%, 100%, 0.784) 35.2%, hsla(0deg, 0%, 100%, 0.848) 45%, hsla(0deg, 0%, 100%, 0.898) 55%, hsla(0deg, 0%, 100%, 0.936) 64.8%, hsla(0deg, 0%, 100%, 0.963) 74.1%, hsla(0deg, 0%, 100%, 0.981) 82.5%, hsla(0deg, 0%, 100%, 0.992) 89.6%, hsla(0deg, 0%, 100%, 0.998) 95.1%, hsl(0deg, 0%, 100%) 98.7%, hsl(0deg, 0%, 100%) 100%);
 }
 main section.artistList .more-btn {
   position: relative;

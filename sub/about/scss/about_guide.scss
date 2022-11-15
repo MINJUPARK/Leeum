@@ -41,14 +41,16 @@ main {
                         bottom: 0;
                         content: '';
                         display: block;
-                        width: 0; height: 2px;
+                        width: 100%; height: 2px;
                         background-color: #000;
 
                         transition: all 1s;
+
+                        scale: 0;
                     }
 
                     &:hover::after {
-                        width: 100%;
+                        scale: 1;
                     }
                 }
             } // li
@@ -537,13 +539,8 @@ main {
                             }
 
                             strong {
-<<<<<<< HEAD
                                 font-size: 24px;
                                 width: calc(40px / 350px * 100%);
-=======
-                                width: 40px / 350px * 100%;
-                                font-size: 24px;
->>>>>>> 54516ea8d4f739fdecb723d8f7472b2c1b6179f7
                             }
                             
                             b {

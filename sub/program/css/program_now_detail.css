@@ -128,7 +128,7 @@ a, input, button, select, label {
 }
 
 input, select {
-  border: 1px solid #acacac;
+  border: 1px solid #d4d4d4;
   color: #5c5c5c;
 }
 
@@ -145,7 +145,7 @@ textarea {
   resize: none;
 }
 
-input, button, select, textarea {
+input, button, select, textarea, video {
   border-radius: 5px;
 }
 
@@ -203,10 +203,15 @@ header a {
 }
 header .logo-menu-wrap {
   position: fixed;
-  left: 0;
   top: 30px;
+  left: 0;
   right: 0;
   z-index: 98;
+}
+@media screen and (min-width: 1440px) {
+  header .logo-menu-wrap {
+    position: static;
+  }
 }
 header .logo-menu-wrap.menu-sc {
   top: 0;
@@ -358,7 +363,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -624,6 +638,96 @@ header .breadcrumb-wrap {
   header .breadcrumb-wrap .breadcrumb .loc ul.opt li a.on {
     font-weight: bold;
   }
+}
+
+main h1 {
+  display: none;
+}
+main img {
+  width: 100%;
+  /* width: 390px; */
+  padding-top: 60px;
+}
+@media screen and (min-width: 1440px) {
+  main img {
+    padding-left: 240px;
+    padding-right: 240px;
+    height: 810px;
+  }
+}
+main .text p {
+  font-size: 20px;
+  color: #be6a15;
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+main .text h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+main .request p {
+  margin: 40px 0;
+  padding: 13px;
+  border-radius: 5px;
+  text-align: center;
+  color: #ac3f21;
+  border: 1px solid #ac3f21;
+}
+main .request-desc {
+  background-color: #f3f3f3;
+  padding: 30px 0;
+}
+main .request-desc .content span {
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 20px;
+}
+main .request-desc .content p {
+  padding: 20px 0;
+  border-bottom: 1px solid #c5c5c5;
+}
+main .request-desc .content:last-child p {
+  border-bottom: 0;
+}
+main .outline {
+  text-align: justify;
+}
+main .outline span {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main .outline .outline1 {
+  margin-bottom: 30px;
+  line-height: 28px;
+}
+main .outline .outline2 {
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+main .intro span {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+main .intro .first {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .intro .second {
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+main .precaution span {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .precaution p {
+  line-height: 28px;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 1440px) {

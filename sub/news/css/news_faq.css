@@ -128,7 +128,7 @@ a, input, button, select, label {
 }
 
 input, select {
-  border: 1px solid #acacac;
+  border: 1px solid #d4d4d4;
   color: #5c5c5c;
 }
 
@@ -145,7 +145,7 @@ textarea {
   resize: none;
 }
 
-input, button, select, textarea {
+input, button, select, textarea, video {
   border-radius: 5px;
 }
 
@@ -203,10 +203,15 @@ header a {
 }
 header .logo-menu-wrap {
   position: fixed;
-  left: 0;
   top: 30px;
+  left: 0;
   right: 0;
   z-index: 98;
+}
+@media screen and (min-width: 1440px) {
+  header .logo-menu-wrap {
+    position: static;
+  }
 }
 header .logo-menu-wrap.menu-sc {
   top: 0;
@@ -358,7 +363,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {

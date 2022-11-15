@@ -115,6 +115,7 @@ main {
             p {
                 font-size: 16px;
                 color: $bk2;
+                line-height: 28px;
 
                 @media screen and(min-width:$break-pc) {
                     font-size: 22px;
@@ -143,6 +144,8 @@ main {
         .img-text-explain {
             @media screen and(min-width:$break-pc) {
                 display: flex;
+                border-bottom: 1px solid $bk4;
+                padding-top: 50px;
             }
         }
 
@@ -173,13 +176,17 @@ main {
                 color: #fff;
                 border-radius: 5px;
     
+                p {
+                    @include responsive(pc-screens) {
+                        text-align: center;
+                    }
+                }
+                
                 @media screen and(min-width:$break-pc) {
                     font-size: 24px;
-                    /* position: absolute;
-                    margin-left: 270px;
-                    margin-top: 10px;
-                    font-size: 22px;
-                    padding: 20px 30px; */
+                    margin-left: 30px;
+                    margin-top: 30px;
+                    padding: 15px 30px;
                 }
             }
         }
@@ -218,10 +225,12 @@ main {
                     font-size: 16px;
                     color: $bk2;
                     padding-bottom: 40px;
+                    line-height: 26px;
 
                     @media screen and(min-width:$break-pc) {
                         font-size: 22px;
                         color: $bk2;
+                        line-height: 36px;
                     }
                 }
             }
@@ -284,6 +293,23 @@ main {
                     font-size: 16px;
                 }
                 padding-bottom: 35px;
+            }
+
+            .request-1 {
+                text-align: center;
+                border: 1px solid #000;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 70px;
+
+                @include responsive(pc-screens) { 
+                    font-size: 20px;
+                    text-align: center;
+                    width: 160px;
+                    margin-top: 70px;
+                    margin-left: 440px;
+                    padding: 20px 45px;
+                }
             }
         }
     

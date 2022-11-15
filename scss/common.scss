@@ -142,7 +142,7 @@ a, input, button, select, label {
 }
 
 input, select {
-    border: 1px solid $bk3;
+    border: 1px solid $bk5;
     color: $bk2;
 }
 
@@ -161,7 +161,7 @@ textarea {
     resize: none;
 }
 
-input, button, select, textarea {
+input, button, select, textarea, video {
     border-radius: 5px;
 }
 
