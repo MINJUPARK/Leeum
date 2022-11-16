@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 
     // 특정 a 링크만 blank 적용
-    $('.mini-menu a, .reserve, footer a').attr('target', '_blank');
+    $('.mini-menu a, .reserve, .exp a, footer a').attr('target', '_blank');
 
 
     // 모바일 메뉴

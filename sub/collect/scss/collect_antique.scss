@@ -27,39 +27,43 @@ main {
             .detail-search-wrap {
                 @include detail_search();
 
-                form[name=detail] .opt-box {
+                .detail-search {
+                    display: block;
 
-                    .type {
-    
-                        @include responsive(pc-screens) {
-                            @include flex_between_center();
-                            width: 58.18181818181818%;
-                        }
-                    }
-    
-                    .space {
-    
-                        @include responsive(pc-screens) {
-                            @include flex_between_center();
-                            width: 32.7272727%;
-                        }
-    
-                        ul.opt {
-    
+                    form[name=detail] .opt-box {
+
+                        .type {
+        
                             @include responsive(pc-screens) {
-                                width: 72.22222222222222%;
+                                @include flex_between_center();
+                                width: 58.18181818181818%;
                             }
-    
-                            h6 {
-                                width: calc(100% - 72.22222222222222%);
+                        }
+        
+                        .space {
+        
+                            @include responsive(pc-screens) {
+                                @include flex_between_center();
+                                width: 32.7272727%;
                             }
-                            
-                            li {
-                                width: 50%;
+        
+                            ul.opt {
+        
+                                @include responsive(pc-screens) {
+                                    width: 72.22222222222222%;
+                                }
+        
+                                h6 {
+                                    width: calc(100% - 72.22222222222222%);
+                                }
+                                
+                                li {
+                                    width: 50%;
+                                }
                             }
                         }
                     }
-                }  
+                }
             }
         }
     }

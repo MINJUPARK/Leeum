@@ -55,7 +55,7 @@ ul, ol {
 a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 header a:hover, footer a:hover {
@@ -101,9 +101,9 @@ input[type=checkbox]:hover {
   background: #d4d4d4;
 }
 input[type=checkbox]:checked {
-  color: white;
+  color: #fff;
   background-color: #ac3f21;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: #d4d4d4;
 }
 input[type=checkbox]:checked::before {
   border-radius: 2px;
@@ -118,9 +118,13 @@ input[type=checkbox]::before {
   transform: scale(0) translate(-50%, -50%);
   overflow: hidden;
 }
-
 input[type=checkbox] + label {
   color: #3c3c3c;
+  margin-left: 5px;
+}
+input[type=checkbox]:checked + label {
+  color: #ac3f21;
+  font-weight: 600;
 }
 
 a, input, button, select, label {

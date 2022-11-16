@@ -7,8 +7,11 @@
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/artist_detail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/swiper.js"></script>
     <title>Leeum</title>
 </head>
 <body>
@@ -209,8 +212,7 @@
                 <div class="item-wrap">
                     <div class="i-slide">
                         <div class="main-pic">          
-                            <video src="./video/koo_bonchang.mp4" type="video/mp4" poster="./image/artist_detail_poster.jpg" controls>이 브라우저에서 지원하지 않는 영상입니다.
-                            </video>
+                            <video src="./video/koo_bonchang.mp4" type="video/mp4" poster="./image/artist_detail_poster.png" controls>브라우저에서 지원하지 않는 영상입니다.</video>
                         </div>
                     </div>
                     <div class="i-des">
@@ -242,7 +244,7 @@
                                     </tr>
                                     <tr>
                                         <th>링크</th>
-                                        <td><a href="http://www.bckoo.com/">구본창 작가 홈페이지 <img src="../../image/icon_arrow.svg"></a></td>
+                                        <td><a href="http://www.bckoo.com/">구본창 작가 홈페이지 <img src="../../image/icon_shortcut.svg"></a></td>
                                     </tr>
                                 </table>
                             </div>
@@ -268,63 +270,103 @@
         <section class="work">
             <h2>이 작가의 소장품 & 참여전시</h2>
             <div class="container">
-                <div class="work-wrap">
+                <div class="collect-wrap">
                     <h6>이 작가의 소장품</h6>
-                    <div class="item-box">
-                        <div class="item">
-                            <a href="./collect_antique_detail.html">
-                                <div class="i-pic">
-                                    <button type="button" class="bm_btn"><img src="../../image/icon_bookmark_on.svg" class="bookmark on"></button>
-                                    <img src="./image/antique_item(1).jpg" alt="청자철화 보상화당초문 매병" class="bg">
-                                </div>
-                                <div class="i-des">
-                                    <strong>청자철화 보상화당초문 매병</strong>
-                                    <p>고려 12세기<span class="vert-bar">&vert;</span>점토(粘土)</p>
-                                    <div class="loc">
-                                        <div class="tag">전시</div><div>M1 4층</div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper item-box">
+                            <div class="swiper-slide item">
+                                <a href="./collect_antique_detail.html">
+                                    <div class="i-pic">
+                                        <button type="button" class="bm_btn"><img src="../../image/icon_bookmark_on.svg" class="bookmark on"></button>
+                                        <img src="./image/artist_detail_collect(1).jpg" alt="숨 6 (아버지)" class="bg">
                                     </div>
-                                </div>
-                            </a>
+                                    <div class="i-des">
+                                        <strong>숨 6 (아버지)</strong>
+                                        <p>1995<span class="vert-bar">&vert;</span>젤라틴 실버 프린트</p>
+                                        <div class="loc">
+                                            <div class="tag">전시</div><div>M2 2층</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide item">
+                                <a href="./collect_antique_detail.html">
+                                    <div class="i-pic">
+                                        <button type="button" class="bm_btn"><img src="../../image/icon_bookmark.svg" class="bookmark"></button>
+                                        <img src="./image/artist_detail_collect(2).jpg" alt="숨 10 (새)" class="bg">
+                                    </div>
+                                    <div class="i-des">
+                                        <strong>숨 10 (새)</strong>
+                                        <p>1995<span class="vert-bar">&vert;</span>젤라틴 실버 프린트</p>
+                                        <div class="loc">
+                                            <div class="tag">전시</div><div>M2 2층</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide item">
+                                <a href="./collect_antique_detail.html">
+                                    <div class="i-pic">
+                                        <button type="button" class="bm_btn"><img src="../../image/icon_bookmark.svg" class="bookmark"></button>
+                                        <img src="./image/artist_detail_collect(3).jpg" alt="숨 3 (물고기)" class="bg">
+                                    </div>
+                                    <div class="i-des">
+                                        <strong>숨 3 (물고기)</strong>
+                                        <p>1995<span class="vert-bar">&vert;</span>젤라틴 실버 프린트</p>
+                                        <div class="loc">
+                                            <div class="tag">전시</div><div>M2 2층</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="item-box">
-                        <div class="item">
-                            <a href="./collect_antique_detail.html">
-                                <div class="i-pic">
-                                    <button type="button" class="bm_btn"><img src="../../image/icon_bookmark_on.svg" class="bookmark on"></button>
-                                    <img src="./image/antique_item(1).jpg" alt="청자철화 보상화당초문 매병" class="bg">
-                                </div>
-                                <div class="i-des">
-                                    <strong>청자철화 보상화당초문 매병</strong>
-                                    <p>고려 12세기<span class="vert-bar">&vert;</span>점토(粘土)</p>
-                                    <div class="loc">
-                                        <div class="tag">전시</div><div>M1 4층</div>
+                </div>
+                <div class="exhibition-wrap">
+                    <h6>이 작가의 참여전시</h6>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper item-box">
+                            <div class="swiper-slide item">
+                                <a href="../collect/collect_modern_detail.html">
+                                    <div class="i-pic">
+                                        <button type="button" class="bm_btn"><img src="../../image/icon_bookmark_on.svg" class="bookmark on"></button>
+                                        <img src="./image/artist_detail_exhibition(1).png" alt="한국건축예찬 - 땅의 깨달음" class="bg">
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-box">
-                        <div class="item">
-                            <a href="./collect_antique_detail.html">
-                                <div class="i-pic">
-                                    <button type="button" class="bm_btn"><img src="../../image/icon_bookmark_on.svg" class="bookmark on"></button>
-                                    <img src="./image/antique_item(1).jpg" alt="청자철화 보상화당초문 매병" class="bg">
-                                </div>
-                                <div class="i-des">
-                                    <strong>청자철화 보상화당초문 매병</strong>
-                                    <p>고려 12세기<span class="vert-bar">&vert;</span>점토(粘土)</p>
-                                    <div class="loc">
-                                        <div class="tag">전시</div><div>M1 4층</div>
+                                    <div class="i-des">
+                                        <strong>한국건축예찬 - 땅의 깨달음</strong>
+                                        <p>2015</p>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
+                            <div class="swiper-slide item">
+                                <a href="../collect/collect_modern_detail.html">
+                                    <div class="i-pic">
+                                        <button type="button" class="bm_btn"><img src="../../image/icon_bookmark.svg" class="bookmark"></button>
+                                        <img src="./image/artist_detail_exhibition(2).png" alt="코리안 랩소디: 역사와 기억의 몽타주" class="bg">
+                                    </div>
+                                    <div class="i-des">
+                                        <strong>코리안 랩소디: 역사와 기억의 몽타주</strong>
+                                        <p>2011</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide item">
+                                <a href="../collect/collect_modern_detail.html">
+                                    <div class="i-pic">
+                                        <button type="button" class="bm_btn"><img src="../../image/icon_bookmark.svg" class="bookmark"></button>
+                                        <img src="./image/artist_detail_exhibition(3).png" alt="한국미술 _ 여백의발견" class="bg">
+                                    </div>
+                                    <div class="i-des">
+                                        <strong>한국미술 _ 여백의발견</strong>
+                                        <p>2007</p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="movePage">
             <h2>페이지 이동</h2>
             <div class="container">

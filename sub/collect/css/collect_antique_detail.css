@@ -118,9 +118,13 @@ input[type=checkbox]::before {
   transform: scale(0) translate(-50%, -50%);
   overflow: hidden;
 }
-
 input[type=checkbox] + label {
   color: #3c3c3c;
+  margin-left: 5px;
+}
+input[type=checkbox]:checked + label {
+  color: #ac3f21;
+  font-weight: bold;
 }
 
 a, input, button, select, label {
@@ -640,6 +644,9 @@ main {
     top: 0 !important;
   }
 }
+main section.info .item-wrap {
+  margin-bottom: 100px;
+}
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap {
     position: static;
@@ -844,7 +851,7 @@ main section.info .item-wrap .i-des .tit-exp .exp table.mini-box td {
   color: #3c3c3c;
 }
 main section.info .item-wrap .i-des .tit-exp .exp p {
-  text-align: align;
+  text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
 }
@@ -869,11 +876,12 @@ main section.similarItem .item-box .item {
 }
 main section.similarItem .item-box .item a {
   display: block;
+  width: 100%;
 }
 @media screen and (min-width: 1440px) {
   main section.similarItem .item-box .item {
     width: 23.5%;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 }
 main section.similarItem .item-box .item .i-pic {
@@ -899,17 +907,19 @@ main section.similarItem .item-box .item .i-pic .bm_btn {
   top: 18px;
   right: 18px;
   width: 20px;
+  z-index: 1;
 }
 main section.similarItem .item-box .item .i-pic .bm_btn .bookmark {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
   opacity: 1;
-  z-index: 97;
 }
 main section.similarItem .item-box .item .i-pic .bm_btn .bookmark.on {
   filter: none;
 }
 main section.similarItem .item-box .item .i-des {
   padding: 10px 20px 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   main section.similarItem .item-box .item .i-des {
@@ -919,6 +929,7 @@ main section.similarItem .item-box .item .i-des {
 main section.similarItem .item-box .item .i-des strong {
   font-size: 16px;
   font-weight: 700;
+  white-space: nowrap;
 }
 @media screen and (min-width: 768px) {
   main section.similarItem .item-box .item .i-des strong {
@@ -988,7 +999,7 @@ main section.similarItem .item-box .item .i-des .loc div:last-child {
   width: 48px;
 }
 main section.movePage {
-  margin-top: 30px;
+  margin-top: 100px;
 }
 main section.movePage .movePage-wrap {
   display: flex;

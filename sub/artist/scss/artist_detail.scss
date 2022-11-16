@@ -15,7 +15,6 @@ header {
 main {
     @include main_sub();
     overflow-x: hidden;
-    // margin-top: 245px;
 
     section.info {
         @include detail_info();
@@ -43,17 +42,14 @@ main {
                     display: flex;
                     column-gap: 15px;
     
-                    .loc {
+                    .loc div {
+
+                        &.tag {
+                            width: 50px;
+                        }
     
-                        div {
-                            
-                            &.tag {
-                                width: 50px;
-                            }
-        
-                            &:last-child {
-                                width: calc(80px - 50px);
-                            }
+                        &:last-child {
+                            width: calc(80px - 50px);
                         }
                     }
                 }
@@ -77,23 +73,34 @@ main {
                         }
                     }
 
-                    .exp table.mini-box th {
+                    .exp {
 
-                        @include responsive(pc-screens) {
-                            width: 20%;
+                        a {
+                            color: $yellow-brown;
+
+                            img {
+                                height: 12px;
+                                margin-left: 5px;
+                                filter: $svg-yellowbrown;
+                            }
                         }
-                    } 
+
+                        table.mini-box th {
+
+                            @include responsive(pc-screens) {
+                                width: 20%;
+                            }
+                        } 
+                    }
                 }  
             }
             
             .interview {
-                // order: 4;
-                margin-bottom: 100px;
 
                 .question {
                     
                     @include responsive(pc-screens) {
-                        // margin-bottom: 00;
+                        margin: 60px 0 20px;
                     }
 
                     .mark {
@@ -113,11 +120,21 @@ main {
                     }
                 }
 
-                .answer p {
-                    @include content_align(justify);
+                .answer {
 
                     @include responsive(pc-screens) {
-                        font-size: 18px;
+                        display: flex;
+                        column-gap: 3%;
+                    }
+                    
+                    p {
+                        @include content_align(justify);
+                        display: inline;
+
+                        @include responsive(pc-screens) {
+                            width: 50%;
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -125,10 +142,37 @@ main {
     }
 
     section.work {
+
+        .exhibition-wrap h6 {
+            margin-top: 60px;
+        }
+
+        .swiper {
+            overflow: visible;
+            
+            @include responsive(pc-screens) {
+                overflow: hidden;
+            }
+
+            .swiper-slide {
+                @include flex_between_center();
+                width: 45% !important;
+                margin-right: 15px !important;
+
+                @include responsive(pc-screens) {
+                    width: 23.5% !important;
+                }
+            }
+        }
         
         .item-box {
             @include itemList_box();
+            flex-wrap: nowrap;
             margin-top: 30px;
+
+            @include responsive(pc-screens) {
+                justify-content: flex-start;
+            }
         }
     }
 

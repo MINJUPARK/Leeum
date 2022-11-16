@@ -111,9 +111,9 @@
 }
 
 // 본문 내용 정렬 및 행간 세팅 (left, right, center, justify)
-@mixin content_align($align: left) {
-    text-align: align;
-    line-height: 2em;
+@mixin content_align($align: left, $height: 2em) {
+    text-align: $align;
+    line-height: $height;
     color: $bk1;
 }
 
@@ -271,7 +271,7 @@
 // 호출법 : section.movePage {} 안에서 호출
 // 사용처 : 
 @mixin move_page() {
-    margin-top: 30px;
+    margin-top: 100px;
 
         .movePage-wrap {
             @include flex_between_center();
@@ -537,7 +537,8 @@
 // 사용처 : 고미술 상세, 현대미술 상세, 작가 상세, 워크북 상세, 출판물 상세
 @mixin detail_info() {
     .item-wrap {
-        
+        margin-bottom: 100px;
+
         @include responsive(pc-screens) {
             @include in_container();
             @include flex_between();
@@ -723,11 +724,12 @@
 
         a {
             display: block;
+            width: 100%;
         }
 
         @include responsive(pc-screens) {
             width: 23.5%;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
         }
         
         .i-pic {
@@ -749,11 +751,12 @@
                 position: absolute;
                 top: 18px; right: 18px;
                 width: 20px;
+                z-index: 1;
                 
                 .bookmark {
                     filter: $svg-white;
                     opacity: 1;
-                    z-index: 97;
+                    // z-index: 97;
     
                     &.on {
                         filter: none;
@@ -764,13 +767,16 @@
 
         .i-des {
             padding: 10px 20px 15px;
-
+            text-overflow: ellipsis;
+            overflow: hidden;
+            
             @include responsive(tablet-screens) {
                 padding: 20px 30px 25px;
             }
 
             strong { 
-                @include gothic_font(bold); 
+                @include gothic_font(bold);
+                white-space: nowrap;
 
                 @include responsive(tablet-screens) {
                     font-size: 20px;
@@ -828,11 +834,6 @@
         span { 
             @include gothic_font(medium); 
             margin-right: 20px; 
-        }
-        
-        label[for=now] {
-            color: $red-brown;
-            margin-left: 5px; 
         }
     }
 
