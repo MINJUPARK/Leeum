@@ -635,6 +635,547 @@ header .breadcrumb-wrap {
   }
 }
 
+main section.construction .tap-box .tap-flexbox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 20px 40px 20px;
+}
+main section.construction .tap-box .tap-flexbox li {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 11px;
+}
+main section.construction .tap-box .tap-flexbox li:first-child {
+  padding-left: 10px;
+}
+main section.construction .tap-box .tap-flexbox li:last-child {
+  padding-right: 30px;
+}
+main section.construction .tap-box .tap-flexbox li a {
+  color: #9c9c9c;
+  border-bottom: 2px solid #c5c5c5;
+}
+main section.construction .tap-box .tap-flexbox li a:hover {
+  color: #000000;
+  border-color: #000000;
+}
+main section.construction .main-img img {
+  width: 100%;
+}
+main section.construction .info .title {
+  line-height: 36px;
+  font-family: "KoPub Batang";
+  font-size: 22px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .info .title br {
+    display: none !important;
+  }
+}
+main section.construction .info .title span {
+  display: inline;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .info .title span {
+    display: block;
+  }
+}
+main section.construction .info .des {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 44px;
+  margin-bottom: 77px;
+}
+main section.construction .M1 img {
+  width: 100%;
+  height: 222px;
+  overflow-x: hidden;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+main section.construction .M1 .sub {
+  display: none;
+}
+main section.construction .M1 .M1-constructor {
+  justify-content: center;
+}
+main section.construction .M1 .M1-constructor img {
+  position: relative;
+  top: -80px;
+  left: 370px;
+  width: 195px;
+  height: 195px;
+}
+main section.construction .M1 .M1-constructor .name {
+  margin-top: -55px;
+  text-align: center;
+}
+main section.construction .M1 .M1-constructor .name p:first-child {
+  font-size: 22px;
+  font-weight: 700;
+}
+main section.construction .M1 .M1-constructor .name p:last-child {
+  font-size: 16px;
+  font-weight: 200;
+  color: #5c5c5c;
+  margin-top: 10px;
+}
+main section.construction .M1 .M1-detail {
+  display: flex;
+  flex-direction: column;
+}
+main section.construction .M1 .M1-detail p:first-of-type {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin: 30px 0;
+}
+main section.construction .M1 .M1-detail p:last-of-type {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 26px;
+  color: #3c3c3c;
+}
+main section.construction .M1 .M1-detail a {
+  position: relative;
+  left: 205px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 35px 0 100px 0;
+}
+main section.construction .M1 .M1-detail a img {
+  position: absolute;
+  left: 290px;
+  width: 17px;
+  height: 13px;
+}
+main section.construction .M2 img {
+  width: 100%;
+  height: 222px;
+  overflow-x: hidden;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+main section.construction .M2 .sub {
+  display: none;
+}
+main section.construction .M2 .M2-constructor {
+  justify-content: center;
+}
+main section.construction .M2 .M2-constructor img {
+  position: relative;
+  top: -80px;
+  left: 370px;
+  width: 195px;
+  height: 195px;
+}
+main section.construction .M2 .M2-constructor .name {
+  margin-top: -55px;
+  text-align: center;
+}
+main section.construction .M2 .M2-constructor .name p:first-child {
+  font-size: 22px;
+  font-weight: 700;
+}
+main section.construction .M2 .M2-constructor .name p:last-child {
+  font-size: 16px;
+  font-weight: 200;
+  color: #5c5c5c;
+  margin-top: 10px;
+}
+main section.construction .M2 .M2-detail {
+  display: flex;
+  flex-direction: column;
+}
+main section.construction .M2 .M2-detail p:first-of-type {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin: 30px 0;
+}
+main section.construction .M2 .M2-detail p:last-of-type {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 26px;
+  color: #3c3c3c;
+}
+main section.construction .M2 .M2-detail a {
+  position: relative;
+  left: 205px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 35px 0 100px 0;
+}
+main section.construction .M2 .M2-detail a img {
+  position: absolute;
+  left: 290px;
+  width: 17px;
+  height: 13px;
+}
+main section.construction .Kid img {
+  width: 100%;
+  height: 222px;
+  overflow-x: hidden;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+main section.construction .Kid .sub {
+  display: none;
+}
+main section.construction .Kid .Kidstudy-constructor {
+  justify-content: center;
+}
+main section.construction .Kid .Kidstudy-constructor img {
+  position: relative;
+  top: -80px;
+  left: 370px;
+  width: 195px;
+  height: 195px;
+}
+main section.construction .Kid .Kidstudy-constructor .name {
+  margin-top: -55px;
+  text-align: center;
+}
+main section.construction .Kid .Kidstudy-constructor .name p:first-child {
+  font-size: 22px;
+  font-weight: 700;
+}
+main section.construction .Kid .Kidstudy-constructor .name p:last-child {
+  font-size: 16px;
+  font-weight: 200;
+  color: #5c5c5c;
+  margin-top: 10px;
+}
+main section.construction .Kid .Kid-detail {
+  display: flex;
+  flex-direction: column;
+}
+main section.construction .Kid .Kid-detail p:first-of-type {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin: 30px 0;
+}
+main section.construction .Kid .Kid-detail p:last-of-type {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 26px;
+  color: #3c3c3c;
+}
+main section.construction .Kid .Kid-detail a {
+  position: relative;
+  left: 205px;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 35px 0 100px 0;
+}
+main section.construction .Kid .Kid-detail a img {
+  position: absolute;
+  left: 290px;
+  width: 17px;
+  height: 13px;
+}
+main section.construction .container .leeumstore img {
+  width: 100%;
+  height: 269px;
+}
+main section.construction .container .leeumstore p:first-of-type {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 19px 0 23px 0;
+}
+main section.construction .container .leeumstore p:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 67px;
+}
+main section.construction .container .leeumstore p span {
+  font-size: 26px;
+  font-weight: 700;
+  margin-right: 14px;
+}
+main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail {
+  margin-bottom: 64px;
+}
+main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail img {
+  width: 22px;
+  height: 22px;
+}
+main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail p {
+  display: inline;
+  font-size: 14px;
+  font-weight: 500;
+}
+main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
+  position: relative;
+  left: 195px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #be6a15;
+}
+main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a img {
+  width: 11px;
+  height: 11px;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
+}
+main section.construction .container .Champcoffee img {
+  width: 100%;
+  height: 269px;
+}
+main section.construction .container .Champcoffee p:first-of-type {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 19px 0 23px 0;
+}
+main section.construction .container .Champcoffee p:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 67px;
+}
+main section.construction .container .Champcoffee p span {
+  font-size: 26px;
+  font-weight: 700;
+  margin-right: 14px;
+}
+main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail {
+  margin-bottom: 64px;
+}
+main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail img {
+  width: 22px;
+  height: 22px;
+}
+main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail p {
+  display: inline;
+  font-size: 14px;
+  font-weight: 500;
+}
+main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
+  position: relative;
+  left: 205px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #be6a15;
+}
+main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a img {
+  width: 11px;
+  height: 11px;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
+}
+main section.construction .container .Locker img {
+  width: 100%;
+  height: 269px;
+}
+main section.construction .container .Locker p:first-of-type {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 19px 0 23px 0;
+}
+main section.construction .container .Locker p:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 67px;
+}
+main section.construction .container .Locker p:nth-of-type(2) span {
+  font-size: 14px;
+  font-weight: 600;
+}
+main section.construction .container .Locker p span {
+  font-size: 26px;
+  font-weight: 700;
+  margin-right: 14px;
+}
+main section.construction .container .ticketing-machine img {
+  width: 100%;
+  height: 269px;
+}
+main section.construction .container .ticketing-machine p:first-of-type {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 19px 0 23px 0;
+}
+main section.construction .container .ticketing-machine p:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 67px;
+}
+main section.construction .container .ticketing-machine p span {
+  font-size: 26px;
+  font-weight: 700;
+  margin-right: 14px;
+}
+main section.construction .container .parking img {
+  width: 100%;
+  height: 269px;
+}
+main section.construction .container .parking p:first-of-type {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 19px 0 23px 0;
+}
+main section.construction .container .parking p:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 67px;
+}
+main section.construction .container .parking p:nth-of-type(2) span {
+  font-size: 14px;
+  font-weight: 600;
+}
+main section.construction .container .parking p span {
+  font-size: 26px;
+  font-weight: 700;
+  margin-right: 14px;
+}
+main section.construction .container .parking .parking-detail {
+  margin-bottom: 64px;
+}
+main section.construction .container .parking .parking-detail a {
+  position: relative;
+  left: 310px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #be6a15;
+}
+main section.construction .container .parking .parking-detail a img {
+  width: 11px;
+  height: 11px;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
+}
+main section.construction .container .others img {
+  width: 100%;
+  height: 269px;
+}
+main section.construction .container .others p:first-of-type {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 19px 0 23px 0;
+}
+main section.construction .container .others p:first-of-type span {
+  font-size: 26px;
+  font-weight: 700;
+  margin-right: 14px;
+}
+main section.construction .container .others p:nth-of-type(2) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 67px;
+}
+main section.construction .container .director .background {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 431px;
+}
+main section.construction .container .director .director {
+  position: absolute;
+  top: -60px;
+  left: 100px;
+  width: 300px;
+  height: 549px;
+}
+main section.construction .container .director h3 {
+  position: absolute;
+  left: 210px;
+  top: 200px;
+  color: #ffffff;
+  line-height: 48px;
+  font-size: 30px;
+  font-weight: 700;
+}
+main section.construction .container .director p {
+  position: absolute;
+  left: 200px;
+  top: 240px;
+  color: #ffffff;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: 200;
+}
+main section.construction .container .director .award {
+  display: none;
+}
+main section.construction .container .director .director-info {
+  position: absolute;
+  left: 120px;
+  top: 290px;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+}
+main section.construction .container .renewal-info p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+main section.construction .container .renewal-info p:first-of-type {
+  margin: 40px 0 60px 0;
+}
+main section.construction .container .renewal-info p:first-of-type span {
+  font-size: 16px;
+  font-weight: 600;
+}
+main section.construction .container .renewal-info p:last-of-type {
+  margin-bottom: 100px;
+}
+main section.construction .container .renewal-detail h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+main section.construction .container .renewal-detail ul li img {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 238px;
+}
+main section.construction .container .renewal-detail ul li p {
+  text-align: center;
+}
+main section.construction .container .renewal-detail ul li p:first-of-type {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  margin-top: 24px;
+}
+main section.construction .container .renewal-detail ul li p:last-of-type {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 26px;
+  margin-bottom: 60px;
+}
+
 @media screen and (min-width: 1440px) {
   footer.sub {
     position: static !important;
@@ -915,42 +1456,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
-
-.construction-container {
-  width: 100%;
-  max-width: 1440px;
-}
-.construction-container .tap-box .tap-flexbox {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin: 0 20px 40px 20px;
-}
-.construction-container .tap-box .tap-flexbox li {
-  font-size: 24px;
-  font-weight: 500;
-  padding-bottom: 11px;
-}
-.construction-container .tap-box .tap-flexbox li:first-child {
-  padding-left: 10px;
-}
-.construction-container .tap-box .tap-flexbox li:last-child {
-  padding-right: 30px;
-}
-.construction-container .tap-box .tap-flexbox li a {
-  color: #9c9c9c;
-  border-bottom: 2px solid #c5c5c5;
-}
-.construction-container .tap-box .tap-flexbox li a:hover {
-  color: #000000;
-  border-color: #000000;
-}
-.construction-container .main-img img {
-  width: 100%;
-}
-.construction-container .title p {
-  font-family: "KoPub Batang";
-  font-size: 22px;
-  font-weight: 400;
 }/*# sourceMappingURL=about_facility.css.map */
