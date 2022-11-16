@@ -93,6 +93,31 @@
 }
 
 
+// 모바일 줄바꿈은 br, PC버전 줄바꿈은 span으로
+@mixin line_break() {
+    br {
+        @include responsive(pc-screens) {
+            display: none;
+        }
+    }
+
+    span {
+        display: inline;
+
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
+}
+
+// 본문 내용 정렬 및 행간 세팅 (left, right, center, justify)
+@mixin content_align($align: left) {
+    text-align: align;
+    line-height: 2em;
+    color: $bk1;
+}
+
+
 // 영역에 맞게 배경 채우기
 @mixin full_bg($url, $imgPath: sub) {
 
@@ -168,7 +193,7 @@
 @mixin speed_search() {
     padding-bottom: 30px;
     margin-bottom: 20px;
-    border-bottom: 1px solid $bk4;
+    border-bottom: 1px solid $bk5;
     
     @include responsive(pc-screens) {
         @include flex_between_center();
@@ -242,6 +267,76 @@
 }
 
 
+// 함수명 : 페이지 이동 (이전, 목록, 다음 버튼)
+// 호출법 : section.movePage {} 안에서 호출
+// 사용처 : 
+@mixin move_page() {
+    margin-top: 30px;
+
+        .movePage-wrap {
+            @include flex_between_center();
+
+            a {
+                @include gothic_font(semibold, 15px);
+                color: $bk1;
+
+                &:hover {
+                    color: #000;
+
+                    &::after {
+                        transform: scale(1);
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%; height: 2px;
+                    margin-top: 10px;
+                    background: #000;
+                    transform: scale(0);
+                    transition: transform .3s;
+                }
+                
+                img {
+                    height: 14px;
+                    filter: $bk1;
+                }
+
+                &.prev img { 
+                    margin-right: 10px;
+                    transform: rotate(180deg); 
+                }
+
+                &.next img {
+                    margin-left: 10px;
+                }
+
+                p {
+                    display: none;
+                    
+                    @include responsive(pc-screens) {
+                        display: inline-block;
+
+                        .vert-bar {
+                            width: 1px; height: 16px;
+                            margin: 0 15px 2px;
+                            vertical-align: middle;
+                            background: $bk3;
+                        }
+
+                        .title {
+                            @include gothic_font(regular);
+                            color: $bk2;
+                        }
+                    }
+                }
+                
+            }
+        }
+}
+
+
 // 함수명 : 상세 검색
 // 호출법 : .detail-search-wrap {} 안에서 호출
 // 사용처 : 고미술, 현대미술, 현재 프로그램, 지난 프로그램, 동영상
@@ -302,7 +397,7 @@
                         height: 45px;
                         line-height: 45px;
                         font-size: 14px;
-                        border: 1px solid $bk3;
+                        border: 1px solid $bk5;
                         background: #fff;
                         cursor: pointer;
                         
@@ -341,13 +436,13 @@
 
                 ul.grp {
                     width: 50%; 
-                    border: 1px solid $bk4;
+                    border: 1px solid $bk5;
 
                     &:first-child, &:nth-child(2) { border-bottom: 0; }
                     &:nth-child(odd)              { border-right: 0; }
 
                     @include responsive(pc-screens) {
-                        &:first-child, &:nth-child(2) { border-bottom: 1px solid $bk4; }
+                        &:first-child, &:nth-child(2) { border-bottom: 1px solid $bk5; }
                         &:nth-child(2) { border-right: 0; }
                     }
                     
@@ -437,6 +532,179 @@
     }
 }
 
+// 함수명 : 상세페이지 소개 부분
+// 호출법 : section.info {} 내에서 호출
+// 사용처 : 고미술 상세, 현대미술 상세, 작가 상세, 워크북 상세, 출판물 상세
+@mixin detail_info() {
+    .item-wrap {
+        
+        @include responsive(pc-screens) {
+            @include in_container();
+            @include flex_between();
+            flex-wrap: wrap;
+            margin-bottom: 200px;
+        }
+
+        .loc-icon {
+            // order: 2;
+            @include flex_between();
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 40px;
+            
+            @include responsive(pc-screens) {
+                // order: 1;
+                height: 40px;
+                border-bottom: 1px solid $bk4;
+                padding: 0 10px 15px;
+                margin-top: 0;
+            }
+
+            .loc {
+                @include loc_label();
+                margin-left: 0;
+                zoom: 1.2;
+
+                @include responsive(pc-screens) {
+                    zoom: 1;
+                }
+            }
+
+            .icon-box {
+                @include flex_between();
+                width: 120px;
+
+                img {
+                    height: 25px;
+                    filter: $svg-bk3;
+                }
+            }
+        }
+        
+        .i-slide {
+            // order: 1;
+            @include out_container();
+
+            @include responsive(pc-screens) {
+                // order: 2;
+                @include in_container();
+                width: 38.57142857142857%;
+                margin-top: 40px;
+            }
+
+            .main-pic {
+                width: 100%; height: 700px;
+
+                img {
+                    width: 100%; height: 100%;
+                    object-fit: cover;
+
+                    @include responsive(pc-screens) {
+                        border-radius: 5px;
+                    }
+                } 
+            }
+
+            .sub-pic {
+                display: none;
+                
+                @include responsive(pc-screens) {
+                    @include flex_between();
+                    width: calc(100% - 160px);
+                    height: 100px;
+                    margin: 25px auto 0;
+                    
+                    img {
+                        width: 30%;
+                        border-radius: 5px;
+                        object-fit: cover;
+                        object-position: 0 -35px;
+
+                        &:not(:first-child) {
+                            opacity: 0.4;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        .i-des {
+            // order: 3;
+
+            @include responsive(pc-screens) {
+                width: 51.42857142857143%;
+            }
+
+            // loc-icon 자리
+
+            .tit-exp {
+                margin-bottom: 100px;
+
+                .tit {
+                    h2 { 
+                        font-size: $h3; 
+
+                        @include responsive(pc-screens) {
+                            font-size: $h2;
+                        }
+                    }
+
+                    .lang {
+                        @include gothic_font(light, 18px);
+                        margin-top: 10px;
+                        color: $bk2;
+                        
+                        @include responsive(pc-screens) {
+                            font-size: 22px;
+                        }
+                    }
+    
+                }
+
+                .exp {
+
+                    table.mini-box {
+                        @include out_container();
+                        padding: 20px 30px;
+                        margin-top: 30px;
+                        margin-bottom: 50px;
+                        line-height: 2em;
+                        background: $bk6;
+                        
+                        @include responsive(pc-screens) {
+                            @include in_container();
+                            margin-top: 40px;
+                            margin-bottom: 80px;
+                            border-radius: 5px;
+                        }
+
+                        th {
+                            width: 15%;
+
+                            @include responsive(pc-screens) {
+                                text-align: left;
+                            }
+                        }
+
+                        td {
+                            color: $bk1;
+                        }
+                    }
+
+                    p {
+                        @include content_align(justify);
+
+                        @include responsive(pc-screens) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 // 함수명 : 아이템리스트 박스
 // 호출법 : .item-box {} 안에서 호출
@@ -450,7 +718,7 @@
     .item {
         width: 48%;
         margin-bottom: 20px;
-        border: 1px solid $bk4;
+        border: 1px solid $bk5;
         border-radius: 5px;
 
         a {
@@ -474,8 +742,8 @@
             .bg {
                 width: 100%; height: 100%;
                 object-fit: cover;
-                // border-top-left-radius: 5px;
-                // border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
             }
             .bm_btn {
                 position: absolute;
@@ -543,7 +811,7 @@
 @mixin list_control() {
     @include flex_between();
     width: 100%; height: 35px; line-height: 35px;
-    border-bottom: 1px solid $bk4;
+    border-bottom: 1px solid $bk5;
     
     @include responsive(pc-screens) {
         padding-bottom: 20px;

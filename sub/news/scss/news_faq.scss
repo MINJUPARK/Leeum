@@ -12,6 +12,42 @@ header {
     @include full_bg('header_faq.jpg');
 }
 
+main {
+    h2 {
+        display: none;
+    }
+
+    ul {
+        border-bottom: 1px solid $bk4;
+    }
+
+    .text-arrow {
+        display: flex;
+        padding: 20px;
+
+        &:first-child {
+            border-top: 1px solid $bk4;
+        }
+
+        p {
+            white-space: nowrap;
+            @include gothic_font(medium, 21px);
+
+            span {
+                margin-right: 10px;
+            }
+        }
+
+        img {
+            width: 17px;
+        }
+        
+        span {
+            color: $red-brown;
+        }
+    }
+}
+
 footer {
     @include footer();
 }

@@ -128,7 +128,7 @@ a, input, button, select, label {
 }
 
 input, select {
-  border: 1px solid #acacac;
+  border: 1px solid #d4d4d4;
   color: #5c5c5c;
 }
 
@@ -145,7 +145,7 @@ textarea {
   resize: none;
 }
 
-input, button, select, textarea {
+input, button, select, textarea, video {
   border-radius: 5px;
 }
 
@@ -203,10 +203,15 @@ header a {
 }
 header .logo-menu-wrap {
   position: fixed;
-  left: 0;
   top: 30px;
+  left: 0;
   right: 0;
   z-index: 98;
+}
+@media screen and (min-width: 1440px) {
+  header .logo-menu-wrap {
+    position: static;
+  }
 }
 header .logo-menu-wrap.menu-sc {
   top: 0;
@@ -664,7 +669,7 @@ main section.filter .filter-wrap h6 {
 main section.filter .filter-wrap .speed-search {
   padding-bottom: 30px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #c5c5c5;
+  border-bottom: 1px solid #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .speed-search {
@@ -803,7 +808,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
   height: 45px;
   line-height: 45px;
   font-size: 14px;
-  border: 1px solid #acacac;
+  border: 1px solid #d4d4d4;
   background: #fff;
   cursor: pointer;
 }
@@ -837,7 +842,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp {
   width: 50%;
-  border: 1px solid #c5c5c5;
+  border: 1px solid #d4d4d4;
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
   border-bottom: 0;
@@ -847,7 +852,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
-    border-bottom: 1px solid #c5c5c5;
+    border-bottom: 1px solid #d4d4d4;
   }
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
     border-right: 0;
@@ -971,7 +976,7 @@ main section.itemList .list-control {
   width: 100%;
   height: 35px;
   line-height: 35px;
-  border-bottom: 1px solid #c5c5c5;
+  border-bottom: 1px solid #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
   main section.itemList .list-control {
@@ -1068,7 +1073,7 @@ main section.itemList .item-box {
 main section.itemList .item-box .item {
   width: 48%;
   margin-bottom: 20px;
-  border: 1px solid #c5c5c5;
+  border: 1px solid #d4d4d4;
   border-radius: 5px;
 }
 main section.itemList .item-box .item a {
@@ -1096,6 +1101,8 @@ main section.itemList .item-box .item .i-pic .bg {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 main section.itemList .item-box .item .i-pic .bm_btn {
   position: absolute;
