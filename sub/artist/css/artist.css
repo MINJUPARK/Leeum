@@ -124,7 +124,7 @@ input[type=checkbox] + label {
 }
 input[type=checkbox]:checked + label {
   color: #ac3f21;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 a, input, button, select, label {
@@ -687,18 +687,6 @@ main section.intro .intro-wrap .preview {
   margin-left: -50vw;
   margin-right: -50vw;
 }
-<<<<<<< HEAD
-=======
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-2712px);
-    will-change: transform;
-  }
-}
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -1283,12 +1271,7 @@ main section.artistList .item-box .item .i-pic {
 main section.artistList .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   object-fit: cover;
-=======
-  -o-object-fit: cover;
-     object-fit: cover;
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }

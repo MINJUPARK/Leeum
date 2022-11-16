@@ -55,7 +55,7 @@ ul, ol {
 a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 header a:hover, footer a:hover {
@@ -101,9 +101,9 @@ input[type=checkbox]:hover {
   background: #d4d4d4;
 }
 input[type=checkbox]:checked {
-  color: white;
+  color: #fff;
   background-color: #ac3f21;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: #d4d4d4;
 }
 input[type=checkbox]:checked::before {
   border-radius: 2px;
@@ -118,9 +118,13 @@ input[type=checkbox]::before {
   transform: scale(0) translate(-50%, -50%);
   overflow: hidden;
 }
-
 input[type=checkbox] + label {
   color: #3c3c3c;
+  margin-left: 5px;
+}
+input[type=checkbox]:checked + label {
+  color: #ac3f21;
+  font-weight: 600;
 }
 
 a, input, button, select, label {
@@ -178,7 +182,6 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  /* 모바일 메뉴 팝업 */
   background: url(../image/about_facility.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -421,8 +424,8 @@ header .mobile-menu-popup {
   z-index: 99;
 }
 header .mobile-menu-popup .window {
-  position: relative;
   display: flex;
+  position: relative;
   width: 100%;
   height: 100vh;
 }
@@ -660,25 +663,13 @@ main section.construction .main-img img {
   width: 100%;
 }
 main section.construction .info .title {
-<<<<<<< HEAD
   margin-top: 30px;
-=======
-<<<<<<< HEAD
-=======
-  margin-top: 30px;
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   line-height: 36px;
   font-family: "KoPub Batang";
   font-size: 22px;
   font-weight: 400;
 }
 @media screen and (min-width: 1440px) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   main section.construction .info .title {
     font-family: "KoPub Batang";
     font-size: 46px;
@@ -687,10 +678,6 @@ main section.construction .info .title {
   }
 }
 @media screen and (min-width: 1440px) {
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   main section.construction .info .title br {
     display: none !important;
   }
@@ -710,14 +697,6 @@ main section.construction .info .des {
   margin-top: 44px;
   margin-bottom: 77px;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-main section.construction .M1 img {
-  width: 100%;
-  height: 222px;
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .info .des {
     font-size: 22px;
@@ -732,10 +711,6 @@ main section.construction .M1 img {
 }
 main section.construction .M1 img {
   width: 100%;
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   overflow-x: hidden;
   position: relative;
   left: 50%;
@@ -744,14 +719,6 @@ main section.construction .M1 img {
   margin-left: -50vw;
   margin-right: -50vw;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-main section.construction .M1 .sub {
-  display: none;
-}
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 img {
     position: static;
@@ -775,10 +742,6 @@ main section.construction .M1 .sub {
     margin-top: 22px;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-constructor {
   justify-content: center;
 }
@@ -789,11 +752,6 @@ main section.construction .M1 .M1-constructor img {
   width: 195px;
   height: 195px;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-constructor img {
     position: relative;
@@ -803,19 +761,10 @@ main section.construction .M1 .M1-constructor img {
     height: 400px;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-constructor .name {
   margin-top: -55px;
   text-align: center;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-constructor .name {
     position: relative;
@@ -823,50 +772,28 @@ main section.construction .M1 .M1-constructor .name {
     left: -380px;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-constructor .name p:first-child {
   font-size: 22px;
   font-weight: 700;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-constructor .name p:first-child {
     font-size: 34px;
     font-weight: 700;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-constructor .name p:last-child {
   font-size: 16px;
   font-weight: 200;
   color: #5c5c5c;
   margin-top: 10px;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-constructor .name p:last-child {
     font-size: 26px;
     font-weight: 200;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-detail {
   display: flex;
   flex-direction: column;
@@ -877,11 +804,6 @@ main section.construction .M1 .M1-detail p:first-of-type {
   text-align: center;
   margin: 30px 0;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-detail p:first-of-type {
     font-size: 56px;
@@ -890,10 +812,6 @@ main section.construction .M1 .M1-detail p:first-of-type {
     top: -444px;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-detail p:last-of-type {
   font-size: 16px;
   font-weight: 400;
@@ -901,11 +819,6 @@ main section.construction .M1 .M1-detail p:last-of-type {
   line-height: 26px;
   color: #3c3c3c;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-detail p:last-of-type br {
     display: none !important;
@@ -930,22 +843,13 @@ main section.construction .M1 .M1-detail p:last-of-type span {
     font-weight: 400;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-detail a {
   position: relative;
-  left: 205px;
+  left: 195px;
   font-size: 14px;
   font-weight: 600;
   margin: 35px 0 100px 0;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-detail a {
     font-size: 20px;
@@ -955,21 +859,12 @@ main section.construction .M1 .M1-detail a {
     left: 660px;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-detail a img {
   position: absolute;
   left: 290px;
   width: 17px;
   height: 13px;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-detail a img {
     width: 20px;
@@ -979,13 +874,8 @@ main section.construction .M1 .M1-detail a img {
     left: 10px;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M2 img {
   width: 100%;
-  height: 222px;
   overflow-x: hidden;
   position: relative;
   left: 50%;
@@ -994,8 +884,28 @@ main section.construction .M2 img {
   margin-left: -50vw;
   margin-right: -50vw;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+    width: 100%;
+    margin-top: -400px;
+  }
+}
 main section.construction .M2 .sub {
   display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 .sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 200;
+    color: #5c5c5c;
+    margin-top: 22px;
+  }
 }
 main section.construction .M2 .M2-constructor {
   justify-content: center;
@@ -1007,19 +917,47 @@ main section.construction .M2 .M2-constructor img {
   width: 195px;
   height: 195px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 .M2-constructor img {
+    position: relative;
+    top: 120px;
+    left: 870px;
+    width: 400px;
+    height: 400px;
+  }
+}
 main section.construction .M2 .M2-constructor .name {
   margin-top: -55px;
   text-align: center;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 .M2-constructor .name {
+    position: relative;
+    top: 188px;
+    left: 380px;
+  }
+}
 main section.construction .M2 .M2-constructor .name p:first-child {
   font-size: 22px;
   font-weight: 700;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 .M2-constructor .name p:first-child {
+    font-size: 34px;
+    font-weight: 700;
+  }
 }
 main section.construction .M2 .M2-constructor .name p:last-child {
   font-size: 16px;
   font-weight: 200;
   color: #5c5c5c;
   margin-top: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 .M2-constructor .name p:last-child {
+    font-size: 26px;
+    font-weight: 200;
+  }
 }
 main section.construction .M2 .M2-detail {
   display: flex;
@@ -1031,6 +969,14 @@ main section.construction .M2 .M2-detail p:first-of-type {
   text-align: center;
   margin: 30px 0;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 .M2-detail p:first-of-type {
+    font-size: 56px;
+    font-weight: 600;
+    position: relative;
+    top: -40px;
+  }
+}
 main section.construction .M2 .M2-detail p:last-of-type {
   font-size: 16px;
   font-weight: 400;
@@ -1038,12 +984,32 @@ main section.construction .M2 .M2-detail p:last-of-type {
   line-height: 26px;
   color: #3c3c3c;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 .M2-detail p:last-of-type {
+    position: relative;
+    top: -50px;
+    left: -660px;
+    text-align: right;
+    line-height: 46px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
 main section.construction .M2 .M2-detail a {
   position: relative;
-  left: 205px;
+  left: 195px;
   font-size: 14px;
   font-weight: 600;
   margin: 35px 0 100px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 .M2-detail a {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    top: -60px;
+    left: 660px;
+  }
 }
 main section.construction .M2 .M2-detail a img {
   position: absolute;
@@ -1051,9 +1017,17 @@ main section.construction .M2 .M2-detail a img {
   width: 17px;
   height: 13px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 .M2-detail a img {
+    width: 20px;
+    height: 15px;
+    position: relative;
+    top: 196px;
+    left: 10px;
+  }
+}
 main section.construction .Kid img {
   width: 100%;
-  height: 222px;
   overflow-x: hidden;
   position: relative;
   left: 50%;
@@ -1062,8 +1036,28 @@ main section.construction .Kid img {
   margin-left: -50vw;
   margin-right: -50vw;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+    width: 100%;
+  }
+}
 main section.construction .Kid .sub {
   display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .sub {
+    display: block;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 200;
+    color: #5c5c5c;
+    margin-top: 22px;
+  }
 }
 main section.construction .Kid .Kidstudy-constructor {
   justify-content: center;
@@ -1075,19 +1069,47 @@ main section.construction .Kid .Kidstudy-constructor img {
   width: 195px;
   height: 195px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kidstudy-constructor img {
+    position: relative;
+    top: -250px;
+    left: 120px;
+    width: 400px;
+    height: 400px;
+  }
+}
 main section.construction .Kid .Kidstudy-constructor .name {
   margin-top: -55px;
   text-align: center;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kidstudy-constructor .name {
+    position: relative;
+    top: -160px;
+    left: -380px;
+  }
+}
 main section.construction .Kid .Kidstudy-constructor .name p:first-child {
   font-size: 22px;
   font-weight: 700;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kidstudy-constructor .name p:first-child {
+    font-size: 34px;
+    font-weight: 700;
+  }
 }
 main section.construction .Kid .Kidstudy-constructor .name p:last-child {
   font-size: 16px;
   font-weight: 200;
   color: #5c5c5c;
   margin-top: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kidstudy-constructor .name p:last-child {
+    font-size: 26px;
+    font-weight: 200;
+  }
 }
 main section.construction .Kid .Kid-detail {
   display: flex;
@@ -1099,6 +1121,15 @@ main section.construction .Kid .Kid-detail p:first-of-type {
   text-align: center;
   margin: 30px 0;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kid-detail p:first-of-type {
+    font-size: 56px;
+    font-weight: 600;
+    position: relative;
+    top: -444px;
+    left: 100px;
+  }
+}
 main section.construction .Kid .Kid-detail p:last-of-type {
   font-size: 16px;
   font-weight: 400;
@@ -1106,12 +1137,45 @@ main section.construction .Kid .Kid-detail p:last-of-type {
   line-height: 26px;
   color: #3c3c3c;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kid-detail p:last-of-type {
+    position: relative;
+    top: -460px;
+    left: 610px;
+    text-align: left;
+    line-height: 46px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kid-detail p:last-of-type br {
+    display: none !important;
+  }
+}
+main section.construction .Kid .Kid-detail p:last-of-type span {
+  display: inline;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kid-detail p:last-of-type span {
+    display: block;
+  }
+}
 main section.construction .Kid .Kid-detail a {
   position: relative;
-  left: 205px;
+  left: 195px;
   font-size: 14px;
   font-weight: 600;
   margin: 35px 0 100px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kid-detail a {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    top: -480px;
+    left: 610px;
+  }
 }
 main section.construction .Kid .Kid-detail a img {
   position: absolute;
@@ -1119,14 +1183,39 @@ main section.construction .Kid .Kid-detail a img {
   width: 17px;
   height: 13px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid .Kid-detail a img {
+    width: 20px;
+    height: 15px;
+    position: relative;
+    top: -2px;
+    left: 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .leeumstore {
+    width: 46.5277777778%;
+  }
+}
 main section.construction .container .leeumstore img {
   width: 100%;
   height: 269px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .leeumstore img {
+    height: 505px;
+  }
 }
 main section.construction .container .leeumstore p:first-of-type {
   font-size: 16px;
   font-weight: 600;
   margin: 19px 0 23px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .leeumstore p:first-of-type {
+    font-size: 24px;
+    font-weight: 600;
+  }
 }
 main section.construction .container .leeumstore p:nth-of-type(2) {
   font-size: 14px;
@@ -1134,10 +1223,24 @@ main section.construction .container .leeumstore p:nth-of-type(2) {
   line-height: 26px;
   margin-bottom: 67px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .leeumstore p:nth-of-type(2) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
 main section.construction .container .leeumstore p span {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .leeumstore p span {
+    font-size: 46px;
+    font-weight: 700;
+    margin-right: 28px;
+  }
 }
 main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail {
   margin-bottom: 64px;
@@ -1151,6 +1254,12 @@ main section.construction .container .leeumstore .leeumstore-detail-flexbox .lee
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
 main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
   position: relative;
   left: 195px;
@@ -1158,19 +1267,51 @@ main section.construction .container .leeumstore .leeumstore-detail-flexbox .lee
   font-weight: 600;
   color: #be6a15;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
+    font-size: 20px;
+    font-weight: 600;
+    left: 300px;
+  }
+}
 main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a img {
   width: 11px;
   height: 11px;
   filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a img {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Champcoffee {
+    position: relative;
+    top: -920px;
+    left: 750px;
+    width: 46.5277777778%;
+  }
+}
 main section.construction .container .Champcoffee img {
   width: 100%;
   height: 269px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Champcoffee img {
+    height: 505px;
+  }
 }
 main section.construction .container .Champcoffee p:first-of-type {
   font-size: 16px;
   font-weight: 600;
   margin: 19px 0 23px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Champcoffee p:first-of-type {
+    font-size: 24px;
+    font-weight: 600;
+  }
 }
 main section.construction .container .Champcoffee p:nth-of-type(2) {
   font-size: 14px;
@@ -1178,10 +1319,24 @@ main section.construction .container .Champcoffee p:nth-of-type(2) {
   line-height: 26px;
   margin-bottom: 67px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Champcoffee p:nth-of-type(2) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
 main section.construction .container .Champcoffee p span {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Champcoffee p span {
+    font-size: 46px;
+    font-weight: 700;
+    margin-right: 28px;
+  }
 }
 main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail {
   margin-bottom: 64px;
@@ -1195,6 +1350,12 @@ main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .C
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
 main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
   position: relative;
   left: 205px;
@@ -1202,19 +1363,50 @@ main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .C
   font-weight: 600;
   color: #be6a15;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
+    font-size: 20px;
+    font-weight: 600;
+    left: 300px;
+  }
+}
 main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a img {
   width: 11px;
   height: 11px;
   filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a img {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Locker {
+    position: relative;
+    top: -780px;
+    width: 46.5277777778%;
+  }
+}
 main section.construction .container .Locker img {
   width: 100%;
   height: 269px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Locker img {
+    height: 505px;
+  }
 }
 main section.construction .container .Locker p:first-of-type {
   font-size: 16px;
   font-weight: 600;
   margin: 19px 0 23px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Locker p:first-of-type {
+    font-size: 24px;
+    font-weight: 600;
+  }
 }
 main section.construction .container .Locker p:nth-of-type(2) {
   font-size: 14px;
@@ -1222,23 +1414,62 @@ main section.construction .container .Locker p:nth-of-type(2) {
   line-height: 26px;
   margin-bottom: 67px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Locker p:nth-of-type(2) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
 main section.construction .container .Locker p:nth-of-type(2) span {
   font-size: 14px;
   font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Locker p:nth-of-type(2) span {
+    font-size: 22px;
+    font-weight: 600;
+  }
 }
 main section.construction .container .Locker p span {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .Locker p span {
+    font-size: 46px;
+    font-weight: 700;
+    margin-right: 28px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .ticketing-machine {
+    position: relative;
+    top: -1650px;
+    left: 750px;
+    width: 46.5277777778%;
+  }
+}
 main section.construction .container .ticketing-machine img {
   width: 100%;
   height: 269px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .ticketing-machine img {
+    height: 505px;
+  }
 }
 main section.construction .container .ticketing-machine p:first-of-type {
   font-size: 16px;
   font-weight: 600;
   margin: 19px 0 23px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .ticketing-machine p:first-of-type {
+    font-size: 24px;
+    font-weight: 600;
+  }
 }
 main section.construction .container .ticketing-machine p:nth-of-type(2) {
   font-size: 14px;
@@ -1246,19 +1477,51 @@ main section.construction .container .ticketing-machine p:nth-of-type(2) {
   line-height: 26px;
   margin-bottom: 67px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .ticketing-machine p:nth-of-type(2) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
 main section.construction .container .ticketing-machine p span {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .ticketing-machine p span {
+    font-size: 46px;
+    font-weight: 700;
+    margin-right: 28px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .parking {
+    position: relative;
+    top: -1450px;
+    width: 46.5277777778%;
+  }
+}
 main section.construction .container .parking img {
   width: 100%;
   height: 269px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .parking img {
+    height: 505px;
+  }
 }
 main section.construction .container .parking p:first-of-type {
   font-size: 16px;
   font-weight: 600;
   margin: 19px 0 23px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .parking p:first-of-type {
+    font-size: 24px;
+    font-weight: 600;
+  }
 }
 main section.construction .container .parking p:nth-of-type(2) {
   font-size: 14px;
@@ -1266,14 +1529,35 @@ main section.construction .container .parking p:nth-of-type(2) {
   line-height: 26px;
   margin-bottom: 67px;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .parking p:nth-of-type(2) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
 main section.construction .container .parking p:nth-of-type(2) span {
   font-size: 14px;
   font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .parking p:nth-of-type(2) span {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 40px;
+  }
 }
 main section.construction .container .parking p span {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .container .parking p span {
+    font-size: 46px;
+    font-weight: 700;
+    margin-right: 28px;
+  }
 }
 main section.construction .container .parking .parking-detail {
   margin-bottom: 64px;
@@ -1285,32 +1569,78 @@ main section.construction .container .parking .parking-detail a {
   font-weight: 600;
   color: #be6a15;
 }
+@media screen and (min-width: 1440px) {
+  main section.construction .container .parking .parking-detail a {
+    font-size: 20px;
+    font-weight: 600;
+    left: 450px;
+  }
+}
 main section.construction .container .parking .parking-detail a img {
   width: 11px;
   height: 11px;
   filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
-main section.construction .container .others img {
+@media screen and (min-width: 1440px) {
+  main section.construction .container .parking .parking-detail a img {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .others {
+    position: relative;
+    top: -2370px;
+    left: 750px;
+    width: 46.5277777778%;
+  }
+}
+main section.construction .others img {
   width: 100%;
   height: 269px;
 }
-main section.construction .container .others p:first-of-type {
+@media screen and (min-width: 1440px) {
+  main section.construction .others img {
+    height: 505px;
+  }
+}
+main section.construction .others p:first-of-type {
   font-size: 16px;
   font-weight: 600;
   margin: 19px 0 23px 0;
 }
-main section.construction .container .others p:first-of-type span {
+@media screen and (min-width: 1440px) {
+  main section.construction .others p:first-of-type {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+main section.construction .others p:first-of-type span {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
 }
-main section.construction .container .others p:nth-of-type(2) {
+@media screen and (min-width: 1440px) {
+  main section.construction .others p:first-of-type span {
+    font-size: 46px;
+    font-weight: 700;
+    margin-right: 28px;
+  }
+}
+main section.construction .others p:nth-of-type(2) {
   font-size: 14px;
   font-weight: 400;
   line-height: 26px;
   margin-bottom: 67px;
 }
-main section.construction .container .director .background {
+@media screen and (min-width: 1440px) {
+  main section.construction .others p:nth-of-type(2) {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+  }
+}
+main .container .director .background {
   position: relative;
   left: 50%;
   right: 50%;
@@ -1319,103 +1649,222 @@ main section.construction .container .director .background {
   margin-right: -50vw;
   height: 431px;
 }
-main section.construction .container .director .director {
+@media screen and (min-width: 1440px) {
+  main .container .director .background {
+    height: 650px;
+  }
+}
+main .container .director .director {
   position: absolute;
   top: -60px;
   left: 100px;
   width: 300px;
   height: 549px;
 }
-main section.construction .container .director h3 {
+@media screen and (min-width: 1440px) {
+  main .container .director .director {
+    position: absolute;
+    top: -200px;
+    left: 450px;
+    width: 587px;
+    height: 1068px;
+  }
+}
+main .container .director h3 {
   position: absolute;
   left: 210px;
-  top: 200px;
-<<<<<<< HEAD
+  top: 190px;
   color: #fff;
-=======
-<<<<<<< HEAD
-  color: #ffffff;
-=======
-  color: #fff;
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   line-height: 48px;
   font-size: 30px;
   font-weight: 700;
 }
-main section.construction .container .director p {
+@media screen and (min-width: 1440px) {
+  main .container .director h3 {
+    left: 670px;
+    top: 350px;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 68px;
+  }
+}
+main .container .director p {
   position: absolute;
   left: 200px;
-  top: 240px;
-<<<<<<< HEAD
+  top: 230px;
   color: #fff;
-=======
-<<<<<<< HEAD
-  color: #ffffff;
-=======
-  color: #fff;
->>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   line-height: 30px;
   font-size: 14px;
   font-weight: 200;
 }
-main section.construction .container .director .award {
+@media screen and (min-width: 1440px) {
+  main .container .director p {
+    left: 660px;
+    top: 420px;
+    font-size: 20px;
+    font-weight: 200;
+  }
+}
+main .container .director .award {
   display: none;
 }
-main section.construction .container .director .director-info {
+main .container .director .award .title {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+main .container .director .award .sub {
+  font-size: 14px;
+  font-weight: 200;
+  opacity: 0.8;
+}
+@media screen and (min-width: 1440px) {
+  main .container .director .award {
+    position: absolute;
+    left: 1100px;
+    top: 100px;
+    display: block;
+    color: #fff;
+    line-height: 28px;
+  }
+}
+main .container .director .director-info {
   position: absolute;
   left: 120px;
   top: 290px;
-  font-size: 14px;
-  font-weight: 200;
   line-height: 26px;
   text-align: center;
   color: #ffffff;
+  font-size: 14px;
+  font-weight: 200;
 }
-main section.construction .container .renewal-info p {
+@media screen and (min-width: 1440px) {
+  main .container .director .director-info br {
+    display: none !important;
+  }
+}
+main .container .director .director-info span {
+  display: inline;
+}
+@media screen and (min-width: 1440px) {
+  main .container .director .director-info span {
+    display: block;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .container .director .director-info {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 40px;
+    left: 490px;
+    top: 470px;
+  }
+}
+main .container .renewal-info {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1440px) {
+  main .container .renewal-info {
+    flex-direction: row;
+  }
+}
+main .container .renewal-info p {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
 }
-main section.construction .container .renewal-info p:first-of-type {
-  margin: 40px 0 60px 0;
+@media screen and (min-width: 1440px) {
+  main .container .renewal-info p {
+    width: 45.3472222222%;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 44px;
+  }
 }
-main section.construction .container .renewal-info p:first-of-type span {
+main .container .renewal-info p:first-of-type {
+  margin: 60px 0 60px 0;
+}
+main .container .renewal-info p:first-of-type span {
   font-size: 16px;
   font-weight: 600;
 }
-main section.construction .container .renewal-info p:last-of-type {
+@media screen and (min-width: 1440px) {
+  main .container .renewal-info p:first-of-type span {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+}
+main .container .renewal-info p:last-of-type {
   margin-bottom: 100px;
 }
-main section.construction .container .renewal-detail h4 {
+@media screen and (min-width: 1440px) {
+  main .container .renewal-info p:last-of-type {
+    margin: 60px 0 100px 130px;
+  }
+}
+main .container .renewal-detail h4 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 30px;
 }
-main section.construction .container .renewal-detail ul li img {
+@media screen and (min-width: 1440px) {
+  main .container .renewal-detail h4 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+main .container .renewal-detail ul li img {
   position: relative;
   left: 50%;
   right: 50%;
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
-  height: 238px;
 }
-main section.construction .container .renewal-detail ul li p {
+@media screen and (min-width: 1440px) {
+  main .container .renewal-detail ul li img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+  }
+}
+main .container .renewal-detail ul li p {
   text-align: center;
 }
-main section.construction .container .renewal-detail ul li p:first-of-type {
+main .container .renewal-detail ul li p:first-of-type {
   font-size: 24px;
   font-weight: 600;
   line-height: 34px;
   margin-top: 24px;
 }
-main section.construction .container .renewal-detail ul li p:last-of-type {
+@media screen and (min-width: 1440px) {
+  main .container .renewal-detail ul li p:first-of-type {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 54px;
+  }
+}
+main .container .renewal-detail ul li p:last-of-type {
   font-size: 16px;
   font-weight: 200;
   line-height: 26px;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .renewal-detail ul li p:last-of-type {
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 54px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .container .renewal-detail ul li br {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1698,8 +2147,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-<<<<<<< HEAD
 }
-=======
-}/*# sourceMappingURL=about_facility.css.map */
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
