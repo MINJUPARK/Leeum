@@ -1092,7 +1092,12 @@ main section.itemList .item-box .item .i-pic {
 main section.itemList .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   object-fit: cover;
+=======
+  -o-object-fit: cover;
+     object-fit: cover;
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }

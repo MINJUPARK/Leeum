@@ -660,13 +660,25 @@ main section.construction .main-img img {
   width: 100%;
 }
 main section.construction .info .title {
+<<<<<<< HEAD
   margin-top: 30px;
+=======
+<<<<<<< HEAD
+=======
+  margin-top: 30px;
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   line-height: 36px;
   font-family: "KoPub Batang";
   font-size: 22px;
   font-weight: 400;
 }
 @media screen and (min-width: 1440px) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   main section.construction .info .title {
     font-family: "KoPub Batang";
     font-size: 46px;
@@ -675,6 +687,10 @@ main section.construction .info .title {
   }
 }
 @media screen and (min-width: 1440px) {
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   main section.construction .info .title br {
     display: none !important;
   }
@@ -694,6 +710,14 @@ main section.construction .info .des {
   margin-top: 44px;
   margin-bottom: 77px;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+main section.construction .M1 img {
+  width: 100%;
+  height: 222px;
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .info .des {
     font-size: 22px;
@@ -708,6 +732,10 @@ main section.construction .info .des {
 }
 main section.construction .M1 img {
   width: 100%;
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   overflow-x: hidden;
   position: relative;
   left: 50%;
@@ -716,6 +744,14 @@ main section.construction .M1 img {
   margin-left: -50vw;
   margin-right: -50vw;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+main section.construction .M1 .sub {
+  display: none;
+}
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 img {
     position: static;
@@ -739,6 +775,10 @@ main section.construction .M1 .sub {
     margin-top: 22px;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-constructor {
   justify-content: center;
 }
@@ -749,6 +789,11 @@ main section.construction .M1 .M1-constructor img {
   width: 195px;
   height: 195px;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-constructor img {
     position: relative;
@@ -758,10 +803,19 @@ main section.construction .M1 .M1-constructor img {
     height: 400px;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-constructor .name {
   margin-top: -55px;
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-constructor .name {
     position: relative;
@@ -769,28 +823,50 @@ main section.construction .M1 .M1-constructor .name {
     left: -380px;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-constructor .name p:first-child {
   font-size: 22px;
   font-weight: 700;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-constructor .name p:first-child {
     font-size: 34px;
     font-weight: 700;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-constructor .name p:last-child {
   font-size: 16px;
   font-weight: 200;
   color: #5c5c5c;
   margin-top: 10px;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-constructor .name p:last-child {
     font-size: 26px;
     font-weight: 200;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-detail {
   display: flex;
   flex-direction: column;
@@ -801,6 +877,11 @@ main section.construction .M1 .M1-detail p:first-of-type {
   text-align: center;
   margin: 30px 0;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-detail p:first-of-type {
     font-size: 56px;
@@ -809,6 +890,10 @@ main section.construction .M1 .M1-detail p:first-of-type {
     top: -444px;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-detail p:last-of-type {
   font-size: 16px;
   font-weight: 400;
@@ -816,6 +901,11 @@ main section.construction .M1 .M1-detail p:last-of-type {
   line-height: 26px;
   color: #3c3c3c;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-detail p:last-of-type br {
     display: none !important;
@@ -840,6 +930,10 @@ main section.construction .M1 .M1-detail p:last-of-type span {
     font-weight: 400;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-detail a {
   position: relative;
   left: 205px;
@@ -847,6 +941,11 @@ main section.construction .M1 .M1-detail a {
   font-weight: 600;
   margin: 35px 0 100px 0;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-detail a {
     font-size: 20px;
@@ -856,12 +955,21 @@ main section.construction .M1 .M1-detail a {
     left: 660px;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M1 .M1-detail a img {
   position: absolute;
   left: 290px;
   width: 17px;
   height: 13px;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-detail a img {
     width: 20px;
@@ -871,6 +979,10 @@ main section.construction .M1 .M1-detail a img {
     left: 10px;
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
 main section.construction .M2 img {
   width: 100%;
   height: 222px;
@@ -1218,7 +1330,15 @@ main section.construction .container .director h3 {
   position: absolute;
   left: 210px;
   top: 200px;
+<<<<<<< HEAD
   color: #fff;
+=======
+<<<<<<< HEAD
+  color: #ffffff;
+=======
+  color: #fff;
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   line-height: 48px;
   font-size: 30px;
   font-weight: 700;
@@ -1227,7 +1347,15 @@ main section.construction .container .director p {
   position: absolute;
   left: 200px;
   top: 240px;
+<<<<<<< HEAD
   color: #fff;
+=======
+<<<<<<< HEAD
+  color: #ffffff;
+=======
+  color: #fff;
+>>>>>>> f6d059c0f5e6d99a60b4b98a570180d510e0ddf1
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   line-height: 30px;
   font-size: 14px;
   font-weight: 200;
@@ -1570,4 +1698,8 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
+<<<<<<< HEAD
 }
+=======
+}/*# sourceMappingURL=about_facility.css.map */
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09

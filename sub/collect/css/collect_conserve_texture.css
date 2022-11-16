@@ -363,7 +363,20 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
+<<<<<<< HEAD
     animation: stretch-w 0.5s;
+=======
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
+>>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   }
   @keyframes stretch-w {
     from {

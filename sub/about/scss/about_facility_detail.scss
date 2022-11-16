@@ -12,6 +12,293 @@ header {
     @include full_bg('about_facility.jpg');
 }
 
+main {
+    overflow-x: hidden;
+    .container {
+        img {
+            margin-top: 30px;
+            width:100%;
+            
+            @include out_container();
+        }
+
+        .info {
+            height:330px;
+            border: 1px solid $bk6;
+            border-radius: 5px;
+            background-color: $bk6;
+            margin-top: 28px;
+            margin-bottom: 40px;
+            ul {
+                li{
+                    margin-left: 25px;
+                    &:first-of-type {
+                        margin-top: 25px;
+                        @include gothic_font(regular,18px);
+                        color: $bk1;
+                        span{
+                            @include gothic_font(semibold,17px);
+                            margin-bottom: 5px;
+                            color:#000;
+                        }
+                    }
+
+                    &:nth-of-type(2) {
+                        @include gothic_font(regular,15px);
+                        line-height: 25px;
+                        color: $bk1;
+                        margin-bottom: 20px;
+                        span {
+                            @include gothic_font(semibold,17px);
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        @include gothic_font(regular,14px);
+                        color:#5b5b5b;
+                        span {
+                            @include gothic_font(semibold,14px);
+                            color:#000;
+                            margin-bottom:19px;
+                            margin-right:23px;
+                        }
+                    }
+
+                    &:nth-of-type(4) {
+                        @include gothic_font(regular,14px);
+                        color:#5b5b5b;
+                        span {
+                            @include gothic_font(semibold,14px);
+                            color:#000;
+                            margin-bottom:19px;
+                            margin-right:12px;
+                        }
+                    }
+
+                    &:nth-of-type(5) {
+                        @include gothic_font(regular,14px);
+                        color:#5b5b5b;
+                        span {
+                            @include gothic_font(semibold,14px);
+                            color:#000;
+                            margin-bottom:19px;
+                            margin-right:23px;
+                        }
+                    }
+
+                    &:last-of-type {
+                        @include gothic_font(regular,14px);
+                        color:#5b5b5b;
+                        span {
+                            @include gothic_font(semibold,14px);
+                            color:#000;
+                            margin-bottom:19px;
+                            margin-right:35px;
+                        }
+                    }
+                }
+                hr {
+                    width:360px;
+                    margin:18px 0 22px 25px;
+                    color: $bk5;
+                }
+            }
+        }
+
+        .symbol {
+            h3 {
+                @include gothic_font(semibold,18px);
+                margin-bottom: 18px;
+            }
+
+            p {
+                @include gothic_font(regular);
+                line-height: 26px;
+                color : $bk1;
+
+                &:first-of-type {
+                    margin-bottom: 37px;
+                }
+
+                &:last-of-type {
+                    margin-bottom: 57px;
+                }
+            }
+        }
+
+        .detail {
+            h3 {
+                @include gothic_font(semibold,18px);
+            }
+
+            .material {
+                img{
+                    height:280px;
+                }
+
+                h4{
+                    @include gothic_font(bold,18px);
+                    margin-top: 25px;
+                }
+
+                p{
+                    color:$bk1;
+                    &:first-of-type {
+                        margin-top: 15px;
+                        margin-bottom: 40px;
+                        @include gothic_font(medium);
+                    }
+
+                    &:last-of-type{
+                        @include gothic_font(regular,15px);
+                        margin-bottom: 65px;
+                        line-height: 26px;
+                    }
+                }
+            }
+
+            .lobby {
+                img{
+                    height:280px;
+                }
+                
+                h4{
+                    @include gothic_font(bold,18px);
+                    margin-top: 25px;
+                }
+
+                p{
+                    color:$bk1;
+                    &:first-of-type {
+                        margin-top: 15px;
+                        margin-bottom: 40px;
+                        @include gothic_font(medium);
+                    }
+
+                    &:last-of-type{
+                        @include gothic_font(regular,15px);
+                        margin-bottom: 65px;
+                        line-height: 26px;
+                    }
+                }
+            }
+
+            .rotunda {
+                img{
+                    height:280px;
+                }
+                
+                h4{
+                    @include gothic_font(bold,18px);
+                    margin-top: 25px;
+                }
+
+                p{
+                    color:$bk1;
+                    &:first-of-type {
+                        margin-top: 15px;
+                        margin-bottom: 40px;
+                        @include gothic_font(medium);
+                    }
+
+                    &:last-of-type{
+                        @include gothic_font(regular,15px);
+                        margin-bottom: 65px;
+                        line-height: 26px;
+                    }
+                }
+            }
+
+            .display-area {
+                img{
+                    height:280px;
+                }
+                
+                h4{
+                    @include gothic_font(bold,18px);
+                    margin-top: 25px;
+                }
+
+                p{
+                    color:$bk1;
+                    &:first-of-type {
+                        margin-top: 15px;
+                        margin-bottom: 40px;
+                        @include gothic_font(medium);
+                    }
+
+                    &:last-of-type{
+                        @include gothic_font(regular,15px);
+                        margin-bottom: 120px;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+
+        .constructor-info {
+            h4 {
+                @include gothic_font(semibold,18px);
+                margin-bottom: 30px;
+            }
+
+            iframe {
+                @include out_container();
+                height:231px;
+            }
+
+            p {
+                @include gothic_font(light,20px);
+                margin: 40px 0 30px 0;
+                text-align: center;
+                color: $bk2;
+                span {
+                    @include gothic_font(bold,30px);
+                    color:#000;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .detail {
+                border: 1px solid $bk6;
+                border-radius: 5px;
+                background-color: $bk6;
+                height: 197px;
+
+                ul{
+                    li{
+                        margin-left: 29px;
+                        @include gothic_font(regular,15px);
+                        color:#5b5b5b;
+                        &:first-of-type {
+                            margin-top: 21px;
+                            span {
+                                margin-right: 70px;
+                            }
+                        }
+                        
+                        &:nth-of-type(2) {
+                            span{
+                                margin-right: 70px;
+                            }
+                        }
+
+                        span {
+                            @include gothic_font(semibold,15px);
+                            margin-bottom: 22px;
+                            color:#000;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}
+
+
 footer {
     @include footer();
 }
