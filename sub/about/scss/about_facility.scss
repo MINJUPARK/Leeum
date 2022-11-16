@@ -31,9 +31,11 @@ main {
                     &:first-child {
                         padding-left:10px;
                     }
+
                     &:last-child {
                         padding-right: 30px;
                     }
+
                     a {
                         color:#9c9c9c;
                         border-bottom: 2px solid $bk4;
@@ -93,7 +95,6 @@ main {
                     line-height: 44px;
                 }
 
-
                 br {
                     @include responsive(pc-screens) {
                         display: none !important;
@@ -152,6 +153,7 @@ main {
                         position: relative;
                         top:-160px; left:-380px;
                     }
+
                     p:first-child {
                         @include gothic_font(bold,22px);
                         
@@ -220,7 +222,7 @@ main {
 
                 a {
                     position: relative;
-                    left:205px;
+                    left:195px;
                     @include gothic_font(semibold,14px);
                     margin: 35px 0 100px 0;
                     
@@ -252,13 +254,25 @@ main {
             
             img {
                 width:100%;
-                height:222px;
                 overflow-x: hidden;
                 @include out_container();
+
+                @include responsive(pc-screens) {
+                    @include in_container();
+                    width:100%;
+                    margin-top: -400px;
+                }
             }
 
             .sub {
                 display: none;
+
+                @include responsive(pc-screens) {
+                    display: block;
+                    @include gothic_font(light,18px);
+                    color: $bk2;
+                    margin-top:22px;
+                }    
             }
 
             .M2-constructor {
@@ -270,21 +284,39 @@ main {
                     width: 195px;
                     height:195px;
                     
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:120px; left:870px;
+                        width:400px;
+                        height:400px;
+                    }
                 }
                 
                 .name {
                     margin-top: -55px;
                     text-align: center;
                     
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:188px; left:380px;
+                    }
+
                     p:first-child {
                         @include gothic_font(bold,22px);
                         
+                        @include responsive(pc-screens) {
+                            @include gothic_font(bold,34px);
+                        }
                     }
 
                     p:last-child {
                         @include gothic_font(light);
                         color: $bk2;
                         margin-top: 10px;
+                        
+                        @include responsive(pc-screens) {
+                            @include gothic_font(light,26px);  
+                        }
                     }
                 }         
             } // M2-constructor
@@ -298,6 +330,11 @@ main {
                     text-align: center;
                     margin: 30px 0;
 
+                    @include responsive(pc-screens) {
+                        @include gothic_font(semibold,56px);  
+                        position: relative;
+                        top:-40px;
+                    }
                 }
 
                 p:last-of-type {
@@ -305,19 +342,41 @@ main {
                     text-align: center;
                     line-height: 26px;
                     color: $bk1;
+
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-50px; left:-660px;
+                        text-align: right; 
+                        line-height: 46px; 
+                        @include gothic_font(regular,22px);       
+                    }
                 }
 
                 a {
                     position: relative;
-                    left:205px;
+                    left:195px;
                     @include gothic_font(semibold,14px);
                     margin: 35px 0 100px 0;
+
+                    @include responsive(pc-screens) {
+                        @include gothic_font(semibold,20px);
+                        position: relative;
+                        top:-60px; left:660px;
+                        
+                    }
                     
                     img {  
                         position: absolute;
                         left:290px;
                         width: 17px;
-                        height: 13px;   
+                        height: 13px;  
+                        
+                        @include responsive(pc-screens) {
+                            width: 20px;
+                            height: 15px;
+                            position: relative;
+                            top: 196px; left:10px;
+                        }
                     }
                 }
             }// M2-detail
@@ -327,13 +386,27 @@ main {
             
             img {
                 width:100%;
-                height:222px;
                 overflow-x: hidden;
                 @include out_container();
+
+                @include responsive(pc-screens) {
+                    @include in_container();
+                    width:100%;
+                    
+                }
             }
 
             .sub {
                 display: none;
+
+                @include responsive(pc-screens) {
+                    display: block;
+                    text-align: right;
+                    
+                    @include gothic_font(light,18px);
+                    color: $bk2;
+                    margin-top:22px;
+                }
             }
 
             .Kidstudy-constructor {
@@ -345,21 +418,39 @@ main {
                     width: 195px;
                     height:195px;
                     
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-250px; left:120px;
+                        width:400px;
+                        height:400px;
+                    }
                 }
                 
                 .name {
                     margin-top: -55px;
                     text-align: center;
                     
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-160px; left:-380px;
+                    }
+
                     p:first-child {
                         @include gothic_font(bold,22px);
                         
+                        @include responsive(pc-screens) {
+                            @include gothic_font(bold,34px);
+                        }
                     }
 
                     p:last-child {
                         @include gothic_font(light);
                         color: $bk2;
                         margin-top: 10px;
+
+                        @include responsive(pc-screens) {
+                            @include gothic_font(light,26px);  
+                        }
                     }
                 }         
             }//Kidstudy-constructor
@@ -373,6 +464,12 @@ main {
                     text-align: center;
                     margin: 30px 0;
 
+                    @include responsive(pc-screens) {
+                        @include gothic_font(semibold,56px);  
+                        position: relative;
+                        top:-444px; left:100px;
+                    }
+
                 }
 
                 p:last-of-type {
@@ -380,264 +477,490 @@ main {
                     text-align: center;
                     line-height: 26px;
                     color: $bk1;
+
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-460px; left:610px;
+                        text-align: left; 
+                        line-height: 46px; 
+                        @include gothic_font(regular,22px);       
+                    }
+
+                    br {
+                        @include responsive(pc-screens) {
+                            display: none !important;
+                        }
+                    }
+    
+                    span {
+                        display: inline;
+    
+                        @include responsive(pc-screens) {
+                            display: block;
+                        }
+                    }
                 }
 
                 a {
                     position: relative;
-                    left:205px;
+                    left:195px;
                     @include gothic_font(semibold,14px);
                     margin: 35px 0 100px 0;
+
+                    @include responsive(pc-screens) {
+                        @include gothic_font(semibold,20px);
+                        position: relative;
+                        top:-480px; left:610px;
+                        
+                    }
                     
                     img {  
                         position: absolute;
                         left:290px;
                         width: 17px;
                         height: 13px;   
+
+                        @include responsive(pc-screens) {
+                            width: 20px;
+                            height: 15px;
+                            position: relative;
+                            top: -2px; left:10px;
+                        }
                     }
                 }
             } //Kid-detail
         } //Kid
 
-        .container {
-            .leeumstore {
-                img {
-                    width:100%;
-                    height:269px;
-                }
-                
-                p {
-                    &:first-of-type {
-                        @include gothic_font(semibold);  
-                        margin :19px 0 23px 0;   
+        .container {     
+                .leeumstore {
+                    @include responsive(pc-screens) {
+                        width:46.52777777777778%;
                     }
-
-                    &:nth-of-type(2) {
-                        @include gothic_font(regular,14px);
-                        line-height: 26px;
-                        margin-bottom: 67px;
-                    }
-                    
-                    span {
-                        @include gothic_font(bold,26px);
-                        margin-right: 14px;
-                    }
-                }
-                .leeumstore-detail-flexbox {
-                    
-                    .leeumstore-detail {
-                        margin-bottom: 64px;
-                        
-                        img {
-                            width:22px;
-                            height:22px;
+                    img {
+                        width:100%;
+                        height:269px;
+                        @include responsive(pc-screens) {
+                            height:505px;
                         }
 
-                        p {
-                            display: inline;
-                            @include gothic_font(medium,14px);
-                            
-                        }
+                    }
+                    
+                    p {
+                        &:first-of-type {
+                            @include gothic_font(semibold);  
+                            margin :19px 0 23px 0;   
 
-                        a {
-                            position: relative;
-                            left:195px;
-                            @include gothic_font(semibold,14px);
-                            color: $yellow-brown;
-
-                            img {
-                                width:11px;
-                                height:11px;
-                                filter: $svg-yellowbrown; 
+                            @include responsive(pc-screens) {
+                                @include gothic_font(semibold,24px);
                             }
                         }
-                    }// leeumstore-detail
-                } // leeumstore-detail-flexbox
-            }// leeumstore
+    
+                        &:nth-of-type(2) {
+                            @include gothic_font(regular,14px);
+                            line-height: 26px;
+                            margin-bottom: 67px;
 
-            .Champcoffee {
-                img {
-                    width:100%;
-                    height:269px;
-                }
-                
-                p {
-                    &:first-of-type {
-                        @include gothic_font(semibold);  
-                        margin :19px 0 23px 0;   
-                    }
-
-                    &:nth-of-type(2) {
-                        @include gothic_font(regular,14px);
-                        line-height: 26px;
-                        margin-bottom: 67px;
-                    }
-                    
-                    span {
-                        @include gothic_font(bold,26px);
-                        margin-right: 14px;
-
-                    }
-                }
-                .Champcoffee-detail-flexbox {
-                    
-                    .Champcoffee-detail {
-                        margin-bottom: 64px;
-                        
-                        img {
-                            width:22px;
-                            height:22px;
-                        }
-
-                        p {
-                            display: inline;
-                            @include gothic_font(medium,14px);
-                            
-                        }
-
-                        a {
-                            position: relative;
-                            left:205px;
-                            @include gothic_font(semibold,14px);
-                            color: $yellow-brown;
-
-                            img {
-                                width:11px;
-                                height:11px;
-                                filter: $svg-yellowbrown; 
+                            @include responsive(pc-screens) {
+                                @include gothic_font(regular,22px);
+                                line-height: 40px;
                             }
                         }
-                    }// Champcoffee-detail
-                } // Champcoffee-detail-flexbox
-            }// Champcoffee
-            
-            .Locker {
-                img {
-                    width:100%;
-                    height:269px;
-                }
-                p {
-                    &:first-of-type {
-                        @include gothic_font(semibold);  
-                        margin :19px 0 23px 0;   
-                    }
-
-                    &:nth-of-type(2) {
-                        @include gothic_font(regular,14px);
-                        line-height: 26px;
-                        margin-bottom: 67px;
-                            span {
-                                @include gothic_font(semibold,14px);
-                            }
-                    }
-                    
-                    span {
-                        @include gothic_font(bold,26px);
-                        margin-right: 14px;
-
-                    }
-                }
-            }//locker
-
-            .ticketing-machine {
-                img {
-                    width:100%;
-                    height:269px;
-                }
-                p {
-                    &:first-of-type {
-                        @include gothic_font(semibold);  
-                        margin :19px 0 23px 0;   
-                    }
-
-                    &:nth-of-type(2) {
-                        @include gothic_font(regular,14px);
-                        line-height: 26px;
-                        margin-bottom: 67px;
-                    }
-                    
-                    span {
-                        @include gothic_font(bold,26px);
-                        margin-right: 14px;
-
-                    }
-                }
-            }//ticketing-machine
-            
-            .parking {
-                img {
-                    width:100%;
-                    height:269px;
-                }
-
-                p {
-                    &:first-of-type {
-                        @include gothic_font(semibold);  
-                        margin :19px 0 23px 0;   
-                    }
-
-                    &:nth-of-type(2) {
-                        @include gothic_font(regular,14px);
-                        line-height: 26px;
-                        margin-bottom: 67px;
-
-                        span {
-                            @include gothic_font(semibold,14px);
-                        }
-                    }
-                    
-                    span {
-                        @include gothic_font(bold,26px);
-                        margin-right: 14px;
-
-                    }
-                    
-                }
-
-                .parking-detail {
-                    margin-bottom: 64px;
-                    
-                    a {
-                        position: relative;
-                        left:310px;
-                        @include gothic_font(semibold,14px);
-                        color: $yellow-brown;
-
-                        img{
-                            width:11px;
-                            height:11px;
-                            filter: $svg-yellowbrown; 
-                        }
-                    }
-                }//parking-detail
-            }//parking
-
-            .others {
-                img {
-                    width:100%;
-                    height:269px;
-                }
-                
-                p {
-                    &:first-of-type {
-                        @include gothic_font(semibold);  
-                        margin :19px 0 23px 0;   
                         
                         span {
                             @include gothic_font(bold,26px);
                             margin-right: 14px;
+
+                            @include responsive(pc-screens) {
+                                @include gothic_font(bold,46px);
+                                margin-right: 28px;  
+                            }
+
+                        }
+                    }
+                    .leeumstore-detail-flexbox {
+                        
+                        .leeumstore-detail {
+                            margin-bottom: 64px;
+                            
+                            img {
+                                width:22px;
+                                height:22px;
+                            }
+    
+                            p {
+                                display: inline;
+                                @include gothic_font(medium,14px);
+
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(medium,20px);
+                                }
+                                
+                            }
+    
+                            a {
+                                position: relative;
+                                left:195px;
+                                @include gothic_font(semibold,14px);
+                                color: $yellow-brown;
+                                
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(semibold,20px);
+                                    left:300px;
+                                }
+                                img {
+                                    width:11px;
+                                    height:11px;
+                                    filter: $svg-yellowbrown; 
+
+                                    @include responsive(pc-screens) {
+                                        width:18px;
+                                        height:18px;
+                                    }
+                                }
+                            }
+                        }// leeumstore-detail
+                    } // leeumstore-detail-flexbox
+                }// leeumstore
+    
+                .Champcoffee {
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-920px; left:750px;
+                        width:46.52777777777778%;
+                        
+                    }
+                    img {
+                        width:100%;
+                        height:269px;
+
+                        @include responsive(pc-screens) {
+                            height:505px;
+                        }
+                    }
+                    
+                    p {
+                        &:first-of-type {
+                            @include gothic_font(semibold);  
+                            margin :19px 0 23px 0;   
+    
+                            @include responsive(pc-screens) {
+                                @include gothic_font(semibold,24px);
+                            }
+                        }
+    
+                        &:nth-of-type(2) {
+                            @include gothic_font(regular,14px);
+                            line-height: 26px;
+                            margin-bottom: 67px;
+
+                            @include responsive(pc-screens) {
+                                @include gothic_font(regular,22px);
+                                line-height: 40px;
+                            }
+                        }
+                        
+                        span {
+                            @include gothic_font(bold,26px);
+                            margin-right: 14px;
+                            
+                            @include responsive(pc-screens) {
+                                @include gothic_font(bold,46px);
+                                margin-right: 28px;  
+                            }
+                        }
+                    }
+                    .Champcoffee-detail-flexbox {
+                        
+                        .Champcoffee-detail {
+                            margin-bottom: 64px;
+                            
+                            img {
+                                width:22px;
+                                height:22px;
+                            }
+    
+                            p {
+                                display: inline;
+                                @include gothic_font(medium,14px);
+
+                                
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(medium,20px);
+                                }
+                            }
+    
+                            a {
+                                position: relative;
+                                left:205px;
+                                @include gothic_font(semibold,14px);
+                                color: $yellow-brown;
+                                
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(semibold,20px);
+                                    left:300px;
+                                }
+
+                                img {
+                                    width:11px;
+                                    height:11px;
+                                    filter: $svg-yellowbrown; 
+    
+                                    @include responsive(pc-screens) {
+                                        width:18px;
+                                        height:18px;
+                                    }
+                                }
+                            }
+                        }// Champcoffee-detail
+                    } // Champcoffee-detail-flexbox
+                }// Champcoffee
+                
+                .Locker {
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top: -780px;
+                        width:46.52777777777778%;
+
+                    }
+                        img {
+                            width:100%;
+                            height:269px;
+
+                            @include responsive(pc-screens) {
+                                height:505px;
+                            }
+                        }
+                        p {
+                            &:first-of-type {
+                                @include gothic_font(semibold);  
+                                margin :19px 0 23px 0;   
+
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(semibold,24px);
+                                }
+                            }
+    
+                            &:nth-of-type(2) {
+                                @include gothic_font(regular,14px);
+                                line-height: 26px;
+                                margin-bottom: 67px;
+    
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(regular,22px);
+                                    line-height: 40px;
+                                }
+                                    span {
+                                        @include gothic_font(semibold,14px);
+
+                                        @include responsive(pc-screens) {
+                                            @include gothic_font(semibold,22px);
+                                        }
+                                    }
+                            }
+                            
+                            span {
+                                @include gothic_font(bold,26px);
+                                margin-right: 14px;
+
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(bold,46px);
+                                    margin-right: 28px;  
+                                }
+    
+                            }
+                        }
+                }//locker
+    
+                .ticketing-machine {
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-1650px; left:750px;
+                        width:46.52777777777778%;
+                    }
+
+                    img {
+                        width:100%;
+                        height:269px;
+  
+                        @include responsive(pc-screens) {
+                            height:505px;
+                        }
+                    }
+                    
+                    p {
+                        &:first-of-type {
+                            @include gothic_font(semibold);  
+                            margin :19px 0 23px 0;  
+                            
+                            @include responsive(pc-screens) {
+                                @include gothic_font(semibold,24px);
+                            }
+                        }
+    
+                        &:nth-of-type(2) {
+                            @include gothic_font(regular,14px);
+                            line-height: 26px;
+                            margin-bottom: 67px;
+
+                            @include responsive(pc-screens) {
+                                @include gothic_font(regular,22px);
+                                line-height: 40px;
+                            }
+                        }
+                        
+                        span {
+                            @include gothic_font(bold,26px);
+                            margin-right: 14px;
+ 
+                            @include responsive(pc-screens) {
+                                @include gothic_font(bold,46px);
+                                margin-right: 28px;  
+                            }
     
                         }
                     }
+                }//ticketing-machine
+                
+                .parking {
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-1450px;
+                        width:46.52777777777778%;
+                    }
 
-                    &:nth-of-type(2) {
-                        @include gothic_font(regular,14px);
-                        line-height: 26px;
-                        margin-bottom: 67px;
+                    img {
+                        width:100%;
+                        height:269px;
+
+                        @include responsive(pc-screens) {
+                            height:505px;
+                        }
+                    }
+    
+                    p {
+                        &:first-of-type {
+                            @include gothic_font(semibold);  
+                            margin :19px 0 23px 0;   
+
+                            @include responsive(pc-screens) {
+                                @include gothic_font(semibold,24px);
+                            }
+                        }
+    
+                        &:nth-of-type(2) {
+                            @include gothic_font(regular,14px);
+                            line-height: 26px;
+                            margin-bottom: 67px;
+
+                            @include responsive(pc-screens) {
+                                @include gothic_font(regular,22px);
+                                line-height: 40px;
+                            }
+    
+                            span {
+                                @include gothic_font(semibold,14px);
+
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(semibold,22px);
+                                    line-height: 40px;
+                                }
+                            }
+                        }
+                        
+                        span {
+                            @include gothic_font(bold,26px);
+                            margin-right: 14px;
+
+                            @include responsive(pc-screens) {
+                                @include gothic_font(bold,46px);
+                                margin-right: 28px;  
+                            }
+    
+                        }
                         
                     }
+    
+                    .parking-detail {
+                        margin-bottom: 64px;
+                        
+                        a {
+                            position: relative;
+                            left:310px;
+                            @include gothic_font(semibold,14px);
+                            color: $yellow-brown;
+    
+                            @include responsive(pc-screens) {
+                                @include gothic_font(semibold,20px);
+                                left:450px;
+                            }
+    
+                            img{
+                                width:11px;
+                                height:11px;
+                                filter: $svg-yellowbrown; 
+
+                                @include responsive(pc-screens) {
+                                    width:18px;
+                                    height:18px;
+                                }
+                            }
+                        }
+                    }//parking-detail
+                }//parking
+            }
+    
+                .others {
+                    @include responsive(pc-screens) {
+                        position: relative;
+                        top:-2370px; left:750px;
+
+                        width:46.52777777777778%;
+                    }
+
+                    img {
+                        width:100%;
+                        height:269px;
+   
+                        @include responsive(pc-screens) {
+                            height:505px;
+                        }
+                    }
                     
-                }
-            }//others
+                    p {
+                        &:first-of-type {
+                            @include gothic_font(semibold);  
+                            margin :19px 0 23px 0;   
+
+                            @include responsive(pc-screens) {
+                                @include gothic_font(semibold,24px);
+                            }
+                            
+                            span {
+                                @include gothic_font(bold,26px);
+                                margin-right: 14px;
+
+                                
+                            @include responsive(pc-screens) {
+                                @include gothic_font(bold,46px);
+                                margin-right: 28px;  
+                            }
+        
+                            }
+                        }
+    
+                        &:nth-of-type(2) {
+                            @include gothic_font(regular,14px);
+                            line-height: 26px;
+                            margin-bottom: 67px;
+                            
+                            @include responsive(pc-screens) {
+                                @include gothic_font(regular,22px);
+                                line-height: 40px;
+                            }
+                        }
+  
+                    }
+                }//others
         }//container
         
         .container {
@@ -645,6 +968,10 @@ main {
                 .background {
                     @include out_container();
                     height:431px;
+
+                    @include responsive(pc-screens) {
+                        height:650px;
+                    }
                 }
                 
                 .director {
@@ -653,55 +980,137 @@ main {
                     left:100px;
                     width:300px;
                     height:549px;
+
+                    @include responsive(pc-screens) {
+                        position: absolute;
+                        top:-200px;
+                        left:450px;
+                        width:587px;
+                        height:1068px;
+                    }
                 }
 
                 h3 {
                     position: absolute;
                     left:210px;
-                    top:200px;
+                    top:190px;
                     color: #fff;
                     line-height: 48px;
                     @include gothic_font(bold,30px);
+
+                    @include responsive(pc-screens) {
+                        left:670px;
+                        top:350px; 
+                        @include gothic_font(bold,46px);
+                        line-height: 68px;
+                    }
                 }
                 
                 p {
                     position: absolute;
                     left:200px;
-                    top:240px;           
+                    top:230px;           
                     color: #fff;
                     line-height: 30px;
                     @include gothic_font(light,14px);
+
+                    @include responsive(pc-screens) {
+                        left:660px;
+                        top:420px;
+                        @include gothic_font(light,20px);
+                    }
                 }
                 
                 .award {
                     display: none;
+                    .title {
+                        @include gothic_font(semibold);
+                        opacity: 0.8;
+                    }
+                    
+                    .sub {
+                        @include gothic_font(light,14px);
+                        opacity: 0.8;
+                    }
+
+                    @include responsive(pc-screens) {
+                        position: absolute;
+                        left:1100px;
+                        top:100px;
+                        display: block;
+                        color:#fff;
+                        line-height: 28px;        
+                    }
                 }
                 
                 .director-info {
                     position: absolute;
                     left:120px;
                     top:290px;
-                    @include gothic_font(light,14px);
                     line-height: 26px;
                     text-align: center;
                     color:#ffffff;
+                    @include gothic_font(light,14px);
+                    
+                    br {
+                        @include responsive(pc-screens) {
+                            display: none !important;
+                        }
+                    }
+    
+                    span {
+                        display: inline;
+    
+                        @include responsive(pc-screens) {
+                            display: block;
+                        }
+                    }
+
+                    @include responsive(pc-screens) {
+                        @include gothic_font(light,20px);
+                        line-height: 40px;
+                        left:490px;
+                        top:470px;
+                    }
                 }
             }
             .renewal-info {
+                display: flex;
+                flex-direction: column;
+
+                @include responsive(pc-screens) {
+                    flex-direction: row;
+                }
+
                 p {
                     @include gothic_font(regular);
                     line-height: 28px;
 
+                    @include responsive(pc-screens) {
+                        width:45.34722222222222%;
+                        @include gothic_font(light,22px);
+                        line-height: 44px;
+                    }
+
                     &:first-of-type {
-                        margin : 40px 0 60px 0;
+                        margin : 60px 0 60px 0;
                         
                         span {
                             @include gothic_font(semibold);
+
+                            @include responsive(pc-screens) {
+                                @include gothic_font(semibold,22px);
+                                line-height: 44px;
+                            }
                         }
                     }
 
                     &:last-of-type {
                         margin-bottom: 100px;
+
+                        @include responsive(pc-screens) {
+                            margin: 60px 0 100px 130px;
+                        }
                     }
                 }
             }//renewal-info
@@ -710,13 +1119,20 @@ main {
                 h4 {
                     @include gothic_font(semibold,18px);
                     margin-bottom:30px;
+
+                    @include responsive(pc-screens) {
+                        @include gothic_font(semibold,28px);
+                    }
                 }
 
                 ul {
                     li {
                         img {
                             @include out_container();
-                            height:238px;
+                            
+                            @include responsive(pc-screens) {
+                                @include in_container();
+                            }
                         }
                         p {
                             text-align: center;
@@ -725,12 +1141,28 @@ main {
                                 @include gothic_font(semibold,24px);
                                 line-height:34px;
                                 margin-top: 24px;
+
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(semibold,32px);
+                                    line-height:54px;
+                                }
                             }
 
                             &:last-of-type {
                                 @include gothic_font(light);
                                 line-height:26px;
                                 margin-bottom: 60px;
+
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(light,24px);
+                                    line-height:54px;
+                                }
+                            }
+                        }
+                        
+                        br {
+                            @include responsive(pc-screens) {
+                                display: none !important;
                             }
                         }
                     }
@@ -738,7 +1170,7 @@ main {
             }
         }
     }
-}
+
 
 footer {
     @include footer();
