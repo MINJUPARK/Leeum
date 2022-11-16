@@ -645,14 +645,19 @@ main h1 {
 }
 main img {
   width: 100%;
-  /* width: 390px; */
-  padding-top: 60px;
+  position: relative;
 }
 @media screen and (min-width: 1440px) {
   main img {
     padding-left: 240px;
     padding-right: 240px;
     height: 810px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .text {
+    position: relative;
   }
 }
 main .text p {
@@ -660,74 +665,175 @@ main .text p {
   color: #be6a15;
   padding-top: 50px;
   padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  main .text p {
+    font-size: 26px;
+  }
 }
 main .text h2 {
   font-size: 30px;
   font-weight: 700;
 }
-main .request p {
+@media screen and (min-width: 1440px) {
+  main .text h2 {
+    font-size: 46px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .r-d {
+    position: absolute;
+    margin-left: 1180px;
+    width: 480px;
+    margin-top: 80px;
+  }
+}
+main .r-d .request p {
   margin: 40px 0;
   padding: 13px;
   border-radius: 5px;
   text-align: center;
-  color: #ac3f21;
-  border: 1px solid #ac3f21;
+  color: #f00;
+  border: 1px solid #f00;
 }
-main .request-desc {
+@media screen and (min-width: 1440px) {
+  main .r-d .request p {
+    font-size: 22px;
+    padding: 20px;
+    width: 480px;
+    margin-left: -20px;
+  }
+}
+main .r-d .request-desc {
   background-color: #f3f3f3;
   padding: 30px 0;
 }
-main .request-desc .content span {
+main .r-d .request-desc .content span {
   font-size: 15px;
   font-weight: 600;
   padding-top: 20px;
 }
-main .request-desc .content p {
+@media screen and (min-width: 1440px) {
+  main .r-d .request-desc .content span {
+    font-size: 24px;
+  }
+}
+main .r-d .request-desc .content p {
   padding: 20px 0;
   border-bottom: 1px solid #c5c5c5;
 }
-main .request-desc .content:last-child p {
+@media screen and (min-width: 1440px) {
+  main .r-d .request-desc .content p {
+    font-size: 26px;
+    font-weight: 400;
+    color: #3c3c3c;
+  }
+}
+main .r-d .request-desc .content:last-child p {
   border-bottom: 0;
 }
-main .outline {
+@media screen and (min-width: 1440px) {
+  main .o-i-p {
+    margin-top: 80px;
+    width: 840px;
+    margin-left: 240px;
+  }
+}
+main .o-i-p .outline {
   text-align: justify;
 }
-main .outline span {
+main .o-i-p .outline span {
   margin-top: 40px;
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 600;
 }
-main .outline .outline1 {
+@media screen and (min-width: 1440px) {
+  main .o-i-p .outline span {
+    font-size: 28px;
+  }
+}
+main .o-i-p .outline .outline1 {
   margin-bottom: 30px;
   line-height: 28px;
 }
-main .outline .outline2 {
+@media screen and (min-width: 1440px) {
+  main .o-i-p .outline .outline1 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #3c3c3c;
+    line-height: 44px;
+  }
+}
+main .o-i-p .outline .outline2 {
   line-height: 28px;
   margin-bottom: 40px;
 }
-main .intro span {
+@media screen and (min-width: 1440px) {
+  main .o-i-p .outline .outline2 {
+    font-size: 22px;
+    font-weight: 400;
+    color: #3c3c3c;
+    line-height: 44px;
+  }
+}
+main .o-i-p .intro span {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 30px;
 }
-main .intro .first {
+@media screen and (min-width: 1440px) {
+  main .o-i-p .intro span {
+    font-size: 28px;
+  }
+}
+main .o-i-p .intro .first {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
 }
-main .intro .second {
+@media screen and (min-width: 1440px) {
+  main .o-i-p .intro .first {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+main .o-i-p .intro .second {
   line-height: 28px;
   margin-bottom: 40px;
 }
-main .precaution span {
+@media screen and (min-width: 1440px) {
+  main .o-i-p .intro .second {
+    font-size: 22px;
+    font-weight: 400;
+    color: #3c3c3c;
+    line-height: 44px;
+  }
+}
+main .o-i-p .precaution span {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
 }
-main .precaution p {
+@media screen and (min-width: 1440px) {
+  main .o-i-p .precaution span {
+    font-size: 28px;
+  }
+}
+main .o-i-p .precaution p {
   line-height: 28px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .o-i-p .precaution p {
+    font-size: 22px;
+    font-weight: 400;
+    color: #3c3c3c;
+    line-height: 44px;
+    width: 620px;
+  }
 }
 
 @media screen and (min-width: 1440px) {

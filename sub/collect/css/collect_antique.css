@@ -1099,19 +1099,10 @@ main section.itemList .item-box .item .i-pic {
 main section.itemList .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
   -o-object-fit: cover;
      object-fit: cover;
-=======
-<<<<<<< HEAD
-  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-=======
-  -o-object-fit: cover;
-     object-fit: cover;
->>>>>>> 3798f243f4fd88759e3041571bda735a4be43c37
->>>>>>> 956971ac982c2f0023485cffe551095d704e28da
 }
 main section.itemList .item-box .item .i-pic .bm_btn {
   position: absolute;

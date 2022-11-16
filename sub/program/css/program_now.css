@@ -662,6 +662,7 @@ main .img-text img {
   main .img-text img {
     padding: 0 240px;
     text-align: center;
+    height: 810px;
   }
 }
 main .img-text .limit-text {
