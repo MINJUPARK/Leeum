@@ -134,7 +134,7 @@ main {
     
     .texture-research-wrap {
         margin-top: 100px;
-        // overflow: hidden;
+        overflow: hidden;
 
         @include responsive(pc-screens) {
             margin-top: 180px;
@@ -212,14 +212,170 @@ main {
         .conserve-type {
             
             ul.type-lsit {
-
+                margin-top: 50px;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 50px * 2;
+                }
+                
                 li {
 
-                }
+                    @include responsive(pc-screens) {
+                        @include flex_between();
+                    }
+                    
+                    img {
+                        width: 100%;
+                        border-radius: 5px;
+
+                        @include responsive(pc-screens) {
+                            width: 680px;
+                        }
+                    }
+                    
+                    .type-txt {
+
+                        @include responsive(pc-screens) {
+                            width: 600px;
+                            margin-right: 40px;
+                        }
+                        
+                        h4 {
+                            @include gothic_font(semibold, 26px);
+                            margin-top: 30px;
+                            font-size: 26px;
+                            
+                            @include responsive(pc-screens) {
+                                font-size: 34px;
+                            }
+                        }
+
+                        p {
+                            margin-top: 15px;
+                            line-height: calc(1em + 12px);
+                            text-align: justify;
+                            
+                            @include responsive(pc-screens) {
+                                margin-top: 40px;
+                                line-height: 44px;
+                                text-align: left;
+                            }
+                        }
+                        
+                        a {
+                            display: block;
+                            margin: {
+                                top: 30px;
+                                left: auto;
+                            }
+                            width: 100px; height: 34px;
+                            line-height: 34px;
+                            text-align: center;
+                            border: 1px solid $bk4;
+                            border-radius: 5px;
+                            
+                            @include responsive(pc-screens) {
+                                width: 200px; height: 50px;
+                                line-height: 50px;
+                                margin-top: 50px;
+                            }
+                        }
+                    } // type-txt
+
+                    &:last-child {
+                        margin-top: 50px;
+
+                        img {
+                            
+                            @include responsive(pc-screens) {
+                                order: 1;
+                            }
+                        }
+                        
+                        .type-txt {
+
+                            @include responsive(pc-screens) {
+                                order: 0;
+                                margin-right: 0;
+                                margin-left: 40px;
+                            }
+                        }
+                    } // li:last-child
+                } // li
             } // ul.type-lsit
         } // conserve-type
     } // conserve-type-wrap
 
+    .conserve-case-wrap {
+        margin-top: 100px;
+        
+        @include responsive(pc-screens) {
+            margin-top: 100px * 2;
+        }
+
+        .conserve-case {
+            text-align: center;
+
+            ul.case-list {
+                margin-top: 50px;
+                
+                @include responsive(pc-screens) {
+                    @include flex_between();
+                    margin-top: 50px * 2;
+                }
+                
+                li {
+                    // @include out_container(); // 탈그리드하면 가로 스크롤 생김
+                    // background-color: sandybrown;
+
+                    @include responsive(pc-screens) {
+                        width: 680px;
+                    }
+                    
+                    a { 
+                        
+                        img {
+                            width: 100%;
+                        }
+
+                        h4 {
+                            margin-top: 15px;
+                            font-size: calc(1em + 2px);
+
+                            @include responsive(pc-screens) {
+                                margin-top: 25px;
+                            }
+                        }
+                        
+                        span {
+                            margin-top: 5px;
+                            color: $bk2;
+
+                            @include responsive(pc-screens) {
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                    
+                    &:last-child {
+                        margin-top: 50px;
+
+                        @include responsive(pc-screens) {
+                            margin-top: 0;
+                        }
+                    } // li:last-child
+                }
+            } // ul.case-list
+        } // conserve-case
+    } // conserve-case-wrap
+    
+    .faq-wrap {
+        margin-top: 100px;
+
+        @include responsive(pc-screens) {
+            margin-top: 190px;
+        }
+    }
     img {
         width: 30px;
     }
