@@ -71,7 +71,7 @@ main {
                     background-color: $bk6;
                     
                     @include responsive(pc-screens) {
-                        width: 200px / 1400px * 100%;
+                        width: calc(200px / 1400px) * 100%;
                         font-size: 28px;
                         text-align: center;
                         padding: {
@@ -92,7 +92,7 @@ main {
                     border-top: 1px solid $bk4;
                     
                     @include responsive(pc-screens) {
-                        width: 1200px / 1400px * 100%;
+                        width: calc(1200px / 1400px) * 100%;
                         border-top: 2px solid $bk4;
                         border-left: 1px solid $bk4;
                     }
@@ -204,7 +204,6 @@ main {
     } // membership-wrap, gift-membership-wrap
         
     .membership-wrap {
-        
 
         .membership {
             
@@ -417,88 +416,216 @@ main {
 
     .corporate-member-wrap {
         margin-top: 100px;
-        background-color: darkblue;
         
         @include responsive(pc-screens) {
             margin-top: 100px * 2;
         }
 
         .corporate-member {
+            @include out_container();
             position: relative;
-            transform: translateX(-20px);
-            width: calc(100% + 40px);
             height: 400px;
             color: #fff;
             background: {
                 image: url(../image/membership_corporate.png);
                 repeat: no-repeat;
                 position: -507px -429px;
-                size: 951px 1427px;
+                size: calc(951px / 350px) * 100%;
             }
             
             @include responsive(pc-screens) {
+                @include in_container();
+                position: relative;
                 height: 300px;
                 background: {
-                    position: -507px -429px;
-                    size: 1527px 2291px;
+                    image: url(../image/membership_corporate_pc.png);
+                    position: 0;
+                    size: 1527px;
                 }
             }
             
             &::before {
                 @include overlay_bk(1);
                 background: linear-gradient(#000 0%, transparent);
+                
+                @include responsive(pc-screens) {
+                    background: none;
+                }
             }
             
             .back-cover {
                 @include overlay_bk(0.6);
+                
+                @include responsive(pc-screens) {
+                    background-color: rgba(0, 0, 0, 0.4);   
+                }
             }
             // background-color: darkblue;
             
-            h3 {
-                margin-top: 50px;
-                font-size: calc(1em + 10px);
+            .corporate-txt {
                 
                 @include responsive(pc-screens) {
-                    margin-top: 65px;
-                    font-size: 46px;
+                    margin-left: 120px;
                 }
-            }
+
+                h3 {
+                    margin-top: 50px;
+                    font-size: calc(1em + 10px);
+                    
+                    @include responsive(pc-screens) {
+                        margin-top: 65px;
+                        font-size: 46px;
+                        text-align: left;
+                    }
+                }
+
+                p {
+                    line-height: calc(1em + 2px + 10px);
+                    margin-top: 30px;
+                    text-align: center;
+                    
+                    @include responsive(pc-screens) {
+                        margin-top: 40px;
+                        text-align: left;
+                    }
+                }
+            } // corporate-txt
             
             p, button {
                 font-size: calc(1em + 2px);
             }
             
-            p {
-                line-height: calc(1em + 2px + 10px);
-                margin-top: 30px;
-                text-align: center;
-                
-                @include responsive(pc-screens) {
-                    margin-top: 45px;
-                }
-            }
-            
             button {
                 position: absolute;
-                left: 50%; bottom: 50px;
-                transform: translateX(-50%);
+                right: 50%; bottom: 50px;
                 width: 150px; height: 50px;
+                transform: translateX(50%);
                 // margin: 90px auto 0;
                 color: #fff;
                 border: 1px solid #fff;
-
+                
                 @include responsive(pc-screens) {
-                    right: 120px; bottom: 46px;
+                    right: 120px; bottom: 44px;
+                    transform: translateX(0);
+                    width: 200px; height: 66px;
                 }
             }
         } // corporate-member
     } // corporate-member-wrap
 
+    .affiliate-wrap {
+        margin-top: 100px;
+
+        @include responsive(pc-screens) {
+            margin-top: 100px * 2;
+        }
+        
+        .affiliate {
+
+            ul.affiliate-con {
+                margin-top: 40px;
+                
+                @include responsive(pc-screens) {
+                    @include flex_between();
+                    flex-wrap: wrap;
+                    margin-top: 100px;
+                }
+
+                li {
+                    @include flex_between();
+                    width: 100%; height: 142px;
+                    margin-bottom: 20px;
+                    border: 1px solid $bk4;
+                    border-radius: 5px;
+                    
+                    @include responsive(pc-screens) {
+                        width: 680px; height: 275px;
+                        
+                    }
+
+                    img {
+                        width: 190px / 350px * 100%;
+                    }
+                    
+                    .store-txt {
+                        width: calc(160px / 350px) * 100%;
+                        padding: 22px 10px;
+
+                        @include responsive(pc-screens) {
+                            padding-top: 54px;
+                            padding-left: 40px
+                        }
+
+                        p {
+                            @include gothic_font(medium);
+                            
+                            @include responsive(pc-screens) {
+                                font-size: 26px;
+                            }
+                        }
+                        
+                        b {
+                            display: block;
+                            margin-top: 4px;
+                            font-size: 22px;
+                            
+                            @include responsive(pc-screens) {
+                                margin-top: 14px;
+                                font-size: 36px;
+                            }
+                            
+                            .red {
+                                color: #f00;
+                            }
+                        }
+                        
+                        address,
+                        a {
+                            font-size: 12px;
+                        }
+                        
+                        address {
+                            margin-top: 16px;
+                            
+                            @include responsive(pc-screens) {
+                                margin-top: 36px;
+                                font-size: 18px;
+                            }
+                        }
+                        
+                        a {
+                            
+                            @include responsive(pc-screens) {
+                                margin-top: 10px;
+                                font-size: 16px;
+                            }
+
+                            img {
+                                width: 10px;
+                                margin-right: 4px;
+                            }
+                        }
+                        
+                    }
+
+                }
+            } // affiliate-con
+        } // affiliate
+    } // affiliate-wrap
     
+    .faq-wrap {
+        margin-top: 100px;
+        
+        @include responsive(pc-screens) {
+            margin-top: 100px * 2;
+        }
+    }
+
     img {
         width: 10%;
     }
 } // main
+
 
 footer {
     @include footer();
