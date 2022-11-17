@@ -424,29 +424,34 @@ main {
         }
 
         .corporate-member {
+            @include out_container();
             position: relative;
-            transform: translateX(-20px);
-            width: calc(100% + 40px);
             height: 400px;
             color: #fff;
             background: {
                 image: url(../image/membership_corporate.png);
                 repeat: no-repeat;
                 position: -507px -429px;
-                size: 951px 1427px;
+                size: 951px / 350px * 100%;
             }
             
             @include responsive(pc-screens) {
                 height: 300px;
                 background: {
-                    position: -507px -429px;
-                    size: 1527px 2291px;
+                    image: url(../image/membership_corporate_pc.png);
+                    position: 0;
+                    size: 1527px;
                 }
             }
             
             &::before {
                 @include overlay_bk(1);
                 background: linear-gradient(#000 0%, transparent);
+                
+                @include responsive(pc-screens) {
+                    background: none;
+
+                }
             }
             
             .back-cover {
