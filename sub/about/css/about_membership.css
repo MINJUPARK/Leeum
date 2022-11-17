@@ -1187,6 +1187,7 @@ main .affiliate-wrap .affiliate ul.affiliate-con li {
   margin-bottom: 20px;
   border: 1px solid #c5c5c5;
   border-radius: 5px;
+  overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
   main .affiliate-wrap .affiliate ul.affiliate-con li {
@@ -1194,8 +1195,15 @@ main .affiliate-wrap .affiliate ul.affiliate-con li {
     height: 275px;
   }
 }
-main .affiliate-wrap .affiliate ul.affiliate-con li img {
+main .affiliate-wrap .affiliate ul.affiliate-con li .store-img {
   width: 54.2857142857%;
+  overflow: hidden;
+}
+main .affiliate-wrap .affiliate ul.affiliate-con li .store-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .affiliate-wrap .affiliate ul.affiliate-con li .store-txt {
   width: 45.7142857143%;

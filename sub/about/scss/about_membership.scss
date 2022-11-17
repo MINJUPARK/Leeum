@@ -537,14 +537,21 @@ main {
                     margin-bottom: 20px;
                     border: 1px solid $bk4;
                     border-radius: 5px;
+                    overflow: hidden;
                     
                     @include responsive(pc-screens) {
                         width: 680px; height: 275px;
                         
                     }
 
-                    img {
+                    .store-img {
                         width: 190px / 350px * 100%;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%; height: 100%;
+                            object-fit: cover;
+                        }
                     }
                     
                     .store-txt {
@@ -604,10 +611,8 @@ main {
                                 width: 10px;
                                 margin-right: 4px;
                             }
-                        }
-                        
+                        }   
                     }
-
                 }
             } // affiliate-con
         } // affiliate
