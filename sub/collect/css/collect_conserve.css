@@ -182,7 +182,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/header_preserve.jpg);
+  background: url(../image/conserve_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -641,6 +641,206 @@ header .breadcrumb-wrap {
   header .breadcrumb-wrap .breadcrumb .loc ul.opt li a.on {
     font-weight: bold;
   }
+}
+
+main {
+  word-break: keep-all;
+}
+@media screen and (min-width: 768px) {
+  main {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .mobile-view {
+    display: none;
+  }
+}
+main h3 {
+  text-align: center;
+  font-size: calc(1em + 14px);
+}
+main .research-intro-wrap {
+  margin-top: 60px;
+}
+@media screen and (min-width: 1440px) {
+  main .research-intro-wrap {
+    margin-top: 120px;
+  }
+}
+main .research-intro-wrap .research-intro strong {
+  font-family: "KoPub Batang";
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main .research-intro-wrap .research-intro strong {
+    font-size: 46px;
+    line-height: 75px;
+  }
+}
+main .research-intro-wrap .research-intro .intro-flex {
+  margin-top: 60px;
+}
+@media screen and (min-width: 1440px) {
+  main .research-intro-wrap .research-intro .intro-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+  }
+}
+main .research-intro-wrap .research-intro .intro-flex img {
+  width: 100%;
+}
+main .research-intro-wrap .research-intro .intro-flex .intro-txt {
+  margin-top: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main .research-intro-wrap .research-intro .intro-flex .intro-txt {
+    margin-top: 0;
+    margin-left: 80px;
+  }
+}
+main .research-intro-wrap .research-intro .intro-flex .intro-txt p {
+  line-height: 28px;
+}
+@media screen and (min-width: 1440px) {
+  main .research-intro-wrap .research-intro .intro-flex .intro-txt p {
+    line-height: 44px;
+  }
+}
+main .research-intro-wrap .research-intro .intro-flex .intro-txt p:last-child {
+  margin-top: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main .research-intro-wrap .research-intro .intro-flex .intro-txt p:last-child {
+    margin-top: 70px;
+  }
+}
+main .lab-role-wrap {
+  margin-top: 100px;
+}
+@media screen and (min-width: 1440px) {
+  main .lab-role-wrap {
+    margin-top: 180px;
+  }
+}
+main .lab-role-wrap .lab-role ul.role {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+}
+@media screen and (min-width: 1440px) {
+  main .lab-role-wrap .lab-role ul.role {
+    margin-top: 110px;
+  }
+}
+main .lab-role-wrap .lab-role ul.role li {
+  width: 33.3333333333%;
+  text-align: center;
+}
+main .lab-role-wrap .lab-role ul.role li img {
+  width: 100%;
+  height: 80px;
+}
+@media screen and (min-width: 1440px) {
+  main .lab-role-wrap .lab-role ul.role li img {
+    height: 130px;
+  }
+}
+main .lab-role-wrap .lab-role ul.role li p {
+  margin-top: 15px;
+}
+@media screen and (min-width: 1440px) {
+  main .lab-role-wrap .lab-role ul.role li p {
+    margin-top: 45px;
+  }
+}
+main .texture-research-wrap {
+  margin-top: 100px;
+}
+@media screen and (min-width: 1440px) {
+  main .texture-research-wrap {
+    margin-top: 180px;
+  }
+}
+main .texture-research-wrap .texture-research ul.texture-lsit {
+  display: flex;
+  justify-content: space-between;
+  width: 1390px;
+  margin-top: 50px;
+}
+@media screen and (min-width: 1440px) {
+  main .texture-research-wrap .texture-research ul.texture-lsit {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+main .texture-research-wrap .texture-research ul.texture-lsit li {
+  width: 270px;
+  height: 246px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main .texture-research-wrap .texture-research ul.texture-lsit li {
+    width: 440px;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .texture-research-wrap .texture-research ul.texture-lsit li:nth-child(4), main .texture-research-wrap .texture-research ul.texture-lsit li:nth-child(5) {
+    width: 680px;
+    margin-top: 44px;
+  }
+}
+main .texture-research-wrap .texture-research ul.texture-lsit li a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main .texture-research-wrap .texture-research ul.texture-lsit li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.8));
+}
+main .texture-research-wrap .texture-research ul.texture-lsit li a h4 {
+  font-size: calc(1em + 4px);
+  font-weight: 500;
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+}
+main .texture-research-wrap .texture-research ul.texture-lsit li a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .conserve-type-wrap {
+  margin-top: 100px;
+}
+@media screen and (min-width: 1440px) {
+  main .conserve-type-wrap {
+    margin-top: 200px;
+  }
+}
+main img {
+  width: 30px;
 }
 
 @media screen and (min-width: 1440px) {
