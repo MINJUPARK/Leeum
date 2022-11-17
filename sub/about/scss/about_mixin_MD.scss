@@ -12,7 +12,7 @@
         }
         
         > li {
-            width: (100% / $num);
+            width: calc(100% / $num);
             text-align: center;
             
             > a {
