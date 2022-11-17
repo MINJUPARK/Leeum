@@ -55,7 +55,7 @@ ul, ol {
 a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 header a:hover, footer a:hover {
@@ -101,9 +101,9 @@ input[type=checkbox]:hover {
   background: #d4d4d4;
 }
 input[type=checkbox]:checked {
-  color: white;
+  color: #fff;
   background-color: #ac3f21;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: #d4d4d4;
 }
 input[type=checkbox]:checked::before {
   border-radius: 2px;
@@ -118,9 +118,13 @@ input[type=checkbox]::before {
   transform: scale(0) translate(-50%, -50%);
   overflow: hidden;
 }
-
 input[type=checkbox] + label {
   color: #3c3c3c;
+  margin-left: 5px;
+}
+input[type=checkbox]:checked + label {
+  color: #ac3f21;
+  font-weight: 600;
 }
 
 a, input, button, select, label {
@@ -178,7 +182,6 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  /* 모바일 메뉴 팝업 */
   background: url(../image/header_preserve.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -363,9 +366,6 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-<<<<<<< HEAD
-    animation: stretch-w 0.5s;
-=======
     -webkit-animation: stretch-w 0.5s;
             animation: stretch-w 0.5s;
   }
@@ -376,7 +376,6 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     to {
       width: 220px;
     }
->>>>>>> b12f1255285ffe16415f46b74a118aba6d66da09
   }
   @keyframes stretch-w {
     from {
@@ -434,8 +433,8 @@ header .mobile-menu-popup {
   z-index: 99;
 }
 header .mobile-menu-popup .window {
-  position: relative;
   display: flex;
+  position: relative;
   width: 100%;
   height: 100vh;
 }
@@ -924,4 +923,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=collect_conserve_texture.css.map */
