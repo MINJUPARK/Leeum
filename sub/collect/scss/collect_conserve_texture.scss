@@ -9,7 +9,99 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_preserve.jpg');
+    @include full_bg('conserve_header.png');
+}
+
+main {
+    word-break: keep-all; // 단어를 기준으로 줄바꿈
+
+    @include responsive(tablet-screens) { font-size: 20px; }
+    @include responsive(pc-screens) { font-size: 22px; }
+
+    .mobile-view {
+        @include responsive(tablet-screens) {
+            display: none;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        font-size: calc(1em + 14px)
+    }
+    
+    .texture-intro-wrap {
+        margin-top: 50px;
+        
+        @include responsive(pc-screens) {
+            margin-top: 120px;
+        }
+        
+        .texture-intro {
+            
+            .intro-img {
+                @include full_bg('conserve_texture_intro.png', sub);
+                width: 100%; height: 180px;
+
+                @include responsive(pc-screens) {
+                    height: 450px;
+                }
+            }
+            
+            .intro-txt-flex {
+                margin-top: 40px;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 80px;
+                }
+                
+                .into-txt {
+                    
+                    p {
+                        margin-top: 35px;
+                        font-size: calc(1em + 2px);
+                        line-height: calc(1em + 2px + 10px);
+                        
+                        @include responsive(pc-screens) {
+                            margin-top: 0;
+                            font-size: 22px;
+                            line-height: 44px;
+                        }
+                    }
+                }
+            } // intro-txt-flex
+        } // texture-intro
+    } // texture-intro-wrap
+    
+    .damage-type-wrap {
+        margin-top: 140px;
+        
+        @include responsive(pc-screens) {
+            margin-top: 250px;
+        }
+        
+        .damage-type {
+            
+            .type-box {
+                margin-top: 40px;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 100px;
+                }
+
+                ul.type-select {
+                    width: 100%;
+
+                    li {
+                        background-color: $bk6;
+                    }
+                }
+            }
+        } // damage-type
+    } // damage-type-wrap
+
+    img {
+        width: 100px;
+    }
 }
 
 footer {
