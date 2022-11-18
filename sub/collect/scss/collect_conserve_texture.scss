@@ -42,20 +42,40 @@ main {
                 @include full_bg('conserve_texture_intro.png', sub);
                 width: 100%; height: 180px;
 
+                // background: url('../image/conserve_texture_intro.png');
+                // background-repeat: no-repeat;
+                // background-position: center;
+                // background-size: cover;
+                background-attachment: fixed;
+
                 @include responsive(pc-screens) {
                     height: 450px;
                 }
             }
             
-            .intro-txt-flex {
+            .intro-flex {
                 margin-top: 40px;
                 
                 @include responsive(pc-screens) {
+                    display: flex;
                     margin-top: 80px;
                 }
                 
-                .into-txt {
+                h3 {
+                    background-color: darkblue;
                     
+                    @include responsive(pc-screens) {
+                        width: 310px;
+                    }
+                }
+                
+                .into-txt {
+                    background-color: darkcyan;
+                    
+                    @include responsive(pc-screens) {
+                        width: 1010px;
+                    }
+
                     p {
                         margin-top: 35px;
                         font-size: calc(1em + 2px);
@@ -85,19 +105,208 @@ main {
                 margin-top: 40px;
                 
                 @include responsive(pc-screens) {
-                    margin-top: 100px;
+                    margin: 100px auto 0;
+                    width: 840px;
                 }
 
+                
                 ul.type-select {
+                    @include flex_between();
+                    border-top: 2px solid $bk4;
                     width: 100%;
+                    
+                    // @include responsive(pc-screens) {
+                        // }
+                    
+                    li {
+                        position: relative;
+                        width: calc(100% / 4);
+                        height: 68px;
+                        text-align: center;
+                        border-left: 2px solid $bk4;
+                        background-color: $bk6;
+                        
+                        
+                        transition: color 0.7s;
+                        
+                        color: $bk3;
+                        
+                        @include responsive(tablet-screens) {
+                            height: 76px;
+                        }
+                        
+                        @include responsive(pc-screens) {
+                            height: 80px;
+                        }
+
+                        &:last-child {
+                            border-right: 2px solid $bk4;
+                        }
+        
+
+                        &.selected {
+                            color: #000;
+                            background-color: transparent;
+                            
+                            &::after {
+                                scale: 1;
+                            }
+                            
+                            span {
+                                font-weight: 600; // semibold
+                            }
+                        }
+                        
+                        &:hover {
+                            color: #000;
+                            background-color: transparent;
+                            
+                            &::after {
+                                scale: 1;
+                            }
+                            
+                            span {
+                                font-weight: 600; // semibold
+                            }
+                        }
+                        
+                        &::after {
+                            position: absolute;
+                            top: -1px;
+                            content: '';
+                            display: block;
+                            width: 100%; height: 5px;
+                            background-color: #000;
+                            
+                            transition: all 0.7s;
+            
+                            scale: 0;
+                        }
+                        
+                        span {
+                            @include element_center();
+                            width: 100%;
+                            font-size: 20px;
+
+                            @include responsive(tablet-screens) {
+                                font-size: 22px;
+                            }
+                            
+                            @include responsive(pc-screens) {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                } // ul.type-select
+                
+                ul.type-img {
+                    border: 2px solid $bk4;
 
                     li {
-                        background-color: $bk6;
+                        display: none;
+                        
+                        &.view {
+                            display: block;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
                     }
-                }
-            }
+                } // ul.type-img
+
+                ul.type-txt {
+                    margin-top: 22px;
+                    text-align: center;
+                    
+                    @include responsive(pc-screens) {
+                        margin-top: 45px;
+                    }
+                    
+                    li {
+                        display: none;
+                        font-size: calc(1em + 2px);
+                        line-height: calc(1em + 2px + 10px);
+                        
+                        @include responsive(pc-screens) {
+                            font-size: 26px;
+                        }
+
+                        &.view {
+                            display: block;
+                        }
+                    }
+                } // ul.type-txt
+            } // type-box
         } // damage-type
     } // damage-type-wrap
+
+    .conservation-method-wrap {
+        margin-top: 100px;
+        
+        @include responsive(pc-screens) {
+            margin-top: 100px * 2;
+        }
+        
+        .conservation-method {
+            
+            ul.methods {
+                margin-top: 80px;
+
+                @include responsive(pc-screens) {
+                    margin-top: 100px;
+                }
+                
+                li {
+                    margin-top: 90px;
+                    background-color: violet;
+                    
+                    @include responsive(pc-screens) {
+                        margin-top: 80px;
+                    }
+                    
+                    &:first-child {
+                        margin-top: 0;
+                    } // li:first-child
+                    
+                    strong {
+                        color: $red-brown;
+                        font-size: calc(1em + 8px);
+                        
+                        @include responsive(pc-screens) {
+                            font-size: 32px;
+                        }
+                    }
+                    
+                    p {
+                        margin-top: 30px;
+                        font-size: calc(1em + 2px);
+                        line-height: calc(1em + 2px + 12px);
+                        
+                        @include responsive(pc-screens) {
+                            margin-top: 40px;
+                            font-size: 22px;
+                            line-height: 36px;
+                        }
+                    }
+                    
+                    .method-img {
+                        @include flex_between();
+                        width: 550px;
+                        
+                        img {
+                            width: 270px;
+                            border-radius: 5px;
+                            
+                            @include responsive(pc-screens) {
+                                width: 560px;
+                            }
+                        }
+                    }
+                }
+            } // ul.methods
+        } // conservation-method
+    } // conservation-method-wrap
 
     img {
         width: 100px;

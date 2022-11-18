@@ -655,7 +655,6 @@ main .tab-menu-wrap ul.tab-menu {
 }
 main .tab-menu-wrap ul.tab-menu > li {
   width: 33.3333333333%;
-  text-align: center;
 }
 main .tab-menu-wrap ul.tab-menu > li > a {
   position: relative;
@@ -668,13 +667,11 @@ main .tab-menu-wrap ul.tab-menu > li > a {
 @media screen and (min-width: 768px) {
   main .tab-menu-wrap ul.tab-menu > li > a {
     height: 69px;
-    font-size: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
   main .tab-menu-wrap ul.tab-menu > li > a {
     height: 78px;
-    font-size: 24px;
   }
 }
 main .tab-menu-wrap ul.tab-menu > li > a:hover {
@@ -682,6 +679,9 @@ main .tab-menu-wrap ul.tab-menu > li > a:hover {
 }
 main .tab-menu-wrap ul.tab-menu > li > a:hover::after {
   scale: 1;
+}
+main .tab-menu-wrap ul.tab-menu > li > a:hover span {
+  font-weight: 600;
 }
 main .tab-menu-wrap ul.tab-menu > li > a::after {
   position: absolute;
@@ -700,6 +700,17 @@ main .tab-menu-wrap ul.tab-menu > li > a > span {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main .tab-menu-wrap ul.tab-menu > li > a > span {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .tab-menu-wrap ul.tab-menu > li > a > span {
+    font-size: 24px;
+  }
 }
 main .fee-time-wrap .fee-time > div {
   margin-bottom: 60px;

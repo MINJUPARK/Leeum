@@ -13,7 +13,6 @@
         
         > li {
             width: calc(100% / $num);
-            text-align: center;
             
             > a {
                 position: relative;
@@ -23,22 +22,24 @@
                 transition: color 0.7s;
                 
                 color: $bk3;
-
+                
                 @include responsive(tablet-screens) {
                     height: 69px;
-                    font-size: 20px;
                 }
                 
                 @include responsive(pc-screens) {
                     height: 78px;
-                    font-size: 24px;
                 }
-
+                
                 &:hover {
                     color: #000;
-
+                    
                     &::after {
                         scale: 1;
+                    }
+                    
+                    span {
+                        font-weight: 600; // semibold
                     }
                 }
                 
@@ -51,13 +52,22 @@
                     background-color: #000;
                     
                     transition: all 0.7s;
-    
+                    
                     scale: 0;
                 }
-
+                
                 > span {
                     @include element_center();
                     width: 100%;
+                    text-align: center;
+
+                    @include responsive(tablet-screens) {
+                        font-size: 20px;
+                    }
+                    
+                    @include responsive(pc-screens) {
+                        font-size: 24px;
+                    }
                 }
             } // a
         } // li
