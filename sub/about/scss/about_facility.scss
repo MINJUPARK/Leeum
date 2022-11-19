@@ -13,7 +13,7 @@ header {
 }
 
 main {
-
+    overflow-x: hidden; /////////
     section.construction {
 
         .tap-box {
@@ -129,29 +129,38 @@ main {
             }
 
             .M1-constructor {
-                justify-content: center;
-                
-                img {
-                    position: relative;
-                    top:-80px; left:370px;
-                    width: 195px;
-                    height:195px;
+                width: 190px;
+                margin: 0 auto;
+
                     
-                    @include responsive(pc-screens) {
-                        position: relative;
-                        top:-250px; left:120px;
-                        width:400px;
-                        height:400px;
-                    }
+                .img {
+                    position: relative;
+                    width: 0;
+                    height: 140px;
+                    align-items: center;
+
+                    img {
+                            position: absolute;
+                            top: -60px;
+                            width:190px;
+                            height:190px;
+                            margin: 0 auto;
+
+                            @include responsive(pc-screens) {
+                                width:400px;
+                                height:400px;
+                                left:-600px; top: -230px;
+                            }
+                        }
                 }
                 
                 .name {
-                    margin-top: -55px;
+                    // margin-top: -55px;
                     text-align: center;
                     
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-160px; left:-380px;
+                        top:60px; left:-380px;
                     }
 
                     p:first-child {
@@ -186,7 +195,7 @@ main {
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,56px);  
                         position: relative;
-                        top:-444px;
+                        left: -40px; top:-250px;
                     }
                     
                 }
@@ -213,7 +222,7 @@ main {
 
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-460px; left:660px;
+                        top:-270px; left:620px;
                         text-align: left; 
                         line-height: 46px; 
                         @include gothic_font(regular,22px);       
@@ -221,21 +230,20 @@ main {
                 }
 
                 a {
-                    position: relative;
-                    left:195px;
+                    text-align: center;
                     @include gothic_font(semibold,14px);
                     margin: 35px 0 100px 0;
                     
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,20px);
                         position: relative;
-                        top:-480px; left:660px;
+                        top:-280px; left:-40px;
                         
                     }
 
                     img {  
                         position: absolute;
-                        left:290px;
+                        left:270px;
                         width: 17px;
                         height: 13px;
                         
@@ -251,7 +259,10 @@ main {
         } //M1
 
         .M2 {
-            
+            @include responsive(pc-screens) {
+                margin-top: 200px;
+            }
+
             img {
                 width:100%;
                 overflow-x: hidden;
@@ -276,20 +287,32 @@ main {
             }
 
             .M2-constructor {
-                justify-content: center;
-                
-                img {
-                    position: relative;
-                    top:-80px; left:370px;
-                    width: 195px;
-                    height:195px;
+                width: 190px;
+                margin: 0 auto;
+
                     
-                    @include responsive(pc-screens) {
-                        position: relative;
-                        top:120px; left:870px;
-                        width:400px;
-                        height:400px;
-                    }
+                .img {
+                    position: relative;
+                    width: 0;
+                    height: 200px;
+                    align-items: center;
+                    // margin: 0 auto;
+
+                    img {
+                            position: absolute;
+                            top: -60px;
+                            width:190px;
+                            height:190px;
+                            margin: 0 auto;
+
+                            @include responsive(pc-screens) {
+                                width:400px;
+                                height:400px;
+                                top:-250px;
+                                left:300px;
+                            }
+        
+                        }
                 }
                 
                 .name {
@@ -298,7 +321,7 @@ main {
                     
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:188px; left:380px;
+                        top:43px; left:420px;
                     }
 
                     p:first-child {
@@ -333,7 +356,7 @@ main {
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,56px);  
                         position: relative;
-                        top:-40px;
+                        top:-230px; left:40px;
                     }
                 }
 
@@ -345,7 +368,7 @@ main {
 
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-50px; left:-660px;
+                        top:-250px; left:-620px;
                         text-align: right; 
                         line-height: 46px; 
                         @include gothic_font(regular,22px);       
@@ -353,21 +376,20 @@ main {
                 }
 
                 a {
-                    position: relative;
-                    left:195px;
+                    text-align: center;
                     @include gothic_font(semibold,14px);
                     margin: 35px 0 100px 0;
 
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,20px);
                         position: relative;
-                        top:-60px; left:660px;
+                        top:-250px; left:40px;
                         
                     }
                     
                     img {  
                         position: absolute;
-                        left:290px;
+                        left:270px;
                         width: 17px;
                         height: 13px;  
                         
@@ -383,7 +405,9 @@ main {
         } //M2
 
         .Kid {
-            
+            @include responsive(pc-screens) {
+                margin-top: -140px;
+            }
             img {
                 width:100%;
                 overflow-x: hidden;
@@ -410,20 +434,30 @@ main {
             }
 
             .Kidstudy-constructor {
-                justify-content: center;
+                width: 190px;
+                margin: 0 auto;
                 
-                img {
+                .img {
                     position: relative;
-                    top:-80px; left:370px;
-                    width: 195px;
-                    height:195px;
-                    
-                    @include responsive(pc-screens) {
-                        position: relative;
-                        top:-250px; left:120px;
-                        width:400px;
-                        height:400px;
-                    }
+                    width: 0;
+                    height: 200px;
+                    align-items: center;
+                    // margin: 0 auto;
+
+                    img {
+                            position: absolute;
+                            top: -60px;
+                            width:190px;
+                            height:190px;
+                            margin: 0 auto;
+                            
+                            @include responsive(pc-screens) {
+                                width:400px;
+                                height:400px;
+                                left:-600px; top: -230px;
+                            }
+
+                        }
                 }
                 
                 .name {
@@ -432,7 +466,7 @@ main {
                     
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-160px; left:-380px;
+                        top:60px; left:-380px;
                     }
 
                     p:first-child {
@@ -467,7 +501,7 @@ main {
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,56px);  
                         position: relative;
-                        top:-444px; left:100px;
+                        left: 70px; top:-250px;
                     }
 
                 }
@@ -480,7 +514,7 @@ main {
 
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-460px; left:610px;
+                        top:-270px; left:580px;
                         text-align: left; 
                         line-height: 46px; 
                         @include gothic_font(regular,22px);       
@@ -502,21 +536,20 @@ main {
                 }
 
                 a {
-                    position: relative;
-                    left:195px;
+                    text-align: center;
                     @include gothic_font(semibold,14px);
                     margin: 35px 0 100px 0;
 
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,20px);
                         position: relative;
-                        top:-480px; left:610px;
+                        top:-280px; left:-80px;
                         
                     }
                     
                     img {  
                         position: absolute;
-                        left:290px;
+                        left:270px;
                         width: 17px;
                         height: 13px;   
 
@@ -599,7 +632,7 @@ main {
     
                             a {
                                 position: relative;
-                                left:195px;
+                                left:155px;
                                 @include gothic_font(semibold,14px);
                                 color: $yellow-brown;
                                 
@@ -691,7 +724,7 @@ main {
     
                             a {
                                 position: relative;
-                                left:205px;
+                                left:155px;
                                 @include gothic_font(semibold,14px);
                                 color: $yellow-brown;
                                 
@@ -885,7 +918,7 @@ main {
                         
                         a {
                             position: relative;
-                            left:310px;
+                            left:260px;
                             @include gothic_font(semibold,14px);
                             color: $yellow-brown;
     
@@ -965,6 +998,9 @@ main {
         
         .container {
             .director {
+                width: 190px;
+                margin: 0 auto;
+
                 .background {
                     @include out_container();
                     height:431px;
@@ -976,15 +1012,15 @@ main {
                 
                 .director {
                     position: absolute;
-                    top:-60px;
-                    left:100px;
+                    top:-100px;
+                    margin-left:-40px ;
                     width:300px;
                     height:549px;
 
                     @include responsive(pc-screens) {
                         position: absolute;
                         top:-200px;
-                        left:450px;
+                        left:490px;
                         width:587px;
                         height:1068px;
                     }
@@ -992,8 +1028,8 @@ main {
 
                 h3 {
                     position: absolute;
-                    left:210px;
                     top:190px;
+                    margin-left: 70px;
                     color: #fff;
                     line-height: 48px;
                     @include gothic_font(bold,30px);
@@ -1001,6 +1037,7 @@ main {
                     @include responsive(pc-screens) {
                         left:670px;
                         top:350px; 
+                        margin-left: 0px;
                         @include gothic_font(bold,46px);
                         line-height: 68px;
                     }
@@ -1008,8 +1045,8 @@ main {
                 
                 p {
                     position: absolute;
-                    left:200px;
-                    top:230px;           
+                    top:230px;  
+                    margin-left: 60px;         
                     color: #fff;
                     line-height: 30px;
                     @include gothic_font(light,14px);
@@ -1017,6 +1054,7 @@ main {
                     @include responsive(pc-screens) {
                         left:660px;
                         top:420px;
+                        margin-left: 0px;
                         @include gothic_font(light,20px);
                     }
                 }
@@ -1045,8 +1083,8 @@ main {
                 
                 .director-info {
                     position: absolute;
-                    left:120px;
                     top:290px;
+                    margin-left: -20px;
                     line-height: 26px;
                     text-align: center;
                     color:#ffffff;
@@ -1069,6 +1107,7 @@ main {
                     @include responsive(pc-screens) {
                         @include gothic_font(light,20px);
                         line-height: 40px;
+                        margin-left: 0px;
                         left:490px;
                         top:470px;
                     }
