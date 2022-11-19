@@ -12,6 +12,128 @@ header {
     @include full_bg('conserve_header.png');
 }
 
+main {
+    word-break: keep-all; // 단어를 기준으로 줄바꿈
+
+    @include responsive(tablet-screens) { font-size: 20px; }
+    @include responsive(pc-screens) { font-size: 22px; }
+
+    .mobile-view {
+        @include responsive(tablet-screens) {
+            display: none;
+        }
+    }
+
+    .before-after-case-intro {
+
+        .intro-flex {
+
+            .before-after {
+
+                ul.angle-select {
+                    @include flex_between();
+                    border-top: 2px solid $bk4;
+                    width: 100%;
+
+                    li {
+                        position: relative;
+                        width: calc(100% / 4);
+                        height: 68px;
+                        text-align: center;
+                        border-left: 2px solid $bk4;
+                        background-color: $bk6;
+                        
+                        
+                        transition: color 0.7s;
+                        
+                        color: $bk3;
+                        
+                        @include responsive(tablet-screens) {
+                            height: 76px;
+                        }
+                        
+                        @include responsive(pc-screens) {
+                            height: 80px;
+                        }
+    
+                        &:last-child {
+                            border-right: 2px solid $bk4;
+                        }
+        
+    
+                        &.selected {
+                            color: #000;
+                            background-color: transparent;
+                            
+                            &::after {
+                                scale: 1;
+                            }
+                            
+                            span {
+                                font-weight: 600; // semibold
+                            }
+                        }
+                        
+                        &:hover {
+                            color: #000;
+                            background-color: transparent;
+                            
+                            &::after {
+                                scale: 1;
+                            }
+                            
+                            span {
+                                font-weight: 600; // semibold
+                            }
+                        }
+                        
+                        &::after {
+                            position: absolute;
+                            top: -1px;
+                            content: '';
+                            display: block;
+                            width: 100%; height: 5px;
+                            background-color: #000;
+                            
+                            transition: all 0.7s;
+            
+                            scale: 0;
+                        }
+                        
+                        span {
+                            @include element_center();
+                            width: 100%;
+                            font-size: 20px;
+    
+                            @include responsive(tablet-screens) {
+                                font-size: 22px;
+                            }
+                            
+                            @include responsive(pc-screens) {
+                                font-size: 24px;
+                            }
+                        }
+                    } // li
+                } // ul.angle-select
+
+                .before-after-img {
+                    border: 2px solid $bk4;
+                    position: relative;
+
+                    .img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        // background-size: 928px 100%;
+                      }
+                } // before-after-img
+            } // before-after
+        } // intro-flex
+    } // before-after-case-intro
+}
+
 footer {
     @include footer();
 }
