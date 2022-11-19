@@ -48,6 +48,10 @@ main {
                 // background-size: cover;
                 background-attachment: fixed;
 
+                @include responsive(tablet-screens) {
+                    height: 300px;
+                }
+
                 @include responsive(pc-screens) {
                     height: 450px;
                 }
@@ -78,6 +82,7 @@ main {
 
                     p {
                         margin-top: 35px;
+                        text-align: justify;
                         font-size: calc(1em + 2px);
                         line-height: calc(1em + 2px + 10px);
                         
@@ -259,16 +264,23 @@ main {
                 
                 li {
                     margin-top: 90px;
-                    background-color: violet;
+                    // background-color: violet;
                     
                     @include responsive(pc-screens) {
                         margin-top: 80px;
+                        padding: 55px 120px;
+                        border: 1px solid $bk4;
+                        
+                        &.locate {
+                            border: 1px solid $red-brown;
+                        }
                     }
                     
                     &:first-child {
                         margin-top: 0;
                     } // li:first-child
                     
+
                     strong {
                         color: $red-brown;
                         font-size: calc(1em + 8px);
@@ -280,6 +292,7 @@ main {
                     
                     p {
                         margin-top: 30px;
+                        text-align: justify;
                         font-size: calc(1em + 2px);
                         line-height: calc(1em + 2px + 12px);
                         
@@ -293,11 +306,26 @@ main {
                     .method-img {
                         @include flex_between();
                         width: 550px;
+                        margin-top: 30px;
+                        
+                        @include responsive(tablet-screens) {
+                            width: 100%;
+                            margin-top: 40px;
+                        }
+
+                        @include responsive(pc-screens) {
+                            width: 1160px;
+                            margin-top: 50px;
+                        }
                         
                         img {
                             width: 270px;
                             border-radius: 5px;
                             
+                            @include responsive(tablet-screens) {
+                                width: calc(560px / 1160px) * 100%;
+                            }
+
                             @include responsive(pc-screens) {
                                 width: 560px;
                             }
@@ -307,6 +335,18 @@ main {
             } // ul.methods
         } // conservation-method
     } // conservation-method-wrap
+
+    .page-move-wrap {
+        margin-top: 50px;
+
+        @include responsive(pc-screens) {
+            margin-top: 50px * 2;
+        }
+
+        .page-move {
+
+        } // page-move
+    } // page-move-wrap
 
     img {
         width: 100px;
