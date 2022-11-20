@@ -18,84 +18,124 @@ main {
         img {
             margin-top: 30px;
             width:100%;
-            
             @include out_container();
+
+            @include responsive(pc-screens){
+                @include in_container();
+                width: 100%;
+            }
         }
 
         .info {
-            height:330px;
+            height:290px;
             border: 1px solid $bk6;
             border-radius: 5px;
             background-color: $bk6;
             margin-top: 28px;
             margin-bottom: 40px;
+            @include responsive(pc-screens){
+                width: 31.33333333333333%;
+                float: right;
+                margin-top: 82px;
+            }
             ul {
                 li{
-                    margin-left: 25px;
+                    margin-left: 26px;
                     &:first-of-type {
                         margin-top: 25px;
-                        @include gothic_font(regular,18px);
+                        @include gothic_font(regular,17px);
                         color: $bk1;
+                        @include responsive(pc-screens){
+
+                            @include gothic_font(regular,24px);
+                        }
                         span{
                             @include gothic_font(semibold,17px);
+                            margin-right:23px;
                             margin-bottom: 5px;
                             color:#000;
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(semibold,24px);
+                            }
                         }
                     }
 
                     &:nth-of-type(2) {
-                        @include gothic_font(regular,15px);
+                        @include gothic_font(regular,17px);
                         line-height: 25px;
                         color: $bk1;
                         margin-bottom: 20px;
+                        @include responsive(pc-screens){
+                            @include gothic_font(regular,24px);
+                        }
                         span {
                             @include gothic_font(semibold,17px);
+                            margin-right:40px;
+                            
+                            @include responsive(pc-screens){
+                                @include gothic_font(semibold,24px);
+                            }
                         }
                     }
 
                     &:nth-of-type(3) {
-                        @include gothic_font(regular,14px);
+                        @include gothic_font(regular,17px);
                         color:#5b5b5b;
+
+                        @include responsive(pc-screens){
+                            @include gothic_font(regular,24px);
+                        }
                         span {
-                            @include gothic_font(semibold,14px);
+                            @include gothic_font(semibold,17px);
                             color:#000;
                             margin-bottom:19px;
-                            margin-right:23px;
+                            margin-right:25px;
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(semibold,24px);
+                            }
                         }
                     }
 
                     &:nth-of-type(4) {
-                        @include gothic_font(regular,14px);
+                        @include gothic_font(regular,17px);
                         color:#5b5b5b;
-                        span {
-                            @include gothic_font(semibold,14px);
-                            color:#000;
-                            margin-bottom:19px;
-                            margin-right:12px;
-                        }
-                    }
 
-                    &:nth-of-type(5) {
-                        @include gothic_font(regular,14px);
-                        color:#5b5b5b;
+                        @include responsive(pc-screens){
+                            @include gothic_font(regular,24px);
+                        }
                         span {
-                            @include gothic_font(semibold,14px);
+                            @include gothic_font(semibold,17px);
                             color:#000;
                             margin-bottom:19px;
-                            margin-right:23px;
+                            margin-right:40px;
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(semibold,24px);
+                            }
                         }
                     }
 
                     &:last-of-type {
-                        @include gothic_font(regular,14px);
+                        @include gothic_font(regular,17px);
                         color:#5b5b5b;
+
+                        @include responsive(pc-screens){
+                            @include gothic_font(regular,24px);
+                        }
                         span {
-                            @include gothic_font(semibold,14px);
+                            @include gothic_font(semibold,17px);
                             color:#000;
                             margin-bottom:19px;
-                            margin-right:35px;
+                            margin-right:53px;
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(semibold,24px);
+                            }
                         }
                     }
+
                 }
                 hr {
                     width:360px;
@@ -106,15 +146,30 @@ main {
         }
 
         .symbol {
+
+            @include responsive(pc-screens){
+                margin-top: 82px;
+            }
+
             h3 {
                 @include gothic_font(semibold,18px);
                 margin-bottom: 18px;
+
+                @include responsive(pc-screens){
+                    @include gothic_font(semibold,28px);
+                }
             }
 
             p {
                 @include gothic_font(regular);
                 line-height: 26px;
                 color : $bk1;
+
+                @include responsive(pc-screens){
+                    width: 55.83333333333333%;
+                    @include gothic_font(regular,22px);
+                    line-height: 40px;
+                }
 
                 &:first-of-type {
                     margin-bottom: 37px;
@@ -127,136 +182,296 @@ main {
         }
 
         .detail {
+
+            @include responsive(pc-screens){
+                margin-top: 140px;
+            }
+
             h3 {
                 @include gothic_font(semibold,18px);
+
+                @include responsive(pc-screens){
+                    @include gothic_font(semibold,28px);
+                    margin-bottom: 40px;
+                }
             }
 
             .material {
                 img{
                     height:280px;
-                }
-
-                h4{
-                    @include gothic_font(bold,18px);
-                    margin-top: 25px;
-                }
-
-                p{
-                    color:$bk1;
-                    &:first-of-type {
-                        margin-top: 15px;
-                        margin-bottom: 40px;
-                        @include gothic_font(medium);
+                    @include responsive(pc-screens){
+                        width:55.625%;
+                        height:570px;
+                        float: left;
+                        margin-right: 100px;
                     }
+                }
+                .material-detail{
+                    
+                    h4{
+                        @include gothic_font(bold,18px);
+                        margin-top: 25px;
 
-                    &:last-of-type{
-                        @include gothic_font(regular,15px);
-                        margin-bottom: 65px;
-                        line-height: 26px;
+                        @include responsive(pc-screens){
+                            padding-top: 25px;
+                            @include gothic_font(bold,32px);
+                        }
+                    }
+    
+                    p{
+                        color:$bk1;
+                        &:first-of-type {
+                            margin-top: 15px;
+                            margin-bottom: 40px;
+                            @include gothic_font(medium);
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(medium,24px);
+                            }
+                        }
+    
+                        &:last-of-type{
+                            @include gothic_font(regular,15px);
+                            margin-bottom: 65px;
+                            line-height: 26px;
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(regular,22px);
+                                line-height: 44px;
+                            }
+                        }
+                        br {
+                            @include responsive(pc-screens){
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
 
             .lobby {
+                @include responsive(pc-screens){
+                    margin-top: 300px;
+                }
                 img{
                     height:280px;
-                }
-                
-                h4{
-                    @include gothic_font(bold,18px);
-                    margin-top: 25px;
-                }
 
-                p{
-                    color:$bk1;
-                    &:first-of-type {
-                        margin-top: 15px;
-                        margin-bottom: 40px;
-                        @include gothic_font(medium);
+                    @include responsive(pc-screens){
+                        width:55.625%;
+                        height:570px;
+                        float: right;
+                        margin-left: 100px;
                     }
+                }
 
-                    &:last-of-type{
-                        @include gothic_font(regular,15px);
-                        margin-bottom: 65px;
-                        line-height: 26px;
+                .lobby-detail{
+                    h4{
+                        @include gothic_font(bold,18px);
+                        margin-top: 25px;
+
+                        @include responsive(pc-screens){
+                            padding-top: 25px;
+                            @include gothic_font(bold,32px);
+                        }
+                    }
+    
+                    p{
+                        color:$bk1;
+                        &:first-of-type {
+                            margin-top: 15px;
+                            margin-bottom: 40px;
+                            @include gothic_font(medium);
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(medium,24px);
+                            }
+                        }
+    
+                        &:last-of-type{
+                            @include gothic_font(regular,15px);
+                            margin-bottom: 65px;
+                            line-height: 26px;
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(regular,22px);
+                                line-height: 44px;
+                            }
+                        }
+                        br {
+                            @include responsive(pc-screens){
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
 
             .rotunda {
+
+                @include responsive(pc-screens){
+                    margin-top: 300px;
+                }
+
                 img{
                     height:280px;
+                    @include responsive(pc-screens){
+                        width:55.625%;
+                        height:570px;
+                        float: left;
+                        margin-right: 100px;
+                    }
                 }
                 
-                h4{
-                    @include gothic_font(bold,18px);
-                    margin-top: 25px;
-                }
+                .rotunda-detail{
+                    
+                    h4{
+                        @include gothic_font(bold,18px);
+                        margin-top: 25px;
 
-                p{
-                    color:$bk1;
-                    &:first-of-type {
-                        margin-top: 15px;
-                        margin-bottom: 40px;
-                        @include gothic_font(medium);
+                        @include responsive(pc-screens){
+                            padding-top: 25px;
+                            @include gothic_font(bold,32px);
+                        }
                     }
+    
+                    p{
+                        color:$bk1;
+                        &:first-of-type {
+                            margin-top: 15px;
+                            margin-bottom: 40px;
+                            @include gothic_font(medium);
 
-                    &:last-of-type{
-                        @include gothic_font(regular,15px);
-                        margin-bottom: 65px;
-                        line-height: 26px;
+                            @include responsive(pc-screens){
+                                @include gothic_font(medium,24px);
+                            }
+                        }
+    
+                        &:last-of-type{
+                            @include gothic_font(regular,15px);
+                            margin-bottom: 65px;
+                            line-height: 26px;
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(regular,22px);
+                                line-height: 44px;
+                            }
+                        }
+                        br {
+                            @include responsive(pc-screens){
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
 
             .display-area {
+                @include responsive(pc-screens){
+                    margin-top: 300px;
+                }
                 img{
                     height:280px;
+
+                    @include responsive(pc-screens){
+                        width:55.625%;
+                        height:570px;
+                        float: right;
+                        margin-left: 100px;
+                    }
                 }
                 
-                h4{
-                    @include gothic_font(bold,18px);
-                    margin-top: 25px;
-                }
+                .display-area-detail{
+                    h4{
+                        @include gothic_font(bold,18px);
+                        margin-top: 25px;
 
-                p{
-                    color:$bk1;
-                    &:first-of-type {
-                        margin-top: 15px;
-                        margin-bottom: 40px;
-                        @include gothic_font(medium);
+                        @include responsive(pc-screens){
+                            padding-top: 25px;
+                            @include gothic_font(bold,32px);
+                        }
                     }
+    
+                    p{
+                        color:$bk1;
+                        &:first-of-type {
+                            margin-top: 15px;
+                            margin-bottom: 40px;
+                            @include gothic_font(medium);
 
-                    &:last-of-type{
-                        @include gothic_font(regular,15px);
-                        margin-bottom: 120px;
-                        line-height: 26px;
+                            @include responsive(pc-screens){
+                                @include gothic_font(medium,22px);
+                            }
+                        }
+                        
+                        &:last-of-type{
+                            @include gothic_font(regular,15px);
+                            margin-bottom: 65px;
+                            line-height: 26px;
+
+                            @include responsive(pc-screens){
+                                @include gothic_font(regular,22px);
+                                line-height: 44px;
+                            }
+                        }
+                        br {
+                            @include responsive(pc-screens){
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
         }
 
         .constructor-info {
+            @include responsive(pc-screens){
+                margin-top: 250px;
+            }
+
             h4 {
                 @include gothic_font(semibold,18px);
                 margin-bottom: 30px;
+
+                @include responsive(pc-screens){
+                    @include gothic_font(semibold,28px);
+                }
             }
 
             iframe {
                 @include out_container();
                 height:231px;
-            }
 
+                @include responsive(pc-screens){
+                    float: left;
+                    @include in_container();
+                    width:61.11111111111111%;
+                    height: 494px;
+                    margin-right: 60px;
+                }
+            }
+            
             p {
                 @include gothic_font(light,20px);
                 margin: 40px 0 30px 0;
                 text-align: center;
                 color: $bk2;
+
+                @include responsive(pc-screens){
+                    @include gothic_font(light,26px);
+                    text-align: left;
+                }
+
                 span {
                     @include gothic_font(bold,30px);
                     color:#000;
                     margin-bottom: 10px;
+
+                    @include responsive(pc-screens){
+                        @include gothic_font(bold,46px);
+                    }
                 }
+
+                
             }
 
             .detail {
@@ -265,6 +480,14 @@ main {
                 background-color: $bk6;
                 height: 197px;
 
+                @include responsive(pc-screens){
+                    width: 27.77777777777778%;
+                    float: left;
+                    margin-top: 50px;
+                    margin-bottom: 200px;
+                    margin-right: 60px;
+                }
+                
                 ul{
                     li{
                         margin-left: 29px;
@@ -283,11 +506,288 @@ main {
                             }
                         }
 
+                        &:nth-of-type(3) {
+                            span{
+                                margin-right: 30px;
+                            }
+                        }
+                        
+                        &:last-of-type {
+                            margin: -16px 30px 0 127px;
+                            line-height: 25px;
+                        }
+
                         span {
                             @include gothic_font(semibold,15px);
                             margin-bottom: 22px;
                             color:#000;
 
+                        }
+                    }
+                }
+            }
+            .simple{
+                p {
+                    text-align: left;
+                    line-height: 40px;
+                    color: #000;
+                    @include batang_font(medium, 26px); 
+
+                    @include responsive(pc-screens){
+                        @include batang_font(medium, 46px); 
+                        line-height: 76px;
+                    }
+                    
+                    br {
+                        @include responsive(pc-screens){
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .constructor-detail {
+                @include responsive(pc-screens){
+                    display: flex;
+                }
+                .detail-left {
+                    @include responsive(pc-screens) {
+                        width: 150%;
+                        margin-right: 70px;
+                    }
+                    
+                    br {
+                        @include responsive(pc-screens){
+                            display: none;
+                        }
+                    }
+                    
+                    p {
+                        line-height: 26px;
+                        @include gothic_font(regular);
+                        color: $bk1;
+                        text-align: left;
+                        &:first-of-type {
+                            @include responsive(pc-screens) {
+                                @include gothic_font(regular,22px);
+                                line-height: 44px;
+                            }
+                            
+                        }
+
+                        &:nth-of-type(2) {
+                            @include responsive(pc-screens) {
+                                @include gothic_font(regular,22px);
+                                line-height: 44px;
+                            }
+
+                            span {
+                                color:#ac3f21;
+                                @include gothic_font(semibold);
+                                
+                                display: inline;
+                                @include responsive(pc-screens) {
+                                display: block;
+                                }
+                            }
+                        }
+
+                        &:last-of-type{
+                            @include responsive(pc-screens) {
+                                @include gothic_font(regular,22px);
+                                line-height: 44px;
+                            }
+                        }
+
+                        
+                    }
+                }
+
+                .detail-right {
+                    @include responsive(pc-screens) {
+                        margin-bottom: 200px;
+                        width: 150%;
+
+                    }
+
+                    p {
+                        text-align: left;
+                        line-height: 26px;
+                        @include gothic_font(regular);
+
+                        @include responsive(pc-screens) {
+                            @include gothic_font(regular,22px);
+                            line-height: 44px;
+                        }
+
+                    }
+                }
+            }
+
+            .faq {
+                h4 {
+                    @include gothic_font(semibold,20px);
+                }
+
+                hr{
+                    margin-bottom: 20px;
+                }
+
+                ul {
+                    hr{
+                        margin:30px 0 20px 0;
+                    }
+
+                    li{
+                        position: relative;
+                        &:first-of-type{
+                            a{
+                                margin-left: 20px;
+                                width:100%;
+                                @include gothic_font(semibold,18px);
+                                line-height: 28px;
+                                span {
+                                    color:#d6841a;
+                                }
+                                img{
+                                    width: 13px;
+                                    height: 8px;
+                                }
+                            }
+                            .answer1 {
+                                width: 100%;
+                                height: 350px;
+                                background-color: #f3f3f3;
+                                border-radius: 5px;
+                                
+                                p {
+                                    padding-top: 20px;
+                                    padding-right: 20px;
+                                    margin-left: 20px;
+                                    @include gothic_font(regular);
+                                    line-height: 26px;
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(2){
+                            a{
+                                margin-left: 20px;
+                                width:100%;
+                                @include gothic_font(semibold,18px);
+                                line-height: 28px;
+                                span {
+                                    color:#d6841a;
+                                }
+                                img{
+                                    width: 13px;
+                                    height: 8px;
+                                }
+                            }
+                            .answer2 {
+                                width: 100%;
+                                height: 650px;
+                                background-color: #f3f3f3;
+                                border-radius: 5px;
+                                
+                                p {
+                                    padding-top: 20px;
+                                    padding-right: 20px;
+                                    margin-left: 20px;
+                                    @include gothic_font(regular);
+                                    line-height: 26px;
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(3){
+                            a{
+                                margin-left: 20px;
+                                width:100%;
+                                @include gothic_font(semibold,18px);
+                                line-height: 28px;
+                                span {
+                                    color:#d6841a;
+                                }
+                                img{
+                                    width: 13px;
+                                    height: 8px;
+                                }
+                            }
+                            .answer3 {
+                                width: 100%;
+                                height: 370px;
+                                background-color: #f3f3f3;
+                                border-radius: 5px;
+                                
+                                p {
+                                    padding-top: 20px;
+                                    padding-right: 20px;
+                                    margin-left: 20px;
+                                    @include gothic_font(regular);
+                                    line-height: 26px;
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(4){
+                            a{
+                                margin-left: 20px;
+                                width:100%;
+                                @include gothic_font(semibold,18px);
+                                line-height: 28px;
+                                span {
+                                    color:#d6841a;
+                                }
+                                img{
+                                    width: 13px;
+                                    height: 8px;
+                                }
+                            }
+                            .answer4 {
+                                width: 100%;
+                                height: 620px;
+                                background-color: #f3f3f3;
+                                border-radius: 5px;
+                                
+                                p {
+                                    padding-top: 20px;
+                                    padding-right: 20px;
+                                    margin-left: 20px;
+                                    @include gothic_font(regular);
+                                    line-height: 26px;
+                                }
+                            }
+                        }
+
+                        &:last-of-type{
+                            a{
+                                margin-left: 20px;
+                                width:100%;
+                                @include gothic_font(semibold,18px);
+                                line-height: 28px;
+                                span {
+                                    color:#d6841a;
+                                }
+                                img{
+                                    width: 13px;
+                                    height: 8px;
+                                }
+                            }
+                            .answer5 {
+                                width: 100%;
+                                height: 500px;
+                                background-color: #f3f3f3;
+                                border-radius: 5px;
+                                
+                                p {
+                                    padding-top: 20px;
+                                    padding-right: 20px;
+                                    margin-left: 20px;
+                                    @include gothic_font(regular);
+                                    line-height: 26px;
+                                }
+                            }
                         }
                     }
                 }
