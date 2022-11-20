@@ -765,6 +765,8 @@ main .before-after-case-intro .intro-flex .before-after .before-after-img {
   aspect-ratio: 24/19;
   border: 2px solid #c5c5c5;
   position: relative;
+  overflow: hidden;
+  background-color: cadetblue;
 }
 @media screen and (min-width: 1440px) {
   main .before-after-case-intro .intro-flex .before-after .before-after-img {
@@ -777,6 +779,93 @@ main .before-after-case-intro .intro-flex .before-after .before-after-img .img {
   left: 0;
   width: 100%;
   height: 100%;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .img.background-img {
+  background-image: url("../image/conserve_case_before(1).png");
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .img.foreground-img {
+  background-image: url("../image/conserve_case_after(1).png");
+  width: 50%;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 100%;
+  background: salmon;
+  outline: none;
+  transition: width 0.2s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 705px;
+  background: white;
+  border: none;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider::-moz-range-thumb {
+  width: 3px;
+  height: 705px;
+  background: white;
+  border: none;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider::-ms-thumb {
+  width: 3px;
+  height: 705px;
+  background: white;
+  border: none;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider::-ms-fill-lower {
+  background: transparent;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider::-ms-fill-upper {
+  background: transparent;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider::-ms-track {
+  color: transparent;
+  background: transparent;
+  border: none;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider-button {
+  pointer-events: none;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: transparent;
+  left: calc(69% - 24px);
+  top: calc(50% - 24px);
+  border: 3px solid #fff;
+  box-shadow: 0 0 12px rgba(51, 51, 51, 0.5);
+  background: linear-gradient(to left, transparent 50%, #fefefe 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider-button:before {
+  content: "";
+  display: inline-block;
+  border: 6px inset transparent;
+  border-right: 6px solid #555555;
+  margin-right: 6px;
+}
+main .before-after-case-intro .intro-flex .before-after .before-after-img .slider-button:after {
+  content: "";
+  display: inline-block;
+  border: 6px inset transparent;
+  border-left: 6px solid #fefefe;
+  margin-left: 6px;
+}
+main .before-after-case-intro .intro-flex .before-after *:before,
+main .before-after-case-intro .intro-flex .before-after *:after {
+  box-sizing: inherit;
 }
 main .before-after-case-intro .intro-flex .case-intro {
   margin-top: 40px;

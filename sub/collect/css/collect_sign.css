@@ -182,7 +182,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/header_sign.jpg);
+  background: url(../image/sign_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -641,6 +641,359 @@ header .breadcrumb-wrap {
   header .breadcrumb-wrap .breadcrumb .loc ul.opt li a.on {
     font-weight: bold;
   }
+}
+
+main section.search-wrap {
+  background: #f3f3f3;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+  }
+}
+main section.search-wrap .search-box {
+  padding: 40px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box {
+    width: 100%;
+    border-radius: 5px;
+    padding: 40px 80px;
+    background: #f3f3f3;
+  }
+}
+main section.search-wrap .search-box h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+main section.search-wrap .search-box .speed-search {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4d4d4;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main section.search-wrap .search-box .speed-search h6 {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search h6 {
+    display: inline-block;
+    width: 120px;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] {
+    width: calc(100% - 120px);
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] * {
+  height: 50px;
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] select {
+  background: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 20px center;
+  background-color: #fff;
+  background-size: 10px;
+  width: 37%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] select {
+    width: 15.5172413793%;
+    flex-wrap: nowrap;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] input {
+  width: 60%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] input {
+    width: 67.2413793103%;
+    flex-wrap: nowrap;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] button {
+    width: 13.7931034483%;
+    margin-top: 0;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] button img {
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+main section.itemList-wrap {
+  margin-top: 80px;
+}
+main section.itemList-wrap .list-control {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #d4d4d4;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .list-control {
+    padding-bottom: 20px;
+  }
+}
+main section.itemList-wrap .list-control .count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+main section.itemList-wrap .list-control .count b {
+  margin-right: 2px;
+}
+main section.itemList-wrap .list-control .count span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+main section.itemList-wrap .list-control .view-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+main section.itemList-wrap .list-control .view-type .sort {
+  font-size: 15px;
+  text-align: right;
+}
+main section.itemList-wrap .list-control .view-type .sort img {
+  height: 14px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .list-control .view-type .sort span, main section.itemList-wrap .list-control .view-type .sort img {
+    display: none;
+  }
+}
+main section.itemList-wrap .list-control .view-type .sort .sort-list {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 25px;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .list-control .view-type .sort .sort-list {
+    position: static;
+  }
+}
+main section.itemList-wrap .list-control .view-type .sort .sort-list li {
+  font-size: 14px;
+  padding-left: 15px;
+  color: #3c3c3c;
+}
+main section.itemList-wrap .list-control .view-type .sort .sort-list li:hover {
+  text-decoration: underline;
+}
+main section.itemList-wrap .list-control .view-type .sort .sort-list li.on {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #3c3c3c;
+}
+main section.itemList-wrap .list-control .view-type select[name=nth-view] {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .list-control .view-type select[name=nth-view] {
+    display: block;
+    width: 120px;
+    height: 30px;
+    padding: 0 10px;
+    background: url(../../../image/icon_arrow_bk.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: right 10px center;
+    background-size: 8px;
+  }
+}
+main section.itemList-wrap ul.item-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+}
+main section.itemList-wrap ul.item-box .item {
+  width: 48%;
+  margin-bottom: 20px;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+}
+main section.itemList-wrap ul.item-box .item a {
+  display: block;
+  width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap ul.item-box .item {
+    width: 23.5%;
+    margin-bottom: 25px;
+  }
+}
+main section.itemList-wrap ul.item-box .item .i-pic {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap ul.item-box .item .i-pic {
+    height: 480px;
+  }
+}
+main section.itemList-wrap ul.item-box .item .i-pic .bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+main section.itemList-wrap ul.item-box .item .i-pic .bm_btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 20px;
+  z-index: 1;
+}
+main section.itemList-wrap ul.item-box .item .i-pic .bm_btn .bookmark {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  opacity: 1;
+}
+main section.itemList-wrap ul.item-box .item .i-pic .bm_btn .bookmark.on {
+  filter: none;
+}
+main section.itemList-wrap ul.item-box .item .i-des {
+  padding: 10px 20px 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap ul.item-box .item .i-des {
+    padding: 20px 30px 25px;
+  }
+}
+main section.itemList-wrap ul.item-box .item .i-des strong {
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap ul.item-box .item .i-des strong {
+    font-size: 20px;
+  }
+}
+main section.itemList-wrap ul.item-box .item .i-des p {
+  margin: 5px 0 20px;
+  font-size: 13px;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap ul.item-box .item .i-des p {
+    margin: 10px 0 30px;
+    font-size: 15px;
+  }
+}
+main section.itemList-wrap ul.item-box .item .i-des p .vert-bar {
+  padding: 0 5px;
+  color: #acacac;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap ul.item-box .item .i-des p .vert-bar {
+    padding: 0 8px;
+  }
+}
+main section.itemList-wrap ul.item-box .item .i-des .loc {
+  position: relative;
+  width: 80px;
+  height: 22px;
+  margin-left: auto;
+  font-size: 11px;
+  line-height: 22px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap ul.item-box .item .i-des .loc {
+    width: 80px;
+    height: 26px;
+    font-size: 13px;
+    line-height: 26px;
+  }
+}
+main section.itemList-wrap ul.item-box .item .i-des .loc:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #3c3c3c;
+  border-radius: 3px;
+}
+main section.itemList-wrap ul.item-box .item .i-des .loc div {
+  position: absolute;
+}
+main section.itemList-wrap ul.item-box .item .i-des .loc div.tag {
+  left: 0;
+  width: 32px;
+  color: #fff;
+  background: #3c3c3c;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+main section.itemList-wrap ul.item-box .item .i-des .loc div:last-child {
+  right: 0;
+  width: 48px;
+}
+main section.itemList-wrap ul.item-box .item {
+  width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap ul.item-box .item {
+    width: 440px;
+  }
+}
+main section.itemList-wrap ul.item-box .item a .i-pic {
+  height: 55.7142857143%;
+}
+main section.itemList-wrap ul.item-box .item a .i-des p {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 1440px) {
