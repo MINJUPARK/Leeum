@@ -15,29 +15,41 @@ header {
 main {
 
     .tab-menu .gnb {
-        @include flex_between();
+        /* @include flex_between(); */
+        display: flex;
         height: 45px;
         line-height: 45px;
         text-align: center;
         background-color: $bk6;
 
-        @media screen and(min-width:$break-pc) {
+        @include responsive(pc-screens){
             width: 64.28571428571429%;
+            height: 55px;
+            line-height: 55px;
         }
         
         li {
             width: 25%;
-            font-size: 15px;
             border-top: 1px solid $bk3;
             border-right: 1px solid $bk3;
             border-bottom: 1px solid $bk3;
             cursor: pointer;
+            @include gothic_font(regular, 15px);
+
+            a {
+                color: $bk5;
+            }
         }
 
         .border {
             border-top : 5px solid #000;
             border-bottom: none;
             background-color: #fff;
+            
+            a {
+                color: #000;
+                @include gothic_font(semibold, 15px);
+            }
         }
     }
 
@@ -67,18 +79,22 @@ main {
     .content {
         display: flex;
         padding: 20px;
-        text-align: center;
         border-bottom: 1px solid $bk4;
-        @media screen and(min-width:$break-pc) {
-            padding: 20px;
-            height: 80px;
-            text-align: center;
+
+        
+
+        @include responsive(pc-screens){
+            padding: 22px;
+            /* height: 80px;
+            text-align: center; */
         }
 
         span:first-child {
             padding-left: 0;
-            font-size: 14px;
             width: 30px;
+            @include gothic_font(medium, 14px);
+            color: $bk2;
+            
             @media screen and(min-width:$break-pc) {
                 width: 60px;
                 font-size: 22px;
@@ -86,37 +102,54 @@ main {
             }
         }
 
+        /* .color {
+            border-radius: 5px;
+            border: 1px solid $dark-brown;
+            @include gothic_font(medium, 12px);
+            color: #fff;
+            background-color: $dark-brown;
+            text-align: center;
+        } */
+
         span.brown {
             white-space: nowrap;
             color: #fff;
             width: 80px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+            border-radius: 5px;
             background-color: $dark-brown;
-            font-size: 12px;
+            @include gothic_font(medium, 12px);
+            text-align: center;
+
+            @media screen and(min-width:$break-pc) {
+                padding: 10px;
+                width: 110px;
+                font-size: 18px;
+            }
+            /* white-space: nowrap;
+            color: #fff;
+            padding: 0;
+            text-align: center;
+            width: 80px;
+            border-radius: 5px;
+            background-color: $dark-brown;
+            @include gothic_font(medium, 12px);
 
             @media screen and(min-width:$break-pc) {
                 padding: 10px;
                 width: 110px;
                 font-size: 18px;
                 text-align: center;
-            }
+            } */
         }
 
         span.red-brown {
             white-space: nowrap;
             color: #fff;
             width: 80px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+            border-radius: 5px;
             background-color: $red-brown;
-            font-size: 12px;
+            @include gothic_font(medium, 12px);
             text-align: center;
-            display: block;
 
             @media screen and(min-width:$break-pc) {
                 padding: 10px;
@@ -129,12 +162,22 @@ main {
             white-space: nowrap;
             color: #fff;
             width: 80px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+            border-radius: 5px;
             background-color: $yellow-brown;
-            font-size: 12px;
+            @include gothic_font(medium, 12px);
+            text-align: center;
+
+            @media screen and(min-width:$break-pc) {
+                padding: 10px;
+                width: 110px;
+                font-size: 18px;
+            }
+           /*  white-space: nowrap;
+            color: #fff;
+            width: 80px;
+            border-radius: 5px;
+            @include gothic_font(medium, 12px);
+            background-color: $yellow-brown;
 
 
             @media screen and(min-width:$break-pc) {
@@ -142,36 +185,47 @@ main {
                 width: 110px;
                 font-size: 18px;
                 text-align: center;
-            }
+            } */
         }
 
         span.yellow {
             white-space: nowrap;
+            color: #fff;
             width: 80px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+            border-radius: 5px;
+            background-color: #f3cf7a;
+            @include gothic_font(medium, 12px);
+            text-align: center;
+
+            @media screen and(min-width:$break-pc) {
+                padding: 10px;
+                width: 110px;
+                font-size: 18px;
+            }
+           /*  white-space: nowrap;
+            width: 80px;
+            border-radius: 5px;
+            @include gothic_font(medium, 12px);
             background-color: #f3cf7a;
             color: #000;
-            font-size: 12px;
 
             @media screen and(min-width:$break-pc) {
                 padding: 10px;
                 width: 110px;
                 font-size: 18px;
                 text-align: center;
-            }
+            } */
         }
 
         p {
             display: flex;
             white-space: nowrap;
             padding: 10px;
-            font-size: 15px;
+            @include gothic_font(medium, 15px);
             margin-left: 120px;
 
-            @media screen and(min-width:$break-pc) {
+
+            @include responsive(pc-screens){
                 width: 1110px;
                 padding: 5px 0 5px 60px;
                 margin-left: 0;

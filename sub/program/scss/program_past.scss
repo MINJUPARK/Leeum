@@ -20,11 +20,22 @@ main {
     .flex {
         @include responsive(pc-screens){
             display: flex;
-            padding: 0 240px;
         }
     }
     .past-program {
         margin-bottom: 20px;
+        @include responsive(pc-screens){
+            margin-bottom: 50px;
+            width: 50%;
+
+            &:first-child {
+                padding-right: 20px;
+            }
+
+            &:last-child {
+                padding-left: 20px;
+            }
+        }
         
         .image-text {
             position: relative;
@@ -35,6 +46,10 @@ main {
                 height: 110px;
                 overflow: hidden;
 
+                @include responsive(pc-screens){
+                    height: 260px;
+                }
+
                 img{
                     width: 100%;
                     border-top-left-radius: 5px;
@@ -43,21 +58,40 @@ main {
             }  
             
             .text {
-                padding: 14px 20px 55px 20px;
+                padding: 14px 20px 21px 20px;
+
+                @include responsive(pc-screens){
+                    padding: 26px 40px 40px 40px;
+                }
                 span {
                     @include gothic_font(medium, 12px); 
                     color: $yellow-brown;
                     margin-bottom: 7px;
+
+                    @include responsive(pc-screens){
+                        font-size: 18px;
+                        margin-bottom: 15px;
+                    }
                 }
                 
                 .bold {
                     @include gothic_font(semibold, 16px); 
                     margin-bottom: 20px;
+                   
+                    @include responsive(pc-screens){
+                        margin-bottom: 40px;
+                        font-size: 28px;
+                    }
+                    
                 }
     
                 .grey {
                     @include gothic_font(regular, 12px); 
                     color: $bk1;
+
+                    @include responsive(pc-screens){
+                        font-size: 16px;
+                    }
                     
                 }
     
@@ -68,11 +102,18 @@ main {
                 @include gothic_font(medium, 12px); 
                 color: $bk2;
                 text-align: center;
-                padding: 5px 20px;
+                padding: 5px 10px;
                 border: 1px solid #000;
                 border-radius: 5px;
-                bottom: 20px;
+                bottom: 13px;
                 right: 20px;
+
+                @include responsive(pc-screens){
+                    right: 40px;
+                    font-size: 16px;
+                    padding: 10px 20px;
+                    bottom: 25px;
+                }
             }
         }
 

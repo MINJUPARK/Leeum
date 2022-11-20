@@ -649,11 +649,22 @@ main h1 {
 @media screen and (min-width: 1440px) {
   main .flex {
     display: flex;
-    padding: 0 240px;
   }
 }
 main .past-program {
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .past-program {
+    margin-bottom: 50px;
+    width: 50%;
+  }
+  main .past-program:first-child {
+    padding-right: 20px;
+  }
+  main .past-program:last-child {
+    padding-left: 20px;
+  }
 }
 main .past-program .image-text {
   position: relative;
@@ -665,13 +676,23 @@ main .past-program .image-text .image {
   height: 110px;
   overflow: hidden;
 }
+@media screen and (min-width: 1440px) {
+  main .past-program .image-text .image {
+    height: 260px;
+  }
+}
 main .past-program .image-text .image img {
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 main .past-program .image-text .text {
-  padding: 14px 20px 55px 20px;
+  padding: 14px 20px 21px 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .past-program .image-text .text {
+    padding: 26px 40px 40px 40px;
+  }
 }
 main .past-program .image-text .text span {
   font-size: 12px;
@@ -679,15 +700,32 @@ main .past-program .image-text .text span {
   color: #be6a15;
   margin-bottom: 7px;
 }
+@media screen and (min-width: 1440px) {
+  main .past-program .image-text .text span {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
 main .past-program .image-text .text .bold {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1440px) {
+  main .past-program .image-text .text .bold {
+    margin-bottom: 40px;
+    font-size: 28px;
+  }
+}
 main .past-program .image-text .text .grey {
   font-size: 12px;
   font-weight: 400;
   color: #3c3c3c;
+}
+@media screen and (min-width: 1440px) {
+  main .past-program .image-text .text .grey {
+    font-size: 16px;
+  }
 }
 main .past-program .image-text a {
   position: absolute;
@@ -695,11 +733,19 @@ main .past-program .image-text a {
   font-weight: 500;
   color: #5c5c5c;
   text-align: center;
-  padding: 5px 20px;
+  padding: 5px 10px;
   border: 1px solid #000;
   border-radius: 5px;
-  bottom: 20px;
+  bottom: 13px;
   right: 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .past-program .image-text a {
+    right: 40px;
+    font-size: 16px;
+    padding: 10px 20px;
+    bottom: 25px;
+  }
 }
 
 @media screen and (min-width: 1440px) {

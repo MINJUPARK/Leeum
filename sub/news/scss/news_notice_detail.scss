@@ -15,7 +15,7 @@ header {
 main {
     .content-title {
         display: flex;
-        padding: 20px;
+        padding: 10px 0;
         text-align: center;
         border-top: 2px solid #000;
         border-bottom: 1px solid $bk4;
@@ -26,7 +26,6 @@ main {
         }
 
         span:first-child {
-            padding-left: 0;
             font-size: 14px;
             /* width: 30px; */
             @media screen and(min-width:$break-pc) {
@@ -40,41 +39,40 @@ main {
             white-space: nowrap;
             color: #fff;
             width: 80px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
             background-color: $red-brown;
-            font-size: 12px;
+            border-radius: 5px;
+            @include gothic_font(medium, 12px);
+            padding-top: 12px;
             text-align: center;
-            display: block;
 
             @media screen and(min-width:$break-pc) {
-                padding: 15px;
+                padding: 10px;
                 width: 110px;
+                margin-left: 20px;
                 font-size: 18px;
-                text-align: center;
             }
         }
+
 
         p {
             display: flex;
             white-space: nowrap;
             padding: 10px;
-            font-size: 15px;
+            @include gothic_font(medium, 17px);
 
-            @media screen and(min-width:$break-pc) {
+
+            @include responsive(pc-screens){
                 width: 1110px;
-                padding-left: 60px;
-                font-size: 26px;
-
+                margin-left: 0;
+                font-size: 22px;
             }
         }
 
         span {
             padding: 10px;
             white-space: nowrap;
-            @media screen and(min-width:$break-pc) {
+
+            @include responsive(pc-screens){
                 padding-right: 0;
                 font-size: 22px;
             }
@@ -86,9 +84,10 @@ main {
         width: 100%;
         margin-top: 20px;
 
-        @media screen and(min-width:$break-pc) {
+        @include responsive(pc-screens){
             width: 1240px;
             height: 380px;
+            padding-top: 20px;
         }
     }
 
@@ -97,13 +96,14 @@ main {
     }
 
     .text {
-        @media screen and(min-width:$break-pc) {
+        @include responsive(pc-screens){
             display: flex;
         }
         
     }
     .text > div {
-        @media screen and(min-width:$break-pc) {
+
+        @include responsive(pc-screens){
             margin-top: 60px;
         }
     }
@@ -111,15 +111,21 @@ main {
     .normal-text {
         padding-top: 20px;
 
-        @media screen and(min-width:$break-pc) {
+        @include responsive(pc-screens){
             width: 60%;
             padding: 0 80px;
             font-size: 24px;
         }
-
         
         p {
             line-height: 40px;
+            color: $bk1;
+            @include gothic_font(regular, 16px);
+
+            @include responsive(pc-screens){
+                font-size: 24px;
+            }
+
         }
     }
 
@@ -129,11 +135,23 @@ main {
         background-color: $bk6;
         line-height: 40px;
 
-        @media screen and(min-width:$break-pc) {
+
+        @include responsive(pc-screens){
             width: 480px;
             height: 116px;
             font-size: 20px;
             line-height: 65px;
+        }
+
+        p {
+            span:last-child {
+                color: $bk3;
+                @include gothic_font(regular, 15px);
+
+                @include responsive(pc-screens){
+                    font-size: 20px;
+                }
+            }
         }
 
         p:first-child {
@@ -141,14 +159,20 @@ main {
         }
 
         .first {
-            padding-right: 70px;
+            padding-right: 55px;
+            @include gothic_font(semibold, 16px);
+
+            @include responsive(pc-screens){
+                font-size: 20px;
+            }
         }
 
         .third {
-            padding-right: 30px;
+            padding-right: 20px;
+            @include gothic_font(semibold, 16px);
 
-            @media screen and(min-width:$break-pc) {
-                padding-right: 20px;      
+            @include responsive(pc-screens){
+                font-size: 20px;
             }
         }
     }
@@ -159,7 +183,8 @@ main {
         padding-left: 20px;
         border-bottom: 2px solid #000;
         padding-bottom: 40px;
-        @media screen and(min-width:$break-pc) {
+
+        @include responsive(pc-screens){
             font-size: 20px;
             padding-right: 80px;
             margin-top: -80px;
@@ -170,6 +195,11 @@ main {
             color: $yellow-brown;
             .program {
                 padding-right: 20px;
+                @include gothic_font(semibold, 15px);
+
+                @include responsive(pc-screens){
+                    font-size: 20px;
+                }
             }
 
             img {

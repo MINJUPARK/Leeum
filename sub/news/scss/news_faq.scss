@@ -17,21 +17,39 @@ main {
         display: none;
     }
 
-    ul {
-        border-bottom: 1px solid $bk4;
-    }
 
-    .text-arrow {
-        display: flex;
-        padding: 20px;
+    li {
+        border-bottom: 1px solid $bk4;
+
+        @include responsive(pc-screens){
+            width: 1440px;
+            margin: 0 auto;
+        }
 
         &:first-child {
             border-top: 1px solid $bk4;
         }
 
+    }
+
+
+    .text-arrow {
+        display: flex;
+        padding: 20px 0;
+        position: relative;
+
+        @include responsive(pc-screens){
+            padding: 40px 0;
+        }
+
+
         p {
             white-space: nowrap;
             @include gothic_font(medium, 21px);
+
+            @include responsive(pc-screens){
+                font-size: 28px;
+            }
 
             span {
                 margin-right: 10px;
@@ -40,6 +58,13 @@ main {
 
         img {
             width: 17px;
+            position: absolute;
+            right: 0;
+            top: 25px;
+
+            @include responsive(pc-screens){
+                top: 50px;
+            }
         }
         
         span {

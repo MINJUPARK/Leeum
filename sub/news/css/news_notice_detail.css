@@ -645,7 +645,7 @@ header .breadcrumb-wrap {
 
 main .content-title {
   display: flex;
-  padding: 20px;
+  padding: 10px 0;
   text-align: center;
   border-top: 2px solid #000;
   border-bottom: 1px solid #c5c5c5;
@@ -658,7 +658,6 @@ main .content-title {
   }
 }
 main .content-title span:first-child {
-  padding-left: 0;
   font-size: 14px;
   /* width: 30px; */
 }
@@ -673,34 +672,33 @@ main .content-title span.red-brown {
   white-space: nowrap;
   color: #fff;
   width: 80px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
   background-color: #ac3f21;
+  border-radius: 5px;
   font-size: 12px;
+  font-weight: 500;
+  padding-top: 12px;
   text-align: center;
-  display: block;
 }
 @media screen and (min-width: 1440px) {
   main .content-title span.red-brown {
-    padding: 15px;
+    padding: 10px;
     width: 110px;
+    margin-left: 20px;
     font-size: 18px;
-    text-align: center;
   }
 }
 main .content-title p {
   display: flex;
   white-space: nowrap;
   padding: 10px;
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: 500;
 }
 @media screen and (min-width: 1440px) {
   main .content-title p {
     width: 1110px;
-    padding-left: 60px;
-    font-size: 26px;
+    margin-left: 0;
+    font-size: 22px;
   }
 }
 main .content-title span {
@@ -721,6 +719,7 @@ main img {
   main img {
     width: 1240px;
     height: 380px;
+    padding-top: 20px;
   }
 }
 main .pic {
@@ -748,6 +747,14 @@ main .normal-text {
 }
 main .normal-text p {
   line-height: 40px;
+  color: #3c3c3c;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  main .normal-text p {
+    font-size: 24px;
+  }
 }
 main .import-text {
   margin-top: 60px;
@@ -763,18 +770,37 @@ main .import-text {
     line-height: 65px;
   }
 }
+main .import-text p span:last-child {
+  color: #acacac;
+  font-size: 15px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  main .import-text p span:last-child {
+    font-size: 20px;
+  }
+}
 main .import-text p:first-child {
   line-height: 20px;
 }
 main .import-text .first {
-  padding-right: 70px;
+  padding-right: 55px;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main .import-text .first {
+    font-size: 20px;
+  }
 }
 main .import-text .third {
-  padding-right: 30px;
+  padding-right: 20px;
+  font-size: 16px;
+  font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
   main .import-text .third {
-    padding-right: 20px;
+    font-size: 20px;
   }
 }
 main .announce {
@@ -797,6 +823,13 @@ main .announce a {
 }
 main .announce a .program {
   padding-right: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main .announce a .program {
+    font-size: 20px;
+  }
 }
 main .announce a img {
   width: 12px;

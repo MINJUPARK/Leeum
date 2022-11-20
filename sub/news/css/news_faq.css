@@ -646,26 +646,51 @@ header .breadcrumb-wrap {
 main h2 {
   display: none;
 }
-main ul {
+main li {
   border-bottom: 1px solid #c5c5c5;
+}
+@media screen and (min-width: 1440px) {
+  main li {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+main li:first-child {
+  border-top: 1px solid #c5c5c5;
 }
 main .text-arrow {
   display: flex;
-  padding: 20px;
+  padding: 20px 0;
+  position: relative;
 }
-main .text-arrow:first-child {
-  border-top: 1px solid #c5c5c5;
+@media screen and (min-width: 1440px) {
+  main .text-arrow {
+    padding: 40px 0;
+  }
 }
 main .text-arrow p {
   white-space: nowrap;
   font-size: 21px;
   font-weight: 500;
 }
+@media screen and (min-width: 1440px) {
+  main .text-arrow p {
+    font-size: 28px;
+  }
+}
 main .text-arrow p span {
   margin-right: 10px;
 }
 main .text-arrow img {
   width: 17px;
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+@media screen and (min-width: 1440px) {
+  main .text-arrow img {
+    top: 50px;
+  }
 }
 main .text-arrow span {
   color: #ac3f21;
