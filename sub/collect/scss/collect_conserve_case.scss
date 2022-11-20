@@ -375,12 +375,68 @@ main {
                         margin-top: 80px;
                         padding: 55px 120px;
                         // border: 1px solid $bk4;
-                        box-shadow: inset 0 0 0 2px $bk4;
+                        box-shadow: inset 0 0 0 1px $bk4;
                     }
                     
                     &:first-child {
                         margin-top: 0;
                     } // li:first-child
+
+                    &::before,
+                    &::after {
+                        box-sizing: inherit;
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &.locate {
+
+                        @include responsive(pc-screens) {
+
+                            &::before,
+                            &::after {
+                              border: 2px solid transparent;
+                              width: 0;
+                              height: 0;
+                            }
+                          
+                            &::before {
+                              top: 0;
+                              left: 0;
+                            }
+                          
+                            &::after {
+                              bottom: 0;
+                              right: 0;
+                            }
+                          
+                            // Hover styles
+                            &:hover::before,
+                            &:hover::after {
+                              width: 100%;
+                              height: 100%;
+                            }
+                          
+                            &:hover::before {
+                              border-top-color: $red-brown; 
+                              border-right-color: $red-brown;
+                              transition:
+                                width 0.25s ease-out,
+                                height 0.25s ease-out 0.25s;
+                            }
+                          
+                            &:hover::after {
+                              border-bottom-color: $red-brown;
+                              border-left-color: $red-brown;
+                              transition:
+                                border-color 0s ease-out 0.5s,
+                                width 0.25s ease-out 0.5s, 
+                                height 0.25s ease-out 0.75s;
+                            }
+                        }
+                    } // &.locate
         
                     .step-title {
                         display: flex;
@@ -483,17 +539,17 @@ main {
         } // conservation-process
     } // conservation-process-wrap
 
-    .page-move-wrap {
-        margin-top: 50px;
 
-        @include responsive(pc-screens) {
-            margin-top: 50px * 2;
+    section.movePage {
+        @include move_page();
+
+        .movePage-wrap {
+
+            .prev {
+                visibility: hidden;
+            }
         }
-
-        .page-move {
-
-        } // page-move
-    } // page-move-wrap
+    }
 } // main
 
 footer {
