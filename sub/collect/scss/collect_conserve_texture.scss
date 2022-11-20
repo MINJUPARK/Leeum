@@ -343,11 +343,7 @@ main {
 
         } // page-move
     } // page-move-wrap
-
-    img {
-        width: 100px;
-    }
-}
+} // main
 
 footer {
     @include footer();

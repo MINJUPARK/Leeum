@@ -951,10 +951,6 @@ main .page-move-wrap {
     margin-top: 100px;
   }
 }
-main img {
-  width: 100px;
-}
-
 @media screen and (min-width: 1440px) {
   footer.sub {
     position: static !important;
