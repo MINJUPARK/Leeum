@@ -9,7 +9,56 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_sign.jpg');
+    @include full_bg('sign_header.png');
+}
+
+main {
+
+    section.search-wrap {
+        @include section_filter();
+
+        .search-box {
+            @include filter_wrap();
+
+            .speed-search {
+                @include speed_search();
+            }
+        } // search-box
+    } // section.search-wrap
+
+    section.itemList-wrap {
+        margin-top: 80px;
+
+        .list-control {
+            @include list_control();
+        }
+
+        ul.item-box {
+            @include itemList_box();
+
+            .item {
+                width: 100%;
+
+                @include responsive(pc-screens) {
+                    width: 440px;
+                }
+
+                a {
+    
+                    .i-pic {
+                        height: calc(195px / 350px) * 100%;
+                    }
+
+                    .i-des {
+
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            } // item
+        } // ul.item-box
+    } // section.itemList-wrap
 }
 
 footer {

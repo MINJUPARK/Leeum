@@ -876,16 +876,14 @@ main .conservation-method-wrap .conservation-method ul.methods {
   }
 }
 main .conservation-method-wrap .conservation-method ul.methods li {
+  position: relative;
   margin-top: 90px;
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.methods li {
     margin-top: 80px;
     padding: 55px 120px;
-    border: 1px solid #c5c5c5;
-  }
-  main .conservation-method-wrap .conservation-method ul.methods li.locate {
-    border: 1px solid #ac3f21;
+    box-shadow: inset 0 0 0 2px #c5c5c5;
   }
 }
 main .conservation-method-wrap .conservation-method ul.methods li:first-child {
@@ -952,9 +950,6 @@ main .page-move-wrap {
   main .page-move-wrap {
     margin-top: 100px;
   }
-}
-main img {
-  width: 100px;
 }
 
 @media screen and (min-width: 1440px) {
