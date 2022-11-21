@@ -33,10 +33,14 @@ main {
                     form[name=detail] .opt-box {
 
                         .type {
-        
+                            
                             @include responsive(pc-screens) {
                                 @include flex_between_center();
                                 width: 58.18181818181818%;
+                            }
+
+                            ul.opt li {
+                                width: 25%;
                             }
                         }
         

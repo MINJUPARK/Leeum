@@ -14,6 +14,14 @@
   display: none !important;
 }
 
+.br-bar {
+  width: 3px;
+  height: 18px;
+  margin: 0 8px 3px 0;
+  vertical-align: middle;
+  background: #be6a15;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -186,15 +194,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-header:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 header a {
   color: #fff;
@@ -548,6 +547,15 @@ header .mobile-menu-popup .popup .wh-menu .opt li a:hover {
     display: none;
   }
 }
+header:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 header .sub-title {
   position: absolute;
   left: 50%;
@@ -807,7 +815,6 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
   color: #3c3c3c;
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li {
-  width: 25%;
   height: 45px;
   line-height: 45px;
   font-size: 14px;
@@ -865,13 +872,12 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
   height: 45px;
   line-height: 45px;
   padding-left: 20px;
-  background-color: #eeeeee;
   font-size: 16px;
   font-weight: 600;
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list {
   height: 125px;
-  padding: 10px 20px;
+  padding: 15px 20px;
   background: #fff;
   overflow-y: auto;
 }
@@ -904,6 +910,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
     display: inline-block;
     text-align: center;
+    margin-top: 50px;
   }
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
@@ -954,6 +961,9 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search {
     width: 58.1818181818%;
   }
 }
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li {
+  width: 25%;
+}
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .space {
     display: flex;
@@ -979,6 +989,8 @@ main section.itemList {
 main section.itemList .list-control {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
   width: 100%;
   height: 35px;
   line-height: 35px;
@@ -1003,6 +1015,20 @@ main section.itemList .list-control .count span {
   font-weight: 500;
   margin-right: 20px;
 }
+main section.itemList .list-control .sort {
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+}
+main section.itemList .list-control .sort img {
+  height: 14px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList .list-control .sort span, main section.itemList .list-control .sort img {
+    display: none;
+  }
+}
 main section.itemList .list-control .view-type {
   display: flex;
   justify-content: space-between;
@@ -1010,39 +1036,26 @@ main section.itemList .list-control .view-type {
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
-main section.itemList .list-control .view-type .sort {
-  font-size: 15px;
-  text-align: right;
-}
-main section.itemList .list-control .view-type .sort img {
-  height: 14px;
-  margin-right: 10px;
-}
-@media screen and (min-width: 1440px) {
-  main section.itemList .list-control .view-type .sort span, main section.itemList .list-control .view-type .sort img {
-    display: none;
-  }
-}
-main section.itemList .list-control .view-type .sort .sort-list {
+main section.itemList .list-control .view-type .sort-list {
   display: flex;
   justify-content: space-between;
   position: relative;
-  top: 25px;
+  top: 35px;
 }
 @media screen and (min-width: 1440px) {
-  main section.itemList .list-control .view-type .sort .sort-list {
+  main section.itemList .list-control .view-type .sort-list {
     position: static;
   }
 }
-main section.itemList .list-control .view-type .sort .sort-list li {
+main section.itemList .list-control .view-type .sort-list li {
   font-size: 14px;
   padding-left: 15px;
   color: #3c3c3c;
 }
-main section.itemList .list-control .view-type .sort .sort-list li:hover {
+main section.itemList .list-control .view-type .sort-list li:hover {
   text-decoration: underline;
 }
-main section.itemList .list-control .view-type .sort .sort-list li.on {
+main section.itemList .list-control .view-type .sort-list li.on {
   font-size: 14px;
   font-weight: 500;
   text-decoration: underline;
@@ -1073,20 +1086,40 @@ main section.itemList .item-box {
   margin-top: 50px;
 }
 main section.itemList .item-box .item {
+  position: relative;
   width: 48%;
   margin-bottom: 20px;
   border: 1px solid #d4d4d4;
   border-radius: 5px;
-}
-main section.itemList .item-box .item a {
-  display: block;
-  width: 100%;
 }
 @media screen and (min-width: 1440px) {
   main section.itemList .item-box .item {
     width: 23.5%;
     margin-bottom: 25px;
   }
+}
+main section.itemList .item-box .item .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: url("../../../image/icon_heart_motion.png") no-repeat;
+  background-position: 0 0;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  z-index: 97;
+}
+main section.itemList .item-box .item .heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
+}
+main section.itemList .item-box .item .heart.on {
+  transition-duration: 1s;
+  background-position: -1960px 0;
+}
+main section.itemList .item-box .item a {
+  display: block;
+  width: 100%;
 }
 main section.itemList .item-box .item .i-pic {
   position: relative;
@@ -1106,20 +1139,6 @@ main section.itemList .item-box .item .i-pic .bg {
      object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-}
-main section.itemList .item-box .item .i-pic .bm_btn {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 20px;
-  z-index: 1;
-}
-main section.itemList .item-box .item .i-pic .bm_btn .bookmark {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
-  opacity: 1;
-}
-main section.itemList .item-box .item .i-pic .bm_btn .bookmark.on {
-  filter: none;
 }
 main section.itemList .item-box .item .i-des {
   padding: 10px 20px 15px;
@@ -1141,10 +1160,24 @@ main section.itemList .item-box .item .i-des strong {
     font-size: 20px;
   }
 }
+main section.itemList .item-box .item .i-des p.name {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList .item-box .item .i-des p.name {
+    font-size: 15px;
+  }
+}
 main section.itemList .item-box .item .i-des p {
   margin: 5px 0 20px;
-  font-size: 13px;
   color: #5c5c5c;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   main section.itemList .item-box .item .i-des p {
