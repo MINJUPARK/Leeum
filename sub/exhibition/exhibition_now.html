@@ -212,237 +212,429 @@
         </div>
     </header>
     <main>
-        <div class="popular-exhibition">
-            <h3>10월 3주 인기전시</h3>
-            <img src="./image/current_exhibition_popular,(4).png" alt="popular">
+        <div class="container">
 
-            <p>특별프로젝트</p>
-            <p>칼레이도스코프 아이즈</p>
-            <p>2022. 09. 02. - 2022. 11. 27.</p>
-            <p>기존 전시장의 틀을 벗어난 뜻밖의 장소에서 세계 유명 현대미술 작가들의 작품을 감상할 수 있도록 하는 새로운 개념의 전시입니다. 
-                예술가들에게는 가상 세계로의 작업 확장을 통해 창작의 무한한 가능성을 열어주고, 관람객에게는 현실과 전통적인 예술 관념을 초월한 흥미로운 작품들을 
-                선보임으로써 예술을 경험하고 공유하는 방식의 전환을 도모합니다.
-            </p>
-        </div>
-
-        <h3>현재 전시</h3>
-        <div class="filter">
-            <div class="search">
-                <ul>
-                    <li>키워드 검색</li>
-                    <li>
-                        <label for="choice"></label>
-                        <select name="choice" id="choice" size="1">
-                        <optgroup label="분류"> 
-                            <option value="name" selected>이름</option>
-                            <option value="type">종류</option>
-                        </optgroup>  
-                        </select>  
-                    </li>
-                    <li>
-                        <label for="text"></label>
-                        <input type="text" placeholder="검색어를 입력하세요">
-                    </li>
-                    <li>
-                        <button>빠른 검색</button>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="filter-flexbox">
-                <ul>
-                    <li>전시종류</li>
-                    <div class="type-container">
-                        <ul>
-                            <li>기획전</li>
-                            <li>상설기획전</li>
-                            <li>상설전</li>
-                            <li>특별 프로젝트</li>
-                        </ul>
+            <div class="popular-program-wrap">
+                <h3>11월 1주 인기 프로그램</h3>
+                <div class="img-text">
+                    <div class="image">
+                        <img src="./image/current_exhibition_popular,(4).png" alt="program1">
                     </div>
-                </ul>
-
-                <ul>
-                    <li>전시장소</li>
-                    <div class="place-container">
-                        <ul>
-                            <li>M1</li>
-                            <li>M2</li>
-                            <li>로비</li>
-                            <li>아동교육문화센터</li>
-                        </ul>
-                    </div>
-                </ul>
-
-                <ul>
-                    <li>전시 형태</li>
-                    <div class="form-container">
-                        <ul>
-                            <li>AR 전시</li>
-                            <li>판소리 전시</li>
-                            <li>작품전시</li>
-                            <li>공간전시</li>
-                        </ul>
-                    </div>
-                </ul>
-            </div>
-
-            <button><img src="../../image/icon_search.svg" alt="search">상세 검색</button>
-            <button><img src="../../image/icon_reset.svg" alt="reset">초기화</button>
-        </div><!--filter-->
-
-        <div class="exhibition-list-container">
-            <div class="exhibition-number-array">
-                <ul>
-                    <li>총 9건</li>
-                    <li>최신순</li>
-                    <li>마감임박순</li>
-                    <li>예매순</li>
-                    <li><img src="../../image/icon_filter.svg" alt=""> 정렬 방식</li>
-                    <li>
-                        <label for="array"></label>
-                        <select name="array" id="array" size="1">
-                        <optgroup label="정렬">
-                            <option value="five" selected>5개씩 보기</option>
-                            <option value="all">전체 보기</option>
-                        </optgroup>  
-                        </select>
-                    </li>
-                    <li>
-                        <div class="button">
-                            <img src="../../image/icon_view_list.svg" alt="list">
-                            <img src="../../image/icon_view_gallery.svg" alt="gallery">
+                    
+                </div>
+                <div class="text-explain">
+                    <div class="text-explain-text">
+                        <div class="text">
+                            <p>특별프로젝트</p>
+                            <h3>칼레이도스코프 아이즈</h3>
+                            <p>2022. 09. 02. - 2022. 11. 27.</p>
                         </div>
-                    </li>
-                </ul>
-            </div><!--exhibition-number-array-->    
-        </div><!--exhibition-list-container-->
-
-        <div class="exhibition-list">
-            <ul>
-                <li>
-                    <div class="current-exhibition1">
-                        <img src="./image/current_exhibition(1).png" alt="current1">
-                        <ul>
-                            <li>기획전</li>
-                            <li>구름산책자</li>
-                            <li><img src="../../image/icon_bookmark.svg" alt="bookmark"></li>
-                            <li>기존 전시장의 틀을 벗어난 뜻밖의 장소에서 
-                                세계 유명 현대미술 작가들의 작품을 감상할 수 있도록 
-                                하는 새로운 개념의 전시에 주목합니다.</li>
-                            <li>2022. 09. 02. - 2023. 01. 08.</li>
-                            <li><button>예매하기</button></li>
-                        </ul>
+                        <div class="explain-text">
+                            <p>
+                                기존 전시장의 틀을 벗어난 뜻밖의 장소에서 세계 유명 현대미술 작가들의 작품을 감상할 수 있도록 하는 새로운 개념의 전시입니다. 예술가들에게는 가상 세계로의 작업 확장을 통해 창작의 무한한 가능성을 열어주고, 관람객에게는 현실과 전통적인 예술 관념을 초월한 흥미로운 작품들을 선보임으로써 예술을 경험하고 공유하는 방식의 전환을 도모합니다.
+                            </p>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <div class="current-exhibition2">
-                        <img src="./image/current_exhibition(2).png" alt="current2">
-                        <ul>
-                            <li>상설 기획전</li>
-                            <li>여월지향: 박영숙 백자</li>
-                            <li><img src="../../image/icon_bookmark.svg" alt="bookmark"></li>
-                            <li>이 전시는 ‘달항아리’를 통해 전통 공예와 현대미술을 잇고,
-                                미술의 매체로서 백자의 가능성을 탐색해간 박영숙 작가의 
-                                작품세계에 주목합니다.</li>
-                            <li>2022. 09. 02. - 2022. 11. 20.</li>
-                            <li><button>예매하기</button></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="current-exhibition3">
-                        <img src="./image/current_exhibition(3).png" alt="current3">
-                        <li>상설 기획전</li>
-                        <li>공예 지금</li>
-                        <li><img src="../../image/icon_bookmark.svg" alt="bookmark"></li>
-                        <li>이 전시에서는 전통을 기반으로 한 현대 공예 작가들의
-                            작품을 비롯해 현대 디자이너와 전통 장인의 협업으로 
-                            완성된 혁신적인 작품들을 층별로 선보입니다.</li>
-                        <li>2022. 09. 02. - 2023. 01. 29.</li>
-                        <li><button>예매하기</button></li>
-                    </div>
-                </li>
-                <li>
-                    <div class="current-exhibition4">
-                        <img src="./image/current_exhibition_popular,(4).png" alt="current4">
-                        <li>특별 프로젝트</li>
-                        <li>칼레이도스코프 아이즈</li>
-                        <li><img src="../../image/icon_bookmark.svg" alt="bookmark"></li>
-                        <li>이번 전시에서는 기존 전시장의 틀을 벗어난  뜻밖의 
-                            장소에서 세계 유명 현대미술 작가들의 증강현실 
-                            작품을 만날 수 있습니다.</li>
-                        <li>2022. 09. 02. - 2023. 01. 08.</li>
-                        <li><button>예매하기</button></li>
-                    </div>
-                </li>
-                <li>
-                    <div class="current-exhibition5">
-                        <img src="./image/current_exhibition(5).png" alt="current5">
-                        <li>특별 프로젝트</li>
-                        <li>장영규 추적자</li>
-                        <li><img src="../../image/icon_bookmark.svg" alt="bookmark"></li>
-                        <li>이 작품은 여러 스승과 제자가 부른 판소리 다섯마당의 일부와 판소리를 부르기 전에 목을 풀기 위해 부르는 짧은 노래인 단가를
-                            들려줍니다.</li>
-                        <li>2022. 09. 02. - 2023. 01. 08.</li>
-                        <li><button>예매하기</button></li>
-                    </div>
-                </li>
+                </div>
+            </div>
+    
+            <h3>현재 전시</h3>
+            <div class="filter">
+                <div class="search">
+                    <ul>
+                        <li>키워드 검색</li>
+                        <li>
+                            <label for="choice"></label>
+                            <select name="choice" id="choice" size="1">
+                            <optgroup label="분류"> 
+                                <option value="name" selected>이름</option>
+                                <option value="type">종류</option>
+                            </optgroup>  
+                            </select>  
+                        </li>
+                        <li>
+                            <label for="text"></label>
+                            <input type="text" placeholder="검색어를 입력하세요">
+                        </li>
+                        <li>
+                            <button>빠른 검색</button>
+                        </li>
+                    </ul>
+                </div>
                 
-                <button>더보기</button>
-
-                <li>
-                    <div class="current-exhibition6">
-                        <img src="./image/current_exhibition(6).png" alt="current6">
-                        <li>특별 프로젝트</li>
-                        <li>전소정: 그린스크린</li>
-                        <li><img src="../../image/icon_bookmark.svg" alt="bookmark"></li>
-                        <li> 리움 로비 공간에 놓인 미디어월을 매체이자 장치로 고려하며, 
-                            경계에 관한 감각을 다루는 세 편의 작품 <그린 스크린>(2021), 
-                            <이클립스>(2020), <먼저 온 미래>(2015)를 소개합니다.</li>
-                        <li>2022. 08. 23. - 2023. 01. 29.</li>
-                        <li><button>예매하기</button></li>
+                <div class="filter-flexbox">
+                    <ul>
+                        <li>전시종류</li>
+                        <div class="type-container">
+                            <ul>
+                                <li>기획전</li>
+                                <li>상설기획전</li>
+                                <li>상설전</li>
+                                <li>특별 프로젝트</li>
+                            </ul>
+                        </div>
+                    </ul>
+    
+                    <ul>
+                        <li>전시장소</li>
+                        <div class="place-container">
+                            <ul>
+                                <li>M1</li>
+                                <li>M2</li>
+                                <li>로비</li>
+                                <li>아동교육문화센터</li>
+                            </ul>
+                        </div>
+                    </ul>
+    
+                    <ul>
+                        <li>전시 형태</li>
+                        <div class="form-container">
+                            <ul>
+                                <li>AR 전시</li>
+                                <li>판소리 전시</li>
+                                <li>작품전시</li>
+                                <li>공간전시</li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+    
+                <button><img src="../../image/icon_search.svg" alt="search">상세 검색</button>
+                <button><img src="../../image/icon_reset.svg" alt="reset">초기화</button>
+            </div><!--filter-->
+    
+                <div class="list-control">
+                    <div class="count">
+                        <span>총 <b>9</b>건</span>
+                        
                     </div>
-                </li>
-
-                <li>
-                    <div class="current-exhibition7">
-                        <img src="./image/current_exhibition(7).png" alt="current7">
-                        <li>특별 프로젝트</li>
-                        <li>유지영: 시간들의 서랍</li>
-                        <li><img src="../../image/icon_bookmark.svg" alt="bookmark"></li>
-                        <li> 작가는 미술관의 사물에 주목하였습니다. 미술관에는 한때 사용되었던 사물들이 본래의 기능을 상실한 채 전시되어 있습니다.</li>
-                        <li>2022. 06. 21. - 2022. 12. 18.</li>
-                        <li><button>예매하기</button></li>
+                    <div class="view-type">
+                        <button class="sort">
+                            <img src="../../image/icon_filter.svg"><span>정렬 방식</span>
+                            <ul class="sort-list">
+                                <li class="on">조회순</li>
+                                <li>최근등록순</li>
+                            </ul>
+                        </button>
+                        <select name="nth-view">
+                            <option value="n-8">8개씩 보기</option>
+                            <option value="n-16">16개씩 보기</option>
+                            <option value="n-24">24개씩 보기</option>
+                        </select>
                     </div>
-                </li>
+                </div>   
 
-                <li>
-                    <div class="current-exhibition8">
-                        <img src="./image/current_exhibition(8).png" alt="current8">
-                        <li>상설전</li>
-                        <li>M1 고미술</li>
-                        <li><img src="../../image/icon_bookmark.svg" alt="bookmark"></li>
-                        <li> 리움의 고미술 소장품은 도자기, 서화, 금속공예, 불교미술부터 목가구, 민화, 
-                            민속품, 전적에 이르기까지 한국 전통미술의 모든 분야를 보여줍니다.</li>
-                        <li>2021. 10. 08. - </li>
-                        <li><button>예매하기</button></li>
-                    </div>
-                </li>
+                <div class="img-explain-date-register">
+                    <div class="container">
+                        <div class="img-text-explain">
+                            <div class="image-text">
+                                <div class="image-1">
+                                    <img src="./image/current_exhibition(1).png" alt="current1">
+                                </div>
+                
+                            </div>
 
-                <li>
-                    <div class="current-exhibition9">
-                        <img src="./image/current_exhibition(9).png" alt="current9">
-                        <li>상설전</li>
-                        <li>M2 현대미술</li>
-                        <li><img src="../../image/icon_bookmark.svg" alt="bookmark"></li>
-                        <li> 1980년대 후반부터 본격화한 외국 작품 수집은 1945년 이후의 미술에 중점을 두고, 
-                            시대정신과 미술 형식의 전개를 두루 살펴볼 수 있을 만큼 시대별로 중요한 작가들의 작품을 보여줍니다.</li>
-                        <li>2022. 09. 02. - 2022. 11. 20.</li>
-                        <li><button>예매하기</button></li>
+                            <div class="explain-date-register">
+                                <div class="explain">
+                                    <p>기획전</p>
+                                    <h2>구름산책자</h2>
+                                    <p>
+                                        기존 전시장의 틀을 벗어난 뜻밖의 장소에서 <br>
+                                        세계 유명 현대미술 작가들의 작품을 감상할 수 있도록 <br>
+                                        하는 새로운 개념의 전시에 주목합니다.
+                                    </p>
+                                </div>
+
+                                <div class="date">
+                                    <span>일시</span>
+                                    <p>2022. 09. 02. - 2023. 01. 08.</p>
+                                </div>
+
+                                <div class="request">
+                                    <p>예매하기</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </li>
-            </ul>
+                </div>
+                
+                <div class="img-explain-date-register">
+                    <div class="container">
+                        <div class="img-text-explain">
+                            <div class="image-text">
+                                <div class="image-1">
+                                    <img src="./image/current_exhibition(2).png" alt="current2">
+                                </div>
+                
+                            </div>
+
+                            <div class="explain-date-register">
+                                <div class="explain">
+                                    <p>상설 기획전</p>
+                                    <h2>여월지향: 박영숙 백자</h2>
+                                    <p>
+                                        이 전시는 ‘달항아리’를 통해 전통 공예와 대미술을 <br>
+                                        잇고, 미술의 매체로서 백자의 가능성을 탐색해간<br>
+                                        박영숙 작가의 작품세계에 주목합니다.
+                                    </p>
+                                </div>
+
+                                <div class="date">
+                                    <span>일시</span>
+                                    <p>2022. 09. 02. - 2022. 11. 20.</p>
+                                </div>
+
+                                <div class="request">
+                                    <p>예매하기</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="img-explain-date-register">
+                    <div class="container">
+                        <div class="img-text-explain">
+                            <div class="image-text">
+                                <div class="image-1">
+                                    <img src="./image/current_exhibition(3).png" alt="current3">
+                                </div>
+                
+                            </div>
+
+                            <div class="explain-date-register">
+                                <div class="explain">
+                                    <p>상설 기획전</p>
+                                    <h2>공예 지금</h2>
+                                    <p>
+                                        이 전시는 전통을 기반으로 한 현대 공예 작가들의<br>
+                                        작품을 비롯해 현대 디자이너와 전통 장인의 협업으로 <br>
+                                        혁신적인 작품들을 층별로 선보입니다.
+                                    </p>
+                                </div>
+
+                                <div class="date">
+                                    <span>일시</span>
+                                    <p>2022. 09. 02. - 2022. 11. 20.</p>
+                                </div>
+
+                                <div class="request">
+                                    <p>예매하기</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="img-explain-date-register">
+                    <div class="container">
+                        <div class="img-text-explain">
+                            <div class="image-text">
+                                <div class="image-1">
+                                    <img src="./image/current_exhibition_popular,(4).png" alt="current4">
+                                </div>
+                
+                            </div>
+
+                            <div class="explain-date-register">
+                                <div class="explain">
+                                    <p>특별 프로젝트</p>
+                                    <h2>칼레이도스코프 아이즈</h2>
+                                    <p>
+                                        이번 전시에서는 기존 전시장의 틀을 벗어난 뜻밖의<br> 
+                                        장소에서 세계 유명 현대미술 작가들의 증강현실<br> 
+                                        작품을 만날 수 있습니다.
+                                    </p>
+                                </div>
+
+                                <div class="date">
+                                    <span>일시</span>
+                                    <p>2022. 09. 02. - 2023. 01. 08.</p>
+                                </div>
+
+                                <div class="request">
+                                    <p>예매하기</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+
+                <div class="img-explain-date-register">
+                    <div class="container">
+                        <div class="img-text-explain">
+                            <div class="image-text">
+                                <div class="image-1">
+                                    <img src="./image/current_exhibition(5).png" alt="current5">
+                                </div>
+                
+                            </div>
+
+                            <div class="explain-date-register">
+                                <div class="explain">
+                                    <p>특별 프로젝트</p>
+                                    <h2>장영규 : 추적자</h2>
+                                    <p>
+                                        이 작품은 여러 스승과 제자가 부른 판소리 다섯마당의<br>
+                                         일부와 판소리를 부르기 전에 목을 풀기 위해 부르는 <br>
+                                         짧은 노래인 단가를 들려줍니다.
+                                    </p>
+                                </div>
+
+                                <div class="date">
+                                    <span>일시</span>
+                                    <p>2022. 09. 02. - 2023. 01. 08.</p>
+                                </div>
+
+                                <div class="request">
+                                    <p>예매하기</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <button>더보기</button>
+        
+                        <div class="img-explain-date-register">
+                            <div class="container">
+                                <div class="img-text-explain">
+                                    <div class="image-text">
+                                        <div class="image-1">
+                                            <img src="./image/current_exhibition(6).png" alt="current6">
+                                        </div>
+                        
+                                    </div>
+        
+                                    <div class="explain-date-register">
+                                        <div class="explain">
+                                            <p>특별 프로젝트</p>
+                                            <h2>전소정: 그린스크린</h2>
+                                            <p>
+                                                리움 로비 공간에 놓인 미디어월을 매체이자 장치로 고려하며,<br> 
+                                                경계에 관한 감각을 다루는 세 편의 작품 <그린 스크린>(2021), <br>
+                                                <이클립스>(2020), <먼저 온 미래>(2015)를 소개합니다.
+                                            </p>
+                                        </div>
+        
+                                        <div class="date">
+                                            <span>일시</span>
+                                            <p>2022. 08. 23. - 2023. 01. 29.</p>
+                                        </div>
+        
+                                        <div class="request">
+                                            <p>예매하기</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="img-explain-date-register">
+                            <div class="container">
+                                <div class="img-text-explain">
+                                    <div class="image-text">
+                                        <div class="image-1">
+                                            <img src="./image/current_exhibition(7).png" alt="current7">
+                                        </div>
+                        
+                                    </div>
+        
+                                    <div class="explain-date-register">
+                                        <div class="explain">
+                                            <p>특별 프로젝트</p>
+                                            <h2>유지영: 시간들의 서랍</h2>
+                                            <p>
+                                                작가는 미술관의 사물에 주목하였습니다. 미술관에는 한때 <br>
+                                                사용되었던 사물들이 본래의 기능을 상실한 채 전시되어 있습니다.
+                                            </p>
+                                        </div>
+        
+                                        <div class="date">
+                                            <span>일시</span>
+                                            <p>2022. 06. 21. - 2022. 12. 18.</p>
+                                        </div>
+        
+                                        <div class="request">
+                                            <p>예매하기</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="img-explain-date-register">
+                            <div class="container">
+                                <div class="img-text-explain">
+                                    <div class="image-text">
+                                        <div class="image-1">
+                                            <img src="./image/current_exhibition(8).png" alt="current8">
+                                        </div>
+                        
+                                    </div>
+        
+                                    <div class="explain-date-register">
+                                        <div class="explain">
+                                            <p>상설전</p>
+                                            <h2>M1 고미술</h2>
+                                            <p>
+                                                리움의 고미술 소장품은 도자기, 서화, 금속공예, <br>
+                                                불교미술부터 목가구, 민화, 민속품, 전적에 이르기까지<br>
+                                                한국 전통미술의 모든 분야를 보여줍니다.
+                                            </p>
+                                        </div>
+        
+                                        <div class="date">
+                                            <span>일시</span>
+                                            <p>2021. 10. 08. -</p>
+                                        </div>
+        
+                                        <div class="request">
+                                            <p>예매하기</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="img-explain-date-register">
+                            <div class="container">
+                                <div class="img-text-explain">
+                                    <div class="image-text">
+                                        <div class="image-1">
+                                            <img src="./image/current_exhibition(9).png" alt="current8">
+                                        </div>
+                        
+                                    </div>
+        
+                                    <div class="explain-date-register">
+                                        <div class="explain">
+                                            <p>상설전</p>
+                                            <h2>M2 현대미술</h2>
+                                            <p>
+                                                1980년대 후반부터 본격화한 외국 작품 수집은<br>
+                                                1945년 이후의 미술에 중점을 두고, 시대정신과 <br>
+                                                미술 형식의 전개를 두루 살펴볼 수 있을 만큼 <br>
+                                                시대별로 중요한 작가들의 작품을 보여줍니다.
+                                            </p>
+                                        </div>
+        
+                                        <div class="date">
+                                            <span>일시</span>
+                                            <p>2022. 09. 02. - 2022. 11. 20.</p>
+                                        </div>
+        
+                                        <div class="request">
+                                            <p>예매하기</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                
+
         </div>
     </main>
     <footer>
