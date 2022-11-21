@@ -2,6 +2,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 .container {
   position: relative;
   width: 100%;
@@ -12,6 +13,14 @@
 
 .hidden {
   display: none !important;
+}
+
+.br-bar {
+  width: 3px;
+  height: 18px;
+  margin: 0 8px 3px 0;
+  vertical-align: middle;
+  background: #be6a15;
 }
 
 * {
@@ -182,15 +191,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-}
-header:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
 }
 header a {
   color: #fff;
@@ -544,6 +545,161 @@ header .mobile-menu-popup .popup .wh-menu .opt li a:hover {
     display: none;
   }
 }
+header.index {
+  height: calc(100vh - 200px);
+  overflow-x: hidden;
+}
+header .main-slider-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+}
+header .main-slider-wrap .main-slider {
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+header .main-slider-wrap .main-slider .item {
+  color: #fff;
+  outline: none;
+  overflow: hidden;
+}
+header .main-slider-wrap .main-slider .item .item-con {
+  position: relative;
+  height: 100%;
+}
+header .main-slider-wrap .main-slider .item .item-con::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .main-slider-wrap .main-slider .item .item-con video {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .main-slider-wrap .main-slider .item .info-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1;
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info h3 {
+  margin: 0px;
+  color: #fff;
+  font-size: 84px;
+  font-weight: 300;
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info h5 {
+  font-size: 32px;
+  font-weight: 300;
+  padding: 10px 0 0;
+  margin: 0;
+}
+header .main-slider-wrap .main-slider .item h3 {
+  -webkit-animation: fadeOutDown 1s both;
+          animation: fadeOutDown 1s both;
+}
+header .main-slider-wrap .main-slider .item.slick-active h3 {
+  -webkit-animation: fadeInUp 1s both 1s;
+          animation: fadeInUp 1s both 1s;
+}
+header .main-slider-wrap .main-slider .item h5 {
+  -webkit-animation: fadeOutDown 1s both;
+          animation: fadeOutDown 1s both;
+}
+header .main-slider-wrap .main-slider .item.slick-active h5 {
+  -webkit-animation: fadeInUp 1s both 1.5s;
+          animation: fadeInUp 1s both 1.5s;
+}
+header .main-slider-wrap .slick-list, header .main-slider-wrap .slick-track, header .main-slider-wrap .slick-slide {
+  height: 100%;
+}
+header .main-slider-wrap .slick-arrow {
+  display: none !important;
+}
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .slick-arrow {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    font-size: 0;
+    background-color: transparent;
+    z-index: 2;
+  }
+  header .main-slider-wrap .slick-arrow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+  }
+}
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .slick-prev {
+    left: 80px;
+  }
+  header .main-slider-wrap .slick-prev::before {
+    transform: rotate(-45deg) translate(2px, 2px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .slick-next {
+    right: 80px;
+  }
+  header .main-slider-wrap .slick-next::before {
+    transform: rotate(135deg) translate(2px, 2px);
+  }
+}
+header .main-slider-wrap .slider-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+}
+header .main-slider-wrap .slider-progress span {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  mix-blend-mode: soft-light;
+  transition: all 0s linear;
+}
+header .main-slider-wrap .slider-progress span.active {
+  width: 100%;
+}
 header #logo-menu .logo a {
   background: url(../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
@@ -567,6 +723,70 @@ header #icon-menu li a.search {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+main {
+  margin-bottom: 0;
+}
+main section.infoBox .time-notice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main section.infoBox .time-notice .time-wrap, main section.infoBox .time-notice .notice-wrap {
+  width: 100%;
+  border-bottom: 1px solid #c5c5c5;
+}
+main section.infoBox .time-notice .time, main section.infoBox .time-notice .notice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+main section.infoBox .time-notice .notice .des {
+  display: flex;
+  justify-content: space-between;
+}
+main section.infoBox .time-notice .tit {
+  width: 25%;
+}
+main section.infoBox .time-notice .tit h6 {
+  display: inline-block;
+}
+main section.infoBox .time-notice .tit img {
+  height: 18px;
+  margin-right: 3px;
+}
+main section.infoBox .time-notice .des {
+  width: 70%;
+  white-space: nowrap;
+}
+main section.infoBox .time-notice .des time {
+  font-size: 16px;
+  font-weight: 600;
+}
+main section.infoBox .time-notice .des .memo {
+  font-size: 14px;
+  color: #5c5c5c;
+}
+main section.infoBox .time-notice .des .latest {
+  width: 90%;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #3c3c3c;
+  overflow: hidden;
+}
+main section.infoBox .time-notice .more-btn {
+  background: url(../image/icon_arrow_tail.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 16px;
+  height: 14px;
 }
 
 @media screen and (min-width: 1440px) {

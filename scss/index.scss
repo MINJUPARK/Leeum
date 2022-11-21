@@ -4,12 +4,166 @@
 @import './mixin.scss';
 @import './mixin_header.scss'; 
 @import './mixin_footer.scss';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 header {
     @include header_common();
+    margin-bottom: 0;
+
+    &.index {
+      height: calc(100vh - 200px); 
+      overflow-x: hidden;
+    }
+
+    .main-slider-wrap {
+      position: absolute;
+      left: 0; top: 0;
+      width: 100vw; height: 100%;
+
+      .main-slider {
+        float: left;
+        width: 100%; height: 100%;
+        overflow: hidden;
+
+        .item {
+          color: #fff;
+          outline: none;
+          overflow: hidden;
+
+          .item-con {
+            position: relative;
+            height: 100%;
+
+            &::after {
+              @include overlay_bk(0.5);
+            }
+
+            video {
+              position: absolute;
+              left: 0; top: -10px;
+              width: 100vw; height: 100vh;
+              object-fit: cover;
+            }
+          }
+
+          .info-wrap {
+            @include flex_between_center();
+            justify-content: center;
+            position: absolute;
+            left: 0; top: 0; 
+            width: 100%; height: 100%;
+            text-align: center;
+            z-index: 1;
+
+            .info {
+
+              h3 {
+                margin: 0px;
+                color: #fff;
+                font-size: 84px;
+                font-weight: 300;
+                
+              }
+
+              h5 {
+                font-size: 32px;
+                font-weight: 300;
+                padding: 10px 0 0;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .main-slider .item h3 {
+        animation: fadeOutDown 1s both;
+      }
+      .main-slider .item.slick-active h3 {
+        animation: fadeInUp 1s both 1s;
+      }
+      .main-slider .item h5 {
+        animation: fadeOutDown 1s both;
+      }
+      .main-slider .item.slick-active h5 {
+        animation: fadeInUp 1s both 1.5s;
+      }
+      
+      .slick-list, .slick-track, .slick-slide {
+        height: 100%;
+      }
+
+      .slick-arrow {
+        display: none !important;
+
+        @include responsive(pc-screens) {
+          display: block !important;
+          position: absolute;
+          top: 0; bottom: 0;
+          width: 60px; height: 60px;
+          margin: auto;
+          font-size: 0;
+          background-color: transparent;
+          z-index: 2;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            width: 20px; height: 20px;
+            margin: auto;
+            border-top: 2px solid #fff;
+            border-left: 2px solid #fff;
+          }
+        }
+      }
+
+      .slick-prev {
+
+        @include responsive(pc-screens) {
+          left: 80px;
+
+          &::before {
+            transform: rotate(-45deg) translate(2px, 2px);
+          }
+        }
+      }
+
+      .slick-next {
+
+        @include responsive(pc-screens) {
+          right: 80px; 
+
+          &::before {
+            transform: rotate(135deg) translate(2px, 2px);
+          }
+        }
+      }
+
+      .slider-progress {
+        position: absolute;
+        left: 0; bottom: 0;
+        width: 100%;
+        height: 8px;
+
+        span {
+          display: block;
+          position: absolute;
+          left: 0; bottom: 0;
+          width: 0; height: 100%;
+          background-color: #fff;
+          mix-blend-mode: soft-light;
+          transition: all 0s linear;
+
+            &.active {
+              width: 100%;
+            }
+        }
+      }
+    }
 
     #logo-menu .logo a {
-        @include full_bg('logo_leeum_horizon.svg'); 
+      @include full_bg('logo_leeum_horizon.svg'); 
     }
 
     #icon-menu li a {
@@ -17,6 +171,96 @@ header {
         &.reserve { @include full_bg('icon_reserve.svg'); }
         &.search  { @include full_bg('icon_search.svg'); }
     }
+}
+
+main {
+  margin-bottom: 0;
+
+  section.infoBox {
+    
+    .time-notice {
+      @include flex_between_center();
+      flex-wrap: wrap;
+      
+
+      .time-wrap, .notice-wrap {
+        width: 100%;
+        border-bottom: 1px solid $bk4;
+      }
+
+      .time, .notice {
+        @include flex_between_center();
+        width: 100%; height: 50px;
+        
+      }
+
+      .notice .des {
+        @include flex_between();
+      }
+
+      .tit {
+        width: 25%;
+
+        h6 {
+          display: inline-block;
+        }
+
+        img {
+          height: 18px;
+          margin-right: 3px;
+        }
+      }
+
+      .des {
+        width: 70%;
+        white-space: nowrap;
+
+        time {
+          @include gothic_font(semibold);
+        }
+
+        .memo {
+          font-size: 14px;
+          color: $bk2;
+        }
+
+        .latest {
+          width: 90%;
+          @include gothic_font(medium, 15px);
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: $bk1;
+          overflow: hidden;
+        }
+      }
+
+      .more-btn {
+        @include full_bg('icon_arrow_tail.svg', sub);
+        width: 16px; height: 14px;
+      }
+      
+    }
+  }
+
+  // section.exhibition {
+
+  // }
+
+  // section.collection {
+    
+  // }
+
+  // section.facility {
+    
+  // }
+
+  // section.program {
+    
+  // }
+
+  // section.artist {
+    
+  // }
 }
 
 footer {

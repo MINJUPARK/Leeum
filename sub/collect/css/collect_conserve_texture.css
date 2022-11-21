@@ -187,15 +187,6 @@ header {
   background-position: center;
   background-size: cover;
 }
-header:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 header a {
   color: #fff;
 }
@@ -547,6 +538,15 @@ header .mobile-menu-popup .popup .wh-menu .opt li a:hover {
   header .mobile-menu-popup {
     display: none;
   }
+}
+header:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 header .sub-title {
   position: absolute;
@@ -980,7 +980,12 @@ main .conservation-method-wrap .conservation-method ul.methods li .method-img im
   }
 }
 main section.movePage {
-  margin-top: 100px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.movePage {
+    margin-top: 100px;
+  }
 }
 main section.movePage .movePage-wrap {
   display: flex;

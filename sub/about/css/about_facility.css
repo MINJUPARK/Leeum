@@ -187,15 +187,6 @@ header {
   background-position: center;
   background-size: cover;
 }
-header:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 header a {
   color: #fff;
 }
@@ -548,6 +539,15 @@ header .mobile-menu-popup .popup .wh-menu .opt li a:hover {
     display: none;
   }
 }
+header:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 header .sub-title {
   position: absolute;
   left: 50%;
@@ -643,6 +643,9 @@ header .breadcrumb-wrap {
   }
 }
 
+main {
+  overflow-x: hidden;
+}
 main section.construction .tap-box .tap-flexbox {
   display: flex;
   justify-content: space-between;
@@ -752,32 +755,37 @@ main section.construction .M1 .sub {
   }
 }
 main section.construction .M1 .M1-constructor {
-  justify-content: center;
+  width: 190px;
+  margin: 0 auto;
 }
-main section.construction .M1 .M1-constructor img {
+main section.construction .M1 .M1-constructor .img {
   position: relative;
-  top: -80px;
-  left: 370px;
-  width: 195px;
-  height: 195px;
+  width: 0;
+  height: 140px;
+  align-items: center;
+}
+main section.construction .M1 .M1-constructor .img img {
+  position: absolute;
+  top: -60px;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1440px) {
-  main section.construction .M1 .M1-constructor img {
-    position: relative;
-    top: -250px;
-    left: 120px;
+  main section.construction .M1 .M1-constructor .img img {
     width: 400px;
     height: 400px;
+    left: -600px;
+    top: -230px;
   }
 }
 main section.construction .M1 .M1-constructor .name {
-  margin-top: -55px;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-constructor .name {
     position: relative;
-    top: -160px;
+    top: 60px;
     left: -380px;
   }
 }
@@ -818,7 +826,8 @@ main section.construction .M1 .M1-detail p:first-of-type {
     font-size: 56px;
     font-weight: 600;
     position: relative;
-    top: -444px;
+    left: -40px;
+    top: -250px;
   }
 }
 main section.construction .M1 .M1-detail p:last-of-type {
@@ -844,8 +853,8 @@ main section.construction .M1 .M1-detail p:last-of-type span {
 @media screen and (min-width: 1440px) {
   main section.construction .M1 .M1-detail p:last-of-type {
     position: relative;
-    top: -460px;
-    left: 660px;
+    top: -270px;
+    left: 620px;
     text-align: left;
     line-height: 46px;
     font-size: 22px;
@@ -853,8 +862,7 @@ main section.construction .M1 .M1-detail p:last-of-type span {
   }
 }
 main section.construction .M1 .M1-detail a {
-  position: relative;
-  left: 195px;
+  text-align: center;
   font-size: 14px;
   font-weight: 600;
   margin: 35px 0 100px 0;
@@ -864,13 +872,13 @@ main section.construction .M1 .M1-detail a {
     font-size: 20px;
     font-weight: 600;
     position: relative;
-    top: -480px;
-    left: 660px;
+    top: -280px;
+    left: -40px;
   }
 }
 main section.construction .M1 .M1-detail a img {
   position: absolute;
-  left: 290px;
+  left: 270px;
   width: 17px;
   height: 13px;
 }
@@ -881,6 +889,11 @@ main section.construction .M1 .M1-detail a img {
     position: relative;
     top: -2px;
     left: 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .M2 {
+    margin-top: 200px;
   }
 }
 main section.construction .M2 img {
@@ -917,22 +930,28 @@ main section.construction .M2 .sub {
   }
 }
 main section.construction .M2 .M2-constructor {
-  justify-content: center;
+  width: 190px;
+  margin: 0 auto;
 }
-main section.construction .M2 .M2-constructor img {
+main section.construction .M2 .M2-constructor .img {
   position: relative;
-  top: -80px;
-  left: 370px;
-  width: 195px;
-  height: 195px;
+  width: 0;
+  height: 200px;
+  align-items: center;
+}
+main section.construction .M2 .M2-constructor .img img {
+  position: absolute;
+  top: -60px;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1440px) {
-  main section.construction .M2 .M2-constructor img {
-    position: relative;
-    top: 120px;
-    left: 870px;
+  main section.construction .M2 .M2-constructor .img img {
     width: 400px;
     height: 400px;
+    top: -250px;
+    left: 300px;
   }
 }
 main section.construction .M2 .M2-constructor .name {
@@ -942,8 +961,8 @@ main section.construction .M2 .M2-constructor .name {
 @media screen and (min-width: 1440px) {
   main section.construction .M2 .M2-constructor .name {
     position: relative;
-    top: 188px;
-    left: 380px;
+    top: 43px;
+    left: 420px;
   }
 }
 main section.construction .M2 .M2-constructor .name p:first-child {
@@ -983,7 +1002,8 @@ main section.construction .M2 .M2-detail p:first-of-type {
     font-size: 56px;
     font-weight: 600;
     position: relative;
-    top: -40px;
+    top: -230px;
+    left: 40px;
   }
 }
 main section.construction .M2 .M2-detail p:last-of-type {
@@ -996,8 +1016,8 @@ main section.construction .M2 .M2-detail p:last-of-type {
 @media screen and (min-width: 1440px) {
   main section.construction .M2 .M2-detail p:last-of-type {
     position: relative;
-    top: -50px;
-    left: -660px;
+    top: -250px;
+    left: -620px;
     text-align: right;
     line-height: 46px;
     font-size: 22px;
@@ -1005,8 +1025,7 @@ main section.construction .M2 .M2-detail p:last-of-type {
   }
 }
 main section.construction .M2 .M2-detail a {
-  position: relative;
-  left: 195px;
+  text-align: center;
   font-size: 14px;
   font-weight: 600;
   margin: 35px 0 100px 0;
@@ -1016,13 +1035,13 @@ main section.construction .M2 .M2-detail a {
     font-size: 20px;
     font-weight: 600;
     position: relative;
-    top: -60px;
-    left: 660px;
+    top: -250px;
+    left: 40px;
   }
 }
 main section.construction .M2 .M2-detail a img {
   position: absolute;
-  left: 290px;
+  left: 270px;
   width: 17px;
   height: 13px;
 }
@@ -1033,6 +1052,11 @@ main section.construction .M2 .M2-detail a img {
     position: relative;
     top: 196px;
     left: 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.construction .Kid {
+    margin-top: -140px;
   }
 }
 main section.construction .Kid img {
@@ -1069,22 +1093,28 @@ main section.construction .Kid .sub {
   }
 }
 main section.construction .Kid .Kidstudy-constructor {
-  justify-content: center;
+  width: 190px;
+  margin: 0 auto;
 }
-main section.construction .Kid .Kidstudy-constructor img {
+main section.construction .Kid .Kidstudy-constructor .img {
   position: relative;
-  top: -80px;
-  left: 370px;
-  width: 195px;
-  height: 195px;
+  width: 0;
+  height: 200px;
+  align-items: center;
+}
+main section.construction .Kid .Kidstudy-constructor .img img {
+  position: absolute;
+  top: -60px;
+  width: 190px;
+  height: 190px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1440px) {
-  main section.construction .Kid .Kidstudy-constructor img {
-    position: relative;
-    top: -250px;
-    left: 120px;
+  main section.construction .Kid .Kidstudy-constructor .img img {
     width: 400px;
     height: 400px;
+    left: -600px;
+    top: -230px;
   }
 }
 main section.construction .Kid .Kidstudy-constructor .name {
@@ -1094,7 +1124,7 @@ main section.construction .Kid .Kidstudy-constructor .name {
 @media screen and (min-width: 1440px) {
   main section.construction .Kid .Kidstudy-constructor .name {
     position: relative;
-    top: -160px;
+    top: 60px;
     left: -380px;
   }
 }
@@ -1135,8 +1165,8 @@ main section.construction .Kid .Kid-detail p:first-of-type {
     font-size: 56px;
     font-weight: 600;
     position: relative;
-    top: -444px;
-    left: 100px;
+    left: 70px;
+    top: -250px;
   }
 }
 main section.construction .Kid .Kid-detail p:last-of-type {
@@ -1149,8 +1179,8 @@ main section.construction .Kid .Kid-detail p:last-of-type {
 @media screen and (min-width: 1440px) {
   main section.construction .Kid .Kid-detail p:last-of-type {
     position: relative;
-    top: -460px;
-    left: 610px;
+    top: -270px;
+    left: 580px;
     text-align: left;
     line-height: 46px;
     font-size: 22px;
@@ -1171,8 +1201,7 @@ main section.construction .Kid .Kid-detail p:last-of-type span {
   }
 }
 main section.construction .Kid .Kid-detail a {
-  position: relative;
-  left: 195px;
+  text-align: center;
   font-size: 14px;
   font-weight: 600;
   margin: 35px 0 100px 0;
@@ -1182,13 +1211,13 @@ main section.construction .Kid .Kid-detail a {
     font-size: 20px;
     font-weight: 600;
     position: relative;
-    top: -480px;
-    left: 610px;
+    top: -280px;
+    left: -80px;
   }
 }
 main section.construction .Kid .Kid-detail a img {
   position: absolute;
-  left: 290px;
+  left: 270px;
   width: 17px;
   height: 13px;
 }
@@ -1271,7 +1300,7 @@ main section.construction .container .leeumstore .leeumstore-detail-flexbox .lee
 }
 main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
   position: relative;
-  left: 195px;
+  left: 155px;
   font-size: 14px;
   font-weight: 600;
   color: #be6a15;
@@ -1367,7 +1396,7 @@ main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .C
 }
 main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
   position: relative;
-  left: 205px;
+  left: 155px;
   font-size: 14px;
   font-weight: 600;
   color: #be6a15;
@@ -1573,7 +1602,7 @@ main section.construction .container .parking .parking-detail {
 }
 main section.construction .container .parking .parking-detail a {
   position: relative;
-  left: 310px;
+  left: 260px;
   font-size: 14px;
   font-weight: 600;
   color: #be6a15;
@@ -1649,6 +1678,10 @@ main section.construction .others p:nth-of-type(2) {
     line-height: 40px;
   }
 }
+main .container .director {
+  width: 190px;
+  margin: 0 auto;
+}
 main .container .director .background {
   position: relative;
   left: 50%;
@@ -1665,8 +1698,8 @@ main .container .director .background {
 }
 main .container .director .director {
   position: absolute;
-  top: -60px;
-  left: 100px;
+  top: -100px;
+  margin-left: -40px;
   width: 300px;
   height: 549px;
 }
@@ -1674,15 +1707,15 @@ main .container .director .director {
   main .container .director .director {
     position: absolute;
     top: -200px;
-    left: 450px;
+    left: 490px;
     width: 587px;
     height: 1068px;
   }
 }
 main .container .director h3 {
   position: absolute;
-  left: 210px;
   top: 190px;
+  margin-left: 70px;
   color: #fff;
   line-height: 48px;
   font-size: 30px;
@@ -1692,6 +1725,7 @@ main .container .director h3 {
   main .container .director h3 {
     left: 670px;
     top: 350px;
+    margin-left: 0px;
     font-size: 46px;
     font-weight: 700;
     line-height: 68px;
@@ -1699,8 +1733,8 @@ main .container .director h3 {
 }
 main .container .director p {
   position: absolute;
-  left: 200px;
   top: 230px;
+  margin-left: 60px;
   color: #fff;
   line-height: 30px;
   font-size: 14px;
@@ -1710,6 +1744,7 @@ main .container .director p {
   main .container .director p {
     left: 660px;
     top: 420px;
+    margin-left: 0px;
     font-size: 20px;
     font-weight: 200;
   }
@@ -1739,8 +1774,8 @@ main .container .director .award .sub {
 }
 main .container .director .director-info {
   position: absolute;
-  left: 120px;
   top: 290px;
+  margin-left: -20px;
   line-height: 26px;
   text-align: center;
   color: #ffffff;
@@ -1765,6 +1800,7 @@ main .container .director .director-info span {
     font-size: 20px;
     font-weight: 200;
     line-height: 40px;
+    margin-left: 0px;
     left: 490px;
     top: 470px;
   }

@@ -7,18 +7,80 @@
     <link rel="icon" href="./image/favicon-light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="./image/favicon-dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css'>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
+    <script type="text/javascript" src="./js/slick.js"></script>
     <title>Leeum</title>
 </head>
 <body>
-    <header>
+    <header class="index">
+        <div class="main-slider-wrap">
+            <div class="main-slider">
+                <div class="item">
+                    <div class="item-con">
+                        <video poster="/image/index_video_poster.jpg" autoplay muted loop>
+                            <source src="http://gdurl.com/5YE3o" type="video/mp4">
+                        </video>
+                        <div class="info-wrap">
+                            <div class="info">
+                                <h3>인간, <strong>7개의 질문</strong></h3>
+                                <h5>비디오1 (대표전시)</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-con">
+                        <video autoplay muted loop>
+                            <source src="https://gdurl.com/tX_rB" type="video/mp4">
+                        </video>
+                        <div class="info-wrap">
+                            <div class="info">
+                                <h3>김수자 <strong>《호흡》작품</strong></h3>
+                                <h5>비디오2 (작가작품)</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-con">
+                        <video autoplay muted loop>
+                            <source src="https://gdurl.com/q3ak" type="video/mp4">
+                        </video>
+                        <div class="info-wrap">
+                            <div class="info">
+                                <h3>동양 고서화<strong> 보존처리 과정</strong></h3>
+                                <h5>비디오3 (보존처리)</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-con">
+                        <video autoplay muted loop>
+                            <source src="https://gdurl.com/5khc" type="video/mp4">
+                        </video>
+                        <div class="info-wrap">
+                            <div class="info">
+                                <h3>공간 <strong>레노베이션 프로젝트</strong></h3>
+                                <h5>비디오4 (리뉴얼)</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-progress">
+                <span></span>
+            </div>
+        </div>
         <div class="mobile-menu-popup">
             <div class="window">
                 <img src="./image/icon_close.svg" alt="메뉴 닫기" class="close">
                 <div class="popup">
                     <div class="bk-menu">
-                        <img src="./image/logo_leeum_typo.svg" alt="리움" class="logo">
+                        <a href="./index.html"><img src="./image/logo_leeum_typo.svg" alt="리움" class="logo"></a>
                         <ul class="icon-box">
                             <li><a href="./sub/register/register_login.html"><img src="./image/icon_user.svg">MY</a></li>
                             <li><a href="https://ticket.leeum.org/leeum/personal/exhibitList.do"><img src="./image/icon_reserve.svg">예매</a></li>
@@ -177,44 +239,101 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="sub-title">
-            <p class="eng">antique art</p>
-            <h2 class="kor">고미술</h2>
-        </div>
-        <div class="breadcrumb-wrap">
-            <div class="container">
-                <ul class="breadcrumb">
-                    <li class="home"><a href="/index.html"></a></li>
-                    <li class="loc">
-                        <div class="step">
-                            <a>소장품</a><img src="./image/icon_dropdown.svg" class="dropdown">
-                        </div>
-                        <ul class="opt">
-                            <li><a href="./sub/about/about_intro.html">리움</a></li>
-                            <li><a href="./sub/exhibition/exhibition_now.html">전시</a></li>
-                            <li><a href="./sub/collect/collect_antique.html" class="on">소장품</a></li>
-                            <li><a href="./sub/program/program_now.html">프로그램</a></li>
-                            <li><a href="./sub/artist/artist.html">작가</a></li>
-                            <li><a href="./sub/news/news_notice.html">소식</a></li>
-                        </ul>
-                    </li>
-                    <li class="loc">
-                        <div class="step">
-                            <a href="">고미술</a><img src="./image/icon_dropdown.svg" class="dropdown">
-                        </div>
-                        <ul class="opt">
-                            <li><a href="./sub/collect/collect_antique.html" class="on">고미술</a></li>
-                            <li><a href="./sub/collect/collect_modern.html">현대미술</a></li>
-                            <li><a href="./sub/collect/collect_preserve.html">보존연구</a></li>
-                            <li><a href="./sub/collect/collect_sign.html">수어해설</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div> -->
     </header>
     <main>
-        인덱스 페이지 입니다...
+        <section class="infoBox">
+            <h2>금일 운영시간 및 공지사항</h2>
+                <div class="infoBox-wrap">
+                    <div class="time-notice">
+                        <div class="time-wrap">
+                            <div class="container">
+                                <div class="time">
+                                    <div class="tit">
+                                        <img src="./image/icon_clock.svg" alt="시계 아이콘">
+                                        <strong>운영시간</strong>
+                                    </div>
+                                    <div class="des">
+                                        <time>10:00 ~ 18:00</time>
+                                        <span class="memo">(M2 현대미술 상설전 휴관)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notice-wrap">
+                            <div class="container">
+                                <div class="notice">
+                                    <div class="tit">
+                                        <img src="./image/icon_speaker.svg" alt="스피커 아이콘">
+                                        <strong>공지사항</strong>
+                                    </div>
+                                    <div class="des">
+                                        <a href="./sub/news/news_notice_detail.html">강당라운지 《장영규: 추종자》 관람 제한 안내 (10/15 ~ 10/20)</a>
+                                        <button type="button" class="more-btn"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="exhibition">
+            <h2>전시</h2>
+            <div class="container">
+                <div class="exhibition-wrap">
+                    <div class="title-box center">
+                        <h1>exhibition</h1>
+                        <p>고품격 소장품을 바탕으로 리움만의 수준 높은 전시</p>
+                        <button type="button" class="more-btn">더보기<img src="./image/icon_arrow_tail.svg" alt="더보기"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="collection">
+            <h2>소장품</h2>
+            <div class="container">
+                <div class="collection-wrap">
+                    <div class="title-box left">
+                        <h1>collection</h1>
+                        <p>명품 수집을 넘어 명장 · 명작을 발굴한 리움의 소장품</p>
+                        <button type="button" class="more-btn">더보기<img src="./image/icon_arrow_tail.svg" alt="더보기"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="facility">
+            <h2>달라진 리움</h2>
+            <div class="container">
+                <div class="facility-wrap">
+                    <h1>달라진 리움</h1>
+                    <p>재개관과 함께 돌아온 새로운 MI, 그리고 공간</p>
+                    <button type="button" class="more-btn">더 알아보기<img src="./image/icon_arrow_tail.svg" alt="더 알아보기 아이콘"></button>
+                </div>
+            </div>
+        </section>
+        <section class="program">
+            <h2>프로그램</h2>
+            <div class="container">
+                <div class="program-wrap">
+                    <div class="title-box left">
+                        <h1>program</h1>
+                        <p>관람객과 한층 더 가까이, 리움이 준비한 특별 강좌</p>
+                        <button type="button" class="more-btn">더보기<img src="./image/icon_arrow_tail.svg" alt="더보기"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="artist">
+            <h2>프로그램</h2>
+            <div class="container">
+                <div class="artist-wrap">
+                    <div class="title-box center">
+                        <h1>artist</h1>
+                        <p>리움이 주목한 전시 · 소장 작가들의 생생한 인터뷰</p>
+                        <button type="button" class="more-btn">더보기<img src="./image/icon_arrow_tail.svg" alt="더보기"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="sitemap-banner-wrap">

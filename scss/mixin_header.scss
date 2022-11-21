@@ -3,11 +3,7 @@
     position: relative;
     height: 280px;
     padding-top: 30px;
-
-    &:before {
-        @include overlay_bk(0.5);
-    }
-
+    
     a { 
         color: #fff; 
     }
@@ -336,7 +332,11 @@
 }
 
 @mixin header_sub() {
-    
+
+    &:before {
+        @include overlay_bk(0.5);
+    }
+
     .sub-title {
         @include element_center();
         text-align: center;

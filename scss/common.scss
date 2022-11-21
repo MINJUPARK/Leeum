@@ -15,6 +15,13 @@
     display: none !important;
 }
 
+.br-bar {
+    width: 3px; height: 18px;
+    margin: 0 8px 3px 0;
+    vertical-align: middle;
+    background: $yellow-brown;
+}
+
 * {
     margin: 0;
     padding: 0;
