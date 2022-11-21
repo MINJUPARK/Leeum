@@ -20,7 +20,7 @@ main {
         @include detail_info();
 
         .item-wrap {
-
+            
             .i-slide {
 
                 @include responsive(pc-screens) {
@@ -31,31 +31,42 @@ main {
                     height: auto;
         
                     video {
-                        width: 100%;
+                        width: 100%; height: 280px;
+                        background: #000;
+                        object-fit: cover;
+
+                        @include responsive(pc-screens) {
+                            height: auto;
+                            background: transparent;
+                            object-fit: initial;
+                        }
                     }
                 }
             }
 
             .i-des {
 
-                .loc-icon .loc-box {
-                    display: flex;
-                    column-gap: 15px;
-    
-                    .loc div {
-
-                        &.tag {
-                            width: 50px;
-                        }
-    
-                        &:last-child {
-                            width: calc(80px - 50px);
-                        }
-                    }
-                }
-
                 @include responsive(pc-screens) {
                     width: 35%;
+                }
+
+                .loc-icon {
+
+                    .loc-box {
+                        display: flex;
+                        column-gap: 15px;
+        
+                        .loc div {
+    
+                            &.tag {
+                                width: 50px;
+                            }
+        
+                            &:last-child {
+                                width: calc(80px - 50px);
+                            }
+                        }
+                    }
                 }
     
                 .tit-exp {
@@ -65,7 +76,7 @@ main {
                         padding: 0 10px;
                     }
 
-                    .tit {
+                    .tit * {
                         text-align: center;
     
                         @include responsive(pc-screens) {
@@ -129,11 +140,11 @@ main {
                     
                     p {
                         @include content_align(justify);
-                        display: inline;
-
+                        
                         @include responsive(pc-screens) {
                             width: 50%;
                             font-size: 18px;
+                            text-indent: 35px;
                         }
                     }
                 }
@@ -143,28 +154,18 @@ main {
 
     section.work {
 
-        .exhibition-wrap h6 {
-            margin-top: 60px;
-        }
+        .work-wrap {
 
-        .swiper {
-            overflow: visible;
-            
-            @include responsive(pc-screens) {
-                overflow: hidden;
-            }
+            &:last-child { margin-top: 60px; }
 
-            .swiper-slide {
-                @include flex_between_center();
-                width: 45% !important;
-                margin-right: 15px !important;
+            h6 {
 
                 @include responsive(pc-screens) {
-                    width: 23.5% !important;
+                    font-size: $h5;
                 }
             }
         }
-        
+
         .item-box {
             @include itemList_box();
             flex-wrap: nowrap;
@@ -173,6 +174,10 @@ main {
             @include responsive(pc-screens) {
                 justify-content: flex-start;
             }
+        }
+
+        .swiper {
+            @include work_swiper();
         }
     }
 

@@ -38,6 +38,10 @@ main {
             @include responsive(pc-screens) {
                 justify-content: flex-start;
             }
+
+            .item.ac {
+                margin-right: 15px;
+            }
         }
 
         .swiper {

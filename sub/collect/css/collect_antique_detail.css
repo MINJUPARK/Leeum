@@ -365,16 +365,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -778,8 +769,7 @@ main section.info .item-wrap .i-slide .main-pic {
 main section.info .item-wrap .i-slide .main-pic img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-slide .main-pic img {
@@ -800,10 +790,8 @@ main section.info .item-wrap .i-slide .sub-pic {
   main section.info .item-wrap .i-slide .sub-pic img {
     width: 30%;
     border-radius: 5px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0 -35px;
-       object-position: 0 -35px;
+    object-fit: cover;
+    object-position: 0 -35px;
   }
   main section.info .item-wrap .i-slide .sub-pic img:not(:first-child) {
     opacity: 0.4;
@@ -915,7 +903,6 @@ main section.similarItem .item-box .item {
   main section.similarItem .item-box .item {
     width: 23.5%;
     margin-bottom: 25px;
-    margin-right: 15px;
   }
 }
 main section.similarItem .item-box .item .heart {
@@ -955,8 +942,7 @@ main section.similarItem .item-box .item .i-pic {
 main section.similarItem .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -1402,4 +1388,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=collect_antique_detail.css.map */
+}

@@ -365,16 +365,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -704,15 +695,6 @@ main section.intro .intro-wrap .preview {
   margin-left: -50vw;
   margin-right: -50vw;
 }
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-2712px);
-    will-change: transform;
-  }
-}
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -752,8 +734,7 @@ main section.intro .intro-wrap .preview .slider .slide-track {
   display: flex;
   width: 5424px;
   height: 400px;
-  -webkit-animation: scroll 20s linear infinite;
-          animation: scroll 20s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 main section.intro .intro-wrap .preview .slider .slide-track .slide {
   display: flex;
@@ -1061,12 +1042,13 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
     display: inline-block;
     text-align: center;
+    margin-top: 50px;
   }
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
@@ -1215,8 +1197,7 @@ main section.artistList .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 main section.artistList .list-control .view-type .sort-list {
   display: flex;
@@ -1281,7 +1262,6 @@ main section.artistList .item-box .item {
   main section.artistList .item-box .item {
     width: 23.5%;
     margin-bottom: 25px;
-    margin-right: 15px;
   }
 }
 main section.artistList .item-box .item .heart {
@@ -1321,8 +1301,7 @@ main section.artistList .item-box .item .i-pic {
 main section.artistList .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -1430,6 +1409,7 @@ main section.artistList .item-box::after {
   width: 100%;
   height: 310px;
   background: linear-gradient(to bottom, hsla(0deg, 0%, 100%, 0) 0%, hsla(0deg, 0%, 100%, 0.187) 1.3%, hsla(0deg, 0%, 100%, 0.349) 4.9%, hsla(0deg, 0%, 100%, 0.488) 10.4%, hsla(0deg, 0%, 100%, 0.606) 17.5%, hsla(0deg, 0%, 100%, 0.704) 25.9%, hsla(0deg, 0%, 100%, 0.784) 35.2%, hsla(0deg, 0%, 100%, 0.848) 45%, hsla(0deg, 0%, 100%, 0.898) 55%, hsla(0deg, 0%, 100%, 0.936) 64.8%, hsla(0deg, 0%, 100%, 0.963) 74.1%, hsla(0deg, 0%, 100%, 0.981) 82.5%, hsla(0deg, 0%, 100%, 0.992) 89.6%, hsla(0deg, 0%, 100%, 0.998) 95.1%, hsl(0deg, 0%, 100%) 98.7%, hsl(0deg, 0%, 100%) 100%);
+  z-index: 2;
 }
 main section.artistList .item-box .item {
   border: 0;
@@ -1448,6 +1428,75 @@ main section.artistList .item-box .item a {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+}
+main section.artistList .item-box .item a.hve {
+  position: relative;
+}
+main section.artistList .item-box .item a.hve::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 0) 0%, hsla(0deg, 0%, 0%, 0.01) 5.6%, hsla(0deg, 0%, 0%, 0.037) 12.4%, hsla(0deg, 0%, 0%, 0.079) 20%, hsla(0deg, 0%, 0%, 0.135) 28.3%, hsla(0deg, 0%, 0%, 0.201) 37%, hsla(0deg, 0%, 0%, 0.277) 46%, hsla(0deg, 0%, 0%, 0.359) 55%, hsla(0deg, 0%, 0%, 0.446) 63.7%, hsla(0deg, 0%, 0%, 0.536) 72%, hsla(0deg, 0%, 0%, 0.625) 79.6%, hsla(0deg, 0%, 0%, 0.713) 86.4%, hsla(0deg, 0%, 0%, 0.796) 92%, hsla(0deg, 0%, 0%, 0.873) 96.3%, hsla(0deg, 0%, 0%, 0.942) 99%, hsl(0deg, 0%, 0%) 100%);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: bottom 0.3s;
+  z-index: 2;
+}
+main section.artistList .item-box .item a.hve .i-des {
+  margin-bottom: 10px;
+  z-index: 3;
+}
+@media screen and (min-width: 1440px) {
+  main section.artistList .item-box .item a.hve {
+    height: 480px;
+  }
+  main section.artistList .item-box .item a.hve:hover:before {
+    bottom: 0;
+  }
+  main section.artistList .item-box .item a.hve:hover .bg {
+    border-radius: 5px;
+    transform: scale(1.3);
+    filter: grayscale(100);
+  }
+  main section.artistList .item-box .item a.hve:hover h6 {
+    bottom: 20px;
+    transform: translate3d(0, 10px, 0);
+  }
+  main section.artistList .item-box .item a.hve:hover span {
+    bottom: 30px;
+    transform: translate3d(0, 20px, 0);
+  }
+  main section.artistList .item-box .item a.hve:hover p {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  main section.artistList .item-box .item a.hve .bg {
+    transition: all 0.3s;
+  }
+  main section.artistList .item-box .item a.hve h6, main section.artistList .item-box .item a.hve span, main section.artistList .item-box .item a.hve p {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    transition: opacity 0.2s, transform 0.3s;
+    z-index: 2;
+  }
+  main section.artistList .item-box .item a.hve h6 {
+    top: 66%;
+    transform: translate3d(0, 60px, 0);
+  }
+  main section.artistList .item-box .item a.hve span {
+    top: 70%;
+    transform: translate3d(0, 70px, 0);
+  }
+  main section.artistList .item-box .item a.hve p {
+    top: 85%;
+    transform: translate3d(0, 10px, 0);
+    opacity: 0;
   }
 }
 main section.artistList .item-box .item .i-pic {
@@ -1498,79 +1547,11 @@ main section.artistList .item-box .item .i-des p {
     color: #fff;
   }
 }
-main section.artistList .hve {
-  position: relative;
-}
-main section.artistList .hve::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 0) 0%, hsla(0deg, 0%, 0%, 0.01) 5.6%, hsla(0deg, 0%, 0%, 0.037) 12.4%, hsla(0deg, 0%, 0%, 0.079) 20%, hsla(0deg, 0%, 0%, 0.135) 28.3%, hsla(0deg, 0%, 0%, 0.201) 37%, hsla(0deg, 0%, 0%, 0.277) 46%, hsla(0deg, 0%, 0%, 0.359) 55%, hsla(0deg, 0%, 0%, 0.446) 63.7%, hsla(0deg, 0%, 0%, 0.536) 72%, hsla(0deg, 0%, 0%, 0.625) 79.6%, hsla(0deg, 0%, 0%, 0.713) 86.4%, hsla(0deg, 0%, 0%, 0.796) 92%, hsla(0deg, 0%, 0%, 0.873) 96.3%, hsla(0deg, 0%, 0%, 0.942) 99%, hsl(0deg, 0%, 0%) 100%);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  transition: bottom 0.3s;
-  z-index: 2;
-}
-main section.artistList .hve .i-des {
-  margin-bottom: 10px;
-  z-index: 3;
-}
-@media screen and (min-width: 1440px) {
-  main section.artistList .hve {
-    height: 480px;
-  }
-  main section.artistList .hve:hover:before {
-    bottom: 0;
-  }
-  main section.artistList .hve:hover .bg {
-    border-radius: 5px;
-    transform: scale(1.3);
-    filter: grayscale(100);
-  }
-  main section.artistList .hve:hover h6 {
-    bottom: 20px;
-    transform: translate3d(0, 10px, 0);
-  }
-  main section.artistList .hve:hover span {
-    bottom: 30px;
-    transform: translate3d(0, 20px, 0);
-  }
-  main section.artistList .hve:hover p {
-    opacity: 1;
-    transform: translate3d(0, -20px, 0);
-  }
-  main section.artistList .hve .bg {
-    transition: all 0.3s;
-  }
-  main section.artistList .hve h6, main section.artistList .hve span, main section.artistList .hve p {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    transition: opacity 0.2s, transform 0.3s;
-    z-index: 2;
-  }
-  main section.artistList .hve h6 {
-    top: 66%;
-    transform: translate3d(0, 60px, 0);
-  }
-  main section.artistList .hve span {
-    top: 70%;
-    transform: translate3d(0, 70px, 0);
-  }
-  main section.artistList .hve p {
-    top: 85%;
-    transform: translate3d(0, 10px, 0);
-    opacity: 0;
-  }
-}
 main section.artistList .more-btn {
   position: relative;
   top: -60px;
   text-align: center;
+  z-index: 2;
 }
 main section.artistList .more-btn button {
   font-size: 14px;
@@ -1865,4 +1846,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=artist.css.map */
+}

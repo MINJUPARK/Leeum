@@ -365,16 +365,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -778,8 +769,7 @@ main section.info .item-wrap .i-slide .main-pic {
 main section.info .item-wrap .i-slide .main-pic img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-slide .main-pic img {
@@ -800,10 +790,8 @@ main section.info .item-wrap .i-slide .sub-pic {
   main section.info .item-wrap .i-slide .sub-pic img {
     width: 30%;
     border-radius: 5px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0 -35px;
-       object-position: 0 -35px;
+    object-fit: cover;
+    object-position: 0 -35px;
   }
   main section.info .item-wrap .i-slide .sub-pic img:not(:first-child) {
     opacity: 0.4;
@@ -906,22 +894,31 @@ main section.info .item-wrap .i-slide .main-pic {
 }
 main section.info .item-wrap .i-slide .main-pic video {
   width: 100%;
+  height: 280px;
+  background: #000;
+  object-fit: cover;
+}
+@media screen and (min-width: 1440px) {
+  main section.info .item-wrap .i-slide .main-pic video {
+    height: auto;
+    background: transparent;
+    object-fit: initial;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.info .item-wrap .i-des {
+    width: 35%;
+  }
 }
 main section.info .item-wrap .i-des .loc-icon .loc-box {
   display: flex;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 main section.info .item-wrap .i-des .loc-icon .loc-box .loc div.tag {
   width: 50px;
 }
 main section.info .item-wrap .i-des .loc-icon .loc-box .loc div:last-child {
   width: 30px;
-}
-@media screen and (min-width: 1440px) {
-  main section.info .item-wrap .i-des {
-    width: 35%;
-  }
 }
 main section.info .item-wrap .i-des .tit-exp {
   margin-bottom: 50px;
@@ -931,11 +928,11 @@ main section.info .item-wrap .i-des .tit-exp {
     padding: 0 10px;
   }
 }
-main section.info .item-wrap .i-des .tit-exp .tit {
+main section.info .item-wrap .i-des .tit-exp .tit * {
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
-  main section.info .item-wrap .i-des .tit-exp .tit {
+  main section.info .item-wrap .i-des .tit-exp .tit * {
     text-align: left;
   }
 }
@@ -975,43 +972,27 @@ main section.info .item-wrap .interview .question .nextline {
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .interview .answer {
     display: flex;
-    -moz-column-gap: 3%;
-         column-gap: 3%;
+    column-gap: 3%;
   }
 }
 main section.info .item-wrap .interview .answer p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
-  display: inline;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .interview .answer p {
     width: 50%;
     font-size: 18px;
+    text-indent: 35px;
   }
 }
-main section.work .exhibition-wrap h6 {
+main section.work .work-wrap:last-child {
   margin-top: 60px;
 }
-main section.work .swiper {
-  overflow: visible;
-}
 @media screen and (min-width: 1440px) {
-  main section.work .swiper {
-    overflow: hidden;
-  }
-}
-main section.work .swiper .swiper-slide {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 45% !important;
-  margin-right: 15px !important;
-}
-@media screen and (min-width: 1440px) {
-  main section.work .swiper .swiper-slide {
-    width: 23.5% !important;
+  main section.work .work-wrap h6 {
+    font-size: 22px;
   }
 }
 main section.work .item-box {
@@ -1034,7 +1015,6 @@ main section.work .item-box .item {
   main section.work .item-box .item {
     width: 23.5%;
     margin-bottom: 25px;
-    margin-right: 15px;
   }
 }
 main section.work .item-box .item .heart {
@@ -1074,8 +1054,7 @@ main section.work .item-box .item .i-pic {
 main section.work .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -1178,6 +1157,21 @@ main section.work .item-box .item .i-des .loc div:last-child {
 @media screen and (min-width: 1440px) {
   main section.work .item-box {
     justify-content: flex-start;
+  }
+}
+main section.work .swiper {
+  overflow: visible;
+}
+main section.work .swiper .swiper-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45% !important;
+  margin-right: 15px !important;
+}
+@media screen and (min-width: 1440px) {
+  main section.work .swiper .swiper-slide {
+    width: 23.5% !important;
   }
 }
 main section.movePage {
@@ -1526,4 +1520,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=artist_detail.css.map */
+}
