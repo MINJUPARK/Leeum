@@ -59,6 +59,8 @@ main {
     }
 
     .r-d {
+        margin-bottom: 60px;
+
         @include responsive(pc-screens){
             position: absolute;
             margin-left: 1180px;
@@ -91,7 +93,7 @@ main {
     
             .content {
                 span {
-                    @include gothic_font(semibold, 15px);
+                    @include gothic_font(semibold, 18px);
                     padding-top: 20px;
 
                     @include responsive(pc-screens){
@@ -100,8 +102,9 @@ main {
                 }
                 
                 p {
-                    padding: 20px 0;
-                    border-bottom: 1px solid $bk4;
+                    // font-size: 16x;
+                    padding: 15px 0 25px 0;
+                    border-bottom: 1px solid $bk5;
 
                     @include responsive(pc-screens){
                         @include gothic_font(regular, 26px);
@@ -125,79 +128,12 @@ main {
             margin-left: 240px;
         }
 
-        .outline {
+        .content {
             text-align: justify;
-    
-            span {
-                margin-top: 40px;
-                margin-bottom: 20px;
-                @include gothic_font(semibold, 18px);
-
-                @include responsive(pc-screens){
-                    font-size: 28px;
-                }
-            }
-    
-            .outline1 {
-                margin-bottom: 30px;
-                line-height: 28px;;
-
-                @include responsive(pc-screens){
-                    @include gothic_font(regular, 22px);
-                    color: $bk1;
-                    line-height: 44px;
-
-                }
-            }   
-    
-            .outline2 {
-                line-height: 28px;
-                margin-bottom: 40px;
-
-                @include responsive(pc-screens){
-                    @include gothic_font(regular, 22px);
-                    color: $bk1;
-                    line-height: 44px;
-                }
-            } 
-        }
-    
-        .intro {
+            margin-top: 60px;
+            
             span {
                 @include gothic_font(semibold, 18px);
-                margin-bottom: 30px;
-                
-                @include responsive(pc-screens){
-                    font-size: 28px;
-                }
-            }
-    
-            .first {
-                @include gothic_font(semibold);
-                margin-bottom: 20px;
-
-                @include responsive(pc-screens){
-                    @include gothic_font(semibold, 24px);
-                    
-                }
-            }
-    
-            .second {
-                line-height: 28px;
-                margin-bottom: 40px;
-
-                @include responsive(pc-screens){
-                    @include gothic_font(regular, 22px);
-                    color: $bk1;
-                    line-height: 44px;
-                }
-            }
-        }
-    
-        .precaution {
-            span {
-                @include gothic_font(semibold, 18px);
-                margin-bottom: 20px;
 
                 @include responsive(pc-screens){
                     font-size: 28px;
@@ -205,17 +141,116 @@ main {
             }
     
             p {
-                line-height: 28px;
-                margin-bottom: 20px;
+                @include content_align();
+                // line-height: 28px;
+                margin-bottom: 30px;
 
                 @include responsive(pc-screens){
                     @include gothic_font(regular, 22px);
                     color: $bk1;
-                    line-height: 44px;
-                    width: 620px;
+                    // line-height: 44px;
+                }
+
+                &.title {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &.intro {
+
+                .first {
+                    @include gothic_font(semibold);
+                    margin-bottom: 20px;
+
+                    @include responsive(pc-screens){
+                        @include gothic_font(semibold, 24px);
+                        
+                    }
+                }
+            }
+
+            &.precaution {
+                p {
+                    margin-bottom: 10px;
+                    line-height: 28px;
+    
+                    @include responsive(pc-screens){
+                        width: 620px;
+                        @include gothic_font(regular, 22px);
+                    }
                 }
             }
         }
+
+        // .outline {
+        //     text-align: justify;
+    
+        //     .outline2 {
+        //         line-height: 28px;
+        //         margin-bottom: 40px;
+
+        //         @include responsive(pc-screens){
+        //             @include gothic_font(regular, 22px);
+        //             color: $bk1;
+        //             line-height: 44px;
+        //         }
+        //     } 
+        // }
+    
+        // .intro {
+        //     span {
+        //         @include gothic_font(semibold, 18px);
+        //         margin-bottom: 30px;
+                
+        //         @include responsive(pc-screens){
+        //             font-size: 28px;
+        //         }
+        //     }
+    
+        //     .first {
+        //         @include gothic_font(semibold);
+        //         margin-bottom: 20px;
+
+        //         @include responsive(pc-screens){
+        //             @include gothic_font(semibold, 24px);
+                    
+        //         }
+        //     }
+    
+        //     .second {
+        //         line-height: 28px;
+        //         margin-bottom: 40px;
+
+        //         @include responsive(pc-screens){
+        //             @include gothic_font(regular, 22px);
+        //             color: $bk1;
+        //             line-height: 44px;
+        //         }
+        //     }
+        // }
+    
+        // .precaution {
+        //     span {
+        //         @include gothic_font(semibold, 18px);
+        //         margin-bottom: 20px;
+
+        //         @include responsive(pc-screens){
+        //             font-size: 28px;
+        //         }
+        //     }
+    
+        //     p {
+        //         line-height: 28px;
+        //         margin-bottom: 10px;
+
+        //         @include responsive(pc-screens){
+        //             @include gothic_font(regular, 22px);
+        //             color: $bk1;
+        //             // line-height: 44px;
+        //             width: 620px;
+        //         }
+        //     }
+        // }
     }
 }
 

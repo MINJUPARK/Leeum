@@ -12,6 +12,66 @@ header {
     @include full_bg('header_data.jpg');
 }
 
+main {
+    h1 {
+        display: none;
+    }
+
+    .image {
+        h2 {
+            text-align: center;
+            @include gothic_font(semibold, 20px); 
+        }
+
+        .plus {
+            display: flex;
+            img {
+                width: 15px; height: 11px;
+            }
+        }
+
+        .flex {
+            display: flex;
+            margin-bottom: 40px;
+
+            .workbook{
+                text-align: center;
+                img:first-child {
+                    width: 170px;
+                    height: 237px;
+                }
+
+                span {
+                    @include gothic_font(semibold, 17px);
+                    margin-top: 20px;
+                }
+
+                p {
+                    @include gothic_font(light, 13px);
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    color: $bk2;
+                }
+
+                a {
+                    @include gothic_font(medium, 12px);
+                    color: $bk1;
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                    padding: 10px 40px;
+                }
+
+                img:last-child {
+                    width: 11px;
+                    height: 11px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+    }
+}
+
 footer {
     @include footer();
 }

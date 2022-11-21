@@ -14,6 +14,14 @@
   display: none !important;
 }
 
+.br-bar {
+  width: 3px;
+  height: 18px;
+  margin: 0 8px 3px 0;
+  vertical-align: middle;
+  background: #be6a15;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -685,6 +693,9 @@ main .text h2 {
     font-size: 46px;
   }
 }
+main .r-d {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 1440px) {
   main .r-d {
     position: absolute;
@@ -714,7 +725,7 @@ main .r-d .request-desc {
   padding: 30px 0;
 }
 main .r-d .request-desc .content span {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   padding-top: 20px;
 }
@@ -724,8 +735,8 @@ main .r-d .request-desc .content span {
   }
 }
 main .r-d .request-desc .content p {
-  padding: 20px 0;
-  border-bottom: 1px solid #c5c5c5;
+  padding: 15px 0 25px 0;
+  border-bottom: 1px solid #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
   main .r-d .request-desc .content p {
@@ -744,98 +755,55 @@ main .r-d .request-desc .content:last-child p {
     margin-left: 240px;
   }
 }
-main .o-i-p .outline {
+main .o-i-p .content {
   text-align: justify;
+  margin-top: 60px;
 }
-main .o-i-p .outline span {
-  margin-top: 40px;
-  margin-bottom: 20px;
+main .o-i-p .content span {
   font-size: 18px;
   font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
-  main .o-i-p .outline span {
+  main .o-i-p .content span {
     font-size: 28px;
   }
 }
-main .o-i-p .outline .outline1 {
-  margin-bottom: 30px;
-  line-height: 28px;
-}
-@media screen and (min-width: 1440px) {
-  main .o-i-p .outline .outline1 {
-    font-size: 22px;
-    font-weight: 400;
-    color: #3c3c3c;
-    line-height: 44px;
-  }
-}
-main .o-i-p .outline .outline2 {
-  line-height: 28px;
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 1440px) {
-  main .o-i-p .outline .outline2 {
-    font-size: 22px;
-    font-weight: 400;
-    color: #3c3c3c;
-    line-height: 44px;
-  }
-}
-main .o-i-p .intro span {
-  font-size: 18px;
-  font-weight: 600;
+main .o-i-p .content p {
+  text-align: left;
+  line-height: 2em;
+  color: #3c3c3c;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1440px) {
-  main .o-i-p .intro span {
-    font-size: 28px;
+  main .o-i-p .content p {
+    font-size: 22px;
+    font-weight: 400;
+    color: #3c3c3c;
   }
 }
-main .o-i-p .intro .first {
+main .o-i-p .content p.title {
+  margin-bottom: 10px;
+}
+main .o-i-p .content.intro .first {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main .o-i-p .intro .first {
+  main .o-i-p .content.intro .first {
     font-size: 24px;
     font-weight: 600;
   }
 }
-main .o-i-p .intro .second {
+main .o-i-p .content.precaution p {
+  margin-bottom: 10px;
   line-height: 28px;
-  margin-bottom: 40px;
 }
 @media screen and (min-width: 1440px) {
-  main .o-i-p .intro .second {
-    font-size: 22px;
-    font-weight: 400;
-    color: #3c3c3c;
-    line-height: 44px;
-  }
-}
-main .o-i-p .precaution span {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 1440px) {
-  main .o-i-p .precaution span {
-    font-size: 28px;
-  }
-}
-main .o-i-p .precaution p {
-  line-height: 28px;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 1440px) {
-  main .o-i-p .precaution p {
-    font-size: 22px;
-    font-weight: 400;
-    color: #3c3c3c;
-    line-height: 44px;
+  main .o-i-p .content.precaution p {
     width: 620px;
+    font-size: 22px;
+    font-weight: 400;
   }
 }
 

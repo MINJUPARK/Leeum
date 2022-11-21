@@ -904,7 +904,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
@@ -1096,6 +1096,7 @@ main section.itemList .item-box .item {
   main section.itemList .item-box .item {
     width: 23.5%;
     margin-bottom: 25px;
+    margin-right: 15px;
   }
 }
 main section.itemList .item-box .item .heart {

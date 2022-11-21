@@ -9,10 +9,34 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_faq.jpg');
+    @include full_bg('faq_header.jpg');
 }
 
 main {
+
+    .question {
+                    
+        @include responsive(pc-screens) {
+            margin: 60px 0 20px;
+        }
+
+        .mark {
+            font-size: 130%;
+            margin-right: 5px;
+            color: $yellow-brown;
+        }
+
+        .nextline {
+            display: block;
+            margin: 5px 0 20px 36px;
+
+            @include responsive(pc-screens) {
+                display: inline-block;
+                margin: 0;
+            }
+        }
+    }
+
     h2 {
         display: none;
     }
@@ -34,12 +58,11 @@ main {
 
 
     .text-arrow {
-        display: flex;
-        padding: 20px 0;
-        position: relative;
+        @include flex_between();
+        padding: 20px 10px;
 
         @include responsive(pc-screens){
-            padding: 40px 0;
+            padding: 40px 10px;
         }
 
 
@@ -58,9 +81,6 @@ main {
 
         img {
             width: 17px;
-            position: absolute;
-            right: 0;
-            top: 25px;
 
             @include responsive(pc-screens){
                 top: 50px;
