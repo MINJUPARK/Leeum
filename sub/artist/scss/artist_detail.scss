@@ -76,11 +76,18 @@ main {
                         padding: 0 10px;
                     }
 
-                    .tit * {
-                        text-align: center;
-    
-                        @include responsive(pc-screens) {
-                            text-align: left;
+                    .tit {
+
+                        & * {
+                            text-align: center;
+        
+                            @include responsive(pc-screens) {
+                                text-align: left;
+                            }
+                        }
+
+                        .lang {
+                            margin-top: 0;
                         }
                     }
 

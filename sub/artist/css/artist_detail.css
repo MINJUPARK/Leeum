@@ -74,7 +74,7 @@ img, span, label {
   display: inline-block;
 }
 
-img {
+img, strong {
   vertical-align: middle;
 }
 
@@ -935,6 +935,9 @@ main section.info .item-wrap .i-des .tit-exp .tit * {
   main section.info .item-wrap .i-des .tit-exp .tit * {
     text-align: left;
   }
+}
+main section.info .item-wrap .i-des .tit-exp .tit .lang {
+  margin-top: 0;
 }
 main section.info .item-wrap .i-des .tit-exp .exp a {
   color: #be6a15;

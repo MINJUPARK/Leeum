@@ -75,7 +75,7 @@ img, span, label {
   display: inline-block;
 }
 
-img {
+img, span, strong, time {
   vertical-align: middle;
 }
 
@@ -537,12 +537,12 @@ header .mobile-menu-popup .popup .wh-menu .opt li a:hover {
   }
 }
 header.index {
-  height: calc(100vh - 100px);
+  height: 560px;
   overflow-x: hidden;
 }
 @media screen and (min-width: 1440px) {
   header.index {
-    height: calc(100vh - 80px);
+    height: 960px;
   }
 }
 header .main-slider-wrap {
@@ -579,9 +579,9 @@ header .main-slider-wrap .main-slider .item .item-con::after {
 header .main-slider-wrap .main-slider .item .item-con video {
   position: absolute;
   left: 0;
-  top: -10px;
+  top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
 }
 header .main-slider-wrap .main-slider .item .info-wrap {
@@ -718,6 +718,7 @@ header #icon-menu li a.search {
 
 main {
   margin-bottom: 0;
+  overflow-x: hidden;
 }
 main section.infoBox {
   margin-bottom: 80px;
@@ -758,6 +759,7 @@ main section.infoBox .time-notice {
 main section.infoBox .time-notice .time-wrap, main section.infoBox .time-notice .notice-wrap {
   width: 100%;
   padding: 0 20px;
+  border-bottom: 1px solid #c5c5c5;
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .time-wrap, main section.infoBox .time-notice .notice-wrap {
@@ -788,30 +790,50 @@ main section.infoBox .time-notice .time, main section.infoBox .time-notice .noti
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .time, main section.infoBox .time-notice .notice {
+    justify-content: normal;
     height: 80px;
   }
 }
 main section.infoBox .time-notice .notice .des {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
 }
-main section.infoBox .time-notice .notice .des .more label {
-  display: none;
+main section.infoBox .time-notice .notice .des .txt-slider {
+  width: 90%;
 }
 @media screen and (min-width: 1440px) {
-  main section.infoBox .time-notice .notice .des .more label {
-    display: block;
+  main section.infoBox .time-notice .tit {
+    width: 22.8571428571%;
   }
 }
-main section.infoBox .time-notice .tit {
-  width: 25%;
+main section.infoBox .time-notice .tit .icon-box {
+  display: inline-block;
+  width: 30px;
+  margin-right: 3px;
 }
-main section.infoBox .time-notice .tit h6 {
+@media screen and (min-width: 1440px) {
+  main section.infoBox .time-notice .tit .icon-box {
+    margin-right: 10px;
+  }
+}
+main section.infoBox .time-notice .tit .icon-box img {
+  height: 18px;
+  margin-top: 2px;
+}
+@media screen and (min-width: 1440px) {
+  main section.infoBox .time-notice .tit .icon-box img {
+    height: 22px;
+  }
+}
+main section.infoBox .time-notice .tit strong {
   display: inline-block;
 }
-main section.infoBox .time-notice .tit img {
-  height: 18px;
-  margin-right: 3px;
+@media screen and (min-width: 1440px) {
+  main section.infoBox .time-notice .tit strong {
+    font-size: 22px;
+  }
 }
 main section.infoBox .time-notice .des {
   width: 70%;
@@ -821,9 +843,20 @@ main section.infoBox .time-notice .des time {
   font-size: 16px;
   font-weight: 600;
 }
+@media screen and (min-width: 1440px) {
+  main section.infoBox .time-notice .des time {
+    font-size: 22px;
+  }
+}
 main section.infoBox .time-notice .des .memo {
+  margin-left: 10px;
   font-size: 14px;
   color: #5c5c5c;
+}
+@media screen and (min-width: 1440px) {
+  main section.infoBox .time-notice .des .memo {
+    font-size: 18px;
+  }
 }
 main section.infoBox .time-notice .des .latest {
   width: 90%;
@@ -833,6 +866,11 @@ main section.infoBox .time-notice .des .latest {
   text-overflow: ellipsis;
   color: #3c3c3c;
   overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main section.infoBox .time-notice .des .latest {
+    font-size: 18px;
+  }
 }
 main .title-box.center {
   text-align: center;
@@ -849,6 +887,7 @@ main .title-box .con h3 {
 }
 main .title-box .con p {
   color: #5c5c5c;
+  font-size: 14px;
   margin-top: 10px;
 }
 main .more label {
@@ -860,6 +899,53 @@ main .more img {
   height: 14px;
   margin-bottom: 2px;
   margin-left: 5px;
+}
+main section.exhibition .content-box {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .content-box {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+  }
+}
+main section.exhibition .slick-initialized .swipe-tab-content {
+  position: relative;
+  min-height: 365px;
+}
+main section.exhibition .slick-initialized .swipe-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background: none;
+  border: 0;
+  color: #757575;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  transition: all 0.5s;
+}
+main section.exhibition .slick-initialized .swipe-tab:hover {
+  color: #000;
+}
+main section.exhibition .slick-initialized .swipe-tab.active-tab {
+  border-bottom-color: #000;
+  color: #000;
+  font-weight: bold;
+}
+main section.exhibition .main-container {
+  padding: 25px;
+  background: #f1f1f1;
 }
 
 @media screen and (min-width: 1440px) {

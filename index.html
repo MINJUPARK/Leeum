@@ -11,7 +11,8 @@
     <link rel="icon" href="./image/favicon-light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="./image/favicon-dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css'>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css'>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
@@ -25,7 +26,7 @@
                 <div class="item">
                     <div class="item-con">
                         <video poster="./image/index_video(1)_poster.jpg" autoplay muted loop>
-                            <source src="http://gdurl.com/5YE3o" type="video/mp4">
+                            <!-- <source src="http://gdurl.com/5YE3o" type="video/mp4"> -->
                         </video>
                         <div class="info-wrap">
                             <div class="info">
@@ -38,7 +39,7 @@
                 <div class="item">
                     <div class="item-con">
                         <video autoplay muted loop>
-                            <source src="https://gdurl.com/tX_rB" type="video/mp4">
+                            <!-- <source src="https://gdurl.com/tX_rB" type="video/mp4"> -->
                         </video>
                         <div class="info-wrap">
                             <div class="info">
@@ -51,7 +52,7 @@
                 <div class="item">
                     <div class="item-con">
                         <video autoplay muted loop>
-                            <source src="https://gdurl.com/q3ak" type="video/mp4">
+                            <!-- <source src="https://gdurl.com/q3ak" type="video/mp4"> -->
                         </video>
                         <div class="info-wrap">
                             <div class="info">
@@ -64,7 +65,7 @@
                 <div class="item">
                     <div class="item-con">
                         <video autoplay muted loop>
-                            <source src="https://gdurl.com/5khc" type="video/mp4">
+                            <!-- <source src="https://gdurl.com/5khc" type="video/mp4"> -->
                         </video>
                         <div class="info-wrap">
                             <div class="info">
@@ -246,14 +247,14 @@
     </header>
     <main>
         <section class="infoBox">
-            <h2>금일 운영시간 및 공지사항</h2>
+            <h2>운영시간 및 공지사항</h2>
             <div class="container">
                 <div class="infoBox-wrap">
                     <div class="time-notice">
                         <div class="time-wrap">
                             <div class="time">
                                 <div class="tit">
-                                    <img src="./image/icon_clock.svg" alt="시계 아이콘">
+                                    <div class="icon-box"><img src="./image/icon_clock.svg" alt="시계 아이콘"></div>
                                     <strong>운영시간</strong>
                                 </div>
                                 <div class="des">
@@ -265,11 +266,17 @@
                         <div class="notice-wrap">
                             <div class="notice">
                                 <div class="tit">
-                                    <img src="./image/icon_speaker.svg" alt="스피커 아이콘">
+                                    <div class="icon-box"><img src="./image/icon_speaker.svg" alt="스피커 아이콘"></div>
                                     <strong>공지사항</strong>
                                 </div>
                                 <div class="des">
-                                    <a href="./sub/news/news_notice_detail.html" class="latest">《이안 쳉: 세계건설》展 관련 다큐멘터리 방영 안내 (10.12 (수), 밤 9시 50분)</a>
+                                    <ul class="txt-slider">
+                                        <li><a href="./sub/news/news_notice_detail.html" class="latest">《이안 쳉: 세계건설》展 관련 다큐멘터리 방영 안내 (10.12 (수), 밤 9시 50분)</a></li>
+                                        <li><a href="./sub/news/news_notice_detail.html" class="latest">"이태원지구촌축제" 기간 관람료, 스토어 할인 안내 (10/15 ~ 16)</a></li>
+                                        <li><a href="./sub/news/news_notice_detail.html" class="latest">강당라운지 《장영규: 추종자》 관람 제한 안내 (9/13 ~ 9/18)</a></li>
+                                        <li><a href="./sub/news/news_notice_detail.html" class="latest">'2022 미술주간' 입장료 50% 할인 안내</a></li>
+                                        <li><a href="./sub/news/news_notice_detail.html" class="latest">미술관 로비 《제니퍼 스타인캠프》 작품 상영 종료 안내</a></li>
+                                    </ul>
                                     <a href="./sub/news/news_notice.html" class="more"><img src="./image/icon_arrow_tail.svg"></a>
                                 </div>
                             </div>
@@ -287,19 +294,40 @@
                             <h3>exhibition</h3>
                             <p>고품격 소장품을 바탕으로 리움만의 수준 높은 전시</p>
                         </div>
-                        <div class="btn">
-                            <a href="./sub/exhibition/exhibition_now.html" class="more mobile"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
-                        </div>
+                        <!-- <div class="btn">
+                            <a href="./sub/exhibition/exhibition_now.html" class="more pc"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
+                        </div> -->
                     </div>
                     <div class="content-box">
+                        <div class="sub-header">
+                            <div class="swipe-tabs">
+                                <div class="swipe-tab">현재 진행중인</div>
+                                <div class="swipe-tab">예매율이 높은</div>
+                                <div class="swipe-tab">종료가 임박하는</div>
+                                <div class="swipe-tab">특별한 체험이 있는</div>
+                                <div class="swipe-tab">고대미술이 주제인</div>
+                                <div class="swipe-tab">현대미술이 주제인</div>
+                            </div>
+                        </div>
+                        <div class="main-container">
+                            <div class="swipe-tabs-container ">
+                                <div class="swipe-tab-content">Tab 1</div>
+                                <div class="swipe-tab-content">Tab 2</div>
+                                <div class="swipe-tab-content">Tab 3</div>
+                                <div class="swipe-tab-content">Tab 4</div>
+                                <div class="swipe-tab-content">Tab 5</div>
+                                <div class="swipe-tab-content">Tab 6</div>
+                                <div class="swipe-tab-content">Tab 7</div>
+                            </div>
+                        </div>
                         <div class="btn">
-                            <a href="./sub/exhibition/exhibition_now.html" class="more pc"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
+                            <a href="./sub/exhibition/exhibition_now.html" class="more mobile"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="collection">
+        <!-- <section class="collection">
             <h2>소장품</h2>
             <div class="container">
                 <div class="collection-wrap">
@@ -367,7 +395,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
     <footer>
         <div class="sitemap-banner-wrap">
@@ -442,7 +470,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="./sub/register/register_type.html" class="banner">
+                    <a href="./sub/register/register_join_type.html" class="banner">
                         <div id="banner-box" class="banner-box">
                             <div class="banner-txt-wrap">
                                 <div class="banner-txt">
