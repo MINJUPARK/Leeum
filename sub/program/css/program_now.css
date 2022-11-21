@@ -651,14 +651,12 @@ header .breadcrumb-wrap {
   }
 }
 
-main h1 {
+main h3 {
   text-align: center;
-  font-size: 26px;
-  padding-top: 60px;
 }
 @media screen and (min-width: 1440px) {
-  main h1 {
-    font-size: 46px;
+  main h3 {
+    font-size: 36px;
   }
 }
 main .img-text {
@@ -680,7 +678,7 @@ main .img-text .limit-text {
   top: 15px;
   left: 20px;
   font-size: 12px;
-  padding: 10px 15px;
+  padding: 8px 12px;
   background-color: #ac3f21;
   color: #fff;
   border-radius: 5px;
@@ -694,10 +692,16 @@ main .img-text .limit-text {
     padding: 20px 30px;
   }
 }
+main .img-text .limit-text p {
+  font-size: 14px;
+}
 @media screen and (min-width: 1440px) {
   main .text-explain .text-explain-text {
     display: flex;
   }
+}
+main .text-explain .text {
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 1440px) {
   main .text-explain .text {
@@ -707,8 +711,9 @@ main .img-text .limit-text {
   }
 }
 main .text-explain .text p:first-child {
+  font-size: 16px;
+  font-weight: 600;
   color: #be6a15;
-  font-size: 14px;
   padding-bottom: 10px;
 }
 @media screen and (min-width: 1440px) {
@@ -717,19 +722,20 @@ main .text-explain .text p:first-child {
     padding-bottom: 10px;
   }
 }
-main .text-explain .text h2 {
+main .text-explain .text h3 {
+  text-align: left;
   font-size: 22px;
   padding-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main .text-explain .text h2 {
-    font-size: 36px;
+  main .text-explain .text h3 {
+    font-size: 30px;
     padding-bottom: 40px;
   }
 }
 main .text-explain .text p:last-child {
   font-size: 16px;
-  padding-bottom: 40px;
+  font-weight: 500;
 }
 @media screen and (min-width: 1440px) {
   main .text-explain .text p:last-child {
@@ -744,14 +750,14 @@ main .text-explain .text p:last-child {
   }
 }
 main .text-explain .explain-text p {
-  font-size: 16px;
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
   color: #5c5c5c;
-  line-height: 28px;
 }
 @media screen and (min-width: 1440px) {
   main .text-explain .explain-text p {
-    font-size: 22px;
-    line-height: 44px;
+    font-size: 20px;
     padding-top: 45px;
   }
 }
@@ -759,7 +765,6 @@ main .title {
   text-align: center;
   font-size: 26px;
   padding-top: 100px;
-  padding-bottom: 40px;
 }
 @media screen and (min-width: 1440px) {
   main .title h2 {

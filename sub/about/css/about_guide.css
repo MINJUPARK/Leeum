@@ -720,6 +720,19 @@ main .tab-menu-wrap ul.tab-menu > li > a > span {
     font-size: 24px;
   }
 }
+@media screen and (min-width: 1440px) {
+  main .m-br {
+    display: none;
+  }
+}
+main .fee-time-wrap {
+  margin-top: 90px;
+}
+@media screen and (min-width: 1440px) {
+  main .fee-time-wrap {
+    margin-top: 160px;
+  }
+}
 main .fee-time-wrap .fee-time > div {
   margin-bottom: 60px;
 }
@@ -728,13 +741,9 @@ main .fee-time-wrap .fee-time > div {
     margin-bottom: 100px;
   }
 }
-main .fee-time-wrap .fee-time {
-  margin-top: 90px;
-}
 @media screen and (min-width: 768px) {
   main .fee-time-wrap .fee-time {
-    margin-top: 160px;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -752,14 +761,11 @@ main .fee-time-wrap .fee-time .ticket-info h3 {
 main .fee-time-wrap .fee-time h3 {
   font-size: calc(1em + 4px);
   margin-bottom: 20px;
-  padding-left: 20px;
-  border-left: 3px solid #ac3f21;
 }
 @media screen and (min-width: 768px) {
   main .fee-time-wrap .fee-time h3 {
     height: 34px;
     margin-bottom: 50px;
-    border-left-width: 5px;
   }
 }
 main .fee-time-wrap .fee-time span {
@@ -828,7 +834,8 @@ main .fee-time-wrap .fee-time .ticket-wrap .ticket-info ul li {
 @media screen and (min-width: 768px) {
   main .fee-time-wrap .fee-time .ticket-wrap .ticket-info ul li {
     padding-left: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    font-size: 20px;
   }
 }
 main .fee-time-wrap .fee-time .ticket-wrap .ticketing {
@@ -851,15 +858,19 @@ main .fee-time-wrap .fee-time .ticket-wrap .ticketing a {
   font-size: calc(1em + 4px);
   border-radius: 5px;
   color: #fff;
+  border: 1px solid #ac3f21;
   background-color: #ac3f21;
 }
 main .fee-time-wrap .fee-time .ticket-wrap .ticketing a:hover {
   color: #ac3f21;
-  border: 1px solid #ac3f21;
   background-color: #fff;
 }
+main .fee-time-wrap .fee-time .ticket-wrap .ticketing a:hover img {
+  filter: brightness(0) saturate(100%) invert(24%) sepia(15%) saturate(7470%) hue-rotate(350deg) brightness(103%) contrast(85%);
+}
 main .fee-time-wrap .fee-time .ticket-wrap .ticketing a img {
-  width: 1em;
+  width: calc(1em + 4px);
+  padding-bottom: 4px;
   margin-right: 10px;
 }
 main .fee-time-wrap .fee-time .please-note {
@@ -921,8 +932,14 @@ main .fee-time-wrap .fee-time .please-note .note-flex .note-group {
 main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
+  height: 210px;
   border-bottom: 1px solid #c5c5c5;
+}
+@media screen and (min-width: 768px) {
+  main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item {
+    height: auto;
+    aspect-ratio: 1;
+  }
 }
 @media screen and (min-width: 1440px) {
   main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item {
@@ -936,7 +953,6 @@ main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .no
   transform: translate(-50%, -50%);
   height: 78.2608695652%;
   text-align: center;
-  background-color: yellow;
 }
 @media screen and (min-width: 768px) {
   main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .note-con {
@@ -949,7 +965,6 @@ main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .no
   transform: translateX(-50%);
   width: 76px;
   aspect-ratio: 1;
-  background-color: pink;
 }
 @media screen and (min-width: 768px) {
   main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .note-con .note-img {
@@ -969,12 +984,17 @@ main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .no
   top: 0;
 }
 main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .note-con p {
+  font-size: 1em;
+  font-weight: 500;
   width: 156px;
+  line-height: calc(1em + 10px);
   margin-top: 16px;
 }
 @media screen and (min-width: 768px) {
   main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .note-con p {
     width: 336px;
+    line-height: 2em;
+    font-size: 22px;
     margin-top: 40px;
   }
 }
@@ -1011,11 +1031,17 @@ main .vr-floor-info-wrap section.vr .vr-txt h3 {
 main .vr-floor-info-wrap section.vr .vr-txt a {
   position: absolute;
   right: 0;
-  bottom: -30px;
+  bottom: -25px;
+  color: #be6a15;
 }
-@media screen and (min-width: 1440px) {
+main .vr-floor-info-wrap section.vr .vr-txt a img {
+  height: 12px;
+  margin-left: 5px;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
+}
+@media screen and (min-width: 768px) {
   main .vr-floor-info-wrap section.floor-info {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 main .vr-floor-info-wrap section.floor-info h3 {
@@ -1118,6 +1144,9 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-opt
     background-size: 37px 28px;
   }
 }
+main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li b {
+  font-weight: 500;
+}
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
   vertical-align: top;
   font-size: calc(1em - 4px);
@@ -1145,18 +1174,35 @@ main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .t
   line-height: 24px;
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex strong {
+  padding-left: 5px;
   font-size: 24px;
   width: 11.4285714286%;
+}
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex strong {
+    font-size: 30px;
+  }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
   width: 71.4285714286%;
 }
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
+    font-size: 24px;
+  }
+}
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet {
   width: 17.1428571429%;
+  padding-right: 5px;
   text-align: right;
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img {
-  height: 16px;
+  height: 22px;
+}
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img {
+    height: 26px;
+  }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt p {
   margin-top: 10px;
@@ -1166,7 +1212,6 @@ main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt p 
   line-height: calc(1em - 2px + 10px);
 }
 main section.digital-guide-did-wrap {
-  display: none;
   overflow: hidden;
   margin-top: 70px;
   text-align: center;
@@ -1174,7 +1219,8 @@ main section.digital-guide-did-wrap {
 }
 @media screen and (min-width: 768px) {
   main section.digital-guide-did-wrap {
-    font-size: 22px;
+    font-size: 20px;
+    margin-top: 100px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1193,14 +1239,15 @@ main section.digital-guide-did-wrap h3 {
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap h3 {
-    font-size: 46px;
+    font-size: 36px;
   }
 }
 main section.digital-guide-did-wrap h4 {
-  margin-bottom: 50px;
-  color: #c5c5c5;
   font-size: calc(1em + 4px);
   font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  color: #c5c5c5;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap h4 {
@@ -1213,10 +1260,22 @@ main section.digital-guide-did-wrap img {
 }
 main section.digital-guide-did-wrap strong, main section.digital-guide-did-wrap h5 {
   font-size: calc(1em + 1.538461538vw);
+  line-height: 2em;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap strong, main section.digital-guide-did-wrap h5 {
-    font-size: 38px;
+    font-size: 34px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.digital-guide-did-wrap strong, main section.digital-guide-did-wrap h5 {
+    font-size: 34px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.digital-guide-did-wrap section.digital-guide strong {
+    font-size: 32px;
   }
 }
 main section.digital-guide-did-wrap section.digital-guide p, main section.digital-guide-did-wrap section.digital-guide .p {
@@ -1251,6 +1310,7 @@ main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .gui
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .guide-intro .guide-intro-txt strong {
+    font-size: 32px;
     line-height: 55px;
   }
 }

@@ -904,12 +904,13 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
     display: inline-block;
     text-align: center;
+    margin-top: 50px;
   }
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
@@ -953,6 +954,13 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search {
   display: block;
 }
 @media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box {
+    width: 100%;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type {
     display: flex;
     justify-content: space-between;
@@ -968,6 +976,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: flex-start;
     width: 32.7272727%;
   }
 }
@@ -981,6 +990,16 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .artist ul.opt li, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .space ul.opt li {
   width: 50%;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .artist h6 {
+    width: 70px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .space h6 {
+    width: 105px;
+  }
 }
 main section.itemList {
   margin-top: 80px;

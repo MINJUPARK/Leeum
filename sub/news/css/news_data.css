@@ -651,6 +651,58 @@ header .breadcrumb-wrap {
   }
 }
 
+main h1 {
+  display: none;
+}
+main .image h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+main .image .plus {
+  display: flex;
+}
+main .image .plus img {
+  width: 15px;
+  height: 11px;
+}
+main .image .flex {
+  display: flex;
+  margin-bottom: 40px;
+}
+main .image .flex .workbook {
+  text-align: center;
+}
+main .image .flex .workbook img:first-child {
+  width: 170px;
+  height: 237px;
+}
+main .image .flex .workbook span {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+main .image .flex .workbook p {
+  font-size: 13px;
+  font-weight: 200;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #5c5c5c;
+}
+main .image .flex .workbook a {
+  font-size: 12px;
+  font-weight: 500;
+  color: #3c3c3c;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px 40px;
+}
+main .image .flex .workbook img:last-child {
+  width: 11px;
+  height: 11px;
+  margin-right: 10px;
+}
+
 @media screen and (min-width: 1440px) {
   footer.sub {
     position: static !important;

@@ -17,11 +17,22 @@ main {
 
     .tab-menu-wrap {
         @include tab_menu(3);
-    } // tab-menu-wrap
+    } 
+    
+    .m-br {
+        @include responsive(pc-screens) {
+            display: none;
+        }
+    }
     
     .fee-time-wrap {
         // display: none;
+        margin-top: 90px;
         
+        @include responsive(pc-screens) {
+            margin-top: 160px;
+        }
+
         .fee-time > div {
             margin-bottom: 60px;
     
@@ -31,11 +42,9 @@ main {
         }
         
         .fee-time {
-            margin-top: 90px;
             
             @include responsive(tablet-screens) {
-                margin-top: 160px;
-                font-size: 24px;
+                font-size: 20px;
             }
             
             .time,
@@ -56,13 +65,13 @@ main {
             h3 {
                 font-size: calc(1em + 4px);
                 margin-bottom: 20px ;
-                padding-left: 20px;
-                border-left: 3px solid $red-brown;
+                // padding-left: 20px;
+                // border-left: 3px solid $red-brown;
     
                 @include responsive (tablet-screens) {
                     height: 34px;
                     margin-bottom: 50px;
-                    border-left-width: 5px;
+                    // border-left-width: 5px;
                 }
             }
 
@@ -153,7 +162,8 @@ main {
                             
                             @include responsive(tablet-screens) {
                                 padding-left: 14px;
-                                margin-bottom: 40px;
+                                margin-bottom: 30px;
+                                font-size: 20px;
                             }
                         }
                     }
@@ -177,20 +187,21 @@ main {
                         font-size: calc(1em + 4px);
                         border-radius: 5px;
                         color: #fff;
+                        border: 1px solid $red-brown;
                         background-color: $red-brown;
 
                         &:hover {
                             color: $red-brown;
-                            border: 1px solid $red-brown;
                             background-color: #fff;
 
-                            // img {
-                            //     color: $svg-redbrown;
-                            // }
+                            img {
+                                filter: $svg-redbrown;
+                            }
                         }
                         
                         img {
-                            width: 1em;
+                            width: calc(1em + 4px);
+                            padding-bottom: 4px;
                             margin-right: 10px;
                         }
                     }
@@ -253,10 +264,14 @@ main {
                         .note-item {
                             position: relative;
                             width: 100%;
-                            aspect-ratio: 1;
+                            height: 210px;
                             // background-color: coral;
                             border-bottom: 1px solid $bk4;
-
+                            @include responsive(tablet-screens) {
+                                height: auto;
+                                aspect-ratio: 1;
+                            }
+                            
                             @include responsive (pc-screens) {
                                 flex: 33%;
                             }
@@ -265,7 +280,6 @@ main {
                                 @include element_center();
                                 height: 78.26086956521739%;
                                 text-align: center;
-                                background-color: yellow;
 
                                 @include responsive (tablet-screens) {
                                     height: 55.15021459227468%;
@@ -277,7 +291,6 @@ main {
                                     transform: translateX(-50%);
                                     width: 76px;
                                     aspect-ratio: 1;
-                                    background-color: pink;
 
                                     @include responsive (tablet-screens) {
                                         width: 163px;
@@ -299,11 +312,15 @@ main {
                                 } // note-img
 
                                 p {
+                                    @include gothic_font(medium, 1em);
                                     width: 156px;
+                                    line-height: calc(1em + 10px);
                                     margin-top: 16px;
                                     
                                     @include responsive (tablet-screens) {
                                         width: 336px;
+                                        line-height: 2em;
+                                        font-size: 22px;
                                         margin-top: 40px;
                                     }
                                 }
@@ -320,14 +337,14 @@ main {
 
         h3 {
             text-align: center;  
-            font-size: 26px;
+            font-size: $h4;
 
             @include responsive (tablet-screens) {
                 text-align: left;
             } 
             
             @include responsive (pc-screens) {
-                font-size: 36px;
+                font-size: $h2;
             }
         }
 
@@ -352,15 +369,22 @@ main {
 
                 a {
                     position: absolute;
-                    right: 0; bottom: -30px;
+                    right: 0; bottom: -25px;
+                    color: $yellow-brown;
+
+                    img {
+                        height: 12px;
+                        margin-left: 5px;
+                        filter: $svg-yellowbrown;
+                    }
                 }
             }
         } // vr
 
         section.floor-info {
 
-            @include responsive(pc-screens) {
-                font-size: 24px;
+            @include responsive(tablet-screens) {
+                font-size: 20px;
             }
 
             h3 {
@@ -455,12 +479,18 @@ main {
                                 background-color: $bk6;
                                 
                                 @include responsive(tablet-screens) {
-                                    background-image: url(../../../image/icon_arrow_tail.svg);
-                                    background-repeat: no-repeat ;
-                                    background-position: center right;
-                                    background-origin: content-box;
-                                    background-size: 37px 28px;
+                                    background: {
+                                        image: url(../../../image/icon_arrow_tail.svg);
+                                        repeat: no-repeat ;
+                                        position: center right;
+                                        origin: content-box;
+                                        size: 37px 28px;
+                                    }
                                 }
+                            }
+
+                            b {
+                                font-weight: 500;
                             }
 
                             span {
@@ -494,28 +524,40 @@ main {
                         
                         .txt-flex {
                             @include flex_between();
-                            // display: flex;
-                            // justify-content: space-between;
-
+                            
                             strong, b {
                                 line-height: 24px;
                             }
-
+                            
                             strong {
+                                padding-left: 5px;
                                 font-size: 24px;
                                 width: calc(40px / 350px * 100%);
+                                
+                                @include responsive(pc-screens) {
+                                    font-size: $h3;
+                                }
                             }
                             
                             b {
                                 width: calc(250px / 350px *100%);
+                                
+                                @include responsive(pc-screens) {
+                                    font-size: 24px;
+                                }
                             }
                             
                             .toilet {
                                 width: calc(60px / 350px * 100%);
+                                padding-right: 5px;
                                 text-align: right;
                                 
                                 img {
-                                    height: 16px;
+                                    height: 22px;
+
+                                    @include responsive(pc-screens) {
+                                        height: 26px;
+                                    }
                                 }
                             }
                         }
@@ -534,16 +576,17 @@ main {
     } // vr-floor-wrap
 
     section.digital-guide-did-wrap {
-        display: none;
+        // display: none;
 
         overflow: hidden;
         margin-top: 70px;
         text-align: center;
         word-break: keep-all; // 단어를 기준으로 줄바꿈
         // background-color: wheat;
-
+        
         @include responsive(tablet-screens) {
-            font-size: 22px;
+            font-size: 20px;
+            margin-top: 100px;
         }
         
         @include responsive(pc-screens) {
@@ -556,13 +599,14 @@ main {
         h3 { 
             font-size: calc(1em + 10px);
             
-            @include responsive(pc-screens) { font-size: 46px; }
+            @include responsive(pc-screens) { font-size: $h2; }
         }
         
         h4 {
+            @include gothic_font(regular, calc(1em + 4px));
+            margin-top: 10px;
             margin-bottom: 50px;
             color: $bk4;
-            @include gothic_font(regular, calc(1em + 4px));
             
             @include responsive(pc-screens) { margin-bottom: 120px; }
         }
@@ -574,11 +618,20 @@ main {
 
         strong, h5 {
             font-size: calc(1em + 1.538461538vw);
+            line-height: 2em;
+            color: $bk1;
 
-            @include responsive(pc-screens) { font-size: 38px; }
+            @include responsive(pc-screens) { font-size: 34px; }
+        }
+        strong, h5 {
+            @include responsive(pc-screens) { font-size: 34px; }
         }
 
         section.digital-guide {
+
+            strong {
+                @include responsive(pc-screens) { font-size: 32px; };
+            }
 
             p, .p {
                 font-size: calc(1em - 2px);
@@ -617,6 +670,7 @@ main {
                             line-height: calc(1em + 6px + 10px);
     
                             @include responsive(pc-screens) {
+                                font-size: 32px;
                                 line-height: 55px;
                             }
                         }

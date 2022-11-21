@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="리움미술관">
+    <meta name="images" property="og:image" content="./images/leeum_thumnail.jpg">
+    <meta name="description" property="og:description" content="관객과 소통하는 리움, 예술과 삶을 더욱 풍부하게">
+    <meta name="type" property="og:type" content="article">
     <link rel="icon" href="./image/favicon-light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="./image/favicon-dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
@@ -20,7 +24,7 @@
             <div class="main-slider">
                 <div class="item">
                     <div class="item-con">
-                        <video poster="/image/index_video_poster.jpg" autoplay muted loop>
+                        <video poster="./image/index_video_poster.jpg" muted loop> <!-- autoplay -->
                             <source src="http://gdurl.com/5YE3o" type="video/mp4">
                         </video>
                         <div class="info-wrap">
@@ -71,9 +75,9 @@
                     </div>
                 </div>
             </div>
-            <div class="slider-progress">
+            <!-- <div class="slider-progress">
                 <span></span>
-            </div>
+            </div> -->
         </div>
         <div class="mobile-menu-popup">
             <div class="window">
@@ -243,47 +247,54 @@
     <main>
         <section class="infoBox">
             <h2>금일 운영시간 및 공지사항</h2>
+            <div class="container">
                 <div class="infoBox-wrap">
                     <div class="time-notice">
                         <div class="time-wrap">
-                            <div class="container">
-                                <div class="time">
-                                    <div class="tit">
-                                        <img src="./image/icon_clock.svg" alt="시계 아이콘">
-                                        <strong>운영시간</strong>
-                                    </div>
-                                    <div class="des">
-                                        <time>10:00 ~ 18:00</time>
-                                        <span class="memo">(M2 현대미술 상설전 휴관)</span>
-                                    </div>
+                            <div class="time">
+                                <div class="tit">
+                                    <img src="./image/icon_clock.svg" alt="시계 아이콘">
+                                    <strong>운영시간</strong>
+                                </div>
+                                <div class="des">
+                                    <time>10:00 ~ 18:00</time>
+                                    <span class="memo">(M2 현대미술 상설전 휴관)</span>
                                 </div>
                             </div>
                         </div>
                         <div class="notice-wrap">
-                            <div class="container">
-                                <div class="notice">
-                                    <div class="tit">
-                                        <img src="./image/icon_speaker.svg" alt="스피커 아이콘">
-                                        <strong>공지사항</strong>
-                                    </div>
-                                    <div class="des">
-                                        <a href="./sub/news/news_notice_detail.html">강당라운지 《장영규: 추종자》 관람 제한 안내 (10/15 ~ 10/20)</a>
-                                        <button type="button" class="more-btn"></button>
-                                    </div>
+                            <div class="notice">
+                                <div class="tit">
+                                    <img src="./image/icon_speaker.svg" alt="스피커 아이콘">
+                                    <strong>공지사항</strong>
+                                </div>
+                                <div class="des">
+                                    <a href="./sub/news/news_notice_detail.html" class="latest">《이안 쳉: 세계건설》展 관련 다큐멘터리 방영 안내 (10.12 (수), 밤 9시 50분)</a>
+                                    <a href="./sub/news/news_notice.html" class="more"><img src="./image/icon_arrow_tail.svg"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <section class="exhibition">
             <h2>전시</h2>
             <div class="container">
                 <div class="exhibition-wrap">
                     <div class="title-box center">
-                        <h1>exhibition</h1>
-                        <p>고품격 소장품을 바탕으로 리움만의 수준 높은 전시</p>
-                        <button type="button" class="more-btn">더보기<img src="./image/icon_arrow_tail.svg" alt="더보기"></button>
+                        <div class="con">
+                            <h3>exhibition</h3>
+                            <p>고품격 소장품을 바탕으로 리움만의 수준 높은 전시</p>
+                        </div>
+                        <div class="btn">
+                            <a href="./sub/exhibition/exhibition_now.html" class="more mobile"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        <div class="btn">
+                            <a href="./sub/exhibition/exhibition_now.html" class="more pc"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -292,10 +303,17 @@
             <h2>소장품</h2>
             <div class="container">
                 <div class="collection-wrap">
-                    <div class="title-box left">
-                        <h1>collection</h1>
-                        <p>명품 수집을 넘어 명장 · 명작을 발굴한 리움의 소장품</p>
-                        <button type="button" class="more-btn">더보기<img src="./image/icon_arrow_tail.svg" alt="더보기"></button>
+                    <div class="title-box">
+                        <div class="con">
+                            <h3>collection</h3>
+                            <p>명품 수집을 넘어 명장 · 명작을 발굴한 리움의 소장품</p>
+                        </div>
+                        <div class="btn">
+                            <a href="./sub/exhibition/exhibition_now.html" class="more mobile"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        
                     </div>
                 </div>
             </div>
@@ -304,9 +322,11 @@
             <h2>달라진 리움</h2>
             <div class="container">
                 <div class="facility-wrap">
-                    <h1>달라진 리움</h1>
+                    <h3>달라진 리움</h3>
                     <p>재개관과 함께 돌아온 새로운 MI, 그리고 공간</p>
-                    <button type="button" class="more-btn">더 알아보기<img src="./image/icon_arrow_tail.svg" alt="더 알아보기 아이콘"></button>
+                    <div class="btn">
+                        <a href="./sub/exhibition/exhibition_now.html" class="more mobile"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -314,22 +334,36 @@
             <h2>프로그램</h2>
             <div class="container">
                 <div class="program-wrap">
-                    <div class="title-box left">
-                        <h1>program</h1>
-                        <p>관람객과 한층 더 가까이, 리움이 준비한 특별 강좌</p>
-                        <button type="button" class="more-btn">더보기<img src="./image/icon_arrow_tail.svg" alt="더보기"></button>
+                    <div class="title-box">
+                        <div class="con">
+                            <h3>program</h3>
+                            <p>관람객과 한층 더 가까이, 리움이 준비한 특별 강좌</p>
+                        </div>
+                        <div class="btn">
+                            <a href="./sub/exhibition/exhibition_now.html" class="more mobile"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        
                     </div>
                 </div>
             </div>
         </section>
         <section class="artist">
-            <h2>프로그램</h2>
+            <h2>작가</h2>
             <div class="container">
                 <div class="artist-wrap">
                     <div class="title-box center">
-                        <h1>artist</h1>
-                        <p>리움이 주목한 전시 · 소장 작가들의 생생한 인터뷰</p>
-                        <button type="button" class="more-btn">더보기<img src="./image/icon_arrow_tail.svg" alt="더보기"></button>
+                        <div class="con">
+                            <h3>artist</h3>
+                            <p>리움이 주목한 전시 · 소장 작가들의 생생한 인터뷰</p>
+                        </div>
+                        <div class="btn">
+                            <a href="./sub/exhibition/exhibition_now.html" class="more"><label>더보기</label><img src="./image/icon_arrow_tail.svg"></a>
+                        </div>
+                    </div>
+                    <div class="content-box">
+                        
                     </div>
                 </div>
             </div>

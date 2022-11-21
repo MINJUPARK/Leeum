@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
     // sub 메뉴 중 detail 페이지의 footer 위치 재조정 (서브헤더가 가려짐에 따라)
     if($('footer').hasClass('sub')) {
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     // 모바일 메뉴
     $('.mobile-menu-popup').hide();
-    $('.mobile-menu').click(function() {
+    $('.mobile-menu').on('click', function() {
         const sc_width = window.innerWidth - $(window).width();
 
         $(this).hide();
@@ -32,19 +32,19 @@ $(document).ready(function() {
         $('.window .close').css({ "right" : 20 + sc_width + "px" });
         $('body').css({ "overflow" : "hidden" });
     });
-    $('.window .close').click(function() {
+    $('.window .close').on('click', function() {
         $('.mobile-menu-popup').hide();
         $('.mobile-menu').show();
         $('body').css({ "overflow" : "visible" });
     });
-    $('.wh-menu .group').click(function() {
+    $('.wh-menu .group').on('click', function() {
         $(this).children('.dropdown').toggleClass('active');
         $(this).siblings().slideToggle();
     });
 
 
     // PC 메뉴 서브
-    $('.pc-menu .group').mouseover(function() {
+    $('.pc-menu .group').on('mouseover', function() {
             $('.pc-menu .opt').addClass('hidden');
             $(this).next().removeClass('hidden');
 
@@ -54,26 +54,26 @@ $(document).ready(function() {
             else if($(this).hasClass('m4')) { $(this).next().css({ "margin-left" : "-24px" }); }
             else if($(this).hasClass('m6')) { $(this).next().css({ "margin-left" : "-26px" }); }
     });
-    $('.pc-menu .opt').mouseleave(function() {
+    $('.pc-menu .opt').on('mouseleave', function() {
         $(this).addClass('hidden');
     });
 
 
     // PC 검색 메뉴
-    $('.icon-menu .search').click(function() {
+    $('.icon-menu .search').on('click', function() {
         $(this).siblings().toggleClass('hidden');
         $(this).siblings().children('.searchbar').focus();
     });
 
 
     // 상단 메뉴 고정 (모바일 + PC)
-    $(window).scroll(function() {
+    $(window).on('scroll', function() {
         const sc_top = $(this).scrollTop();
         
-        if($(this).width() < 390) {
+        if($(this).width() <= 390) {
             if(sc_top > 220) { $('.logo-menu-wrap').addClass('menu-sc'); } 
             else             { $('.logo-menu-wrap').removeClass('menu-sc'); }
-        } else if($(this).width() > 390 &&  $(this).width() < 1440) {
+        } else if($(this).width() >= 390 &&  $(this).width() < 1440) {
             if(sc_top > 240) { $('.logo-menu-wrap').addClass('menu-sc'); } 
             else             { $('.logo-menu-wrap').removeClass('menu-sc'); }
         } else {
@@ -85,18 +85,18 @@ $(document).ready(function() {
 
 
     // 언어변경, 브레드크럼 드롭다운 목록
-    $('.mini-menu .lang').click(function() {
+    $('.mini-menu .lang').on('click', function() {
             $(this).children('.dropdown').toggleClass('active');
             $('.lang-opt').slideToggle();
     });
-    $('.breadcrumb .dropdown').click(function() {
+    $('.breadcrumb .dropdown').on('click', function() {
         $(this).toggleClass('active');
         $(this).parent().siblings().slideToggle();
     });
 
 
     // 패밀리 사이트 이동
-    $('select[name=family]').change(function() {
+    $('select[name=family]').on('change', function() {
         window.open($(this).val());
     });
 
@@ -112,7 +112,7 @@ $(document).ready(function() {
 
 
     // sub 필터 상세검색 열기 & 닫기
-    $('.ds-btn').click(function() {
+    $('.ds-btn').on('click', function() {
         const status = $(this).children('.status');
 
         if (status.text() == '열기') { status.text('닫기'); } 
@@ -123,13 +123,13 @@ $(document).ready(function() {
 
 
     // 상세 검색 옵션 선택
-    $('.detail-search .opt li').click(function() {
+    $('.detail-search .opt li').on('click', function() {
         $(this).toggleClass('on');
     });
 
 
     // 필터 초기화 버튼
-    $('.detail-search button[type=reset]').click(function() {
+    $('.detail-search button[type=reset]').on('click', function() {
         $('.detail-search .opt li').removeClass('on');
         $('.chk-box input[type=checkbox]').attr('checked', false);
     });
@@ -137,4 +137,20 @@ $(document).ready(function() {
     // $('.more-btn').click(function() {
     //     $('.item-box').height($('.item-box').height() + 770);
     // });
+
+    // 모션이 있는 하트
+    $(".heart").on('click', function() {
+        $(this).toggleClass("on");
+    });
+
+    // 모션이 없는 하트
+    $(".big-heart").on('click', function() {
+        $(this).attr("src", function(index, attr) {
+            if(attr.match('storke')) {
+                return $(this).attr("src").replace("storke", "fill");
+            } else {
+                return $(this).attr("src").replace("fill", "storke");
+            }
+        });
+    });
 })

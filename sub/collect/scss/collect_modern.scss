@@ -30,39 +30,60 @@ main {
                 .detail-search {
                     display: block;
 
-                    form[name=detail] .opt-box {
+                    form[name=detail] {
 
-                        .type {
-        
+                        .opt-box {
+
                             @include responsive(pc-screens) {
-                                @include flex_between_center();
-                                width: 58.18181818181818%;
+                                width: 100%;
+                                column-gap: 40px;
                             }
 
-                            ul.opt li {
-                                width: calc(100% / 3);
-                            }
-                        }
-        
-                        .artist, .space {
-        
-                            @include responsive(pc-screens) {
-                                @include flex_between_center();
-                                width: 32.7272727%;
-                            }
-        
-                            ul.opt {
-        
+                            .type {
+            
                                 @include responsive(pc-screens) {
-                                    width: 72.22222222222222%;
+                                    @include flex_between_center();
+                                    width: 58.18181818181818%;
                                 }
-        
-                                h6 {
-                                    width: calc(100% - 72.22222222222222%);
+
+                                ul.opt li {
+                                    width: calc(100% / 3);
                                 }
-                                
-                                li {
-                                    width: 50%;
+                            }
+
+                            .artist, .space {
+                                @include responsive(pc-screens) {
+                                    @include flex_between_center();
+                                    justify-content: flex-start;
+                                    width: 32.7272727%;
+                                }
+            
+                                ul.opt {
+            
+                                    @include responsive(pc-screens) {
+                                        width: 72.22222222222222%;
+                                    }
+            
+                                    h6 {
+                                        width: calc(100% - 72.22222222222222%);
+                                    }
+                                    
+                                    li {
+                                        width: 50%;
+                                    }
+                                }
+                            }
+
+                            .artist h6 {
+
+                                @include responsive(pc-screens) {
+                                    width: 70px;
+                                }
+                            }
+
+                            .space h6 {
+                                @include responsive(pc-screens) {
+                                    width: 105px;
                                 }
                             }
                         }

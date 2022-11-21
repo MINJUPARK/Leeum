@@ -190,7 +190,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/header_faq.jpg);
+  background: url(../image/faq_header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -651,6 +651,26 @@ header .breadcrumb-wrap {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  main .question {
+    margin: 60px 0 20px;
+  }
+}
+main .question .mark {
+  font-size: 130%;
+  margin-right: 5px;
+  color: #be6a15;
+}
+main .question .nextline {
+  display: block;
+  margin: 5px 0 20px 36px;
+}
+@media screen and (min-width: 1440px) {
+  main .question .nextline {
+    display: inline-block;
+    margin: 0;
+  }
+}
 main h2 {
   display: none;
 }
@@ -668,12 +688,12 @@ main li:first-child {
 }
 main .text-arrow {
   display: flex;
-  padding: 20px 0;
-  position: relative;
+  justify-content: space-between;
+  padding: 20px 10px;
 }
 @media screen and (min-width: 1440px) {
   main .text-arrow {
-    padding: 40px 0;
+    padding: 40px 10px;
   }
 }
 main .text-arrow p {
@@ -691,9 +711,6 @@ main .text-arrow p span {
 }
 main .text-arrow img {
   width: 17px;
-  position: absolute;
-  right: 0;
-  top: 25px;
 }
 @media screen and (min-width: 1440px) {
   main .text-arrow img {

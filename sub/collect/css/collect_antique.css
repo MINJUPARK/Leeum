@@ -910,6 +910,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=de
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
     display: inline-block;
     text-align: center;
+    margin-top: 50px;
   }
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
@@ -959,6 +960,9 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search {
     align-items: center;
     width: 58.1818181818%;
   }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li {
+  width: 25%;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .space {
