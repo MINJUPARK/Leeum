@@ -15,9 +15,11 @@ header {
 main {
 
     .question {
-                    
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
         @include responsive(pc-screens) {
-            margin: 60px 0 20px;
+            font-size: 28px;
         }
 
         .mark {
@@ -25,14 +27,45 @@ main {
             margin-right: 5px;
             color: $yellow-brown;
         }
+    }
 
-        .nextline {
-            display: block;
-            margin: 5px 0 20px 36px;
+    .faq-content {
+        background-color: $bk6;
+        padding: 20px;
+        border-radius: 5px;
+        margin: 0 10px 20px;
+
+        @include responsive(pc-screens) {
+            margin: 0 10px 50px;
+            padding: 40px;
+        }
+
+
+        .explain {
+            @include gothic_font(medium, 17px);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-bottom: 20px;
 
             @include responsive(pc-screens) {
-                display: inline-block;
-                margin: 0;
+                font-size: 22px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .shortcut {
+            @include gothic_font(semibold, 15px);
+            color: $yellow-brown;
+
+            @include responsive(pc-screens) {
+                font-size: 20px;
+            }
+
+            img {
+                margin-left: 20px;
+                width: 14px;
+                color: $svg-yellowbrown;
             }
         }
     }

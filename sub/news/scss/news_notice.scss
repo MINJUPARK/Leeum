@@ -28,6 +28,10 @@ main {
                 @include gothic_font(medium); 
                 margin-right: 20px; 
             }
+
+            @include responsive(pc-screens){
+                white-space: nowrap;
+            }
         }
     }
     
@@ -71,32 +75,30 @@ main {
     }
 
     .tab-menu {
-        @media screen and(min-width:$break-pc) {
+        @include responsive(pc-screens) {
             display: flex;
         }
 
         span {
 
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 margin: auto 0;
                 padding-left: 430px;
-                /* width: 20%; */
-                /* width: 500px; */
             }
         }
     }
 
     .tab-menu span {
         display: none;
-        @media screen and(min-width:$break-pc) {
-            display: block;
+        @include responsive(pc-screens) {
+            display: block
         }
     }
     
     .content {
-        display: flex;
-        padding: 20px;
         border-bottom: 1px solid $bk4;
+        @include flex_between_center();
+        padding : 20px 0;
 
         
 
@@ -111,8 +113,9 @@ main {
             width: 30px;
             @include gothic_font(medium, 14px);
             color: $bk2;
-            
-            @media screen and(min-width:$break-pc) {
+            display: none;
+
+            @include responsive(pc-screens) {
                 width: 60px;
                 font-size: 22px;
                 padding: 5px;
@@ -136,30 +139,19 @@ main {
             background-color: $dark-brown;
             @include gothic_font(medium, 12px);
             text-align: center;
+            display: none;
 
-            @media screen and(min-width:$break-pc) {
+
+            @include responsive(pc-screens) {
+                display: block;
                 padding: 10px;
                 width: 110px;
                 font-size: 18px;
             }
-            /* white-space: nowrap;
-            color: #fff;
-            padding: 0;
-            text-align: center;
-            width: 80px;
-            border-radius: 5px;
-            background-color: $dark-brown;
-            @include gothic_font(medium, 12px);
-
-            @media screen and(min-width:$break-pc) {
-                padding: 10px;
-                width: 110px;
-                font-size: 18px;
-                text-align: center;
-            } */
         }
 
         span.red-brown {
+            display: none;
             white-space: nowrap;
             color: #fff;
             width: 80px;
@@ -168,7 +160,8 @@ main {
             @include gothic_font(medium, 12px);
             text-align: center;
 
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
+                display: block;
                 padding: 10px;
                 width: 110px;
                 font-size: 18px;
@@ -176,6 +169,7 @@ main {
         }
 
         span.yellow-brown {
+            display: none;
             white-space: nowrap;
             color: #fff;
             width: 80px;
@@ -184,28 +178,16 @@ main {
             @include gothic_font(medium, 12px);
             text-align: center;
 
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
+                display: block;
                 padding: 10px;
                 width: 110px;
                 font-size: 18px;
             }
-           /*  white-space: nowrap;
-            color: #fff;
-            width: 80px;
-            border-radius: 5px;
-            @include gothic_font(medium, 12px);
-            background-color: $yellow-brown;
-
-
-            @media screen and(min-width:$break-pc) {
-                padding: 10px;
-                width: 110px;
-                font-size: 18px;
-                text-align: center;
-            } */
         }
 
         span.yellow {
+            display: none;
             white-space: nowrap;
             color: #fff;
             width: 80px;
@@ -214,32 +196,23 @@ main {
             @include gothic_font(medium, 12px);
             text-align: center;
 
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
+                display: block;
                 padding: 10px;
                 width: 110px;
                 font-size: 18px;
             }
-           /*  white-space: nowrap;
-            width: 80px;
-            border-radius: 5px;
-            @include gothic_font(medium, 12px);
-            background-color: #f3cf7a;
-            color: #000;
-
-            @media screen and(min-width:$break-pc) {
-                padding: 10px;
-                width: 110px;
-                font-size: 18px;
-                text-align: center;
-            } */
         }
 
         p {
             display: flex;
             white-space: nowrap;
-            padding: 10px;
+            padding: 10px 0;
             @include gothic_font(medium, 15px);
-            margin-left: 120px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 350px;
 
 
             @include responsive(pc-screens){
@@ -249,15 +222,20 @@ main {
                 font-size: 22px;
             }
         }
-
-        span {
-            padding: 10px;
+        
+        span.date {
+            // padding: 10px;
             font-size: 15px;
             white-space: nowrap;
+            justify-content: space-between;
+            margin-left: -80px;
 
-            @media screen and(min-width:$break-pc) {
-                padding-right: 0;
+
+            @include responsive(pc-screens){
+                // padding-right: 0;
+                // font-size: 18px;
                 font-size: 18px;
+                margin: 0;
             }
         }
 

@@ -74,7 +74,7 @@ img, span, label {
   display: inline-block;
 }
 
-img {
+img, span, strong, time {
   vertical-align: middle;
 }
 
@@ -365,7 +365,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -642,9 +651,14 @@ header .breadcrumb-wrap {
   }
 }
 
+main .question {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 @media screen and (min-width: 1440px) {
   main .question {
-    margin: 60px 0 20px;
+    font-size: 28px;
   }
 }
 main .question .mark {
@@ -652,15 +666,46 @@ main .question .mark {
   margin-right: 5px;
   color: #be6a15;
 }
-main .question .nextline {
-  display: block;
-  margin: 5px 0 20px 36px;
+main .faq-content {
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 10px 20px;
 }
 @media screen and (min-width: 1440px) {
-  main .question .nextline {
-    display: inline-block;
-    margin: 0;
+  main .faq-content {
+    margin: 0 10px 50px;
+    padding: 40px;
   }
+}
+main .faq-content .explain {
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-content .explain {
+    font-size: 22px;
+    margin-bottom: 40px;
+  }
+}
+main .faq-content .shortcut {
+  font-size: 15px;
+  font-weight: 600;
+  color: #be6a15;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-content .shortcut {
+    font-size: 20px;
+  }
+}
+main .faq-content .shortcut img {
+  margin-left: 20px;
+  width: 14px;
+  color: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
 main h2 {
   display: none;
@@ -992,4 +1037,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=news_faq.css.map */
