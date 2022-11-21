@@ -14,6 +14,14 @@
   display: none !important;
 }
 
+.br-bar {
+  width: 3px;
+  height: 18px;
+  margin: 0 8px 3px 0;
+  vertical-align: middle;
+  background: #be6a15;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -651,11 +659,6 @@ main {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 1440px) {
-  main {
-    font-size: 22px;
-  }
-}
 main .tablet-view {
   display: none;
 }
@@ -672,20 +675,14 @@ main .map-wrap {
     margin-top: 120px;
   }
 }
-main .map-wrap .map h2 {
-  font-size: calc(1em + 14px);
-  text-align: center;
-}
 main .map-wrap .map iframe {
   width: calc(100% + 40px);
   margin-left: -20px;
   height: 440px;
-  margin-top: 30px;
 }
 @media screen and (min-width: 1440px) {
   main .map-wrap .map iframe {
     height: 560px;
-    margin-top: 65px;
   }
 }
 main .map-wrap .map .way-wrap {
@@ -731,13 +728,14 @@ main .map-wrap .map .way-wrap .way2 address,
 main .map-wrap .map .way-wrap .way2 p {
   margin-top: 16px;
   font-size: calc(1em - 2px);
-  line-height: calc(1em - 2px + 10px);
+  line-height: 2em;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main .map-wrap .map .way-wrap .way1 address, main .map-wrap .map .way-wrap .way1 p,
 main .map-wrap .map .way-wrap .way2 address,
 main .map-wrap .map .way-wrap .way2 p {
-    margin-top: 14px;
+    margin-top: 10px;
   }
 }
 main .map-wrap .map .way-wrap .way1 {
@@ -753,7 +751,7 @@ main .map-wrap .map .way-wrap .way1 address {
 }
 main .map-wrap .map .way-wrap .way1 a {
   margin-top: 10px;
-  padding-left: 20px;
+  padding-left: 30px;
   font-size: calc(1em - 2px);
   background-image: url(../../../image/icon_call.svg);
   background-repeat: no-repeat;
@@ -771,6 +769,7 @@ main .map-wrap .map .way-wrap .way2 {
 }
 main .map-wrap .map .way-wrap .way2 p .subway-num {
   height: calc(1em + 7px);
+  line-height: calc(1em + 7px);
   aspect-ratio: 1;
   text-align: center;
   color: #fff;

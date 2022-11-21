@@ -9,33 +9,56 @@ header {
     @include header_common();
     @include full_bg('intro_header.png');
     height: 60vh !important;
+    margin-bottom: 0;
 
     &:before {
         background: transparent;
     }
-}
+
+    #close {
+
+        a {
+            position: fixed;
+            top: 20px; right: 20px;
+            display: block;
+            width: 25px; height: 25px;
+            cursor: pointer;
+            background: url(../../../image/icon_close.svg) no-repeat;
+            
+            transition: transform 0.7s;
+            
+            @include responsive(tablet-screens) {
+                top: 40px; right: 40px;
+                width: 30px; height: 30px;
+            }
+            
+            &:hover {
+                transform: rotate(360deg);
+            }
+        }
+    }
+} // header
 
 main {
     word-break: keep-all; // 단어를 기준으로 줄바꿈
     
     @include responsive(tablet-screens) { font-size: 20px; }
-    @include responsive(pc-screens) { font-size: 22px; }
     
     div h2 {
         font-size: calc(1em + 16px);
         
         @include responsive(pc-screens) { 
-            font-size: 56px;
+            font-size: 46px;
         }
     }
 
-    .pc-hidden { 
+    .m-br { 
         @include responsive(pc-screens) { 
             display: none; 
         } 
     }
 
-    .mobile-hidden { 
+    .pc-br { 
         display: none; 
 
         @include responsive(pc-screens) { 
@@ -47,7 +70,7 @@ main {
     section.intro-mission-wrap {
         
         p {
-            line-height: 28px;
+            @include content_align($align: left, $height: 2em);
             @include responsive(tablet-screens) { line-height: 36px; }
             @include responsive(pc-screens) { line-height: 44px; }
 
@@ -72,8 +95,8 @@ main {
 
                 @include responsive(pc-screens) {
                     text-align: left;
-                    font-size: 56px;
-                    line-height: 86px;
+                    font-size: 46px;
+                    line-height: 76px;
                 }
             }
             
@@ -133,7 +156,6 @@ main {
                 img {
                     position: absolute;
                     bottom: 0;
-                    // margin-top: -70px;
                     width: 448px / 390px * 100%;
 
                     @include responsive(pc-screens) {
@@ -204,7 +226,7 @@ main {
                 }
             } // mission-txt
         } // mission
-    } // intro-mission-wrap
+    } // section.intro-mission-wrap
 
     section.core-value-wrap {
         position: relative;
@@ -251,7 +273,7 @@ main {
                     background-color: rgba(255, 255, 255, 0.2 );
                     
                     @include responsive(pc-screens) {
-                        width: 350px;
+                        width: 330px;
                         margin: 0;
                         border: 2px solid #fff;
                         background-color: transparent;
@@ -269,7 +291,7 @@ main {
 
                             @include responsive(pc-screens) {
                                 position: absolute;
-                                left: (-63px - 16px); top: 50%;
+                                left: (-63px - 30px); top: 50%;
                                 width: 63px; height: 1px;
                                 content: '';
                                 border-bottom: 3px dashed rgba(255, 255, 255, 0.6);
@@ -288,7 +310,7 @@ main {
                             @include gothic_font(semibold, calc(1em + 14px));
 
                             @include responsive(pc-screens) {
-                                font-size: 50px;
+                                font-size: 36px;
                             }
                         }
                         
@@ -296,7 +318,7 @@ main {
                             font-size: calc(1em + 4px);
 
                             @include responsive(pc-screens) {
-                                font-size: 30px;
+                                font-size: 26px;
                             }
                         }
                     } // vlaue
@@ -316,13 +338,13 @@ main {
                     @include gothic_font(medium, calc(1em + 6px));
 
                     @include responsive(pc-screens) {
-                        font-size: 44px;
+                        font-size: 36px;
                     }
                 }
                 
                 p {
                     margin-top: 40px;
-                    line-height: 28px;
+                    line-height: 2em;
 
                     @include responsive(pc-screens) {
                         line-height: 44px;
@@ -343,16 +365,14 @@ main {
             text-align: center;
             
             p {
+                @include content_align(center, 2em);
                 margin-top: 30px;
                 @include gothic_font(medium);
-                line-height: 28px;
-                color: $bk1;
                 
                 @include responsive(tablet-screens) { line-height: 36px; }
                 @include responsive(pc-screens) {
                     margin-top: 45px;
-                    font-size: 26px;
-                    line-height: 46px;
+                    font-size: 20px;
                 }
 
                 span, b {
@@ -419,7 +439,7 @@ main {
                     margin-bottom: 20px;
                     
                     @include responsive(pc-screens) {
-                        font-size: 36px;
+                        font-size: $h3;
                         margin-bottom: 40px;
                     }
 
