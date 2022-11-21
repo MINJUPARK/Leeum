@@ -14,6 +14,14 @@
   display: none !important;
 }
 
+.br-bar {
+  width: 3px;
+  height: 18px;
+  margin: 0 8px 3px 0;
+  vertical-align: middle;
+  background: #be6a15;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -643,6 +651,20 @@ header .breadcrumb-wrap {
   }
 }
 
+main .tab-menu .count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+main .tab-menu .count b {
+  margin-right: 2px;
+}
+main .tab-menu .count span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+}
 main .tab-menu .gnb {
   /* @include flex_between(); */
   display: flex;

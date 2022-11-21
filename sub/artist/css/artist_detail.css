@@ -14,6 +14,14 @@
   display: none !important;
 }
 
+.br-bar {
+  width: 3px;
+  height: 18px;
+  margin: 0 8px 3px 0;
+  vertical-align: middle;
+  background: #be6a15;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -186,15 +194,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-header:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 header a {
   color: #fff;
@@ -548,6 +547,15 @@ header .mobile-menu-popup .popup .wh-menu .opt li a:hover {
     display: none;
   }
 }
+header:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 header .sub-title {
   position: absolute;
   left: 50%;
@@ -665,7 +673,7 @@ main section.info .item-wrap {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
   }
 }
 main section.info .item-wrap .loc-icon {
@@ -678,9 +686,8 @@ main section.info .item-wrap .loc-icon {
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .loc-icon {
     height: 40px;
-    border-bottom: 1px solid #c5c5c5;
-    padding: 0 10px 15px;
     margin-top: 0;
+    margin-bottom: 20px;
   }
 }
 main section.info .item-wrap .loc-icon .loc {
@@ -739,7 +746,12 @@ main section.info .item-wrap .loc-icon .icon-box {
 }
 main section.info .item-wrap .loc-icon .icon-box img {
   height: 25px;
-  filter: brightness(0) saturate(100%) invert(77%) sepia(0%) saturate(0%) hue-rotate(326deg) brightness(90%) contrast(92%);
+}
+main section.info .item-wrap .loc-icon .icon-box img.print:hover, main section.info .item-wrap .loc-icon .icon-box img.share:hover {
+  filter: brightness(0) saturate(100%);
+}
+main section.info .item-wrap .loc-icon .icon-box .big-heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
 }
 main section.info .item-wrap .i-slide {
   position: relative;
@@ -757,7 +769,6 @@ main section.info .item-wrap .i-slide {
     width: auto;
     margin: 0;
     width: 38.5714285714%;
-    margin-top: 40px;
   }
 }
 main section.info .item-wrap .i-slide .main-pic {
@@ -815,14 +826,22 @@ main section.info .item-wrap .i-des .tit-exp .tit h2 {
   }
 }
 main section.info .item-wrap .i-des .tit-exp .tit .lang {
+  margin-top: 5px;
   font-size: 18px;
-  font-weight: 200;
-  margin-top: 10px;
   color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-des .tit-exp .tit .lang {
+    margin-top: 15px;
     font-size: 22px;
+  }
+}
+main section.info .item-wrap .i-des .tit-exp .tit .lang .name {
+  font-size: 15px;
+}
+@media screen and (min-width: 1440px) {
+  main section.info .item-wrap .i-des .tit-exp .tit .lang .name {
+    font-size: 16px;
   }
 }
 main section.info .item-wrap .i-des .tit-exp .exp table.mini-box {
@@ -861,14 +880,20 @@ main section.info .item-wrap .i-des .tit-exp .exp table.mini-box th {
 main section.info .item-wrap .i-des .tit-exp .exp table.mini-box td {
   color: #3c3c3c;
 }
-main section.info .item-wrap .i-des .tit-exp .exp p {
+main section.info .item-wrap .i-des .tit-exp .introduce:last-child {
+  margin-top: 60px;
+}
+main section.info .item-wrap .i-des .tit-exp .introduce h6 {
+  margin: 10px 0;
+}
+main section.info .item-wrap .i-des .tit-exp p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
-  main section.info .item-wrap .i-des .tit-exp .exp p {
-    font-size: 18px;
+  main section.info .item-wrap .i-des .tit-exp p {
+    font-size: 17px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -999,20 +1024,41 @@ main section.work .item-box {
   margin-top: 30px;
 }
 main section.work .item-box .item {
+  position: relative;
   width: 48%;
   margin-bottom: 20px;
   border: 1px solid #d4d4d4;
   border-radius: 5px;
 }
-main section.work .item-box .item a {
-  display: block;
-  width: 100%;
-}
 @media screen and (min-width: 1440px) {
   main section.work .item-box .item {
     width: 23.5%;
     margin-bottom: 25px;
+    margin-right: 15px;
   }
+}
+main section.work .item-box .item .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: url("../../../image/icon_heart_motion.png") no-repeat;
+  background-position: 0 0;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  z-index: 97;
+}
+main section.work .item-box .item .heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
+}
+main section.work .item-box .item .heart.on {
+  transition-duration: 1s;
+  background-position: -1960px 0;
+}
+main section.work .item-box .item a {
+  display: block;
+  width: 100%;
 }
 main section.work .item-box .item .i-pic {
   position: relative;
@@ -1032,20 +1078,6 @@ main section.work .item-box .item .i-pic .bg {
      object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-}
-main section.work .item-box .item .i-pic .bm_btn {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 20px;
-  z-index: 1;
-}
-main section.work .item-box .item .i-pic .bm_btn .bookmark {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
-  opacity: 1;
-}
-main section.work .item-box .item .i-pic .bm_btn .bookmark.on {
-  filter: none;
 }
 main section.work .item-box .item .i-des {
   padding: 10px 20px 15px;
@@ -1067,10 +1099,24 @@ main section.work .item-box .item .i-des strong {
     font-size: 20px;
   }
 }
+main section.work .item-box .item .i-des p.name {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+@media screen and (min-width: 768px) {
+  main section.work .item-box .item .i-des p.name {
+    font-size: 15px;
+  }
+}
 main section.work .item-box .item .i-des p {
   margin: 5px 0 20px;
-  font-size: 13px;
   color: #5c5c5c;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   main section.work .item-box .item .i-des p {
@@ -1135,7 +1181,12 @@ main section.work .item-box .item .i-des .loc div:last-child {
   }
 }
 main section.movePage {
-  margin-top: 100px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.movePage {
+    margin-top: 100px;
+  }
 }
 main section.movePage .movePage-wrap {
   display: flex;
