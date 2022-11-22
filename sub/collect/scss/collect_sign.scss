@@ -29,35 +29,76 @@ main {
     section.itemList-wrap {
         margin-top: 80px;
 
-        .list-control {
-            @include list_control();
-        }
+        .itemLis {
 
-        ul.item-box {
-            @include itemList_box();
-
-            .item {
-                width: 100%;
-
-                @include responsive(pc-screens) {
-                    width: 440px;
-                }
-
-                a {
+            .list-control {
+                @include list_control();
+            }
     
-                    .i-pic {
-                        height: calc(195px / 350px) * 100%;
+            ul.item-box {
+                @include itemList_box();
+    
+                .item {
+                    width: 100%;
+    
+                    @include responsive(tablet-screens) {
+                        width: 45%;
                     }
-
-                    .i-des {
-
-                        p {
-                            margin-bottom: 0;
+    
+                    @include responsive(pc-screens) {
+                        width: 440px;
+                    }
+    
+                    .heart {
+                        @include icon_heart();
+                    }
+    
+                    a {
+        
+                        .i-pic {
+                            position: relative;
+                            height: calc(195px / 350px) * 100%;
+    
+                            .youtube-icon {
+                                @include element_center();
+                                width: calc(38px / 350px) * 100%;
+                                aspect-ratio: 38 / 27;
+                                background-image: url(../../../image/icon_youtube_black.svg);
+                                background-repeat: no-repeat;
+                                
+                                @include responsive(pc-screens) {
+                                    width: 63px; height: 45px;
+                                }
+                            }
+                        }
+    
+                        .i-des {
+    
+                            p {
+                                margin-bottom: 0;
+                            }
                         }
                     }
+                } // item
+            } // ul.item-box
+            
+            .more-btn {
+                position: relative;
+                top: -60px;
+                text-align: center;
+                z-index: 2;
+                
+                button {
+                    @include gothic_font(semibold, 14px);
+                    width: 50%; height: 40px;
+                    border: 1px solid $bk2;
+    
+                    @include responsive(pc-screens) {
+                        width: 200px;
+                    }
                 }
-            } // item
-        } // ul.item-box
+            }
+        }
     } // section.itemList-wrap
 }
 
