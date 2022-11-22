@@ -15,132 +15,56 @@ header {
 main {
     overflow-x: hidden;
     .container {
-        img {
-            margin-top: 30px;
-            width:100%;
-            @include out_container();
-
-            @include responsive(pc-screens){
-                @include in_container();
-                width: 100%;
+        .main-img {
+            img{
+                margin-top: 30px;
+                width:100%;
+                @include out_container();
+    
+                @include responsive(pc-screens){
+                    @include in_container();
+                    width: 100%;
+                }
             }
         }
 
         .info {
-            height:290px;
+
             border: 1px solid $bk6;
             border-radius: 5px;
             background-color: $bk6;
-            margin-top: 28px;
-            margin-bottom: 40px;
+            margin: 34px 0;
+            
             @include responsive(pc-screens){
                 width: 31.33333333333333%;
                 float: right;
                 margin-top: 82px;
             }
-            ul {
-                li{
-                    margin-left: 26px;
-                    &:first-of-type {
-                        margin-top: 25px;
-                        @include gothic_font(regular,17px);
-                        color: $bk1;
-                        @include responsive(pc-screens){
+            
+            table {
+                padding: 30px 0 30px 26px;
 
-                            @include gothic_font(regular,24px);
-                        }
-                        span{
+                .des {
+                    td {
+                        &:first-child {
                             @include gothic_font(semibold,17px);
-                            margin-right:23px;
-                            margin-bottom: 5px;
-                            color:#000;
+                            padding:12px 0;
 
                             @include responsive(pc-screens){
                                 @include gothic_font(semibold,24px);
                             }
                         }
-                    }
 
-                    &:nth-of-type(2) {
-                        @include gothic_font(regular,17px);
-                        line-height: 25px;
-                        color: $bk1;
-                        margin-bottom: 20px;
-                        @include responsive(pc-screens){
-                            @include gothic_font(regular,24px);
-                        }
-                        span {
-                            @include gothic_font(semibold,17px);
-                            margin-right:40px;
-                            
+                        &:last-child {
+                            padding-left: 23px;
+                            @include gothic_font(regular,18px);
+                            color: $bk1;
+
                             @include responsive(pc-screens){
-                                @include gothic_font(semibold,24px);
+                                @include gothic_font(regular,24px);
                             }
                         }
                     }
-
-                    &:nth-of-type(3) {
-                        @include gothic_font(regular,17px);
-                        color:#5b5b5b;
-
-                        @include responsive(pc-screens){
-                            @include gothic_font(regular,24px);
-                        }
-                        span {
-                            @include gothic_font(semibold,17px);
-                            color:#000;
-                            margin-bottom:19px;
-                            margin-right:25px;
-
-                            @include responsive(pc-screens){
-                                @include gothic_font(semibold,24px);
-                            }
-                        }
-                    }
-
-                    &:nth-of-type(4) {
-                        @include gothic_font(regular,17px);
-                        color:#5b5b5b;
-
-                        @include responsive(pc-screens){
-                            @include gothic_font(regular,24px);
-                        }
-                        span {
-                            @include gothic_font(semibold,17px);
-                            color:#000;
-                            margin-bottom:19px;
-                            margin-right:40px;
-
-                            @include responsive(pc-screens){
-                                @include gothic_font(semibold,24px);
-                            }
-                        }
-                    }
-
-                    &:last-of-type {
-                        @include gothic_font(regular,17px);
-                        color:#5b5b5b;
-
-                        @include responsive(pc-screens){
-                            @include gothic_font(regular,24px);
-                        }
-                        span {
-                            @include gothic_font(semibold,17px);
-                            color:#000;
-                            margin-bottom:19px;
-                            margin-right:53px;
-
-                            @include responsive(pc-screens){
-                                @include gothic_font(semibold,24px);
-                            }
-                        }
-                    }
-
-                }
-                hr {
-                    width:360px;
-                    margin:18px 0 22px 25px;
-                    color: $bk5;
                 }
             }
         }
@@ -198,8 +122,10 @@ main {
 
             .material {
                 img{
-                    height:280px;
+                    @include out_container();
+                    
                     @include responsive(pc-screens){
+                        @include in_container();
                         width:55.625%;
                         height:570px;
                         float: left;
@@ -254,9 +180,10 @@ main {
                     margin-top: 300px;
                 }
                 img{
-                    height:280px;
+                    @include out_container();
 
                     @include responsive(pc-screens){
+                        @include in_container();
                         width:55.625%;
                         height:570px;
                         float: right;
@@ -313,8 +240,10 @@ main {
                 }
 
                 img{
-                    height:280px;
+                    @include out_container();
+                    
                     @include responsive(pc-screens){
+                        @include in_container();
                         width:55.625%;
                         height:570px;
                         float: left;
@@ -367,12 +296,13 @@ main {
 
             .display-area {
                 @include responsive(pc-screens){
-                    margin-top: 300px;
+                    margin-top: 200px;
                 }
                 img{
-                    height:280px;
+                    @include out_container();
 
                     @include responsive(pc-screens){
+                        @include in_container();
                         width:55.625%;
                         height:570px;
                         float: right;
@@ -439,7 +369,7 @@ main {
 
             iframe {
                 @include out_container();
-                height:231px;
+                height: calc(200px + 6vh);
 
                 @include responsive(pc-screens){
                     float: left;
@@ -482,49 +412,42 @@ main {
 
                 @include responsive(pc-screens){
                     width: 27.77777777777778%;
+                    height: 100%;
                     float: left;
                     margin-top: 50px;
                     margin-bottom: 200px;
                     margin-right: 60px;
+                    height: 227px;
                 }
                 
-                ul{
-                    li{
-                        margin-left: 29px;
-                        @include gothic_font(regular,15px);
-                        color:#5b5b5b;
-                        &:first-of-type {
-                            margin-top: 21px;
-                            span {
-                                margin-right: 70px;
-                            }
-                        }
-                        
-                        &:nth-of-type(2) {
-                            span{
-                                margin-right: 70px;
-                            }
-                        }
+                table {
+                    .detail-des {
+                        td {
+                            vertical-align: top;
+                            &:first-of-type {
+                                @include gothic_font(semibold,15px);
+                                padding: 26px 60px 0 30px;
 
-                        &:nth-of-type(3) {
-                            span{
-                                margin-right: 30px;
+                                @include responsive(pc-screens){
+                                    @include gothic_font(semibold,15px);
+                                    padding-top: 30px;
+                                }
                             }
-                        }
-                        
-                        &:last-of-type {
-                            margin: -16px 30px 0 127px;
-                            line-height: 25px;
-                        }
 
-                        span {
-                            @include gothic_font(semibold,15px);
-                            margin-bottom: 22px;
-                            color:#000;
+                            &:last-of-type {
+                                @include gothic_font(regular,15px);
+                                padding-top: 26px;
+                                color:#5b5b5b;
 
+                                @include responsive(pc-screens){
+                                    @include gothic_font(regular,16px);
+                                    padding-top: 30px;
+                                }
+                            }
                         }
                     }
                 }
+                
             }
             .simple{
                 p {
@@ -587,7 +510,8 @@ main {
                                 
                                 display: inline;
                                 @include responsive(pc-screens) {
-                                display: block;
+                                    display: block;
+                                    @include gothic_font(semibold,22px);
                                 }
                             }
                         }
@@ -632,164 +556,92 @@ main {
                 hr{
                     margin-bottom: 20px;
                 }
-
+                
+                br {
+                    @include responsive(pc-screens) {
+                        display: none;
+                    }
+                }
+                
                 ul {
                     hr{
                         margin:30px 0 20px 0;
-                    }
+                    }   
 
-                    li{
+                    .faq-detail{
                         position: relative;
-                        &:first-of-type{
+                        
                             a{
-                                margin-left: 20px;
+                                position: relative;
+                                padding-left: 20px;
                                 width:100%;
                                 @include gothic_font(semibold,18px);
                                 line-height: 28px;
                                 span {
                                     color:#d6841a;
                                 }
+                                
                                 img{
+                                    position: absolute;
+                                    top:100px;
+                                    right: 0;
                                     width: 13px;
                                     height: 8px;
+                                    @include responsive(pc-screens) {
+                                        top:5px;
+                                    }
                                 }
                             }
-                            .answer1 {
+                            .answer {
                                 width: 100%;
-                                height: 350px;
-                                background-color: #f3f3f3;
+                                background-color: $bk6;
                                 border-radius: 5px;
                                 
                                 p {
-                                    padding-top: 20px;
-                                    padding-right: 20px;
-                                    margin-left: 20px;
+                                    padding: 20px;    
                                     @include gothic_font(regular);
                                     line-height: 26px;
+                                    text-align: left;
                                 }
                             }
                         }
-
-                        &:nth-of-type(2){
-                            a{
-                                margin-left: 20px;
-                                width:100%;
-                                @include gothic_font(semibold,18px);
-                                line-height: 28px;
-                                span {
-                                    color:#d6841a;
+                        .faq-detail-etc{
+                            position: relative;
+                            
+                                a{
+                                    position: relative;
+                                    padding-left: 20px;
+                                    width:100%;
+                                    @include gothic_font(semibold,18px);
+                                    line-height: 28px;
+                                    span {
+                                        color:#d6841a;
+                                    }
+                                    
+                                    img{
+                                        position: absolute;
+                                        top:40px;
+                                        right: 0;
+                                        width: 13px;
+                                        height: 8px;
+                                        @include responsive(pc-screens) {
+                                            top:5px;
+                                        }
+                                    }
                                 }
-                                img{
-                                    width: 13px;
-                                    height: 8px;
+                                .answer {
+                                    width: 100%;
+                                    background-color: $bk6;
+                                    border-radius: 5px;
+                                    
+                                    p {
+                                        padding: 20px;    
+                                        @include gothic_font(regular);
+                                        line-height: 26px;
+                                        text-align: left;
+                                    }
                                 }
-                            }
-                            .answer2 {
-                                width: 100%;
-                                height: 650px;
-                                background-color: #f3f3f3;
-                                border-radius: 5px;
-                                
-                                p {
-                                    padding-top: 20px;
-                                    padding-right: 20px;
-                                    margin-left: 20px;
-                                    @include gothic_font(regular);
-                                    line-height: 26px;
-                                }
-                            }
-                        }
-
-                        &:nth-of-type(3){
-                            a{
-                                margin-left: 20px;
-                                width:100%;
-                                @include gothic_font(semibold,18px);
-                                line-height: 28px;
-                                span {
-                                    color:#d6841a;
-                                }
-                                img{
-                                    width: 13px;
-                                    height: 8px;
-                                }
-                            }
-                            .answer3 {
-                                width: 100%;
-                                height: 370px;
-                                background-color: #f3f3f3;
-                                border-radius: 5px;
-                                
-                                p {
-                                    padding-top: 20px;
-                                    padding-right: 20px;
-                                    margin-left: 20px;
-                                    @include gothic_font(regular);
-                                    line-height: 26px;
-                                }
-                            }
-                        }
-
-                        &:nth-of-type(4){
-                            a{
-                                margin-left: 20px;
-                                width:100%;
-                                @include gothic_font(semibold,18px);
-                                line-height: 28px;
-                                span {
-                                    color:#d6841a;
-                                }
-                                img{
-                                    width: 13px;
-                                    height: 8px;
-                                }
-                            }
-                            .answer4 {
-                                width: 100%;
-                                height: 620px;
-                                background-color: #f3f3f3;
-                                border-radius: 5px;
-                                
-                                p {
-                                    padding-top: 20px;
-                                    padding-right: 20px;
-                                    margin-left: 20px;
-                                    @include gothic_font(regular);
-                                    line-height: 26px;
-                                }
-                            }
-                        }
-
-                        &:last-of-type{
-                            a{
-                                margin-left: 20px;
-                                width:100%;
-                                @include gothic_font(semibold,18px);
-                                line-height: 28px;
-                                span {
-                                    color:#d6841a;
-                                }
-                                img{
-                                    width: 13px;
-                                    height: 8px;
-                                }
-                            }
-                            .answer5 {
-                                width: 100%;
-                                height: 500px;
-                                background-color: #f3f3f3;
-                                border-radius: 5px;
-                                
-                                p {
-                                    padding-top: 20px;
-                                    padding-right: 20px;
-                                    margin-left: 20px;
-                                    @include gothic_font(regular);
-                                    line-height: 26px;
-                                }
-                            }
-                        }
-                    }
+                            }    
                 }
             }
         }
