@@ -12,29 +12,46 @@ header {
     @include full_bg('header_program.jpg');
 }
 
+/* main {
+    h1 {
+        display: none;
+    }
+
+    .flex {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+} */
+
 main {
     h1 {
         display: none;
     }
 
     .flex {
+        /* justify-content: space-between;
+        flex-wrap: wrap; */
         @include responsive(pc-screens){
             display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
     }
     .past-program {
+        width: 100%;
         margin-bottom: 20px;
         @include responsive(pc-screens){
+            width: 48.57142857142857% !important;
             margin-bottom: 50px;
             width: 50%;
 
-            &:first-child {
+          /*   &:first-child {
                 padding-right: 20px;
             }
 
             &:last-child {
                 padding-left: 20px;
-            }
+            } */
         }
         
         .image-text {

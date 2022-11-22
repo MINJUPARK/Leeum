@@ -212,6 +212,7 @@ header .logo-menu-wrap {
 }
 @media screen and (min-width: 1440px) {
   header .logo-menu-wrap {
+    width: 1920px;
     position: static;
   }
 }
@@ -654,7 +655,7 @@ header .breadcrumb-wrap {
 main {
   overflow-x: hidden;
 }
-main .container img {
+main .container .main-img img {
   margin-top: 30px;
   width: 100%;
   position: relative;
@@ -665,7 +666,7 @@ main .container img {
   margin-right: -50vw;
 }
 @media screen and (min-width: 1440px) {
-  main .container img {
+  main .container .main-img img {
     position: static;
     left: 0;
     right: 0;
@@ -675,12 +676,10 @@ main .container img {
   }
 }
 main .container .info {
-  height: 290px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background-color: #f3f3f3;
-  margin-top: 28px;
-  margin-bottom: 40px;
+  margin: 34px 0;
 }
 @media screen and (min-width: 1440px) {
   main .container .info {
@@ -689,134 +688,31 @@ main .container .info {
     margin-top: 82px;
   }
 }
-main .container .info ul li {
-  margin-left: 26px;
+main .container .info table {
+  padding: 30px 0 30px 26px;
 }
-main .container .info ul li:first-of-type {
-  margin-top: 25px;
+main .container .info table .des td:first-child {
   font-size: 17px;
+  font-weight: 600;
+  padding: 12px 0;
+}
+@media screen and (min-width: 1440px) {
+  main .container .info table .des td:first-child {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+main .container .info table .des td:last-child {
+  padding-left: 23px;
+  font-size: 18px;
   font-weight: 400;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
-  main .container .info ul li:first-of-type {
+  main .container .info table .des td:last-child {
     font-size: 24px;
     font-weight: 400;
   }
-}
-main .container .info ul li:first-of-type span {
-  font-size: 17px;
-  font-weight: 600;
-  margin-right: 23px;
-  margin-bottom: 5px;
-  color: #000;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info ul li:first-of-type span {
-    font-size: 24px;
-    font-weight: 600;
-  }
-}
-main .container .info ul li:nth-of-type(2) {
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 25px;
-  color: #3c3c3c;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info ul li:nth-of-type(2) {
-    font-size: 24px;
-    font-weight: 400;
-  }
-}
-main .container .info ul li:nth-of-type(2) span {
-  font-size: 17px;
-  font-weight: 600;
-  margin-right: 40px;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info ul li:nth-of-type(2) span {
-    font-size: 24px;
-    font-weight: 600;
-  }
-}
-main .container .info ul li:nth-of-type(3) {
-  font-size: 17px;
-  font-weight: 400;
-  color: #5b5b5b;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info ul li:nth-of-type(3) {
-    font-size: 24px;
-    font-weight: 400;
-  }
-}
-main .container .info ul li:nth-of-type(3) span {
-  font-size: 17px;
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 19px;
-  margin-right: 25px;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info ul li:nth-of-type(3) span {
-    font-size: 24px;
-    font-weight: 600;
-  }
-}
-main .container .info ul li:nth-of-type(4) {
-  font-size: 17px;
-  font-weight: 400;
-  color: #5b5b5b;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info ul li:nth-of-type(4) {
-    font-size: 24px;
-    font-weight: 400;
-  }
-}
-main .container .info ul li:nth-of-type(4) span {
-  font-size: 17px;
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 19px;
-  margin-right: 40px;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info ul li:nth-of-type(4) span {
-    font-size: 24px;
-    font-weight: 600;
-  }
-}
-main .container .info ul li:last-of-type {
-  font-size: 17px;
-  font-weight: 400;
-  color: #5b5b5b;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info ul li:last-of-type {
-    font-size: 24px;
-    font-weight: 400;
-  }
-}
-main .container .info ul li:last-of-type span {
-  font-size: 17px;
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 19px;
-  margin-right: 53px;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info ul li:last-of-type span {
-    font-size: 24px;
-    font-weight: 600;
-  }
-}
-main .container .info ul hr {
-  width: 360px;
-  margin: 18px 0 22px 25px;
-  color: #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
   main .container .symbol {
@@ -871,10 +767,20 @@ main .container .detail h3 {
   }
 }
 main .container .detail .material img {
-  height: 280px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .material img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
     width: 55.625%;
     height: 570px;
     float: left;
@@ -932,10 +838,20 @@ main .container .detail .material .material-detail p:last-of-type {
   }
 }
 main .container .detail .lobby img {
-  height: 280px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .lobby img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
     width: 55.625%;
     height: 570px;
     float: right;
@@ -993,10 +909,20 @@ main .container .detail .lobby .lobby-detail p:last-of-type {
   }
 }
 main .container .detail .rotunda img {
-  height: 280px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .rotunda img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
     width: 55.625%;
     height: 570px;
     float: left;
@@ -1050,14 +976,24 @@ main .container .detail .rotunda .rotunda-detail p:last-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .display-area {
-    margin-top: 300px;
+    margin-top: 200px;
   }
 }
 main .container .detail .display-area img {
-  height: 280px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .display-area img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
     width: 55.625%;
     height: 570px;
     float: right;
@@ -1132,7 +1068,7 @@ main .container .constructor-info iframe {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
-  height: 231px;
+  height: calc(200px + 6vh);
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info iframe {
@@ -1182,39 +1118,41 @@ main .container .constructor-info .detail {
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail {
     width: 27.7777777778%;
+    height: 100%;
     float: left;
     margin-top: 50px;
     margin-bottom: 200px;
     margin-right: 60px;
+    height: 227px;
   }
 }
-main .container .constructor-info .detail ul li {
-  margin-left: 29px;
-  font-size: 15px;
-  font-weight: 400;
-  color: #5b5b5b;
+main .container .constructor-info .detail table .detail-des td {
+  vertical-align: top;
 }
-main .container .constructor-info .detail ul li:first-of-type {
-  margin-top: 21px;
-}
-main .container .constructor-info .detail ul li:first-of-type span {
-  margin-right: 70px;
-}
-main .container .constructor-info .detail ul li:nth-of-type(2) span {
-  margin-right: 70px;
-}
-main .container .constructor-info .detail ul li:nth-of-type(3) span {
-  margin-right: 30px;
-}
-main .container .constructor-info .detail ul li:last-of-type {
-  margin: -16px 30px 0 127px;
-  line-height: 25px;
-}
-main .container .constructor-info .detail ul li span {
+main .container .constructor-info .detail table .detail-des td:first-of-type {
   font-size: 15px;
   font-weight: 600;
-  margin-bottom: 22px;
-  color: #000;
+  padding: 26px 60px 0 30px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .detail table .detail-des td:first-of-type {
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 30px;
+  }
+}
+main .container .constructor-info .detail table .detail-des td:last-of-type {
+  font-size: 15px;
+  font-weight: 400;
+  padding-top: 26px;
+  color: #5b5b5b;
+}
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .detail table .detail-des td:last-of-type {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 30px;
+  }
 }
 main .container .constructor-info .simple p {
   text-align: left;
@@ -1283,6 +1221,8 @@ main .container .constructor-info .constructor-detail .detail-left p:nth-of-type
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) span {
     display: block;
+    font-size: 22px;
+    font-weight: 600;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1318,151 +1258,89 @@ main .container .constructor-info .faq h4 {
 main .container .constructor-info .faq hr {
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .faq br {
+    display: none;
+  }
+}
 main .container .constructor-info .faq ul hr {
   margin: 30px 0 20px 0;
 }
-main .container .constructor-info .faq ul li {
+main .container .constructor-info .faq ul .faq-detail {
   position: relative;
 }
-main .container .constructor-info .faq ul li:first-of-type a {
-  margin-left: 20px;
+main .container .constructor-info .faq ul .faq-detail a {
+  position: relative;
+  padding-left: 20px;
   width: 100%;
   font-size: 18px;
   font-weight: 600;
   line-height: 28px;
 }
-main .container .constructor-info .faq ul li:first-of-type a span {
+main .container .constructor-info .faq ul .faq-detail a span {
   color: #d6841a;
 }
-main .container .constructor-info .faq ul li:first-of-type a img {
+main .container .constructor-info .faq ul .faq-detail a img {
+  position: absolute;
+  top: 100px;
+  right: 0;
   width: 13px;
   height: 8px;
 }
-main .container .constructor-info .faq ul li:first-of-type .answer1 {
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .faq ul .faq-detail a img {
+    top: 5px;
+  }
+}
+main .container .constructor-info .faq ul .faq-detail .answer {
   width: 100%;
-  height: 350px;
   background-color: #f3f3f3;
   border-radius: 5px;
 }
-main .container .constructor-info .faq ul li:first-of-type .answer1 p {
-  padding-top: 20px;
-  padding-right: 20px;
-  margin-left: 20px;
+main .container .constructor-info .faq ul .faq-detail .answer p {
+  padding: 20px;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
+  text-align: left;
 }
-main .container .constructor-info .faq ul li:nth-of-type(2) a {
-  margin-left: 20px;
+main .container .constructor-info .faq ul .faq-detail-etc {
+  position: relative;
+}
+main .container .constructor-info .faq ul .faq-detail-etc a {
+  position: relative;
+  padding-left: 20px;
   width: 100%;
   font-size: 18px;
   font-weight: 600;
   line-height: 28px;
 }
-main .container .constructor-info .faq ul li:nth-of-type(2) a span {
+main .container .constructor-info .faq ul .faq-detail-etc a span {
   color: #d6841a;
 }
-main .container .constructor-info .faq ul li:nth-of-type(2) a img {
+main .container .constructor-info .faq ul .faq-detail-etc a img {
+  position: absolute;
+  top: 40px;
+  right: 0;
   width: 13px;
   height: 8px;
 }
-main .container .constructor-info .faq ul li:nth-of-type(2) .answer2 {
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .faq ul .faq-detail-etc a img {
+    top: 5px;
+  }
+}
+main .container .constructor-info .faq ul .faq-detail-etc .answer {
   width: 100%;
-  height: 650px;
   background-color: #f3f3f3;
   border-radius: 5px;
 }
-main .container .constructor-info .faq ul li:nth-of-type(2) .answer2 p {
-  padding-top: 20px;
-  padding-right: 20px;
-  margin-left: 20px;
+main .container .constructor-info .faq ul .faq-detail-etc .answer p {
+  padding: 20px;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
-}
-main .container .constructor-info .faq ul li:nth-of-type(3) a {
-  margin-left: 20px;
-  width: 100%;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
-}
-main .container .constructor-info .faq ul li:nth-of-type(3) a span {
-  color: #d6841a;
-}
-main .container .constructor-info .faq ul li:nth-of-type(3) a img {
-  width: 13px;
-  height: 8px;
-}
-main .container .constructor-info .faq ul li:nth-of-type(3) .answer3 {
-  width: 100%;
-  height: 370px;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-}
-main .container .constructor-info .faq ul li:nth-of-type(3) .answer3 p {
-  padding-top: 20px;
-  padding-right: 20px;
-  margin-left: 20px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-}
-main .container .constructor-info .faq ul li:nth-of-type(4) a {
-  margin-left: 20px;
-  width: 100%;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
-}
-main .container .constructor-info .faq ul li:nth-of-type(4) a span {
-  color: #d6841a;
-}
-main .container .constructor-info .faq ul li:nth-of-type(4) a img {
-  width: 13px;
-  height: 8px;
-}
-main .container .constructor-info .faq ul li:nth-of-type(4) .answer4 {
-  width: 100%;
-  height: 620px;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-}
-main .container .constructor-info .faq ul li:nth-of-type(4) .answer4 p {
-  padding-top: 20px;
-  padding-right: 20px;
-  margin-left: 20px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-}
-main .container .constructor-info .faq ul li:last-of-type a {
-  margin-left: 20px;
-  width: 100%;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
-}
-main .container .constructor-info .faq ul li:last-of-type a span {
-  color: #d6841a;
-}
-main .container .constructor-info .faq ul li:last-of-type a img {
-  width: 13px;
-  height: 8px;
-}
-main .container .constructor-info .faq ul li:last-of-type .answer5 {
-  width: 100%;
-  height: 500px;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-}
-main .container .constructor-info .faq ul li:last-of-type .answer5 p {
-  padding-top: 20px;
-  padding-right: 20px;
-  margin-left: 20px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
+  text-align: left;
 }
 
 @media screen and (min-width: 1440px) {

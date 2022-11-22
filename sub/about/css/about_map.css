@@ -212,6 +212,7 @@ header .logo-menu-wrap {
 }
 @media screen and (min-width: 1440px) {
   header .logo-menu-wrap {
+    width: 1920px;
     position: static;
   }
 }

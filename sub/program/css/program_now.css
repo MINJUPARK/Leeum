@@ -212,6 +212,7 @@ header .logo-menu-wrap {
 }
 @media screen and (min-width: 1440px) {
   header .logo-menu-wrap {
+    width: 1920px;
     position: static;
   }
 }
@@ -666,18 +667,28 @@ main .img-text {
 }
 main .img-text img {
   width: 100%;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 @media screen and (min-width: 1440px) {
   main .img-text img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+    width: 1440px;
     text-align: center;
-    height: 810px;
   }
 }
 main .img-text .limit-text {
   position: absolute;
-  top: 15px;
-  left: 20px;
-  font-size: 12px;
+  top: 17px;
+  /* font-size: 12px; */
   padding: 8px 12px;
   background-color: #ac3f21;
   color: #fff;
@@ -686,14 +697,23 @@ main .img-text .limit-text {
 @media screen and (min-width: 1440px) {
   main .img-text .limit-text {
     position: absolute;
-    margin-left: 270px;
-    margin-top: 10px;
+    left: 30px;
+    top: 30px;
+    /*  margin-left: 270px; */
+    /*  margin-top: 10px; */
     font-size: 22px;
-    padding: 20px 30px;
+    /* padding: 20px 30px; */
   }
 }
 main .img-text .limit-text p {
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main .img-text .limit-text p {
+    font-size: 24px;
+    padding: 10px;
+  }
 }
 @media screen and (min-width: 1440px) {
   main .text-explain .text-explain-text {
@@ -744,8 +764,8 @@ main .text-explain .text p:last-child {
 }
 @media screen and (min-width: 1440px) {
   main .text-explain .explain-text {
-    width: 50%;
-    padding-right: 60px;
+    width: 53.3870967742%;
+    /* padding-right: 60px; */
     text-align: justify;
   }
 }
@@ -826,7 +846,7 @@ main .img-explain-date-register .image-text .limit-text-1 {
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .explain {
-    padding-top: 45px;
+    padding-top: 30px;
   }
 }
 main .img-explain-date-register .explain-date-register .explain p:first-child {
@@ -907,9 +927,9 @@ main .img-explain-date-register .explain-date-register .request {
   main .img-explain-date-register .explain-date-register .request {
     font-size: 20px;
     text-align: center;
-    width: 160px;
-    margin-left: 440px;
-    padding: 20px 45px;
+    width: 600px;
+    /* margin-left: 440px; */
+    padding: 13px;
   }
 }
 main .img-explain-date-register .explain-date-register .date-1 {
@@ -934,10 +954,16 @@ main .img-explain-date-register .explain-date-register .request-1 {
   main .img-explain-date-register .explain-date-register .request-1 {
     font-size: 20px;
     text-align: center;
+    width: 600px;
+    /* margin-left: 440px; */
+    padding: 13px;
+    margin-top: 70px;
+    /* font-size: 20px;
+    text-align: center;
     width: 160px;
     margin-top: 70px;
     margin-left: 440px;
-    padding: 20px 45px;
+    padding: 20px 45px; */
   }
 }
 

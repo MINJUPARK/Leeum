@@ -39,38 +39,52 @@ main {
 
         img {
             width: 100%;
+            @include out_container();
 
-            @media screen and(min-width:$break-pc) {
+
+            @include responsive(pc-screens) {
                 // padding: 0 20px;
+                @include in_container();
+                width: 1440px;
                 text-align: center;
-                height: 810px;
+                // object-fit: cover;
+                // object-position: 10px 10px;
+                // height: 430px;
             }
         }
         
         .limit-text {
             position: absolute;
-            top: 15px;
-            left: 20px;
-            font-size: 12px;
+            top: 17px;
+            // left: 20px;
+            
+            /* font-size: 12px; */
             padding: 8px 12px;
             background-color: $red-brown;
             color: #fff;
             border-radius: 5px;
 
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 position: absolute;
-                margin-left: 270px;
-                margin-top: 10px;
+                // margin-left: 30px;
+                left: 30px;
+                top: 30px;
+               /*  margin-left: 270px; */
+               /*  margin-top: 10px; */
                 font-size: 22px;
-                padding: 20px 30px;
+                /* padding: 20px 30px; */
             }
 
             p {
-                font-size: 14px;
+                @include gothic_font(semibold, 12px);
+
+                @include responsive(pc-screens){
+                    font-size: 24px;
+                    padding: 10px;
+                }
             }
         }
     }
-
     .text-explain {
 
         .text-explain-text {
@@ -124,8 +138,8 @@ main {
         
         .explain-text {
             @media screen and(min-width:$break-pc) {
-                width: 50%;
-                padding-right: 60px;
+                width: 53.38709677419355%;
+                /* padding-right: 60px; */
                 text-align: justify;
             }
 
@@ -214,7 +228,7 @@ main {
 
             .explain {
                 @media screen and(min-width:$break-pc) {
-                    padding-top: 45px;
+                    padding-top: 30px;
                 }
 
                 p:first-child {
@@ -293,9 +307,10 @@ main {
                 @media screen and(min-width:$break-pc) {
                     font-size: 20px;
                     text-align: center;
-                    width: 160px;
-                    margin-left: 440px;
-                    padding: 20px 45px;
+                    width: 600px;
+                    /* margin-left: 440px; */
+                    // padding: 20px 30px;
+                    padding: 13px;
                 }
             }
 
@@ -318,13 +333,20 @@ main {
                 border-radius: 5px;
                 margin-bottom: 70px;
 
-                @include responsive(pc-screens) { 
+                @include responsive(pc-screens) {
                     font-size: 20px;
+                    text-align: center;
+                    width: 600px;
+                    /* margin-left: 440px; */
+                    // padding: 20px 30px;
+                    padding: 13px;
+                    margin-top: 70px;
+                    /* font-size: 20px;
                     text-align: center;
                     width: 160px;
                     margin-top: 70px;
                     margin-left: 440px;
-                    padding: 20px 45px;
+                    padding: 20px 45px; */
                 }
             }
         }
