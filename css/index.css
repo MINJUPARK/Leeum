@@ -210,6 +210,7 @@ header .logo-menu-wrap {
 }
 @media screen and (min-width: 1440px) {
   header .logo-menu-wrap {
+    width: 1920px;
     position: static;
   }
 }
@@ -546,12 +547,12 @@ header .mobile-menu-popup .popup .wh-menu .opt li a:hover {
   }
 }
 header.index {
-  height: 560px;
+  height: 480px;
   overflow-x: hidden;
 }
 @media screen and (min-width: 1440px) {
   header.index {
-    height: 960px;
+    height: 880px;
   }
 }
 header .main-slider-wrap {
@@ -595,29 +596,90 @@ header .main-slider-wrap .main-slider .item .item-con video {
      object-fit: cover;
 }
 header .main-slider-wrap .main-slider .item .info-wrap {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -35%);
+  z-index: 1;
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 150px;
+  text-align: left;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info {
+    row-gap: 80px;
+    height: 450px;
+  }
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info .title {
+  width: 100%;
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info .title span {
+  font-family: "KoPub Batang";
+  font-size: 14px;
+  font-weight: 300;
+}
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .title span {
+    font-size: 26px;
+  }
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info .title h1 {
+  font-family: "KoPub Batang";
+  font-size: 32px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .title h1 {
+    font-size: 64px;
+  }
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info .date {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  z-index: 1;
 }
-header .main-slider-wrap .main-slider .item .info-wrap .info h3 {
-  margin: 0px;
-  color: #fff;
-  font-size: 84px;
-  font-weight: 300;
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .date {
+    width: 31.4285714286%;
+  }
 }
-header .main-slider-wrap .main-slider .item .info-wrap .info h5 {
-  font-size: 32px;
+header .main-slider-wrap .main-slider .item .info-wrap .info .date p {
+  font-family: "KoPub Batang";
+  font-size: 18px;
   font-weight: 300;
-  padding: 10px 0 0;
-  margin: 0;
+  margin-bottom: 10px;
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info .date time {
+  font-family: "KoPub Batang";
+  font-size: 22px;
+  font-weight: 400;
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info .date .hori-bar {
+  width: 120px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  header .main-slider-wrap .main-slider .item .info-wrap .info .notice p {
+    line-height: 32px;
+  }
 }
 header .main-slider-wrap .main-slider .item h3 {
   -webkit-animation: fadeOutDown 1s both;
@@ -734,9 +796,6 @@ main {
   margin-bottom: 0;
   overflow-x: hidden;
 }
-main section.infoBox {
-  margin-bottom: 80px;
-}
 @media screen and (min-width: 1440px) {
   main section.infoBox {
     border-bottom: 1px solid #c5c5c5;
@@ -773,7 +832,7 @@ main section.infoBox .time-notice {
 main section.infoBox .time-notice .time-wrap, main section.infoBox .time-notice .notice-wrap {
   width: 100%;
   padding: 0 20px;
-  border-bottom: 1px solid #c5c5c5;
+  border-bottom: 1px solid #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .time-wrap, main section.infoBox .time-notice .notice-wrap {
@@ -782,11 +841,11 @@ main section.infoBox .time-notice .time-wrap, main section.infoBox .time-notice 
   }
 }
 main section.infoBox .time-notice .time-wrap {
-  border-bottom: 1px solid #c5c5c5;
+  border-bottom: 1px solid #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .time-wrap {
-    border-right: 1px solid #c5c5c5;
+    border-right: 1px solid #d4d4d4;
     border-bottom: 0;
   }
 }
@@ -805,7 +864,7 @@ main section.infoBox .time-notice .time, main section.infoBox .time-notice .noti
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .time, main section.infoBox .time-notice .notice {
     justify-content: normal;
-    height: 80px;
+    height: 65px;
   }
 }
 main section.infoBox .time-notice .notice .des {
@@ -816,6 +875,19 @@ main section.infoBox .time-notice .notice .des {
 }
 main section.infoBox .time-notice .notice .des .txt-slider {
   width: 90%;
+}
+main section.infoBox .time-notice .notice .des .more {
+  margin-bottom: 0;
+}
+main section.infoBox .time-notice .notice .des .more label {
+  font-size: 16px;
+  font-weight: 600;
+}
+main section.infoBox .time-notice .notice .des .more img {
+  width: 16px;
+  height: 14px;
+  margin-bottom: 2px;
+  margin-left: 15px;
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .tit {
@@ -846,7 +918,7 @@ main section.infoBox .time-notice .tit strong {
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .tit strong {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 main section.infoBox .time-notice .des {
@@ -859,7 +931,7 @@ main section.infoBox .time-notice .des time {
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .des time {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 main section.infoBox .time-notice .des .memo {
@@ -886,6 +958,11 @@ main section.infoBox .time-notice .des .latest {
     font-size: 18px;
   }
 }
+main .title-box {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
 main .title-box.center {
   text-align: center;
 }
@@ -904,15 +981,51 @@ main .title-box .con p {
   font-size: 14px;
   margin-top: 10px;
 }
-main .more label {
+@media screen and (min-width: 1440px) {
+  main .title-box .con p {
+    font-size: 16px;
+  }
+}
+main .btn {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+}
+main .btn .more label {
   font-size: 16px;
   font-weight: 600;
 }
-main .more img {
+main .btn .more img {
   width: 16px;
   height: 14px;
   margin-bottom: 2px;
-  margin-left: 5px;
+  margin-left: 15px;
+}
+main .btn .more label {
+  font-size: 16px;
+  font-weight: 600;
+}
+main .btn .more img {
+  width: 16px;
+  height: 14px;
+  margin-bottom: 2px;
+  margin-left: 15px;
+}
+main .btn .more.pc {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .btn .more.pc {
+    display: block;
+  }
+}
+main section.exhibition {
+  margin-top: 75px;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition {
+    margin-top: 150px;
+  }
 }
 main section.exhibition .content-box {
   position: relative;
@@ -930,36 +1043,65 @@ main section.exhibition .content-box {
     right: 0;
     width: auto;
     margin: 0;
+    margin-top: 80px;
   }
-}
-main section.exhibition .slick-initialized .swipe-tab-content {
-  position: relative;
-  min-height: 365px;
 }
 main section.exhibition .slick-initialized .swipe-tab {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  background: none;
-  border: 0;
-  color: #757575;
-  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  color: #acacac;
   text-align: center;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
   transition: all 0.5s;
 }
 main section.exhibition .slick-initialized .swipe-tab:hover {
+  font-size: 16px;
+  font-weight: 600;
   color: #000;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .slick-initialized .swipe-tab:hover {
+    font-size: 18px;
+  }
 }
 main section.exhibition .slick-initialized .swipe-tab.active-tab {
-  border-bottom-color: #000;
+  font-size: 16px;
+  font-weight: 700;
   color: #000;
-  font-weight: bold;
+  border-bottom: 2px solid #be6a15;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .slick-initialized .swipe-tab.active-tab {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .slick-initialized .swipe-tab {
+    padding: 25px 0;
+    font-size: 18px;
+  }
+}
+main section.exhibition .sub-header-wrap {
+  border-bottom: 1px solid #d4d4d4;
+}
+main section.exhibition .sub-header-wrap .sub-header {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .sub-header-wrap .sub-header {
+    width: 1240px;
+  }
 }
 main section.exhibition .main-container {
+  height: 200px;
   padding: 25px;
-  background: #f1f1f1;
 }
 
 @media screen and (min-width: 1440px) {

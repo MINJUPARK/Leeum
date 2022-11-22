@@ -11,11 +11,11 @@ header {
     margin-bottom: 0;
 
     &.index {
-      height: 560px; 
+      height: 480px; // 280px;
       overflow-x: hidden;
 
       @include responsive(pc-screens) {
-        height: 960px;
+        height: 880px; // 480px
       }
     }
 
@@ -51,29 +51,80 @@ header {
           }
 
           .info-wrap {
-            @include flex_between_center();
-            justify-content: center;
-            position: absolute;
-            left: 0; top: 0; 
-            width: 100%; height: 100%;
-            text-align: center;
+            width: 100%;
+            @include element_center();
+            transform: translate(-50%, -35%);
             z-index: 1;
 
             .info {
+              display: flex;
+              flex-wrap: wrap;
+              width: 100%;
+              height: 150px;
+              text-align: left;
+              color: #fff;
 
-              h3 {
-                margin: 0px;
-                color: #fff;
-                font-size: 84px;
-                font-weight: 300;
-                
+              @include responsive(pc-screens) {
+                row-gap: 80px;
+                height: 450px;
               }
 
-              h5 {
-                font-size: 32px;
-                font-weight: 300;
-                padding: 10px 0 0;
-                margin: 0;
+              .title {
+                width: 100%;
+
+                span {
+                  @include batang_font(light, 14px);
+
+                  @include responsive(pc-screens) {
+                    font-size: $h4;
+                  }              
+                }
+  
+                h1 {
+                  @include batang_font(medium, 32px);
+                  margin-top: 20px;
+
+                  @include responsive(pc-screens) {
+                    font-size: 64px;
+                  }  
+                }
+              }
+
+              .date {
+                @include flex_between_center();
+
+                @include responsive(pc-screens) {
+                  width: 31.42857142857143%;
+                } 
+
+                p {
+                  @include batang_font(light, $h6);                
+                  margin-bottom: 10px;
+                }
+  
+                time {
+                  @include batang_font(medium, $h5);
+                }
+
+                .hori-bar {
+                  width: 120px;
+                  height: 1px;
+                  background-color: rgba(255, 255, 255, 0.5);
+                }
+              }
+              
+              .notice {
+                display: none;
+
+                @include responsive(pc-screens) {
+                  display: flex;
+                  justify-content: flex-end;
+                  width: 100%;
+
+                  p {
+                    line-height: 32px;
+                  }
+                }
               }
             }
           }
@@ -182,7 +233,6 @@ main {
   overflow-x: hidden;
 
   section.infoBox {
-    margin-bottom: 80px;
     
     @include responsive(pc-screens) {
       border-bottom: 1px solid #c5c5c5;
@@ -207,7 +257,7 @@ main {
       .time-wrap, .notice-wrap {
         width: 100%;
         padding: 0 20px;
-        border-bottom: 1px solid $bk4;
+        border-bottom: 1px solid $bk5;
 
         @include responsive(pc-screens) {
           padding: 0;
@@ -216,10 +266,10 @@ main {
       }
 
       .time-wrap {
-        border-bottom: 1px solid $bk4;
+        border-bottom: 1px solid $bk5;
 
         @include responsive(pc-screens) {
-          border-right: 1px solid $bk4;
+          border-right: 1px solid $bk5;
           border-bottom: 0;
         }
       }
@@ -237,7 +287,7 @@ main {
         
         @include responsive(pc-screens) {
           justify-content: normal;
-          height: 80px;
+          height: 65px;
         }
       }
 
@@ -250,6 +300,11 @@ main {
   
           .txt-slider {
             width: 90%;
+          }
+
+          .more {
+            @include more_btn();
+            margin-bottom: 0;
           }
         }
       }
@@ -284,7 +339,7 @@ main {
           display: inline-block;
 
           @include responsive(pc-screens) {
-            font-size: $h5;
+            font-size: 20px;
           }
         }
       }
@@ -297,7 +352,7 @@ main {
           @include gothic_font(semibold);
           
           @include responsive(pc-screens) {
-            font-size: 22px;
+            font-size: 20px;
           }
         }
 
@@ -328,6 +383,8 @@ main {
   }
 
   .title-box {
+    position: relative;
+    width: 100%; height: 80px;
 
     &.center {
       text-align: center;
@@ -347,73 +404,113 @@ main {
         color: $bk2;
         font-size: 14px;
         margin-top: 10px;
+
+        @include responsive(pc-screens) {
+          font-size: 16px;
+        }
       }
     }
   }
 
-  .more {
+  .btn {
+    position: absolute;
+    right: 20px; bottom: 0;
 
-    label {
-      @include gothic_font(semibold);
-    }
+    .more {
+      @include more_btn();
 
-    img {
-      width: 16px; height: 14px;
-      margin-bottom: 2px;
-      margin-left: 5px;
+      label {
+        @include gothic_font(semibold);
+      }
+  
+      img {
+        width: 16px; height: 14px;
+        margin-bottom: 2px;
+        margin-left: 15px;
+      }
+  
+      &.pc {
+        display: none;
+  
+        @include responsive(pc-screens) {
+          display: block;
+        }
+      }
     }
   }
+  
 
   section.exhibition {
-    
+    margin-top: 75px;
+
+    @include responsive(pc-screens) {
+      margin-top: 150px;
+    }
+
     .content-box {
       @include out_container();
       margin-top: 40px;
 
       @include responsive(pc-screens) {
         @include in_container();
+        margin-top: 80px;
       }
     }
 
-    // .tab-menu-wrap {
-    //   @include tab_menu();
-    //   @include out_container();
-    // }
-    .slick-initialized .swipe-tab-content {
-      position: relative;
-
-      min-height: 365px;
-    }
-    
     .slick-initialized .swipe-tab {
-      // width: 140px !important;
-      display: flex;
-      align-items: center;
+      @include flex_between_center();
       justify-content: center;
-      height: 50px;
-      background: none;
-      border: 0;
-      color: #757575;
-      cursor: pointer;
+      height: 40px; line-height: 40px;
+      color: $bk3;
       text-align: center;
       border-bottom: 2px solid rgba(0, 0, 0, 0);
+      cursor: pointer;
       transition: all 0.5s;
+      
+      &:hover {
+        @include gothic_font(semibold);
+        color: #000;
+
+        @include responsive(pc-screens) {
+          font-size: 18px;
+        }
+      }
+
+      &.active-tab {
+        @include gothic_font(bold);
+        color: #000;
+        border-bottom: 2px solid $yellow-brown;
+
+        @include responsive(pc-screens) {
+          font-size: 18px;
+        }
+      }
+
+      @include responsive(pc-screens) {
+        padding: 25px 0;
+        font-size: 18px;
+      }
     }
-    .slick-initialized .swipe-tab:hover {
-      color: #000;
+    .sub-header-wrap {
+      border-bottom: 1px solid $bk5;
+
+      .sub-header {
+        position: relative;
+        width: 100%;
+        margin: auto;
+  
+        @include responsive(pc-screens) {
+          width: 1240px;
+        }
+      }
     }
-    .slick-initialized .swipe-tab.active-tab {
-      border-bottom-color: #000;
-      color: #000;
-      font-weight: bold;
-    }
-    
+
     .main-container {
+      height: 200px;
       padding: 25px;
-      background: #f1f1f1;
+      // background: #f1f1f1;
     }
   }
-
   // section.collection {
     
   // }
