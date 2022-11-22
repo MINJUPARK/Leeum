@@ -93,7 +93,7 @@ main {
                     width: 50%; height: 40px;
                     border: 1px solid $bk2;
     
-                    @include responsive(pc-screens) {
+                    @include rsesponsive(pc-screens) {
                         width: 200px;
                     }
                 }
