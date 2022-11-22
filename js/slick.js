@@ -61,7 +61,8 @@ $(function() {
     });
 
 
-    // 슬라이드 탭
+    // exhibition
+
     var $swipeTabsContainer = $('.swipe-tabs'),
         $swipeTabs = $('.swipe-tab'),
         $swipeTabsContentContainer = $('.swipe-tabs-container'),
@@ -79,17 +80,17 @@ $(function() {
   
     $swipeTabsContainer.slick({
       slidesToShow: 3.5,
-      slidesToScroll: 7,
+      slidesToScroll: 8,
       arrows: false,
       infinite: false,
       swipeToSlide: true,
       touchThreshold: 10,
-      mobileFirst:true,
+      mobileFirst: true,
       responsive: [
         {
           breakpoint: 768, 
           settings: { 
-            slidesToShow: 7,
+            slidesToShow: 8,
             slidesToScroll: 1
           }
         }
@@ -102,9 +103,11 @@ $(function() {
       slidesToScroll: 1,
       arrows: false,
       infinite: false,
-      swipeToSlide: true,
+      swipeToSlide: false,
       draggable: false,
-      touchThreshold: 10
+      touchThreshold: 10,
+      accessibility: false,
+      swipe: false
     });
   
     $swipeTabs.on('click', function(event) {
@@ -120,4 +123,40 @@ $(function() {
         $swipeTabs.removeClass(activeTabClassName);
         $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
     });
+
+
+    $('.swipe-tab').on('click', function() {
+      $(".ehb-slider").slick("refresh");
+    });
+
+    $('.ehb-slider').slick({
+      dots: false,
+      infinite: true,
+      touchThreshold : 100,
+      speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      initialSlide : 1,
+      centerMode: true,
+      variableWidth: true,
+      variableHeight: true,
+      mobileFirst: true,
+      nextArrow: false,
+      prevArrow: false,
+      responsive: [{
+              breakpoint: 1440,
+              settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+              }
+          },
+          {
+              breakpoint: 768,
+              settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+              }
+          }
+      ]
+  });
 })

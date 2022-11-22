@@ -77,11 +77,8 @@ header a, footer a {
     }
 }
 
-img, span, label {
+img, span, strong, label, time {
     display: inline-block;
-}
-
-img, span, strong, time {
     vertical-align: middle;
 }
 

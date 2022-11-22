@@ -365,16 +365,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -869,14 +860,16 @@ main section.construction .M1 .M1-detail p:last-of-type span {
     font-weight: 400;
   }
 }
-main section.construction .M1 .M1-detail a {
+main section.construction .M1 .M1-detail .link {
   text-align: center;
+}
+main section.construction .M1 .M1-detail .link a {
   font-size: 14px;
   font-weight: 600;
   margin: 35px 0 100px 0;
 }
 @media screen and (min-width: 1440px) {
-  main section.construction .M1 .M1-detail a {
+  main section.construction .M1 .M1-detail .link a {
     font-size: 20px;
     font-weight: 600;
     position: relative;
@@ -884,14 +877,11 @@ main section.construction .M1 .M1-detail a {
     left: -40px;
   }
 }
-main section.construction .M1 .M1-detail a img {
-  position: absolute;
-  left: 270px;
-  width: 17px;
+main section.construction .M1 .M1-detail .link a img {
   height: 13px;
 }
 @media screen and (min-width: 1440px) {
-  main section.construction .M1 .M1-detail a img {
+  main section.construction .M1 .M1-detail .link a img {
     width: 20px;
     height: 15px;
     position: relative;
@@ -1032,14 +1022,16 @@ main section.construction .M2 .M2-detail p:last-of-type {
     font-weight: 400;
   }
 }
-main section.construction .M2 .M2-detail a {
+main section.construction .M2 .M2-detail .link {
   text-align: center;
+}
+main section.construction .M2 .M2-detail .link a {
   font-size: 14px;
   font-weight: 600;
   margin: 35px 0 100px 0;
 }
 @media screen and (min-width: 1440px) {
-  main section.construction .M2 .M2-detail a {
+  main section.construction .M2 .M2-detail .link a {
     font-size: 20px;
     font-weight: 600;
     position: relative;
@@ -1047,14 +1039,11 @@ main section.construction .M2 .M2-detail a {
     left: 40px;
   }
 }
-main section.construction .M2 .M2-detail a img {
-  position: absolute;
-  left: 270px;
-  width: 17px;
+main section.construction .M2 .M2-detail .link a img {
   height: 13px;
 }
 @media screen and (min-width: 1440px) {
-  main section.construction .M2 .M2-detail a img {
+  main section.construction .M2 .M2-detail .link a img {
     width: 20px;
     height: 15px;
     position: relative;
@@ -1208,14 +1197,16 @@ main section.construction .Kid .Kid-detail p:last-of-type span {
     display: block;
   }
 }
-main section.construction .Kid .Kid-detail a {
+main section.construction .Kid .Kid-detail .link {
   text-align: center;
+}
+main section.construction .Kid .Kid-detail .link a {
   font-size: 14px;
   font-weight: 600;
   margin: 35px 0 100px 0;
 }
 @media screen and (min-width: 1440px) {
-  main section.construction .Kid .Kid-detail a {
+  main section.construction .Kid .Kid-detail .link a {
     font-size: 20px;
     font-weight: 600;
     position: relative;
@@ -1223,14 +1214,11 @@ main section.construction .Kid .Kid-detail a {
     left: -80px;
   }
 }
-main section.construction .Kid .Kid-detail a img {
-  position: absolute;
-  left: 270px;
-  width: 17px;
+main section.construction .Kid .Kid-detail .link a img {
   height: 13px;
 }
 @media screen and (min-width: 1440px) {
-  main section.construction .Kid .Kid-detail a img {
+  main section.construction .Kid .Kid-detail .link a img {
     width: 20px;
     height: 15px;
     position: relative;
@@ -1245,7 +1233,6 @@ main section.construction .Kid .Kid-detail a img {
 }
 main section.construction .container .leeumstore img {
   width: 100%;
-  height: 269px;
 }
 @media screen and (min-width: 1440px) {
   main section.construction .container .leeumstore img {
@@ -1289,7 +1276,10 @@ main section.construction .container .leeumstore p span {
   }
 }
 main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail {
+  display: flex;
+  width: 100%;
   margin-bottom: 64px;
+  justify-content: space-between;
 }
 main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail img {
   width: 22px;
@@ -1307,8 +1297,6 @@ main section.construction .container .leeumstore .leeumstore-detail-flexbox .lee
   }
 }
 main section.construction .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
-  position: relative;
-  left: 155px;
   font-size: 14px;
   font-weight: 600;
   color: #be6a15;
@@ -1341,7 +1329,6 @@ main section.construction .container .leeumstore .leeumstore-detail-flexbox .lee
 }
 main section.construction .container .Champcoffee img {
   width: 100%;
-  height: 269px;
 }
 @media screen and (min-width: 1440px) {
   main section.construction .container .Champcoffee img {
@@ -1385,7 +1372,10 @@ main section.construction .container .Champcoffee p span {
   }
 }
 main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail {
+  display: flex;
+  width: 100%;
   margin-bottom: 64px;
+  justify-content: space-between;
 }
 main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail img {
   width: 22px;
@@ -1404,7 +1394,6 @@ main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .C
 }
 main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
   position: relative;
-  left: 155px;
   font-size: 14px;
   font-weight: 600;
   color: #be6a15;
@@ -1413,7 +1402,6 @@ main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .C
   main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
     font-size: 20px;
     font-weight: 600;
-    left: 300px;
   }
 }
 main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a img {
@@ -1436,7 +1424,6 @@ main section.construction .container .Champcoffee .Champcoffee-detail-flexbox .C
 }
 main section.construction .container .Locker img {
   width: 100%;
-  height: 269px;
 }
 @media screen and (min-width: 1440px) {
   main section.construction .container .Locker img {
@@ -1499,7 +1486,6 @@ main section.construction .container .Locker p span {
 }
 main section.construction .container .ticketing-machine img {
   width: 100%;
-  height: 269px;
 }
 @media screen and (min-width: 1440px) {
   main section.construction .container .ticketing-machine img {
@@ -1551,7 +1537,6 @@ main section.construction .container .ticketing-machine p span {
 }
 main section.construction .container .parking img {
   width: 100%;
-  height: 269px;
 }
 @media screen and (min-width: 1440px) {
   main section.construction .container .parking img {
@@ -1607,10 +1592,10 @@ main section.construction .container .parking p span {
 }
 main section.construction .container .parking .parking-detail {
   margin-bottom: 64px;
+  text-align: right;
 }
 main section.construction .container .parking .parking-detail a {
   position: relative;
-  left: 260px;
   font-size: 14px;
   font-weight: 600;
   color: #be6a15;
@@ -1619,7 +1604,6 @@ main section.construction .container .parking .parking-detail a {
   main section.construction .container .parking .parking-detail a {
     font-size: 20px;
     font-weight: 600;
-    left: 450px;
   }
 }
 main section.construction .container .parking .parking-detail a img {
@@ -1643,7 +1627,6 @@ main section.construction .container .parking .parking-detail a img {
 }
 main section.construction .others img {
   width: 100%;
-  height: 269px;
 }
 @media screen and (min-width: 1440px) {
   main section.construction .others img {
@@ -2200,4 +2183,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=about_facility.css.map */
+}
