@@ -657,6 +657,11 @@ main .tab-menu .count {
   align-items: center;
   font-size: 15px;
 }
+@media screen and (min-width: 1440px) {
+  main .tab-menu .count {
+    border-bottom: 1px solid #c5c5c5;
+  }
+}
 main .tab-menu .count b {
   margin-right: 2px;
 }
@@ -676,7 +681,6 @@ main .tab-menu .gnb {
   height: 45px;
   line-height: 45px;
   text-align: center;
-  background-color: #f3f3f3;
 }
 @media screen and (min-width: 1440px) {
   main .tab-menu .gnb {
@@ -687,9 +691,9 @@ main .tab-menu .gnb {
 }
 main .tab-menu .gnb li {
   width: 25%;
-  border-top: 1px solid #acacac;
-  border-right: 1px solid #acacac;
-  border-bottom: 1px solid #acacac;
+  border-top: 1px solid #c5c5c5;
+  border-right: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
   cursor: pointer;
   font-size: 15px;
   font-weight: 400;
@@ -726,12 +730,20 @@ main .tab-menu span {
     display: block;
   }
 }
-main .content {
-  border-bottom: 1px solid #c5c5c5;
+main .cont {
+  margin-top: 10px;
+}
+main .cont a {
+  width: 100%;
+}
+main .cont .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  padding: 12px 5px;
+  border-bottom: 1px solid #d4d4d4;
   /* .color {
       border-radius: 5px;
       border: 1px solid $dark-brown;
@@ -742,131 +754,74 @@ main .content {
   } */
 }
 @media screen and (min-width: 1440px) {
-  main .content {
+  main .cont .content {
     padding: 22px;
     /* height: 80px;
     text-align: center; */
   }
 }
-main .content span:first-child {
-  padding-left: 0;
-  width: 30px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #5c5c5c;
+main .cont .content span:first-child {
   display: none;
 }
 @media screen and (min-width: 1440px) {
-  main .content span:first-child {
+  main .cont .content span:first-child {
+    display: block;
     width: 60px;
-    font-size: 22px;
     padding: 5px;
+    color: #3c3c3c;
   }
 }
-main .content span.brown {
-  white-space: nowrap;
-  color: #fff;
-  width: 80px;
-  border-radius: 5px;
+main .cont .content .type {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .cont .content .type {
+    display: block;
+    width: 100px;
+    padding: 8px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 5px;
+  }
+}
+main .cont .content .type.dark-brown {
   background-color: #6e3b3b;
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center;
-  display: none;
 }
-@media screen and (min-width: 1440px) {
-  main .content span.brown {
-    display: block;
-    padding: 10px;
-    width: 110px;
-    font-size: 18px;
-  }
-}
-main .content span.red-brown {
-  display: none;
-  white-space: nowrap;
-  color: #fff;
-  width: 80px;
-  border-radius: 5px;
+main .cont .content .type.red-brown {
   background-color: #ac3f21;
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center;
 }
-@media screen and (min-width: 1440px) {
-  main .content span.red-brown {
-    display: block;
-    padding: 10px;
-    width: 110px;
-    font-size: 18px;
-  }
-}
-main .content span.yellow-brown {
-  display: none;
-  white-space: nowrap;
-  color: #fff;
-  width: 80px;
-  border-radius: 5px;
+main .cont .content .type.yellow-brown {
   background-color: #be6a15;
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center;
 }
-@media screen and (min-width: 1440px) {
-  main .content span.yellow-brown {
-    display: block;
-    padding: 10px;
-    width: 110px;
-    font-size: 18px;
-  }
-}
-main .content span.yellow {
-  display: none;
-  white-space: nowrap;
-  color: #fff;
-  width: 80px;
-  border-radius: 5px;
+main .cont .content .type.yellow {
   background-color: #f3cf7a;
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center;
 }
-@media screen and (min-width: 1440px) {
-  main .content span.yellow {
-    display: block;
-    padding: 10px;
-    width: 110px;
-    font-size: 18px;
-  }
-}
-main .content p {
-  display: flex;
-  white-space: nowrap;
+main .cont .content p {
   padding: 10px 0;
   font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 350px;
 }
 @media screen and (min-width: 1440px) {
-  main .content p {
+  main .cont .content p {
     width: 1110px;
     padding: 5px 0 5px 60px;
     margin-left: 0;
-    font-size: 22px;
+    font-size: 18px;
   }
 }
-main .content span.date {
-  font-size: 15px;
+main .cont .content span.date {
+  font-size: 14px;
   white-space: nowrap;
-  justify-content: space-between;
-  margin-left: -80px;
+  /* margin-left: -80px; */
+  color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
-  main .content span.date {
-    font-size: 18px;
+  main .cont .content span.date {
+    font-size: 16px;
     margin: 0;
   }
 }

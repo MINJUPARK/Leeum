@@ -15,15 +15,17 @@ header {
 main {
 
     .question {
+        font-size: 18px;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+
         @include responsive(pc-screens) {
-            font-size: 28px;
+            font-size: 22px;
         }
 
         .mark {
-            font-size: 130%;
+            font-size: 120%;
             margin-right: 5px;
             color: $yellow-brown;
         }
@@ -42,10 +44,8 @@ main {
 
 
         .explain {
-            @include gothic_font(medium, 17px);
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            // @include gothic_font(medium);
+            @include content_align();
             margin-bottom: 20px;
 
             @include responsive(pc-screens) {
@@ -63,9 +63,9 @@ main {
             }
 
             img {
-                margin-left: 20px;
-                width: 14px;
-                color: $svg-yellowbrown;
+                margin-left: 10px;
+                height: 12px;
+                filter: $svg-yellowbrown;
             }
         }
     }
@@ -76,7 +76,7 @@ main {
 
 
     li {
-        border-bottom: 1px solid $bk4;
+        border-bottom: 1px solid $bk5;
 
         @include responsive(pc-screens){
             width: 1440px;
@@ -84,14 +84,14 @@ main {
         }
 
         &:first-child {
-            border-top: 1px solid $bk4;
+            border-top: 1px solid $bk5;
         }
 
     }
 
 
     .text-arrow {
-        @include flex_between();
+        @include flex_between_center();
         padding: 20px 10px;
 
         @include responsive(pc-screens){
@@ -113,7 +113,7 @@ main {
         }
 
         img {
-            width: 17px;
+            height: 8px;
 
             @include responsive(pc-screens){
                 top: 50px;

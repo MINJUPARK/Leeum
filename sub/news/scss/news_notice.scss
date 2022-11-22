@@ -19,6 +19,10 @@ main {
         .count {
             @include flex_between_center();
             font-size: 15px;
+            
+            @include responsive(pc-screens) {
+                border-bottom: 1px solid $bk4;
+            }
     
             b {
                 margin-right: 2px;
@@ -41,7 +45,7 @@ main {
         height: 45px;
         line-height: 45px;
         text-align: center;
-        background-color: $bk6;
+        // background-color: $bk6;
 
         @include responsive(pc-screens){
             width: 64.28571428571429%;
@@ -51,9 +55,9 @@ main {
         
         li {
             width: 25%;
-            border-top: 1px solid $bk3;
-            border-right: 1px solid $bk3;
-            border-bottom: 1px solid $bk3;
+            border-top: 1px solid $bk4;
+            border-right: 1px solid $bk4;
+            border-bottom: 1px solid $bk4;
             cursor: pointer;
             @include gothic_font(regular, 15px);
 
@@ -94,152 +98,116 @@ main {
             display: block
         }
     }
+    .cont {
+        margin-top: 10px;
+
+        a {
+            width: 100%;
+        }
+
+        .content {
+            @include flex_between_center();
+            column-gap: 20px;
+            padding : 12px 5px;
+            border-bottom: 1px solid $bk5;
     
-    .content {
-        border-bottom: 1px solid $bk4;
-        @include flex_between_center();
-        padding : 20px 0;
-
-        
-
-        @include responsive(pc-screens){
-            padding: 22px;
-            /* height: 80px;
-            text-align: center; */
-        }
-
-        span:first-child {
-            padding-left: 0;
-            width: 30px;
-            @include gothic_font(medium, 14px);
-            color: $bk2;
-            display: none;
-
-            @include responsive(pc-screens) {
-                width: 60px;
-                font-size: 22px;
-                padding: 5px;
-            }
-        }
-
-        /* .color {
-            border-radius: 5px;
-            border: 1px solid $dark-brown;
-            @include gothic_font(medium, 12px);
-            color: #fff;
-            background-color: $dark-brown;
-            text-align: center;
-        } */
-
-        span.brown {
-            white-space: nowrap;
-            color: #fff;
-            width: 80px;
-            border-radius: 5px;
-            background-color: $dark-brown;
-            @include gothic_font(medium, 12px);
-            text-align: center;
-            display: none;
-
-
-            @include responsive(pc-screens) {
-                display: block;
-                padding: 10px;
-                width: 110px;
-                font-size: 18px;
-            }
-        }
-
-        span.red-brown {
-            display: none;
-            white-space: nowrap;
-            color: #fff;
-            width: 80px;
-            border-radius: 5px;
-            background-color: $red-brown;
-            @include gothic_font(medium, 12px);
-            text-align: center;
-
-            @include responsive(pc-screens) {
-                display: block;
-                padding: 10px;
-                width: 110px;
-                font-size: 18px;
-            }
-        }
-
-        span.yellow-brown {
-            display: none;
-            white-space: nowrap;
-            color: #fff;
-            width: 80px;
-            border-radius: 5px;
-            background-color: $yellow-brown;
-            @include gothic_font(medium, 12px);
-            text-align: center;
-
-            @include responsive(pc-screens) {
-                display: block;
-                padding: 10px;
-                width: 110px;
-                font-size: 18px;
-            }
-        }
-
-        span.yellow {
-            display: none;
-            white-space: nowrap;
-            color: #fff;
-            width: 80px;
-            border-radius: 5px;
-            background-color: #f3cf7a;
-            @include gothic_font(medium, 12px);
-            text-align: center;
-
-            @include responsive(pc-screens) {
-                display: block;
-                padding: 10px;
-                width: 110px;
-                font-size: 18px;
-            }
-        }
-
-        p {
-            display: flex;
-            white-space: nowrap;
-            padding: 10px 0;
-            @include gothic_font(medium, 15px);
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            width: 350px;
-
-
+            
+    
             @include responsive(pc-screens){
-                width: 1110px;
-                padding: 5px 0 5px 60px;
-                margin-left: 0;
-                font-size: 22px;
+                padding: 22px;
+                /* height: 80px;
+                text-align: center; */
             }
-        }
-        
-        span.date {
-            // padding: 10px;
-            font-size: 15px;
-            white-space: nowrap;
-            justify-content: space-between;
-            margin-left: -80px;
-
-
-            @include responsive(pc-screens){
-                // padding-right: 0;
-                // font-size: 18px;
-                font-size: 18px;
-                margin: 0;
+    
+            span:first-child {
+                display: none;
+                
+                @include responsive(pc-screens) {
+                    display: block;
+                    width: 60px;
+                    padding: 5px;
+                    // font-size: 16px;
+                    color: $bk1;
+                }
             }
-        }
+    
+            /* .color {
+                border-radius: 5px;
+                border: 1px solid $dark-brown;
+                @include gothic_font(medium, 12px);
+                color: #fff;
+                background-color: $dark-brown;
+                text-align: center;
+            } */
+            .type {
+                display: none;
 
+                @include responsive(pc-screens) {
+                    display: block;
+                    width: 100px;
+                    padding: 8px;
+                    text-align: center;
+                    font-size: 15px;
+                    color: #fff;
+                    border-radius: 5px;
+                }
+                
+                &.dark-brown {
+                    background-color: $dark-brown;
+                }
+
+                &.red-brown {
+                    background-color: $red-brown;
+                }
+
+                &.yellow-brown {
+                background-color: $yellow-brown;
+                }
+
+                &.yellow {
+                background-color: #f3cf7a;
+                }
+            }
+    
+            p {
+                // display: flex;
+                padding: 10px 0;
+                @include gothic_font(medium, 15px);
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                // width: 350px;
+    
+    
+                @include responsive(pc-screens){
+                    width: 1110px;
+                    padding: 5px 0 5px 60px;
+                    margin-left: 0;
+                    font-size: 18px;
+                }
+            }
+            
+            span.date {
+                // padding: 10px;
+                font-size: 14px;
+                white-space: nowrap;
+                // justify-content: space-between;
+                /* margin-left: -80px; */
+                // @include gothic_font(regula 14px);
+                color: $bk2;
+    
+    
+                @include responsive(pc-screens){
+                    // padding-right: 0;
+                    // font-size: 18px;
+                    font-size: 16px;
+                    margin: 0;
+                }
+            }
+    
+        }
     }
+    
 
 }
 

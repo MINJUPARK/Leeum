@@ -730,6 +730,7 @@
                         
                         @include responsive(pc-screens) {
                             @include in_container();
+                            width: 100%;
                             margin-top: 40px;
                             margin-bottom: 80px;
                             border-radius: 5px;

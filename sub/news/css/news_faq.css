@@ -652,17 +652,18 @@ header .breadcrumb-wrap {
 }
 
 main .question {
+  font-size: 18px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
   main .question {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 main .question .mark {
-  font-size: 130%;
+  font-size: 120%;
   margin-right: 5px;
   color: #be6a15;
 }
@@ -679,11 +680,9 @@ main .faq-content {
   }
 }
 main .faq-content .explain {
-  font-size: 17px;
-  font-weight: 500;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  text-align: left;
+  line-height: 2em;
+  color: #3c3c3c;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
@@ -703,15 +702,15 @@ main .faq-content .shortcut {
   }
 }
 main .faq-content .shortcut img {
-  margin-left: 20px;
-  width: 14px;
-  color: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
+  margin-left: 10px;
+  height: 12px;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
 main h2 {
   display: none;
 }
 main li {
-  border-bottom: 1px solid #c5c5c5;
+  border-bottom: 1px solid #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
   main li {
@@ -720,11 +719,12 @@ main li {
   }
 }
 main li:first-child {
-  border-top: 1px solid #c5c5c5;
+  border-top: 1px solid #d4d4d4;
 }
 main .text-arrow {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 10px;
 }
 @media screen and (min-width: 1440px) {
@@ -746,7 +746,7 @@ main .text-arrow p span {
   margin-right: 10px;
 }
 main .text-arrow img {
-  width: 17px;
+  height: 8px;
 }
 @media screen and (min-width: 1440px) {
   main .text-arrow img {
