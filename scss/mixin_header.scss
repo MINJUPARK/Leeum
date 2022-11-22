@@ -18,7 +18,6 @@
         z-index: 98;
         
         @include responsive(pc-screens) {
-            width: 1920px;
             position: static;
         }
 

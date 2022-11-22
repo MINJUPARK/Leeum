@@ -350,9 +350,17 @@
                     transform: rotate(180deg); 
                 }
 
-                &.next img {
-                    margin-left: 10px;
+                &.next {
+
+                    .title {
+                        text-align: right;
+                    }
+                    
+                    img {
+                        margin-left: 10px;
+                    }
                 }
+                
 
                 p {
                     display: none;
@@ -362,14 +370,18 @@
 
                         .vert-bar {
                             width: 1px; height: 16px;
-                            margin: 0 15px 2px;
+                            margin: 0 15px;
                             vertical-align: middle;
                             background: $bk3;
                         }
 
                         .title {
                             @include gothic_font(regular);
+                            width: 200px;
                             color: $bk2;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;  
+                            overflow: hidden;
                         }
                     }
                 }

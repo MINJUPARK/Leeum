@@ -71,11 +71,8 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, label {
+img, span, strong, label, time {
   display: inline-block;
-}
-
-img, span, strong, time {
   vertical-align: middle;
 }
 
@@ -210,7 +207,6 @@ header .logo-menu-wrap {
 }
 @media screen and (min-width: 1440px) {
   header .logo-menu-wrap {
-    width: 1920px;
     position: static;
   }
 }
@@ -364,16 +360,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -592,8 +579,7 @@ header .main-slider-wrap .main-slider .item .item-con video {
   top: 0;
   width: 100vw;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header .main-slider-wrap .main-slider .item .info-wrap {
   width: 100%;
@@ -682,20 +668,16 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
   }
 }
 header .main-slider-wrap .main-slider .item h3 {
-  -webkit-animation: fadeOutDown 1s both;
-          animation: fadeOutDown 1s both;
+  animation: fadeOutDown 1s both;
 }
 header .main-slider-wrap .main-slider .item.slick-active h3 {
-  -webkit-animation: fadeInUp 1s both 1s;
-          animation: fadeInUp 1s both 1s;
+  animation: fadeInUp 1s both 1s;
 }
 header .main-slider-wrap .main-slider .item h5 {
-  -webkit-animation: fadeOutDown 1s both;
-          animation: fadeOutDown 1s both;
+  animation: fadeOutDown 1s both;
 }
 header .main-slider-wrap .main-slider .item.slick-active h5 {
-  -webkit-animation: fadeInUp 1s both 1.5s;
-          animation: fadeInUp 1s both 1.5s;
+  animation: fadeInUp 1s both 1.5s;
 }
 header .main-slider-wrap .slick-list, header .main-slider-wrap .slick-track, header .main-slider-wrap .slick-slide {
   height: 100%;
@@ -931,7 +913,7 @@ main section.infoBox .time-notice .des time {
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .des time {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 main section.infoBox .time-notice .des .memo {
@@ -1099,9 +1081,102 @@ main section.exhibition .sub-header-wrap .sub-header {
     width: 1240px;
   }
 }
-main section.exhibition .main-container {
+main section.exhibition .ehb-slider .slick-list {
+  padding: 40px 0 !important;
+}
+main section.exhibition .ehb-slider .slick-slide {
+  margin: 0 110px;
+}
+main section.exhibition .ehb-slider .slick-center .bg {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+main section.exhibition .ehb-slider .slick-current .bg {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+main section.exhibition .ehb-slider .slick-current .bg .des {
+  bottom: 0;
+}
+main section.exhibition .ehb-slider .bg {
+  position: relative;
   height: 200px;
-  padding: 25px;
+  margin: 0 -125px;
+  border-radius: 20px;
+  transform: scale3d(0.8, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.2;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .ehb-slider .bg {
+    width: 800px;
+    height: 450px;
+  }
+}
+main section.exhibition .ehb-slider .bg .des {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  bottom: -120px;
+  width: 100%;
+  color: #000;
+  background-color: #fff;
+  transition: bottom 0.5s;
+  padding: 15px 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .ehb-slider .bg .des {
+    bottom: -180px;
+    padding: 25px 40px;
+  }
+}
+main section.exhibition .ehb-slider .bg .des .type {
+  font-size: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #be6a15;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .ehb-slider .bg .des .type {
+    font-size: 18px;
+  }
+}
+main section.exhibition .ehb-slider .bg .des .title {
+  font-size: 20px;
+  margin: 5px 0 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .ehb-slider .bg .des .title {
+    font-size: 36px;
+  }
+}
+main section.exhibition .ehb-slider .bg .des time {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .ehb-slider .bg .des time {
+    font-size: 16px;
+  }
+}
+main section.exhibition .ehb-slider .bg .des .loc {
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #3c3c3c;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .ehb-slider .bg .des .loc {
+    padding: 6px 18px;
+    font-size: 14px;
+  }
+}
+main section.exhibition .ehb-slider .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 1440px) {
@@ -1422,4 +1497,4 @@ footer #banner-box {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}/*# sourceMappingURL=index.css.map */
+}

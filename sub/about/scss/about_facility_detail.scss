@@ -9,7 +9,7 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('about_facility.jpg');
+    @include full_bg('facility_header.png');
 }
 
 main {
@@ -113,7 +113,7 @@ main {
 
             h3 {
                 @include gothic_font(semibold,18px);
-
+                    margin-bottom: 30px;
                 @include responsive(pc-screens){
                     @include gothic_font(semibold,28px);
                     margin-bottom: 40px;
