@@ -616,7 +616,7 @@ main {
         }
         
         h4 {
-            @include gothic_font(regular, calc(1em + 4px));
+            @include gothic_font(regular, 1em) ;
             margin-top: 10px;
             margin-bottom: 50px;
             color: $bk4;
@@ -703,7 +703,7 @@ main {
 
                 @include responsive(pc-screens) {
                     position: relative;
-                    margin-top: 20px;
+                    margin-top: 100px;
                 }
 
                 .guide-point-txt,

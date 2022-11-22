@@ -871,7 +871,7 @@ main .membership-wrap .table .tr .tbody > div.td1 a, main .membership-wrap .tabl
 main .gift-membership-wrap .table .tr .tbody > div.td1 a,
 main .gift-membership-wrap .table .tr .tbody > div.td2 a {
   font-size: calc(1em + 2px);
-  font-weight: 600;
+  font-weight: 500;
   display: block;
   height: 44px;
   line-height: 44px;

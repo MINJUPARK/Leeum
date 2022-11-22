@@ -659,11 +659,6 @@ main {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 1440px) {
-  main {
-    font-size: 22px;
-  }
-}
 @media screen and (min-width: 768px) {
   main .mobile-view {
     display: none;
@@ -672,6 +667,11 @@ main {
 main h3 {
   text-align: center;
   font-size: calc(1em + 14px);
+}
+@media screen and (min-width: 1440px) {
+  main h3 {
+    font-size: 36px;
+  }
 }
 main .texture-intro-wrap {
   margin-top: 50px;
@@ -688,7 +688,6 @@ main .texture-intro-wrap .texture-intro .intro-img {
   background-size: cover;
   width: 100%;
   height: 180px;
-  background-attachment: fixed;
 }
 @media screen and (min-width: 768px) {
   main .texture-intro-wrap .texture-intro .intro-img {
@@ -709,16 +708,10 @@ main .texture-intro-wrap .texture-intro .intro-flex {
     margin-top: 80px;
   }
 }
-main .texture-intro-wrap .texture-intro .intro-flex h3 {
-  background-color: darkblue;
-}
 @media screen and (min-width: 1440px) {
   main .texture-intro-wrap .texture-intro .intro-flex h3 {
     width: 310px;
   }
-}
-main .texture-intro-wrap .texture-intro .intro-flex .into-txt {
-  background-color: darkcyan;
 }
 @media screen and (min-width: 1440px) {
   main .texture-intro-wrap .texture-intro .intro-flex .into-txt {
@@ -728,13 +721,14 @@ main .texture-intro-wrap .texture-intro .intro-flex .into-txt {
 main .texture-intro-wrap .texture-intro .intro-flex .into-txt p {
   margin-top: 35px;
   text-align: justify;
-  font-size: calc(1em + 2px);
-  line-height: calc(1em + 2px + 10px);
+  font-size: 18px;
+  line-height: 2em;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main .texture-intro-wrap .texture-intro .intro-flex .into-txt p {
     margin-top: 0;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 44px;
   }
 }
@@ -758,60 +752,33 @@ main .damage-type-wrap .damage-type .type-box {
 main .damage-type-wrap .damage-type .type-box ul.type-select {
   display: flex;
   justify-content: space-between;
-  border-top: 2px solid #c5c5c5;
   width: 100%;
+  border-top: 1px solid #c5c5c5;
 }
 main .damage-type-wrap .damage-type .type-box ul.type-select li {
   position: relative;
   width: 25%;
   height: 68px;
-  text-align: center;
-  border-left: 2px solid #c5c5c5;
-  background-color: #f3f3f3;
-  transition: color 0.7s;
-  color: #acacac;
+  border-left: 1px solid #c5c5c5;
 }
 @media screen and (min-width: 768px) {
   main .damage-type-wrap .damage-type .type-box ul.type-select li {
-    height: 76px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main .damage-type-wrap .damage-type .type-box ul.type-select li {
-    height: 80px;
+    height: 70px;
   }
 }
 main .damage-type-wrap .damage-type .type-box ul.type-select li:last-child {
-  border-right: 2px solid #c5c5c5;
-}
-main .damage-type-wrap .damage-type .type-box ul.type-select li.selected {
-  color: #000;
-  background-color: transparent;
-}
-main .damage-type-wrap .damage-type .type-box ul.type-select li.selected::after {
-  scale: 1;
-}
-main .damage-type-wrap .damage-type .type-box ul.type-select li.selected span {
-  font-weight: 600;
-}
-main .damage-type-wrap .damage-type .type-box ul.type-select li:hover {
-  color: #000;
-  background-color: transparent;
-}
-main .damage-type-wrap .damage-type .type-box ul.type-select li:hover::after {
-  scale: 1;
-}
-main .damage-type-wrap .damage-type .type-box ul.type-select li:hover span {
-  font-weight: 600;
+  border-right: 1px solid #c5c5c5;
 }
 main .damage-type-wrap .damage-type .type-box ul.type-select li::after {
   position: absolute;
   top: -1px;
+  left: -1px;
   content: "";
   display: block;
-  width: 100%;
+  width: calc(100% + 2px);
   height: 5px;
   background-color: #000;
+  z-index: 1;
   transition: all 0.7s;
   scale: 0;
 }
@@ -822,19 +789,19 @@ main .damage-type-wrap .damage-type .type-box ul.type-select li span {
   transform: translate(-50%, -50%);
   width: 100%;
   font-size: 20px;
+  text-align: center;
+  transition: color 0.7s;
+  color: #acacac;
 }
-@media screen and (min-width: 768px) {
-  main .damage-type-wrap .damage-type .type-box ul.type-select li span {
-    font-size: 22px;
-  }
+main .damage-type-wrap .damage-type .type-box ul.type-select li.selected {
+  background-color: transparent;
 }
-@media screen and (min-width: 1440px) {
-  main .damage-type-wrap .damage-type .type-box ul.type-select li span {
-    font-size: 24px;
-  }
+main .damage-type-wrap .damage-type .type-box ul.type-select li.selected::after {
+  scale: 1;
 }
-main .damage-type-wrap .damage-type .type-box ul.type-img {
-  border: 2px solid #c5c5c5;
+main .damage-type-wrap .damage-type .type-box ul.type-select li.selected span {
+  color: #000;
+  font-weight: 600;
 }
 main .damage-type-wrap .damage-type .type-box ul.type-img li {
   display: none;
@@ -856,23 +823,24 @@ main .damage-type-wrap .damage-type .type-box ul.type-txt {
 }
 main .damage-type-wrap .damage-type .type-box ul.type-txt li {
   display: none;
-  font-size: calc(1em + 2px);
+  font-size: 18px;
   line-height: calc(1em + 2px + 10px);
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main .damage-type-wrap .damage-type .type-box ul.type-txt li {
-    font-size: 26px;
+    font-size: 20px;
   }
 }
 main .damage-type-wrap .damage-type .type-box ul.type-txt li.view {
   display: block;
 }
 main .conservation-method-wrap {
-  margin-top: 100px;
+  margin-top: 140px;
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap {
-    margin-top: 200px;
+    margin-top: 250px;
   }
 }
 main .conservation-method-wrap .conservation-method ul.methods {
@@ -934,25 +902,27 @@ main .conservation-method-wrap .conservation-method ul.methods li::before, main 
   }
 }
 main .conservation-method-wrap .conservation-method ul.methods li strong {
-  color: #ac3f21;
   font-size: calc(1em + 8px);
+  font-weight: 600;
+  color: #ac3f21;
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.methods li strong {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 main .conservation-method-wrap .conservation-method ul.methods li p {
-  margin-top: 30px;
+  margin-top: 28px;
   text-align: justify;
-  font-size: calc(1em + 2px);
+  font-size: 18px;
   line-height: calc(1em + 2px + 12px);
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.methods li p {
     margin-top: 40px;
-    font-size: 22px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 2em;
   }
 }
 main .conservation-method-wrap .conservation-method ul.methods li .method-img {
@@ -975,7 +945,6 @@ main .conservation-method-wrap .conservation-method ul.methods li .method-img {
 }
 main .conservation-method-wrap .conservation-method ul.methods li .method-img img {
   width: 270px;
-  border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
   main .conservation-method-wrap .conservation-method ul.methods li .method-img img {

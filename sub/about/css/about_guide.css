@@ -1258,7 +1258,7 @@ main section.digital-guide-did-wrap h3 {
   }
 }
 main section.digital-guide-did-wrap h4 {
-  font-size: calc(1em + 4px);
+  font-size: 1em;
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 50px;
@@ -1337,7 +1337,7 @@ main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap {
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap {
     position: relative;
-    margin-top: 20px;
+    margin-top: 100px;
   }
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-txt,

@@ -16,7 +16,6 @@ main {
     word-break: keep-all; // 단어를 기준으로 줄바꿈
 
     @include responsive(tablet-screens) { font-size: 20px; }
-    @include responsive(pc-screens) { font-size: 22px; }
 
     .mobile-view {
         @include responsive(tablet-screens) {
@@ -26,6 +25,10 @@ main {
 
     h3 {
         font-size: calc(1em + 14px);
+
+        @include responsive(pc-screens) {
+            font-size: 36px;
+        }
     }
 
     .before-after-case-intro {
@@ -49,68 +52,31 @@ main {
                 
                 ul.angle-select {
                     @include flex_between();
-                    border-top: 2px solid $bk4;
+                    border-top: 1px solid $bk4;
                     width: 100%;
                     
                     li {
                         position: relative;
                         width: calc(100% / 4);
                         height: 68px;
-                        text-align: center;
-                        border-left: 2px solid $bk4;
-                        background-color: $bk6;
-                        
-                        
-                        transition: color 0.7s;
-                        
-                        color: $bk3;
+                        border-left: 1px solid $bk4;
                         
                         @include responsive(tablet-screens) {
-                            height: 76px;
-                        }
-                        
-                        @include responsive(pc-screens) {
-                            height: 80px;
+                            height: 70px;
                         }
                         
                         &:last-child {
-                            border-right: 2px solid $bk4;
-                        }
-                        
-                        
-                        &.selected {
-                            color: #000;
-                            background-color: transparent;
-                            
-                            &::after {
-                                scale: 1;
-                            }
-                            
-                            span {
-                                font-weight: 600; // semibold
-                            }
-                        }
-                        
-                        &:hover {
-                            color: #000;
-                            background-color: transparent;
-                            
-                            &::after {
-                                scale: 1;
-                            }
-                            
-                            span {
-                                font-weight: 600; // semibold
-                            }
+                            border-right: 1px solid $bk4;
                         }
                         
                         &::after {
                             position: absolute;
-                            top: -1px;
+                            top: -1px; left: -1px;
                             content: '';
                             display: block;
-                            width: 100%; height: 5px;
+                            width: calc(100% + 2px); height: 5px;
                             background-color: #000;
+                            z-index: 1;
                             
                             transition: all 0.7s;
                             
@@ -121,24 +87,33 @@ main {
                             @include element_center();
                             width: 100%;
                             font-size: 20px;
+                            text-align: center;
                             
-                            @include responsive(tablet-screens) {
-                                font-size: 22px;
+                            transition: color 0.7s;
+                            
+                            color: $bk3;
+                        }
+                        
+                        &.selected {
+                            background-color: transparent;
+                            
+                            &::after {
+                                scale: 1;
                             }
                             
-                            @include responsive(pc-screens) {
-                                font-size: 24px;
+                            span {
+                                color: #000;
+                                font-weight: 600; // semibold
                             }
                         }
+                        
                     } // li
                 } // ul.angle-select
                 
                 .before-after-img {
                     aspect-ratio: 24 / 19;
-                    border: 2px solid $bk4;
                     position: relative;
                     overflow: hidden;
-                    background-color: cadetblue;
 
                     @include responsive(pc-screens) {
                         height: 570px;
@@ -259,7 +234,6 @@ main {
 
             .case-intro {
                 margin-top: 40px;
-                // background-color: violet;
 
                 @include responsive(pc-screens) {
                     width: 606px;
@@ -267,22 +241,15 @@ main {
                 }
                 
                 .case-titile {
-
-                    h3 {
-                        
-                        @include responsive(pc-screens) {
-                            font-size: 46px;
-                        }
-                    }
                     
                     h4 {
-                        @include gothic_font(light, calc(1em + 6px));
+                        @include gothic_font(light, calc(1em + 4px));
                         margin-top: 5px;
                         color: $bk2;
                         
                         @include responsive(pc-screens) {
                             margin-top: 15px;
-                            font-size: 26px;
+                            font-size: 24px;
                         }
                     }
                 }
@@ -295,20 +262,17 @@ main {
                     }
 
                     p {
-                        font-size: calc(1em + 2px);
+                        font-size: $h6;
                         line-height: calc((1em + 2px + 12px));
+                        color: $bk1;
                         
                         @include responsive(tablet-screens) {
-                            font-size: 22px;
-                            line-height: 44px;
+                            font-size: 20px;
+                            line-height: 2em;
                         }
                         
                         &:last-child {
                             margin-top: 45px;
-                            
-                            // @include responsive(tablet-screens) {
-                            //     margin-top: 50px;
-                            // }
                         }
                     }
                 }
@@ -322,6 +286,10 @@ main {
         @include responsive(pc-screens) {
             margin-top: 200px;
         }
+
+        p {
+            color: $bk1;
+        }
         
         .conservation-process {
             
@@ -331,30 +299,19 @@ main {
             }
 
             .process-intro {
-
+                margin-top: 30px;
+                
+                @include responsive(pc-screens) {
+                    margin-top: 50px;
+                }
+                
                 p {
-                    margin-top: 20px;
-                    font-size: calc(1em + 2px);
-                    line-height: calc((1em + 2px + 12px));
+                    margin-top: 15px;
+                    font-size: $h6;
+                    line-height: 1.8em; //
                     
                     @include responsive(tablet-screens) {
-                        font-size: 22px;
-                        line-height: 44px;
-                    }
-    
-                    &:nth-child(2) {
-    
-                        @include responsive(pc-screens) {
-                            margin-top: 50px;
-                        }
-                    }
-    
-                    &:nth-child(3),
-                    &:nth-child(4) {
-    
-                        @include responsive(pc-screens) {
-                            margin-top: 0;
-                        }
+                        font-size: 20px;
                     }
                 }
             } // process-intro
@@ -369,12 +326,10 @@ main {
                 li {
                     position: relative;
                     margin-top: 90px;
-                    // background-color: violet;
                     
                     @include responsive(pc-screens) {
                         margin-top: 80px;
                         padding: 55px 120px;
-                        // border: 1px solid $bk4;
                         box-shadow: inset 0 0 0 1px $bk4;
                     }
                     
@@ -463,17 +418,17 @@ main {
                         }
 
                         strong {
+                            @include gothic_font(semibold, calc(1em + 8px));
                             margin: {
                                 top: auto;
                                 bottom: auto;
                                 left: 10px;
                             }
                             color: $red-brown;
-                            font-size: calc(1em + 8px);
                             
                             @include responsive(pc-screens) {
                                 margin-left: 15px;
-                                font-size: 32px;
+                                font-size: 30px;
                             }
                         }
                     }
@@ -481,15 +436,15 @@ main {
                     .step-txt {
 
                         p {
-                            margin-top: 30px;
+                            margin-top: 28px;
                             text-align: justify;
-                            font-size: calc(1em + 2px);
+                            font-size: $h6;
                             line-height: calc(1em + 2px + 12px);
                             
                             @include responsive(pc-screens) {
                                 margin-top: 40px;
-                                font-size: 22px;
-                                line-height: 36px;
+                                font-size: 20px;
+                                line-height: 2em;
                             }
                         }
                     }
@@ -511,7 +466,6 @@ main {
                         
                         img {
                             width: 270px;
-                            border-radius: 5px;
                             
                             @include responsive(tablet-screens) {
                                 width: calc(560px / 1160px) * 100%;

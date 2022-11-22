@@ -147,7 +147,7 @@ main {
                             }
                             
                             a {
-                                @include gothic_font(semibold, calc(1em + 2px));
+                                @include gothic_font(medium, calc(1em + 2px));
                                 display: block;
                                 height: 44px;
                                 line-height: 44px;
