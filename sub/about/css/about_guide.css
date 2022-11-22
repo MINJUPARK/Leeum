@@ -725,6 +725,14 @@ main .tab-menu-wrap ul.tab-menu > li > a > span {
     display: none;
   }
 }
+main .pc-br {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .pc-br {
+    display: block;
+  }
+}
 main .fee-time-wrap {
   margin-top: 90px;
 }
@@ -992,7 +1000,7 @@ main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .no
 }
 @media screen and (min-width: 768px) {
   main .fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .note-con p {
-    width: 336px;
+    width: 310px;
     line-height: 2em;
     font-size: 22px;
     margin-top: 40px;
@@ -1127,7 +1135,7 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-opt
     height: 104px;
     line-height: 104px;
     padding: 0 20px;
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li:hover {
@@ -1148,8 +1156,14 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-opt
   font-weight: 500;
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
+  margin-left: 10px;
   vertical-align: top;
   font-size: calc(1em - 4px);
+}
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
+    margin-left: 15px;
+  }
 }
 @media screen and (min-width: 768px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-con-group {
@@ -1195,14 +1209,15 @@ main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .t
   width: 17.1428571429%;
   padding-right: 5px;
   text-align: right;
-}
-main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img {
   height: 22px;
 }
 @media screen and (min-width: 1440px) {
-  main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img {
+  main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet {
     height: 26px;
   }
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img {
+  height: 100%;
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt p {
   margin-top: 10px;
@@ -1243,7 +1258,7 @@ main section.digital-guide-did-wrap h3 {
   }
 }
 main section.digital-guide-did-wrap h4 {
-  font-size: calc(1em + 4px);
+  font-size: 1em;
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 50px;
@@ -1261,17 +1276,6 @@ main section.digital-guide-did-wrap img {
 main section.digital-guide-did-wrap strong, main section.digital-guide-did-wrap h5 {
   font-size: calc(1em + 1.538461538vw);
   line-height: 2em;
-  color: #3c3c3c;
-}
-@media screen and (min-width: 1440px) {
-  main section.digital-guide-did-wrap strong, main section.digital-guide-did-wrap h5 {
-    font-size: 34px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main section.digital-guide-did-wrap strong, main section.digital-guide-did-wrap h5 {
-    font-size: 34px;
-  }
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide strong {
@@ -1310,7 +1314,6 @@ main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .gui
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .guide-intro .guide-intro-txt strong {
-    font-size: 32px;
     line-height: 55px;
   }
 }
@@ -1334,7 +1337,7 @@ main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap {
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap {
     position: relative;
-    margin-top: 30px;
+    margin-top: 100px;
   }
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-txt,
@@ -1427,6 +1430,11 @@ main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .gui
   }
 }
 @media screen and (min-width: 1440px) {
+  main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-img li {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-img li:first-child {
     margin-top: 107px;
   }
@@ -1434,9 +1442,16 @@ main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .gui
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-img li img {
   width: 100%;
 }
+@media screen and (min-width: 1440px) {
+  main section.digital-guide-did-wrap .did strong {
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+}
 main section.digital-guide-did-wrap .did p {
   font-size: calc(1em - 2px);
   line-height: calc(1em - 2px + 10px);
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap .did p {
@@ -1449,11 +1464,6 @@ main section.digital-guide-did-wrap .did .mobile-hidden {
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap .did .mobile-hidden {
     display: inline;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main section.digital-guide-did-wrap .did .pc-hidden {
-    display: none;
   }
 }
 main section.digital-guide-did-wrap .did .did-awards {
@@ -1470,7 +1480,6 @@ main section.digital-guide-did-wrap .did .did-awards .awards-flex .awards-txt {
   padding-top: 8.5714285714%;
   padding-left: 5.7142857143%;
   text-align: left;
-  color: #fff;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap .did .did-awards .awards-flex .awards-txt {
@@ -1478,21 +1487,25 @@ main section.digital-guide-did-wrap .did .did-awards .awards-flex .awards-txt {
     width: 500px;
     padding-top: 0;
     padding-left: 0;
-    color: #000;
   }
+}
+main section.digital-guide-did-wrap .did .did-awards .awards-flex .awards-txt strong {
+  color: #fff;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap .did .did-awards .awards-flex .awards-txt strong {
     display: block;
-    margin-bottom: 30px;
+    color: #000;
   }
 }
 main section.digital-guide-did-wrap .did .did-awards .awards-flex .awards-txt p {
   margin-top: 8.5714285714%;
+  color: #fff;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap .did .did-awards .awards-flex .awards-txt p {
     margin-top: 0;
+    color: #3c3c3c;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1535,7 +1548,7 @@ main section.digital-guide-did-wrap .did .did-point strong, main section.digital
 main section.digital-guide-did-wrap .did .did-video strong,
 main section.digital-guide-did-wrap .did .did-video h5 {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 main section.digital-guide-did-wrap .did .did-point p,
 main section.digital-guide-did-wrap .did .did-video p {
@@ -1547,9 +1560,6 @@ main section.digital-guide-did-wrap .did .did-video p {
     margin-top: 180px;
     margin-left: 580px;
   }
-}
-main section.digital-guide-did-wrap .did .did-point p {
-  margin-bottom: 40px;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap .did .did-point p {

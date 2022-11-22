@@ -24,6 +24,13 @@ main {
             display: none;
         }
     }
+
+    .pc-br {
+        display: none;
+        @include responsive(pc-screens) {
+            display: block;
+        }
+    }
     
     .fee-time-wrap {
         // display: none;
@@ -265,8 +272,8 @@ main {
                             position: relative;
                             width: 100%;
                             height: 210px;
-                            // background-color: coral;
                             border-bottom: 1px solid $bk4;
+
                             @include responsive(tablet-screens) {
                                 height: auto;
                                 aspect-ratio: 1;
@@ -318,7 +325,7 @@ main {
                                     margin-top: 16px;
                                     
                                     @include responsive (tablet-screens) {
-                                        width: 336px;
+                                        width: 310px;
                                         line-height: 2em;
                                         font-size: 22px;
                                         margin-top: 40px;
@@ -470,7 +477,7 @@ main {
                                 height: 52px * 2;
                                 line-height: 52px * 2;
                                 padding: 0 20px;
-                                font-size: 20px + 5px + 5px;
+                                font-size: 28px;
                             }
                             
                             &:hover {
@@ -494,8 +501,13 @@ main {
                             }
 
                             span {
+                                margin-left: 10px;
                                 vertical-align: top;
                                 font-size: calc(1em - 4px);
+
+                                @include responsive(pc-screens) {
+                                    margin-left: 15px;
+                                }
                             }
                         }
                     } // group-option
@@ -551,13 +563,14 @@ main {
                                 width: calc(60px / 350px * 100%);
                                 padding-right: 5px;
                                 text-align: right;
+                                height: 22px;
+
+                                @include responsive(pc-screens) {
+                                    height: 26px;
+                                }
                                 
                                 img {
-                                    height: 22px;
-
-                                    @include responsive(pc-screens) {
-                                        height: 26px;
-                                    }
+                                    height: 100%;
                                 }
                             }
                         }
@@ -603,7 +616,7 @@ main {
         }
         
         h4 {
-            @include gothic_font(regular, calc(1em + 4px));
+            @include gothic_font(regular, 1em) ;
             margin-top: 10px;
             margin-bottom: 50px;
             color: $bk4;
@@ -619,12 +632,6 @@ main {
         strong, h5 {
             font-size: calc(1em + 1.538461538vw);
             line-height: 2em;
-            color: $bk1;
-
-            @include responsive(pc-screens) { font-size: 34px; }
-        }
-        strong, h5 {
-            @include responsive(pc-screens) { font-size: 34px; }
         }
 
         section.digital-guide {
@@ -670,7 +677,6 @@ main {
                             line-height: calc(1em + 6px + 10px);
     
                             @include responsive(pc-screens) {
-                                font-size: 32px;
                                 line-height: 55px;
                             }
                         }
@@ -697,7 +703,7 @@ main {
 
                 @include responsive(pc-screens) {
                     position: relative;
-                    margin-top: 30px;
+                    margin-top: 100px;
                 }
 
                 .guide-point-txt,
@@ -786,7 +792,6 @@ main {
                 } // guide-point-txt
 
                 .guide-point-img {
-                    // background-color: aqua;
 
                     @include responsive(pc-screens) {
                         order: 1;
@@ -795,13 +800,17 @@ main {
 
                     li {
 
+                        @include responsive(pc-screens) {
+                            width: 300px;
+                        }
+
                         &:first-child {
 
                             @include responsive(pc-screens) {
                                 margin-top: 107px;
                             }
                         }
-
+                        
                         img { width: 100% }
                     }
                 } // guide-point-img
@@ -810,9 +819,17 @@ main {
 
         .did {
 
+            strong {
+                @include responsive(pc-screens) { 
+                    margin-bottom: 20px;
+                    font-size: 34px; 
+                }
+            }
+
             p {
                 font-size: calc(1em - 2px);
                 line-height: calc(1em - 2px + 10px);
+                color: $bk1;
 
                 @include responsive(pc-screens) {
                     line-height: 40px;
@@ -822,12 +839,6 @@ main {
             .mobile-hidden {
                 display: none;
                 @include responsive(pc-screens) { display: inline; }
-            }
-
-            .pc-hidden { 
-                @include responsive(pc-screens) { 
-                    display: none; 
-                } 
             }
 
             .did-awards {
@@ -845,31 +856,30 @@ main {
                         padding-top: 30px / 350px * 100%;
                         padding-left: 20px / 350px * 100%;
                         text-align: left;
-                        color: #fff;
-                        // background-color: cornflowerblue;
                         
                         @include responsive(pc-screens) {
                             position: static;
                             width: 500px;
                             padding-top: 0;
                             padding-left: 0;
-                            color: #000;
                         }
-    
+                        
                         strong {
-    
+                            color: #fff;
+                            
                             @include responsive(pc-screens) {
                                 display: block;
-                                margin-bottom: 30px;
+                                color: #000;
                             }
                         }
-    
+                        
                         p {
                             margin-top: 30px / 350px * 100%;
-                            // background-color: saddlebrown;
+                            color: #fff;
                             
                             @include responsive(pc-screens) {
                                 margin-top: 0;
+                                color: $bk1;
                             }
                         }
                     } // awards-txt
@@ -917,7 +927,7 @@ main {
 
                 strong, h5 {
                     display: block;
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
 
                     // @include responsive(pc-screens) {
                     //     margin-bottom: 40px;
@@ -939,8 +949,6 @@ main {
                 }
 
                 p {
-                    margin-bottom: 40px;
-                    // background-color: violet;
 
                     @include responsive(pc-screens) {
                         margin-bottom: 50px;
