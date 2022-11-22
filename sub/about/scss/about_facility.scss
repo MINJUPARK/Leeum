@@ -9,46 +9,60 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('about_facility.jpg');
+    @include full_bg('facility_header.png');
 }
 
 main {
     overflow-x: hidden; /////////
     section.construction {
 
-        .tap-box {
-
-            .tap-flexbox {
-                @include flex_between();
-                width: 100%;
-                margin: 0 20px 40px 20px;
-                
-    
-                li {
-                    @include gothic_font(medium,24px);        
-                    padding-bottom:11px;
-                    
-                    &:first-child {
-                        padding-left:10px;
+        .tabmenu-wrap{
+            padding:100px 0px;
+            .tab-nav{
+            display:table;
+                width:100%;
+                .nav{
+                display:table-cell;
+                    width:50px;
+                    a{
+                        transition:.4s;
+                        position: relative;
+                        display:block;
+                        font-size:18px;
+                        font-weight:700;
+                        color:#9b9b9b;
+                        text-align:center;
+                        border-bottom: 1px solid #ebe5da;
+                        padding-bottom: 15px;
+                        text-decoration: none;
+                    &:after{
+                            content:"";
+                            transition:.4s;
+                            width:0px;
+                        }
                     }
-
-                    &:last-child {
-                        padding-right: 30px;
-                    }
-
-                    a {
-                        color:#9c9c9c;
-                        border-bottom: 2px solid $bk4;
-                        
-                        &:hover {
-                            color:#000000;
-                            border-color: #000000;
+                &.on{
+                        a{
+                            color:#172349;
+                            &:after{
+                                content:"";
+                                position:absolute;
+                                bottom:-2px;
+                                left:0;
+                                right:0;
+                                margin:0 auto;
+                                width:100%;
+                                height:3px;
+                                background-color: #172349;
+                            }
                         }
                     }
                 }
-            } //tap-flexbox
-        } // tap-box
-    
+            }
+            .con-box{
+                display:none;
+            }
+            }
         .main-img {
 
             img {

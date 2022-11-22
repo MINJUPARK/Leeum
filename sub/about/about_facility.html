@@ -9,7 +9,9 @@
     <link rel="stylesheet" type="text/css" href="./css/about_facility.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script src="./js/tab-menu.js"></script>
     <title>Leeum</title>
+    
 </head>
 <body>
     <header>
@@ -218,106 +220,107 @@
         <section class="construction">
             <h2>건축물 소개</h2>
             <div class="container">
-                <div class="tap-box">
-                    <ul class="tap-flexbox">
-                        <li><a href="#construction">건축물 소개</a></li>
-                        <li><a href="#facility">편의시설</a></li>
-                        <li><a href="#renewal">공용공간 리뉴얼</a></li>
-                    </ul>
-                </div><!--tap-box-->
-    
-                <div class="main-img" id="construction">
-                    <img src="./image/facility_artmuseum.PNG" alt="art-museum">
-                </div>
-
-                <div class="info">
-                    <p class="title">
-                        <span>리움의 건축물은 <br>과거, 현재, 미래를 상징하며<br></span>
-                        <span>3명의 세계적인 건축가의 협업으로<br>설계 되었습니다.</span>
-                    </p>
-                    <p class="des">
-                        리움미술관은 한강이 내려다보이는 남산자락에 배산임수(背山臨水)의 지세를 지닌 한남동에 자리하여 
-                        ‘자연과 건축의 조화’를 가장 적절하게 이루고 있습니다. <br><br>대지 700평(2,300㎡)에 연면적 3,000평(9,800 ㎡)인 M1과, 
-                        대지 500평(1,800㎡)에 연면적 1,500평(5,200㎡) 규모인 M2는 각각 고미술과 현대미술 상설 전시를 위한 공간이며, 
-                        미술관 입구에 자리한 아동교육문화센터는 대지 1,200평 (4,000㎡)에 연면적 3,900평(13,300㎡)으로 
-                        다음 세대의 창의력 증진을 위한 교육 관련 시설입니다.<br><br> M1과 M2는 ‘이미 널리 공인 받은 예술 작품’을 전시합니다. 
-                        그와 달리 교육 기능과 기획 전시 기능을 겸하는 아동교육문화센터는 ‘현재 진행 중’이거나 ‘장래 표출될 예술’의 형식을 
-                        수용하는 자유분방한 공간입니다. 이 세 건축물은 건축가의 개성을 드러내는 다양한 재료와 혁신적 기법이 사용되었습니다.
-                    </p>
-                </div>
-    
-                <div class="M1">
-                    <img src="./image/facility_M1.png" alt="m1">
-                    <p class="sub">대지 700평(2,300㎡), 연면적 3000평 (9,800㎡)	</p>
-                    <div class="M1-constructor">
-                        <div class="img">
-                            <img src="./image/facility_MarioBotta.png" alt="mariobotta">
-                        </div>
-                        <div class="name">
-                            <p>마리오 보타</p>
-                            <p>Mario Botta</p>
-                        </div>
-                    </div>
-                    <div class="M1-detail">
-                        <p>M1</p>
-                        <p><span>M1의 견고한 형태는 전통과 고미술품의 불변하는 가치를<br> 수호하는</span> 
-                            <span>요새 또는 성을 연상시킵니다.<br> 특히 흙과 불로 만들어진 외벽의</span> 
-                            <span>테라코타 벽돌은 <br>세계적으로 인정받아 온 한국의 도자기를 상징합니다.</span></p>
-                        <div class="link">
-                            <a href="#">더보기<img src="../../image/icon_arrow_tail.svg" alt="arrow"></a>   
-                        </div>
-                    </div>
-                </div><!--M1-->
-
-                <div class="M2">
-                    <img src="./image/facility_M2.png" alt="M2">
-                    <p class="sub">대지 500평(1.800㎡), 연면적 1500평 (5,200㎡)	</p>
-                    <div class="M2-constructor">
-                        <div class="img">
-                            <img src="./image/facility_JeanNouvel.png" alt="JeanNouvel">
-                        </div>
-                        <div class="name">
-                            <p>장 누벨</p>
-                            <p>Jean Nouvel</p>
-                        </div>
-                    </div>
-                    <div class="M2-detail">
-                        <p>M2</p>
-                        <p>움푹 패인 대지 속에서 육중하게 솟아난 장 누벨의 M2는<br> 
-                            대지 위로 자라난 나무들과 함께 그 형상 자체가 
-                            계속<br> 생성되고 있는 현대 미술을 상징하는 듯합니다. </p>
-                        <div class="link">
-                            <a href="#">더보기<img src="../../image/icon_arrow_tail.svg" alt="arrow"></a>   
-                        </div>   
-                    </div>
-                </div><!--M2-->
+                <div class="tabmenu-wrap">
+                    <div class="tab-nav">
+                        <span class="nav on"><a href="#construction">건축물 안내</a></span>
+                        <span class="nav"><a href="#facility">편의시설</a></span>
+                        <span class="nav"><a href="#renewal">공용공간 리뉴얼</a></span>
+                    </div>        
                 
-                <div class="Kid">
-                    <img src="./image/facility_kidstudy.png" alt="kidstudy">
-                    <p class="sub">대지 1200평(4.000㎡), 연면적 3900평 (13.300㎡)	</p>
-                    <div class="Kidstudy-constructor">
-                        <div class="img">
-                            <img src="./image/facility_RemKoolhaas.png" alt="RemKoolhaas">
-                        </div>
-                        <div class="name">
-                            <p>렘 쿨하스</p>
-                            <p>Rem Koolhaas</p>
-                        </div>
+                    
+                        <div class="main-img con-box" id="construction">
+                            <img src="./image/facility_artmuseum.PNG" alt="art-museum">
+                        
+    
+                            <div class="info">
+                                <p class="title">
+                                    <span>리움의 건축물은 <br>과거, 현재, 미래를 상징하며<br></span>
+                                    <span>3명의 세계적인 건축가의 협업으로<br>설계 되었습니다.</span>
+                                </p>
+                                <p class="des">
+                                    리움미술관은 한강이 내려다보이는 남산자락에 배산임수(背山臨水)의 지세를 지닌 한남동에 자리하여 
+                                    ‘자연과 건축의 조화’를 가장 적절하게 이루고 있습니다. <br><br>대지 700평(2,300㎡)에 연면적 3,000평(9,800 ㎡)인 M1과, 
+                                    대지 500평(1,800㎡)에 연면적 1,500평(5,200㎡) 규모인 M2는 각각 고미술과 현대미술 상설 전시를 위한 공간이며, 
+                                    미술관 입구에 자리한 아동교육문화센터는 대지 1,200평 (4,000㎡)에 연면적 3,900평(13,300㎡)으로 
+                                    다음 세대의 창의력 증진을 위한 교육 관련 시설입니다.<br><br> M1과 M2는 ‘이미 널리 공인 받은 예술 작품’을 전시합니다. 
+                                    그와 달리 교육 기능과 기획 전시 기능을 겸하는 아동교육문화센터는 ‘현재 진행 중’이거나 ‘장래 표출될 예술’의 형식을 
+                                    수용하는 자유분방한 공간입니다. 이 세 건축물은 건축가의 개성을 드러내는 다양한 재료와 혁신적 기법이 사용되었습니다.
+                                </p>
+                            </div>
+        
+                        <div class="M1">
+                            <img src="./image/facility_M1.png" alt="m1">
+                            <p class="sub">대지 700평(2,300㎡), 연면적 3000평 (9,800㎡)	</p>
+                            <div class="M1-constructor">
+                                <div class="img">
+                                    <img src="./image/facility_MarioBotta.png" alt="mariobotta">
+                                </div>
+                                <div class="name">
+                                    <p>마리오 보타</p>
+                                    <p>Mario Botta</p>
+                                </div>
+                            </div>
+                            <div class="M1-detail">
+                                <p>M1</p>
+                                <p><span>M1의 견고한 형태는 전통과 고미술품의 불변하는 가치를<br> 수호하는</span> 
+                                    <span>요새 또는 성을 연상시킵니다.<br> 특히 흙과 불로 만들어진 외벽의</span> 
+                                    <span>테라코타 벽돌은 <br>세계적으로 인정받아 온 한국의 도자기를 상징합니다.</span></p>
+                                <div class="link">
+                                    <a href="./about_facility_detail.html#detail">더보기<img src="../../image/icon_arrow_tail.svg" alt="arrow"></a>   
+                                </div>
+                            </div>
+                        </div><!--M1-->
+    
+                        <div class="M2">
+                            <img src="./image/facility_M2.png" alt="M2">
+                            <p class="sub">대지 500평(1.800㎡), 연면적 1500평 (5,200㎡)	</p>
+                            <div class="M2-constructor">
+                                <div class="img">
+                                    <img src="./image/facility_JeanNouvel.png" alt="JeanNouvel">
+                                </div>
+                                <div class="name">
+                                    <p>장 누벨</p>
+                                    <p>Jean Nouvel</p>
+                                </div>
+                            </div>
+                            <div class="M2-detail">
+                                <p>M2</p>
+                                <p>움푹 패인 대지 속에서 육중하게 솟아난 장 누벨의 M2는<br> 
+                                    대지 위로 자라난 나무들과 함께 그 형상 자체가 
+                                    계속<br> 생성되고 있는 현대 미술을 상징하는 듯합니다. </p>
+                                <div class="link">
+                                    <a href="#">더보기<img src="../../image/icon_arrow_tail.svg" alt="arrow"></a>   
+                                </div>   
+                            </div>
+                        </div><!--M2-->
+                    
+                        <div class="Kid">
+                            <img src="./image/facility_kidstudy.png" alt="kidstudy">
+                            <p class="sub">대지 1200평(4.000㎡), 연면적 3900평 (13.300㎡)	</p>
+                            <div class="Kidstudy-constructor">
+                                <div class="img">
+                                    <img src="./image/facility_RemKoolhaas.png" alt="RemKoolhaas">
+                                </div>
+                                <div class="name">
+                                    <p>렘 쿨하스</p>
+                                    <p>Rem Koolhaas</p>
+                                </div>
+                            </div>
+                            <div class="Kid-detail">
+                                <p>아동교육문화센터</p>
+                                <p><span>자신의 건물을 지나치게 드러나지 않게 함으로써</span>
+                                    <span>자신의 <br>건축을 표현하고자 한 렘 쿨하스의 의지는,<br> 
+                                    이 건축 단지를 내부순환이</span><span> 이상적으로 이루어지는 <br>조화로운 도시의 모델로 승화시키고 있습니다.</span> </p>
+                                    <div class="link">
+                                        <a href="#">더보기<img src="../../image/icon_arrow_tail.svg" alt="arrow"></a>   
+                                    </div>   
+                            </div>
+                        </div><!--Kid-->
                     </div>
-                    <div class="Kid-detail">
-                        <p>아동교육문화센터</p>
-                        <p><span>자신의 건물을 지나치게 드러나지 않게 함으로써</span>
-                            <span>자신의 <br>건축을 표현하고자 한 렘 쿨하스의 의지는,<br> 
-                            이 건축 단지를 내부순환이</span><span> 이상적으로 이루어지는 <br>조화로운 도시의 모델로 승화시키고 있습니다.</span> </p>
-                            <div class="link">
-                                <a href="#">더보기<img src="../../image/icon_arrow_tail.svg" alt="arrow"></a>   
-                            </div>   
-                    </div>
-                </div><!--Kid-->
-            </div><!--container-->
+                    
             
-            <div class="container">
-                    <div class="leeumstore" id="facility">
+            
+                    <div class="leeumstore con-box" id="facility">
                         <div class="facility-detail">
 
                             <img src="./image/facility_leeumstore.png" alt="leeumstore">
@@ -408,10 +411,10 @@
                             안내데스크에서 안내 받으실 수 있습니다. 또한 유모차 및 휠체어 무료 대여를 희망하시는 분은 매표소에서 안내 받을 수 있습니다. 
                         </p>        
                     </div><!--others-->
-            </div><!--container-->
+            
 
-            <div class="container">
-                <div class="director" id="renewal">
+            
+                <div class="director con-box" id="renewal">
                     <img src="./image/facility_renewal-background.png" alt="renewal" class="background">
                     <img src="./image/facility_director.png" alt="director" class="director">
                     <h3>정구호</h3>
@@ -481,8 +484,9 @@
                         </li>
                     </ul>
                 </div><!--renewal-detail-->
-            </div><!--container-->
-        </section><!--construction-->
+            </div>
+        </div><!--container-->
+    </section><!--construction-->
     </main>
     <footer>
         <div class="sitemap-banner-wrap">
