@@ -1,0 +1,64 @@
+//탭메뉴 구성
+//사용할때 탭메뉴 리스트를 작성하면 자동으로 늘어남
+@mixin tab_menu() {
+    .tabmenu-wrap{
+        padding:120px 0px;
+        .tab-nav{
+            display:table;
+            width:100%;
+            .nav{
+                display:table-cell;
+                width:50px;
+                a{
+                    transition:.4s;
+                    position: relative;
+                    display:block;
+                    font-size:18px;
+                    font-weight:700;
+                    color:#9b9b9b;
+                    text-align:center;
+                    border-bottom: 1px solid #ebe5da;
+                    height:55px;
+                    text-decoration: none;
+
+                    @include responsive(tablet-screens) {
+                        height: 69px;
+                    }
+                    
+                    @include responsive(pc-screens) {
+                        height: 78px;
+                    }
+
+                &:after{
+                        content:"";
+                        transition:.4s;
+                        width:0px;
+                    }
+                }
+            &.on{
+                    a{
+                        color:#172349;
+                        &:after{
+                            content:"";
+                            position:absolute;
+                            bottom:-2px;
+                            left:0;
+                            right:0;
+                            margin:0 auto;
+                            width:100%;
+                            height:2px;
+                            background-color: #172349;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tab-con{
+        padding-top: 120px;
+            .con-box{
+                display:none;
+            }
+        }
+    }
+}
