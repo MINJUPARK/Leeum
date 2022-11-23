@@ -729,16 +729,17 @@ main .before-after-case-intro .intro-flex .before-after ul.angle-select li span 
   width: 100%;
   font-size: 20px;
   text-align: center;
+  cursor: pointer;
   transition: color 0.7s;
   color: #acacac;
 }
-main .before-after-case-intro .intro-flex .before-after ul.angle-select li.selected {
+main .before-after-case-intro .intro-flex .before-after ul.angle-select li.on {
   background-color: transparent;
 }
-main .before-after-case-intro .intro-flex .before-after ul.angle-select li.selected::after {
+main .before-after-case-intro .intro-flex .before-after ul.angle-select li.on::after {
   scale: 1;
 }
-main .before-after-case-intro .intro-flex .before-after ul.angle-select li.selected span {
+main .before-after-case-intro .intro-flex .before-after ul.angle-select li.on span {
   color: #000;
   font-weight: 600;
 }
@@ -758,12 +759,13 @@ main .before-after-case-intro .intro-flex .before-after .before-after-img .img {
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;
 }
 main .before-after-case-intro .intro-flex .before-after .before-after-img .img.background-img {
-  background-image: url("../image/conserve_case_before(1).png");
+  background-image: url("../image/conserve_case_before(0).png");
 }
 main .before-after-case-intro .intro-flex .before-after .before-after-img .img.foreground-img {
-  background-image: url("../image/conserve_case_after(1).png");
+  background-image: url("../image/conserve_case_after(0).png");
   width: 50%;
 }
 main .before-after-case-intro .intro-flex .before-after .before-after-img .slider {
@@ -773,31 +775,34 @@ main .before-after-case-intro .intro-flex .before-after .before-after-img .slide
        appearance: none;
   width: 100%;
   height: 100%;
-  background: salmon;
+  background: transparent;
   outline: none;
+  margin: 0;
+  padding: 0;
   transition: width 0.2s;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0;
 }
 main .before-after-case-intro .intro-flex .before-after .before-after-img .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 3px;
-  height: 705px;
+  height: 1100px;
   background: white;
   border: none;
 }
 main .before-after-case-intro .intro-flex .before-after .before-after-img .slider::-moz-range-thumb {
   width: 3px;
-  height: 705px;
+  height: 1100px;
   background: white;
   border: none;
 }
 main .before-after-case-intro .intro-flex .before-after .before-after-img .slider::-ms-thumb {
   width: 3px;
-  height: 705px;
+  height: 1100px;
   background: white;
   border: none;
 }

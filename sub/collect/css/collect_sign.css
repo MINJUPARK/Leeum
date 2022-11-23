@@ -759,7 +759,7 @@ main section.search-wrap .search-box .speed-search form[name=keyword] button img
 main section.itemList-wrap {
   margin-top: 80px;
 }
-main section.itemList-wrap .itemLis .list-control {
+main section.itemList-wrap .itemList .list-control {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -770,75 +770,75 @@ main section.itemList-wrap .itemLis .list-control {
   border-bottom: 1px solid #d4d4d4;
 }
 @media screen and (min-width: 1440px) {
-  main section.itemList-wrap .itemLis .list-control {
+  main section.itemList-wrap .itemList .list-control {
     padding-bottom: 20px;
   }
 }
-main section.itemList-wrap .itemLis .list-control .count {
+main section.itemList-wrap .itemList .list-control .count {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 15px;
 }
-main section.itemList-wrap .itemLis .list-control .count b {
+main section.itemList-wrap .itemList .list-control .count b {
   margin-right: 2px;
 }
-main section.itemList-wrap .itemLis .list-control .count span {
+main section.itemList-wrap .itemList .list-control .count span {
   font-size: 16px;
   font-weight: 500;
   margin-right: 20px;
 }
-main section.itemList-wrap .itemLis .list-control .sort {
+main section.itemList-wrap .itemList .list-control .sort {
   position: absolute;
   right: 0;
   font-size: 15px;
 }
-main section.itemList-wrap .itemLis .list-control .sort img {
+main section.itemList-wrap .itemList .list-control .sort img {
   height: 14px;
   margin-right: 10px;
 }
 @media screen and (min-width: 1440px) {
-  main section.itemList-wrap .itemLis .list-control .sort span, main section.itemList-wrap .itemLis .list-control .sort img {
+  main section.itemList-wrap .itemList .list-control .sort span, main section.itemList-wrap .itemList .list-control .sort img {
     display: none;
   }
 }
-main section.itemList-wrap .itemLis .list-control .view-type {
+main section.itemList-wrap .itemList .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
-main section.itemList-wrap .itemLis .list-control .view-type .sort-list {
+main section.itemList-wrap .itemList .list-control .view-type .sort-list {
   display: flex;
   justify-content: space-between;
   position: relative;
   top: 35px;
 }
 @media screen and (min-width: 1440px) {
-  main section.itemList-wrap .itemLis .list-control .view-type .sort-list {
+  main section.itemList-wrap .itemList .list-control .view-type .sort-list {
     position: static;
   }
 }
-main section.itemList-wrap .itemLis .list-control .view-type .sort-list li {
+main section.itemList-wrap .itemList .list-control .view-type .sort-list li {
   font-size: 14px;
   padding-left: 15px;
   color: #3c3c3c;
 }
-main section.itemList-wrap .itemLis .list-control .view-type .sort-list li:hover {
+main section.itemList-wrap .itemList .list-control .view-type .sort-list li:hover {
   text-decoration: underline;
 }
-main section.itemList-wrap .itemLis .list-control .view-type .sort-list li.on {
+main section.itemList-wrap .itemList .list-control .view-type .sort-list li.on {
   font-size: 14px;
   font-weight: 500;
   text-decoration: underline;
   color: #3c3c3c;
 }
-main section.itemList-wrap .itemLis .list-control .view-type select[name=nth-view] {
+main section.itemList-wrap .itemList .list-control .view-type select[name=nth-view] {
   display: none;
 }
 @media screen and (min-width: 1440px) {
-  main section.itemList-wrap .itemLis .list-control .view-type select[name=nth-view] {
+  main section.itemList-wrap .itemList .list-control .view-type select[name=nth-view] {
     display: block;
     width: 120px;
     height: 30px;
@@ -851,14 +851,17 @@ main section.itemList-wrap .itemLis .list-control .view-type select[name=nth-vie
     background-size: 8px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box {
+main section.itemList-wrap .itemList ul.item-box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 50px;
+  position: relative;
+  height: 1400px;
+  overflow: hidden;
 }
-main section.itemList-wrap .itemLis ul.item-box .item {
+main section.itemList-wrap .itemList ul.item-box .item {
   position: relative;
   width: 48%;
   margin-bottom: 20px;
@@ -866,12 +869,12 @@ main section.itemList-wrap .itemLis ul.item-box .item {
   border-radius: 5px;
 }
 @media screen and (min-width: 1440px) {
-  main section.itemList-wrap .itemLis ul.item-box .item {
+  main section.itemList-wrap .itemList ul.item-box .item {
     width: 23.5%;
     margin-bottom: 25px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box .item .heart {
+main section.itemList-wrap .itemList ul.item-box .item .heart {
   position: absolute;
   top: 0;
   right: 0;
@@ -883,29 +886,29 @@ main section.itemList-wrap .itemLis ul.item-box .item .heart {
   transition-duration: 0s;
   z-index: 97;
 }
-main section.itemList-wrap .itemLis ul.item-box .item .heart:hover {
+main section.itemList-wrap .itemList ul.item-box .item .heart:hover {
   filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
 }
-main section.itemList-wrap .itemLis ul.item-box .item .heart.on {
+main section.itemList-wrap .itemList ul.item-box .item .heart.on {
   transition-duration: 1s;
   background-position: -1960px 0;
 }
-main section.itemList-wrap .itemLis ul.item-box .item a {
+main section.itemList-wrap .itemList ul.item-box .item a {
   display: block;
   width: 100%;
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-pic {
+main section.itemList-wrap .itemList ul.item-box .item .i-pic {
   position: relative;
   width: 100%;
   height: 280px;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
-  main section.itemList-wrap .itemLis ul.item-box .item .i-pic {
+  main section.itemList-wrap .itemList ul.item-box .item .i-pic {
     height: 480px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-pic .bg {
+main section.itemList-wrap .itemList ul.item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -913,38 +916,38 @@ main section.itemList-wrap .itemLis ul.item-box .item .i-pic .bg {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des {
+main section.itemList-wrap .itemList ul.item-box .item .i-des {
   padding: 10px 20px 15px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
-  main section.itemList-wrap .itemLis ul.item-box .item .i-des {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des {
     padding: 20px 30px 25px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des strong {
+main section.itemList-wrap .itemList ul.item-box .item .i-des strong {
   font-size: 16px;
   font-weight: 700;
   white-space: nowrap;
 }
 @media screen and (min-width: 768px) {
-  main section.itemList-wrap .itemLis ul.item-box .item .i-des strong {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des strong {
     font-size: 20px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des p.name {
+main section.itemList-wrap .itemList ul.item-box .item .i-des p.name {
   margin-bottom: 10px;
   font-size: 13px;
   font-weight: 500;
   color: #3c3c3c;
 }
 @media screen and (min-width: 768px) {
-  main section.itemList-wrap .itemLis ul.item-box .item .i-des p.name {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des p.name {
     font-size: 15px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des p {
+main section.itemList-wrap .itemList ul.item-box .item .i-des p {
   margin: 5px 0 20px;
   color: #5c5c5c;
   font-size: 13px;
@@ -953,21 +956,21 @@ main section.itemList-wrap .itemLis ul.item-box .item .i-des p {
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
-  main section.itemList-wrap .itemLis ul.item-box .item .i-des p {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des p {
     margin: 10px 0 30px;
     font-size: 15px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des p .vert-bar {
+main section.itemList-wrap .itemList ul.item-box .item .i-des p .vert-bar {
   padding: 0 5px;
   color: #acacac;
 }
 @media screen and (min-width: 768px) {
-  main section.itemList-wrap .itemLis ul.item-box .item .i-des p .vert-bar {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des p .vert-bar {
     padding: 0 8px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des .loc {
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc {
   position: relative;
   width: 80px;
   height: 22px;
@@ -977,14 +980,14 @@ main section.itemList-wrap .itemLis ul.item-box .item .i-des .loc {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  main section.itemList-wrap .itemLis ul.item-box .item .i-des .loc {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des .loc {
     width: 80px;
     height: 26px;
     font-size: 13px;
     line-height: 26px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des .loc:after {
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc:after {
   content: "";
   position: absolute;
   top: 0;
@@ -994,10 +997,10 @@ main section.itemList-wrap .itemLis ul.item-box .item .i-des .loc:after {
   border: 1px solid #3c3c3c;
   border-radius: 3px;
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des .loc div {
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc div {
   position: absolute;
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des .loc div.tag {
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc div.tag {
   left: 0;
   width: 32px;
   color: #fff;
@@ -1005,24 +1008,46 @@ main section.itemList-wrap .itemLis ul.item-box .item .i-des .loc div.tag {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-main section.itemList-wrap .itemLis ul.item-box .item .i-des .loc div:last-child {
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc div:last-child {
   right: 0;
   width: 48px;
 }
-main section.itemList-wrap .itemLis ul.item-box .item {
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList ul.item-box {
+    height: 1400px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
+  height: 310px;
+  background: linear-gradient(to bottom, hsla(0deg, 0%, 100%, 0) 0%, hsla(0deg, 0%, 100%, 0.187) 1.3%, hsla(0deg, 0%, 100%, 0.349) 4.9%, hsla(0deg, 0%, 100%, 0.488) 10.4%, hsla(0deg, 0%, 100%, 0.606) 17.5%, hsla(0deg, 0%, 100%, 0.704) 25.9%, hsla(0deg, 0%, 100%, 0.784) 35.2%, hsla(0deg, 0%, 100%, 0.848) 45%, hsla(0deg, 0%, 100%, 0.898) 55%, hsla(0deg, 0%, 100%, 0.936) 64.8%, hsla(0deg, 0%, 100%, 0.963) 74.1%, hsla(0deg, 0%, 100%, 0.981) 82.5%, hsla(0deg, 0%, 100%, 0.992) 89.6%, hsla(0deg, 0%, 100%, 0.998) 95.1%, hsl(0deg, 0%, 100%) 98.7%, hsl(0deg, 0%, 100%) 100%);
+  z-index: 2;
+}
+main section.itemList-wrap .itemList ul.item-box li.item {
+  width: 100%;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 768px) {
-  main section.itemList-wrap .itemLis ul.item-box .item {
+  main section.itemList-wrap .itemList ul.item-box li.item {
     width: 45%;
   }
 }
 @media screen and (min-width: 1440px) {
-  main section.itemList-wrap .itemLis ul.item-box .item {
+  main section.itemList-wrap .itemList ul.item-box li.item {
     width: 440px;
   }
+  main section.itemList-wrap .itemList ul.item-box li.item:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  main section.itemList-wrap .itemList ul.item-box li.item:hover a .i-pic img {
+    transform: scale(1.3);
+  }
 }
-main section.itemList-wrap .itemLis ul.item-box .item .heart {
+main section.itemList-wrap .itemList ul.item-box li.item .heart {
   position: absolute;
   top: 0;
   right: 0;
@@ -1034,18 +1059,21 @@ main section.itemList-wrap .itemLis ul.item-box .item .heart {
   transition-duration: 0s;
   z-index: 97;
 }
-main section.itemList-wrap .itemLis ul.item-box .item .heart:hover {
+main section.itemList-wrap .itemList ul.item-box li.item .heart:hover {
   filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
 }
-main section.itemList-wrap .itemLis ul.item-box .item .heart.on {
+main section.itemList-wrap .itemList ul.item-box li.item .heart.on {
   transition-duration: 1s;
   background-position: -1960px 0;
 }
-main section.itemList-wrap .itemLis ul.item-box .item a .i-pic {
+main section.itemList-wrap .itemList ul.item-box li.item a .i-pic {
   position: relative;
   height: 55.7142857143%;
 }
-main section.itemList-wrap .itemLis ul.item-box .item a .i-pic .youtube-icon {
+main section.itemList-wrap .itemList ul.item-box li.item a .i-pic img {
+  transition: transform 0.3s;
+}
+main section.itemList-wrap .itemList ul.item-box li.item a .i-pic .youtube-icon {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1054,23 +1082,30 @@ main section.itemList-wrap .itemLis ul.item-box .item a .i-pic .youtube-icon {
   aspect-ratio: 38/27;
   background-image: url(../../../image/icon_youtube_black.svg);
   background-repeat: no-repeat;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 1440px) {
-  main section.itemList-wrap .itemLis ul.item-box .item a .i-pic .youtube-icon {
+  main section.itemList-wrap .itemList ul.item-box li.item a .i-pic .youtube-icon {
     width: 63px;
     height: 45px;
   }
 }
-main section.itemList-wrap .itemLis ul.item-box .item a .i-des p {
+main section.itemList-wrap .itemList ul.item-box li.item a .i-des strong {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main section.itemList-wrap .itemList ul.item-box li.item a .i-des p {
   margin-bottom: 0;
 }
-main section.itemList-wrap .itemLis .more-btn {
+main section.itemList-wrap .itemList .more-btn {
   position: relative;
   top: -60px;
   text-align: center;
   z-index: 2;
 }
-main section.itemList-wrap .itemLis .more-btn button {
+main section.itemList-wrap .itemList .more-btn button {
   font-size: 14px;
   font-weight: 600;
   width: 50%;
@@ -1078,7 +1113,7 @@ main section.itemList-wrap .itemLis .more-btn button {
   border: 1px solid #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
-  main section.itemList-wrap .itemLis .more-btn button {
+  main section.itemList-wrap .itemList .more-btn button {
     width: 200px;
   }
 }
