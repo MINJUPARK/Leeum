@@ -29,7 +29,7 @@ main {
     section.itemList-wrap {
         margin-top: 80px;
 
-        .itemLis {
+        .itemList {
 
             .list-control {
                 @include list_control();
@@ -37,9 +37,45 @@ main {
     
             ul.item-box {
                 @include itemList_box();
+                position: relative;
+                height: 1400px;
+                overflow: hidden;
+                
+                @include responsive(pc-screens) {
+                    height: 1400px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0; bottom: 0;
+                    width: 100%; height: 310px;
+                    background: linear-gradient(
+                                    to bottom,
+                                    hsla(0, 0%, 100%, 0) 0%,
+                                    hsla(0, 0%, 100%, 0.187) 1.3%,
+                                    hsla(0, 0%, 100%, 0.349) 4.9%,
+                                    hsla(0, 0%, 100%, 0.488) 10.4%,
+                                    hsla(0, 0%, 100%, 0.606) 17.5%,
+                                    hsla(0, 0%, 100%, 0.704) 25.9%,
+                                    hsla(0, 0%, 100%, 0.784) 35.2%,
+                                    hsla(0, 0%, 100%, 0.848) 45%,
+                                    hsla(0, 0%, 100%, 0.898) 55%,
+                                    hsla(0, 0%, 100%, 0.936) 64.8%,
+                                    hsla(0, 0%, 100%, 0.963) 74.1%,
+                                    hsla(0, 0%, 100%, 0.981) 82.5%,
+                                    hsla(0, 0%, 100%, 0.992) 89.6%,
+                                    hsla(0, 0%, 100%, 0.998) 95.1%,
+                                    hsl(0, 0%, 100%) 98.7%,
+                                    hsl(0, 0%, 100%) 100%
+                                );
+                    z-index: 2;
+                }
     
-                .item {
+                li.item {
                     width: 100%;
+
+                    transition: all .3s;
     
                     @include responsive(tablet-screens) {
                         width: 45%;
@@ -47,6 +83,17 @@ main {
     
                     @include responsive(pc-screens) {
                         width: 440px;
+
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+                            a {
+
+                                img {
+                                    transform: scale(1.3);
+                                }
+                            }
+                        }
                     }
     
                     .heart {
@@ -58,6 +105,10 @@ main {
                         .i-pic {
                             position: relative;
                             height: calc(195px / 350px) * 100%;
+
+                            img {
+                                transition: transform .3s;
+                            }
     
                             .youtube-icon {
                                 @include element_center();
@@ -93,7 +144,7 @@ main {
                     width: 50%; height: 40px;
                     border: 1px solid $bk2;
     
-                    @include rsesponsive(pc-screens) {
+                    @include responsive(pc-screens) {
                         width: 200px;
                     }
                 }

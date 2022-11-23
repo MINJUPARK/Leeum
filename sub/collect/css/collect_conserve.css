@@ -70,11 +70,8 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, label {
+img, span, strong, label, time {
   display: inline-block;
-}
-
-img, span, strong, time {
   vertical-align: middle;
 }
 
@@ -212,7 +209,6 @@ header .logo-menu-wrap {
 }
 @media screen and (min-width: 1440px) {
   header .logo-menu-wrap {
-    width: 1920px;
     position: static;
   }
 }
@@ -366,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -775,6 +780,7 @@ main .texture-research-wrap {
 @media screen and (min-width: 1440px) {
   main .texture-research-wrap {
     margin-top: 180px;
+    overflow: visible;
   }
 }
 main .texture-research-wrap .texture-research ul.texture-lsit {
@@ -795,11 +801,21 @@ main .texture-research-wrap .texture-research ul.texture-lsit li {
   height: 246px;
   border-radius: 5px;
   overflow: hidden;
+  transition: box-shadow 0.3s;
 }
 @media screen and (min-width: 1440px) {
   main .texture-research-wrap .texture-research ul.texture-lsit li {
     width: 440px;
     height: 400px;
+  }
+  main .texture-research-wrap .texture-research ul.texture-lsit li:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  main .texture-research-wrap .texture-research ul.texture-lsit li:hover a h4 {
+    bottom: 50px;
+  }
+  main .texture-research-wrap .texture-research ul.texture-lsit li:hover a img {
+    transform: scale(1.3);
   }
 }
 @media screen and (min-width: 1440px) {
@@ -832,6 +848,7 @@ main .texture-research-wrap .texture-research ul.texture-lsit li a h4 {
   bottom: 16px;
   transform: translateX(-50%);
   z-index: 2;
+  transition: all 0.3s;
 }
 @media screen and (min-width: 1440px) {
   main .texture-research-wrap .texture-research ul.texture-lsit li a h4 {
@@ -841,11 +858,9 @@ main .texture-research-wrap .texture-research ul.texture-lsit li a h4 {
 main .texture-research-wrap .texture-research ul.texture-lsit li a img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: 0.3s;
-}
-main .texture-research-wrap .texture-research ul.texture-lsit li a:hover img {
-  transform: scale(1.3);
 }
 main .conserve-type-wrap {
   margin-top: 100px;
@@ -1269,4 +1284,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=collect_conserve.css.map */
