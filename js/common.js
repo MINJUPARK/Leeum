@@ -7,7 +7,7 @@ $(function() {
             
             const header_height = $('header').outerHeight(true);
             const main_height = $('main').outerHeight(true);
-            const footer = main_height - header_height;
+            // const footer = main_height - header_height;
             const header = header_height * (-1);
 
             $('main, footer.sub').css({
@@ -45,14 +45,14 @@ $(function() {
 
     // PC 메뉴 서브
     $('.pc-menu .group').on('mouseover', function() {
-            $('.pc-menu .opt').addClass('hidden');
-            $(this).next().removeClass('hidden');
+        $('.pc-menu .opt').addClass('hidden');
+        $(this).next().removeClass('hidden');
 
-            if($(this).hasClass('m1'))      { $(this).next().css({ "margin-left" : "-32px" }); }
-            else if($(this).hasClass('m2')) { $(this).next().css({ "margin-left" : "-28px" }); }
-            else if($(this).hasClass('m3')) { $(this).next().css({ "margin-left" : "-14px" }); }
-            else if($(this).hasClass('m4')) { $(this).next().css({ "margin-left" : "-24px" }); }
-            else if($(this).hasClass('m6')) { $(this).next().css({ "margin-left" : "-26px" }); }
+        if($(this).hasClass('m1'))      { $(this).next().css({ "margin-left" : "-32px" }); }
+        else if($(this).hasClass('m2')) { $(this).next().css({ "margin-left" : "-28px" }); }
+        else if($(this).hasClass('m3')) { $(this).next().css({ "margin-left" : "-14px" }); }
+        else if($(this).hasClass('m4')) { $(this).next().css({ "margin-left" : "-24px" }); }
+        else if($(this).hasClass('m6')) { $(this).next().css({ "margin-left" : "-26px" }); }
     });
     $('.pc-menu .opt').on('mouseleave', function() {
         $(this).addClass('hidden');
@@ -100,14 +100,7 @@ $(function() {
         window.open($(this).val());
     });
 
-    // $('video').hover(function toggleControls() {
-    //     if (this.hasAttribute("controls")) {
-    //         this.removeAttribute("controls")
-    //     } else {
-    //         this.setAttribute("controls", "controls")
-    //     }
-    // })
-    
+
     /* ----------------------------------------------------------*/
 
 

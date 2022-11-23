@@ -360,7 +360,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -579,7 +588,8 @@ header .main-slider-wrap .main-slider .item .item-con video {
   top: 0;
   width: 100vw;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .main-slider-wrap .main-slider .item .info-wrap {
   width: 100%;
@@ -668,16 +678,20 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
   }
 }
 header .main-slider-wrap .main-slider .item h3 {
-  animation: fadeOutDown 1s both;
+  -webkit-animation: fadeOutDown 1s both;
+          animation: fadeOutDown 1s both;
 }
 header .main-slider-wrap .main-slider .item.slick-active h3 {
-  animation: fadeInUp 1s both 1s;
+  -webkit-animation: fadeInUp 1s both 1s;
+          animation: fadeInUp 1s both 1s;
 }
 header .main-slider-wrap .main-slider .item h5 {
-  animation: fadeOutDown 1s both;
+  -webkit-animation: fadeOutDown 1s both;
+          animation: fadeOutDown 1s both;
 }
 header .main-slider-wrap .main-slider .item.slick-active h5 {
-  animation: fadeInUp 1s both 1.5s;
+  -webkit-animation: fadeInUp 1s both 1.5s;
+          animation: fadeInUp 1s both 1.5s;
 }
 header .main-slider-wrap .slick-list, header .main-slider-wrap .slick-track, header .main-slider-wrap .slick-slide {
   height: 100%;
@@ -778,6 +792,62 @@ main {
   margin-bottom: 0;
   overflow-x: hidden;
 }
+main .title-box {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+main .title-box.center {
+  text-align: center;
+}
+main .title-box .con h3 {
+  font-family: "KoPub Batang";
+  font-size: 30px;
+  font-weight: 700;
+}
+@media screen and (min-width: 1440px) {
+  main .title-box .con h3 {
+    font-size: 46px;
+  }
+}
+main .title-box .con p {
+  color: #5c5c5c;
+  font-size: 14px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main .title-box .con p {
+    font-size: 16px;
+  }
+}
+main .btn.right {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+}
+main .btn .more label {
+  font-size: 14px;
+  font-weight: 600;
+}
+main .btn .more img {
+  width: 16px;
+  height: 14px;
+  margin-left: 10px;
+}
+main .btn .more.pc {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .btn .more.pc {
+    display: block;
+  }
+}
+main section {
+  margin-bottom: 150px;
+}
+main section.infoBox {
+  margin-bottom: 0;
+}
 @media screen and (min-width: 1440px) {
   main section.infoBox {
     border-bottom: 1px solid #c5c5c5;
@@ -862,14 +932,13 @@ main section.infoBox .time-notice .notice .des .more {
   margin-bottom: 0;
 }
 main section.infoBox .time-notice .notice .des .more label {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 main section.infoBox .time-notice .notice .des .more img {
   width: 16px;
   height: 14px;
-  margin-bottom: 2px;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .tit {
@@ -938,67 +1007,6 @@ main section.infoBox .time-notice .des .latest {
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .des .latest {
     font-size: 18px;
-  }
-}
-main .title-box {
-  position: relative;
-  width: 100%;
-  height: 80px;
-}
-main .title-box.center {
-  text-align: center;
-}
-main .title-box .con h3 {
-  font-family: "KoPub Batang";
-  font-size: 30px;
-  font-weight: 700;
-}
-@media screen and (min-width: 1440px) {
-  main .title-box .con h3 {
-    font-size: 46px;
-  }
-}
-main .title-box .con p {
-  color: #5c5c5c;
-  font-size: 14px;
-  margin-top: 10px;
-}
-@media screen and (min-width: 1440px) {
-  main .title-box .con p {
-    font-size: 16px;
-  }
-}
-main .btn {
-  position: absolute;
-  right: 20px;
-  bottom: 0;
-}
-main .btn .more label {
-  font-size: 16px;
-  font-weight: 600;
-}
-main .btn .more img {
-  width: 16px;
-  height: 14px;
-  margin-bottom: 2px;
-  margin-left: 15px;
-}
-main .btn .more label {
-  font-size: 16px;
-  font-weight: 600;
-}
-main .btn .more img {
-  width: 16px;
-  height: 14px;
-  margin-bottom: 2px;
-  margin-left: 15px;
-}
-main .btn .more.pc {
-  display: none;
-}
-@media screen and (min-width: 1440px) {
-  main .btn .more.pc {
-    display: block;
   }
 }
 main section.exhibition {
@@ -1099,7 +1107,7 @@ main section.exhibition .ehb-slider .slick-current .bg .des {
 }
 main section.exhibition .ehb-slider .bg {
   position: relative;
-  height: 200px;
+  height: 220px;
   margin: 0 -125px;
   border-radius: 20px;
   transform: scale3d(0.8, 0.8, 1);
@@ -1109,8 +1117,8 @@ main section.exhibition .ehb-slider .bg {
 }
 @media screen and (min-width: 1440px) {
   main section.exhibition .ehb-slider .bg {
-    width: 800px;
-    height: 450px;
+    width: 700px;
+    height: 350px;
   }
 }
 main section.exhibition .ehb-slider .bg .des {
@@ -1133,7 +1141,7 @@ main section.exhibition .ehb-slider .bg .des {
 }
 main section.exhibition .ehb-slider .bg .des .type {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   color: #be6a15;
 }
@@ -1144,11 +1152,11 @@ main section.exhibition .ehb-slider .bg .des .type {
 }
 main section.exhibition .ehb-slider .bg .des .title {
   font-size: 20px;
-  margin: 5px 0 10px;
+  margin: 5px 0 15px;
 }
 @media screen and (min-width: 1440px) {
   main section.exhibition .ehb-slider .bg .des .title {
-    font-size: 36px;
+    font-size: 26px;
   }
 }
 main section.exhibition .ehb-slider .bg .des time {
@@ -1176,7 +1184,143 @@ main section.exhibition .ehb-slider .bg .des .loc {
 main section.exhibition .ehb-slider .bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section.facility .banner-box-wrap {
+  position: relative;
+}
+main section.facility .banner-box-wrap .banner-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 240px;
+  background: url("../image/index_facility.jpg") no-repeat;
+  background-color: #000;
+  background-size: 1200px;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+@media screen and (tablet-screens) {
+  main section.facility .banner-box-wrap .banner-box {
+    height: 270px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.facility .banner-box-wrap .banner-box {
+    height: 300px;
+  }
+}
+main section.facility .banner-box-wrap .banner-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 35%, rgba(255, 255, 255, 0) 100%);
+}
+main section.facility .banner-box-wrap .con {
+  position: absolute;
+  top: 105px;
+  left: 50%;
+  padding: 0 20px;
+  padding-right: 20px;
+  color: #fff;
+  z-index: 1;
+}
+@media screen and (min-width: 590px) {
+  main section.facility .banner-box-wrap .con {
+    top: 135px;
+  }
+}
+@media screen and (min-width: 990px) {
+  main section.facility .banner-box-wrap .con {
+    left: 35%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.facility .banner-box-wrap .con {
+    top: 175px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.facility .banner-box-wrap .con h3 {
+    font-size: 38px;
+  }
+}
+main section.facility .banner-box-wrap .con p {
+  font-size: 13px;
+  font-weight: 200;
+  margin: 10px 0 25px;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 590px) {
+  main section.facility .banner-box-wrap .con p br {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  main section.facility .banner-box-wrap .con p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.facility .banner-box-wrap .con p {
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
+}
+main section.facility .banner-box-wrap .con .btn label {
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  main section.facility .banner-box-wrap .con .btn label {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.facility .banner-box-wrap .con .btn label {
+    font-size: 16px;
+  }
+}
+main section.facility .banner-box-wrap .con .btn img {
+  width: 12px;
+  height: 14px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+@media screen and (min-width: 768px) {
+  main section.facility .banner-box-wrap .con .btn img {
+    height: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.facility .banner-box-wrap .con .btn img {
+    height: 18px;
+  }
+}
+main section.facility .banner-box-wrap .person {
+  display: inline-block;
+  position: relative;
+  left: -80px;
+}
+@media screen and (min-width: 490px) {
+  main section.facility .banner-box-wrap .person {
+    left: 0;
+  }
+}
+main section.facility .banner-box-wrap .person img {
+  height: 300px;
+}
+@media screen and (min-width: 590px) {
+  main section.facility .banner-box-wrap .person img {
+    height: 320px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.facility .banner-box-wrap .person img {
+    height: 400px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1497,4 +1641,4 @@ footer #banner-box {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+}/*# sourceMappingURL=index.css.map */

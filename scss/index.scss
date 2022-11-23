@@ -232,8 +232,63 @@ main {
   margin-bottom: 0;
   overflow-x: hidden;
 
+  .title-box {
+    position: relative;
+    width: 100%; height: 80px;
+
+    &.center {
+      text-align: center;
+    }
+
+    .con {
+
+      h3 {
+        @include batang_font(bold, $h3);
+  
+        @include responsive(pc-screens) {
+          font-size: $h1;
+        }
+      }
+  
+      p {
+        color: $bk2;
+        font-size: 14px;
+        margin-top: 10px;
+
+        @include responsive(pc-screens) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .btn {
+
+    &.right {
+      position: absolute;
+      right: 20px; bottom: 0;
+    }
+
+    .more {
+      @include more_btn();
+  
+      &.pc {
+        display: none;
+  
+        @include responsive(pc-screens) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  section {
+    margin-bottom: 150px;
+  }
+
   section.infoBox {
-    
+    margin-bottom: 0;
+
     @include responsive(pc-screens) {
       border-bottom: 1px solid #c5c5c5;
     }
@@ -382,64 +437,6 @@ main {
     }
   }
 
-  .title-box {
-    position: relative;
-    width: 100%; height: 80px;
-
-    &.center {
-      text-align: center;
-    }
-
-    .con {
-
-      h3 {
-        @include batang_font(bold, $h3);
-  
-        @include responsive(pc-screens) {
-          font-size: $h1;
-        }
-      }
-  
-      p {
-        color: $bk2;
-        font-size: 14px;
-        margin-top: 10px;
-
-        @include responsive(pc-screens) {
-          font-size: 16px;
-        }
-      }
-    }
-  }
-
-  .btn {
-    position: absolute;
-    right: 20px; bottom: 0;
-
-    .more {
-      @include more_btn();
-
-      label {
-        @include gothic_font(semibold);
-      }
-  
-      img {
-        width: 16px; height: 14px;
-        margin-bottom: 2px;
-        margin-left: 15px;
-      }
-  
-      &.pc {
-        display: none;
-  
-        @include responsive(pc-screens) {
-          display: block;
-        }
-      }
-    }
-  }
-  
-
   section.exhibition {
     margin-top: 75px;
 
@@ -531,7 +528,7 @@ main {
 
       .bg {
         position: relative;
-        height: 200px;
+        height: 220px;
         margin: 0 -125px;
         border-radius: 20px;
         transform: scale3d(0.8, 0.8, 1);
@@ -540,8 +537,8 @@ main {
         overflow: hidden;
   
         @include responsive(pc-screens) {
-          width: 800px;
-          height: 450px;
+          width: 700px;
+          height: 350px;
         }
   
         .des {
@@ -562,7 +559,7 @@ main {
           
   
           .type {
-            @include gothic_font(semibold);
+            @include gothic_font(medium);
             font-size: 14px;
             color: $yellow-brown; 
   
@@ -573,10 +570,10 @@ main {
   
           .title { 
             font-size: 20px;
-            margin: 5px 0 10px;
+            margin: 5px 0 15px;
   
             @include responsive(pc-screens) {
-              font-size: $h2;
+              font-size: $h4;
             }
           }
           
@@ -607,6 +604,142 @@ main {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+      }
+    }
+  }
+
+  section.facility {
+
+    .banner-box-wrap {
+      position: relative;
+
+      .banner-box {
+        position: absolute;
+        bottom: 0;
+        width: 100%; height: 240px;
+        background: url('../image/index_facility.jpg') no-repeat;
+        background-color: #000;
+        background-size: 1200px;
+        background-position-x: right;
+        background-position-y: bottom;
+
+        @media screen and (tablet-screens) {
+          height: 270px;
+        }
+
+        @include responsive(pc-screens) {
+          height: 300px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0; top: 0;
+          width: 100%; height: 100%;
+          background: linear-gradient(90deg, rgba(0,0,0,1) 35%, rgba(255,255,255,0) 100%);
+        }
+      }
+      
+      .con {
+        position: absolute;
+        top: 105px;
+        left: 50%;
+        padding: 0 20px;
+        padding-right: 20px;
+        color: #fff;
+        z-index: 1;
+
+        @media screen and (min-width:590px) {
+          top: 135px;
+        }
+
+        @media screen and (min-width:990px) {
+          left: 35%;
+        }
+
+        @include responsive(pc-screens) {
+          top: 175px;
+        }
+
+        h3 {
+
+          @include responsive(pc-screens) {
+            font-size: 38px;
+          }
+        }
+
+        p {
+          @include gothic_font(light, 13px);
+          margin: 10px 0 25px;
+          line-height: 1.5em;
+
+          @media screen and (min-width:590px) {
+            br { display: none; }
+          }
+
+          @include responsive(tablet-screens) {
+            font-size: 14px;
+          }
+
+          @include responsive(pc-screens) {
+            margin-bottom: 35px;
+            font-size: 18px;
+          }
+        }
+
+        .btn {
+
+          label {
+            color: #fff;
+
+            @include responsive(tablet-screens) {
+              font-size: 14px;
+            }
+            @include responsive(pc-screens) {
+              font-size: 16px;
+            }
+          }
+
+          img {
+            width: 12px; height: 14px;
+            filter: $svg-white;
+
+            @include responsive(tablet-screens) {
+              height: 16px;
+            }
+
+            @include responsive(pc-screens) {
+              height: 18px;
+            }
+          }
+          
+        }
+      }
+
+      .person {
+        display: inline-block;
+        position: relative;
+        left: -80px;
+
+        @media screen and (min-width:490px) {
+          left: 0;
+        }
+
+        img {
+          height: 300px;
+
+          @media screen and (min-width:590px) {
+            height: 320px;
+          }
+
+          // @include responsive(tablet-screens) {
+          //   height: 360px;
+          // }
+
+          @include responsive(pc-screens) {
+            height: 400px;
+          }
         }
       }
     }
