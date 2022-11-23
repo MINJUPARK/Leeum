@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -573,7 +582,7 @@ header .breadcrumb-wrap {
     position: absolute;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     background-color: rgba(0, 0, 0, 0.2);
   }
   header .breadcrumb-wrap .breadcrumb {
@@ -584,7 +593,7 @@ header .breadcrumb-wrap {
   header .breadcrumb-wrap .breadcrumb .home {
     width: 80px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-top: 0;
     border-bottom: 0;
   }
@@ -599,7 +608,7 @@ header .breadcrumb-wrap {
   }
   header .breadcrumb-wrap .breadcrumb .loc {
     width: 180px;
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
   }
   header .breadcrumb-wrap .breadcrumb .loc .step {
     display: flex;
@@ -640,11 +649,12 @@ header .breadcrumb-wrap {
 }
 
 /* main {
+
     h1 {
         display: none;
     }
 
-    .image {
+    .data-image {
         h2 {
             text-align: center;
             @include gothic_font(semibold, 20px); 
@@ -660,6 +670,7 @@ header .breadcrumb-wrap {
         .flex {
             display: flex;
             margin-bottom: 40px;
+            width: 50%;
 
             .workbook{
                 text-align: center;
@@ -701,13 +712,24 @@ header .breadcrumb-wrap {
 main h1 {
   display: none;
 }
-main image h2 {
+main .data-image h2 {
   font-size: 20px;
   font-weight: 600;
 }
-main image .plus span {
+main .data-image .plus span {
   font-size: 16px;
   font-weight: 600;
+}
+main .data-image .plus img {
+  width: 15px;
+  height: 10px;
+}
+main .data-image .flex {
+  display: flex;
+  width: 50%;
+  /* img {
+      width: 170px;
+  } */
 }
 
 @media screen and (min-width: 1440px) {
@@ -990,4 +1012,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=news_data.css.map */

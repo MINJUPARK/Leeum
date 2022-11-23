@@ -114,8 +114,10 @@ main {
     
                 
             }
-            a {
+
+            .place {
                 position: absolute;
+                text-align: right;
                 @include gothic_font(medium, 12px); 
                 color: $bk2;
                 text-align: center;

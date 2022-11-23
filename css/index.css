@@ -360,7 +360,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -580,7 +589,8 @@ header .main-slider-wrap .main-slider .item .item-con video {
   width: 100vw;
   height: 100%;
   border-radius: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .main-slider-wrap .main-slider .item .info-wrap {
   width: 100%;
@@ -636,7 +646,8 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .date {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   margin: 0 auto;
 }
 @media screen and (min-width: 1440px) {
@@ -692,16 +703,20 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
   }
 }
 header .main-slider-wrap .main-slider .item .title, header .main-slider-wrap .main-slider .item .date {
-  animation: fadeOutDown 1s both;
+  -webkit-animation: fadeOutDown 1s both;
+          animation: fadeOutDown 1s both;
 }
 header .main-slider-wrap .main-slider .item .notice p {
-  animation: fadeInUp 1s both;
+  -webkit-animation: fadeInUp 1s both;
+          animation: fadeInUp 1s both;
 }
 header .main-slider-wrap .main-slider .item.slick-active .title, header .main-slider-wrap .main-slider .item.slick-active .date {
-  animation: fadeInUp 1s both 1s;
+  -webkit-animation: fadeInUp 1s both 1s;
+          animation: fadeInUp 1s both 1s;
 }
 header .main-slider-wrap .main-slider .item.slick-active .notice p {
-  animation: fadeInUp 1s both;
+  -webkit-animation: fadeInUp 1s both;
+          animation: fadeInUp 1s both;
 }
 header .main-slider-wrap .slick-list, header .main-slider-wrap .slick-track, header .main-slider-wrap .slick-slide {
   height: 100%;
@@ -1209,7 +1224,8 @@ main section.exhibition .ehb-slider .bg .des .loc {
 main section.exhibition .ehb-slider .bg img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main section.facility .banner-box-wrap {
   position: relative;
@@ -1665,4 +1681,4 @@ footer #banner-box {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+}/*# sourceMappingURL=index.css.map */

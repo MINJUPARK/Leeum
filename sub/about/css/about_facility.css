@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -573,7 +582,7 @@ header .breadcrumb-wrap {
     position: absolute;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     background-color: rgba(0, 0, 0, 0.2);
   }
   header .breadcrumb-wrap .breadcrumb {
@@ -584,7 +593,7 @@ header .breadcrumb-wrap {
   header .breadcrumb-wrap .breadcrumb .home {
     width: 80px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-top: 0;
     border-bottom: 0;
   }
@@ -599,7 +608,7 @@ header .breadcrumb-wrap {
   }
   header .breadcrumb-wrap .breadcrumb .loc {
     width: 180px;
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
   }
   header .breadcrumb-wrap .breadcrumb .loc .step {
     display: flex;
@@ -642,9 +651,6 @@ header .breadcrumb-wrap {
 main {
   overflow-x: hidden;
 }
-main .tabmenu-wrap {
-  padding: 120px 0px;
-}
 main .tabmenu-wrap .tab-nav {
   display: table;
   width: 100%;
@@ -658,12 +664,17 @@ main .tabmenu-wrap .tab-nav .nav a {
   position: relative;
   display: block;
   font-size: 18px;
-  font-weight: 700;
-  color: #9b9b9b;
+  font-weight: 500;
+  color: #acacac;
   text-align: center;
-  border-bottom: 1px solid #ebe5da;
-  padding-bottom: 15px;
-  text-decoration: none;
+  border-bottom: 1px solid #d4d4d4;
+  height: 40px;
+}
+@media screen and (min-width: 768px) {
+  main .tabmenu-wrap .tab-nav .nav a {
+    height: 50px;
+    font-size: 24px;
+  }
 }
 main .tabmenu-wrap .tab-nav .nav a:after {
   content: "";
@@ -671,24 +682,48 @@ main .tabmenu-wrap .tab-nav .nav a:after {
   width: 0px;
 }
 main .tabmenu-wrap .tab-nav .nav.on a {
-  color: #172349;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
 }
 main .tabmenu-wrap .tab-nav .nav.on a:after {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 0;
   right: 0;
   margin: 0 auto;
   width: 100%;
-  height: 3px;
-  background-color: #172349;
+  height: 2px;
+  background-color: #000;
+}
+@media screen and (min-width: 768px) {
+  main .tabmenu-wrap .tab-nav .nav.on a {
+    font-size: 24px;
+  }
 }
 main .tabmenu-wrap .tab-con {
-  padding-top: 120px;
+  padding-top: 60px;
 }
 main .tabmenu-wrap .tab-con .con-box {
   display: none;
+}
+main .main-img {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+@media screen and (min-width: 1440px) {
+  main .main-img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+  }
 }
 main .main-img img {
   width: 100%;
@@ -703,9 +738,9 @@ main .info .title {
 @media screen and (min-width: 1440px) {
   main .info .title {
     font-family: "KoPub Batang";
-    font-size: 46px;
+    font-size: 36px;
     font-weight: 400;
-    line-height: 76px;
+    line-height: 1.8em;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -724,15 +759,16 @@ main .info .title span {
 main .info .des {
   font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
   margin-top: 44px;
   margin-bottom: 77px;
 }
 @media screen and (min-width: 1440px) {
   main .info .des {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 44px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -799,13 +835,14 @@ main .M1 .M1-constructor .img img {
   }
 }
 main .M1 .M1-constructor .name {
+  margin-top: 10px;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
   main .M1 .M1-constructor .name {
     position: relative;
     top: 60px;
-    left: -380px;
+    left: -400px;
   }
 }
 main .M1 .M1-constructor .name p:first-child {
@@ -822,7 +859,7 @@ main .M1 .M1-constructor .name p:last-child {
   font-size: 16px;
   font-weight: 200;
   color: #5c5c5c;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .M1 .M1-constructor .name p:last-child {
@@ -838,14 +875,14 @@ main .M1 .M1-detail p:first-of-type {
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  margin: 30px 0;
+  margin: 30px 0 10px;
 }
 @media screen and (min-width: 1440px) {
   main .M1 .M1-detail p:first-of-type {
     font-size: 56px;
     font-weight: 600;
     position: relative;
-    left: -40px;
+    left: -44px;
     top: -250px;
   }
 }
@@ -853,7 +890,7 @@ main .M1 .M1-detail p:last-of-type {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  line-height: 26px;
+  line-height: 1.8em;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
@@ -980,7 +1017,7 @@ main .M2 .M2-constructor .name {
   main .M2 .M2-constructor .name {
     position: relative;
     top: 43px;
-    left: 420px;
+    left: 400px;
   }
 }
 main .M2 .M2-constructor .name p:first-child {
@@ -997,7 +1034,7 @@ main .M2 .M2-constructor .name p:last-child {
   font-size: 16px;
   font-weight: 200;
   color: #5c5c5c;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .M2 .M2-constructor .name p:last-child {
@@ -1013,7 +1050,7 @@ main .M2 .M2-detail p:first-of-type {
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  margin: 30px 0;
+  margin: 30px 0 10px;
 }
 @media screen and (min-width: 1440px) {
   main .M2 .M2-detail p:first-of-type {
@@ -1028,7 +1065,8 @@ main .M2 .M2-detail p:last-of-type {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  line-height: 26px;
+  line-height: 1.8em;
+  color: #3c3c3c;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
@@ -1055,7 +1093,7 @@ main .M2 .M2-detail .link a {
     font-size: 20px;
     font-weight: 600;
     position: relative;
-    top: -250px;
+    top: -260px;
     left: 40px;
   }
 }
@@ -1067,7 +1105,7 @@ main .M2 .M2-detail .link a img {
     width: 20px;
     height: 15px;
     position: relative;
-    top: 196px;
+    top: 198px;
     left: 10px;
   }
 }
@@ -1175,7 +1213,7 @@ main .Kid .Kid-detail p:first-of-type {
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  margin: 30px 0;
+  margin: 30px 0 10px;
 }
 @media screen and (min-width: 1440px) {
   main .Kid .Kid-detail p:first-of-type {
@@ -1190,7 +1228,8 @@ main .Kid .Kid-detail p:last-of-type {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  line-height: 26px;
+  line-height: 1.8em;
+  color: #3c3c3c;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
@@ -1262,7 +1301,7 @@ main .container .leeumstore img {
 main .container .leeumstore p:first-of-type {
   font-size: 16px;
   font-weight: 600;
-  margin: 19px 0 23px 0;
+  margin: 15px 0 25px 0;
 }
 @media screen and (min-width: 1440px) {
   main .container .leeumstore p:first-of-type {
@@ -1271,28 +1310,33 @@ main .container .leeumstore p:first-of-type {
   }
 }
 main .container .leeumstore p:nth-of-type(2) {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px;
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
   margin-bottom: 67px;
 }
 @media screen and (min-width: 1440px) {
   main .container .leeumstore p:nth-of-type(2) {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 40px;
+    font-size: 20px;
   }
 }
-main .container .leeumstore p span {
+main .container .leeumstore p span:first-child {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .leeumstore p span {
-    font-size: 46px;
-    font-weight: 700;
+  main .container .leeumstore p span:first-child {
+    font-size: 36px;
     margin-right: 28px;
+  }
+}
+main .container .leeumstore p span:last-child {
+  font-size: 18px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .leeumstore p span:last-child {
+    font-size: 24px;
   }
 }
 main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail {
@@ -1302,39 +1346,48 @@ main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail {
   justify-content: space-between;
 }
 main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail img {
-  width: 22px;
-  height: 22px;
-}
-main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail p {
-  display: inline;
-  font-size: 14px;
-  font-weight: 500;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail p {
+  main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail img {
+    width: 18px;
+    height: 18px;
+  }
+}
+main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 1440px) {
+  main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
     font-size: 20px;
     font-weight: 500;
   }
 }
-main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
-  font-size: 14px;
+main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail .shortcut {
+  font-size: 16px;
   font-weight: 600;
   color: #be6a15;
 }
 @media screen and (min-width: 1440px) {
-  main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
+  main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail .shortcut {
     font-size: 20px;
     font-weight: 600;
     left: 300px;
   }
 }
-main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a img {
+main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail .shortcut img {
   width: 11px;
   height: 11px;
+  margin-left: 10px;
   filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
 @media screen and (min-width: 1440px) {
-  main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a img {
+  main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail .shortcut img {
     width: 18px;
     height: 18px;
   }
@@ -1342,7 +1395,7 @@ main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a img 
 @media screen and (min-width: 1440px) {
   main .container .Champcoffee {
     position: relative;
-    top: -920px;
+    top: -905px;
     left: 750px;
     width: 46.5277777778%;
   }
@@ -1358,7 +1411,7 @@ main .container .Champcoffee img {
 main .container .Champcoffee p:first-of-type {
   font-size: 16px;
   font-weight: 600;
-  margin: 19px 0 23px 0;
+  margin: 15px 0 25px 0;
 }
 @media screen and (min-width: 1440px) {
   main .container .Champcoffee p:first-of-type {
@@ -1367,9 +1420,9 @@ main .container .Champcoffee p:first-of-type {
   }
 }
 main .container .Champcoffee p:nth-of-type(2) {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px;
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
   margin-bottom: 67px;
 }
 @media screen and (min-width: 1440px) {
@@ -1379,16 +1432,23 @@ main .container .Champcoffee p:nth-of-type(2) {
     line-height: 40px;
   }
 }
-main .container .Champcoffee p span {
+main .container .Champcoffee p span:first-child {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .Champcoffee p span {
-    font-size: 46px;
-    font-weight: 700;
+  main .container .Champcoffee p span:first-child {
+    font-size: 36px;
     margin-right: 28px;
+  }
+}
+main .container .Champcoffee p span:last-child {
+  font-size: 18px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .Champcoffee p span:last-child {
+    font-size: 24px;
   }
 }
 main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail {
@@ -1398,39 +1458,48 @@ main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail {
   justify-content: space-between;
 }
 main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail img {
-  width: 22px;
-  height: 22px;
-}
-main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail p {
-  display: inline;
-  font-size: 14px;
-  font-weight: 500;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail p {
-    font-size: 20px;
-    font-weight: 500;
+  main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail img {
+    width: 18px;
+    height: 18px;
   }
 }
 main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
-  position: relative;
-  font-size: 14px;
-  font-weight: 600;
-  color: #be6a15;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
   main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
-main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a img {
+main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail .shortcut {
+  font-size: 16px;
+  font-weight: 600;
+  color: #be6a15;
+}
+@media screen and (min-width: 1440px) {
+  main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail .shortcut {
+    font-size: 20px;
+    font-weight: 600;
+    left: 300px;
+  }
+}
+main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail .shortcut img {
   width: 11px;
   height: 11px;
+  margin-left: 10px;
   filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
 @media screen and (min-width: 1440px) {
-  main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a img {
+  main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail .shortcut img {
     width: 18px;
     height: 18px;
   }
@@ -1453,7 +1522,7 @@ main .container .Locker img {
 main .container .Locker p:first-of-type {
   font-size: 16px;
   font-weight: 600;
-  margin: 19px 0 23px 0;
+  margin: 15px 0 25px 0;
 }
 @media screen and (min-width: 1440px) {
   main .container .Locker p:first-of-type {
@@ -1461,37 +1530,44 @@ main .container .Locker p:first-of-type {
     font-weight: 600;
   }
 }
-main .container .Locker p:nth-of-type(2) {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px;
-  margin-bottom: 67px;
-}
-@media screen and (min-width: 1440px) {
-  main .container .Locker p:nth-of-type(2) {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 40px;
-  }
-}
-main .container .Locker p:nth-of-type(2) span {
-  font-size: 14px;
-  font-weight: 600;
-}
-@media screen and (min-width: 1440px) {
-  main .container .Locker p:nth-of-type(2) span {
-    font-size: 22px;
-    font-weight: 600;
-  }
-}
-main .container .Locker p span {
+main .container .Locker p:first-of-type span:first-child {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .Locker p span {
-    font-size: 46px;
+  main .container .Locker p:first-of-type span:first-child {
+    font-size: 36px;
+    margin-right: 28px;
+  }
+}
+main .container .Locker p:first-of-type span:last-child {
+  font-size: 18px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .Locker p:first-of-type span:last-child {
+    font-size: 24px;
+  }
+}
+main .container .Locker p:nth-of-type(2) {
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
+  margin-bottom: 67px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .Locker p:nth-of-type(2) {
+    font-size: 20px;
+  }
+}
+main .container .Locker p .type {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 14px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .Locker p .type {
+    font-size: 24px;
     font-weight: 700;
     margin-right: 28px;
   }
@@ -1499,7 +1575,7 @@ main .container .Locker p span {
 @media screen and (min-width: 1440px) {
   main .container .ticketing-machine {
     position: relative;
-    top: -1650px;
+    top: -1640px;
     left: 750px;
     width: 46.5277777778%;
   }
@@ -1523,29 +1599,34 @@ main .container .ticketing-machine p:first-of-type {
     font-weight: 600;
   }
 }
-main .container .ticketing-machine p:nth-of-type(2) {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px;
-  margin-bottom: 67px;
-}
-@media screen and (min-width: 1440px) {
-  main .container .ticketing-machine p:nth-of-type(2) {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 40px;
-  }
-}
-main .container .ticketing-machine p span {
+main .container .ticketing-machine p:first-of-type span:first-child {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .ticketing-machine p span {
-    font-size: 46px;
-    font-weight: 700;
+  main .container .ticketing-machine p:first-of-type span:first-child {
+    font-size: 36px;
     margin-right: 28px;
+  }
+}
+main .container .ticketing-machine p:first-of-type span:last-child {
+  font-size: 18px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .ticketing-machine p:first-of-type span:last-child {
+    font-size: 24px;
+  }
+}
+main .container .ticketing-machine p:nth-of-type(2) {
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
+  margin-bottom: 67px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .ticketing-machine p:nth-of-type(2) {
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1574,21 +1655,38 @@ main .container .parking p:first-of-type {
     font-weight: 600;
   }
 }
+main .container .parking p:first-of-type span:first-child {
+  font-size: 26px;
+  font-weight: 700;
+  margin-right: 14px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .parking p:first-of-type span:first-child {
+    font-size: 36px;
+    margin-right: 28px;
+  }
+}
+main .container .parking p:first-of-type span:last-child {
+  font-size: 18px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .parking p:first-of-type span:last-child {
+    font-size: 24px;
+  }
+}
 main .container .parking p:nth-of-type(2) {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px;
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
   margin-bottom: 67px;
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:nth-of-type(2) {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 40px;
+    font-size: 20px;
   }
 }
 main .container .parking p:nth-of-type(2) span {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
@@ -1605,7 +1703,7 @@ main .container .parking p span {
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p span {
-    font-size: 46px;
+    font-size: 36px;
     font-weight: 700;
     margin-right: 28px;
   }
@@ -1616,7 +1714,7 @@ main .container .parking .parking-detail {
 }
 main .container .parking .parking-detail a {
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #be6a15;
 }
@@ -1629,6 +1727,7 @@ main .container .parking .parking-detail a {
 main .container .parking .parking-detail a img {
   width: 11px;
   height: 11px;
+  margin-left: 10px;
   filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
 @media screen and (min-width: 1440px) {
@@ -1640,7 +1739,7 @@ main .container .parking .parking-detail a img {
 @media screen and (min-width: 1440px) {
   main .others {
     position: relative;
-    top: -2370px;
+    top: -2360px;
     left: 750px;
     width: 46.5277777778%;
   }
@@ -1664,29 +1763,34 @@ main .others p:first-of-type {
     font-weight: 600;
   }
 }
-main .others p:first-of-type span {
+main .others p:first-of-type span:first-child {
   font-size: 26px;
   font-weight: 700;
   margin-right: 14px;
 }
 @media screen and (min-width: 1440px) {
-  main .others p:first-of-type span {
-    font-size: 46px;
-    font-weight: 700;
+  main .others p:first-of-type span:first-child {
+    font-size: 36px;
     margin-right: 28px;
   }
 }
+main .others p:first-of-type span:last-child {
+  font-size: 18px;
+}
+@media screen and (min-width: 1440px) {
+  main .others p:first-of-type span:last-child {
+    font-size: 24px;
+  }
+}
 main .others p:nth-of-type(2) {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px;
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
   margin-bottom: 67px;
 }
 @media screen and (min-width: 1440px) {
   main .others p:nth-of-type(2) {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 40px;
+    font-size: 20px;
   }
 }
 
@@ -1706,11 +1810,12 @@ main .others p:nth-of-type(2) {
 @media screen and (min-width: 1440px) {
   .director .background {
     height: 650px;
+    margin-top: 70px;
   }
 }
 .director .director {
   position: absolute;
-  top: 200px;
+  top: 70px;
   margin-left: -40px;
   width: 300px;
   height: 549px;
@@ -1718,7 +1823,7 @@ main .others p:nth-of-type(2) {
 @media screen and (min-width: 1440px) {
   .director .director {
     position: absolute;
-    top: 200px;
+    top: 60px;
     left: 490px;
     width: 587px;
     height: 1028px;
@@ -1726,7 +1831,7 @@ main .others p:nth-of-type(2) {
 }
 .director h3 {
   position: absolute;
-  top: 500px;
+  top: 280px;
   margin-left: 65px;
   color: #fff;
   line-height: 48px;
@@ -1735,8 +1840,8 @@ main .others p:nth-of-type(2) {
 }
 @media screen and (min-width: 1440px) {
   .director h3 {
-    left: 670px;
-    top: 630px;
+    left: 665px;
+    top: 530px;
     margin-left: 0px;
     font-size: 46px;
     font-weight: 700;
@@ -1745,17 +1850,18 @@ main .others p:nth-of-type(2) {
 }
 .director p {
   position: absolute;
-  top: 540px;
+  top: 320px;
   margin-left: 60px;
   color: #fff;
   line-height: 30px;
+  opacity: 0.8;
   font-size: 14px;
   font-weight: 200;
 }
 @media screen and (min-width: 1440px) {
   .director p {
     left: 660px;
-    top: 690px;
+    top: 600px;
     margin-left: 0px;
     font-size: 20px;
     font-weight: 200;
@@ -1765,20 +1871,21 @@ main .others p:nth-of-type(2) {
   display: none;
 }
 .director .award .title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   opacity: 0.8;
+  margin-bottom: 10px;
 }
 .director .award .sub {
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 400;
   opacity: 0.8;
 }
 @media screen and (min-width: 1440px) {
   .director .award {
     position: absolute;
     left: 1100px;
-    top: 300px;
+    top: 200px;
     display: block;
     color: #fff;
     line-height: 28px;
@@ -1786,7 +1893,7 @@ main .others p:nth-of-type(2) {
 }
 .director .director-info {
   position: absolute;
-  top: 580px;
+  top: 380px;
   margin-left: -20px;
   line-height: 26px;
   text-align: center;
@@ -1814,7 +1921,7 @@ main .others p:nth-of-type(2) {
     line-height: 40px;
     margin-left: 0px;
     left: 490px;
-    top: 750px;
+    top: 680px;
   }
 }
 
@@ -1828,16 +1935,14 @@ main .others p:nth-of-type(2) {
   }
 }
 .renewal-info p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   .renewal-info p {
     width: 45.3472222222%;
-    font-size: 22px;
-    font-weight: 200;
-    line-height: 44px;
+    font-size: 18px;
   }
 }
 .renewal-info p:first-of-type {
@@ -1849,9 +1954,7 @@ main .others p:nth-of-type(2) {
 }
 @media screen and (min-width: 1440px) {
   .renewal-info p:first-of-type span {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 44px;
+    font-size: 18px;
   }
 }
 .renewal-info p:last-of-type {
@@ -1897,8 +2000,8 @@ main .others p:nth-of-type(2) {
 .renewal-detail ul li p:first-of-type {
   font-size: 24px;
   font-weight: 600;
-  line-height: 34px;
   margin-top: 24px;
+  margin-bottom: 12px;
 }
 @media screen and (min-width: 1440px) {
   .renewal-detail ul li p:first-of-type {
@@ -1909,8 +2012,11 @@ main .others p:nth-of-type(2) {
 }
 .renewal-detail ul li p:last-of-type {
   font-size: 16px;
-  font-weight: 200;
-  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5em;
+  color: #3c3c3c;
+  color: #5c5c5c;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 1440px) {
@@ -2206,4 +2312,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=about_facility.css.map */

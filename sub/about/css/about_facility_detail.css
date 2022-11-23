@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -573,7 +582,7 @@ header .breadcrumb-wrap {
     position: absolute;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     background-color: rgba(0, 0, 0, 0.2);
   }
   header .breadcrumb-wrap .breadcrumb {
@@ -584,7 +593,7 @@ header .breadcrumb-wrap {
   header .breadcrumb-wrap .breadcrumb .home {
     width: 80px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-top: 0;
     border-bottom: 0;
   }
@@ -599,7 +608,7 @@ header .breadcrumb-wrap {
   }
   header .breadcrumb-wrap .breadcrumb .loc {
     width: 180px;
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
   }
   header .breadcrumb-wrap .breadcrumb .loc .step {
     display: flex;
@@ -1105,13 +1114,13 @@ main .container .constructor-info .detail {
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail {
-    width: 27.7777777778%;
+    width: 440px;
     height: 100%;
     float: left;
     margin-top: 50px;
-    margin-bottom: 200px;
-    margin-right: 60px;
-    height: 227px;
+    margin-bottom: 180px;
+    margin-right: 40px;
+    height: 250px;
   }
 }
 main .container .constructor-info .detail table .detail-des td {
@@ -1124,7 +1133,7 @@ main .container .constructor-info .detail table .detail-des td:first-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail table .detail-des td:first-of-type {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
     padding-top: 30px;
   }
@@ -1137,7 +1146,7 @@ main .container .constructor-info .detail table .detail-des td:last-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail table .detail-des td:last-of-type {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     padding-top: 30px;
   }
@@ -1153,7 +1162,7 @@ main .container .constructor-info .simple p {
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .simple p {
     font-family: "KoPub Batang";
-    font-size: 46px;
+    font-size: 35px;
     font-weight: 400;
     line-height: 76px;
   }
@@ -1188,14 +1197,14 @@ main .container .constructor-info .constructor-detail .detail-left p {
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:first-of-type {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 44px;
   }
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 44px;
   }
@@ -1209,13 +1218,13 @@ main .container .constructor-info .constructor-detail .detail-left p:nth-of-type
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) span {
     display: block;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
   }
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:last-of-type {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 44px;
   }
@@ -1234,7 +1243,7 @@ main .container .constructor-info .constructor-detail .detail-right p {
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-right p {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 44px;
   }
@@ -1611,4 +1620,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=about_facility_detail.css.map */

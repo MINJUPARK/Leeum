@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -573,7 +582,7 @@ header .breadcrumb-wrap {
     position: absolute;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     background-color: rgba(0, 0, 0, 0.2);
   }
   header .breadcrumb-wrap .breadcrumb {
@@ -584,7 +593,7 @@ header .breadcrumb-wrap {
   header .breadcrumb-wrap .breadcrumb .home {
     width: 80px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-top: 0;
     border-bottom: 0;
   }
@@ -599,7 +608,7 @@ header .breadcrumb-wrap {
   }
   header .breadcrumb-wrap .breadcrumb .loc {
     width: 180px;
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
   }
   header .breadcrumb-wrap .breadcrumb .loc .step {
     display: flex;
@@ -766,7 +775,8 @@ main section.info .item-wrap .i-slide .main-pic {
 main section.info .item-wrap .i-slide .main-pic img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-slide .main-pic img {
@@ -787,8 +797,10 @@ main section.info .item-wrap .i-slide .sub-pic {
   main section.info .item-wrap .i-slide .sub-pic img {
     width: 30%;
     border-radius: 5px;
-    object-fit: cover;
-    object-position: 0 -35px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0 -35px;
+       object-position: 0 -35px;
   }
   main section.info .item-wrap .i-slide .sub-pic img:not(:first-child) {
     opacity: 0.4;
@@ -849,7 +861,6 @@ main section.info .item-wrap .i-des .tit-exp .exp table.mini-box {
     right: 0;
     width: auto;
     margin: 0;
-    width: 100%;
     margin-top: 40px;
     margin-bottom: 80px;
     border-radius: 5px;
@@ -909,7 +920,8 @@ main section.info .item-wrap .i-des .loc-icon {
 }
 main section.info .item-wrap .i-des .loc-icon .loc-box {
   display: flex;
-  column-gap: 15px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
 }
 main section.info .item-wrap .i-des .loc-icon .loc-box .loc div.tag {
   width: 50px;
@@ -1522,4 +1534,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=program_past_detail.css.map */
