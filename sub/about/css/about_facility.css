@@ -70,11 +70,8 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, label {
+img, span, strong, label, time {
   display: inline-block;
-}
-
-img, span, strong, time {
   vertical-align: middle;
 }
 
@@ -190,7 +187,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/about_facility.jpg);
+  background: url(../image/facility_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -212,7 +209,6 @@ header .logo-menu-wrap {
 }
 @media screen and (min-width: 1440px) {
   header .logo-menu-wrap {
-    width: 1920px;
     position: static;
   }
 }
@@ -366,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -646,30 +651,50 @@ header .breadcrumb-wrap {
 main {
   overflow-x: hidden;
 }
-main section.construction .tap-box .tap-flexbox {
-  display: flex;
-  justify-content: space-between;
+main section.construction .tabmenu-wrap {
+  padding: 100px 0px;
+}
+main section.construction .tabmenu-wrap .tab-nav {
+  display: table;
   width: 100%;
-  margin: 0 20px 40px 20px;
 }
-main section.construction .tap-box .tap-flexbox li {
-  font-size: 24px;
-  font-weight: 500;
-  padding-bottom: 11px;
+main section.construction .tabmenu-wrap .tab-nav .nav {
+  display: table-cell;
+  width: 50px;
 }
-main section.construction .tap-box .tap-flexbox li:first-child {
-  padding-left: 10px;
+main section.construction .tabmenu-wrap .tab-nav .nav a {
+  transition: 0.4s;
+  position: relative;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #9b9b9b;
+  text-align: center;
+  border-bottom: 1px solid #ebe5da;
+  padding-bottom: 15px;
+  text-decoration: none;
 }
-main section.construction .tap-box .tap-flexbox li:last-child {
-  padding-right: 30px;
+main section.construction .tabmenu-wrap .tab-nav .nav a:after {
+  content: "";
+  transition: 0.4s;
+  width: 0px;
 }
-main section.construction .tap-box .tap-flexbox li a {
-  color: #9c9c9c;
-  border-bottom: 2px solid #c5c5c5;
+main section.construction .tabmenu-wrap .tab-nav .nav.on a {
+  color: #172349;
 }
-main section.construction .tap-box .tap-flexbox li a:hover {
-  color: #000000;
-  border-color: #000000;
+main section.construction .tabmenu-wrap .tab-nav .nav.on a:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 3px;
+  background-color: #172349;
+}
+main section.construction .tabmenu-wrap .con-box {
+  display: none;
 }
 main section.construction .main-img img {
   width: 100%;
@@ -2184,4 +2209,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=about_facility.css.map */
