@@ -411,13 +411,13 @@ main {
                 height: 197px;
 
                 @include responsive(pc-screens){
-                    width: 27.77777777777778%;
+                    width: 440px;
                     height: 100%;
                     float: left;
                     margin-top: 50px;
-                    margin-bottom: 200px;
-                    margin-right: 60px;
-                    height: 227px;
+                    margin-bottom: 180px;
+                    margin-right: 40px;
+                    height: 250px;
                 }
                 
                 table {
@@ -429,7 +429,7 @@ main {
                                 padding: 26px 60px 0 30px;
 
                                 @include responsive(pc-screens){
-                                    @include gothic_font(semibold,15px);
+                                    @include gothic_font(semibold,18px);
                                     padding-top: 30px;
                                 }
                             }
@@ -440,7 +440,7 @@ main {
                                 color:#5b5b5b;
 
                                 @include responsive(pc-screens){
-                                    @include gothic_font(regular,16px);
+                                    @include gothic_font(regular,18px);
                                     padding-top: 30px;
                                 }
                             }
@@ -457,7 +457,7 @@ main {
                     @include batang_font(medium, 26px); 
 
                     @include responsive(pc-screens){
-                        @include batang_font(medium, 46px); 
+                        @include batang_font(medium, 35px); 
                         line-height: 76px;
                     }
                     
@@ -492,7 +492,7 @@ main {
                         text-align: left;
                         &:first-of-type {
                             @include responsive(pc-screens) {
-                                @include gothic_font(regular,22px);
+                                @include gothic_font(regular,18px);
                                 line-height: 44px;
                             }
                             
@@ -500,7 +500,7 @@ main {
 
                         &:nth-of-type(2) {
                             @include responsive(pc-screens) {
-                                @include gothic_font(regular,22px);
+                                @include gothic_font(regular,18px);
                                 line-height: 44px;
                             }
 
@@ -511,14 +511,14 @@ main {
                                 display: inline;
                                 @include responsive(pc-screens) {
                                     display: block;
-                                    @include gothic_font(semibold,22px);
+                                    @include gothic_font(semibold,18px);
                                 }
                             }
                         }
 
                         &:last-of-type{
                             @include responsive(pc-screens) {
-                                @include gothic_font(regular,22px);
+                                @include gothic_font(regular,18px);
                                 line-height: 44px;
                             }
                         }
@@ -540,7 +540,7 @@ main {
                         @include gothic_font(regular);
 
                         @include responsive(pc-screens) {
-                            @include gothic_font(regular,22px);
+                            @include gothic_font(regular,18px);
                             line-height: 44px;
                         }
 
