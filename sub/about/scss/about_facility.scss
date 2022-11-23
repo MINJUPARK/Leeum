@@ -16,60 +16,76 @@ main {
     overflow-x: hidden; /////////
 
     .tabmenu-wrap{
-        padding:120px 0px;
-         .tab-nav{
-           display:table;
-             width:100%;
-             .nav{
-              display:table-cell;
-                 width:50px;
-                 a{
-                     transition:.4s;
-                     position: relative;
-                     display:block;
-                     font-size:18px;
-                     font-weight:700;
-                     color:#9b9b9b;
-                     text-align:center;
-                     border-bottom: 1px solid #ebe5da;
-                     padding-bottom: 15px;
-                     text-decoration: none;
-                 &:after{
-                         content:"";
-                         transition:.4s;
-                         width:0px;
-                     }
-                 }
-              &.on{
-                     a{
-                         color:#172349;
-                         &:after{
-                             content:"";
-                             position:absolute;
-                             bottom:-2px;
-                             left:0;
-                             right:0;
-                             margin:0 auto;
-                             width:100%;
-                             height:3px;
-                             background-color: #172349;
-                         }
-                     }
-                 }
-             }
-         }
-     
-         .tab-con{
-            padding-top: 120px;
-             .con-box{
-                 display:none;
-             }
-         }
+
+        .tab-nav{
+            display:table;
+            width:100%;
+            .nav{
+                display:table-cell;
+                width:50px;
+                a{
+                    transition:.4s;
+                    position: relative;
+                    display:block;
+                    @include gothic_font(medium, 18px);
+                    color: $bk3;
+                    text-align:center;
+                    border-bottom: 1px solid $bk5;
+                    height:40px;
+
+                    @include responsive(tablet-screens) {
+                        height: 50px;
+                        font-size: 24px;
+                    }
+
+                &:after{
+                        content:"";
+                        transition:.4s;
+                        width:0px;
+                    }
+                }
+            &.on{
+                    a{
+                        color:#000;
+                        @include gothic_font(bold, 18px);
+
+                        &:after{
+                            content:"";
+                            position:absolute;
+                            bottom:-1px;
+                            left:0;
+                            right:0;
+                            margin:0 auto;
+                            width:100%;
+                            height:2px;
+                            background-color: #000;
+                        }
+
+                        @include responsive(tablet-screens) {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
         }
-  
+
+        .tab-con{
+            padding-top: 60px;
+
+            .con-box{
+                display:none;
+            }
+        }
+    }
+
         
         .main-img {
+            @include out_container();
 
+            @include responsive(pc-screens) {
+                @include in_container();
+
+            }
             img {
                 width:100%;
             }
@@ -84,8 +100,8 @@ main {
                 @include batang_font(medium, 22px);
 
                 @include responsive(pc-screens) {
-                    @include batang_font(medium, 46px);
-                    line-height: 76px;
+                    @include batang_font(medium, $h2);
+                    line-height: 1.8em;
                 }
 
                 br {
@@ -105,13 +121,12 @@ main {
 
             .des {
                 @include gothic_font(regular);
-                line-height: 26px;
+                @include content_align(justify);
                 margin-top: 44px;
                 margin-bottom: 77px;
 
                 @include responsive(pc-screens) {
-                    @include gothic_font(regular,22px);
-                    line-height: 44px;
+                    @include gothic_font(regular, $h6);
                 }
 
                 br {
@@ -174,12 +189,12 @@ main {
                 }
                 
                 .name {
-                    // margin-top: -55px;
+                    margin-top: 10px;
                     text-align: center;
                     
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:60px; left:-380px;
+                        top:60px; left:-400px;
                     }
 
                     p:first-child {
@@ -193,7 +208,7 @@ main {
                     p:last-child {
                         @include gothic_font(light);
                         color: $bk2;
-                        margin-top: 10px;
+                        margin-top: 5px;
 
                         @include responsive(pc-screens) {
                             @include gothic_font(light,26px);  
@@ -207,23 +222,21 @@ main {
                 flex-direction: column;
                 
                 p:first-of-type {
-                    @include gothic_font(semibold,28px);
+                    @include gothic_font(semibold, 28px);
                     text-align: center;
-                    margin: 30px 0;
+                    margin: 30px 0 10px;
                     
                     @include responsive(pc-screens) {
-                        @include gothic_font(semibold,56px);  
+                        @include gothic_font(semibold, 56px);  
                         position: relative;
-                        left: -40px; top:-250px;
+                        left: -44px; top:-250px;
                     }
                     
                 }
 
                 p:last-of-type {
                     @include gothic_font(regular);
-                    text-align: center;
-                    line-height: 26px;
-                    color: $bk1;
+                    @include content_align(center, 1.8em);
 
                     br {
                         @include responsive(pc-screens) {
@@ -340,7 +353,7 @@ main {
                     
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:43px; left:420px;
+                        top:43px; left:400px;
                     }
 
                     p:first-child {
@@ -354,7 +367,7 @@ main {
                     p:last-child {
                         @include gothic_font(light);
                         color: $bk2;
-                        margin-top: 10px;
+                        margin-top: 5px;
                         
                         @include responsive(pc-screens) {
                             @include gothic_font(light,26px);  
@@ -370,7 +383,7 @@ main {
                 p:first-of-type {
                     @include gothic_font(semibold,28px);
                     text-align: center;
-                    margin: 30px 0;
+                    margin: 30px 0 10px;
 
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,56px);  
@@ -381,8 +394,7 @@ main {
 
                 p:last-of-type {
                     @include gothic_font(regular);
-                    text-align: center;
-                    line-height: 26px;
+                    @include content_align(center, 1.8em);
                     color: $bk1;
 
                     @include responsive(pc-screens) {
@@ -404,7 +416,7 @@ main {
                         @include responsive(pc-screens) {
                             @include gothic_font(semibold,20px);
                             position: relative;
-                            top:-250px; left:40px;
+                            top:-260px; left:40px;
                             
                         }
                         
@@ -416,7 +428,7 @@ main {
                                 width: 20px;
                                 height: 15px;
                                 position: relative;
-                                top: 196px; left:10px;
+                                top: 198px; left:10px;
                             }
                         }
                     }
@@ -516,7 +528,7 @@ main {
                 p:first-of-type {
                     @include gothic_font(semibold,28px);
                     text-align: center;
-                    margin: 30px 0;
+                    margin: 30px 0 10px;
 
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,56px);  
@@ -528,8 +540,7 @@ main {
 
                 p:last-of-type {
                     @include gothic_font(regular);
-                    text-align: center;
-                    line-height: 26px;
+                    @include content_align(center, 1.8em);
                     color: $bk1;
 
                     @include responsive(pc-screens) {
@@ -599,7 +610,7 @@ main {
                     p {
                         &:first-of-type {
                             @include gothic_font(semibold);  
-                            margin :19px 0 23px 0;   
+                            margin :15px 0 25px 0;   
 
                             @include responsive(pc-screens) {
                                 @include gothic_font(semibold,24px);
@@ -607,41 +618,55 @@ main {
                         }
     
                         &:nth-of-type(2) {
-                            @include gothic_font(regular,14px);
-                            line-height: 26px;
+                            // @include gothic_font(regular, 14px);
+                            // line-height: 26px;
+                            @include content_align(justify);
                             margin-bottom: 67px;
 
                             @include responsive(pc-screens) {
-                                @include gothic_font(regular,22px);
-                                line-height: 40px;
+                                font-size: 20px;
                             }
                         }
                         
-                        span {
-                            @include gothic_font(bold,26px);
+                        span:first-child {
+                            @include gothic_font(bold, 26px);
                             margin-right: 14px;
 
                             @include responsive(pc-screens) {
-                                @include gothic_font(bold,46px);
+                                font-size: $h2;
                                 margin-right: 28px;  
                             }
+                        }
 
+                        span:last-child {
+                            font-size: 18px;
+
+                            @include responsive(pc-screens) {
+                                font-size: 24px;
+                            }
                         }
                     }
                     .leeumstore-detail-flexbox {
+
                         .leeumstore-detail {
                             display: flex;
                             width:100%;
                             margin-bottom: 64px;
                             justify-content: space-between;
                             img {
-                                width:22px;
-                                height:22px;
+                                width:16px;
+                                height:16px;
+                                margin-right: 10px;
+
+                                @include responsive(pc-screens) {
+                                    width: 18px; height: 18px;
+                                }
                             }
     
-                            p {
-                                display: inline;
-                                @include gothic_font(medium,14px);
+                            a {
+                                display: inline-block;
+                                @include gothic_font(medium);
+                                color: $bk2;
 
                                 @include responsive(pc-screens) {
                                     @include gothic_font(medium,20px);
@@ -649,8 +674,8 @@ main {
                                 
                             }
     
-                            a {
-                                @include gothic_font(semibold,14px);
+                            .shortcut {
+                                @include gothic_font(semibold);
                                 color: $yellow-brown;
                                 
                                 @include responsive(pc-screens) {
@@ -660,6 +685,7 @@ main {
                                 img {
                                     width:11px;
                                     height:11px;
+                                    margin-left: 10px;
                                     filter: $svg-yellowbrown; 
 
                                     @include responsive(pc-screens) {
@@ -675,7 +701,7 @@ main {
                 .Champcoffee {
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-920px; left:750px;
+                        top:-905px; left:750px;
                         width:46.52777777777778%;
                         
                     }
@@ -689,7 +715,7 @@ main {
                     p {
                         &:first-of-type {
                             @include gothic_font(semibold);  
-                            margin :19px 0 23px 0;   
+                            margin :15px 0 25px 0;   
     
                             @include responsive(pc-screens) {
                                 @include gothic_font(semibold,24px);
@@ -697,8 +723,7 @@ main {
                         }
     
                         &:nth-of-type(2) {
-                            @include gothic_font(regular,14px);
-                            line-height: 26px;
+                            @include content_align(justify);
                             margin-bottom: 67px;
 
                             @include responsive(pc-screens) {
@@ -707,16 +732,24 @@ main {
                             }
                         }
                         
-                        span {
+                        span:first-child {
                             @include gothic_font(bold,26px);
                             margin-right: 14px;
                             
                             @include responsive(pc-screens) {
-                                @include gothic_font(bold,46px);
+                                font-size: $h2;
                                 margin-right: 28px;  
                             }
                         }
+
+                        span:last-child {
+                            font-size: 18px;
+
+                            @include responsive(pc-screens) {
+                                font-size: 24px;
+                        }
                     }
+                    }    
                     .Champcoffee-detail-flexbox {
                         
                         .Champcoffee-detail {
@@ -726,35 +759,40 @@ main {
                             justify-content: space-between;
                             
                             img {
-                                width:22px;
-                                height:22px;
-                            }
-    
-                            p {
-                                display: inline;
-                                @include gothic_font(medium,14px);
+                                width:16px;
+                                height:16px;
+                                margin-right: 10px;
 
-                                
                                 @include responsive(pc-screens) {
-                                    @include gothic_font(medium,20px);
+                                    width: 18px; height: 18px;
                                 }
                             }
     
                             a {
-                                position: relative;
+                                display: inline-block;
+                                @include gothic_font(medium);
+                                color: $bk2;
+
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(medium,20px);
+                                }
                                 
-                                @include gothic_font(semibold,14px);
+                            }
+    
+                            .shortcut {
+                                @include gothic_font(semibold);
                                 color: $yellow-brown;
                                 
                                 @include responsive(pc-screens) {
                                     @include gothic_font(semibold,20px);
+                                    left:300px;
                                 }
-
                                 img {
                                     width:11px;
                                     height:11px;
+                                    margin-left: 10px;
                                     filter: $svg-yellowbrown; 
-    
+
                                     @include responsive(pc-screens) {
                                         width:18px;
                                         height:18px;
@@ -781,37 +819,44 @@ main {
                         p {
                             &:first-of-type {
                                 @include gothic_font(semibold);  
-                                margin :19px 0 23px 0;   
+                                margin :15px 0 25px 0;   
 
                                 @include responsive(pc-screens) {
                                     @include gothic_font(semibold,24px);
                                 }
+                                span:first-child {
+                                    @include gothic_font(bold, 26px);
+                                    margin-right: 14px;
+        
+                                    @include responsive(pc-screens) {
+                                        font-size: $h2;
+                                        margin-right: 28px;  
+                                    }
+                                }
+                                span:last-child {
+                                    font-size: 18px;
+
+                                @include responsive(pc-screens) {
+                                    font-size: 24px;
+                                }
+                                }
                             }
     
                             &:nth-of-type(2) {
-                                @include gothic_font(regular,14px);
-                                line-height: 26px;
+                                @include content_align(justify);
                                 margin-bottom: 67px;
     
                                 @include responsive(pc-screens) {
-                                    @include gothic_font(regular,22px);
-                                    line-height: 40px;
-                                }
-                                    span {
-                                        @include gothic_font(semibold,14px);
-
-                                        @include responsive(pc-screens) {
-                                            @include gothic_font(semibold,22px);
-                                        }
-                                    }
+                                    font-size: 20px;
+                                }   
                             }
                             
-                            span {
-                                @include gothic_font(bold,26px);
+                            .type {
+                                @include gothic_font(bold,16px);
                                 margin-right: 14px;
 
                                 @include responsive(pc-screens) {
-                                    @include gothic_font(bold,46px);
+                                    @include gothic_font(bold,24px);
                                     margin-right: 28px;  
                                 }
     
@@ -822,7 +867,7 @@ main {
                 .ticketing-machine {
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-1650px; left:750px;
+                        top:-1640px; left:750px;
                         width:46.52777777777778%;
                     }
 
@@ -841,29 +886,35 @@ main {
                             @include responsive(pc-screens) {
                                 @include gothic_font(semibold,24px);
                             }
+
+                            span:first-child {
+                                @include gothic_font(bold, 26px);
+                                margin-right: 14px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: $h2;
+                                    margin-right: 28px;  
+                                }
+                            }
+    
+                            span:last-child {
+                                font-size: 18px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: 24px;
+                                }
+                            }
                         }
     
                         &:nth-of-type(2) {
-                            @include gothic_font(regular,14px);
-                            line-height: 26px;
-                            margin-bottom: 67px;
-
-                            @include responsive(pc-screens) {
-                                @include gothic_font(regular,22px);
-                                line-height: 40px;
-                            }
+                                @include content_align(justify);
+                                margin-bottom: 67px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: 20px;
+                                }   
                         }
                         
-                        span {
-                            @include gothic_font(bold,26px);
-                            margin-right: 14px;
- 
-                            @include responsive(pc-screens) {
-                                @include gothic_font(bold,46px);
-                                margin-right: 28px;  
-                            }
-    
-                        }
                     }
                 }//ticketing-machine
                 
@@ -889,20 +940,35 @@ main {
                             @include responsive(pc-screens) {
                                 @include gothic_font(semibold,24px);
                             }
+                            span:first-child {
+                                @include gothic_font(bold, 26px);
+                                margin-right: 14px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: $h2;
+                                    margin-right: 28px;  
+                                }
+                            }
+    
+                            span:last-child {
+                                font-size: 18px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: 24px;
+                                }
+                            }
                         }
     
                         &:nth-of-type(2) {
-                            @include gothic_font(regular,14px);
-                            line-height: 26px;
-                            margin-bottom: 67px;
-
-                            @include responsive(pc-screens) {
-                                @include gothic_font(regular,22px);
-                                line-height: 40px;
-                            }
+                            @include content_align(justify);
+                                margin-bottom: 67px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: 20px;
+                                } 
     
                             span {
-                                @include gothic_font(semibold,14px);
+                                @include gothic_font(semibold,18px);
 
                                 @include responsive(pc-screens) {
                                     @include gothic_font(semibold,22px);
@@ -916,7 +982,7 @@ main {
                             margin-right: 14px;
 
                             @include responsive(pc-screens) {
-                                @include gothic_font(bold,46px);
+                                @include gothic_font(bold,36px);
                                 margin-right: 28px;  
                             }
     
@@ -929,7 +995,7 @@ main {
                         text-align: right;
                         a {
                             position: relative;
-                            @include gothic_font(semibold,14px);
+                            @include gothic_font(semibold);
                             color: $yellow-brown;
     
                             @include responsive(pc-screens) {
@@ -940,6 +1006,7 @@ main {
                             img{
                                 width:11px;
                                 height:11px;
+                                margin-left: 10px;
                                 filter: $svg-yellowbrown; 
 
                                 @include responsive(pc-screens) {
@@ -955,7 +1022,7 @@ main {
                 .others {
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-2370px; left:750px;
+                        top:-2360px; left:750px;
 
                         width:46.52777777777778%;
                     }
@@ -976,30 +1043,33 @@ main {
                                 @include gothic_font(semibold,24px);
                             }
                             
-                            span {
-                                @include gothic_font(bold,26px);
+                            span:first-child {
+                                @include gothic_font(bold, 26px);
                                 margin-right: 14px;
-
-                                
-                            @include responsive(pc-screens) {
-                                @include gothic_font(bold,46px);
-                                margin-right: 28px;  
+    
+                                @include responsive(pc-screens) {
+                                    font-size: $h2;
+                                    margin-right: 28px;  
+                                }
                             }
-        
+    
+                            span:last-child {
+                                font-size: 18px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: 24px;
+                                }
                             }
                         }
     
                         &:nth-of-type(2) {
-                            @include gothic_font(regular,14px);
-                            line-height: 26px;
+                            @include content_align(justify);
                             margin-bottom: 67px;
-                            
+
                             @include responsive(pc-screens) {
-                                @include gothic_font(regular,22px);
-                                line-height: 40px;
-                            }
-                        }
-  
+                                font-size: 20px;
+                            }   
+                    }
                     }
                 }//others
         }//container
@@ -1014,19 +1084,20 @@ main {
 
                     @include responsive(pc-screens) {
                         height:650px;
+                        margin-top: 70px;
                     }
                 }
                 
                 .director {
                     position: absolute;
-                    top:200px;
+                    top:70px;
                     margin-left:-40px ;
                     width:300px;
                     height:549px;
 
                     @include responsive(pc-screens) {
                         position: absolute;
-                        top:200px;
+                        top:60px;
                         left:490px;
                         width:587px;
                         height:1028px;
@@ -1035,15 +1106,15 @@ main {
 
                 h3 {
                     position: absolute;
-                    top:500px;
+                    top:280px;
                     margin-left: 65px;
                     color: #fff;
                     line-height: 48px;
                     @include gothic_font(bold,30px);
 
                     @include responsive(pc-screens) {
-                        left:670px;
-                        top:630px; 
+                        left:665px;
+                        top:530px; 
                         margin-left: 0px;
                         @include gothic_font(bold,46px);
                         line-height: 68px;
@@ -1052,15 +1123,16 @@ main {
                 
                 p {
                     position: absolute;
-                    top:540px;  
+                    top:320px;  
                     margin-left: 60px;         
                     color: #fff;
                     line-height: 30px;
+                    opacity: 0.8;
                     @include gothic_font(light,14px);
 
                     @include responsive(pc-screens) {
                         left:660px;
-                        top:690px;
+                        top:600px;
                         margin-left: 0px;
                         @include gothic_font(light,20px);
                     }
@@ -1069,19 +1141,20 @@ main {
                 .award {
                     display: none;
                     .title {
-                        @include gothic_font(semibold);
+                        @include gothic_font(semibold,20px);
                         opacity: 0.8;
+                        margin-bottom: 10px;
                     }
                     
                     .sub {
-                        @include gothic_font(light,14px);
+                        @include gothic_font(regular,14px);
                         opacity: 0.8;
                     }
 
                     @include responsive(pc-screens) {
                         position: absolute;
                         left:1100px;
-                        top:300px;
+                        top:200px;
                         display: block;
                         color:#fff;
                         line-height: 28px;        
@@ -1090,7 +1163,7 @@ main {
                 
                 .director-info {
                     position: absolute;
-                    top:580px;
+                    top:380px;
                     margin-left: -20px;
                     line-height: 26px;
                     text-align: center;
@@ -1116,7 +1189,7 @@ main {
                         line-height: 40px;
                         margin-left: 0px;
                         left:490px;
-                        top:750px;
+                        top:680px;
                     }
                 }
             }
@@ -1129,13 +1202,11 @@ main {
                 }
 
                 p {
-                    @include gothic_font(regular);
-                    line-height: 28px;
+                    @include content_align(justify);
 
                     @include responsive(pc-screens) {
                         width:45.34722222222222%;
-                        @include gothic_font(light,22px);
-                        line-height: 44px;
+                        font-size: 18px;
                     }
 
                     &:first-of-type {
@@ -1145,8 +1216,7 @@ main {
                             @include gothic_font(semibold);
 
                             @include responsive(pc-screens) {
-                                @include gothic_font(semibold,22px);
-                                line-height: 44px;
+                                font-size: 18px;
                             }
                         }
                     }
@@ -1185,8 +1255,8 @@ main {
 
                             &:first-of-type {
                                 @include gothic_font(semibold,24px);
-                                line-height:34px;
                                 margin-top: 24px;
+                                margin-bottom: 12px;
 
                                 @include responsive(pc-screens) {
                                     @include gothic_font(semibold,32px);
@@ -1195,8 +1265,9 @@ main {
                             }
 
                             &:last-of-type {
-                                @include gothic_font(light);
-                                line-height:26px;
+                                @include gothic_font(regular);
+                                @include content_align(center, 1.5em);
+                                color: $bk2;
                                 margin-bottom: 60px;
 
                                 @include responsive(pc-screens) {

@@ -10,6 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
     <script src="./js/tab-menu.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
     <title>Leeum</title>
     
 </head>
@@ -248,7 +251,7 @@
                             </p>
                         </div>
     
-                        <div class="M1">
+                        <div class="M1" data-aos="fade-right" data-aos-duration="1000" >
                             <img src="./image/facility_M1.png" alt="m1">
                             <p class="sub">대지 700평(2,300㎡), 연면적 3000평 (9,800㎡)	</p>
                             <div class="M1-constructor">
@@ -260,7 +263,7 @@
                                     <p>Mario Botta</p>
                                 </div>
                             </div>
-                            <div class="M1-detail">
+                            <div class="M1-detail" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
                                 <p>M1</p>
                                 <p><span>M1의 견고한 형태는 전통과 고미술품의 불변하는 가치를<br> 수호하는</span> 
                                     <span>요새 또는 성을 연상시킵니다.<br> 특히 흙과 불로 만들어진 외벽의</span> 
@@ -271,7 +274,7 @@
                             </div>
                         </div><!--M1-->
     
-                        <div class="M2">
+                        <div class="M2" data-aos="fade-left" data-aos-duration="1000" >
                             <img src="./image/facility_M2.png" alt="M2">
                             <p class="sub">대지 500평(1.800㎡), 연면적 1500평 (5,200㎡)	</p>
                             <div class="M2-constructor">
@@ -283,7 +286,7 @@
                                     <p>Jean Nouvel</p>
                                 </div>
                             </div>
-                            <div class="M2-detail">
+                            <div class="M2-detail" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="150">
                                 <p>M2</p>
                                 <p>움푹 패인 대지 속에서 육중하게 솟아난 장 누벨의 M2는<br> 
                                     대지 위로 자라난 나무들과 함께 그 형상 자체가 
@@ -294,9 +297,9 @@
                             </div>
                         </div><!--M2-->
                 
-                        <div class="Kid">
+                        <div class="Kid" data-aos="fade-right" data-aos-duration="1000">
                             <img src="./image/facility_kidstudy.png" alt="kidstudy">
-                            <p class="sub">대지 1200평(4.000㎡), 연면적 3900평 (13.300㎡)	</p>
+                            <p class="sub">대지 1200평(4.000㎡), 연면적 3900평 (13.300㎡)</p>
                             <div class="Kidstudy-constructor">
                                 <div class="img">
                                     <img src="./image/facility_RemKoolhaas.png" alt="RemKoolhaas">
@@ -306,7 +309,7 @@
                                     <p>Rem Koolhaas</p>
                                 </div>
                             </div>
-                            <div class="Kid-detail">
+                            <div class="Kid-detail" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
                                 <p>아동교육문화센터</p>
                                 <p><span>자신의 건물을 지나치게 드러나지 않게 함으로써</span>
                                     <span>자신의 <br>건축을 표현하고자 한 렘 쿨하스의 의지는,<br> 
@@ -322,7 +325,7 @@
                             <div class="facility-detail">
     
                                 <img src="./image/facility_leeumstore.png" alt="leeumstore">
-                                <p><span>B1</span> 리움 스토어(Leeum Store)</p>
+                                <p><span>B1</span><span>리움 스토어(Leeum Store)</span></p>
                                 <p>독립적이면서도 조화롭고 실용적이면서 예술적인 작품들이 어우러져 하나의 빛을 내고 있는 새로운 공간 리움스토어입니다.
                                     국내외에서 활약하고 있는 작가들의 손끝에서 탄생한 감각적 작품들이 가득한 공간으로 작품 하나하나가 주는 특별한 감동과 
                                     환경을 생각하는 리움스토어를 느껴보실 수 있습니다.
@@ -331,10 +334,10 @@
                                     <div class="leeumstore-detail">
                                         <div class="detail1">
                                             <img src="../../image/icon_call.svg" alt="call">
-                                            <p> 02-2014-6754</p>
+                                            <a href="tel:02-2014-6754">02-2014-6754</a>
                                         </div>
                                         <div class="detail2">
-                                            <a href="https://leeumstore.org/" target="_blank">리움 스토어 홈페이지
+                                            <a href="https://leeumstore.org/" class="shortcut" target="_blank">리움 스토어 홈페이지
                                             <img src="../../image/icon_shortcut.svg" alt="icon_shortcut">
                                             </a>
                                         </div>
@@ -348,7 +351,7 @@
                             <div class="facility-detail">
     
                                 <img src="./image/facility_champcoffee.png" alt="leeumstore">
-                                <p><span>B1</span> 챔프 커피 (Champ Coffee)</p>
+                                <p><span>B1</span><span>챔프 커피 (Champ Coffee)</span></p>
                                 <p>각자의 길을 걷던 삼형제가 향기로운 커피에 반해 오늘까지 함께 조금씩 쌓아온 챔프커피 입니다. 
                                     한 땀 한 땀 정성스런 손길, 한 방울 한 방울 흘린 땀의 결실, 시간과 세상을 거스르는 공간 새로운 리움에서 
                                     수많은 거장의 작품들과 함께할 작은 여운을 나누고자 합니다.
@@ -357,11 +360,10 @@
                                     <div class="Champcoffee-detail">
                                         <div class="detail1">
                                             <img src="../../image/icon_call.svg" alt="call">
-                                            <p> 02-2014-6757</p>
+                                            <a href="tel:02-2014-6757"> 02-2014-6757</a>
                                         </div>
                                         <div class="detail2">
-    
-                                            <a href="http://champcoffee.kr/" target="_blank">챔프 커피 홈페이지
+                                            <a href="http://champcoffee.kr/" class="shortcut" target="_blank">챔프 커피 홈페이지
                                             <img src="../../image/icon_shortcut.svg" alt="icon_shortcut"></a>
                                         </div>
                                     </div>
@@ -372,25 +374,25 @@
         
                         <div class="Locker">
                             <img src="./image/facility_locker.png" alt="locker">
-                            <p><span>B1</span> 개인물품보관함 (Locker)</p>
+                            <p><span>B1</span><span>개인물품보관함 (Locker)</span></p>
                             <p>자율적으로 개인물품을 보관할 수 있으며 귀중품이나 파손 위험이 있는 물품을 안전하게 보관하실 수 있습니다.<br>
-                            <span>A TYPE</span>: W 325 * D 380 * H 485<br>
-                            <span>B TYPE</span>: W 384 * D 580 * H 475<br>
-                            <span>C TYPE</span>: W 384 * D 580 * H 960
+                            <span class="type">A TYPE</span>: W 325 * D 380 * H 485<br>
+                            <span class="type">B TYPE</span>: W 384 * D 580 * H 475<br>
+                            <span class="type">C TYPE</span>: W 384 * D 580 * H 960
                             </p>
                             
                         </div><!--Locker-->
         
                         <div class="ticketing-machine">
                             <img src="./image/facility_ticketing-machine.png" alt="ticketing-machine">
-                            <p><span>B1</span> 무인발권기</p>
+                            <p><span>B1</span><span> 무인발권기</span></p>
                             <p>현장에서 모바일QR티켓을 발권할 수 있는 무인발권기 세 대가 로비에 마련되어 있습니다 
                                 비대면 결제를 통해 좀 더 빠르고 편리하게 미술관 관람을 할 수 있습니다.</p>        
                         </div><!--ticketing-machine-->
         
                         <div class="parking">
                             <img src="./image/facility_parking.png" alt="parking">
-                            <p><span>B1-B3</span> 주차(Parking)</p>
+                            <p><span>B1-B3</span><span> 주차(Parking)</span></p>
                             <p>미술관 이용 시 주차 가능한 공간이 들어오는 곳과 지하 3층에 마련 되었습니다.<br>
                                 (지하 3층에는 전기차 급속 충전기 세 대 설치)<br>
                             <span>운영시간</span>: 10:00 - 18:00 (미술관 운영시간 기준)<br>
@@ -398,13 +400,13 @@
                         
                             <div class="parking-detail">
                                 <a href="#">리움 미술관 오시는길
-                                <img src="../../image/icon_shortcut.svg" alt="icon_shortcut"></a>
+                                <img src="../../image/icon_shortcut.svg" class="shortcut" alt="icon_shortcut"></a>
                             </div>    
                         </div><!--parking-->
         
                         <div class="others">
                             <img src="./image/facility_others.png" alt="others">
-                            <p><span>1F-4F</span> 기타 시설 (Other Facilities)</p>
+                            <p><span>1F-4F</span><span> 기타 시설 (Other Facilities)</span></p>
                             <p>영아와 함께 휴식이 필요한 분들을 위해 소파, 아기침대, 수유쿠션 등이 비치된 수유실이 로비층에 마련되어있으며 
                                 안내데스크에서 안내 받으실 수 있습니다. 또한 유모차 및 휠체어 무료 대여를 희망하시는 분은 매표소에서 안내 받을 수 있습니다. 
                             </p>        
