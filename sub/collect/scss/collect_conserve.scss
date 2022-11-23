@@ -4,6 +4,7 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 @import '../../../scss/mixin_footer.scss';
+@import './collect_mixin_MD.scss';
 
 header {
     @include header_common();
