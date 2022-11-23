@@ -62,7 +62,6 @@ $(function() {
 
 
     // exhibition
-
     var $swipeTabsContainer = $('.swipe-tabs'),
         $swipeTabs = $('.swipe-tab'),
         $swipeTabsContentContainer = $('.swipe-tabs-container'),
@@ -80,7 +79,7 @@ $(function() {
   
     $swipeTabsContainer.slick({
       slidesToShow: 3.5,
-      slidesToScroll: 8,
+      slidesToScroll: 5,
       arrows: false,
       infinite: false,
       swipeToSlide: true,
@@ -90,7 +89,7 @@ $(function() {
         {
           breakpoint: 768, 
           settings: { 
-            slidesToShow: 8,
+            slidesToShow: 5,
             slidesToScroll: 1
           }
         }

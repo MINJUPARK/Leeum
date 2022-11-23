@@ -360,16 +360,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -580,7 +571,7 @@ header .main-slider-wrap .main-slider .item .item-con::after {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 header .main-slider-wrap .main-slider .item .item-con video {
   position: absolute;
@@ -588,8 +579,8 @@ header .main-slider-wrap .main-slider .item .item-con video {
   top: 0;
   width: 100vw;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 0;
+  object-fit: cover;
 }
 header .main-slider-wrap .main-slider .item .info-wrap {
   width: 100%;
@@ -600,18 +591,20 @@ header .main-slider-wrap .main-slider .item .info-wrap {
   transform: translate(-50%, -35%);
   z-index: 1;
 }
+header .main-slider-wrap .main-slider .item .info-wrap a {
+  display: block;
+}
 header .main-slider-wrap .main-slider .item .info-wrap .info {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 40px;
   width: 100%;
-  height: 150px;
-  text-align: left;
+  text-align: center;
   color: #fff;
 }
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .main-slider .item .info-wrap .info {
     row-gap: 80px;
-    height: 450px;
   }
 }
 header .main-slider-wrap .main-slider .item .info-wrap .info .title {
@@ -619,7 +612,7 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .title {
 }
 header .main-slider-wrap .main-slider .item .info-wrap .info .title span {
   font-family: "KoPub Batang";
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
 }
 @media screen and (min-width: 1440px) {
@@ -631,10 +624,11 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .title h1 {
   font-family: "KoPub Batang";
   font-size: 32px;
   font-weight: 400;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .main-slider .item .info-wrap .info .title h1 {
+    margin-top: 20px;
     font-size: 64px;
   }
 }
@@ -642,6 +636,8 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .date {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 20px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .main-slider .item .info-wrap .info .date {
@@ -650,19 +646,34 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .date {
 }
 header .main-slider-wrap .main-slider .item .info-wrap .info .date p {
   font-family: "KoPub Batang";
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 300;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .date p {
+    font-size: 18px;
+  }
+}
 header .main-slider-wrap .main-slider .item .info-wrap .info .date time {
   font-family: "KoPub Batang";
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 400;
 }
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .date time {
+    font-size: 22px;
+  }
+}
 header .main-slider-wrap .main-slider .item .info-wrap .info .date .hori-bar {
-  width: 120px;
+  width: 60px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (min-width: 1440px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .date .hori-bar {
+    width: 120px;
+  }
 }
 header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
   display: none;
@@ -670,28 +681,27 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
   }
   header .main-slider-wrap .main-slider .item .info-wrap .info .notice p {
-    line-height: 32px;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 2em;
+    opacity: 0.5;
   }
 }
-header .main-slider-wrap .main-slider .item h3 {
-  -webkit-animation: fadeOutDown 1s both;
-          animation: fadeOutDown 1s both;
+header .main-slider-wrap .main-slider .item .title, header .main-slider-wrap .main-slider .item .date {
+  animation: fadeOutDown 1s both;
 }
-header .main-slider-wrap .main-slider .item.slick-active h3 {
-  -webkit-animation: fadeInUp 1s both 1s;
-          animation: fadeInUp 1s both 1s;
+header .main-slider-wrap .main-slider .item .notice p {
+  animation: fadeInUp 1s both;
 }
-header .main-slider-wrap .main-slider .item h5 {
-  -webkit-animation: fadeOutDown 1s both;
-          animation: fadeOutDown 1s both;
+header .main-slider-wrap .main-slider .item.slick-active .title, header .main-slider-wrap .main-slider .item.slick-active .date {
+  animation: fadeInUp 1s both 1s;
 }
-header .main-slider-wrap .main-slider .item.slick-active h5 {
-  -webkit-animation: fadeInUp 1s both 1.5s;
-          animation: fadeInUp 1s both 1.5s;
+header .main-slider-wrap .main-slider .item.slick-active .notice p {
+  animation: fadeInUp 1s both;
 }
 header .main-slider-wrap .slick-list, header .main-slider-wrap .slick-track, header .main-slider-wrap .slick-slide {
   height: 100%;
@@ -711,6 +721,8 @@ header .main-slider-wrap .slick-arrow {
     font-size: 0;
     background-color: transparent;
     z-index: 2;
+    opacity: 0.3;
+    transition: opacity 0.3s;
   }
   header .main-slider-wrap .slick-arrow::before {
     content: "";
@@ -725,18 +737,29 @@ header .main-slider-wrap .slick-arrow {
     border-top: 2px solid #fff;
     border-left: 2px solid #fff;
   }
+  header .main-slider-wrap .slick-arrow:hover {
+    opacity: 1;
+  }
+}
+header .main-slider-wrap .slick-prev {
+  display: none !important;
 }
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .slick-prev {
-    left: 80px;
+    display: block !important;
+    left: 60px;
   }
   header .main-slider-wrap .slick-prev::before {
     transform: rotate(-45deg) translate(2px, 2px);
   }
 }
+header .main-slider-wrap .slick-next {
+  display: none !important;
+}
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .slick-next {
-    right: 80px;
+    display: block !important;
+    right: 60px;
   }
   header .main-slider-wrap .slick-next::before {
     transform: rotate(135deg) translate(2px, 2px);
@@ -964,9 +987,6 @@ main section.infoBox .time-notice .tit .icon-box img {
     height: 22px;
   }
 }
-main section.infoBox .time-notice .tit strong {
-  display: inline-block;
-}
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .tit strong {
     font-size: 20px;
@@ -1107,7 +1127,7 @@ main section.exhibition .ehb-slider .slick-current .bg .des {
 }
 main section.exhibition .ehb-slider .bg {
   position: relative;
-  height: 220px;
+  height: 200px;
   margin: 0 -125px;
   border-radius: 20px;
   transform: scale3d(0.8, 0.8, 1);
@@ -1115,10 +1135,15 @@ main section.exhibition .ehb-slider .bg {
   opacity: 0.2;
   overflow: hidden;
 }
+@media screen and (min-width: 768px) {
+  main section.exhibition .ehb-slider .bg {
+    height: 300px;
+  }
+}
 @media screen and (min-width: 1440px) {
   main section.exhibition .ehb-slider .bg {
     width: 700px;
-    height: 350px;
+    height: 400px;
   }
 }
 main section.exhibition .ehb-slider .bg .des {
@@ -1184,9 +1209,7 @@ main section.exhibition .ehb-slider .bg .des .loc {
 main section.exhibition .ehb-slider .bg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-<<<<<<< HEAD
+  object-fit: cover;
 }
 main section.facility .banner-box-wrap {
   position: relative;
@@ -1322,8 +1345,6 @@ main section.facility .banner-box-wrap .person img {
   main section.facility .banner-box-wrap .person img {
     height: 400px;
   }
-=======
->>>>>>> 097a97fe96474615bda00a82e76958d7235fdf4c
 }
 
 @media screen and (min-width: 1440px) {
@@ -1644,4 +1665,4 @@ footer #banner-box {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}/*# sourceMappingURL=index.css.map */
+}

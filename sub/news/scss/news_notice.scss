@@ -9,7 +9,7 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_notice.jpg');
+    @include full_bg('notice_header.jpg');
 }
 
 main {
@@ -208,7 +208,9 @@ main {
         }
     }
     
-
+    section.paging {
+        @include paging();
+    }
 }
 
 footer {

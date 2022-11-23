@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -775,8 +766,7 @@ main section.info .item-wrap .i-slide .main-pic {
 main section.info .item-wrap .i-slide .main-pic img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-slide .main-pic img {
@@ -797,10 +787,8 @@ main section.info .item-wrap .i-slide .sub-pic {
   main section.info .item-wrap .i-slide .sub-pic img {
     width: 30%;
     border-radius: 5px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0 -35px;
-       object-position: 0 -35px;
+    object-fit: cover;
+    object-position: 0 -35px;
   }
   main section.info .item-wrap .i-slide .sub-pic img:not(:first-child) {
     opacity: 0.4;
@@ -906,15 +894,13 @@ main section.info .item-wrap .i-slide .main-pic video {
   width: 100%;
   height: 280px;
   background: #000;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-slide .main-pic video {
     height: auto;
     background: transparent;
-    -o-object-fit: initial;
-       object-fit: initial;
+    object-fit: initial;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -924,8 +910,7 @@ main section.info .item-wrap .i-slide .main-pic video {
 }
 main section.info .item-wrap .i-des .loc-icon .loc-box {
   display: flex;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 main section.info .item-wrap .i-des .loc-icon .loc-box .loc div.tag {
   width: 50px;
@@ -988,8 +973,7 @@ main section.info .item-wrap .interview .question .nextline {
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .interview .answer {
     display: flex;
-    -moz-column-gap: 3%;
-         column-gap: 3%;
+    column-gap: 3%;
   }
 }
 main section.info .item-wrap .interview .answer p {
@@ -1071,8 +1055,7 @@ main section.work .item-box .item .i-pic {
 main section.work .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -1545,4 +1528,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=artist_detail.css.map */
+}
