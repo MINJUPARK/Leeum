@@ -120,6 +120,7 @@ main {
                         position: relative;
                         width: calc(100% / 4);
                         height: 68px;
+                        cursor: pointer;
                         border-left: 1px solid $bk4;
                         
                         @include responsive(tablet-screens) {
@@ -155,7 +156,7 @@ main {
                             color: $bk3;
                         }
                         
-                        &.selected {
+                        &.on {
                             background-color: transparent;
                             
                             &::after {
