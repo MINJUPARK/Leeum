@@ -14,55 +14,60 @@ header {
 
 main {
     overflow-x: hidden; /////////
-    section.construction {
 
-        .tabmenu-wrap{
-            padding:100px 0px;
-            .tab-nav{
-            display:table;
-                width:100%;
-                .nav{
-                display:table-cell;
-                    width:50px;
-                    a{
-                        transition:.4s;
-                        position: relative;
-                        display:block;
-                        font-size:18px;
-                        font-weight:700;
-                        color:#9b9b9b;
-                        text-align:center;
-                        border-bottom: 1px solid #ebe5da;
-                        padding-bottom: 15px;
-                        text-decoration: none;
-                    &:after{
-                            content:"";
-                            transition:.4s;
-                            width:0px;
-                        }
-                    }
-                &.on{
-                        a{
-                            color:#172349;
-                            &:after{
-                                content:"";
-                                position:absolute;
-                                bottom:-2px;
-                                left:0;
-                                right:0;
-                                margin:0 auto;
-                                width:100%;
-                                height:3px;
-                                background-color: #172349;
-                            }
-                        }
-                    }
-                }
-            }
-            .con-box{
-                display:none;
-            }
-            }
+    .tabmenu-wrap{
+        padding:120px 0px;
+         .tab-nav{
+           display:table;
+             width:100%;
+             .nav{
+              display:table-cell;
+                 width:50px;
+                 a{
+                     transition:.4s;
+                     position: relative;
+                     display:block;
+                     font-size:18px;
+                     font-weight:700;
+                     color:#9b9b9b;
+                     text-align:center;
+                     border-bottom: 1px solid #ebe5da;
+                     padding-bottom: 15px;
+                     text-decoration: none;
+                 &:after{
+                         content:"";
+                         transition:.4s;
+                         width:0px;
+                     }
+                 }
+              &.on{
+                     a{
+                         color:#172349;
+                         &:after{
+                             content:"";
+                             position:absolute;
+                             bottom:-2px;
+                             left:0;
+                             right:0;
+                             margin:0 auto;
+                             width:100%;
+                             height:3px;
+                             background-color: #172349;
+                         }
+                     }
+                 }
+             }
+         }
+     
+         .tab-con{
+            padding-top: 120px;
+             .con-box{
+                 display:none;
+             }
+         }
+        }
+  
+        
         .main-img {
 
             img {
@@ -998,8 +1003,7 @@ main {
                     }
                 }//others
         }//container
-        
-        .container {
+
             .director {
                 width: 190px;
                 margin: 0 auto;
@@ -1015,31 +1019,31 @@ main {
                 
                 .director {
                     position: absolute;
-                    top:-100px;
+                    top:200px;
                     margin-left:-40px ;
                     width:300px;
                     height:549px;
 
                     @include responsive(pc-screens) {
                         position: absolute;
-                        top:-200px;
+                        top:200px;
                         left:490px;
                         width:587px;
-                        height:1068px;
+                        height:1028px;
                     }
                 }
 
                 h3 {
                     position: absolute;
-                    top:190px;
-                    margin-left: 70px;
+                    top:500px;
+                    margin-left: 65px;
                     color: #fff;
                     line-height: 48px;
                     @include gothic_font(bold,30px);
 
                     @include responsive(pc-screens) {
                         left:670px;
-                        top:350px; 
+                        top:630px; 
                         margin-left: 0px;
                         @include gothic_font(bold,46px);
                         line-height: 68px;
@@ -1048,7 +1052,7 @@ main {
                 
                 p {
                     position: absolute;
-                    top:230px;  
+                    top:540px;  
                     margin-left: 60px;         
                     color: #fff;
                     line-height: 30px;
@@ -1056,7 +1060,7 @@ main {
 
                     @include responsive(pc-screens) {
                         left:660px;
-                        top:420px;
+                        top:690px;
                         margin-left: 0px;
                         @include gothic_font(light,20px);
                     }
@@ -1077,7 +1081,7 @@ main {
                     @include responsive(pc-screens) {
                         position: absolute;
                         left:1100px;
-                        top:100px;
+                        top:300px;
                         display: block;
                         color:#fff;
                         line-height: 28px;        
@@ -1086,7 +1090,7 @@ main {
                 
                 .director-info {
                     position: absolute;
-                    top:290px;
+                    top:580px;
                     margin-left: -20px;
                     line-height: 26px;
                     text-align: center;
@@ -1112,7 +1116,7 @@ main {
                         line-height: 40px;
                         margin-left: 0px;
                         left:490px;
-                        top:470px;
+                        top:750px;
                     }
                 }
             }
@@ -1210,8 +1214,9 @@ main {
                     }
                 }
             }
-        }
-    }
+        
+
+    
 
 
 footer {
