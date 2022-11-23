@@ -23,8 +23,11 @@ main {
     //         font-size: 46px;
     //     }
     // }
+    .popular-program {
+        margin-top: 60px;
+    }
 
-    h3 {
+    h4 {
         text-align: center;
         
         @include responsive(pc-screens) {
@@ -33,14 +36,16 @@ main {
     }
 
     .img-text {
-        width: 100%;
-        margin: 30px auto;
         position: relative;
-
+        width: 100%;
+        margin: 20px auto 30px;
+        
+        @include responsive(pc-screens) {
+            margin-top: 60px;
+        }
         img {
             width: 100%;
             @include out_container();
-
 
             @include responsive(pc-screens) {
                 // padding: 0 20px;
@@ -59,28 +64,24 @@ main {
             // left: 20px;
             
             /* font-size: 12px; */
-            padding: 8px 12px;
+            // padding: 8px 12px;
+            padding: 10px 15px;
             background-color: $red-brown;
             color: #fff;
             border-radius: 5px;
 
             @include responsive(pc-screens) {
                 position: absolute;
-                // margin-left: 30px;
                 left: 30px;
-                top: 30px;
-               /*  margin-left: 270px; */
-               /*  margin-top: 10px; */
                 font-size: 22px;
-                /* padding: 20px 30px; */
             }
 
             p {
-                @include gothic_font(semibold, 12px);
+                @include gothic_font(meidum, 14px);
 
                 @include responsive(pc-screens){
-                    font-size: 24px;
-                    padding: 10px;
+                    font-size: 20px;
+                    padding: 5px 10px;
                 }
             }
         }
@@ -88,7 +89,7 @@ main {
     .text-explain {
 
         .text-explain-text {
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 display: flex;
             }
         }
@@ -96,7 +97,7 @@ main {
         .text {
             padding-bottom: 30px;
 
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 width: 50%;
                 padding-left: 60px;
                 padding-top: 35px;
@@ -108,7 +109,7 @@ main {
                 color: $yellow-brown;
                 padding-bottom: 10px;
 
-                @media screen and(min-width:$break-pc) {
+                @include responsive(pc-screens) {
                     font-size: 22px;
                     padding-bottom: 10px;
                 }
@@ -120,24 +121,25 @@ main {
                 font-size: 22px;
                 padding-bottom: 20px;
 
-                @media screen and(min-width:$break-pc) {
+                @include responsive(pc-screens) {
                     font-size: $h3; 
                     padding-bottom: 40px;
                 }
             }
 
             p:last-child {
-                @include gothic_font(medium);
+                // @include gothic_font(regular);
                 // padding-bottom: 40px;
+                color: $bk2;
 
-                @media screen and(min-width:$break-pc) {
-                    font-size: 24px;
+                @include responsive(pc-screens) {
+                    font-size: 22px;
                 }
             }
         }
         
         .explain-text {
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 width: 53.38709677419355%;
                 /* padding-right: 60px; */
                 text-align: justify;
@@ -148,7 +150,7 @@ main {
                 @include content_align(justify);
                 color: $bk2;
 
-                @media screen and(min-width:$break-pc) {
+                @include responsive(pc-screens) {
                     font-size: 20px;
                     padding-top: 45px;
                 }
@@ -163,7 +165,7 @@ main {
         // padding-bottom: 40px;
 
         h2 {
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 font-size: 46px;
                 padding-top: 200px;
             }
@@ -171,11 +173,15 @@ main {
     }
 
     .img-explain-date-register {
+        @include responsive(pc-screens) {
+            // display: flex;
+            // padding-top: 50px;
+        }
         .img-text-explain {
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 display: flex;
-                border-bottom: 1px solid $bk4;
-                padding-top: 50px;
+                align-items: center;
+                margin-top: 50px;
             }
         }
 
@@ -188,79 +194,69 @@ main {
                 width: 100%;
                 border-radius: 5px;
     
-                @media screen and(min-width:$break-pc) {
-                    /* padding: 0 240px;
-                    text-align: center;
-                    width: 100%; */
+                @include responsive(pc-screens) {
                     width: 720px;
                 }
             }
-            
+
             .limit-text-1 {
                 position: absolute;
-                top: 10px;
-                left: 10px;
-                font-size: 12px;
+                top: 20px;
+                left: 20px;
                 padding: 10px 15px;
                 background-color: $red-brown;
                 color: #fff;
                 border-radius: 5px;
-    
+                
+                @include responsive(pc-screens) {
+                    padding: 10px 20px;
+                }
+
                 p {
+                    font-size: 14px;
+
                     @include responsive(pc-screens) {
                         text-align: center;
+                        font-size: 18px;
                     }
-                }
-                
-                @media screen and(min-width:$break-pc) {
-                    font-size: 24px;
-                    margin-left: 30px;
-                    margin-top: 30px;
-                    padding: 15px 30px;
                 }
             }
         }
 
         .explain-date-register {
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 width: 600px;
             }
 
             .explain {
-                @media screen and(min-width:$break-pc) {
-                    padding-top: 30px;
-                }
 
                 p:first-child {
-                    font-size: 14px;
+                    @include gothic_font(medium);
                     color: $yellow-brown;
-                    padding-bottom: 15px;
+                    padding-bottom: 10px;
 
-                    @media screen and(min-width:$break-pc) {
+                    @include responsive(pc-screens) {
                         font-size: 22px;
                         color: $yellow-brown;
                     }
                 }
 
-                h2 {
-                    font-size: 22px;
+                h5 {
+                    // font-size: 22px;
                     padding-bottom: 20px;
 
-                    @media screen and(min-width:$break-pc) {
-                        font-size: 46px;
+                    @include responsive(pc-screens) {
+                        font-size: 36px;
                     }
                 }
 
                 p:last-child {
-                    font-size: 16px;
-                    color: $bk2;
                     padding-bottom: 40px;
-                    line-height: 26px;
+                    @include content_align(left, 1.8em);
+                    color: $bk2;
 
-                    @media screen and(min-width:$break-pc) {
-                        font-size: 22px;
-                        color: $bk2;
-                        line-height: 36px;
+                    @include responsive(pc-screens) {
+                        font-size: 20px;
                     }
                 }
             }
@@ -270,23 +266,23 @@ main {
                 display: flex;
 
                 span {
-                    font-size: 14px;
-                    @media screen and(min-width:$break-pc) {
+                    @include gothic_font(semibold);
+                    @include responsive(pc-screens) {
                         font-size: 18px;
                     }
                 }
                 p {
                     padding-left: 20px;
-                    font-size: 16px;
+                    color: $bk1;
 
-                    @media screen and(min-width:$break-pc) {
+                    @include responsive(pc-screens) {
                         font-size: 18px;
                     }
                 }
             }
 
             .date {
-                    padding-bottom: 15px;
+                padding-bottom: 15px;
             }
 
             .register {
@@ -294,36 +290,63 @@ main {
                 
                 p {
                     color: $red-brown;
+                    @include gothic_font(semibold);
+
+                    @include responsive(pc-screens) {
+                        font-size: 18px;
+                    }
                 }
             }
 
             .request {
                 text-align: center;
-                border: 1px solid #000;
+                border: 1px solid $bk1;
                 padding: 10px;
                 border-radius: 5px;
-                margin-bottom: 70px;
+                
+                &:first-child{
+                    @include responsive(pc-screens){
+                        // margin-top: 300px;
+                    }   
+                }
 
-                @media screen and(min-width:$break-pc) {
-                    font-size: 20px;
-                    text-align: center;
-                    width: 600px;
-                    /* margin-left: 440px; */
-                    // padding: 20px 30px;
-                    padding: 13px;
+                a {
+                @include gothic_font(semibold);
+                width: 100%;
+                color: $bk1;
+                // margin: 40px 0;
+               /*  padding: 13px; */
+                border-radius: 5px;
+                // text-align: center;
+        
+                    @include responsive(pc-screens){
+                        font-size: 20px;
+                        text-align: center;
+                        margin: 0 auto;
+                        width: 600px;
+                        /* margin-left: 440px; */
+                        // padding: 20px 30px;
+                        padding: 5px 0;
+                    }
                 }
             }
 
             .date-1 {
-                display: flex;
                 span {
-                    font-size: 14px;
+                    @include gothic_font(semibold);
+                    @include responsive(pc-screens) {
+                        font-size: 18px;
+                    }
                 }
+                display: flex;
                 p {
                     padding-left: 20px;
-                    font-size: 16px;
+                    color: $bk1;
+                    @include responsive(pc-screens) {
+                        font-size: 18px;
+                    }
                 }
-                padding-bottom: 35px;
+                padding-bottom: 105px;
             }
 
             .request-1 {
@@ -333,20 +356,22 @@ main {
                 border-radius: 5px;
                 margin-bottom: 70px;
 
-                @include responsive(pc-screens) {
-                    font-size: 20px;
-                    text-align: center;
-                    width: 600px;
-                    /* margin-left: 440px; */
-                    // padding: 20px 30px;
-                    padding: 13px;
-                    margin-top: 70px;
-                    /* font-size: 20px;
-                    text-align: center;
-                    width: 160px;
-                    margin-top: 70px;
-                    margin-left: 440px;
-                    padding: 20px 45px; */
+                a {
+                @include gothic_font(semibold);
+                width: 100%;
+                // margin: 40px 0;
+               /*  padding: 13px; */
+                border-radius: 5px;
+                text-align: center;
+        
+                    @include responsive(pc-screens){
+                        font-size: 20px;
+                        text-align: center;
+                        width: 600px;
+                        /* margin-left: 440px; */
+                        // padding: 20px 30px;
+                        padding: 5px 0;
+                    }
                 }
             }
         }

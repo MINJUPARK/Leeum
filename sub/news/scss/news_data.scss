@@ -12,7 +12,7 @@ header {
     @include full_bg('header_data.jpg');
 }
 
-main {
+/* main {
     h1 {
         display: none;
     }
@@ -70,6 +70,26 @@ main {
         }
 
     }
+} */
+
+main {
+    h1 {
+        display: none;
+    }
+
+    image {
+        h2 {
+            @include gothic_font(semibold, 20px);
+        }
+
+        .plus {
+            span {
+                @include gothic_font(semibold);
+            }
+        }
+    }
+
+
 }
 
 footer {

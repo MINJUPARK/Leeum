@@ -1186,6 +1186,7 @@ main section.exhibition .ehb-slider .bg img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+<<<<<<< HEAD
 }
 main section.facility .banner-box-wrap {
   position: relative;
@@ -1321,6 +1322,8 @@ main section.facility .banner-box-wrap .person img {
   main section.facility .banner-box-wrap .person img {
     height: 400px;
   }
+=======
+>>>>>>> 097a97fe96474615bda00a82e76958d7235fdf4c
 }
 
 @media screen and (min-width: 1440px) {

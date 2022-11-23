@@ -914,6 +914,11 @@ main section.info .item-wrap .i-des .loc-icon {
   justify-content: flex-end;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1440px) {
+  main section.info .item-wrap .i-des .loc-icon {
+    margin-top: 40px;
+  }
+}
 main section.info .item-wrap .i-des .loc-icon .loc-box {
   display: flex;
   -moz-column-gap: 15px;
@@ -930,7 +935,6 @@ main section.info .item-wrap .i-des .tit-exp {
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-des .tit-exp {
-    padding: 0 10px;
     margin-bottom: 0;
   }
 }
@@ -945,12 +949,15 @@ main section.info .item-wrap .i-des .tit-exp .tit .lang {
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-des .tit-exp .tit .lang {
-    font-size: 26px;
+    font-size: 22px;
   }
+}
+main section.info .item-wrap .i-des .tit-exp .tit h4 {
+  font-size: 30px;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-des .tit-exp .tit h4 {
-    font-size: 46px;
+    font-size: 36px;
   }
 }
 main section.info .item-wrap .i-des .tit-exp .exp a {
@@ -1015,7 +1022,7 @@ main .r-d .request a {
 }
 @media screen and (min-width: 1440px) {
   main .r-d .request a {
-    font-size: 22px;
+    font-size: 18px;
     padding: 20px;
   }
 }
@@ -1072,22 +1079,14 @@ main .r-d .request-desc table.mini-box {
 main .r-d .request-desc table.mini-box th {
   width: 15%;
   text-align: left;
-  font-size: 15px;
-  font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
   main .r-d .request-desc table.mini-box th {
     text-align: left;
-    font-size: 20px;
   }
 }
 main .r-d .request-desc table.mini-box td {
   color: #3c3c3c;
-}
-@media screen and (min-width: 1440px) {
-  main .r-d .request-desc table.mini-box td {
-    font-size: 18px;
-  }
 }
 @media screen and (min-width: 1440px) {
   main .o-i-p {
@@ -1106,7 +1105,7 @@ main .o-i-p .introduce h6 {
 }
 @media screen and (min-width: 1440px) {
   main .o-i-p .introduce h6 {
-    font-size: 28px;
+    font-size: 18px;
   }
 }
 main .o-i-p .introduce p {
@@ -1114,7 +1113,7 @@ main .o-i-p .introduce p {
 }
 @media screen and (min-width: 1440px) {
   main .o-i-p .introduce p {
-    font-size: 22px;
+    font-size: 17px;
   }
 }
 main .o-i-p p {

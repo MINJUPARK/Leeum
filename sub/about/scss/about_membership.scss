@@ -4,7 +4,7 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 @import '../../../scss/mixin_footer.scss';
-@import './about_mixin_MD.scss';
+@import './about_mixin_DH.scss';
 
 header {
     @include header_common();
@@ -33,9 +33,7 @@ main {
         }
     }
     
-    .tab-menu-wrap {
-        @include tab_menu(4);
-    } // tab-menu-wrap
+    @include tab_menu();
 
     .membership-wrap,
     .gift-membership-wrap {

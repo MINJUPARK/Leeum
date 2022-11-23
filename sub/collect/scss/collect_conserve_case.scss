@@ -4,6 +4,7 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 @import '../../../scss/mixin_footer.scss';
+@import './collect_mixin_MD.scss';
 
 header {
     @include header_common();
@@ -88,13 +89,14 @@ main {
                             width: 100%;
                             font-size: 20px;
                             text-align: center;
+                            cursor: pointer;
                             
                             transition: color 0.7s;
                             
                             color: $bk3;
                         }
                         
-                        &.selected {
+                        &.on {
                             background-color: transparent;
                             
                             &::after {
@@ -118,12 +120,6 @@ main {
                     @include responsive(pc-screens) {
                         height: 570px;
                     }
-
-                    @mixin center() {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
                     
                     .img {
                         position: absolute;
@@ -131,98 +127,91 @@ main {
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        // background-size: 928px 100%;
+                        background-size: cover;
                         
                         &.background-img {
-                          background-image: url("../image/conserve_case_before\(1\).png");
-                            // @include full_bg('conserve_case_before\(1\).png');
+                          background-image: url("../image/conserve_case_before\(0\).png");
                         }
                         
                         &.foreground-img {
-                            background-image: url("../image/conserve_case_after\(1\).png");
-                            // @include full_bg('conserve_case_after\(1\).png');
-                          width: 50%;
+                            background-image: url("../image/conserve_case_after\(0\).png");
+                            width: 50%;
                         }
                     }
                     .slider {
-                      position: absolute;
-                      -webkit-appearance: none;
-                      appearance: none;
-                      width: 100%;
-                      height: 100%;
-                      background: salmon;
-                      outline: none;
-                    //   margin: 0;
-                    //   padding: 0;
-                      transition: width .2s;
-                      cursor: pointer;
-                      @include center;
-                  
-                      &::-webkit-slider-thumb {
+                        position: absolute;
                         -webkit-appearance: none;
                         appearance: none;
-                        width: 3px;
-                        height: 705px;
-                        background: white;
-                        border: none;
-                      }
-                      &::-moz-range-thumb {
-                        width: 3px;
-                        height: 705px;
-                        background: white;
-                        border: none;
-                      }
-                      &::-ms-thumb {
-                        width: 3px;
-                        height: 705px;
-                        background: white;
-                        border: none;
-                      }
-                      &::-ms-fill-lower {
+                        width: 100%;
+                        height: 100%;
                         background: transparent;
-                      }
-                      &::-ms-fill-upper {
-                        background: transparent;
-                      }
-                      &::-ms-track {
-                        color: transparent;
-                        background: transparent;
-                        border: none;
-                      }
-                    }
+                        outline: none;
+                        margin: 0;
+                        padding: 0;
+                        transition: width .2s;
+                        cursor: pointer;
+                        @include center;
+                        border-radius: 0;
+                  
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 3px;
+                            height: 1100px;
+                            background: white;
+                            border: none;
+                        }
+                        &::-moz-range-thumb {
+                            width: 3px;
+                            height: 1100px;
+                            background: white;
+                            border: none;
+                        }
+                        &::-ms-thumb {
+                            width: 3px;
+                            height: 1100px;
+                            background: white;
+                            border: none;
+                        }
+                        &::-ms-fill-lower {
+                            background: transparent;
+                        }
+                        &::-ms-fill-upper {
+                            background: transparent;
+                        }
+                        &::-ms-track {
+                            color: transparent;
+                            background: transparent;
+                            border: none;
+                        } 
+                    }   
                   
                     .slider-button {
-                      $size: 48px;
-                      pointer-events: none;
-                      position: absolute;
-                      width: $size;
-                      height: $size;
-                      border-radius: 50%;
-                      background-color: transparent;
-                      left: calc(69% - 24px);
-                      top: calc(50% - 24px);
-                      border: 3px solid #fff;
-                      box-shadow: 0 0 12px rgba(51, 51, 51, 50%);
-                      background: linear-gradient(to left, transparent 50%, #fefefe 50%);
-                      @include center;
-                  
-                      @mixin arrow-helper() {
-                        content: "";
-                        display: inline-block;
-                        border: 6px inset transparent;
-                      }
+                        $size: 48px;
+                        pointer-events: none;
+                        position: absolute;
+                        width: $size;
+                        height: $size;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        left: calc(69% - 24px);
+                        top: calc(50% - 24px);
+                        border: 3px solid #fff;
+                        box-shadow: 0 0 12px rgba(51, 51, 51, 50%);
+                        background: linear-gradient(to left, transparent 50%, #fefefe 50%);
+                        @include center();
+                    
+                        &:before {
+                            @include arrow-helper();
+                            border-right: 6px solid #555555;
+                            margin-right: 6px;
+                        }
 
-                      &:before {
-                        @include arrow-helper();
-                        border-right: 6px solid #555555;
-                        margin-right: 6px;
-                      }
-
-                      &:after {
-                        @include arrow-helper();
-                        border-left: 6px solid #fefefe;
-                        margin-left: 6px;
-                      }
+                        &:after {
+                            @include arrow-helper();
+                            border-left: 6px solid #fefefe;
+                            margin-left: 6px;
+                        }
                     } // slider-button
                 } // before-after-img
 

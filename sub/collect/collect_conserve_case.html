@@ -9,6 +9,9 @@
     <link rel="stylesheet" type="text/css" href="./css/collect_conserve_case.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="./js/slider.js"></script>
+    <script type="text/javascript" src="./js/side_tab.js"></script>
+    <script type="text/javascript" src="./js/scroll_event.js"></script>
     <title>Leeum</title>
 </head>
 <body>
@@ -229,17 +232,17 @@
             <h2>before-after-case-intro-section</h2>
             <div class="container">
                 <div class="intro-flex">
-                    <div class="before-after">
-                        <ul class="angle-select">
-                            <li class="selected"><span>좌측</span></li>
-                            <li><span>우측</span></li>
-                            <li><span>후면</span></li>
-                            <li><span>바닥</span></li>
+                    <div class="side-tab before-after">
+                        <ul class="tab-wrap angle-select">
+                            <li class="tab on"><span>좌측</span></li>
+                            <li class="tab"><span>우측</span></li>
+                            <li class="tab"><span>후면</span></li>
+                            <li class="tab"><span>바닥</span></li>
                         </ul>
-                        <div class='before-after-img'>
+                        <div class='con-box before-after-img'>
                             <div class='img background-img'></div>
                             <div class='img foreground-img'></div>
-                            <input type="range" min="0" max="100" value="69" class="slider" name='slider' id="slider">
+                            <input type="range" min="0" max="100" value="52" class="slider" name='slider' id="slider">
                             <div class='slider-button'></div>
                         </div>
                     </div><!-- before-after -->

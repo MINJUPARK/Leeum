@@ -54,6 +54,9 @@ main {
                 .loc-icon {
                     justify-content: flex-end;
                     margin-bottom: 20px;
+                    @include responsive(pc-screens) {
+                        margin-top: 40px;
+                    }
 
                     .loc-box {
                         display: flex;
@@ -77,7 +80,6 @@ main {
                     margin-bottom: 50px;
 
                     @include responsive(pc-screens) {
-                        padding: 0 10px;
                         margin-bottom: 0;
                     }
 
@@ -87,21 +89,25 @@ main {
                             text-align: left;
                         }
 
+                        @include responsive(pc-screens) {
+                        }
+
                         .lang {
                             @include gothic_font(medium, 18px);
                             color: $yellow-brown;
                             margin-top: 0;
 
                             @include responsive(pc-screens){
-                                font-size: 26px;
+                                font-size: 22px;
                             }
                         }
 
                         h4 {
                             // @include gothic_font(medium, 1px);
+                            font-size: 30px;
 
                             @include responsive(pc-screens){
-                                font-size: 46px;
+                                font-size: 36px;
                             }
                         }
                     }
@@ -227,7 +233,7 @@ main {
             border: 1px solid #f00;
     
                 @include responsive(pc-screens){
-                    font-size: 22px;
+                    font-size: 18px;
                     padding: 20px;
                     // width: 480px;
                     // margin-left: -20px;
@@ -285,20 +291,14 @@ main {
                 th {
                     width: 15%;
                     text-align: left;
-                    @include gothic_font(semibold, 15px);
 
                     @include responsive(pc-screens) {
                         text-align: left;
-                        font-size: 20px;
                     }
                 }
 
                 td {
                     color: $bk1;
-
-                    @include responsive(pc-screens) {
-                        font-size: 18px;
-                    }
                 }
             }
         }
@@ -315,23 +315,20 @@ main {
             @include responsive(pc-screens){
                 margin-bottom: 60px;
             }
-            &:last-child {
-                // margin-top: 60px;
-            }
 
             h6 {
                 margin: 25px 0;
                 @include gothic_font(semibold, 18px);
 
                 @include responsive(pc-screens){
-                    font-size: 28px;
+                    font-size: 18px;
                 }
             }
 
             p {
                 margin-bottom: 10px;
                 @include responsive(pc-screens){
-                    font-size: 22px;
+                    font-size: 17px;
                 }
             }
         }

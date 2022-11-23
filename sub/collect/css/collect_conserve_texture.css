@@ -756,6 +756,7 @@ main .damage-type-wrap .damage-type .type-box ul.type-select li {
   position: relative;
   width: 25%;
   height: 68px;
+  cursor: pointer;
   border-left: 1px solid #c5c5c5;
 }
 @media screen and (min-width: 768px) {
@@ -790,13 +791,13 @@ main .damage-type-wrap .damage-type .type-box ul.type-select li span {
   transition: color 0.7s;
   color: #acacac;
 }
-main .damage-type-wrap .damage-type .type-box ul.type-select li.selected {
+main .damage-type-wrap .damage-type .type-box ul.type-select li.on {
   background-color: transparent;
 }
-main .damage-type-wrap .damage-type .type-box ul.type-select li.selected::after {
+main .damage-type-wrap .damage-type .type-box ul.type-select li.on::after {
   scale: 1;
 }
-main .damage-type-wrap .damage-type .type-box ul.type-select li.selected span {
+main .damage-type-wrap .damage-type .type-box ul.type-select li.on span {
   color: #000;
   font-weight: 600;
 }
