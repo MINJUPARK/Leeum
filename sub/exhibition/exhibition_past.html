@@ -212,40 +212,252 @@
         </div>
     </header>
     <main>
-        <div class="past-container">
-            <div class="past1">
-                <img src="./image/past_exhibition(1).png" alt="past1">
-                <img src="../../image/icon_bookmark.svg" alt="">
-                <p>M2 : 현대 미술</p>
-                <p>한국미술의 미래를 이끌 젊은 작가들의 작품
-                    까지 폭넓고 다양하게 구성되어 있는 전시</p>
-                <p>
-                    2021. 10. 08. ~ 2022. 07. 20.
-                </p>    
+        <section class="search-wrap">
+            <h2>search-section</h2>
+            <div class="container">
+                <div class="search-box">
+                    <div class="speed-search">
+                        <h6>전시 검색</h6>
+                        <form name="keyword" action="#" method="post">
+                            
+                            <input type="search" placeholder="검색어를 입력하세요">
+                            <button type="button"><img src="../../image/icon_search.svg">빠른 검색</button>
+                        </form>
+                    </div>
+                </div>
+            </div><!-- container -->
+        </section><!-- search-wrap -->
+        <section class="itemList-wrap">
+            <h2>영상 목록</h2>
+            <div class="container">
+                <div class="itemList">
+                    <div class="list-control">
+                        <div class="count">
+                            <span>총 35건</span>
+                        </div>
+                        <div class="view-type">
+                            <button class="sort">
+                                <img src="../../image/icon_filter.svg"><span>정렬 방식</span>
+                                <ul class="sort-list">
+                                    <li class="on">최근등록순</li>
+                                    <li>오래된순</li>
+                                    <li>조회순</li>
+                                </ul>
+                            </button>   
+                            <select name="nth-view">
+                                <option value="n-9">9개씩 보기</option>
+                                <option value="n-12">12개씩보기</option>
+                            </select>
+                        </div><!-- view-type -->
+                    </div><!-- list-control -->
+                    <ul class="item-box">
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(1).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>M2 : 현대 미술</strong>
+                                    <p>한국미술의 미래를 이끌 젊은 작가들의 작품<br>
+                                        까지 폭넓고 다양하게 구성되어 있는 전시</p>
+                                    <p>
+                                        2021. 10. 08. ~ 2022. 07. 20.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(2).png" alt="지난전시2" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>이안 쳉 : 세계건설</strong>
+                                    <p>작가의 인간 의식에 대한 탐구와 SF적<br> 
+                                        상상력을 유감없이 보여주는 전시</p>
+                                    <p>
+                                        2022. 03. 02. - 2022. 07. 03.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(3).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>아트스펙트럼 2022</strong>
+                                    <p>다양한 미술 전시와 새로운 구분을<br>
+                                        통해 차별화된 전시   </p>
+                                    <p>
+                                        2022. 03. 02. - 2022. 07. 03.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(4).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>인간, 일곱개의 질문</strong>
+                                    <p>인간과 비인간의 경계를 넘나드는<br> 
+                                        다양한 인간상을 조명하는 전시  </p>
+                                    <p>
+                                        2021. 10. 08. - 2022. 02 01.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(5).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>올라퍼 엘리아슨 : 세상의 모든 가능성</strong>
+                                    <p>늘 새로운 이미를 가질 수 있다는<br>
+                                        엘리아슨의 작품세계를 경험하는 전시  </p>
+                                    <p>
+                                        2016. 09. 28. - 2017. 02. 26.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(6).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>산수화, 이상향의 재현</strong>
+                                    <p>조선시대 대표적인 산수화의 다양한<br>
+                                        면모를 감상하는 전시 </p>
+                                    <p>
+                                        2016. 08. 09. - 2017. 02. 12.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(7).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>분청사기, 무늬에 깃든 마음</strong>
+                                    <p>다양한 미의 세계를 한자리에서<br> 
+                                        살펴볼 수 있는 전시</p>
+                                    <p>
+                                        2016. 03. 22. - 2016. 07. 08.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(8).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>아트스펙트럼 2016</strong>
+                                    <p>각양의 작업으로 한국 동시대 미술의<br> 
+                                        생동하는 단면을 보여주는 전시  </p>
+                                    <p>
+                                        2016. 05. 12. - 2016. 08. 07.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(9).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>한국건축예찬 - 땅의 깨달음</strong>
+                                    <p>조선시대 대표적인 산수화의 다양한<br>
+                                        면모를 감상하는 전시 </p>
+                                    <p>
+                                        2016. 05. 12. - 2016. 08. 07.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(10).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>세밀가귀 : 한국미술의 품격</strong>
+                                    <p>다양한 시각으로 한국미술을 <br>
+                                        바라볼 수 있는 전시  </p>
+                                    <p>
+                                        2015. 07. 02. - 2015. 09. 13.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(11).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>양혜규 : 코끼리를 쏘다</strong>
+                                    <p>자연과 인간의 공존에 대한 사유와 <br>
+                                        상상을 펼쳐보이는 전시 </p>
+                                    <p>
+                                        2015. 02. 12. - 2015. 05. 10.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="#">
+                                <div class="i-pic">
+                                    <img src="./image/past_exhibition(12).png" alt="지난전시1" class="bg">
+                                </div>
+                                <div class="i-des">
+                                    <strong>교감</strong>
+                                    <p>	미술관 전체를 ‘교감’이라는 주제로 <br>
+                                        구성한 전시</p>
+                                    <p>
+                                        2014. 08. 19. - 2014. 12. 21.
+                                    </p>      
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <section class="paging">
+                    <div class="container">
+                        <ul>
+                            <li><a href="#" class="prev"></a></li>
+                            <li><a href="#" class="on">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"class="next"></a></li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-
-            <div class="past2">
-                <img src="./image/past_exhibition(2).png" alt="past1">
-                <img src="../../image/icon_bookmark.svg" alt="">
-                <p>이안 쳉 : 세계건설</p>
-                <p>작가의 인간 의식에 대한 탐구와 SF적 
-                    상상력을 유감없이 보여주는 전시</p>
-                <p>
-                    22. 03. 02. - 22. 07. 03.
-                </p>    
-            </div>
-
-            <div class="past3">
-                <img src="./image/past_exhibition(3).png" alt="past1">
-                <img src="../../image/icon_bookmark.svg" alt="">
-                <p>아트스펙트럼 2022</p>
-                <p>다양한 미술 전시와 새로운 구분을
-                    통해 차별화된 전시 </p>
-                <p>
-                    22. 03. 02. - 22. 07. 03.
-                </p>    
-            </div>
-        </div>
+        
     </main>
     <footer>
         <div class="sitemap-banner-wrap">
