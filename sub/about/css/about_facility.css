@@ -639,9 +639,6 @@ header .breadcrumb-wrap {
   }
 }
 
-main {
-  overflow-x: hidden;
-}
 main .tabmenu-wrap .tab-nav {
   display: table;
   width: 100%;
@@ -866,7 +863,7 @@ main .M1 .M1-detail p:first-of-type {
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  margin: 30px 0 10px;
+  margin: 30px 0 20px;
 }
 @media screen and (min-width: 1440px) {
   main .M1 .M1-detail p:first-of-type {
@@ -903,7 +900,6 @@ main .M1 .M1-detail p:last-of-type span {
     top: -270px;
     left: 620px;
     text-align: left;
-    line-height: 46px;
     font-size: 22px;
     font-weight: 400;
   }
@@ -1041,7 +1037,7 @@ main .M2 .M2-detail p:first-of-type {
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  margin: 30px 0 10px;
+  margin: 30px 0 20px;
 }
 @media screen and (min-width: 1440px) {
   main .M2 .M2-detail p:first-of-type {
@@ -1066,7 +1062,6 @@ main .M2 .M2-detail p:last-of-type {
     top: -250px;
     left: -620px;
     text-align: right;
-    line-height: 46px;
     font-size: 22px;
     font-weight: 400;
   }
@@ -1204,7 +1199,7 @@ main .Kid .Kid-detail p:first-of-type {
   font-size: 28px;
   font-weight: 600;
   text-align: center;
-  margin: 30px 0 10px;
+  margin: 30px 0 20px;
 }
 @media screen and (min-width: 1440px) {
   main .Kid .Kid-detail p:first-of-type {
@@ -1229,7 +1224,6 @@ main .Kid .Kid-detail p:last-of-type {
     top: -270px;
     left: 580px;
     text-align: left;
-    line-height: 46px;
     font-size: 22px;
     font-weight: 400;
   }
@@ -1554,13 +1548,12 @@ main .container .Locker p:nth-of-type(2) {
 main .container .Locker p .type {
   font-size: 16px;
   font-weight: 700;
-  margin-right: 14px;
+  margin-right: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .container .Locker p .type {
     font-size: 24px;
     font-weight: 700;
-    margin-right: 28px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1669,7 +1662,6 @@ main .container .parking p:nth-of-type(2) {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
-  margin-bottom: 67px;
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:nth-of-type(2) {
@@ -1682,21 +1674,29 @@ main .container .parking p:nth-of-type(2) span {
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:nth-of-type(2) span {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 40px;
+  }
+}
+main .container .parking p:last-of-type {
+  margin: 0px 0 60px 0;
+  font-size: 14px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .parking p:last-of-type {
+    font-size: 16px;
   }
 }
 main .container .parking p span {
   font-size: 26px;
   font-weight: 700;
-  margin-right: 14px;
+  margin-right: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p span {
     font-size: 36px;
     font-weight: 700;
-    margin-right: 28px;
   }
 }
 main .container .parking .parking-detail {
@@ -1730,7 +1730,7 @@ main .container .parking .parking-detail a img {
 @media screen and (min-width: 1440px) {
   main .others {
     position: relative;
-    top: -2360px;
+    top: -2330px;
     left: 750px;
     width: 46.5277777778%;
   }
@@ -1801,7 +1801,7 @@ main .others p:nth-of-type(2) {
 @media screen and (min-width: 1440px) {
   .director .background {
     height: 650px;
-    margin-top: 70px;
+    margin-top: 120px;
   }
 }
 .director .director {
@@ -1814,7 +1814,7 @@ main .others p:nth-of-type(2) {
 @media screen and (min-width: 1440px) {
   .director .director {
     position: absolute;
-    top: 60px;
+    top: 110px;
     left: 490px;
     width: 587px;
     height: 1028px;
@@ -1832,7 +1832,7 @@ main .others p:nth-of-type(2) {
 @media screen and (min-width: 1440px) {
   .director h3 {
     left: 665px;
-    top: 530px;
+    top: 580px;
     margin-left: 0px;
     font-size: 46px;
     font-weight: 700;
@@ -1852,7 +1852,7 @@ main .others p:nth-of-type(2) {
 @media screen and (min-width: 1440px) {
   .director p {
     left: 660px;
-    top: 600px;
+    top: 640px;
     margin-left: 0px;
     font-size: 20px;
     font-weight: 200;
@@ -1876,7 +1876,7 @@ main .others p:nth-of-type(2) {
   .director .award {
     position: absolute;
     left: 1100px;
-    top: 200px;
+    top: 300px;
     display: block;
     color: #fff;
     line-height: 28px;
@@ -1908,11 +1908,10 @@ main .others p:nth-of-type(2) {
 @media screen and (min-width: 1440px) {
   .director .director-info {
     font-size: 20px;
-    font-weight: 200;
     line-height: 40px;
     margin-left: 0px;
     left: 490px;
-    top: 680px;
+    top: 700px;
   }
 }
 
@@ -1991,14 +1990,15 @@ main .others p:nth-of-type(2) {
 .renewal-detail ul li p:first-of-type {
   font-size: 24px;
   font-weight: 600;
-  margin-top: 24px;
+  margin-top: 40px;
   margin-bottom: 12px;
 }
 @media screen and (min-width: 1440px) {
   .renewal-detail ul li p:first-of-type {
     font-size: 32px;
     font-weight: 600;
-    line-height: 54px;
+    line-height: 20px;
+    margin-top: 60px;
   }
 }
 .renewal-detail ul li p:last-of-type {
@@ -2008,13 +2008,14 @@ main .others p:nth-of-type(2) {
   line-height: 1.5em;
   color: #3c3c3c;
   color: #5c5c5c;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 1440px) {
   .renewal-detail ul li p:last-of-type {
     font-size: 24px;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 54px;
+    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 1440px) {

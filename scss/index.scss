@@ -15,7 +15,7 @@ header {
       overflow-x: hidden;
 
       @include responsive(pc-screens) {
-        height: 880px; // 480px
+        height: 880px; // 480px;
       }
     }
 
@@ -697,22 +697,40 @@ main {
             text-align: right;
           }
           
-          .card {
-            box-shadow: none;
-          }
-        }
-          
-          .more {
-            display: flex;
+          .card-wrap {
             flex-direction: row-reverse;
 
-            img {
-              transform: rotate(-180deg);
-              margin-left: 0;
-              margin-right: 10px;
+            .card {
+              box-shadow: 25px 0 15px -3px rgba(0, 0, 0, 0.3);
+              
+              &:not(:first-child) {
+                margin-right: -50px;
+              }
+
+              &:first-child {
+                box-shadow: none;
+              }
+
+              &:hover ~ .card {
+                position: relative;
+                right: 50px;
+                transition: all 0.4s ease-out;
+              }
             }
           }
         }
+          
+        .more {
+          display: flex;
+          flex-direction: row-reverse;
+
+          img {
+            transform: rotate(-180deg);
+            margin-left: 0;
+            margin-right: 10px;
+          }
+        }
+      }
 
       .text-btn-wrap {
         @include flex_between();

@@ -639,6 +639,499 @@ header .breadcrumb-wrap {
   }
 }
 
+main section.search-wrap {
+  background: #f3f3f3;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+  }
+}
+main section.search-wrap .search-box {
+  padding: 40px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box {
+    width: 100%;
+    border-radius: 5px;
+    padding: 40px 80px;
+    background: #f3f3f3;
+  }
+}
+main section.search-wrap .search-box h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+main section.search-wrap .search-box .speed-search {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4d4d4;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main section.search-wrap .search-box .speed-search h6 {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search h6 {
+    display: inline-block;
+    width: 120px;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] {
+    width: calc(100% - 120px);
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] * {
+  height: 50px;
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] select {
+  background: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 20px center;
+  background-color: #fff;
+  background-size: 10px;
+  width: 37%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] select {
+    width: 15.5172413793%;
+    flex-wrap: nowrap;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] input {
+  width: 100%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] input {
+    width: 80%;
+    flex-wrap: nowrap;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] button {
+    width: 13.7931034483%;
+    margin-top: 0;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] button img {
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+main section.itemList-wrap {
+  margin-top: 80px;
+}
+main section.itemList-wrap .itemList .list-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #d4d4d4;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList .list-control {
+    padding-bottom: 20px;
+  }
+}
+main section.itemList-wrap .itemList .list-control .count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+main section.itemList-wrap .itemList .list-control .count b {
+  margin-right: 2px;
+}
+main section.itemList-wrap .itemList .list-control .count span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+main section.itemList-wrap .itemList .list-control .sort {
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+}
+main section.itemList-wrap .itemList .list-control .sort img {
+  height: 14px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList .list-control .sort span, main section.itemList-wrap .itemList .list-control .sort img {
+    display: none;
+  }
+}
+main section.itemList-wrap .itemList .list-control .view-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+main section.itemList-wrap .itemList .list-control .view-type .sort-list {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 35px;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList .list-control .view-type .sort-list {
+    position: static;
+  }
+}
+main section.itemList-wrap .itemList .list-control .view-type .sort-list li {
+  font-size: 14px;
+  padding-left: 15px;
+  color: #3c3c3c;
+}
+main section.itemList-wrap .itemList .list-control .view-type .sort-list li:hover {
+  text-decoration: underline;
+}
+main section.itemList-wrap .itemList .list-control .view-type .sort-list li.on {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #3c3c3c;
+}
+main section.itemList-wrap .itemList .list-control .view-type select[name=nth-view] {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList .list-control .view-type select[name=nth-view] {
+    display: block;
+    width: 120px;
+    height: 30px;
+    padding: 0 10px;
+    background: url(../../../image/icon_arrow_bk.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: right 10px center;
+    background-size: 8px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  height: 5000px;
+  overflow: hidden;
+}
+main section.itemList-wrap .itemList ul.item-box .item {
+  position: relative;
+  width: 48%;
+  margin-bottom: 20px;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList ul.item-box .item {
+    width: 23.5%;
+    margin-bottom: 25px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box .item .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: url("../../../image/icon_heart_motion.png") no-repeat;
+  background-position: 0 0;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  z-index: 97;
+}
+main section.itemList-wrap .itemList ul.item-box .item .heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
+}
+main section.itemList-wrap .itemList ul.item-box .item .heart.on {
+  transition-duration: 1s;
+  background-position: -1960px 0;
+}
+main section.itemList-wrap .itemList ul.item-box .item a {
+  display: block;
+  width: 100%;
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-pic {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap .itemList ul.item-box .item .i-pic {
+    height: 480px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-pic .bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des {
+  padding: 10px 20px 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des {
+    padding: 20px 30px 25px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des strong {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des strong {
+    font-size: 20px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des p.name {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des p.name {
+    font-size: 15px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des p {
+  margin: 5px 0 20px;
+  color: #5c5c5c;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des p {
+    margin: 10px 0 30px;
+    font-size: 15px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des p .vert-bar {
+  padding: 0 5px;
+  color: #acacac;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des p .vert-bar {
+    padding: 0 8px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc {
+  position: relative;
+  width: 80px;
+  height: 22px;
+  margin-left: auto;
+  font-size: 11px;
+  line-height: 22px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap .itemList ul.item-box .item .i-des .loc {
+    width: 80px;
+    height: 26px;
+    font-size: 13px;
+    line-height: 26px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #3c3c3c;
+  border-radius: 3px;
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc div {
+  position: absolute;
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc div.tag {
+  left: 0;
+  width: 32px;
+  color: #fff;
+  background: #3c3c3c;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-des .loc div:last-child {
+  right: 0;
+  width: 48px;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap .itemList ul.item-box {
+    height: 3000px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList ul.item-box {
+    height: 1800px;
+  }
+}
+main section.itemList-wrap .itemList ul.item-box li.item {
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s;
+}
+@media screen and (min-width: 768px) {
+  main section.itemList-wrap .itemList ul.item-box li.item {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList ul.item-box li.item {
+    width: 440px;
+  }
+  main section.itemList-wrap .itemList ul.item-box li.item:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  main section.itemList-wrap .itemList ul.item-box li.item:hover a .i-pic img {
+    transform: scale(1.3);
+  }
+}
+main section.itemList-wrap .itemList ul.item-box li.item .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: url("../../../image/icon_heart_motion.png") no-repeat;
+  background-position: 0 0;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  z-index: 97;
+}
+main section.itemList-wrap .itemList ul.item-box li.item .heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
+}
+main section.itemList-wrap .itemList ul.item-box li.item .heart.on {
+  transition-duration: 1s;
+  background-position: -1960px 0;
+}
+main section.itemList-wrap .itemList ul.item-box li.item a .i-pic {
+  position: relative;
+  height: 55.7142857143%;
+}
+main section.itemList-wrap .itemList ul.item-box li.item a .i-pic:first-of-type {
+  height: 260px;
+}
+main section.itemList-wrap .itemList ul.item-box li.item a .i-pic img {
+  transition: transform 0.3s;
+}
+main section.itemList-wrap .itemList ul.item-box li.item a .i-des strong {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 20px;
+}
+main section.itemList-wrap .itemList ul.item-box li.item a .i-des p {
+  margin-bottom: 0;
+}
+main section.paging {
+  margin: 30px 0 60px;
+}
+main section.paging ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  main section.paging ul {
+    width: 50%;
+    margin: 80px auto 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.paging ul {
+    width: 30%;
+  }
+}
+main section.paging ul li {
+  width: 45px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 5px;
+  text-align: center;
+}
+main section.paging ul li a {
+  width: 100%;
+  height: 100%;
+}
+main section.paging ul li a:hover {
+  font-weight: bold;
+  border-radius: 5px;
+  background: #f3f3f3;
+}
+main section.paging ul li a.on {
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  background: #3c3c3c;
+}
+main section.paging ul li a.prev, main section.paging ul li a.next {
+  background: url(../../../image/icon_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: 10px;
+  filter: brightness(0) saturate(100%);
+}
+main section.paging ul li a.prev {
+  transform: rotate(90deg);
+}
+main section.paging ul li a.next {
+  transform: rotate(-90deg);
+}
+
 @media screen and (min-width: 1440px) {
   footer.sub {
     position: static !important;

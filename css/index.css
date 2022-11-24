@@ -1274,8 +1274,22 @@ main section.collection .art {
   main section.collection .art.modern p {
     text-align: right;
   }
-  main section.collection .art.modern .card {
+  main section.collection .art.modern .card-wrap {
+    flex-direction: row-reverse;
+  }
+  main section.collection .art.modern .card-wrap .card {
+    box-shadow: 25px 0 15px -3px rgba(0, 0, 0, 0.3);
+  }
+  main section.collection .art.modern .card-wrap .card:not(:first-child) {
+    margin-right: -50px;
+  }
+  main section.collection .art.modern .card-wrap .card:first-child {
     box-shadow: none;
+  }
+  main section.collection .art.modern .card-wrap .card:hover ~ .card {
+    position: relative;
+    right: 50px;
+    transition: all 0.4s ease-out;
   }
 }
 main section.collection .art.modern .more {
