@@ -9,7 +9,7 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('notice_header.jpg');
+    @include full_bg('notice.jpg');
 }
 
 main {
