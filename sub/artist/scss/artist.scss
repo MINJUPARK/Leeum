@@ -29,16 +29,16 @@ main {
             }
 
             .des { 
-                line-height: 1.8em;
-                color: $bk1;
+                @include content_align(center);
+                font-size: 18px;
                 
                 &.top {
-                    margin-top: 40px;
-                    margin-bottom: 80px;
+                    margin-top: 50px;
+                    margin-bottom: 100px;
                 }
 
                 &.bottom {
-                    margin-top: 80px;
+                    margin-top: 100px;
 
                     .vert-bar {
                         display: block;
@@ -66,9 +66,8 @@ main {
                     overflow: hidden;
 
                     @include responsive(pc-screens) {
-
                         &::before, &::after {
-                            content: "";
+                            content: '';
                             position: absolute;
                             width: 200px; height: 400px;
                             background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);

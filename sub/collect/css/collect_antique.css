@@ -770,6 +770,9 @@ main section.filter .filter-wrap .detail-search-wrap .ds-btn {
     text-align: right;
   }
 }
+main section.filter .filter-wrap .detail-search-wrap .ds-btn span {
+  vertical-align: initial;
+}
 main section.filter .filter-wrap .detail-search-wrap .ds-btn img {
   width: 10px;
   margin-left: 10px;

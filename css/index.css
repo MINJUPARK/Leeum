@@ -625,20 +625,30 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .title span {
   font-size: 16px;
   font-weight: 300;
 }
+@media screen and (min-width: 768px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .title span {
+    font-size: 20px;
+  }
+}
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .main-slider .item .info-wrap .info .title span {
     font-size: 26px;
   }
 }
 header .main-slider-wrap .main-slider .item .info-wrap .info .title h1 {
+  margin-top: 10px;
   font-family: "KoPub Batang";
   font-size: 32px;
   font-weight: 400;
-  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .title h1 {
+    margin-top: 20px;
+    font-size: 48px;
+  }
 }
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .main-slider .item .info-wrap .info .title h1 {
-    margin-top: 20px;
     font-size: 64px;
   }
 }
@@ -661,6 +671,11 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .date p {
   font-weight: 300;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 768px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .date p {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .main-slider .item .info-wrap .info .date p {
     font-size: 18px;
@@ -670,6 +685,11 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .date time {
   font-family: "KoPub Batang";
   font-size: 15px;
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  header .main-slider-wrap .main-slider .item .info-wrap .info .date time {
+    font-size: 17px;
+  }
 }
 @media screen and (min-width: 1440px) {
   header .main-slider-wrap .main-slider .item .info-wrap .info .date time {
@@ -702,21 +722,29 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
     opacity: 0.5;
   }
 }
-header .main-slider-wrap .main-slider .item .title, header .main-slider-wrap .main-slider .item .date {
+header .main-slider-wrap .main-slider .item .title {
   -webkit-animation: fadeOutDown 1s both;
           animation: fadeOutDown 1s both;
 }
-header .main-slider-wrap .main-slider .item .notice p {
+header .main-slider-wrap .main-slider .item .date {
+  -webkit-animation: fadeOutDown 1s both;
+          animation: fadeOutDown 1s both;
+}
+header .main-slider-wrap .main-slider .item .notice {
+  -webkit-animation: fadeOutDown 2s both;
+          animation: fadeOutDown 2s both;
+}
+header .main-slider-wrap .main-slider .item.slick-active .title {
   -webkit-animation: fadeInUp 1s both;
           animation: fadeInUp 1s both;
 }
-header .main-slider-wrap .main-slider .item.slick-active .title, header .main-slider-wrap .main-slider .item.slick-active .date {
-  -webkit-animation: fadeInUp 1s both 1s;
-          animation: fadeInUp 1s both 1s;
-}
-header .main-slider-wrap .main-slider .item.slick-active .notice p {
+header .main-slider-wrap .main-slider .item.slick-active .date {
   -webkit-animation: fadeInUp 1s both;
           animation: fadeInUp 1s both;
+}
+header .main-slider-wrap .main-slider .item.slick-active .notice {
+  -webkit-animation: fadeInUp 1.5s both;
+          animation: fadeInUp 1.5s both;
 }
 header .main-slider-wrap .slick-list, header .main-slider-wrap .slick-track, header .main-slider-wrap .slick-slide {
   height: 100%;
@@ -1111,9 +1139,6 @@ main section.exhibition .slick-initialized .swipe-tab.active-tab {
     font-size: 18px;
   }
 }
-main section.exhibition .sub-header-wrap {
-  border-bottom: 1px solid #d4d4d4;
-}
 main section.exhibition .sub-header-wrap .sub-header {
   position: relative;
   width: 100%;
@@ -1125,7 +1150,7 @@ main section.exhibition .sub-header-wrap .sub-header {
   }
 }
 main section.exhibition .ehb-slider .slick-list {
-  padding: 40px 0 !important;
+  padding: 40px 0 60px !important;
 }
 main section.exhibition .ehb-slider .slick-slide {
   margin: 0 110px;
@@ -1185,14 +1210,24 @@ main section.exhibition .ehb-slider .bg .des .type {
   font-size: 14px;
   color: #be6a15;
 }
+@media screen and (min-width: 768px) {
+  main section.exhibition .ehb-slider .bg .des .type {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 1440px) {
   main section.exhibition .ehb-slider .bg .des .type {
     font-size: 18px;
   }
 }
 main section.exhibition .ehb-slider .bg .des .title {
-  font-size: 20px;
   margin: 5px 0 15px;
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  main section.exhibition .ehb-slider .bg .des .title {
+    font-size: 23px;
+  }
 }
 @media screen and (min-width: 1440px) {
   main section.exhibition .ehb-slider .bg .des .title {
@@ -1203,6 +1238,11 @@ main section.exhibition .ehb-slider .bg .des time {
   margin-bottom: 5px;
   font-size: 12px;
   color: #5c5c5c;
+}
+@media screen and (min-width: 768px) {
+  main section.exhibition .ehb-slider .bg .des time {
+    font-size: 14px;
+  }
 }
 @media screen and (min-width: 1440px) {
   main section.exhibition .ehb-slider .bg .des time {
@@ -1222,6 +1262,150 @@ main section.exhibition .ehb-slider .bg .des .loc {
   }
 }
 main section.exhibition .ehb-slider .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section.collection .art {
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .art {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .art.antique {
+    flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .art.modern {
+    flex-direction: row;
+  }
+  main section.collection .art.modern .text-btn-wrap, main section.collection .art.modern .title {
+    justify-content: flex-end;
+  }
+  main section.collection .art.modern p {
+    text-align: right;
+  }
+  main section.collection .art.modern .more {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  main section.collection .art.modern .more img {
+    transform: rotate(-180deg);
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+main section.collection .art .text-btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .art .text-btn-wrap {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 31.4285714%;
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .art .text-btn-wrap .text {
+    width: 100%;
+  }
+}
+main section.collection .art .text-btn-wrap .text .title {
+  display: flex;
+  align-items: center;
+}
+main section.collection .art .text-btn-wrap .text .title h4 {
+  display: inline-block;
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .art .text-btn-wrap .text .title h4 {
+    font-size: 36px;
+    font-weight: 600;
+  }
+}
+main section.collection .art .text-btn-wrap .text .title span {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 3px 10px;
+  margin-left: 10px;
+  color: #be6a15;
+  border: 1px solid #be6a15;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .art .text-btn-wrap .text .title span {
+    width: 60px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 15px;
+  }
+}
+main section.collection .art .text-btn-wrap .text p {
+  margin-top: 10px;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .art .text-btn-wrap .text p {
+    margin-top: 20px;
+  }
+}
+main section.collection .art .text-btn-wrap .btn {
+  margin-bottom: 2px;
+}
+main section.collection .card-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .card-wrap {
+    width: 62.8571429%;
+  }
+}
+main section.collection .card-wrap .card {
+  display: flex;
+  position: relative;
+  left: 0;
+  width: 33.3333333333%;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: -25px 0 15px -3px rgba(0, 0, 0, 0.3);
+  transition: 0.4s ease-out;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main section.collection .card-wrap .card {
+    height: 400px;
+  }
+}
+main section.collection .card-wrap .card:not(:first-child) {
+  margin-left: -50px;
+}
+main section.collection .card-wrap .card:hover {
+  transform: translate(20px, -30px);
+  transition: all 0.4s ease-out;
+  z-index: 1;
+}
+main section.collection .card-wrap .card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+main section.collection .card-wrap .card:first-child {
+  box-shadow: none;
+}
+main section.collection .card-wrap .card a, main section.collection .card-wrap .card img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
