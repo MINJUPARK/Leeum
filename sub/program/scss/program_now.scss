@@ -14,15 +14,7 @@ header {
 
 main {
 
-    // h1 {
-    //     text-align: center;
-    //     font-size: 26px;
-    //     padding-top: 60px;
-
-    //     @media screen and(min-width:$break-pc) {
-    //         font-size: 46px;
-    //     }
-    // }
+    
     .popular-program {
         margin-top: 60px;
     }
@@ -38,41 +30,44 @@ main {
     .img-text {
         position: relative;
         width: 100%;
-        margin: 20px auto 30px;
+        overflow: hidden;
+        margin: 40px auto 30px;
+        @include out_container();
         
         @include responsive(pc-screens) {
+            @include in_container();
             margin-top: 60px;
+            height: 810px;
         }
-        img {
-            width: 100%;
-            @include out_container();
+        .image, a, img {
+            height: 100%;
+        }
 
-            @include responsive(pc-screens) {
-                // padding: 0 20px;
-                @include in_container();
-                // width: 140px;
-                width: 100%;
-                text-align: center;
-                // object-fit: cover;
-                // object-position: 10px 10px;
-                // height: 430px;
-            }
+        .image {
+            position: relative;
+        }
+
+        a {
+            width: 100%;
         }
         
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .limit-text {
             position: absolute;
-            top: 17px;
-            // left: 20px;
-            
-            /* font-size: 12px; */
-            // padding: 8px 12px;
+            top: 20px;
+            left: 20px;
             padding: 10px 15px;
             background-color: $red-brown;
             color: #fff;
             border-radius: 5px;
 
             @include responsive(pc-screens) {
-                position: absolute;
+                top: 30px;
                 left: 30px;
                 font-size: 22px;
             }
@@ -162,14 +157,25 @@ main {
     .title {
         text-align: center;
         font-size: 26px;
-        padding-top: 100px;
+        margin-top: 100px;
+        margin-bottom: 40px;
         // padding-bottom: 40px;
 
-        h2 {
+        h4 {
             @include responsive(pc-screens) {
-                font-size: 46px;
-                padding-top: 200px;
+                margin-top: 200px;
+                font-size: $h2;
             }
+        }
+    }
+
+    .list-control {
+        @include list_control();
+        margin-top: 40px;
+        margin-bottom: 60px;
+
+        @include responsive(pc-screens) {
+            margin-top: 80px;
         }
     }
 
@@ -179,16 +185,22 @@ main {
             // padding-top: 50px;
         }
         .img-text-explain {
+            margin: 25px 0 75px;
+            
             @include responsive(pc-screens) {
                 display: flex;
                 align-items: center;
-                margin-top: 50px;
+                margin: 50px 0 150px;
+
+                &:first-child {
+                    margin-top: 75px;
+                }
             }
         }
 
         .image-text {
             width: 100%;
-            margin: 30px auto;
+            // margin: 30px auto;
             position: relative;
     
             img {
@@ -225,6 +237,8 @@ main {
         }
 
         .explain-date-register {
+            margin-top: 20px;
+
             @include responsive(pc-screens) {
                 width: 600px;
             }
@@ -234,7 +248,7 @@ main {
                 p:first-child {
                     @include gothic_font(medium);
                     color: $yellow-brown;
-                    padding-bottom: 10px;
+                    padding-bottom: 5px;
 
                     @include responsive(pc-screens) {
                         font-size: 22px;
@@ -245,6 +259,7 @@ main {
                 h5 {
                     // font-size: 22px;
                     padding-bottom: 20px;
+                    line-height: 1.3em;
 
                     @include responsive(pc-screens) {
                         font-size: 36px;
@@ -253,10 +268,11 @@ main {
 
                 p:last-child {
                     padding-bottom: 40px;
-                    @include content_align(left, 1.8em);
+                    @include content_align(justify, 1.8em);
                     color: $bk2;
 
                     @include responsive(pc-screens) {
+                        text-align: left;
                         font-size: 20px;
                     }
                 }
@@ -336,6 +352,109 @@ main {
                 }
             }
         }
+    }
+
+    section.filter {
+        @include section_filter();
+
+        .filter-wrap {
+            @include filter_wrap();
+            
+            .speed-search {
+                @include speed_search();
+            }
+
+            .detail-search-wrap {
+                @include detail_search();
+
+                .detail-search {
+                    display: block;
+
+                    form[name=detail] {
+
+                        .opt-box {
+
+                            @include responsive(pc-screens) {
+                                width: 100%;
+                                column-gap: 40px;
+                            }
+
+                            .type {
+                                width: 100%;
+                                
+                                @include responsive(pc-screens) {
+                                    @include flex_between_center();
+                                    width: calc(100% - 13.7931034483%);
+                                }
+
+                                ul.opt {
+                                    flex-wrap: wrap;
+                                    justify-content: flex-start;
+
+                                    // li:nth-child(5) ~ li:last-child {
+                                    //     border-top: 0;
+                                    // }
+                                    
+                                    li {
+                                        width: calc(100% / 4);
+
+                                        &:first-child {
+                                            border-bottom-left-radius: 0;
+                                        }
+
+                                        &:nth-child(4) {
+                                            border-top-right-radius: 5px;
+                                        }
+
+                                        &:nth-child(5), &:nth-child(6), &:last-child {
+                                            border-top: 0;
+                                        }
+
+                                        &:nth-child(5) {
+                                            border-left: 1px solid $bk5;
+                                            border-bottom-left-radius: 5px;
+                                        }
+
+                                        &:last-child {
+                                            border-top-right-radius: 0;
+                                        }
+
+                                        @include responsive(pc-screens) {
+                                            width: calc(100% / 7);
+
+                                            &:first-child {
+                                                border-bottom-left-radius: 5px;
+                                            }
+    
+                                            &:nth-child(4) {
+                                                border-top-right-radius: 0;
+                                            }
+    
+                                            &:nth-child(5), &:nth-child(6), &:last-child {
+                                                border-top: 1px solid $bk5;
+                                            }
+    
+                                            &:nth-child(5) {
+                                                border-left: 0;
+                                                border-bottom-left-radius: 0;
+                                            }
+    
+                                            &:last-child {
+                                                border-top-right-radius: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.paging {
+        @include paging();
     }
 }
 
