@@ -648,6 +648,102 @@ header .breadcrumb-wrap {
   }
 }
 
+main {
+  /*  section.Public {
+   } */
+  /* section.Video {
+  } */
+}
+main h1 {
+  display: none;
+}
+main section.WorkBook h3 {
+  text-align: center;
+  margin-top: 60px;
+}
+@media screen and (min-width: 1440px) {
+  main section.WorkBook h3 {
+    font-size: 46px;
+  }
+}
+main section.WorkBook .plus {
+  text-align: right;
+  margin-bottom: 30px;
+}
+main section.WorkBook .plus a span {
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main section.WorkBook .plus a span {
+    font-size: 20px;
+  }
+}
+main section.WorkBook .plus a img {
+  width: 10px;
+}
+main section.WorkBook .flex {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+}
+@media screen and (min-width: 1440px) {
+  main section.WorkBook .flex {
+    flex-wrap: nowrap;
+  }
+}
+main section.WorkBook .flex .workbook {
+  margin-bottom: 20px;
+  width: 48.5714285714% !important;
+}
+@media screen and (min-width: 1440px) {
+  main section.WorkBook .flex .workbook {
+    width: 22.8571428571% !important;
+  }
+}
+main section.WorkBook .flex .workbook .image-text {
+  text-align: center;
+}
+main section.WorkBook .flex .workbook .image-text .image {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #c5c5c5;
+}
+main section.WorkBook .flex .workbook .image-text .image img {
+  width: 100%;
+}
+main section.WorkBook .flex .workbook .image-text .text {
+  margin-bottom: 20px;
+  /* @include responsive(pc-screens){
+      padding: 26px 40px 40px 40px;
+  } */
+}
+main section.WorkBook .flex .workbook .image-text .text span {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+@media screen and (min-width: 1440px) {
+  main section.WorkBook .flex .workbook .image-text .text span {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+}
+main section.WorkBook .flex .workbook .image-text .text p {
+  margin-bottom: 7px;
+}
+main section.WorkBook .flex .workbook .image-text .down-img a {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+main section.WorkBook .flex .workbook .image-text .down-img a img {
+  width: 10px;
+}
+
 /* main {
 
     h1 {
@@ -709,29 +805,6 @@ header .breadcrumb-wrap {
 
     }
 } */
-main h1 {
-  display: none;
-}
-main .data-image h2 {
-  font-size: 20px;
-  font-weight: 600;
-}
-main .data-image .plus span {
-  font-size: 16px;
-  font-weight: 600;
-}
-main .data-image .plus img {
-  width: 15px;
-  height: 10px;
-}
-main .data-image .flex {
-  display: flex;
-  width: 50%;
-  /* img {
-      width: 170px;
-  } */
-}
-
 @media screen and (min-width: 1440px) {
   footer.sub {
     position: static !important;

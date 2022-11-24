@@ -77,19 +77,27 @@ header {
                 span {
                   @include batang_font(light);
 
+                  @include responsive(tablet-screens) {
+                    font-size: 20px;
+                  }
+
                   @include responsive(pc-screens) {
                     font-size: $h4;
                   }              
                 }
   
                 h1 {
-                  @include batang_font(medium, 32px);
                   margin-top: 10px;
+                  @include batang_font(medium, 32px);
+
+                  @include responsive(tablet-screens) {
+                    margin-top: 20px;
+                    font-size: 48px;
+                  }
 
                   @include responsive(pc-screens) {
-                    margin-top: 20px;
                     font-size: 64px;
-                  }  
+                  }
                 }
               }
 
@@ -103,8 +111,12 @@ header {
                 } 
 
                 p {
-                  @include batang_font(light, 14px); 
+                  @include batang_font(light, 14px);
                   margin-bottom: 10px;
+
+                  @include responsive(tablet-screens) {
+                    font-size: 16px;
+                  }
 
                   @include responsive(pc-screens) {
                     font-size: $h6;
@@ -113,7 +125,11 @@ header {
   
                 time {
                   @include batang_font(medium, 15px);
-                  
+
+                  @include responsive(tablet-screens) {
+                    font-size: 17px;
+                  }
+
                   @include responsive(pc-screens) {
                     font-size: $h5;
                   }       
@@ -137,7 +153,7 @@ header {
                   display: flex;
                   justify-content: center;
                   width: 100%;
-                  
+
                   p {
                     @include gothic_font(light, 15px);
                     line-height: 2em;
@@ -154,14 +170,16 @@ header {
 
         .item { 
 
-          .title, .date { animation: fadeOutDown 1s both;  }
-          .notice p { animation: fadeInUp 1s both; }
+          .title { animation: fadeOutDown 1s both;  }
+          .date { animation: fadeOutDown 1s both;  }
+          .notice { animation: fadeOutDown 2s both;  }
         }
 
         .item.slick-active {
 
-          .title, .date { animation: fadeInUp 1s both 1s; }
-          .notice p { animation: fadeInUp 1s both; }
+          .title { animation: fadeInUp 1s both; }
+          .date { animation: fadeInUp 1s both; }
+          .notice { animation: fadeInUp 1.5s both; }
         }
       }
       
@@ -464,7 +482,6 @@ main {
       }      
     }
   }
-
   section.exhibition {
     margin-top: 75px;
 
@@ -518,7 +535,6 @@ main {
     }
 
     .sub-header-wrap {
-      border-bottom: 1px solid $bk5;
 
       .sub-header {
         position: relative;
@@ -534,7 +550,7 @@ main {
     .ehb-slider {
 
       .slick-list {
-        padding: 40px 0 !important;
+        padding: 40px 0 60px !important;
       }
 
       .slick-slide {
@@ -594,16 +610,24 @@ main {
             @include gothic_font(medium);
             font-size: 14px;
             color: $yellow-brown; 
-  
+            
+            @include responsive(tablet-screens) {
+              font-size: 16px;
+            }
+
             @include responsive(pc-screens) {
               font-size: $h6;
             }
           }
   
           .title { 
-            font-size: 20px;
             margin: 5px 0 15px;
-  
+            font-size: 20px;
+            
+            @include responsive(tablet-screens) {
+              font-size: 23px;
+            }
+
             @include responsive(pc-screens) {
               font-size: $h4;
             }
@@ -613,7 +637,11 @@ main {
             margin-bottom: 5px;
             font-size: 12px;
             color: $bk2;
-  
+            
+            @include responsive(tablet-screens) {
+              font-size: 14px;
+            }
+
             @include responsive(pc-screens) {
               font-size: 16px;
             }
@@ -640,6 +668,161 @@ main {
       }
     }
   }
+
+  section.collection {
+  
+    .art {
+      margin-top: 40px;
+
+      @include responsive(pc-screens) {
+        @include flex_between();
+        margin-top: 120px;
+      }
+
+      &.antique {
+        @include responsive(pc-screens) {
+          flex-direction: row-reverse;
+        }
+      }
+      
+      &.modern {
+        @include responsive(pc-screens) {
+          flex-direction: row;
+
+          .text-btn-wrap, .title {
+            justify-content: flex-end;
+          }
+
+          p {
+            text-align: right;
+          }
+
+          .more {
+            display: flex;
+            flex-direction: row-reverse;
+
+            img {
+              transform: rotate(-180deg);
+              margin-left: 0;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+
+      .text-btn-wrap {
+        @include flex_between();
+        align-items: flex-end;
+        margin-bottom: 30px;
+
+        @include responsive(pc-screens) {
+          align-items: flex-start;
+          flex-wrap: wrap;
+          width: 31.4285714%;
+          margin-top: 40px;
+        }
+
+        .text {
+
+          @include responsive(pc-screens) {
+            width: 100%;
+          }
+
+          .title {
+            display: flex;
+            align-items: center;
+
+            h4 { 
+              display: inline-block;
+              
+              @include responsive(pc-screens) {
+                @include gothic_font(semibold, $h2);
+              }
+            }
+            
+            span {
+              @include gothic_font(medium, 13px);
+              padding: 3px 10px;
+              margin-left: 10px;
+              color: $yellow-brown;
+              border: 1px solid $yellow-brown;
+              border-radius: 5px;
+
+              @include responsive(pc-screens) {
+                width: 60px;
+                padding: 5px 0;
+                text-align: center;
+                font-size: 16px;
+                margin-left: 15px;
+              }
+            }
+          }
+
+          p {
+            margin-top: 10px;
+            color: $bk2;
+
+            @include responsive(pc-screens) {
+              margin-top: 20px;
+            }
+          }
+        }
+
+        .btn {
+          margin-bottom: 2px;
+        }
+      }
+    }
+    .card-wrap {
+      @include flex_between();
+
+      @include responsive(pc-screens) {
+        width: 62.8571429%;
+      }
+      
+      .card {
+        display: flex;
+        position: relative;
+        left: 0;
+        width: calc(100% / 3); // 하나 작게
+        height: 250px;
+        border-radius: 10px;
+        box-shadow: -25px 0 15px -3px rgba(0, 0, 0, 0.3);
+        transition: 0.4s ease-out;
+        overflow: hidden;
+
+        @include responsive(pc-screens) {
+          height: 400px;
+        }
+
+        &:not(:first-child) {
+          margin-left: -50px;
+        }
+  
+        &:hover {
+          transform: translate(20px, -30px);
+          transition: all 0.4s ease-out;
+          z-index: 1;
+        }
+  
+        &:hover ~ .card {
+          position: relative;
+          left: 50px;
+          transition: 0.4s ease-out;
+        }
+        
+        &:first-child {
+          box-shadow: none;
+        }
+
+        a, img {
+          width: 100%; height: 100%; object-fit: cover;
+        }
+      }
+    }
+  }
+
+  
 
   section.facility {
 

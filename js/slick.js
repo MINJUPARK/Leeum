@@ -6,7 +6,7 @@ $(function() {
     var total_slide = 0;
 
     $imageSlider.slick({
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: sliderTimer,
       speed: 500,
       slidesToShow: 1,

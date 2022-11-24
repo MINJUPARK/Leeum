@@ -1115,6 +1115,30 @@ main .o-i-p .introduce p {
     font-size: 17px;
   }
 }
+main .o-i-p .ticket-info h6 {
+  margin: 25px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main .o-i-p .ticket-info h6 {
+    font-size: 18px;
+  }
+}
+main .o-i-p .ticket-info ul li {
+  padding-left: 11px;
+  margin-bottom: 20px;
+  line-height: calc(1em - 2px + 10px);
+  background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
+  background-size: 2px;
+}
+@media screen and (min-width: 768px) {
+  main .o-i-p .ticket-info ul li {
+    padding-left: 14px;
+    margin-bottom: 30px;
+    font-size: 17px;
+  }
+}
 main .o-i-p p {
   text-align: justify;
   line-height: 2em;
