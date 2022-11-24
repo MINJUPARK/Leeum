@@ -702,7 +702,7 @@ main .before-after-case-intro .intro-flex .before-after ul.angle-select li {
 }
 @media screen and (min-width: 768px) {
   main .before-after-case-intro .intro-flex .before-after ul.angle-select li {
-    height: 70px;
+    height: 65px;
   }
 }
 main .before-after-case-intro .intro-flex .before-after ul.angle-select li:last-child {
@@ -718,7 +718,6 @@ main .before-after-case-intro .intro-flex .before-after ul.angle-select li::afte
   height: 5px;
   background-color: #000;
   z-index: 1;
-  transition: all 0.7s;
   scale: 0;
 }
 main .before-after-case-intro .intro-flex .before-after ul.angle-select li span {
@@ -881,75 +880,73 @@ main .before-after-case-intro .intro-flex .case-intro .case-txt {
   }
 }
 main .before-after-case-intro .intro-flex .case-intro .case-txt p {
-  font-size: 18px;
-  line-height: calc(1em + 2px + 12px);
+  text-align: left;
+  line-height: 2em;
   color: #3c3c3c;
+  font-size: 18px;
 }
 @media screen and (min-width: 768px) {
   main .before-after-case-intro .intro-flex .case-intro .case-txt p {
     font-size: 20px;
-    line-height: 2em;
   }
 }
 main .before-after-case-intro .intro-flex .case-intro .case-txt p:last-child {
   margin-top: 45px;
 }
-main .conservation-process-wrap {
+main .conservation-method-wrap {
   margin-top: 120px;
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap {
+  main .conservation-method-wrap {
     margin-top: 200px;
   }
 }
-main .conservation-process-wrap p {
-  color: #3c3c3c;
-}
-main .conservation-process-wrap .conservation-process h3,
-main .conservation-process-wrap .conservation-process .process-intro {
+main .conservation-method-wrap .conservation-method h3 {
   text-align: center;
 }
-main .conservation-process-wrap .conservation-process .process-intro {
+main .conservation-method-wrap .conservation-method .method-intro {
   margin-top: 30px;
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process .process-intro {
+  main .conservation-method-wrap .conservation-method .method-intro {
     margin-top: 50px;
   }
 }
-main .conservation-process-wrap .conservation-process .process-intro p {
+main .conservation-method-wrap .conservation-method .method-intro p {
+  text-align: center;
+  line-height: 2em;
+  color: #3c3c3c;
   margin-top: 15px;
   font-size: 18px;
-  line-height: 1.8em;
 }
 @media screen and (min-width: 768px) {
-  main .conservation-process-wrap .conservation-process .process-intro p {
+  main .conservation-method-wrap .conservation-method .method-intro p {
     font-size: 20px;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step {
+main .conservation-method-wrap .conservation-method ul.method-list {
   margin-top: 80px;
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process ul.process-step {
+  main .conservation-method-wrap .conservation-method ul.method-list {
     margin-top: 100px;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step li {
+main .conservation-method-wrap .conservation-method ul.method-list li {
   position: relative;
   margin-top: 90px;
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li {
-    margin-top: 80px;
+  main .conservation-method-wrap .conservation-method ul.method-list li {
+    margin-top: 170px;
     padding: 55px 120px;
     box-shadow: inset 0 0 0 1px #c5c5c5;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step li:first-child {
+main .conservation-method-wrap .conservation-method ul.method-list li:first-child {
   margin-top: 0;
 }
-main .conservation-process-wrap .conservation-process ul.process-step li::before, main .conservation-process-wrap .conservation-process ul.process-step li::after {
+main .conservation-method-wrap .conservation-method ul.method-list li::before, main .conservation-method-wrap .conservation-method ul.method-list li::after {
   box-sizing: inherit;
   content: "";
   position: absolute;
@@ -957,38 +954,44 @@ main .conservation-process-wrap .conservation-process ul.process-step li::before
   height: 100%;
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li.locate::before, main .conservation-process-wrap .conservation-process ul.process-step li.locate::after {
+  main .conservation-method-wrap .conservation-method ul.method-list li::before, main .conservation-method-wrap .conservation-method ul.method-list li::after {
     border: 2px solid transparent;
     width: 0;
     height: 0;
   }
-  main .conservation-process-wrap .conservation-process ul.process-step li.locate::before {
+}
+@media screen and (min-width: 1440px) {
+  main .conservation-method-wrap .conservation-method ul.method-list li::before {
     top: 0;
     left: 0;
   }
-  main .conservation-process-wrap .conservation-process ul.process-step li.locate::after {
+}
+@media screen and (min-width: 1440px) {
+  main .conservation-method-wrap .conservation-method ul.method-list li::after {
     bottom: 0;
     right: 0;
   }
-  main .conservation-process-wrap .conservation-process ul.process-step li.locate:hover::before, main .conservation-process-wrap .conservation-process ul.process-step li.locate:hover::after {
+}
+@media screen and (min-width: 1440px) {
+  main .conservation-method-wrap .conservation-method ul.method-list li.border-effect::before, main .conservation-method-wrap .conservation-method ul.method-list li.border-effect::after {
     width: 100%;
     height: 100%;
   }
-  main .conservation-process-wrap .conservation-process ul.process-step li.locate:hover::before {
+  main .conservation-method-wrap .conservation-method ul.method-list li.border-effect::before {
     border-top-color: #ac3f21;
     border-right-color: #ac3f21;
-    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    transition: width 0.3s linear, height 0.3s linear 0.3s;
   }
-  main .conservation-process-wrap .conservation-process ul.process-step li.locate:hover::after {
+  main .conservation-method-wrap .conservation-method ul.method-list li.border-effect::after {
     border-bottom-color: #ac3f21;
     border-left-color: #ac3f21;
-    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+    transition: border-color 0s linear 0.6s, width 0.3s linear 0.6s, height 0.3s linear 0.9s;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step li .step-title {
+main .conservation-method-wrap .conservation-method ul.method-list li .step-title {
   display: flex;
 }
-main .conservation-process-wrap .conservation-process ul.process-step li .step-title .step-num {
+main .conservation-method-wrap .conservation-method ul.method-list li .step-title .step-num {
   width: 70px;
   height: 40px;
   text-align: center;
@@ -996,23 +999,23 @@ main .conservation-process-wrap .conservation-process ul.process-step li .step-t
   background-color: #ac3f21;
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li .step-title .step-num {
+  main .conservation-method-wrap .conservation-method ul.method-list li .step-title .step-num {
     width: 90px;
     height: 50px;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step li .step-title .step-num span {
+main .conservation-method-wrap .conservation-method ul.method-list li .step-title .step-num span {
   font-size: calc(1em + 4px);
   font-weight: 600;
   line-height: 40px;
   color: #fff;
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li .step-title .step-num span {
+  main .conservation-method-wrap .conservation-method ul.method-list li .step-title .step-num span {
     line-height: 50px;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step li .step-title strong {
+main .conservation-method-wrap .conservation-method ul.method-list li .step-title strong {
   font-size: calc(1em + 8px);
   font-weight: 600;
   margin-top: auto;
@@ -1021,60 +1024,60 @@ main .conservation-process-wrap .conservation-process ul.process-step li .step-t
   color: #ac3f21;
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li .step-title strong {
+  main .conservation-method-wrap .conservation-method ul.method-list li .step-title strong {
     margin-left: 15px;
     font-size: 30px;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step li .step-txt p {
-  margin-top: 28px;
+main .conservation-method-wrap .conservation-method ul.method-list li .step-txt p {
   text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
+  margin-top: 28px;
   font-size: 18px;
-  line-height: calc(1em + 2px + 12px);
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li .step-txt p {
+  main .conservation-method-wrap .conservation-method ul.method-list li .step-txt p {
     margin-top: 40px;
     font-size: 20px;
-    line-height: 2em;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step li .step-img {
+main .conservation-method-wrap .conservation-method ul.method-list li .step-img {
   display: flex;
   justify-content: space-between;
   width: 550px;
   margin-top: 30px;
 }
 @media screen and (min-width: 768px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li .step-img {
+  main .conservation-method-wrap .conservation-method ul.method-list li .step-img {
     width: 100%;
     margin-top: 40px;
   }
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li .step-img {
+  main .conservation-method-wrap .conservation-method ul.method-list li .step-img {
     width: 1160px;
     margin-top: 50px;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step li .step-img img {
+main .conservation-method-wrap .conservation-method ul.method-list li .step-img img {
   width: 270px;
 }
 @media screen and (min-width: 768px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li .step-img img {
+  main .conservation-method-wrap .conservation-method ul.method-list li .step-img img {
     width: 48.275862069%;
   }
 }
 @media screen and (min-width: 1440px) {
-  main .conservation-process-wrap .conservation-process ul.process-step li .step-img img {
+  main .conservation-method-wrap .conservation-method ul.method-list li .step-img img {
     width: 560px;
   }
 }
-main .conservation-process-wrap .conservation-process ul.process-step li:nth-child(2) .step-img {
+main .conservation-method-wrap .conservation-method ul.method-list li:nth-child(2) .step-img {
   display: block;
   width: 100%;
 }
-main .conservation-process-wrap .conservation-process ul.process-step li:nth-child(2) .step-img img {
+main .conservation-method-wrap .conservation-method ul.method-list li:nth-child(2) .step-img img {
   width: 100%;
 }
 main section.movePage {

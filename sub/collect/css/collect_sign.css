@@ -1044,9 +1044,6 @@ main section.itemList-wrap .itemList ul.item-box li.item {
   main section.itemList-wrap .itemList ul.item-box li.item {
     width: 440px;
   }
-  main section.itemList-wrap .itemList ul.item-box li.item:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  }
   main section.itemList-wrap .itemList ul.item-box li.item:hover a .i-pic img {
     transform: scale(1.3);
   }
