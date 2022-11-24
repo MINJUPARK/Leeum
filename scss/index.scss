@@ -692,11 +692,16 @@ main {
           .text-btn-wrap, .title {
             justify-content: flex-end;
           }
-
+          
           p {
             text-align: right;
           }
-
+          
+          .card {
+            box-shadow: none;
+          }
+        }
+          
           .more {
             display: flex;
             flex-direction: row-reverse;
@@ -708,7 +713,6 @@ main {
             }
           }
         }
-      }
 
       .text-btn-wrap {
         @include flex_between();
@@ -788,7 +792,7 @@ main {
         height: 250px;
         border-radius: 10px;
         box-shadow: -25px 0 15px -3px rgba(0, 0, 0, 0.3);
-        transition: 0.4s ease-out;
+        transition: all 0.4s ease-out;
         overflow: hidden;
 
         @include responsive(pc-screens) {
@@ -808,7 +812,7 @@ main {
         &:hover ~ .card {
           position: relative;
           left: 50px;
-          transition: 0.4s ease-out;
+          transition: all 0.4s ease-out;
         }
         
         &:first-child {

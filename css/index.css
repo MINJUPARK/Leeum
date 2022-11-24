@@ -360,16 +360,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -589,8 +580,7 @@ header .main-slider-wrap .main-slider .item .item-con video {
   width: 100vw;
   height: 100%;
   border-radius: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header .main-slider-wrap .main-slider .item .info-wrap {
   width: 100%;
@@ -656,8 +646,7 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .date {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   margin: 0 auto;
 }
 @media screen and (min-width: 1440px) {
@@ -723,28 +712,22 @@ header .main-slider-wrap .main-slider .item .info-wrap .info .notice {
   }
 }
 header .main-slider-wrap .main-slider .item .title {
-  -webkit-animation: fadeOutDown 1s both;
-          animation: fadeOutDown 1s both;
+  animation: fadeOutDown 1s both;
 }
 header .main-slider-wrap .main-slider .item .date {
-  -webkit-animation: fadeOutDown 1s both;
-          animation: fadeOutDown 1s both;
+  animation: fadeOutDown 1s both;
 }
 header .main-slider-wrap .main-slider .item .notice {
-  -webkit-animation: fadeOutDown 2s both;
-          animation: fadeOutDown 2s both;
+  animation: fadeOutDown 2s both;
 }
 header .main-slider-wrap .main-slider .item.slick-active .title {
-  -webkit-animation: fadeInUp 1s both;
-          animation: fadeInUp 1s both;
+  animation: fadeInUp 1s both;
 }
 header .main-slider-wrap .main-slider .item.slick-active .date {
-  -webkit-animation: fadeInUp 1s both;
-          animation: fadeInUp 1s both;
+  animation: fadeInUp 1s both;
 }
 header .main-slider-wrap .main-slider .item.slick-active .notice {
-  -webkit-animation: fadeInUp 1.5s both;
-          animation: fadeInUp 1.5s both;
+  animation: fadeInUp 1.5s both;
 }
 header .main-slider-wrap .slick-list, header .main-slider-wrap .slick-track, header .main-slider-wrap .slick-slide {
   height: 100%;
@@ -1264,8 +1247,7 @@ main section.exhibition .ehb-slider .bg .des .loc {
 main section.exhibition .ehb-slider .bg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main section.collection .art {
   margin-top: 40px;
@@ -1292,15 +1274,18 @@ main section.collection .art {
   main section.collection .art.modern p {
     text-align: right;
   }
-  main section.collection .art.modern .more {
-    display: flex;
-    flex-direction: row-reverse;
+  main section.collection .art.modern .card {
+    box-shadow: none;
   }
-  main section.collection .art.modern .more img {
-    transform: rotate(-180deg);
-    margin-left: 0;
-    margin-right: 10px;
-  }
+}
+main section.collection .art.modern .more {
+  display: flex;
+  flex-direction: row-reverse;
+}
+main section.collection .art.modern .more img {
+  transform: rotate(-180deg);
+  margin-left: 0;
+  margin-right: 10px;
 }
 main section.collection .art .text-btn-wrap {
   display: flex;
@@ -1381,7 +1366,7 @@ main section.collection .card-wrap .card {
   height: 250px;
   border-radius: 10px;
   box-shadow: -25px 0 15px -3px rgba(0, 0, 0, 0.3);
-  transition: 0.4s ease-out;
+  transition: all 0.4s ease-out;
   overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
@@ -1400,7 +1385,7 @@ main section.collection .card-wrap .card:hover {
 main section.collection .card-wrap .card:hover ~ .card {
   position: relative;
   left: 50px;
-  transition: 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 main section.collection .card-wrap .card:first-child {
   box-shadow: none;
@@ -1408,8 +1393,7 @@ main section.collection .card-wrap .card:first-child {
 main section.collection .card-wrap .card a, main section.collection .card-wrap .card img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main section.facility .banner-box-wrap {
   position: relative;
@@ -1865,4 +1849,4 @@ footer #banner-box {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}/*# sourceMappingURL=index.css.map */
+}

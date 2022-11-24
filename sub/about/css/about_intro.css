@@ -183,15 +183,6 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-@-webkit-keyframes slideup {
-  from {
-    margin-top: 100vh;
-    visibility: visible;
-  }
-  to {
-    margin-top: 0;
-  }
-}
 @keyframes slideup {
   from {
     margin-top: 100vh;
@@ -199,14 +190,6 @@ h6 {
   }
   to {
     margin-top: 0;
-  }
-}
-@-webkit-keyframes slidedown {
-  from {
-    margin-top: 0;
-  }
-  to {
-    margin-top: 100vh;
   }
 }
 @keyframes slidedown {
@@ -218,12 +201,10 @@ h6 {
   }
 }
 .slide-in {
-  -webkit-animation: slideup 0.5s ease forwards;
-          animation: slideup 0.5s ease forwards;
+  animation: slideup 0.5s ease forwards;
 }
 .slide-in.silde-out {
-  -webkit-animation: slidedown 0.5s ease;
-          animation: slidedown 0.5s ease;
+  animation: slidedown 0.5s ease;
 }
 .slide-in header {
   position: relative;
@@ -406,16 +387,7 @@ h6 {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -1090,4 +1062,4 @@ h6 {
   .slide-in main section.mi-wrap .mi .mi-type > .row-type .row-view .mi-grid > img {
     width: 562px;
   }
-}/*# sourceMappingURL=about_intro.css.map */
+}
