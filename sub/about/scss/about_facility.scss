@@ -13,7 +13,7 @@ header {
 }
 
 main {
-    overflow-x: hidden; /////////
+    // overflow-x: hidden; 
 
     .tabmenu-wrap{
 
@@ -224,7 +224,7 @@ main {
                 p:first-of-type {
                     @include gothic_font(semibold, 28px);
                     text-align: center;
-                    margin: 30px 0 10px;
+                    margin: 30px 0 20px;
                     
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold, 56px);  
@@ -255,8 +255,7 @@ main {
                     @include responsive(pc-screens) {
                         position: relative;
                         top:-270px; left:620px;
-                        text-align: left; 
-                        line-height: 46px; 
+                        text-align: left;
                         @include gothic_font(regular,22px);       
                     }
                 }
@@ -383,7 +382,7 @@ main {
                 p:first-of-type {
                     @include gothic_font(semibold,28px);
                     text-align: center;
-                    margin: 30px 0 10px;
+                    margin: 30px 0 20px;
 
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,56px);  
@@ -401,7 +400,6 @@ main {
                         position: relative;
                         top:-250px; left:-620px;
                         text-align: right; 
-                        line-height: 46px; 
                         @include gothic_font(regular,22px);       
                     }
                 }
@@ -528,8 +526,7 @@ main {
                 p:first-of-type {
                     @include gothic_font(semibold,28px);
                     text-align: center;
-                    margin: 30px 0 10px;
-
+                    margin: 30px 0 20px;
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,56px);  
                         position: relative;
@@ -546,8 +543,7 @@ main {
                     @include responsive(pc-screens) {
                         position: relative;
                         top:-270px; left:580px;
-                        text-align: left; 
-                        line-height: 46px; 
+                        text-align: left;  
                         @include gothic_font(regular,22px);       
                     }
 
@@ -853,11 +849,10 @@ main {
                             
                             .type {
                                 @include gothic_font(bold,16px);
-                                margin-right: 14px;
+                                margin-right: 5px;
 
                                 @include responsive(pc-screens) {
-                                    @include gothic_font(bold,24px);
-                                    margin-right: 28px;  
+                                    @include gothic_font(bold,24px);  
                                 }
     
                             }
@@ -961,7 +956,6 @@ main {
     
                         &:nth-of-type(2) {
                             @include content_align(justify);
-                                margin-bottom: 67px;
     
                                 @include responsive(pc-screens) {
                                     font-size: 20px;
@@ -971,19 +965,29 @@ main {
                                 @include gothic_font(semibold,18px);
 
                                 @include responsive(pc-screens) {
-                                    @include gothic_font(semibold,22px);
+                                    @include gothic_font(semibold,20px);
                                     line-height: 40px;
                                 }
                             }
                         }
                         
+                        &:last-of-type {
+                            margin:0px 0 60px 0;
+                            font-size: 14px;
+
+                            @include responsive(pc-screens) {
+                                font-size: 16px;
+                                
+                            }
+                        }
+                        
                         span {
                             @include gothic_font(bold,26px);
-                            margin-right: 14px;
+                            margin-right: 5px;
 
                             @include responsive(pc-screens) {
                                 @include gothic_font(bold,36px);
-                                margin-right: 28px;  
+ 
                             }
     
                         }
@@ -1022,7 +1026,7 @@ main {
                 .others {
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-2360px; left:750px;
+                        top:-2330px; left:750px;
 
                         width:46.52777777777778%;
                     }
@@ -1084,7 +1088,7 @@ main {
 
                     @include responsive(pc-screens) {
                         height:650px;
-                        margin-top: 70px;
+                        margin-top: 120px;
                     }
                 }
                 
@@ -1097,7 +1101,7 @@ main {
 
                     @include responsive(pc-screens) {
                         position: absolute;
-                        top:60px;
+                        top:110px;
                         left:490px;
                         width:587px;
                         height:1028px;
@@ -1114,7 +1118,7 @@ main {
 
                     @include responsive(pc-screens) {
                         left:665px;
-                        top:530px; 
+                        top:580px; 
                         margin-left: 0px;
                         @include gothic_font(bold,46px);
                         line-height: 68px;
@@ -1132,7 +1136,7 @@ main {
 
                     @include responsive(pc-screens) {
                         left:660px;
-                        top:600px;
+                        top:640px;
                         margin-left: 0px;
                         @include gothic_font(light,20px);
                     }
@@ -1154,7 +1158,7 @@ main {
                     @include responsive(pc-screens) {
                         position: absolute;
                         left:1100px;
-                        top:200px;
+                        top:300px;
                         display: block;
                         color:#fff;
                         line-height: 28px;        
@@ -1185,11 +1189,11 @@ main {
                     }
 
                     @include responsive(pc-screens) {
-                        @include gothic_font(light,20px);
+                        font-size: 20px;
                         line-height: 40px;
                         margin-left: 0px;
                         left:490px;
-                        top:680px;
+                        top:700px;
                     }
                 }
             }
@@ -1255,12 +1259,13 @@ main {
 
                             &:first-of-type {
                                 @include gothic_font(semibold,24px);
-                                margin-top: 24px;
+                                margin-top: 40px;
                                 margin-bottom: 12px;
 
                                 @include responsive(pc-screens) {
                                     @include gothic_font(semibold,32px);
-                                    line-height:54px;
+                                    line-height:20px;
+                                    margin-top: 60px;
                                 }
                             }
 
@@ -1268,11 +1273,12 @@ main {
                                 @include gothic_font(regular);
                                 @include content_align(center, 1.5em);
                                 color: $bk2;
-                                margin-bottom: 60px;
+                                margin-bottom: 40px;
 
                                 @include responsive(pc-screens) {
-                                    @include gothic_font(light,24px);
+                                    @include gothic_font(regular,24px);
                                     line-height:54px;
+                                    margin-bottom: 60px;
                                 }
                             }
                         }
