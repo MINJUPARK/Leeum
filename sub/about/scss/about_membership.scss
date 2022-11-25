@@ -33,16 +33,75 @@ main {
         }
     }
     
-    @include tab_menu();
+    // @include tab_menu();
+
+    .tabmenu-wrap{
+
+        .tab-nav{
+            display:table;
+            width:100%;
+            .nav{
+                display:table-cell;
+                width:50px;
+                a{
+                    transition:.4s;
+                    position: relative;
+                    display:block;
+                    @include gothic_font(medium, 18px);
+                    color: $bk3;
+                    text-align:center;
+                    border-bottom: 1px solid $bk5;
+                    height:40px;
+
+                    @include responsive(tablet-screens) {
+                        height: 50px;
+                        font-size: 24px;
+                    }
+
+                &:after{
+                        content:"";
+                        transition:.4s;
+                        width:0px;
+                    }
+                }
+                
+            &.on{
+                    a{
+                        color:#000;
+                        @include gothic_font(bold, 18px);
+
+                        &:after{
+                            content:"";
+                            position:absolute;
+                            bottom:-1px;
+                            left:0;
+                            right:0;
+                            margin:0 auto;
+                            width:100%;
+                            height:2px;
+                            background-color: #000;
+                        }
+
+                        @include responsive(tablet-screens) {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tab-con{
+            padding-top: 60px;
+
+            .con-box{
+                display:none;
+            }
+        }
+    }
 
     .membership-wrap,
     .gift-membership-wrap {
-        margin-top: 80px;
-
-        @include responsive(pc-screens) {
-            margin-top: 160px;
-        }
-
+        
         .table {
             margin-top: 40px;
             
@@ -63,7 +122,7 @@ main {
                         bottom: 30px;
                         left: 20px;
                     }
-                    border-top: 2px solid $bk4;
+                    border-top: 2px solid $bk5;
                     background-color: $bk6;
                     
                     @include responsive(pc-screens) {
@@ -82,12 +141,12 @@ main {
                 .tbody {
                     @include flex_between_center();
                     flex-wrap: wrap;
-                    border-top: 1px solid $bk4;
+                    border-top: 1px solid $bk5;
                     
                     @include responsive(pc-screens) {
                         width: calc(1200px / 1400px) * 100%;
-                        border-top: 2px solid $bk4;
-                        border-left: 1px solid $bk4;
+                        border-top: 2px solid $bk5;
+                        border-left: 1px solid $bk5;
                     }
                     
                     img {
@@ -150,7 +209,7 @@ main {
                                 height: 44px;
                                 line-height: 44px;
                                 margin: 26px auto 0;
-                                box-shadow: inset 0 0 0 1px $bk4;
+                                box-shadow: inset 0 0 0 1px $bk5;
                                 border-radius: 5px;
                                 
                                 transition: background-color 0.7s;
@@ -168,12 +227,12 @@ main {
                         } // .td1, .td2
                         
                         &.td2 {
-                            border-left: 1px solid $bk4;
+                            border-left: 1px solid $bk5;
                         }
                         
                         &.td3 {
                             width: 100%;
-                            border-top: 1px solid $bk4;
+                            border-top: 1px solid $bk5;
                         }
 
                         p { // low line height
@@ -207,6 +266,14 @@ main {
         } // table
     } // membership-wrap, gift-membership-wrap
         
+    .gift-membership-wrap{
+        margin-top: 80px;
+
+        @include responsive(pc-screens) {
+            margin-top: 160px;
+        }
+    }
+
     .membership-wrap {
 
         .membership {

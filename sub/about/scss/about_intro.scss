@@ -10,12 +10,14 @@
     from {
         // transform: translateY(100%);
         margin-top: 100vh;
+        opacity: 0;
         visibility: visible;
     }
     
     to {
         // transform: translateY(0%);
         margin-top: 0;
+        opacity: 1;
     }
 }
 
@@ -23,20 +25,28 @@
     from {
         // transform: translateY(0%);
         margin-top: 0;
+        opacity: 1;
         // visibility: visible;
+    }
+
+    70% {
+        opacity: 0.1;
     }
     
     to {
         // transform: translateY(100%);
         margin-top: 100vh;
+        opacity: 0;
     }
 }
 
 .slide-in {
     animation: slideup 0.5s ease forwards;
-    
+    transition: all 0.5s;    
+
     &.silde-out {
-        animation: slidedown 0.5s ease;
+        animation: slidedown 0.4s cubic-bezier(0, .75, .1 , 1);
+        // animation: slidedown 0.4s linear;
     }
 
     header {
@@ -58,7 +68,8 @@
                 display: block;
                 width: 25px; height: 25px;
                 cursor: pointer;
-                background: url(../../../image/icon_close.svg) no-repeat;
+                filter: $svg-black;
+                z-index: 20;
                 
                 transition: transform 0.7s;
                 

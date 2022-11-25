@@ -183,28 +183,62 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-@keyframes slideup {
+@-webkit-keyframes slideup {
   from {
     margin-top: 100vh;
+    opacity: 0;
     visibility: visible;
   }
   to {
     margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes slideup {
+  from {
+    margin-top: 100vh;
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slidedown {
+  from {
+    margin-top: 0;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  to {
+    margin-top: 100vh;
+    opacity: 0;
   }
 }
 @keyframes slidedown {
   from {
     margin-top: 0;
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.1;
   }
   to {
     margin-top: 100vh;
+    opacity: 0;
   }
 }
 .slide-in {
-  animation: slideup 0.5s ease forwards;
+  -webkit-animation: slideup 0.5s ease forwards;
+          animation: slideup 0.5s ease forwards;
+  transition: all 0.5s;
 }
 .slide-in.silde-out {
-  animation: slidedown 0.5s ease;
+  -webkit-animation: slidedown 0.4s cubic-bezier(0, 0.75, 0.1, 1);
+          animation: slidedown 0.4s cubic-bezier(0, 0.75, 0.1, 1);
 }
 .slide-in header {
   position: relative;
@@ -387,7 +421,16 @@ h6 {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -571,7 +614,8 @@ h6 {
   width: 25px;
   height: 25px;
   cursor: pointer;
-  background: url(../../../image/icon_close.svg) no-repeat;
+  filter: brightness(0) saturate(100%);
+  z-index: 20;
   transition: transform 0.7s;
 }
 @media screen and (min-width: 768px) {
@@ -1062,4 +1106,4 @@ h6 {
   .slide-in main section.mi-wrap .mi .mi-type > .row-type .row-view .mi-grid > img {
     width: 562px;
   }
-}
+}/*# sourceMappingURL=about_intro.css.map */

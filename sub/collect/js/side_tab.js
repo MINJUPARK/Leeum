@@ -5,12 +5,12 @@ $(function() {
         var $all_tab= $this.parents('.tab-wrap').find('.tab');
 
         
-        // 재질
-        if($this.parents('type-box')) {
-            var $tab_contents = $this.parents('.side-tab').find('.con-box');
+        // 재질, 관람안내
+        if($this.parents('.type-box') || $this.parents('.floor-select-group')) {
+            var $tab_contents = $this.parents('.side-tab').find('.side-con-box');
     
-            $all_tab.removeClass('on');
-            $this.addClass('on');
+            $all_tab.removeClass('selected');
+            $this.addClass('selected');
             $tab_contents.find('li').removeClass('view');
             $tab_contents.find(`li:eq(${$index})`).addClass('view');
         }
