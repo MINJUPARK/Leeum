@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -670,7 +679,7 @@ main .container .info {
 }
 @media screen and (min-width: 1440px) {
   main .container .info {
-    width: 31.3333333333%;
+    width: 30%;
     float: right;
     margin-top: 82px;
   }
@@ -685,7 +694,7 @@ main .container .info table .des td:first-child {
 }
 @media screen and (min-width: 1440px) {
   main .container .info table .des td:first-child {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
   }
 }
@@ -697,7 +706,7 @@ main .container .info table .des td:last-child {
 }
 @media screen and (min-width: 1440px) {
   main .container .info table .des td:last-child {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
   }
 }
@@ -720,13 +729,14 @@ main .container .symbol h3 {
 main .container .symbol p {
   font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
+  text-align: left;
+  line-height: 2em;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main .container .symbol p {
     width: 55.8333333333%;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 40px;
   }
@@ -788,6 +798,8 @@ main .container .detail .material .material-detail h4 {
   }
 }
 main .container .detail .material .material-detail p {
+  text-align: left;
+  line-height: 2em;
   color: #3c3c3c;
 }
 main .container .detail .material .material-detail p:first-of-type {
@@ -806,13 +818,11 @@ main .container .detail .material .material-detail p:last-of-type {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 65px;
-  line-height: 26px;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .material .material-detail p:last-of-type {
     font-size: 22px;
     font-weight: 400;
-    line-height: 44px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -859,6 +869,8 @@ main .container .detail .lobby .lobby-detail h4 {
   }
 }
 main .container .detail .lobby .lobby-detail p {
+  text-align: left;
+  line-height: 2em;
   color: #3c3c3c;
 }
 main .container .detail .lobby .lobby-detail p:first-of-type {
@@ -877,13 +889,11 @@ main .container .detail .lobby .lobby-detail p:last-of-type {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 65px;
-  line-height: 26px;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .lobby .lobby-detail p:last-of-type {
     font-size: 22px;
     font-weight: 400;
-    line-height: 44px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -930,6 +940,8 @@ main .container .detail .rotunda .rotunda-detail h4 {
   }
 }
 main .container .detail .rotunda .rotunda-detail p {
+  text-align: left;
+  line-height: 2em;
   color: #3c3c3c;
 }
 main .container .detail .rotunda .rotunda-detail p:first-of-type {
@@ -948,13 +960,11 @@ main .container .detail .rotunda .rotunda-detail p:last-of-type {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 65px;
-  line-height: 26px;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .rotunda .rotunda-detail p:last-of-type {
     font-size: 22px;
     font-weight: 400;
-    line-height: 44px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1001,6 +1011,8 @@ main .container .detail .display-area .display-area-detail h4 {
   }
 }
 main .container .detail .display-area .display-area-detail p {
+  text-align: left;
+  line-height: 2em;
   color: #3c3c3c;
 }
 main .container .detail .display-area .display-area-detail p:first-of-type {
@@ -1019,13 +1031,11 @@ main .container .detail .display-area .display-area-detail p:last-of-type {
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 65px;
-  line-height: 26px;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .display-area .display-area-detail p:last-of-type {
     font-size: 22px;
     font-weight: 400;
-    line-height: 44px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1101,16 +1111,16 @@ main .container .constructor-info .detail {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background-color: #f3f3f3;
-  height: 197px;
+  height: 217px;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail {
-    width: 440px;
+    width: 460px;
     height: 100%;
     float: left;
-    margin-top: 50px;
-    margin-bottom: 180px;
-    margin-right: 40px;
+    margin-top: 30px;
+    margin-bottom: 120px;
+    margin-right: 20px;
     height: 250px;
   }
 }
@@ -1124,7 +1134,7 @@ main .container .constructor-info .detail table .detail-des td:first-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail table .detail-des td:first-of-type {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     padding-top: 30px;
   }
@@ -1132,14 +1142,22 @@ main .container .constructor-info .detail table .detail-des td:first-of-type {
 main .container .constructor-info .detail table .detail-des td:last-of-type {
   font-size: 15px;
   font-weight: 400;
-  padding-top: 26px;
+  padding-top: 24px;
   color: #5b5b5b;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail table .detail-des td:last-of-type {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     padding-top: 30px;
+  }
+}
+main .container .constructor-info .detail table .detail-des td:last-of-type .ex {
+  line-height: 24px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .detail table .detail-des td:last-of-type .ex {
+    line-height: 28px;
   }
 }
 main .container .constructor-info .simple p {
@@ -1155,7 +1173,7 @@ main .container .constructor-info .simple p {
     font-family: "KoPub Batang";
     font-size: 35px;
     font-weight: 400;
-    line-height: 76px;
+    line-height: 40px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1180,24 +1198,22 @@ main .container .constructor-info .simple p {
   }
 }
 main .container .constructor-info .constructor-detail .detail-left p {
-  line-height: 26px;
+  text-align: left;
+  line-height: 2em;
+  color: #3c3c3c;
   font-size: 16px;
   font-weight: 400;
-  color: #3c3c3c;
-  text-align: left;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:first-of-type {
     font-size: 18px;
     font-weight: 400;
-    line-height: 44px;
   }
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) {
     font-size: 18px;
     font-weight: 400;
-    line-height: 44px;
   }
 }
 main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) span {
@@ -1217,7 +1233,6 @@ main .container .constructor-info .constructor-detail .detail-left p:nth-of-type
   main .container .constructor-info .constructor-detail .detail-left p:last-of-type {
     font-size: 18px;
     font-weight: 400;
-    line-height: 44px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1228,7 +1243,8 @@ main .container .constructor-info .constructor-detail .detail-left p:nth-of-type
 }
 main .container .constructor-info .constructor-detail .detail-right p {
   text-align: left;
-  line-height: 26px;
+  line-height: 2em;
+  color: #3c3c3c;
   font-size: 16px;
   font-weight: 400;
 }
@@ -1236,7 +1252,6 @@ main .container .constructor-info .constructor-detail .detail-right p {
   main .container .constructor-info .constructor-detail .detail-right p {
     font-size: 18px;
     font-weight: 400;
-    line-height: 44px;
   }
 }
 main .container .constructor-info .faq h4 {
@@ -1277,7 +1292,7 @@ main .container .constructor-info .faq ul .faq-detail a img {
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .faq ul .faq-detail a img {
-    top: 5px;
+    top: 10px;
   }
 }
 main .container .constructor-info .faq ul .faq-detail .answer {
@@ -1611,4 +1626,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=about_facility_detail.css.map */
