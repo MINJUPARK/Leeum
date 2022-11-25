@@ -11,11 +11,76 @@ header {
     @include header_sub();
 
     @include full_bg('guide_header.png');
+    // margin-bottom: 0;
 }
 
 main {
-    @include tab_menu();
-    
+    // @include tab_menu();
+    .tabmenu-wrap{
+
+        .tab-nav{
+            display:table;
+            width:100%;
+            .nav{
+                display:table-cell;
+                width:50px;
+                a{
+                    transition:.4s;
+                    position: relative;
+                    display:block;
+                    @include gothic_font(medium, 18px);
+                    color: $bk3;
+                    text-align:center;
+                    border-bottom: 1px solid $bk5;
+                    height:40px;
+
+                    @include responsive(tablet-screens) {
+                        height: 50px;
+                        font-size: 24px;
+                    }
+
+                &:after{
+                        content:"";
+                        transition:.4s;
+                        width:0px;
+                    }
+                }
+                
+            &.on{
+                    a{
+                        color:#000;
+                        @include gothic_font(bold, 18px);
+
+                        &:after{
+                            content:"";
+                            position:absolute;
+                            bottom:-1px;
+                            left:0;
+                            right:0;
+                            margin:0 auto;
+                            width:100%;
+                            height:2px;
+                            background-color: #000;
+                        }
+
+                        @include responsive(tablet-screens) {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tab-con{
+            padding-top: 60px;
+
+            .con-box{
+                display:none;
+            }
+        }
+    }
+
+
     .m-br {
         @include responsive(pc-screens) {
             display: none;
@@ -30,13 +95,7 @@ main {
     }
     
     .fee-time-wrap {
-        // display: none;
-        margin-top: 90px;
         
-        @include responsive(pc-screens) {
-            margin-top: 160px;
-        }
-
         .fee-time > div {
             margin-bottom: 60px;
     
@@ -69,13 +128,10 @@ main {
             h3 {
                 font-size: calc(1em + 4px);
                 margin-bottom: 20px ;
-                // padding-left: 20px;
-                // border-left: 3px solid $red-brown;
     
                 @include responsive (tablet-screens) {
                     height: 34px;
                     margin-bottom: 50px;
-                    // border-left-width: 5px;
                 }
             }
 
@@ -101,13 +157,13 @@ main {
                 table {
                     width: 100%;
                     border-collapse: collapse;
-                    border-top: 1px solid $bk2;
-                    border-bottom: 1px solid $bk2;
+                    border-top: 1px solid $bk3;
+                    border-bottom: 1px solid $bk3;
                     
     
                     th, td {
                         padding: 20px 0;
-                        border-left: 1px solid $bk4;
+                        border-left: 1px solid $bk5;
 
                         @include responsive (tablet-screens) {
                             padding: 30px 0;
@@ -145,7 +201,7 @@ main {
                     td {
                         text-align: center;
                         font-size: calc(1em - 2px);
-                        border-top: 1px solid $bk4;
+                        border-top: 1px solid $bk5;
                     }
                 }
             } // fee
@@ -157,16 +213,15 @@ main {
                     ul {
 
                         li {
+                            @include content_align(left, 2em);
                             padding-left: 11px;
                             margin-bottom: 20px;
                             font-size: calc(1em - 2px);
-                            line-height: calc(1em - 2px + 10px);
                             background: url(../image/icon_bullet_dot.svg) no-repeat left 0.7em;
                             background-size: 2px;
                             
                             @include responsive(tablet-screens) {
                                 padding-left: 14px;
-                                margin-bottom: 30px;
                                 font-size: 20px;
                             }
                         }
@@ -223,7 +278,7 @@ main {
                     position: relative;
                     display: flex;
                     justify-content: space-between;
-                    border-top: 1px solid $bk4;
+                    border-top: 1px solid $bk5;
 
                     @include responsive (pc-screens) {
                         flex-wrap: wrap;
@@ -240,7 +295,7 @@ main {
                         span {
                             display: block;
                             width: 1px; height: 100%;
-                            background-color: $bk4;
+                            background-color: $bk5;
                         }
                         .line1,
                         .line4 {
@@ -269,7 +324,7 @@ main {
                             position: relative;
                             width: 100%;
                             height: 210px;
-                            border-bottom: 1px solid $bk4;
+                            border-bottom: 1px solid $bk5;
 
                             @include responsive(tablet-screens) {
                                 height: auto;
@@ -301,20 +356,20 @@ main {
                                     }
                                     
                                     img {
-
-                                        &:first-child {
+                                        
+                                        &:first-child { // 아이콘
                                             @include element_center();
-                                            // height: 49px;
                                             height: 64.47368421052632%;
                                         }
                                         
-                                        &:nth-child(2) {
+                                        &:nth-child(2) { // 금지 아이콘
                                             position: absolute;
                                             left: 0; top: 0;
                                         }
                                     }
+                                    
                                 } // note-img
-
+                                
                                 p {
                                     @include gothic_font(medium, 1em);
                                     width: 156px;
@@ -323,13 +378,37 @@ main {
                                     
                                     @include responsive (tablet-screens) {
                                         width: 310px;
-                                        line-height: 2em;
+                                        line-height: 1.5em;
                                         font-size: 22px;
                                         margin-top: 40px;
                                     }
                                 }
                             } // note-con
                         } // note-item
+
+                        &:nth-child(2) { 
+
+                            .note-item:first-child { // 손 아이콘 박스
+
+                                img:first-child {
+                                    margin-left: -2px;
+                                    
+                                    @include responsive(pc-screens) {
+                                        margin-left: -2px;
+                                    }
+                                }
+                            }       
+                        }
+
+                        &:last-child { 
+
+                            .note-item:first-child { // 소음 아이콘 박스
+
+                                img:first-child {
+                                    height: 57%;
+                                }
+                            }       
+                        }
                     } // note-group
                 } // note-flex
             } // please-note
@@ -337,7 +416,6 @@ main {
     } // fee-time-wrap
 
     .vr-floor-info-wrap {
-        // display: none;
 
         h3 {
             text-align: center;  
@@ -352,20 +430,10 @@ main {
             }
         }
 
-        section.vr,
-        section.floor-info {
-            margin-top: 80px;
-    
-            @include responsive (tablet-screens) {
-                margin-top: 160px;
-            }
-        }
-
         section.vr {
             
             .vr-txt {
                 position: relative;
-                // background-color: saddlebrown;
 
                 h3 {
                     margin-bottom: 30px;
@@ -373,7 +441,7 @@ main {
 
                 a {
                     position: absolute;
-                    right: 0; bottom: -25px;
+                    right: 0; bottom: -20px;
                     color: $yellow-brown;
 
                     img {
@@ -383,11 +451,22 @@ main {
                     }
                 }
             }
+
+            iframe {
+                width: 100%;
+                height: 80vh;
+
+                @include responsive(pc-screens) {
+                    height: 667px;
+                }
+            }
         } // vr
 
         section.floor-info {
-
+            margin-top: 80px;
+    
             @include responsive(tablet-screens) {
+                margin-top: 160px;
                 font-size: 20px;
             }
 
@@ -396,11 +475,19 @@ main {
             }
             
             > div {
-                margin-bottom: 70px;
-
+                margin-bottom: 100px;
+                
                 @include responsive(tablet-screens) {
                     display: flex;
                     justify-content: space-between;
+                }
+                
+                @include responsive(tablet-screens) {
+                    margin-bottom: 150px;
+                }
+
+                &.cultural-center > .floor-select-group > .group-option { 
+                    display: block;
                 }
 
                 .floor-select-group {
@@ -441,8 +528,10 @@ main {
                             }
                         }
 
-                        img {
-                            width: 12px / 350px * 100%;
+                        .dropdown {
+                            @include icon_rotate(180deg);
+                            width: 15px / 350px * 100%;
+                            cursor: pointer;
     
                             @include responsive(tablet-screens) {
                                 display: none;
@@ -451,10 +540,11 @@ main {
                     } // group-title
 
                     .group-option {
-                        margin-bottom: 30px;
-
-                        // height: 0;
-                        // visibility: hidden;
+                        display: none;
+                        
+                        @include responsive(tablet-screens) {
+                            display: block;
+                        }
                         
                         li {
                             height: 52px;
@@ -477,7 +567,7 @@ main {
                                 font-size: 28px;
                             }
                             
-                            &:hover {
+                            &.selected {
                                 font-weight: 600;
                                 color: #000;
                                 background-color: $bk6;
@@ -511,12 +601,22 @@ main {
                 } // floor-select-group
 
                 .floor-con-group {
+                    margin-top: 30px;
 
                     @include responsive(tablet-screens) {
                         width: calc(800px / 1440px * 100%);
                     }
                     
-                    ul { li {display: none;} .selected {display: block} }
+                    ul { 
+                        
+                        li {
+                            display: none;
+
+                            &.view {
+                                display: block;
+                            } 
+                        } 
+                    }
                     
                     .floor-img {
                         
@@ -573,11 +673,14 @@ main {
                         }
 
                         p {
-                            margin-top: 10px;
-                            margin-left: 40px / 350px * 100%;
-                            margin-right: 60px / 350px * 100%;
+                            @include content_align(left, 2em);
+                            height: 40px;
+                            margin: {
+                                top: 15px;
+                                left: 40px / 350px * 100%;
+                                right: 60px / 350px * 100%;
+                            }
                             font-size: calc(1em - 2px);
-                            line-height: calc(1em - 2px + 10px);
                         }
                     } // floor-txt
                 } // floor-con-group
@@ -586,25 +689,15 @@ main {
     } // vr-floor-wrap
 
     section.digital-guide-did-wrap {
-        // display: none;
-
         overflow: hidden;
-        margin-top: 70px;
-        text-align: center;
         word-break: keep-all; // 단어를 기준으로 줄바꿈
         // background-color: wheat;
         
         @include responsive(tablet-screens) {
             font-size: 20px;
-            margin-top: 100px;
         }
         
-        @include responsive(pc-screens) {
-            text-align: left;
-            margin-top: 190px;
-        }
-        
-        h3, h4 { @include responsive(pc-screens) { text-align: center; } }
+        h3, h4 { text-align: center; }
         
         h3 { 
             font-size: calc(1em + 10px);
@@ -623,12 +716,26 @@ main {
 
         img { 
             width: 100%;
-            border-radius: 20px; 
+            border-radius: 20px;
         }
 
         strong, h5 {
             font-size: calc(1em + 1.538461538vw);
+            text-align: center;
             line-height: 2em;
+
+            @include responsive(pc-screens) {
+                text-align: left;
+            }
+        }
+
+        p {
+            @include content_align(center, 2em);
+            font-size: calc(1em - 2px);
+            
+            @include responsive(pc-screens) {
+                text-align: left;
+            }
         }
 
         section.digital-guide {
@@ -637,19 +744,12 @@ main {
                 @include responsive(pc-screens) { font-size: 32px; };
             }
 
-            p, .p {
-                font-size: calc(1em - 2px);
-                line-height: calc(1em - 2px + 10px);
-                color: $bk1;
-            }
-
             .guide-intro-wrap {
                 
                 .guide-intro {
                     
                     @include responsive(pc-screens) {
-                        display: flex;
-                        justify-content: space-between;
+                        @include flex_between();
                     }
     
                     .guide-intro-img {
@@ -662,7 +762,6 @@ main {
     
                     .guide-intro-txt {
                         margin-top: 30px; 
-                        // background-color: dodgerblue;
     
                         @include responsive(pc-screens) {
                             order: 1;
@@ -684,10 +783,10 @@ main {
                             @include responsive(pc-screens) {
                                 line-height: 32px;
                             }
-
+                            
                             span {
-                                color: $red-brown;
                                 @include gothic_font(semibold);
+                                color: $red-brown;
                             }
                         }
                     } // guide-intro-txt
@@ -753,12 +852,13 @@ main {
                         
                         span {
                             display: block;
+                            text-align: center;
                             font-size: calc(1em + 2px);
                             color: $red-brown;
-                            // background-color: aquamarine;
 
                             @include responsive(pc-screens) {
-                                font-size: 26px; 
+                                text-align: left;
+                                font-size: 26px;
                             }
                         }
 
@@ -779,9 +879,11 @@ main {
                         }
                         
                         .p {
-                            // background-color: aquamarine;
+                            @include content_align(center, 2em);
+                            font-size: calc(1em - 2px);
 
                             @include responsive(pc-screens) {
+                                text-align: left;
                                 line-height: 36px;
                             }
                         }
@@ -814,22 +916,16 @@ main {
             } // guide-point-wrap 
         } // section.digital-guide
 
-        .did {
+        section.did {
+            
+            @include responsive(pc-screens) {
+                margin-top: 250px;
+            }
 
-            strong {
+            strong, h5 {
                 @include responsive(pc-screens) { 
                     margin-bottom: 20px;
                     font-size: 34px; 
-                }
-            }
-
-            p {
-                font-size: calc(1em - 2px);
-                line-height: calc(1em - 2px + 10px);
-                color: $bk1;
-
-                @include responsive(pc-screens) {
-                    line-height: 40px;
                 }
             }
 
@@ -844,8 +940,7 @@ main {
                 .awards-flex {
                     
                     @include responsive(pc-screens) {
-                        display: flex;
-                        justify-content: space-between;
+                        @include flex_between();
                     }
 
                     .awards-txt {
@@ -871,6 +966,7 @@ main {
                         }
                         
                         p {
+                            text-align: left;
                             margin-top: 30px / 350px * 100%;
                             color: #fff;
                             
@@ -926,14 +1022,10 @@ main {
                     display: block;
                     margin-bottom: 20px;
 
-                    // @include responsive(pc-screens) {
-                    //     margin-bottom: 40px;
-                    // }
                 }
 
                 p {
                     margin-bottom: 40px;
-                    // background-color: violet;
                 }
             }
             

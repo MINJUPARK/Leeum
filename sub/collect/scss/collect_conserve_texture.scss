@@ -226,7 +226,7 @@ main {
                     margin-top: 90px;
                     
                     @include responsive(pc-screens) {
-                        margin-top: 80px;
+                        margin-top: 170px;
                         padding: 55px 120px;
                         box-shadow: inset 0 0 0 1px $bk4;
                     }

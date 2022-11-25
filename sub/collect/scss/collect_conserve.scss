@@ -182,6 +182,7 @@ main {
                             a {
 
                                 h4 {
+                                    @include gothic_font(medium, 24px);
                                     bottom: 50px;
                                 }
 

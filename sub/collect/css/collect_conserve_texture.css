@@ -853,7 +853,7 @@ main .conservation-method-wrap .conservation-method ul.method-list li {
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li {
-    margin-top: 80px;
+    margin-top: 170px;
     padding: 55px 120px;
     box-shadow: inset 0 0 0 1px #c5c5c5;
   }
