@@ -220,11 +220,8 @@ h6 {
 }
 @keyframes slidedown {
   from {
-    margin-top: 0;
+    margin-top: 100;
     opacity: 1;
-  }
-  70% {
-    opacity: 0.1;
   }
   to {
     margin-top: 100vh;
@@ -421,16 +418,7 @@ h6 {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -614,7 +602,6 @@ h6 {
   width: 25px;
   height: 25px;
   cursor: pointer;
-  filter: brightness(0) saturate(100%);
   z-index: 20;
   transition: transform 0.7s;
 }
@@ -627,6 +614,9 @@ h6 {
   }
 }
 .slide-in header #close a:hover {
+  transform: rotate(360deg);
+}
+.slide-in header #close a.end {
   transform: rotate(360deg);
 }
 .slide-in main {
@@ -1106,4 +1096,4 @@ h6 {
   .slide-in main section.mi-wrap .mi .mi-type > .row-type .row-view .mi-grid > img {
     width: 562px;
   }
-}/*# sourceMappingURL=about_intro.css.map */
+}

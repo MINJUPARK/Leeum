@@ -169,14 +169,44 @@ main {
 
                     li {
                         display: none;
+                        width: 100%;
+                        aspect-ratio: 10 / 7;
+                        background-color: darkblue;
+                        // max-height: 50vh;
                         
                         &.view {
+                            position: relative;
                             display: block;
-                        }
 
-                        img {
-                            width: 100%;
-                        }
+                            img {
+                                width: 100%;
+                            }
+
+                            .img-l {
+                                background: {
+                                    image: url("../image/conserve_texture_damage\(0\).png"); repeat: no-repeat;
+                                    color: #fff;
+                                }
+                                width: 250px;
+                                height: 250px;
+                                box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+                                pointer-events: none;
+                                position: absolute;
+                                border: 4px solid #efefef;
+                                z-index: 99;
+                                border-radius: 100%;
+                                display: block;
+                                /* transform: scale(0); */
+                                opacity: 0;
+                                transition: opacity 0.2s;
+                            }
+
+                            &:hover .img-l, 
+                            &:active .img-l {
+                            /* transform: scale(1); */
+                            opacity: 1;
+                            }
+                        }                         
                     }
                 } // ul.type-img
 

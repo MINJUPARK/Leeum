@@ -9,7 +9,7 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_map.jpg');
+    @include full_bg('map_header.png');
 }
 
 main {

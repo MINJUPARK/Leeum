@@ -24,19 +24,15 @@
 @keyframes slidedown {
     from {
         // transform: translateY(0%);
-        margin-top: 0;
+        margin-top: 100;
         opacity: 1;
-        // visibility: visible;
-    }
-
-    70% {
-        opacity: 0.1;
     }
     
     to {
         // transform: translateY(100%);
         margin-top: 100vh;
         opacity: 0;
+        // visibility: visible;
     }
 }
 
@@ -45,8 +41,8 @@
     transition: all 0.5s;    
 
     &.silde-out {
-        animation: slidedown 0.4s cubic-bezier(0, .75, .1 , 1);
-        // animation: slidedown 0.4s linear;
+        // animation: slidedown 0.4s cubic-bezier(0, .4, .1 , .8);
+        animation: slidedown 0.4s ease-out;
     }
 
     header {
@@ -68,7 +64,7 @@
                 display: block;
                 width: 25px; height: 25px;
                 cursor: pointer;
-                filter: $svg-black;
+                // filter: $svg-black;
                 z-index: 20;
                 
                 transition: transform 0.7s;
@@ -79,6 +75,10 @@
                 }
                 
                 &:hover {
+                    transform: rotate(360deg);
+                }
+                
+                &.end {
                     transform: rotate(360deg);
                 }
             }

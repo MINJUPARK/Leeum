@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -801,12 +792,37 @@ main .damage-type-wrap .damage-type .type-box ul.type-select li.on span {
 }
 main .damage-type-wrap .damage-type .type-box ul.type-img li {
   display: none;
+  width: 100%;
+  aspect-ratio: 10/7;
+  background-color: darkblue;
 }
 main .damage-type-wrap .damage-type .type-box ul.type-img li.view {
+  position: relative;
   display: block;
 }
-main .damage-type-wrap .damage-type .type-box ul.type-img li img {
+main .damage-type-wrap .damage-type .type-box ul.type-img li.view img {
   width: 100%;
+}
+main .damage-type-wrap .damage-type .type-box ul.type-img li.view .img-l {
+  background-image: url("../image/conserve_texture_damage(0).png");
+  background-repeat: no-repeat;
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  position: absolute;
+  border: 4px solid #efefef;
+  z-index: 99;
+  border-radius: 100%;
+  display: block;
+  /* transform: scale(0); */
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+main .damage-type-wrap .damage-type .type-box ul.type-img li.view:hover .img-l, main .damage-type-wrap .damage-type .type-box ul.type-img li.view:active .img-l {
+  /* transform: scale(1); */
+  opacity: 1;
 }
 main .damage-type-wrap .damage-type .type-box ul.type-txt {
   margin-top: 22px;
@@ -1310,4 +1326,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=collect_conserve_texture.css.map */
+}

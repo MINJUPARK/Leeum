@@ -1,6 +1,6 @@
 $(function() {
 
-  // 메인 슬라이드
+  // index : 메인 동영상 슬라이드
     var $imageSlider = $(".main-slider");
     var sliderTimer = 30000;
     var total_slide = 0;
@@ -50,7 +50,7 @@ $(function() {
     });
 
 
-    // 메인 공지사항 슬라이드
+    // index : 공지사항 텍스트 슬라이드
     $('.txt-slider').slick({
       vertical: true,
       autoplay: true,
@@ -61,22 +61,40 @@ $(function() {
     });
 
 
-    // exhibition
+
+   
+
+    // exhibition : 탭 메뉴 및 전시 슬라이드
     var $swipeTabsContainer = $('.swipe-tabs'),
         $swipeTabs = $('.swipe-tab'),
         $swipeTabsContentContainer = $('.swipe-tabs-container'),
         currentIndex = 0,
         activeTabClassName = 'active-tab';
   
-      $swipeTabsContainer.on('init', function(event, slick) {
-        $swipeTabsContentContainer.removeClass('invisible');
-        $swipeTabsContainer.removeClass('invisible');
-    
-        currentIndex = slick.getCurrent();
-        $swipeTabs.removeClass(activeTabClassName);
-        $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+    $swipeTabs.on('click', function(event) {
+      currentIndex = $(this).data('slick-index');
+      $swipeTabs.removeClass(activeTabClassName);
+      $('.swipe-tab[data-slick-index=' + currentIndex +']').addClass(activeTabClassName);
+      $swipeTabsContainer.slick('slickGoTo', currentIndex);
+      $swipeTabsContentContainer.slick('slickGoTo', currentIndex);
     });
+
+    $swipeTabsContainer.on('init', function(event, slick) {
+      $swipeTabsContentContainer.removeClass('invisible');
+      $swipeTabsContainer.removeClass('invisible');
   
+      currentIndex = slick.getCurrent();
+      $swipeTabs.removeClass(activeTabClassName);
+      $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+    });
+
+    $swipeTabsContentContainer.on('swipe', function(event, slick, direction) {
+      currentIndex = $(this).slick('slickCurrentSlide');
+      $swipeTabs.removeClass(activeTabClassName);
+      $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
+    });
+    
+
     $swipeTabsContainer.slick({
       slidesToShow: 3.5,
       slidesToScroll: 5,
@@ -109,29 +127,16 @@ $(function() {
       swipe: false
     });
   
-    $swipeTabs.on('click', function(event) {
-          currentIndex = $(this).data('slick-index');
-          $swipeTabs.removeClass(activeTabClassName);
-          $('.swipe-tab[data-slick-index=' + currentIndex +']').addClass(activeTabClassName);
-          $swipeTabsContainer.slick('slickGoTo', currentIndex);
-          $swipeTabsContentContainer.slick('slickGoTo', currentIndex);
-      });
-
-      $swipeTabsContentContainer.on('swipe', function(event, slick, direction) {
-        currentIndex = $(this).slick('slickCurrentSlide');
-        $swipeTabs.removeClass(activeTabClassName);
-        $('.swipe-tab[data-slick-index=' + currentIndex + ']').addClass(activeTabClassName);
-    });
-
-
+  
     $('.swipe-tab').on('click', function() {
       $(".ehb-slider").slick("refresh");
     });
 
     $('.ehb-slider').slick({
-      dots: false,
+      dots: true,
       infinite: true,
       touchThreshold : 100,
+      autoplay: true,
       speed: 300,
       slidesToShow: 2,
       slidesToScroll: 1,

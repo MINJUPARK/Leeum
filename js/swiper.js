@@ -1,18 +1,32 @@
 $(function() {
 
-    // 터치 슬라이드 (상세 페이지 내 아이템)
+    var swiper;
+    // *_detail : 탈그리드 아이템 슬라이드
     $(window).on('load resize', function() {
 
-        var swiper = new Swiper(".mySwiper", {
+        swiper = new Swiper(".mySwiper", {
             slidesPerView: 2,
             centeredSlides: false,
             spaceBetween: '2%',
             grabCursor: true
         });
-        // const ww = $(this).width();
-        
-        // if(ww < 1440) {
-            
-        // }
     });
+
+    swiper = new Swiper('.prg-slider', {
+        spaceBetween: 30,
+        effect: 'fade',
+        loop: true,
+        // mousewheel: {
+        //   invert: false,
+        // },
+        // autoplay: {
+        //     delay: 10000,
+        //     disableOnInteraction: false,
+        //   },
+        autoHeight: true,
+        pagination: {
+          el: '.prg-slider__pagination',
+          clickable: true,
+        }
+     });
 })
