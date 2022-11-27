@@ -284,6 +284,11 @@ main {
   .title-box {
     position: relative;
     width: 100%; height: 80px;
+    margin-bottom: 40px;
+
+    @include responsive(pc-screens) {
+      margin-bottom: 80px;
+    }
 
     &.center {
       text-align: center;
@@ -300,9 +305,9 @@ main {
       }
   
       p {
-        color: $bk2;
+        margin-top: 15px;
         font-size: 14px;
-        margin-top: 10px;
+        color: $bk2;
 
         @include responsive(pc-screens) {
           font-size: 16px;
@@ -332,7 +337,13 @@ main {
   }
 
   section {
-    margin-bottom: 150px;
+    &:not(:first-child) {
+      margin-top: 75px;
+    }
+
+    @include responsive(pc-screens) {
+      margin-bottom: 150px;
+    }
   }
 
   section.infoBox {
@@ -448,6 +459,10 @@ main {
       .des {
         width: 70%;
         white-space: nowrap;
+        
+        @include responsive(pc-screens) {
+          width: calc(100% - 22.8571428571%);
+        }
 
         time {
           @include gothic_font(semibold);
@@ -468,7 +483,7 @@ main {
         }
 
         .latest {
-          width: 90%;
+          width: 95%;
           @include gothic_font(medium, 15px);
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -485,18 +500,40 @@ main {
 
   section.exhibition {
     margin-top: 75px;
-
+    
     @include responsive(pc-screens) {
       margin-top: 150px;
     }
 
     .content-box {
       @include out_container();
-      margin-top: 40px;
 
       @include responsive(pc-screens) {
         @include in_container();
-        margin-top: 80px;
+      }
+    }
+
+    .slick-dots li {
+
+      button::before {
+        content: '';
+        display: block;
+        width: 20px; height: 4px;
+        text-indent: -9999px;
+        border-radius: 3px;
+        background: $bk5;
+        overflow: hidden;
+        opacity: 1;
+        transition: background .3s;
+      }
+
+      &.slick-active {
+      
+        button::before {
+          width: 20px;
+          background: $bk1;
+          opacity: 1;
+        }
       }
     }
 
@@ -547,11 +584,11 @@ main {
         }
       }
     }
-    
+
     .ehb-slider {
 
       .slick-list {
-        padding: 40px 0 60px !important;
+        padding: 30px 0 60px !important;
       }
 
       .slick-slide {
@@ -559,8 +596,8 @@ main {
       }
 
       .slick-center .bg {
-        opacity: 1;
         transform: scale3d(1.0, 1.0, 1);
+        opacity: 1;
       }
 
       .slick-current .bg {
@@ -573,9 +610,9 @@ main {
 
       .bg {
         position: relative;
-        height: 200px;
+        height: 24vh;
         margin: 0 -125px;
-        border-radius: 20px;
+        border-radius: 15px;
         transform: scale3d(0.8, 0.8, 1);
         transition: all .3s ease-in-out;
         opacity: .2;
@@ -651,8 +688,8 @@ main {
           .loc {
             padding: 5px 12px;
             font-size: 12px;
-            border-radius: 5px;
             border: 1px solid $bk1;
+            border-radius: 5px;
             
             @include responsive(pc-screens) {
               padding: 6px 18px;
@@ -662,8 +699,7 @@ main {
         }
   
         img {
-          width: 100%;
-          height: 100%;
+          width: 100%; height: 100%;
           object-fit: cover;
         }
       }
@@ -673,11 +709,9 @@ main {
   section.collection {
   
     .art {
-      margin-top: 40px;
 
       @include responsive(pc-screens) {
         @include flex_between();
-        margin-top: 120px;
       }
 
       &.antique {
@@ -687,8 +721,11 @@ main {
       }
       
       &.modern {
+        margin-top: 60px;
+        
         @include responsive(pc-screens) {
           flex-direction: row;
+          margin-top: 120px;
 
           .text-btn-wrap, .title {
             justify-content: flex-end;
@@ -724,12 +761,10 @@ main {
                 box-shadow: none;
               }
 
-              &:hover ~ .card {
-                position: relative;
-                right: 50px;
+              &:hover:not(:last-child) {
+                transform: translate(120px, 0);
                 transition: all 0.4s ease-out;
-              }
-              
+              }              
             }
           }
         }
@@ -740,7 +775,8 @@ main {
       .text-btn-wrap {
         @include flex_between();
         align-items: flex-end;
-        margin-bottom: 30px;
+        padding: 0 10px;
+        margin-bottom: 35px;
 
         @include responsive(pc-screens) {
           align-items: flex-start;
@@ -812,11 +848,15 @@ main {
         position: relative;
         left: 0;
         width: calc(100% / 3); // 하나 작게
-        height: 250px;
+        height: 200px;
         border-radius: 10px;
         box-shadow: -25px 0 15px -3px rgba(0, 0, 0, 0.3);
         transition: all 0.4s ease-out;
         overflow: hidden;
+
+        @include responsive(tablet-screens) {
+          height: 300px;
+        }
 
         @include responsive(pc-screens) {
           height: 400px;
@@ -826,10 +866,10 @@ main {
           margin-left: -50px;
         }
   
-        &:hover {
-          transform: translate(20px, -30px);
+        &:hover:not(:last-child) {
+          transform: translate(-20px, 0);
           transition: all 0.4s ease-out;
-          z-index: 1;
+          // z-index: 1;
         }
   
         &:hover ~ .card {
@@ -972,10 +1012,6 @@ main {
             height: 320px;
           }
 
-          // @include responsive(tablet-screens) {
-          //   height: 360px;
-          // }
-
           @include responsive(pc-screens) {
             height: 400px;
           }
@@ -984,148 +1020,314 @@ main {
     }
   }
 
-  section.artist {
+  section.program {
 
-    .va-container{
+    .prg-slider {
+      border-radius: 25px;
+      transition: all 0.3s;
+    }
+
+    .slide-wrap {
+      height: auto !important;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    }
+
+    .slide-item {
+      @include flex_between_center();
+      flex-direction: column;
+      
+      @include responsive(tablet-screens) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    .slide-item.swiper-slide-active .slide-pic img {
+      opacity: 1;
+      transition-delay: 0.3s;
+    }
+    .slide-item.swiper-slide-active .slide-con > * {
+      opacity: 1;
+      transform: none;
+    }
+    .slide-item.swiper-slide-active .slide-con > *:nth-child(1) {
+      transition-delay: 0.3s;
+    }
+    .slide-item.swiper-slide-active .slide-con > *:nth-child(2) {
+      transition-delay: 0.4s;
+    }
+    .slide-item.swiper-slide-active .slide-con > *:nth-child(3) {
+      transition-delay: 0.5s;
+    }
+    .slide-item.swiper-slide-active .slide-con > *:nth-child(4) {
+      transition-delay: 0.6s;
+    }
+    .slide-item.swiper-slide-active .slide-con > *:nth-child(5) {
+      transition-delay: 0.7s;
+    }
+    .slide-item.swiper-slide-active .slide-con > *:nth-child(6) {
+      transition-delay: 0.8s;
+    }
+
+    .slide-pic {
+      flex-shrink: 0;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      overflow: hidden;
+
+      @include responsive(tablet-screens) {
+        width: 50%;
+      }
+
+      img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+    }
+
+    .slide-con {
+      
+      @include responsive(tablet-screens) {
+        width: 45%;
+      }
+      
+      > * {
+        opacity: 0;
+        transform: translateY(25px);
+        transition: all 0.4s;
+      }
+    }
+    
+    .type {
+      display: block;
+      padding: 30px 20px;
+      @include gothic_font(medium);
+      color: $yellow-brown;
+      
+      @include responsive(tablet-screens) {
+        padding: 60px 120px 0 0;
+        font-size: $h6;
+      }
+    }
+
+    .title {
+      margin: 10px 0 20px;
+
+      @include responsive(tablet-screens) {
+        font-size: $h3;
+      }
+    }
+
+    .des {
+      padding: 30px 20px;
+      @include content_align(justify, 1.8em);
+
+      @include responsive(tablet-screens) {
+        padding: 10px 120px 0 0;
+      }
+    }
+
+    .date-resv {
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      margin-bottom: 40px;
+
+      .date {
+        width: 75%;
+        line-height: 1.8em;
+
+        time {
+          margin-left: 15px;
+        }
+      }
+      
+      .resv {
+        width: 20%;
+        height: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #000;
+      }
+    }
+
+    .prg-slider__pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: -30px;
+      width: 100%;
+      z-index: 1;
+
+      @include responsive(pc-screens) {
+        column-gap: 10px;
+        right: 0;
+        bottom: -40px;
+        width: auto;
+      }
+      
+      }
+    
+    .prg-slider__pagination .swiper-pagination-bullet {
+      display: block;
+      width: 20px; height: 4px;
+      margin: 8px 5px;
+      border-radius: 3px;
+      background: $bk2;
+      transition: all 0.3s;
+
+      @include responsive(pc-screens) {
+        margin: 8px 0;
+      }
+    }
+
+    .prg-slider__pagination .swiper-pagination-bullet-active {
+      width: 20px; height: 4px;
+      border-radius: 3px;
+      background: $bk1;
+    }
+  }
+
+  section.artist {
+    margin-bottom: 150px;
+
+    .btn {
+      @include more_btn();
+    }
+
+    .va-container {
       position:relative;
       margin:40px auto 0 auto;
     }
-    .va-wrapper{
-      width:100%;
-      height:100%;
-      position:relative;
-      overflow:hidden;
-      background:#fff;
-    }
-    .va-slice{
-      cursor:pointer;
+
+    .va-nav button {
+      display: none;
       position:absolute;
-      left:0;
-      width:100%;
-      overflow:hidden;
+      top:-35px; left: 50%;
+      width: 30px; height: 15px;
+      margin-left: -20px;
+      text-indent: -9000px;
+      background: url('/image/icon_arrow_thin.svg') no-repeat;
+      opacity: 0.2;
+      transition: opacity .3s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.va-nav-prev {
+        transform: rotate(180deg);
+      }
+
+      &.va-nav-next {
+        top: auto;
+        bottom: -35px;
+      }
+    }
+
+    .va-wrapper {
+      position: relative;
+      width: 100%; height: 100%;
+      border-radius: 5px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .va-slice {
+      position: absolute;
+      left: 0;
+      width: 100%;
       color:#fff;
+      cursor: pointer;
+      overflow: hidden;
       
       &.overlay::after {
         @include overlay_bk(0.3);
       }
-    }
-    
-    .va-slice img {
-      width: 100%; height: 100%; 
-      object-fit: cover;
-      filter: grayscale(0);
-      transition: filter .5s;
 
-      @include responsive(tablet-screens) {
-        &.a1 { object-position: 0 -450px; }
-        &.a2 { object-position: 0 -350px; }
-        &.a3 { object-position: 0 -400px; }
-        &.a4 { object-position: 0 -375px; }
+      img:not(.more img) {
+        width: 100%; height: 100%; 
+        object-fit: cover;
+        filter: grayscale(0);
+        transition: filter .5s;
+  
+        @include responsive(tablet-screens) {
+          &.a1 { object-position: 0 45%; }
+          &.a2 { object-position: 0 40%; }
+          &.a3 { object-position: 0 42.5%; }
+          &.a4 { object-position: 0 40% }
+        }
+  
+        @media screen and (min-width:1104px) {
+          &.a1 { object-position: 0 45%; }
+          &.a2 { object-position: 0 42.5%; }
+          &.a4 { object-position: 0 42.5% }
+        }
+  
+        &.grayscale {
+          filter: grayscale(100%);
+        }
       }
 
-      @media screen and (min-width:1068px) {
-        &.a1 { object-position: 0 -550px; }
-        &.a2 { object-position: 0 -400px; }
-        &.a3 { object-position: 0 -500px; }
-        &.a4 { object-position: 0 -400px; }
+      .va-title {
+        position: absolute;
+        top: 0;
+        margin: 0 25px;
+        text-shadow: 0px 0px 1px white;
+        z-index: 1;
+  
+        @include responsive(tablet-screens) {
+          margin: 0 50px;
+        }
       }
-    }
+  
+      .va-content {
+        display:none;
+        position: absolute;
+        top: 120px; /* 제목 높이 기준 */
+        margin: 0 25px;
+        z-index: 1;
+        
+        @include responsive(tablet-screens) {
+          margin: 0 50px;
+        }
 
-     .va-slice img.grayscale {
-      filter: grayscale(100%);
-    }
-    
-    .va-title{
-      position: absolute;
-      top: 0;
-      margin: 0 25px;
-      text-shadow: 0px 0px 1px white;
-      z-index: 1;
-
-      @include responsive(tablet-screens) {
-        margin: 0 50px;
-      }
-    }
-
-    .va-content{
-      display:none;
-      position: absolute;
-      top: 120px; /* 제목 높이 기준 */
-      margin: 0 25px;
-      z-index: 1;
-
-      br {
-        display: none;
-      }
-
-      @include responsive(tablet-screens) {
-        margin: 0 50px;
-
+        p {
+          @include content_align(justify, 1.8em);
+          color: #fff;
+          
+          @include responsive(tablet-screens) {
+            font-size: 18px;
+            text-align: left;
+          }
+        }
+  
         br {
-          display: block;
-        }
-      }
-    }
+          display: none;
 
-    .va-slice p{
-      @include content_align(justify, 1.8em);
-      color: #fff;
-      
-      @include responsive(tablet-screens) {
-        width: 500px;
-        text-align: left;
-      }
-    }
-    .va-nav button{
-      width: 30px;
-      height: 15px;
-      background: url('/image/icon_arrow_thin.svg') no-repeat;
-      position:absolute;
-      top:-35px;
-      left:50%;
-      margin-left:-20px;
-      text-indent:-9000px;
-      opacity:0.7;
-      cursor:pointer;
-      display:none;
-      z-index:100;
-      outline: 0;
-      border: 0;
-    }
+          @include responsive(tablet-screens) {
+              display: block;
+          }
+        }
+        
+        .btn {
+          margin-top: 60px;
+
+          label { 
+            color: #fff;
+          }
     
-    .va-nav button.va-nav-prev{
-      transform: rotate(180deg);
-    }
-    
-    .va-nav button.va-nav-next{
-      top:auto;
-      bottom:-35px;
-    }
-
-    .btn {
-      margin-top: 60px;
-
-      label {
-        color: #fff;
-
-        @include responsive(tablet-screens) {
-          font-size: 14px;
-        }
-        @include responsive(pc-screens) {
-          font-size: 16px;
-        }
-      }
-
-      img {
-        width: 16px; height: 14px;
-        filter: $svg-white;
-
-        @include responsive(tablet-screens) {
-          height: 16px;
-        }
-
-        @include responsive(pc-screens) {
-          height: 18px;
+          img { 
+            filter: $svg-white; 
+          }
         }
       }
     }

@@ -183,29 +183,6 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-@-webkit-keyframes slideup {
-<<<<<<< HEAD
-  from {
-    margin-top: 100vh;
-    visibility: visible;
-  }
-  to {
-    margin-top: 0;
-  }
-}
-@keyframes slideup {
-=======
->>>>>>> 2aa886c1e37dfb525cf78c7aacf4fee94933cd47
-  from {
-    margin-top: 100vh;
-    opacity: 0;
-    visibility: visible;
-  }
-  to {
-    margin-top: 0;
-    opacity: 1;
-  }
-}
 @keyframes slideup {
   from {
     margin-top: 100vh;
@@ -215,27 +192,6 @@ h6 {
   to {
     margin-top: 0;
     opacity: 1;
-  }
-}
-@-webkit-keyframes slidedown {
-  from {
-    margin-top: 0;
-    opacity: 1;
-  }
-  70% {
-    opacity: 0.1;
-  }
-  to {
-    margin-top: 100vh;
-    opacity: 0;
-  }
-}
-@-webkit-keyframes slidedown {
-  from {
-    margin-top: 0;
-  }
-  to {
-    margin-top: 100vh;
   }
 }
 @keyframes slidedown {
@@ -252,20 +208,11 @@ h6 {
   }
 }
 .slide-in {
-  -webkit-animation: slideup 0.5s ease forwards;
-          animation: slideup 0.5s ease forwards;
-<<<<<<< HEAD
-}
-.slide-in.silde-out {
-  -webkit-animation: slidedown 0.5s ease;
-          animation: slidedown 0.5s ease;
-=======
+  animation: slideup 0.5s ease forwards;
   transition: all 0.5s;
 }
 .slide-in.silde-out {
-  -webkit-animation: slidedown 0.4s cubic-bezier(0, 0.75, 0.1, 1);
-          animation: slidedown 0.4s cubic-bezier(0, 0.75, 0.1, 1);
->>>>>>> 2aa886c1e37dfb525cf78c7aacf4fee94933cd47
+  animation: slidedown 0.4s cubic-bezier(0, 0.75, 0.1, 1);
 }
 .slide-in header {
   position: relative;
@@ -448,16 +395,7 @@ h6 {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -1133,4 +1071,4 @@ h6 {
   .slide-in main section.mi-wrap .mi .mi-type > .row-type .row-view .mi-grid > img {
     width: 562px;
   }
-}/*# sourceMappingURL=about_intro.css.map */
+}

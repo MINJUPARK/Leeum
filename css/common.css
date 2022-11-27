@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, strong, label, time {
+img, span, b, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -180,4 +180,4 @@ h5 {
 
 h6 {
   font-size: 18px;
-}/*# sourceMappingURL=common.css.map */
+}
