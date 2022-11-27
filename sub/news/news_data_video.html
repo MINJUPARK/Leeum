@@ -222,9 +222,256 @@
             </div>
         </div>
     </header>
-    <main>
 
+    <main>
+        <section class="filter">
+            <h2>검색 및 필터</h2>
+            <div class="container">
+                <div class="filter-wrap">
+                    <div class="speed-search">
+                        <h6>키워드 검색</h6>
+                        <form name="keyword" action="#" method="post">
+                            <select>
+                                <option hidden>분류</option>
+                                <option value="title">작품명</option>
+                                <option value="type">유형</option>
+                                <option value="artist">작가명</option>
+                                <option value="material">기법 및 재료</option>
+                            </select>
+                            <input type="search" placeholder="검색어를 입력하세요">
+                            <button type="button"><img src="../../image/icon_search.svg">빠른 검색</button>
+                        </form>
+                    </div>
+                    <div class="detail-search-wrap">
+                        <button type="button" class="ds-btn">상세 검색 <span class="status">닫기</span><img src="../../image/icon_arrow.svg" class="active"></button>
+                        <div class="detail-search">
+                            <form name="detail" action="#" method="post">
+                                <div class="opt-box">
+                                    <div class="type">
+                                        <h6>동영상 유형</h6>
+                                        <ul class="opt">
+                                            <li>세계 탐구</li>
+                                            <li>감각 너머</li>
+                                            <li>전시 연계</li>
+                                            <li>인간전 전계</li>
+                                            <li>포커스 리움</li>
+                                            <li>멤버십 아트 토크</li>
+                                            <li>기타</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="btn-box">
+                                    <button type="submit"><img src="../../image/icon_search.svg">상세 검색</button>
+                                    <button type="reset"><img src="../../image/icon_reset.svg">초기화</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>동영상</h2>
+            <div class="video">
+                <div class="container">
+                    <div class="itemList-wrap">
+                        <div class="list-control">
+                            <div class="count">
+                                <span>총 <b>92</b>건</span>
+                            </div>
+                            <button class="sort"><img src="../../image/icon_filter.svg"><span>정렬 방식</span></button>
+                            <div class="view-type">
+                                <ul class="sort-list">
+                                    <li class="on">조회순</li>
+                                    <li>다운로드순</li>
+                                </ul>
+                                <select name="nth-view">
+                                    <option value="n-12">12개씩 보기</option>
+                                    <option value="n-24">24개씩 보기</option>
+                                    <option value="n-36">36개씩 보기</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="item-box">
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=XjfH1ZtH_QE">
+                                <div class="i-pic">
+                                    <img src="./image/video/video1.jpg" alt="동영상１" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[세계탐구] 이안 쳉 전시연계 토크 #4 심너울</strong>
+                                    <p>2022. 07. 21<span class="vert-bar">&vert;</span>조회수 171회</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=lnZF8CYBko4">
+                                <div class="i-pic">
+                                    <img src="./image/video/video2.jpg" alt="동영상２" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[세계탐구] 이안 쳉 전시연계 토크 #3 이경혁</strong>
+                                    <p>2022. 07. 21<span class="vert-bar">&vert;</span>조회수 128회</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=37PbqxcK9KY">
+                                <div class="i-pic">
+                                    <img src="./image/video/video3.jpg" alt="동영상３" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[세계탐구] 이안 쳉 전시연계 토크 #2 이진아</strong>
+                                    <p>2022. 07. 21<span class="vert-bar">&vert;</span>조회수 134회</p>    
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=kGph4nKgS5E">
+                                <div class="i-pic">
+                                    <img src="./image/video/video4.jpg" alt="동영상４" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[세계탐구] 이안 쳉 전시연계 토크 #1 김상욱</strong>
+                                    <p>2022. 07. 21<span class="vert-bar">&vert;</span>조회수 244회</p>    
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=VGYYsCJm2tA">
+                                <div class="i-pic">
+                                    <img src="./image/video/video5.jpg" alt="동영상５" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[감각 너머] Worlding 워크숍</strong>
+                                    <p>2022. 07. 06<span class="vert-bar">&vert;</span>조회수 388회</p>    
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=6BSaI4Lig9Y">
+                                <div class="i-pic">
+                                    <img src="./image/video/video6.jpg" alt="동영상6" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[전시연계] 이안 쳉 아티스트 토크</strong>
+                                    <p>2022. 06. 28<span class="vert-bar">&vert;</span>조회수 544회</p>    
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=ePXFzd67I1E">
+                                <div class="i-pic">
+                                    <img src="./image/video/video7.jpg" alt="동영상7" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>차재민 | 《네임리스 신드롬》《제자리 비행》</strong>
+                                    <p>2022. 04. 23<span class="vert-bar">&vert;</span>조회수 978회</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=d2deSP4kidU">
+                                <div class="i-pic">
+                                    <img src="./image/video/video8.jpg" alt="동영상8" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[인간전 연계] 강연 #2 신상규</strong>
+                                    <p>2022. 01. 12<span class="vert-bar">&vert;</span>조회수 1,390회</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=7BH2BEtOLxg">
+                                <div class="i-pic">
+                                    <img src="./image/video/video9.jpg" alt="동영상9" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[인간전 연계] 강연 #1 서동욱 - 인간에 대해 질문하는 예술</strong>
+                                    <p>2022. 01. 12<span class="vert-bar">&vert;</span>조회수 880회</p>    
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=yYLWp10GuJQ">
+                                <div class="i-pic">
+                                    <img src="./image/video/video10.jpg" alt="동영상10" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[포커스 리움] 미야지마 타츠오 <경계를 넘어서></strong>
+                                    <p>2021. 12. 29<span class="vert-bar">&vert;</span>조회수 1,099회</p>    
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=33Rz7eNMiZ8">
+                                <div class="i-pic">
+                                    <img src="./image/video/video11.jpg" alt="동영상11" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[포커스 리움] 백지묵서 대방광불화엄경</strong>
+                                    <p>2021. 12. 15<span class="vert-bar">&vert;</span>조회수 1,147회</p>    
+                                </div>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <button type="button" class="heart"></button>
+                            <a href="https://www.youtube.com/watch?v=Zpzbo9t8e-U">
+                                <div class="i-pic">
+                                    <img src="./image/video/video12.jpg" alt="동영상12" class="bg">
+                                    <div class="youtube-icon"></div>
+                                </div>
+                                <div class="i-des">
+                                    <strong>[인간전 연계] Interview #6 최재천</strong>
+                                    <p>2021. 12. 10<span class="vert-bar">&vert;</span>조회수 23,897회</p>    
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="paging">
+            <div class="container">
+                <ul>
+                    <li><a href="#" class="prev"></a></li>
+                    <li><a href="#" class="on">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"class="next"></a></li>
+                </ul>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="sitemap-banner-wrap">
             <div class="container">

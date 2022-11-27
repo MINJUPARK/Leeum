@@ -648,18 +648,8 @@ header .breadcrumb-wrap {
   }
 }
 
-main {
-  /*  section.Public {
-   } */
-  /* section.Video {
-  } */
-}
-main h1 {
-  display: none;
-}
 main section.WorkBook h3 {
   text-align: center;
-  margin-top: 60px;
 }
 @media screen and (min-width: 1440px) {
   main section.WorkBook h3 {
@@ -668,11 +658,17 @@ main section.WorkBook h3 {
 }
 main section.WorkBook .plus {
   text-align: right;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 1440px) {
+  main section.WorkBook .plus {
+    margin-bottom: 100px;
+  }
 }
 main section.WorkBook .plus a span {
   font-size: 16px;
   font-weight: 600;
+  margin-right: 10px;
 }
 @media screen and (min-width: 1440px) {
   main section.WorkBook .plus a span {
@@ -680,7 +676,14 @@ main section.WorkBook .plus a span {
   }
 }
 main section.WorkBook .plus a img {
-  width: 10px;
+  width: 15px;
+  height: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.WorkBook .plus a img {
+    width: 20px;
+    height: 15px;
+  }
 }
 main section.WorkBook .flex {
   justify-content: space-between;
@@ -693,7 +696,6 @@ main section.WorkBook .flex {
   }
 }
 main section.WorkBook .flex .workbook {
-  margin-bottom: 20px;
   width: 48.5714285714% !important;
 }
 @media screen and (min-width: 1440px) {
@@ -711,6 +713,11 @@ main section.WorkBook .flex .workbook .image-text .image {
 }
 main section.WorkBook .flex .workbook .image-text .image img {
   width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  main section.WorkBook .flex .workbook .image-text .image img {
+    height: 455px;
+  }
 }
 main section.WorkBook .flex .workbook .image-text .text {
   margin-bottom: 20px;
@@ -742,6 +749,424 @@ main section.WorkBook .flex .workbook .image-text .down-img a {
 }
 main section.WorkBook .flex .workbook .image-text .down-img a img {
   width: 10px;
+}
+main section.Public h3 {
+  text-align: center;
+  margin-top: 100px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Public h3 {
+    font-size: 46px;
+  }
+}
+main section.Public .plus {
+  text-align: right;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Public .plus {
+    margin-bottom: 100px;
+  }
+}
+main section.Public .plus a span {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Public .plus a span {
+    font-size: 20px;
+  }
+}
+main section.Public .plus a img {
+  width: 15px;
+  height: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Public .plus a img {
+    width: 20px;
+    height: 15px;
+  }
+}
+main section.Public .preview {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2712px);
+    will-change: transform;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2712px);
+    will-change: transform;
+  }
+}
+main section.Public .preview .slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main section.Public .preview .slider::before, main section.Public .preview .slider::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+  }
+  main section.Public .preview .slider::before {
+    top: 0;
+    left: 0;
+  }
+  main section.Public .preview .slider::after {
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+  }
+}
+main section.Public .preview .slider .slide-track {
+  display: flex;
+  width: 5424px;
+  height: 400px;
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
+}
+main section.Public .preview .slider .slide-track .slide {
+  display: flex;
+  width: 226px;
+  margin: 0 20px;
+}
+main section.Public .preview .slider .slide-track .slide:nth-child(even) {
+  align-items: flex-end;
+}
+main section.Public .preview .slider .slide-track .slide .item {
+  position: relative;
+  height: 320px;
+}
+main section.Public .preview .slider .slide-track .slide .item .i-pic::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 0) 0%, hsla(0deg, 0%, 0%, 0.01) 5.6%, hsla(0deg, 0%, 0%, 0.037) 12.4%, hsla(0deg, 0%, 0%, 0.079) 20%, hsla(0deg, 0%, 0%, 0.135) 28.3%, hsla(0deg, 0%, 0%, 0.201) 37%, hsla(0deg, 0%, 0%, 0.277) 46%, hsla(0deg, 0%, 0%, 0.359) 55%, hsla(0deg, 0%, 0%, 0.446) 63.7%, hsla(0deg, 0%, 0%, 0.536) 72%, hsla(0deg, 0%, 0%, 0.625) 79.6%, hsla(0deg, 0%, 0%, 0.713) 86.4%, hsla(0deg, 0%, 0%, 0.796) 92%, hsla(0deg, 0%, 0%, 0.873) 96.3%, hsla(0deg, 0%, 0%, 0.942) 99%, hsl(0deg, 0%, 0%) 100%);
+}
+main section.Public .preview .slider .slide-track .slide .item .i-pic .bg {
+  height: 320px;
+  border-radius: 5px;
+}
+main section.Public .preview .slider .slide-track .slide .item .i-des {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+main section.Public .preview .slider .slide-track .slide .item .i-des h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+main section.Public .preview .slider .slide-track .slide .item .i-des span {
+  font-size: 14px;
+  font-weight: 200;
+  margin-top: 5px;
+  opacity: 0.7;
+}
+main section.Video h3 {
+  text-align: center;
+  margin-top: 100px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Video h3 {
+    font-size: 46px;
+  }
+}
+main section.Video .plus {
+  text-align: right;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Video .plus {
+    margin-bottom: 100px;
+  }
+}
+main section.Video .plus a span {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Video .plus a span {
+    font-size: 20px;
+  }
+}
+main section.Video .plus a img {
+  width: 15px;
+  height: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Video .plus a img {
+    width: 20px;
+    height: 15px;
+  }
+}
+main section.Video ul.item-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 50px;
+  position: relative;
+  /* height: 1400px; */
+  overflow: hidden;
+}
+main section.Video ul.item-box .item {
+  position: relative;
+  width: 48%;
+  margin-bottom: 20px;
+  border: 1px solid #d4d4d4;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Video ul.item-box .item {
+    width: 23.5%;
+    margin-bottom: 25px;
+  }
+}
+main section.Video ul.item-box .item .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: url("../../../image/icon_heart_motion.png") no-repeat;
+  background-position: 0 0;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  z-index: 97;
+}
+main section.Video ul.item-box .item .heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
+}
+main section.Video ul.item-box .item .heart.on {
+  transition-duration: 1s;
+  background-position: -1960px 0;
+}
+main section.Video ul.item-box .item a {
+  display: block;
+  width: 100%;
+}
+main section.Video ul.item-box .item .i-pic {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.Video ul.item-box .item .i-pic {
+    height: 480px;
+  }
+}
+main section.Video ul.item-box .item .i-pic .bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+main section.Video ul.item-box .item .i-des {
+  padding: 10px 20px 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.Video ul.item-box .item .i-des {
+    padding: 20px 30px 25px;
+  }
+}
+main section.Video ul.item-box .item .i-des strong {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.Video ul.item-box .item .i-des strong {
+    font-size: 20px;
+  }
+}
+main section.Video ul.item-box .item .i-des p.name {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+@media screen and (min-width: 768px) {
+  main section.Video ul.item-box .item .i-des p.name {
+    font-size: 15px;
+  }
+}
+main section.Video ul.item-box .item .i-des p {
+  margin: 5px 0 20px;
+  color: #5c5c5c;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  main section.Video ul.item-box .item .i-des p {
+    margin: 10px 0 30px;
+    font-size: 15px;
+  }
+}
+main section.Video ul.item-box .item .i-des p .vert-bar {
+  padding: 0 5px;
+  color: #acacac;
+}
+@media screen and (min-width: 768px) {
+  main section.Video ul.item-box .item .i-des p .vert-bar {
+    padding: 0 8px;
+  }
+}
+main section.Video ul.item-box .item .i-des .loc {
+  position: relative;
+  width: 80px;
+  height: 22px;
+  margin-left: auto;
+  font-size: 11px;
+  line-height: 22px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main section.Video ul.item-box .item .i-des .loc {
+    width: 80px;
+    height: 26px;
+    font-size: 13px;
+    line-height: 26px;
+  }
+}
+main section.Video ul.item-box .item .i-des .loc:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #3c3c3c;
+  border-radius: 3px;
+}
+main section.Video ul.item-box .item .i-des .loc div {
+  position: absolute;
+}
+main section.Video ul.item-box .item .i-des .loc div.tag {
+  left: 0;
+  width: 32px;
+  color: #fff;
+  background: #3c3c3c;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+main section.Video ul.item-box .item .i-des .loc div:last-child {
+  right: 0;
+  width: 48px;
+}
+@media screen and (min-width: 1440px) {
+  main section.Video ul.item-box {
+    /* height: 1400px; */
+  }
+}
+main section.Video ul.item-box li.item {
+  width: 100%;
+  transition: all 0.3s;
+}
+@media screen and (min-width: 768px) {
+  main section.Video ul.item-box li.item {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.Video ul.item-box li.item {
+    width: 440px;
+  }
+  main section.Video ul.item-box li.item:hover a .i-pic img {
+    transform: scale(1.3);
+  }
+}
+main section.Video ul.item-box li.item .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: url("../../../image/icon_heart_motion.png") no-repeat;
+  background-position: 0 0;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  z-index: 97;
+}
+main section.Video ul.item-box li.item .heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
+}
+main section.Video ul.item-box li.item .heart.on {
+  transition-duration: 1s;
+  background-position: -1960px 0;
+}
+main section.Video ul.item-box li.item a .i-pic {
+  position: relative;
+  height: 55.7142857143%;
+}
+main section.Video ul.item-box li.item a .i-pic img {
+  transition: transform 0.3s;
+}
+main section.Video ul.item-box li.item a .i-pic .youtube-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10.8571428571%;
+  aspect-ratio: 38/27;
+  background-image: url(../../../image/icon_youtube_black.svg);
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+@media screen and (min-width: 1440px) {
+  main section.Video ul.item-box li.item a .i-pic .youtube-icon {
+    width: 63px;
+    height: 45px;
+  }
+}
+main section.Video ul.item-box li.item a .i-des strong {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main section.Video ul.item-box li.item a .i-des p {
+  margin-bottom: 0;
 }
 
 /* main {

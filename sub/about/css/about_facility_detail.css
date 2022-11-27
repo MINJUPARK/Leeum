@@ -694,19 +694,19 @@ main .container .info table .des td:first-child {
 }
 @media screen and (min-width: 1440px) {
   main .container .info table .des td:first-child {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
   }
 }
 main .container .info table .des td:last-child {
   padding-left: 23px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main .container .info table .des td:last-child {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 400;
   }
 }
@@ -1130,13 +1130,13 @@ main .container .constructor-info .detail table .detail-des td {
 main .container .constructor-info .detail table .detail-des td:first-of-type {
   font-size: 15px;
   font-weight: 600;
-  padding: 26px 60px 0 30px;
+  padding: 24px 60px 0 30px;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail table .detail-des td:first-of-type {
     font-size: 20px;
     font-weight: 600;
-    padding-top: 30px;
+    padding-top: 27px;
   }
 }
 main .container .constructor-info .detail table .detail-des td:last-of-type {
@@ -1149,11 +1149,12 @@ main .container .constructor-info .detail table .detail-des td:last-of-type {
   main .container .constructor-info .detail table .detail-des td:last-of-type {
     font-size: 20px;
     font-weight: 400;
-    padding-top: 30px;
+    padding-top: 28px;
   }
 }
 main .container .constructor-info .detail table .detail-des td:last-of-type .ex {
   line-height: 24px;
+  margin-top: -4px;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail table .detail-des td:last-of-type .ex {
@@ -1282,6 +1283,12 @@ main .container .constructor-info .faq ul .faq-detail a {
 }
 main .container .constructor-info .faq ul .faq-detail a span {
   color: #d6841a;
+  font-size: 25px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .faq ul .faq-detail a span {
+    margin-top: -5px;
+  }
 }
 main .container .constructor-info .faq ul .faq-detail a img {
   position: absolute;
@@ -1299,6 +1306,7 @@ main .container .constructor-info .faq ul .faq-detail .answer {
   width: 100%;
   background-color: #f3f3f3;
   border-radius: 5px;
+  margin-top: 10px;
 }
 main .container .constructor-info .faq ul .faq-detail .answer p {
   padding: 20px;
@@ -1306,6 +1314,7 @@ main .container .constructor-info .faq ul .faq-detail .answer p {
   font-weight: 400;
   line-height: 26px;
   text-align: left;
+  margin: 0;
 }
 main .container .constructor-info .faq ul .faq-detail-etc {
   position: relative;
@@ -1320,6 +1329,12 @@ main .container .constructor-info .faq ul .faq-detail-etc a {
 }
 main .container .constructor-info .faq ul .faq-detail-etc a span {
   color: #d6841a;
+  font-size: 25px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .faq ul .faq-detail-etc a span {
+    margin-top: -5px;
+  }
 }
 main .container .constructor-info .faq ul .faq-detail-etc a img {
   position: absolute;
@@ -1337,6 +1352,7 @@ main .container .constructor-info .faq ul .faq-detail-etc .answer {
   width: 100%;
   background-color: #f3f3f3;
   border-radius: 5px;
+  margin-top: 10px;
 }
 main .container .constructor-info .faq ul .faq-detail-etc .answer p {
   padding: 20px;
@@ -1344,6 +1360,7 @@ main .container .constructor-info .faq ul .faq-detail-etc .answer p {
   font-weight: 400;
   line-height: 26px;
   text-align: left;
+  margin: 0;
 }
 
 @media screen and (min-width: 1440px) {

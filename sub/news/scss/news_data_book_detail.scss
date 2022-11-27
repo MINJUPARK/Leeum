@@ -9,7 +9,7 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_data_book.jpg');
+    @include full_bg('publication_header.jpg');
 }
 
 footer {
