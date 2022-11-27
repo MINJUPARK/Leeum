@@ -7,9 +7,12 @@
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/collect_conserve_texture.css">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script type="text/javascript" src="../../js/common.js"></script>
     <script type="text/javascript" src="./js/side_tab.js"></script>
+    <script type="text/javascript" src="./js/zoom.js"></script>
     <script type="text/javascript" src="./js/border_event.js"></script>
     <title>Leeum</title>
 </head>
@@ -225,6 +228,8 @@
         </div>
     </header>
 
+
+
     
     <main>
         <section class="texture-intro-wrap">
@@ -234,7 +239,7 @@
                     <div class="intro-img">
                         <!-- <img src="./image/conserve_texture_intro.png" alt="금속재질"> -->
                     </div>
-                    <div class="intro-flex">
+                    <div class="intro-flex" data-aos="fade-right" data-aos-duration="1000">
                         <h3>금속유물</h3>
                         <div class="into-txt">
                             <p>금속유물은 철, 금, 은, 구리 합금 등 금속재질로 만들어진 것으로 불상, 장신구, 무기, 마구, 의기 등 다양한 문화재가 전해지고 있다.  대부분의 금속유물은 오랫동안 부식과 손상이 진행되어 제작 당시 유물이 지닌 형태나 표면상태를 잃어버린 경우가 많다. 따라서 유물 원래의 형태, 빛깔, 표면상태 등을 최대한 되찾아주기 위하여 보존처리를 실시한다.</p>
@@ -252,30 +257,30 @@
                     <h3>금속유물의 손상 유형</h3>
                     <div class="side-tab type-box">
                         <ul class="tab-wrap type-select">
-                            <li class="tab selected"><span>결손</span></li>
+                            <li class="tab on"><span>결손</span></li>
                             <li class="tab"><span>파손</span></li>
                             <li class="tab"><span>부식</span></li>
                             <li class="tab"><span>재부식</span></li> 
                         </ul>
                         <ul class="side-con-box type-img">
-                            <li class="view">
-                                <img src="./image/conserve_texture_damage(1)_S.png" alt="손상 유형1">
-                                <div class="enlarge"></div>
+                            <li class="view zoom magnify-wrapper">
+                                <img src="./image/conserve_texture_damage(0).png" alt="손상 유형1" class="img-s">
+                                <div class="img-l"></div>
                             </li>
-                            <li>
-                                <img src="./image/conserve_texture_damage(2)_S.png" alt="손상 유형2">
-                                <div class="enlarge"></div>
+                            <li class="zoom magnify-wrapper">
+                                <img src="./image/conserve_texture_damage(1).png" alt="손상 유형2" class="img-s">
+                                <div class="img-l"></div>
                             </li>
-                            <li>
-                                <img src="./image/conserve_texture_damage(3)_S.png" alt="손상 유형3">
-                                <div class="enlarge"></div>
+                            <li class="zoom magnify-wrapper">
+                                <img src="./image/conserve_texture_damage(2).png" alt="손상 유형3" class="img-s">
+                                <div class="img-l"></div>
                             </li>
-                            <li>
-                                <img src="./image/conserve_texture_damage(4)_S.png" alt="손상 유형4">
-                                <div class="enlarge"></div>
+                            <li class="zoom magnify-wrapper">
+                                <img src="./image/conserve_texture_damage(3).png" alt="손상 유형4" class="img-s">
+                                <div class="img-l"></div>
                             </li>
                         </ul>
-                        <ul class="con-box type-txt">
+                        <ul class="side-con-box type-txt">
                             <li class="view">금속이 부식되면서 그 주변에 <br class="mobile-view">결손이 발생한 경우이다.</li>
                             <li>취급부주의로 인해 발생한 파손</li>
                             <li>매장 되었던 유물이 발굴 이후 <br class="mobile-view">급격한 환경변화에 의해 부식된 모습</li>

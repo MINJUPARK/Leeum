@@ -51,17 +51,17 @@ main {
                             padding:12px 0;
 
                             @include responsive(pc-screens){
-                                @include gothic_font(semibold,20px);
+                                @include gothic_font(semibold,17px);
                             }
                         }
 
                         &:last-child {
                             padding-left: 23px;
-                            @include gothic_font(regular,18px);
+                            @include gothic_font(regular,17px);
                             color: $bk1;
 
                             @include responsive(pc-screens){
-                                @include gothic_font(regular,20px);
+                                @include gothic_font(regular,17px);
                             }
                         }
                     }
@@ -425,11 +425,11 @@ main {
                             vertical-align: top;
                             &:first-of-type {
                                 @include gothic_font(semibold,15px);
-                                padding: 26px 60px 0 30px;
+                                padding: 24px 60px 0 30px;
 
                                 @include responsive(pc-screens){
                                     @include gothic_font(semibold,20px);
-                                    padding-top: 30px;
+                                    padding-top: 27px;
                                 }
                             }
 
@@ -440,11 +440,12 @@ main {
 
                                 @include responsive(pc-screens){
                                     @include gothic_font(regular,20px);
-                                    padding-top: 30px;
+                                    padding-top: 28px;
                                 }
                                 
                                 .ex {
                                     line-height: 24px;
+                                    margin-top: -4px;
                                     @include responsive(pc-screens){
                                         line-height: 28px;
                                     }
@@ -583,6 +584,10 @@ main {
                                 line-height: 28px;
                                 span {
                                     color:#d6841a;
+                                    font-size: 25px;
+                                    @include responsive(pc-screens) {
+                                        margin-top: -5px;
+                                    }
                                 }
                                 
                                 img{
@@ -600,12 +605,13 @@ main {
                                 width: 100%;
                                 background-color: $bk6;
                                 border-radius: 5px;
-                                
+                                margin-top: 10px;
                                 p {
                                     padding: 20px;    
                                     @include gothic_font(regular);
                                     line-height: 26px;
                                     text-align: left;
+                                    margin: 0;
                                 }
                             }
                         }
@@ -620,6 +626,10 @@ main {
                                     line-height: 28px;
                                     span {
                                         color:#d6841a;
+                                        font-size: 25px;
+                                        @include responsive(pc-screens) {
+                                            margin-top: -5px;
+                                        }
                                     }
                                     
                                     img{
@@ -637,12 +647,15 @@ main {
                                     width: 100%;
                                     background-color: $bk6;
                                     border-radius: 5px;
+                                    margin-top: 10px;
                                     
                                     p {
                                         padding: 20px;    
                                         @include gothic_font(regular);
                                         line-height: 26px;
                                         text-align: left;
+                                        margin: 0
+                                        
                                     }
                                 }
                             }    

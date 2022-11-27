@@ -8,13 +8,16 @@
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/about_guide.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/common.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
     <script type="text/javascript" src="./js/tab-menu.js"></script>
     <script type="text/javascript" src="./js/aos.js"></script>
     <script type="text/javascript" src="../collect/js/side_tab.js"></script>
     <script type="text/javascript" src="./js/dropdown.js"></script>
+    <script type="text/javascript" src="../../js/swiper.js"></script>
     <title>Leeum</title>
 </head>
 <body>
@@ -220,6 +223,8 @@
         </div>
     </div>
     </header>
+
+
 
 
     <main>
@@ -595,8 +600,8 @@
                             <h3>디지털 가이드</h3>
                             <h4>Digital Guide</h4>
                             <div class="guide-intro-wrap">
-                                <div class="guide-intro">
-                                    <div data-aos="fade-up" data-aos-duration="1000" class="guide-intro-img">
+                                <div class="guide-intro" data-aos="fade-up" data-aos-duration="2000">
+                                    <div class="guide-intro-img">
                                         <img src="./image/guide_digital_guide(1).png" alt="디지털가이드 사용모습">
                                     </div>
                                     <div data-aos="fade-up" class="guide-intro-txt">
@@ -606,9 +611,9 @@
                                     </div>
                                 </div><!-- guide-intro -->
                             </div>
-                            <div data-aos="fade-up" class="guide-point-wrap">
-                                <ul class="guide-point-txt">
-                                    <li>
+                            <div class="guide-point-wrap mySwiper">
+                                <ul class="guide-point-txt" data-aos="fade-left" data-aos-duration="1000">
+                                    <li class="">
                                         <span>STEP <b>01</b></span>
                                         <strong>전시 중인 모든<br>작품의 해설 제공</strong>
                                         <p class="p">디지털 가이드는 한국어, 영어,<br>중국어, 일본어 해설을 제공합니다.</p>
@@ -625,7 +630,7 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <ul class="guide-point-img">
+                                <ul class="guide-point-img" data-aos="fade-right" data-aos-duration="1000">
                                     <li><img src="./image/guide_digital_guide(2).png" alt="작품해설화면"></li>
                                     <li><img src="./image/guide_digital_guide(3).png" alt="투어프로그램화면"></li>
                                 </ul>
@@ -635,27 +640,27 @@
                         <section class="did">
                             <h3>리움 DID</h3>
                             <h4>Digital Interactive Display</h4>
-                            <div class="did-awards"  data-aos="fade-up">
+                            <div class="did-awards">
                                 <div class="awards-flex">
-                                    <div class="awards-txt">
+                                    <div class="awards-txt" data-aos="fade-up-right" data-aos-duration="1000">
                                         <strong>디자인 어워드 최우수상</strong>
                                         <p><span class="mobile-hidden">leeum의 DID는</span> 삼성전자의 고화질 디스 플레이와 leem의<br>디지털인터랙티브 솔루션이 결합하여 <br class="m-br">만들어진 전시 연출 기법으로</p>
                                         <p>2013년 레드닷 디자인 어워드 <br class="m-br">최우수상에 선정된 바 있으며,</p>
                                         <p>2021년 재개관과 함께 <br class="m-br">업그레이드 되었습니다.</p>
                                     </div>
-                                    <img class="mobile-hidden" src="./image/guide_did_photo(1).png" alt="did화면1">
+                                    <img class="mobile-hidden" src="./image/guide_did_photo(1).png" alt="did화면1" data-aos="fade-up-left" data-aos-duration="1000">
                                 </div><!-- awards-flex -->
-                                <div class="did-img2">
+                                <div class="did-img2" data-aos="fade-up" data-aos-duration="1000">
                                     <img src="./image/guide_did_photo_(2).PNG" alt="did화면2">
                                 </div>
                             </div><!-- did-awards -->
                             
-                            <div class="did-point" data-aos="fade-up">
+                            <div class="did-point" data-aos="fade-up" data-aos-duration="1000">
                                 <strong>전통 미술의 정교함</strong>
                                 <p>한국의 전통 미술품 중에는 화려함과 정교함이 돋보이는 <br class="m-br">작품들도 많습니다. <br class="pc-br">특히, 귀한 재료를 사용하여 장인의 손에 의해 <br class="m-br">만들어진 공예품과 섬세한 <br class="pc-br">표현이 드러나는 회화에서 <br class="m-br">이러한 아름다움을 느낄 수 있습니다.</p>
                                 <img src="./image/guide_did_photo_(3).png" alt="did화면3">
                             </div>
-                            <div class="did-video" data-aos="fade-up">
+                            <div class="did-video" data-aos="fade-up" data-aos-duration="1000">
                                 <h5>DID사용법</h5>
                                 <p><span class="mobile-hidden">leeum의 DID는 </span>육안으로는 잘 보이지 않는 유물의 미세한 디테일을 <br class="m-br">관찰할 수 있고, <br class="pc-br">작품을 360도로 돌려가며, 작품의 뒷면<br class="m-br">이나 내부와 같이 노출되지 않은 부분까지 감상하실 수 있습니다. </p>
                                 <div class="video-frame"> 
@@ -668,6 +673,8 @@
             </div><!-- tab-con -->
         </div><!-- tabmenu-wrap -->
     </main>
+
+
 
 
     <footer>

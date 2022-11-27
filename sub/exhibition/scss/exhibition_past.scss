@@ -9,7 +9,7 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_exhibition.jpg');
+    @include full_bg('exhibition_header.png');
 }
 
 main {
@@ -147,9 +147,7 @@ main {
                         }
                     }
     
-                    .heart {
-                        @include icon_heart();
-                    }
+
     
                     a {
         
@@ -185,10 +183,11 @@ main {
             } // ul.item-box
         }
     }
+}
     section.paging {
         @include paging();
     }
-}
+
 footer {
     @include footer();
 }

@@ -3,33 +3,29 @@
 @mixin tab_menu() {
 
     .tabmenu-wrap{
-        padding:120px 0px;
 
         .tab-nav{
             display:table;
             width:100%;
-            
             .nav{
                 display:table-cell;
                 width:50px;
-
                 a{
                     transition:.4s;
                     position: relative;
                     display:block;
-                    padding-bottom: 20px;
-                    font-size:18px;
-                    color:#9b9b9b;
+                    @include gothic_font(medium, 18px);
+                    color: $bk3;
                     text-align:center;
-                    border-bottom: 1px solid #ebe5da;
-                    text-decoration: none;
-                    
+                    border-bottom: 1px solid $bk5;
+                    height:40px;
+
                     @include responsive(tablet-screens) {
-                        font-size: 20px;
-                        padding-bottom: 30px;
+                        height: 50px;
+                        font-size: 24px;
                     }
 
-                    &:after{
+                &:after{
                         content:"";
                         transition:.4s;
                         width:0px;
@@ -37,21 +33,24 @@
                 }
 
             &.on{
-
                     a{
-                        font-weight:700;
-                        color:#172349;
+                        color:#000;
+                        @include gothic_font(bold, 18px);
 
                         &:after{
                             content:"";
                             position:absolute;
-                            bottom:-2px;
+                            bottom:-1px;
                             left:0;
                             right:0;
                             margin:0 auto;
                             width:100%;
                             height:2px;
-                            background-color: #172349;
+                            background-color: #000;
+                        }
+
+                        @include responsive(tablet-screens) {
+                            font-size: 24px;
                         }
                     }
                 }
@@ -59,8 +58,9 @@
         }
 
         .tab-con{
-        padding-top: 120px;
+            padding-top: 60px;
 
+            
             .con-box{
                 display:none;
             }
