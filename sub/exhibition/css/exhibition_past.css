@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, strong, label, time {
+img, span, b, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -187,7 +187,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/header_exhibition.jpg);
+  background: url(../image/exhibition_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -797,7 +806,8 @@ main section.itemList-wrap .itemList .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 main section.itemList-wrap .itemList .list-control .view-type .sort-list {
   display: flex;
@@ -901,7 +911,8 @@ main section.itemList-wrap .itemList ul.item-box .item .i-pic {
 main section.itemList-wrap .itemList ul.item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -1036,25 +1047,6 @@ main section.itemList-wrap .itemList ul.item-box li.item {
     transform: scale(1.3);
   }
 }
-main section.itemList-wrap .itemList ul.item-box li.item .heart {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 70px;
-  height: 70px;
-  background: url("../../../image/icon_heart_motion.png") no-repeat;
-  background-position: 0 0;
-  transition: background-position 1s steps(28);
-  transition-duration: 0s;
-  z-index: 97;
-}
-main section.itemList-wrap .itemList ul.item-box li.item .heart:hover {
-  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
-}
-main section.itemList-wrap .itemList ul.item-box li.item .heart.on {
-  transition-duration: 1s;
-  background-position: -1960px 0;
-}
 main section.itemList-wrap .itemList ul.item-box li.item a .i-pic {
   position: relative;
   height: 55.7142857143%;
@@ -1075,49 +1067,50 @@ main section.itemList-wrap .itemList ul.item-box li.item a .i-des strong {
 main section.itemList-wrap .itemList ul.item-box li.item a .i-des p {
   margin-bottom: 0;
 }
-main section.paging {
+
+section.paging {
   margin: 30px 0 60px;
 }
-main section.paging ul {
+section.paging ul {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
   font-size: 14px;
 }
 @media screen and (min-width: 768px) {
-  main section.paging ul {
+  section.paging ul {
     width: 50%;
     margin: 80px auto 0;
   }
 }
 @media screen and (min-width: 1440px) {
-  main section.paging ul {
+  section.paging ul {
     width: 30%;
   }
 }
-main section.paging ul li {
+section.paging ul li {
   width: 45px;
   height: 35px;
   line-height: 35px;
   margin: 0 5px;
   text-align: center;
 }
-main section.paging ul li a {
+section.paging ul li a {
   width: 100%;
   height: 100%;
 }
-main section.paging ul li a:hover {
+section.paging ul li a:hover {
   font-weight: bold;
   border-radius: 5px;
   background: #f3f3f3;
 }
-main section.paging ul li a.on {
+section.paging ul li a.on {
   color: #fff;
   font-weight: bold;
   border-radius: 5px;
   background: #3c3c3c;
 }
-main section.paging ul li a.prev, main section.paging ul li a.next {
+section.paging ul li a.prev, section.paging ul li a.next {
   background: url(../../../image/icon_arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1125,10 +1118,10 @@ main section.paging ul li a.prev, main section.paging ul li a.next {
   background-size: 10px;
   filter: brightness(0) saturate(100%);
 }
-main section.paging ul li a.prev {
+section.paging ul li a.prev {
   transform: rotate(90deg);
 }
-main section.paging ul li a.next {
+section.paging ul li a.next {
   transform: rotate(-90deg);
 }
 
@@ -1412,4 +1405,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=exhibition_past.css.map */
