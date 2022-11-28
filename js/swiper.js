@@ -16,17 +16,17 @@ $(function() {
         spaceBetween: 30,
         effect: 'fade',
         loop: true,
+        autoplay: {
+            delay: 15000,
+            disableOnInteraction: false,
+        },
+        autoHeight: true,
+        pagination: {
+          el: '.slide-paging',
+          clickable: true,
+        }
         // mousewheel: {
         //   invert: false,
         // },
-        // autoplay: {
-        //     delay: 10000,
-        //     disableOnInteraction: false,
-        //   },
-        autoHeight: true,
-        pagination: {
-          el: '.prg-slider__pagination',
-          clickable: true,
-        }
      });
 })

@@ -648,6 +648,305 @@ header .breadcrumb-wrap {
   }
 }
 
+main section.search-wrap {
+  background: #f3f3f3;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+  }
+}
+main section.search-wrap .search-box {
+  padding: 40px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box {
+    width: 100%;
+    border-radius: 5px;
+    padding: 40px 80px;
+    background: #f3f3f3;
+  }
+}
+main section.search-wrap .search-box h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+main section.search-wrap .search-box .speed-search {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4d4d4;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main section.search-wrap .search-box .speed-search h6 {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search h6 {
+    display: inline-block;
+    width: 120px;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] {
+    width: calc(100% - 120px);
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] * {
+  height: 50px;
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] select {
+  background: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 20px center;
+  background-color: #fff;
+  background-size: 10px;
+  width: 37%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] select {
+    width: 15.5172413793%;
+    flex-wrap: nowrap;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] input {
+  width: 60%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] input {
+    width: 67.2413793103%;
+    flex-wrap: nowrap;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] button {
+    width: 13.7931034483%;
+    margin-top: 0;
+  }
+}
+main section.search-wrap .search-box .speed-search form[name=keyword] button img {
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+main section .list-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #d4d4d4;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1440px) {
+  main section .list-control {
+    padding-bottom: 20px;
+  }
+}
+main section .list-control .count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+main section .list-control .count b {
+  margin-right: 2px;
+}
+main section .list-control .count span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+main section .list-control .sort {
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+}
+main section .list-control .sort img {
+  height: 14px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section .list-control .sort span, main section .list-control .sort img {
+    display: none;
+  }
+}
+main section .list-control .view-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+main section .list-control .view-type .sort-list {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 35px;
+}
+@media screen and (min-width: 1440px) {
+  main section .list-control .view-type .sort-list {
+    position: static;
+  }
+}
+main section .list-control .view-type .sort-list li {
+  font-size: 14px;
+  padding-left: 15px;
+  color: #3c3c3c;
+}
+main section .list-control .view-type .sort-list li:hover {
+  text-decoration: underline;
+}
+main section .list-control .view-type .sort-list li.on {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #3c3c3c;
+}
+main section .list-control .view-type select[name=nth-view] {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section .list-control .view-type select[name=nth-view] {
+    display: block;
+    width: 120px;
+    height: 30px;
+    padding: 0 10px;
+    background: url(../../../image/icon_arrow_bk.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: right 10px center;
+    background-size: 8px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section .list-control {
+    margin-top: 80px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+main section .flex .workbook {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 30px;
+  /* &:last-child {
+      margin-bottom: 0;
+  } */
+}
+@media screen and (min-width: 1440px) {
+  main section .flex .workbook {
+    width: 48.5714285714%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section .flex .workbook {
+    margin-bottom: 50px;
+  }
+}
+main section .flex .workbook .w-img img {
+  width: 170px;
+}
+@media screen and (min-width: 1440px) {
+  main section .flex .workbook .w-img img {
+    width: 320px;
+  }
+}
+main section .flex .workbook .text-pdf {
+  position: relative;
+  width: 42.8571428571%;
+  margin: 20px 0;
+}
+main section .flex .workbook .text-pdf .text strong {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+@media screen and (min-width: 1440px) {
+  main section .flex .workbook .text-pdf .text strong {
+    font-size: 30px;
+  }
+}
+main section .flex .workbook .text-pdf .text strong p {
+  font-size: 12px;
+  font-weight: 200;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 1440px) {
+  main section .flex .workbook .text-pdf .text strong p {
+    font-size: 22px;
+  }
+}
+main section .flex .workbook .text-pdf .pdf {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+main section .flex .workbook .text-pdf .pdf a {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #000;
+  margin-bottom: 5px;
+}
+main section .flex .workbook .text-pdf .pdf a:last-child {
+  margin-bottom: 0;
+}
+main section .flex .workbook .text-pdf .pdf a img {
+  width: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section .flex .workbook .text-pdf .pdf a img {
+    width: 20px;
+  }
+}
+main section .flex .workbook .text-pdf .pdf a span {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section .flex .workbook .text-pdf .pdf a span {
+    font-size: 22px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   footer.sub {
     position: static !important;

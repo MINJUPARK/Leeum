@@ -60,11 +60,7 @@ $(function() {
       nextArrow: false
     });
 
-
-
-   
-
-    // exhibition : 탭 메뉴 및 전시 슬라이드
+    // exhibition : 탭 메뉴 및 전시목록 슬라이드
     var $swipeTabsContainer = $('.swipe-tabs'),
         $swipeTabs = $('.swipe-tab'),
         $swipeTabsContentContainer = $('.swipe-tabs-container'),
@@ -127,7 +123,6 @@ $(function() {
       swipe: false
     });
   
-  
     $('.swipe-tab').on('click', function() {
       $(".ehb-slider").slick("refresh");
     });
@@ -136,7 +131,7 @@ $(function() {
       dots: true,
       infinite: true,
       touchThreshold : 100,
-      autoplay: true,
+      autoplay: false,
       speed: 300,
       slidesToShow: 2,
       slidesToScroll: 1,
