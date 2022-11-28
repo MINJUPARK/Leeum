@@ -36,149 +36,95 @@ main {
             }
         }
 
-        /* .past-program {
+        .item-box {
+            @include flex_between();
+            flex-wrap: wrap;
             width: 100%;
-            margin-bottom: 20px;
-            @include responsive(pc-screens){
-                width: 48.57142857142857% !important;
-                margin-bottom: 50px;
-                width: 50%;
-            }
-            
-            .image-text {
+            margin-top: 50px;
+    
+            .item {
                 position: relative;
+                width: 48%;
+                margin-bottom: 20px;
                 border: 1px solid $bk5;
                 border-radius: 5px;
-                .image{
+
+                @include responsive(pc-screens) {
+                    width: 31.42857142857143%;
+                    margin-bottom: 25px;
+                }
+                
+                .heart {
+                    @include icon_heart();
+                }
+
+                a {
+                    display: block;
                     width: 100%;
-                    height: 110px;
+                }
+
+                .i-pic {
+                    position: relative;
+                    width: 100%; height: 200px;
                     overflow: hidden;
-    
-                    @include responsive(pc-screens){
-                        height: 260px;
+                    
+                    @include responsive(tablet-screens) {
+                        height: 650px;
                     }
-    
-                    img{
-                        width: 100%;
+                    
+                    .bg {
+                        width: 100%; height: 100%;
+                        object-fit: cover;
                         border-top-left-radius: 5px;
                         border-top-right-radius: 5px;
                     }
-                }  
-                
-                .text {
-                    padding: 14px 20px 21px 20px;
-    
-                    @include responsive(pc-screens){
-                        padding: 26px 40px 40px 40px;
-                    }
-                    span {
-                        @include gothic_font(medium, 12px); 
-                        color: $yellow-brown;
-                        margin-bottom: 7px;
-    
-                        @include responsive(pc-screens){
-                            font-size: 18px;
-                            margin-bottom: 15px;
-                        }
-                    }
-                    
-                    .bold {
-                        @include gothic_font(semibold, 16px); 
-                        margin-bottom: 20px;
-                       
-                        @include responsive(pc-screens){
-                            margin-bottom: 40px;
-                            font-size: 26px;
-                        }
-                        
-                    }
-        
-                    .grey {
-                        @include gothic_font(regular, 12px); 
-                        color: $bk1;
-    
-                        @include responsive(pc-screens){
-                            font-size: 16px;
-                        }
-                        
-                    }
-        
-                    
                 }
-            }
-    
-        } */
-            
-            
-        .flex {
-            justify-content: space-between;
-            flex-wrap: wrap;
-            display: flex;
-            @include responsive(pc-screens){
-               /*  flex-wrap: nowrap; */
-            }
-        
-            .publication {
-                // width: 100%;
-                // margin-bottom: 20px;
-                width: 48.57142857142857% !important;
-                @include responsive(pc-screens){
-                    // margin-bottom: 50px;
-                    width: 31.42857142857143% !important;
-                }
-                
-                .image-text {
-                    /* text-align: center; */
-                    .image{
+
+                .i-des {
+                    padding: 10px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    
+                    @include responsive(tablet-screens) {
+                        padding: 20px 30px 25px;
+                    }
+
+                    strong { 
                         width: 100%;
-                        margin-bottom: 10px;
-                       /*  border: 1px solid $bk4; */
-                        
-                        @include responsive(pc-screens){
-                            // height: 260px;
+                        @include gothic_font(bold);
+                        line-height: 1.5em;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+
+                        @include responsive(tablet-screens) {
+                            font-size: 20px;
                         }
-                        
-                        img{
-                            width: 100%;
-                            height: 250px;
+                    }
 
-                            @include responsive(pc-screens) {
-                                height: 455px;
-                            }
+                    p {
+                        margin: 5px 0 20px;
+                        color: $bk2;
+                        font-size: 13px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+
+                        @include responsive(tablet-screens) {
+                            margin: 10px 0 30px;
+                            font-size: 15px;
                         }
-                    }  
-                    
-                    .text {
-                        margin-bottom: 20px;
-                        padding: 0 10px;
-
-                        h4 {
-                            @include gothic_font(bold, 12px);
-                            margin-bottom: 30px;
-                        }
-
-                        /* @include responsive(pc-screens){
-                            padding: 26px 40px 40px 40px;
-                        } */
-                        p {
-                            margin-bottom: 7px;
-                            @include gothic_font(medium, 11px);
-                        }  
-
-                        span {
-                            font-size: 10px;
-                            margin-bottom: 7px;
-
-                            @include responsive(pc-screens){
-                                font-size: 18px;
-                                margin-bottom: 15px;
-                            }
-                        }   
-
+                    }
+                    span.star {
+                        color: #ee5b27;
                     }
                 }
             }
         }
+    }
+
+    section.paging {
+        @include paging();
     }
 }
 

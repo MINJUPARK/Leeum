@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, strong, label, time {
+img, span, b, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -187,7 +187,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/header_exhibition.jpg);
+  background: url(../image/exhibition_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -639,114 +648,156 @@ header .breadcrumb-wrap {
   }
 }
 
-main .container .popular-program-wrap {
-  display: none;
+main .popular-program {
+  margin-top: 60px;
 }
-@media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap {
-    display: block;
-  }
-}
-main .container .popular-program-wrap h3 {
+main h4 {
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap h3 {
+  main h4 {
     font-size: 36px;
   }
 }
-main .container .popular-program-wrap .img-text {
-  width: 100%;
-  margin: 30px auto;
+main .img-text {
   position: relative;
-}
-main .container .popular-program-wrap .img-text img {
   width: 100%;
+  overflow: hidden;
+  margin: 40px auto 30px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 @media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap .img-text img {
-    text-align: center;
+  main .img-text {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+    margin-top: 60px;
     height: 810px;
   }
 }
+main .img-text .image, main .img-text a, main .img-text img {
+  height: 100%;
+}
+main .img-text .image {
+  position: relative;
+}
+main .img-text a {
+  width: 100%;
+}
+main .img-text img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .img-text .limit-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #ac3f21;
+  color: #fff;
+  border-radius: 5px;
+}
 @media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap .text-explain .text-explain-text {
+  main .img-text .limit-text {
+    top: 30px;
+    left: 30px;
+    font-size: 22px;
+  }
+}
+main .img-text .limit-text p {
+  font-size: 14px;
+}
+@media screen and (min-width: 1440px) {
+  main .img-text .limit-text p {
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .text-explain .text-explain-text {
     display: flex;
   }
 }
-main .container .popular-program-wrap .text-explain .text {
+main .text-explain .text {
   padding-bottom: 30px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap .text-explain .text {
+  main .text-explain .text {
     width: 50%;
     padding-left: 60px;
     padding-top: 35px;
   }
 }
-main .container .popular-program-wrap .text-explain .text p:first-child {
+main .text-explain .text p:first-child {
   font-size: 16px;
   font-weight: 600;
   color: #be6a15;
   padding-bottom: 10px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap .text-explain .text p:first-child {
+  main .text-explain .text p:first-child {
     font-size: 22px;
     padding-bottom: 10px;
   }
 }
-main .container .popular-program-wrap .text-explain .text h3 {
+main .text-explain .text h3 {
   text-align: left;
   font-size: 22px;
   padding-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap .text-explain .text h3 {
+  main .text-explain .text h3 {
     font-size: 30px;
     padding-bottom: 40px;
   }
 }
-main .container .popular-program-wrap .text-explain .text p:last-child {
-  font-size: 16px;
-  font-weight: 500;
+main .text-explain .text p:last-child {
+  color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap .text-explain .text p:last-child {
-    font-size: 24px;
+  main .text-explain .text p:last-child {
+    font-size: 22px;
   }
 }
 @media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap .text-explain .explain-text {
+  main .text-explain .explain-text {
     width: 50%;
-    padding-right: 60px;
-    text-align: justify;
-    margin-bottom: 190px;
   }
 }
-main .container .popular-program-wrap .text-explain .explain-text p {
+main .text-explain .explain-text p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
   color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
-  main .container .popular-program-wrap .text-explain .explain-text p {
+  main .text-explain .explain-text p {
     font-size: 20px;
-    padding-top: 45px;
+    /*  width: 50%; */
+    padding-right: 60px;
+    padding-top: 60px;
   }
 }
-main .container h3 {
-  display: none;
+main .title {
+  text-align: center;
+  font-size: 26px;
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 1440px) {
-  main .container h3 {
-    display: block;
-    text-align: center;
+  main .title h4 {
+    margin-top: 200px;
+    font-size: 36px;
   }
-}
-main .container .filter {
-  display: none;
 }
 main .list-control {
   display: flex;
@@ -757,6 +808,8 @@ main .list-control {
   height: 35px;
   line-height: 35px;
   border-bottom: 1px solid #d4d4d4;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 1440px) {
   main .list-control {
@@ -795,7 +848,8 @@ main .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 main .list-control .view-type .sort-list {
   display: flex;
@@ -840,15 +894,25 @@ main .list-control .view-type select[name=nth-view] {
   }
 }
 @media screen and (min-width: 1440px) {
+  main .list-control {
+    margin-top: 80px;
+  }
+}
+main .img-explain-date-register .img-text-explain {
+  margin: 25px 0 75px;
+}
+@media screen and (min-width: 1440px) {
   main .img-explain-date-register .img-text-explain {
     display: flex;
-    border-bottom: 1px solid #c5c5c5;
-    padding-top: 50px;
+    align-items: center;
+    margin: 50px 0 150px;
+  }
+  main .img-explain-date-register .img-text-explain:first-child {
+    margin-top: 75px;
   }
 }
 main .img-explain-date-register .image-text {
   width: 100%;
-  margin: 50px auto;
   position: relative;
 }
 main .img-explain-date-register .image-text img {
@@ -857,26 +921,65 @@ main .img-explain-date-register .image-text img {
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .image-text img {
-    /* padding: 0 240px;
-    text-align: center;
-    width: 100%; */
     width: 720px;
+    height: 405px;
   }
+}
+main .img-explain-date-register .image-text .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: url("../../../image/icon_heart_motion.png") no-repeat;
+  background-position: 0 0;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  z-index: 97;
+}
+main .img-explain-date-register .image-text .heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
+}
+main .img-explain-date-register .image-text .heart.on {
+  transition-duration: 1s;
+  background-position: -1960px 0;
+}
+main .img-explain-date-register .image-text .limit-text-1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #ac3f21;
+  color: #fff;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main .img-explain-date-register .image-text .limit-text-1 {
+    padding: 10px 20px;
+  }
+}
+main .img-explain-date-register .image-text .limit-text-1 p {
+  font-size: 14px;
+}
+@media screen and (min-width: 1440px) {
+  main .img-explain-date-register .image-text .limit-text-1 p {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+main .img-explain-date-register .explain-date-register {
+  margin-top: 20px;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register {
     width: 600px;
   }
 }
-@media screen and (min-width: 1440px) {
-  main .img-explain-date-register .explain-date-register .explain {
-    padding-top: 45px;
-  }
-}
 main .img-explain-date-register .explain-date-register .explain p:first-child {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   color: #be6a15;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .explain p:first-child {
@@ -884,26 +987,26 @@ main .img-explain-date-register .explain-date-register .explain p:first-child {
     color: #be6a15;
   }
 }
-main .img-explain-date-register .explain-date-register .explain h2 {
-  font-size: 22px;
+main .img-explain-date-register .explain-date-register .explain h5 {
   padding-bottom: 20px;
+  line-height: 1.3em;
 }
 @media screen and (min-width: 1440px) {
-  main .img-explain-date-register .explain-date-register .explain h2 {
-    font-size: 46px;
+  main .img-explain-date-register .explain-date-register .explain h5 {
+    font-size: 36px;
   }
 }
 main .img-explain-date-register .explain-date-register .explain p:last-child {
-  font-size: 16px;
+  padding-bottom: 20px;
+  text-align: justify;
+  line-height: 1.8em;
+  color: #3c3c3c;
   color: #5c5c5c;
-  padding-bottom: 40px;
-  line-height: 26px;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .explain p:last-child {
-    font-size: 22px;
-    color: #5c5c5c;
-    line-height: 36px;
+    text-align: left;
+    font-size: 20px;
   }
 }
 main .img-explain-date-register .explain-date-register .date,
@@ -912,7 +1015,8 @@ main .img-explain-date-register .explain-date-register .register {
 }
 main .img-explain-date-register .explain-date-register .date span,
 main .img-explain-date-register .explain-date-register .register span {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .date span,
@@ -923,7 +1027,7 @@ main .img-explain-date-register .explain-date-register .register span {
 main .img-explain-date-register .explain-date-register .date p,
 main .img-explain-date-register .explain-date-register .register p {
   padding-left: 20px;
-  font-size: 16px;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .date p,
@@ -932,29 +1036,514 @@ main .img-explain-date-register .explain-date-register .register p {
   }
 }
 main .img-explain-date-register .explain-date-register .date {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+}
+main .img-explain-date-register .explain-date-register .date.jump {
+  padding-bottom: 65px;
 }
 main .img-explain-date-register .explain-date-register .register {
   padding-bottom: 35px;
 }
 main .img-explain-date-register .explain-date-register .register p {
   color: #ac3f21;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main .img-explain-date-register .explain-date-register .register p {
+    font-size: 18px;
+  }
 }
 main .img-explain-date-register .explain-date-register .request {
   text-align: center;
-  border: 1px solid #000;
+  border: 1px solid #3c3c3c;
   padding: 10px;
   border-radius: 5px;
-  margin-bottom: 70px;
+}
+main .img-explain-date-register .explain-date-register .request a {
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  color: #3c3c3c;
+  border-radius: 5px;
 }
 @media screen and (min-width: 1440px) {
-  main .img-explain-date-register .explain-date-register .request {
+  main .img-explain-date-register .explain-date-register .request a {
     font-size: 20px;
     text-align: center;
-    width: 160px;
-    margin-left: 440px;
-    padding: 20px 45px;
+    margin: 0 auto;
+    width: 600px;
+    padding: 5px 0;
   }
+}
+main .img-explain-date-register .explain-date-register .request {
+  text-align: center;
+  border: 1px solid #3c3c3c;
+  padding: 10px;
+  border-radius: 5px;
+}
+main .img-explain-date-register .explain-date-register .request a {
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  color: #3c3c3c;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main .img-explain-date-register .explain-date-register .request a {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    padding: 5px 0;
+  }
+}
+main .img-explain-date-register .explain-date-register .request1 {
+  text-align: center;
+  border: 1px solid #3c3c3c;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: -50px;
+}
+main .img-explain-date-register .explain-date-register .request1 a {
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  color: #3c3c3c;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main .img-explain-date-register .explain-date-register .request1 a {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    padding: 5px 0;
+  }
+}
+main section.filter {
+  background: #f3f3f3;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+  }
+}
+main section.filter .filter-wrap {
+  padding: 40px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap {
+    width: 100%;
+    border-radius: 5px;
+    padding: 40px 80px;
+    background: #f3f3f3;
+  }
+}
+main section.filter .filter-wrap h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+main section.filter .filter-wrap .speed-search {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4d4d4;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main section.filter .filter-wrap .speed-search h6 {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search h6 {
+    display: inline-block;
+    width: 120px;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] {
+    width: calc(100% - 120px);
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] * {
+  height: 50px;
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] select {
+  background: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 20px center;
+  background-color: #fff;
+  background-size: 10px;
+  width: 37%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] select {
+    width: 15.5172413793%;
+    flex-wrap: nowrap;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] input {
+  width: 60%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] input {
+    width: 67.2413793103%;
+    flex-wrap: nowrap;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] button {
+    width: 13.7931034483%;
+    margin-top: 0;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] button img {
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .ds-btn {
+    margin-bottom: 40px;
+    text-align: right;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn span {
+  vertical-align: initial;
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn img {
+  width: 10px;
+  margin-left: 10px;
+  filter: brightness(0) saturate(100%);
+  transition: 0.3s;
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn img.active {
+  transform: rotate(180deg);
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search {
+  display: none;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] h6 {
+  margin: 20px 0 12px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85.9375%;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box h6 {
+    margin: 0;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul {
+    width: calc(100% - 120px);
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: #3c3c3c;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li {
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  border: 1px solid #d4d4d4;
+  background: #fff;
+  cursor: pointer;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li:not(:first-child) {
+  border-left: 0;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li.on {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #3c3c3c;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box {
+    flex-wrap: nowrap;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp {
+  width: 50%;
+  border: 1px solid #d4d4d4;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+  border-bottom: 0;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(odd) {
+  border-right: 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+    border-bottom: 1px solid #d4d4d4;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+    border-right: 0;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp li.title {
+  height: 45px;
+  line-height: 45px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list {
+  height: 125px;
+  padding: 15px 20px;
+  background: #fff;
+  overflow-y: auto;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 225px;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list li {
+  height: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list li {
+    width: 30%;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list li label {
+  margin-left: 5px;
+  font-size: 14px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
+    display: inline-block;
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 120px;
+  height: 50px;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
+    margin: 0 auto;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button img {
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 5px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=submit] {
+  width: 74%;
+  background: #000;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=submit] {
+    width: 150px;
+    margin-right: 1%;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=reset] {
+  width: 24%;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=reset] {
+    width: 150px;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search {
+  display: block;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box {
+    width: 100%;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type {
+  width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 86.2068965517%;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li {
+  width: 25%;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:first-child {
+  border-bottom-left-radius: 0;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(4) {
+  border-top-right-radius: 5px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(5), main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(6), main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:last-child {
+  border-top: 0;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(5) {
+  border-left: 1px solid #d4d4d4;
+  border-bottom-left-radius: 5px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:last-child {
+  border-top-right-radius: 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li {
+    width: 25%;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:first-child {
+    border-bottom-left-radius: 5px;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(4) {
+    border-top-right-radius: 0;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(5), main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(6), main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:last-child {
+    border-top: 1px solid #d4d4d4;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:nth-child(5) {
+    border-left: 0;
+    border-bottom-left-radius: 0;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type ul.opt li:last-child {
+    border-top-right-radius: 5px;
+  }
+}
+main section.paging {
+  margin: 30px 0 60px;
+}
+main section.paging ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  main section.paging ul {
+    width: 50%;
+    margin: 80px auto 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.paging ul {
+    width: 30%;
+  }
+}
+main section.paging ul li {
+  width: 45px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 5px;
+  text-align: center;
+}
+main section.paging ul li a {
+  width: 100%;
+  height: 100%;
+}
+main section.paging ul li a:hover {
+  font-weight: bold;
+  border-radius: 5px;
+  background: #f3f3f3;
+}
+main section.paging ul li a.on {
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  background: #3c3c3c;
+}
+main section.paging ul li a.prev, main section.paging ul li a.next {
+  background: url(../../../image/icon_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: 10px;
+  filter: brightness(0) saturate(100%);
+}
+main section.paging ul li a.prev {
+  transform: rotate(90deg);
+}
+main section.paging ul li a.next {
+  transform: rotate(-90deg);
 }
 
 @media screen and (min-width: 1440px) {
@@ -1237,4 +1826,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=exhibition_now.css.map */
