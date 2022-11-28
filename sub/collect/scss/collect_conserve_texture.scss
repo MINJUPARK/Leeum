@@ -180,6 +180,7 @@ main {
 
                             img {
                                 width: 100%;
+                                cursor: none;
                             }
 
                             .img-l {
@@ -254,6 +255,9 @@ main {
                 li {
                     position: relative;
                     margin-top: 90px;
+                    opacity: 0.2;
+
+                    transition: all .5s;
                     
                     @include responsive(pc-screens) {
                         margin-top: 170px;
@@ -298,6 +302,7 @@ main {
                     }
 
                     &.border-effect {
+                        opacity: 1;
 
                         @include responsive(pc-screens) {
                           

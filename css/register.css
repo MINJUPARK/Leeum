@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, strong, label, time {
+img, span, b, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -182,4 +182,4 @@ h6 {
   font-size: 18px;
 }
 
-/* -------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- *//*# sourceMappingURL=register.css.map */

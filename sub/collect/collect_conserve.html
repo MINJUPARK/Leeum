@@ -7,8 +7,14 @@
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/collect_conserve.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/swiper.js"></script>
+    <script type="text/javascript" src="./js/aos.js"></script>
     <title>Leeum</title>
 </head>
 <body>
@@ -263,38 +269,41 @@
             <div class="container">
                 <div class="texture-research">
                     <h3>재질별 보존처리</h3>
-                    <ul class="texture-lsit">
-                        <li>
-                            <a href="./collect_conserve_texture.html">
-                                <h4>금속유물</h4>
-                                <img src="./image/conserve_texture(1).png" alt="작품 재질1">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>도자기</h4>
-                                <img src="./image/conserve_texture(2).png" alt="작품 재질2">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>현대조각</h4>
-                                <img src="./image/conserve_texture(3).png" alt="작품 재질3">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>고서화</h4>
-                                <img src="./image/conserve_texture(4).png" alt="작품 재질4">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h4>현대회화</h4>
-                                <img src="./image/conserve_texture(5).png" alt="작품 재질5">
-                            </a>
-                        </li>
-                    </ul><!-- texture -->
+                    <!-- <div class="swiper mySwiper"> -->
+                    <div class="swiper mySwiper">
+                        <ul class="texture-lsit item-box swiper-wrapper">
+                            <li class="item swiper-slide">
+                                <a href="./collect_conserve_texture.html">
+                                    <h4>금속유물</h4>
+                                    <img src="./image/conserve_texture(1).png" alt="작품 재질1">
+                                </a>
+                            </li>
+                            <li class="item swiper-slide">
+                                <a href="#">
+                                    <h4>도자기</h4>
+                                    <img src="./image/conserve_texture(2).png" alt="작품 재질2">
+                                </a>
+                            </li>
+                            <li class="item swiper-slide">
+                                <a href="#">
+                                    <h4>현대조각</h4>
+                                    <img src="./image/conserve_texture(3).png" alt="작품 재질3">
+                                </a>
+                            </li>
+                            <li class="item swiper-slide">
+                                <a href="#">
+                                    <h4>고서화</h4>
+                                    <img src="./image/conserve_texture(4).png" alt="작품 재질4">
+                                </a>
+                            </li>
+                            <li class="item swiper-slide">
+                                <a href="#">
+                                    <h4>현대회화</h4>
+                                    <img src="./image/conserve_texture(5).png" alt="작품 재질5">
+                                </a>
+                            </li>
+                        </ul><!-- texture -->
+                    </div>
                 </div><!-- texture-research -->
             </div><!-- container -->
         </section><!-- texture-research-wrap -->

@@ -234,16 +234,12 @@ main {
             } // .tr
         } // table
     } // membership-wrap, gift-membership-wrap
-        
-    .gift-membership-wrap{
-        margin-top: 80px;
-
-        @include responsive(pc-screens) {
-            margin-top: 160px;
-        }
-    }
 
     .membership-wrap {
+        
+        @include responsive(pc-screens) {
+            margin-top: 100px;
+        }
 
         .membership {
             
@@ -296,6 +292,10 @@ main {
     } // membership-wrap
 
     .gift-membership-wrap {
+
+        @include responsive(pc-screens) {
+            margin-top: 160px;
+        }
 
         .gift-membership {
     
