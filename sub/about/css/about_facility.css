@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, strong, label, time {
+img, span, b, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -639,15 +639,18 @@ header .breadcrumb-wrap {
   }
 }
 
-main .tabmenu-wrap .tab-nav {
+main {
+  overflow: hidden;
+}
+main .container .tabmenu-wrap .tab-nav {
   display: table;
   width: 100%;
 }
-main .tabmenu-wrap .tab-nav .nav {
+main .container .tabmenu-wrap .tab-nav .nav {
   display: table-cell;
   width: 50px;
 }
-main .tabmenu-wrap .tab-nav .nav a {
+main .container .tabmenu-wrap .tab-nav .nav a {
   transition: 0.4s;
   position: relative;
   display: block;
@@ -659,22 +662,22 @@ main .tabmenu-wrap .tab-nav .nav a {
   height: 40px;
 }
 @media screen and (min-width: 768px) {
-  main .tabmenu-wrap .tab-nav .nav a {
+  main .container .tabmenu-wrap .tab-nav .nav a {
     height: 50px;
     font-size: 24px;
   }
 }
-main .tabmenu-wrap .tab-nav .nav a:after {
+main .container .tabmenu-wrap .tab-nav .nav a:after {
   content: "";
   transition: 0.4s;
   width: 0px;
 }
-main .tabmenu-wrap .tab-nav .nav.on a {
+main .container .tabmenu-wrap .tab-nav .nav.on a {
   color: #000;
   font-size: 18px;
   font-weight: 700;
 }
-main .tabmenu-wrap .tab-nav .nav.on a:after {
+main .container .tabmenu-wrap .tab-nav .nav.on a:after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -686,14 +689,14 @@ main .tabmenu-wrap .tab-nav .nav.on a:after {
   background-color: #000;
 }
 @media screen and (min-width: 768px) {
-  main .tabmenu-wrap .tab-nav .nav.on a {
+  main .container .tabmenu-wrap .tab-nav .nav.on a {
     font-size: 24px;
   }
 }
-main .tabmenu-wrap .tab-con {
+main .container .tabmenu-wrap .tab-con {
   padding-top: 60px;
 }
-main .tabmenu-wrap .tab-con .con-box {
+main .container .tabmenu-wrap .tab-con .con-box {
   display: none;
 }
 main .main-img {
@@ -1339,6 +1342,7 @@ main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail img {
   main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail img {
     width: 18px;
     height: 18px;
+    margin-top: -3px;
   }
 }
 main .container .leeumstore .leeumstore-detail-flexbox .leeumstore-detail a {
@@ -1451,6 +1455,7 @@ main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail img
   main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail img {
     width: 18px;
     height: 18px;
+    margin-top: -3px;
   }
 }
 main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
