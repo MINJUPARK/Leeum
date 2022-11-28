@@ -12,6 +12,121 @@ header {
     @include full_bg('publication_header.jpg');
 }
 
+main {
+    section.search-wrap {
+        @include section_filter();
+
+        .search-box {
+            @include filter_wrap();
+
+            .speed-search {
+                @include speed_search();
+            }
+        }
+    }
+
+    section {
+        .list-control {
+            @include list_control();
+            margin-top: 40px;
+            margin-bottom: 60px;
+
+            @include responsive(pc-screens) {
+                margin-top: 80px;
+            }
+        }
+
+        .flex {
+
+            @include responsive(pc-screens) {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .workbook {
+                @include responsive(pc-screens) {
+                    width: 48.57142857142857%;
+                }
+
+                justify-content: space-between;
+                display: flex;
+                margin-bottom: 30px;
+
+                @include responsive(pc-screens) {
+                    margin-bottom: 50px;
+                }
+
+                /* &:last-child {
+                    margin-bottom: 0;
+                } */
+                .w-img {
+                    img {
+                        width: 170px;
+
+                    @include responsive(pc-screens) {
+                        width: 320px;
+                    }
+                    }
+                }
+
+                .text-pdf {
+                    position: relative;
+                    width: 42.85714285714286%;
+                    margin: 20px 0;
+                    .text {
+                        strong {
+                            margin-bottom: 10px;
+                            font-size: 18px;
+
+                        @include responsive(pc-screens) {
+                            font-size: 30px;
+                        }
+
+                        p {
+                            @include gothic_font(light, 12px);
+                            color: $bk2;
+                            @include responsive(pc-screens) {
+                                font-size: 22px;
+                            }
+                        }
+                        }
+                    }
+                    .pdf {
+                        position: absolute;
+                        bottom: 0;
+                        text-align: center;
+                        width: 100%;
+                        a {
+                            padding: 5px;
+                            border-radius: 5px;
+                            width: 100%;
+                            border: 1px solid #000;
+                            margin-bottom: 5px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            img {
+                                width: 10px;
+                                @include responsive(pc-screens) {
+                                    width: 20px;
+                                }
+                            }
+                            span {
+                                @include gothic_font(medium, 12px);
+                                margin-left: 10px;
+
+                                @include responsive(pc-screens) {
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 footer {
     @include footer();
 }
