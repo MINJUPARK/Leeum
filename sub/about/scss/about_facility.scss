@@ -4,6 +4,7 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 @import '../../../scss/mixin_footer.scss';
+@import './about_mixin_DH.scss';
 
 header {
     @include header_common();
@@ -13,7 +14,8 @@ header {
 }
 
 main {
-    // overflow-x: hidden; 
+    overflow: hidden;
+
     .container{
         @include tab_menu();
     }
