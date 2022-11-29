@@ -148,19 +148,6 @@ main {
         display: none;
     }
 
-    // img {
-    //     width: 100%;
-    //     position: relative;
-
-    //     @include responsive(pc-screens){
-    //         // padding-left: 240px;
-    //         // padding-right: 240px;
-    //         height: 810px;
-    //         position: relative;
-
-    //     }
-    // }
-
 
     .text {
         @include responsive(pc-screens){
@@ -296,10 +283,9 @@ main {
     }
 
     .o-i-p {
+        margin-bottom: 100px;
         @include responsive(pc-screens){
-            // margin-top: 80px;
             width: 60%;
-            // margin-left: 240px;
         }
         
         .introduce {
@@ -422,11 +408,122 @@ main {
             }
         }
     }
-    
-    
-    
-    
 
+    section.image {
+        .ehb-slider {
+            margin-bottom: 100px;
+            @include responsive(pc-screens){
+                margin-bottom: 200px;
+            }
+
+            .slick-list {
+              padding: 30px 0 40px !important;
+            }
+      
+            .slick-slide {
+              margin: 0 110px;
+            }
+      
+            .slick-center .bg {
+              transform: scale3d(1.0, 1.0, 1);
+              opacity: 1;
+            }
+      
+            .slick-current .bg {
+              box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+        
+              .des {
+                bottom: 0;
+              }
+            }
+      
+            .bg {
+              position: relative;
+              width: 350px;
+              height: 550px;
+              margin: 0 -125px;
+              border-radius: 15px;
+              transform: scale3d(0.8, 0.8, 1);
+              transition: all .3s ease-in-out;
+              opacity: .2;
+              overflow: hidden;
+      
+              @media screen and (min-width:480px) {
+                width: 450px; height: 350px;
+              }
+      
+              @include responsive(tablet-screens) {
+                width: 650px; height: 450px;
+              }
+      
+              @include responsive(pc-screens) {
+                width: 850px; height: 550px;
+              }
+        
+              .des {
+                @include flex_between();
+                align-items: flex-end;
+                position: absolute;
+                bottom: -120px;
+                width: 100%;
+                color: #000;
+                background-color: #fff;
+                transition: bottom .5s;
+                padding: 15px 30px;
+                
+                @include responsive(pc-screens) {
+                  bottom: -180px;
+                  padding: 25px 40px;
+                }
+                
+        
+                .type {
+                  @include gothic_font(bold,14px);
+ 
+                  @include responsive(tablet-screens) {
+                    font-size: 16px;
+                  }
+      
+                  @include responsive(pc-screens) {
+                    font-size: $h6;
+                  }
+                }
+        
+                .title { 
+                  margin: 5px 0 15px;
+                  font-size: 14px;
+                  
+                  @include responsive(tablet-screens) {
+                    font-size: 16px;
+                  }
+      
+                  @include responsive(pc-screens) {
+                    font-size: $h6;
+                  }
+                }
+                
+        
+                .loc {
+                  padding: 5px 12px;
+                  font-size: 12px;
+                  border: 1px solid $bk1;
+                  border-radius: 5px;
+                  
+                  @include responsive(pc-screens) {
+                    padding: 6px 18px;
+                    font-size: 14px;
+                  }
+                }
+              }
+      
+              img {
+                width: 100%; height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+    }
+        
     section.movePage {
         @include move_page();
         
