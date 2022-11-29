@@ -1,58 +1,8 @@
-$(function() {
-    $('.view').on("mousemove", zoom);
-    $('.side-tab .tab-wrap').find('li').on('click', function(e) {
-        var $this = $(this);
-        var $index = $this.index();
-        var $all_tab= $this.parents('.tab-wrap').find('.tab');
-
-        let $tab_contents = $this.parents('.side-tab').find('.side-con-box');
-
-        $all_tab.removeClass('on');
-        $this.addClass('on');
-
-        $tab_contents.find('li').removeClass('view');
-        $tab_contents.find(`li:eq(${$index})`).addClass('view');
-
-        $tab_contents.find('.img-l').css("background-image", "url('../collect/image/conserve_texture_damage\(" + $index + "\).png')");
-        
-        $tab_contents.find(`li:eq(${$index})`).on("mousemove", zoom);
-    })
-})
-
-
-let typeSelect = document.querySelector(".type-select");
-let typeImg = document.querySelector(".type-img");
-let allImg = document.querySelectorAll(".type-img > li");
-// let viewImg = document.querySelector(".type-img > .view");
-// let imgItem = img[0];
-// let i;
-
-// console.log(imgItem);
-// console.log(imgView);
-
-// typeSelect.addEventListener("click", () => {
-// });
-
-// typeImg.addEventListener("mousemove", (e) => {
-//     let li = e.target.closest('li'); // (1)
-    
-//     if (!li) return; // (2)
-    
-//     if (!typeImg.contains(li)) return; // (3)
-    
-    
-//     console.log(li);
-//     // zoom(li);
-//     zoom(e, li);
-
-// }, true);
-
-// viewImg.addEventListener("mousemove", zoom, false);
-
+$('.side-tab .type-img').find('li').on("mousemove", zoom);
 
 function zoom(e) {
-    let imgS = document.querySelector(".img-s"),
-        imgL = document.querySelector(".img-l"),
+    let imgS = this.querySelector(".img-s"),
+        imgL = this.querySelector(".img-l"),
         imgLeft = this.getBoundingClientRect().left,
         imgTop = window.pageYOffset + this.getBoundingClientRect().top,
         x = e.pageX - imgLeft, 

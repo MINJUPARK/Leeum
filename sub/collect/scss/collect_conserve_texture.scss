@@ -171,7 +171,6 @@ main {
                         display: none;
                         width: 100%;
                         aspect-ratio: 10 / 7;
-                        background-color: darkblue;
                         // max-height: 50vh;
                         
                         &.view {
@@ -255,14 +254,14 @@ main {
                 li {
                     position: relative;
                     margin-top: 90px;
-                    opacity: 0.2;
-
+                    
                     transition: all .5s;
                     
                     @include responsive(pc-screens) {
                         margin-top: 170px;
                         padding: 55px 120px;
                         box-shadow: inset 0 0 0 1px $bk4;
+                        opacity: 0.2;
                     }
                     
                     &:first-child {
@@ -302,9 +301,9 @@ main {
                     }
 
                     &.border-effect {
-                        opacity: 1;
-
+                        
                         @include responsive(pc-screens) {
+                            opacity: 1;
                           
                             &::before,
                             &::after {
