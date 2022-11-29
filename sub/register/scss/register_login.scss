@@ -2,3 +2,92 @@
 @import '../../../scss/style.scss';
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
+
+
+header {
+    .image {
+        text-align: center;
+        margin-top: 60px;
+        img {
+            width: 70px;
+        }
+    }
+}
+
+main {
+    section.login {
+        ul.angle-select {
+            @include flex_between();
+            border-top: 1px solid $bk4;
+            width: 100%;
+            
+            li {
+                position: relative;
+                width: 33.33333333333333%;
+                height: 68px;
+                border-left: 1px solid $bk4;
+                
+                @include responsive(tablet-screens) {
+                    height: 65px;
+                }
+                
+                &:last-child {
+                    border-right: 1px solid $bk4;
+                }
+                
+                &::after {
+                    position: absolute;
+                    top: -1px; left: -1px;
+                    content: '';
+                    display: block;
+                    width: calc(100% + 2px); height: 5px;
+                    background-color: #000;
+                    z-index: 1;                            
+                    scale: 0;
+                }
+                
+                span {
+                    @include element_center();
+                    width: 100%;
+                    font-size: 20px;
+                    text-align: center;
+                    cursor: pointer;
+                    
+                    transition: color 0.7s;
+                    
+                    color: $bk3;
+                }
+                
+                &.on {
+                    background-color: transparent;
+                    
+                    &::after {
+                        scale: 1;
+                    }
+                    
+                    span {
+                        color: #000;
+                        font-weight: 600; // semibold
+                    }
+                }
+                
+            }
+        }
+
+        .id-pw-login {
+            border: 1px solid $bk4;
+            padding: 50px 30px;
+
+            form {
+                float: left;
+                padding-left: 10px;
+                // width: 30px;
+                .id-pw {
+                    input {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -183,3 +183,76 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
+header .image {
+  text-align: center;
+  margin-top: 60px;
+}
+header .image img {
+  width: 70px;
+}
+
+main section.login ul.angle-select {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #c5c5c5;
+  width: 100%;
+}
+main section.login ul.angle-select li {
+  position: relative;
+  width: 33.3333333333%;
+  height: 68px;
+  border-left: 1px solid #c5c5c5;
+}
+@media screen and (min-width: 768px) {
+  main section.login ul.angle-select li {
+    height: 65px;
+  }
+}
+main section.login ul.angle-select li:last-child {
+  border-right: 1px solid #c5c5c5;
+}
+main section.login ul.angle-select li::after {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  content: "";
+  display: block;
+  width: calc(100% + 2px);
+  height: 5px;
+  background-color: #000;
+  z-index: 1;
+  scale: 0;
+}
+main section.login ul.angle-select li span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.7s;
+  color: #acacac;
+}
+main section.login ul.angle-select li.on {
+  background-color: transparent;
+}
+main section.login ul.angle-select li.on::after {
+  scale: 1;
+}
+main section.login ul.angle-select li.on span {
+  color: #000;
+  font-weight: 600;
+}
+main section.login .id-pw-login {
+  border: 1px solid #c5c5c5;
+  padding: 50px 30px;
+}
+main section.login .id-pw-login form {
+  float: left;
+  padding-left: 10px;
+}
+main section.login .id-pw-login form .id-pw input {
+  margin-bottom: 20px;
+}/*# sourceMappingURL=register_login.css.map */

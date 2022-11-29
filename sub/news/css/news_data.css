@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -793,6 +802,15 @@ main section.Public .preview {
   margin-left: -50vw;
   margin-right: -50vw;
 }
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2712px);
+    will-change: transform;
+  }
+}
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -830,7 +848,8 @@ main section.Public .preview .slider {
 main section.Public .preview .slider .slide-track {
   display: flex;
   width: 5424px;
-  animation: scroll 20s linear infinite;
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
 }
 main section.Public .preview .slider .slide-track .slide {
   display: flex;
@@ -973,7 +992,8 @@ main section.Video ul.item-box .item .i-pic {
 main section.Video ul.item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -1493,4 +1513,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=news_data.css.map */

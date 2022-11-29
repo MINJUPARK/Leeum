@@ -183,3 +183,10 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
+header .image img {
+  width: 36px;
+}
+
+main section.login ul.gnb {
+  display: flex;
+}/*# sourceMappingURL=register_join_type.css.map */
