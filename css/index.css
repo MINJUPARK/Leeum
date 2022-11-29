@@ -889,6 +889,11 @@ header #icon-menu li a.search {
 main {
   margin-bottom: 0;
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+main::-webkit-scrollbar {
+  display: none;
 }
 main .title-box {
   position: relative;
@@ -1221,27 +1226,28 @@ main section.exhibition .sub-header-wrap .sub-header {
   }
 }
 main section.exhibition .ehb-slider .slick-list {
-  padding: 30px 0 40px !important;
+  padding: 30px 0 60px !important;
 }
-main section.exhibition .ehb-slider .slick-list .slick-slide {
+main section.exhibition .ehb-slider .slick-slide {
   margin: 0 110px;
 }
-main section.exhibition .ehb-slider .slick-list .slick-slide.slick-center .bg {
+main section.exhibition .ehb-slider .slick-slide.slick-center .bg {
   transform: scale3d(1, 1, 1);
   opacity: 1;
 }
-main section.exhibition .ehb-slider .slick-list .slick-slide.slick-current .bg {
+main section.exhibition .ehb-slider .slick-slide.slick-current .bg {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
-main section.exhibition .ehb-slider .slick-list .slick-slide.slick-current .bg label {
+main section.exhibition .ehb-slider .slick-slide.slick-current .bg label {
   opacity: 1;
 }
-main section.exhibition .ehb-slider .slick-list .slick-slide.slick-current .bg .des {
+main section.exhibition .ehb-slider .slick-slide.slick-current .bg .des {
   bottom: 0;
 }
-main section.exhibition .ehb-slider .bg {
+main section.exhibition .bg {
   position: relative;
-  height: 24vh;
+  width: 350px;
+  height: 250px;
   margin: 0 -125px;
   border-radius: 15px;
   transform: scale3d(0.8, 0.8, 1);
@@ -1249,18 +1255,25 @@ main section.exhibition .ehb-slider .bg {
   opacity: 0.2;
   overflow: hidden;
 }
+@media screen and (min-width: 480px) {
+  main section.exhibition .bg {
+    width: 450px;
+    height: 350px;
+  }
+}
 @media screen and (min-width: 768px) {
-  main section.exhibition .ehb-slider .bg {
-    height: 300px;
+  main section.exhibition .bg {
+    width: 650px;
+    height: 450px;
   }
 }
 @media screen and (min-width: 1440px) {
-  main section.exhibition .ehb-slider .bg {
-    width: 700px;
-    height: 400px;
+  main section.exhibition .bg {
+    width: 850px;
+    height: 550px;
   }
 }
-main section.exhibition .ehb-slider .bg .des {
+main section.exhibition .bg .des {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -1273,80 +1286,80 @@ main section.exhibition .ehb-slider .bg .des {
   padding: 15px 30px;
 }
 @media screen and (min-width: 1440px) {
-  main section.exhibition .ehb-slider .bg .des {
+  main section.exhibition .bg .des {
     bottom: -180px;
     padding: 25px 40px;
   }
 }
-main section.exhibition .ehb-slider .bg .des .type {
+main section.exhibition .bg .des .type {
   font-size: 16px;
   font-weight: 500;
   font-size: 14px;
   color: #be6a15;
 }
 @media screen and (min-width: 768px) {
-  main section.exhibition .ehb-slider .bg .des .type {
+  main section.exhibition .bg .des .type {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 1440px) {
-  main section.exhibition .ehb-slider .bg .des .type {
+  main section.exhibition .bg .des .type {
     font-size: 18px;
   }
 }
-main section.exhibition .ehb-slider .bg .des .title {
+main section.exhibition .bg .des .title {
   margin: 5px 0 15px;
   font-size: 20px;
 }
 @media screen and (min-width: 768px) {
-  main section.exhibition .ehb-slider .bg .des .title {
+  main section.exhibition .bg .des .title {
     font-size: 23px;
   }
 }
 @media screen and (min-width: 1440px) {
-  main section.exhibition .ehb-slider .bg .des .title {
+  main section.exhibition .bg .des .title {
     font-size: 26px;
   }
 }
-main section.exhibition .ehb-slider .bg .des time {
+main section.exhibition .bg .des time {
   margin-bottom: 5px;
   font-size: 12px;
   color: #5c5c5c;
 }
 @media screen and (min-width: 768px) {
-  main section.exhibition .ehb-slider .bg .des time {
+  main section.exhibition .bg .des time {
     font-size: 14px;
   }
 }
 @media screen and (min-width: 1440px) {
-  main section.exhibition .ehb-slider .bg .des time {
+  main section.exhibition .bg .des time {
     font-size: 16px;
   }
 }
-main section.exhibition .ehb-slider .bg .des .loc {
+main section.exhibition .bg .des .loc {
   padding: 5px 10px;
   font-size: 12px;
   border: 1px solid #3c3c3c;
   border-radius: 5px;
 }
 @media screen and (min-width: 1440px) {
-  main section.exhibition .ehb-slider .bg .des .loc {
+  main section.exhibition .bg .des .loc {
     padding: 6px 18px;
     font-size: 14px;
   }
 }
-main section.exhibition .ehb-slider .bg img {
+main section.exhibition .bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-main section.exhibition .ehb-slider .bg label {
+main section.exhibition .bg label {
   position: absolute;
   top: 15px;
   left: 15px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: #fff;
   background: #ac3f21;
@@ -1354,9 +1367,10 @@ main section.exhibition .ehb-slider .bg label {
   transition: opacity 0.3s;
 }
 @media screen and (min-width: 1440px) {
-  main section.exhibition .ehb-slider .bg label {
+  main section.exhibition .bg label {
     top: 20px;
     left: 20px;
+    zoom: 1.2;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1684,8 +1698,7 @@ main section.program .prg-slider .slide-wrap .slide-item {
   display: flex;
   align-items: center;
   flex-direction: column;
-  -moz-column-gap: 35px;
-       column-gap: 35px;
+  column-gap: 35px;
 }
 @media screen and (min-width: 1440px) {
   main section.program .prg-slider .slide-wrap .slide-item {
@@ -1748,9 +1761,9 @@ main section.program .prg-slider .slide-wrap .slide-item .slide-pic label {
   position: absolute;
   top: 15px;
   left: 15px;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: #fff;
   background: #ac3f21;
@@ -1766,10 +1779,6 @@ main section.program .prg-slider .slide-wrap .slide-item .slide-pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  opacity: 0;
-  transition: all 0.3s;
 }
 main section.program .prg-slider .slide-wrap .slide-item .slide-con {
   width: 100%;
@@ -1862,7 +1871,7 @@ main section.program .prg-slider .slide-wrap .slide-item .slide-con .date-resv .
 }
 main section.program .prg-slider .slide-wrap .slide-item .slide-con .date-resv .resv {
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   margin-top: 20px;
   border-radius: 5px;
   text-align: center;
@@ -1888,7 +1897,7 @@ main section.program .prg-slider .slide-paging {
   z-index: 1;
 }
 @media screen and (min-width: 1440px) {
-  main section.program .prg-slider__pagination {
+  main section.program .prg-slider .slide-paging {
     column-gap: 10px;
     right: 0;
     width: auto;
@@ -1929,7 +1938,6 @@ main section.artist .btn img {
 main section.artist .va-container {
   position: relative;
   margin: 40px auto 0;
-  overflow: hidden;
 }
 main section.artist .va-nav button {
   display: none;
@@ -1940,7 +1948,7 @@ main section.artist .va-nav button {
   height: 15px;
   margin-left: -20px;
   text-indent: -9000px;
-  background: url("/image/icon_arrow_thin.svg") no-repeat;
+  background: url("/image/icon_arrow_thin.svg") no-repeat !important;
   opacity: 0.2;
   transition: opacity 0.3s;
 }

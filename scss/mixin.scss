@@ -1096,8 +1096,8 @@
     }
 
     img {
-    width: 16px; height: 14px;
-    margin-left: 10px;
+        width: 16px; height: 14px;
+        margin-left: 10px;
     }
 }
 
@@ -1105,13 +1105,14 @@
 @mixin poster_label() {
     position: absolute;
     top: 15px; left: 15px;
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 5px;
-    @include gothic_font(medium, 14px);
+    @include gothic_font(medium, 13px);
     color: #fff;
     background: $red-brown;
 
     @include responsive(pc-screens) {
-    top: 20px; left: 20px;
+        top: 20px; left: 20px;
+        zoom: 1.2;
     }
 }
