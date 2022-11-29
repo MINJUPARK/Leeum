@@ -99,33 +99,6 @@ main {
                         }
                     }
 
-                    // .request {
-
-                    //     a {
-                    //         width: 100%;
-                    //         margin: 40px 0;
-                    //         padding: 15px;
-                    //         @include gothic_font(medium);
-                    //         text-align: center;
-                    //         color: #f00;
-                    //         border: 1px solid #f00;
-                    //         border-radius: 5px;
-                            
-                    //         &:hover {
-                    //             background-color: #f00;
-                    //             color: #fff;
-                    //             transition: all .3s;
-                    //         }
-
-                    //         @include responsive(pc-screens){
-                    //             font-size: 22px;
-                    //             padding: 20px;
-                    //             width: 480px;
-                    //             // margin-left: -20px;
-                    //         }
-                    //     }
-                    // }
-
                     .exp {
 
                         a {
@@ -199,7 +172,6 @@ main {
             a {
             @include gothic_font(semibold);
             width: 100%;
-            // margin: 40px 0;
             padding: 13px;
             border-radius: 5px;
             text-align: center;
@@ -209,8 +181,6 @@ main {
                 @include responsive(pc-screens){
                     font-size: 18px;
                     padding: 20px;
-                    // width: 480px;
-                    // margin-left: -20px;
                 }
             }
         }
