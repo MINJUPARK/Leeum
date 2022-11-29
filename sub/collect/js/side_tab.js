@@ -17,18 +17,19 @@ $(function() {
         }
 
         // 재질
-        // if($this.parents('.damage-type')) {
-        //     let $tab_contents = $this.parents('.side-tab').find('.side-con-box');
+        console.log($this.parents('.damage-type'));
+        if($this.parents('.damage-type')) {
+            let $tab_contents = $this.parents('.side-tab').find('.side-con-box');
     
-        //     $all_tab.removeClass('on');
-        //     $this.addClass('on');
+            $all_tab.removeClass('on');
+            $this.addClass('on');
 
-        //     $tab_contents.find('li').removeClass('view');
-        //     $tab_contents.find(`li:eq(${$index})`).addClass('view');
+            $tab_contents.find('li').removeClass('view');
+            $tab_contents.find(`li:eq(${$index})`).addClass('view');
 
-        //     $tab_contents.find('.img-l').css("background-image", "url('../collect/image/conserve_texture_damage\(" + $index + "\).png')");
+            $tab_contents.find('.img-l').css("background-image", "url('../collect/image/conserve_texture_damage\(" + $index + "\).png')");
             
-        // }
+        }
 
 
         // 사례

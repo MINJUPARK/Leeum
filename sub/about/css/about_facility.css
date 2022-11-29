@@ -718,7 +718,7 @@ main .main-img {
 }
 main .main-img img {
   width: 100%;
-  height: 351vh px;
+  height: 451.5vh px;
 }
 @media screen and (min-width: 1440px) {
   main .main-img img {
@@ -813,33 +813,44 @@ main .M1 .M1-constructor {
 }
 main .M1 .M1-constructor .img {
   position: relative;
-  width: 0;
-  height: 140px;
-  align-items: center;
-}
-main .M1 .M1-constructor .img img {
-  position: absolute;
-  top: -60px;
+  top: -90px;
+  border: 1px solid transparent;
+  border-radius: 50%;
   width: 190px;
   height: 190px;
+  background-color: #acacac;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main .M1 .M1-constructor .img {
+    width: 400px;
+    height: 400px;
+    left: -500px;
+    top: -230px;
+  }
+}
+main .M1 .M1-constructor .img img {
+  position: relative;
+  left: 3px;
+  top: 10px;
+  width: 100%;
   margin: 0 auto;
 }
 @media screen and (min-width: 1440px) {
   main .M1 .M1-constructor .img img {
-    width: 400px;
-    height: 400px;
-    left: -600px;
-    top: -230px;
+    width: 100%;
+    left: 10px;
+    top: 40px;
   }
 }
 main .M1 .M1-constructor .name {
-  margin-top: 10px;
+  margin-top: -55px;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
   main .M1 .M1-constructor .name {
     position: relative;
-    top: 60px;
+    top: -130px;
     left: -400px;
   }
 }
@@ -881,7 +892,7 @@ main .M1 .M1-detail p:first-of-type {
     font-weight: 600;
     position: relative;
     left: -56px;
-    top: -250px;
+    top: -450px;
   }
 }
 main .M1 .M1-detail p:last-of-type {
@@ -907,7 +918,7 @@ main .M1 .M1-detail p:last-of-type span {
 @media screen and (min-width: 1440px) {
   main .M1 .M1-detail p:last-of-type {
     position: relative;
-    top: -270px;
+    top: -470px;
     left: 620px;
     text-align: left;
     font-size: 20px;
@@ -927,7 +938,7 @@ main .M1 .M1-detail .link a {
     font-size: 18px;
     font-weight: 600;
     position: relative;
-    top: -280px;
+    top: -480px;
     left: -50px;
   }
 }
@@ -990,23 +1001,34 @@ main .M2 .M2-constructor {
 }
 main .M2 .M2-constructor .img {
   position: relative;
-  width: 0;
-  height: 200px;
-  align-items: center;
-}
-main .M2 .M2-constructor .img img {
-  position: absolute;
-  top: -60px;
+  top: -90px;
+  border: 1px solid transparent;
+  border-radius: 50%;
   width: 190px;
   height: 190px;
+  background-color: #acacac;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main .M2 .M2-constructor .img {
+    width: 400px;
+    height: 400px;
+    left: 280px;
+    top: -230px;
+  }
+}
+main .M2 .M2-constructor .img img {
+  position: relative;
+  left: 3px;
+  top: 10px;
+  width: 100%;
   margin: 0 auto;
 }
 @media screen and (min-width: 1440px) {
   main .M2 .M2-constructor .img img {
-    width: 400px;
-    height: 400px;
-    top: -250px;
-    left: 300px;
+    width: 100%;
+    left: 15px;
+    top: 30px;
   }
 }
 main .M2 .M2-constructor .name {
@@ -1016,8 +1038,8 @@ main .M2 .M2-constructor .name {
 @media screen and (min-width: 1440px) {
   main .M2 .M2-constructor .name {
     position: relative;
-    top: 43px;
-    left: 400px;
+    top: -150px;
+    left: 380px;
   }
 }
 main .M2 .M2-constructor .name p:first-child {
@@ -1057,7 +1079,7 @@ main .M2 .M2-detail p:first-of-type {
     font-size: 36px;
     font-weight: 600;
     position: relative;
-    top: -230px;
+    top: -450px;
     left: 50px;
   }
 }
@@ -1072,7 +1094,7 @@ main .M2 .M2-detail p:last-of-type {
 @media screen and (min-width: 1440px) {
   main .M2 .M2-detail p:last-of-type {
     position: relative;
-    top: -250px;
+    top: -470px;
     left: -620px;
     text-align: right;
     font-size: 20px;
@@ -1092,8 +1114,8 @@ main .M2 .M2-detail .link a {
     font-size: 18px;
     font-weight: 600;
     position: relative;
-    top: -260px;
-    left: 40px;
+    top: -490px;
+    left: 50px;
   }
 }
 main .M2 .M2-detail .link a img {
@@ -1155,23 +1177,32 @@ main .Kid .Kidstudy-constructor {
 }
 main .Kid .Kidstudy-constructor .img {
   position: relative;
-  width: 0;
-  height: 200px;
-  align-items: center;
-}
-main .Kid .Kidstudy-constructor .img img {
-  position: absolute;
-  top: -60px;
+  top: -90px;
+  border: 1px solid transparent;
+  border-radius: 50%;
   width: 190px;
   height: 190px;
+  background-color: #acacac;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main .Kid .Kidstudy-constructor .img {
+    width: 400px;
+    height: 400px;
+    left: -500px;
+    top: -230px;
+  }
+}
+main .Kid .Kidstudy-constructor .img img {
+  position: relative;
+  left: 10px;
+  top: 10px;
+  width: 90%;
   margin: 0 auto;
 }
 @media screen and (min-width: 1440px) {
   main .Kid .Kidstudy-constructor .img img {
-    width: 400px;
-    height: 400px;
-    left: -600px;
-    top: -230px;
+    left: 20px;
   }
 }
 main .Kid .Kidstudy-constructor .name {
@@ -1181,8 +1212,8 @@ main .Kid .Kidstudy-constructor .name {
 @media screen and (min-width: 1440px) {
   main .Kid .Kidstudy-constructor .name {
     position: relative;
-    top: 60px;
-    left: -380px;
+    top: -140px;
+    left: -400px;
   }
 }
 main .Kid .Kidstudy-constructor .name p:first-child {
@@ -1223,7 +1254,7 @@ main .Kid .Kid-detail p:first-of-type {
     font-weight: 600;
     position: relative;
     left: 0px;
-    top: -250px;
+    top: -450px;
   }
 }
 main .Kid .Kid-detail p:last-of-type {
@@ -1237,7 +1268,7 @@ main .Kid .Kid-detail p:last-of-type {
 @media screen and (min-width: 1440px) {
   main .Kid .Kid-detail p:last-of-type {
     position: relative;
-    top: -270px;
+    top: -460px;
     left: 580px;
     text-align: left;
     font-size: 20px;
@@ -1270,8 +1301,8 @@ main .Kid .Kid-detail .link a {
     font-size: 18px;
     font-weight: 600;
     position: relative;
-    top: -280px;
-    left: -80px;
+    top: -470px;
+    left: -85px;
   }
 }
 main .Kid .Kid-detail .link a img {
@@ -1689,23 +1720,27 @@ main .container .parking p:nth-of-type(2) {
     font-size: 20px;
   }
 }
-main .container .parking p:nth-of-type(2) span {
-  font-size: 18px;
-  font-weight: 600;
-}
-@media screen and (min-width: 1440px) {
-  main .container .parking p:nth-of-type(2) span {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 40px;
-  }
-}
 main .container .parking p:nth-of-type(2) br:first-of-type {
   display: none;
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:nth-of-type(2) br:first-of-type {
     display: block;
+  }
+}
+main .container .parking p:nth-of-type(3) {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+main .container .parking p:nth-of-type(3) span {
+  font-size: 18px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main .container .parking p:nth-of-type(3) span {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 40px;
   }
 }
 main .container .parking p:last-of-type {

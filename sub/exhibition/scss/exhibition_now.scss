@@ -13,7 +13,6 @@ header {
 }
 
 main {
-
     
     .popular-program {
         margin-top: 60px;
@@ -244,13 +243,26 @@ main {
 
         .explain-date-register {
             margin-top: 20px;
-
+            position: relative;
             @include responsive(pc-screens) {
                 width: 600px;
             }
             
+            .icon-box {
+                text-align: right;
+                width: 20%;
+                float: right;
+                img {
+                    height: 25px;
+                }
+                
+                .big-heart:hover {
+                    filter: $svg-heart;
+                }
+            }
             .explain {
                 
+
                 p:first-child {
                     @include gothic_font(medium);
                     color: $yellow-brown;

@@ -5,14 +5,12 @@ let vh05 = vh * 0.5 ;
 let vh03 = vh * 0.3 ;  
 
 function borderEvent() {
-    let methodMargin;
     for ( i = 0; i < method.length; i++) {
-        methodMargin = method[i].getBoundingClientRect()
-        if(vh05 > methodMargin.top) {
+        if(vh05 > method[i].getBoundingClientRect().top) {
             method[i].classList.add("border-effect");
         }
     }
-    if(vh03 < methodMargin.top) {
+    if(vh03 < method[0].getBoundingClientRect().top) {
         for ( i = 0; i < method.length; i++) {
             method[i].classList.remove("border-effect");
         }

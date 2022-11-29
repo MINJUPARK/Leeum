@@ -66,6 +66,13 @@ main {
                 }
             }
         }
+
+        .tab-con{
+            
+            .con-box{
+                display: block;
+            }
+        }
     }
 
     .membership-wrap,
@@ -292,9 +299,10 @@ main {
     } // membership-wrap
 
     .gift-membership-wrap {
+        margin-top: 120px;
 
         @include responsive(pc-screens) {
-            margin-top: 160px;
+            margin-top: 280px;
         }
 
         .gift-membership {
@@ -330,14 +338,17 @@ main {
             } // .table
 
             .gift-detail {
+                margin-top: 80px;
                 
+                @include responsive(pc-screens) {
+                    margin-top: 240px;
+                }
+
                 h4 {
                     font-size: $h4;
-                    margin-top: 80px;
                     
                     @include responsive(pc-screens) {
                         font-size: 36px;
-                        margin-top: 80px * 2;
                     }
                 }
 
@@ -452,7 +463,7 @@ main {
         } // gift-membership
     } // gift-membership-wrap
 
-    .corporate-member-wrap {
+    section.corporate-member-wrap {
         margin-top: 100px;
         
         @include responsive(pc-screens) {
@@ -540,7 +551,8 @@ main {
                 right: 50%; bottom: 50px;
                 width: 150px; height: 50px;
                 transform: translateX(50%);
-                border: 1px solid #fff;
+                box-shadow: inset 0 0 0 1px #fff;
+                // border: 1px solid #fff;
                 border-radius: 5px;
                 
                 @include responsive(pc-screens) {
@@ -549,29 +561,38 @@ main {
                     transform: translateX(0);
                 }
                 
-                // &::after {
-                //     @include overlay_bk(1);
-                //     width: 0;
-                //     background-color: #fff;
-                //     border-top-left-radius: 3px;
-                //     border-bottom-left-radius: 3px;
+                &::before {
+                    @include overlay_bk(1);
+                    width: 0;
+                    background-color: #fff;
+                    border-radius: 3px;
                     
-                //     transition: 
-                //         width 1s 0s,
-                //         border-radius 0s 1s;
-                // }
+                    transition: 
+                        width .8s 0s,
+                        border-radius 0s .8s;
+                }
                 
-                // &:hover::after {
-                //     width: 100%;
-                //     border-top-right-radius: 3px;
-                //     border-bottom-right-radius: 3px;
-                // }
+                &:hover {
+
+                    &::before {
+                        width: 100%;
+                        border-top-right-radius: 3px;
+                        border-bottom-right-radius: 3px;
+                    }
+
+                    a {
+                        color: black;
+                    }
+                }
 
                 a {
+                    @include element_center();
                     width: 100%;
                     line-height: 50px;
                     text-align: center;
                     color: #fff;
+
+                    transition: color 1s;
                     
                     @include responsive(pc-screens) {
                         line-height: 66px;
@@ -582,10 +603,10 @@ main {
     } // corporate-member-wrap
 
     .associate-wrap {
-        margin-top: 100px;
+        margin-top: 130px;
 
         @include responsive(pc-screens) {
-            margin-top: 100px * 2;
+            margin-top: 260px;
         }
         
         .associate {
@@ -593,9 +614,12 @@ main {
             ul.associate-con {
                 margin-top: 40px;
                 
-                @include responsive(pc-screens) {
+                @include responsive(tablet-screens) {
                     @include flex_between();
                     flex-wrap: wrap;
+                }
+                
+                @include responsive(pc-screens) {
                     margin-top: 100px;
                 }
 
@@ -603,6 +627,10 @@ main {
                     @include flex_between();
                     width: 100%; height: 142px;
                     margin-bottom: 20px;
+
+                    @include responsive(tablet-screens) {
+                        width: 48%; height: 200px;
+                    }
                     
                     @include responsive(pc-screens) {
                         width: 680px; height: 275px;

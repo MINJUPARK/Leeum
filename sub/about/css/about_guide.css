@@ -639,63 +639,6 @@ header .breadcrumb-wrap {
   }
 }
 
-main .tabmenu-wrap .tab-nav {
-  display: table;
-  width: 100%;
-}
-main .tabmenu-wrap .tab-nav .nav {
-  display: table-cell;
-  width: 50px;
-}
-main .tabmenu-wrap .tab-nav .nav a {
-  transition: 0.4s;
-  position: relative;
-  display: block;
-  font-size: 18px;
-  font-weight: 500;
-  color: #acacac;
-  text-align: center;
-  border-bottom: 1px solid #d4d4d4;
-  height: 40px;
-}
-@media screen and (min-width: 768px) {
-  main .tabmenu-wrap .tab-nav .nav a {
-    height: 50px;
-    font-size: 24px;
-  }
-}
-main .tabmenu-wrap .tab-nav .nav a:after {
-  content: "";
-  transition: 0.4s;
-  width: 0px;
-}
-main .tabmenu-wrap .tab-nav .nav.on a {
-  color: #000;
-  font-size: 18px;
-  font-weight: 700;
-}
-main .tabmenu-wrap .tab-nav .nav.on a:after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 100%;
-  height: 2px;
-  background-color: #000;
-}
-@media screen and (min-width: 768px) {
-  main .tabmenu-wrap .tab-nav .nav.on a {
-    font-size: 24px;
-  }
-}
-main .tabmenu-wrap .tab-con {
-  padding-top: 60px;
-}
-main .tabmenu-wrap .tab-con .con-box {
-  display: none;
-}
 @media screen and (min-width: 1440px) {
   main .m-br {
     display: none;
@@ -1362,91 +1305,106 @@ main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap {
     margin-top: 100px;
   }
 }
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap span,
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap span {
+  display: block;
+  color: #ac3f21;
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap span b,
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap span b {
+  vertical-align: top;
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap strong,
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap strong {
+  display: block;
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap .p,
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .p {
+  line-height: 2em;
+  color: #3c3c3c;
+}
 @media screen and (min-width: 1440px) {
-  main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-m {
+  main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap {
     display: none;
   }
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-m .point-m {
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m {
   display: flex;
   justify-content: space-between;
   width: 165.7142857143%;
   padding-left: 22.8571428571%;
   padding-right: 22.8571428571%;
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-m .point-m > li {
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li {
   width: 45.2380952381%;
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-m .point-m > li .point-m-txt {
-  margin-bottom: 20px;
-}
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-m .point-m > li .point-m-txt span {
-  display: block;
-  text-align: center;
-  font-size: calc(1em + 2px);
-  color: #ac3f21;
-}
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-m .point-m > li .point-m-txt strong {
-  display: block;
-  margin: 20px auto;
-  line-height: 28px;
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt {
+  height: 275px;
 }
 @media screen and (min-width: 768px) {
-  main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-m .point-m > li .point-m-txt strong {
+  main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt {
+    height: 365px;
+  }
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt span {
+  text-align: center;
+  font-size: calc(1em + 2px);
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt strong {
+  margin: 20px auto;
+  line-height: 30px;
+}
+@media screen and (min-width: 768px) {
+  main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt strong {
     line-height: calc(1em + 6px + 10px);
   }
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-m .point-m > li .point-m-txt .p {
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt .p {
   text-align: center;
-  line-height: 2em;
-  color: #3c3c3c;
   font-size: calc(1em - 2px);
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-pc {
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap {
   display: none;
 }
 @media screen and (min-width: 1440px) {
-  main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .guide-point-pc {
+  main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap {
     display: block;
   }
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc > li {
-  width: 100%;
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc {
+  display: flex;
+  justify-content: space-between;
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-txt {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  display: block;
-  width: 44.7142857143%;
-  margin-bottom: 0;
-  order: 2;
-  height: 300px;
-}
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-txt span {
-  display: block;
-  text-align: left;
-  font-size: 26px;
-  color: #ac3f21;
-}
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-txt strong {
-  display: block;
-  line-height: 2em;
-  margin-bottom: 30px;
-}
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-txt .p {
-  text-align: left;
-  line-height: 2em;
-  color: #3c3c3c;
-}
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-img {
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-img {
+  display: flex;
+  justify-content: space-between;
   width: 44.2857142857%;
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-img li {
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-img .img {
   width: 300px;
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-img li:first-child {
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-img .img:first-child {
   margin-top: 107px;
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-txt {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 44.7142857143%;
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-txt .txt {
+  height: 300px;
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-txt .txt span {
+  text-align: left;
+  font-size: 26px;
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-txt .txt strong {
+  line-height: 2em;
+  margin-bottom: 20px;
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-txt .txt .p {
+  text-align: left;
+  font-size: 20px;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.did {

@@ -958,11 +958,23 @@ main .img-explain-date-register .image-text .limit-text-1 p {
 }
 main .img-explain-date-register .explain-date-register {
   margin-top: 20px;
+  position: relative;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register {
     width: 600px;
   }
+}
+main .img-explain-date-register .explain-date-register .icon-box {
+  text-align: right;
+  width: 20%;
+  float: right;
+}
+main .img-explain-date-register .explain-date-register .icon-box img {
+  height: 25px;
+}
+main .img-explain-date-register .explain-date-register .icon-box .big-heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
 }
 main .img-explain-date-register .explain-date-register .explain p:first-child {
   font-size: 16px;

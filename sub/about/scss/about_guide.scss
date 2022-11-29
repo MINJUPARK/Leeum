@@ -15,7 +15,7 @@ header {
 }
 
 main {
-    @include tab_menu();
+    // @include tab_menu();
     
     .m-br {
         @include responsive(pc-screens) {
@@ -750,13 +750,33 @@ main {
                     margin-top: 100px;
                 }
 
-                .guide-point-m {
+                .point-m-wrap,
+                .point-pc-wrap {
 
-                    @include responsive(pc-screens) {
-                        display: none;
+                    span {
+                        display: block;
+                        color: $red-brown;
+
+                        b {
+                            vertical-align: top;
+                        }
                     }
 
-                    .point-m {
+                    strong {
+                        display: block;
+                    }
+
+                    .p {
+                        line-height: 2em;
+                        color: $bk1;
+                    }
+                }
+
+                .point-m-wrap {
+
+                    @include responsive(pc-screens) { display: none; }
+
+                    ul.point-m {
                         @include flex_between();
                         width: 580px / 350px * 100%; 
                         padding-left: 80px / 350px * 100%;
@@ -764,94 +784,85 @@ main {
     
                         > li {
                             width: 190px / 420px * 100%;
-
+                            
                             .point-m-txt {
-                                margin-bottom: 20px;                    
-                                                    
+                                height: 275px;
+
+                                @include responsive(tablet-screens) {
+                                    height: 365px;                  
+                                }
+
                                 span {
-                                    display: block;
                                     text-align: center;
                                     font-size: calc(1em + 2px);
-                                    color: $red-brown;
                                 }
             
                                 strong {
-                                    display: block;
                                     margin: 20px auto;
-                                    line-height: 28px;
+                                    line-height: 30px;
             
                                     @include responsive(tablet-screens) {
                                         line-height: calc(1em + 6px + 10px);
                                     }
-            
+                                    
                                 }
                                 
                                 .p {
-                                    @include content_align(center, 2em);
+                                    text-align: center;
                                     font-size: calc(1em - 2px);
                                 }
                             } // guide-point-txt
                         }
                     } 
                 }
-                .guide-point-pc {
+
+                .point-pc-wrap {
                     display: none;
-                    
-                    @include responsive(pc-screens) {
-                        display: block;
-                    }
-                }
+                     
+                    @include responsive(pc-screens) { display: block; }
 
-                .point-pc {
-                    
-                    > li {
-                        width: 100%;
-                    }
-                }
+                    .point-pc {
+                        @include flex_between();
 
-                .point-pc-txt {
-                    position: absolute;
-                    right: 0; bottom: 0;
-                    display: block;
-                    width: 626px / 1400px * 100%;
-                    margin-bottom: 0;
-                    order: 2;
+                        .point-pc-img {
+                            @include flex_between();
+                            width: 620px / 1400px * 100%;
+    
+                            .img {
+                                width: 300px;
+                                        
+                                &:first-child {
+                                    margin-top: 107px;
+                                }
+                            }
+                        } // point-pc-img
 
-                    height: 300px;
-
-                    span {
-                        display: block;
-                        text-align: left;
-                        font-size: 26px;
-                        color: $red-brown;
-                    }
-                    
-                    strong {
-                        display: block;
-                        line-height: 2em;
-                        margin-bottom: 30px;
-                        
-                    }
-
-                    .p {
-                        @include content_align(left, 2em);
-                    }
-                }
-
-
-                .point-pc-img {
-                    width: 620px / 1400px * 100%;
-
-                    li {
-                        width: 300px;
-
-                        &:first-child {
-                            margin-top: 107px;
-                        }
-                        
-                        // img { width: 100% }
-                    }
-                } // guide-point-img
+                        .point-pc-txt {
+                            margin-top: auto;
+                            margin-bottom: auto;
+                            width: 626px / 1400px * 100%;
+                            
+                            .txt {
+                                height: 300px;
+                                
+                                span {
+                                    text-align: left;
+                                    font-size: 26px;
+                                }
+                                
+                                strong {
+                                    line-height: 2em;
+                                    margin-bottom: 20px;
+                                }
+            
+                                .p {
+                                    text-align: left;
+                                    font-size: 20px;
+                                }
+                            }
+                        } // point-pc-txt
+                    } // point-pc
+                } // point-pc-wrap
             } // guide-point-wrap 
         } // section.digital-guide
 

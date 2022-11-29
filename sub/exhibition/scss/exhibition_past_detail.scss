@@ -267,9 +267,6 @@ main {
                 margin: 25px 0;
                 @include gothic_font(semibold, 18px);
 
-                @include responsive(pc-screens){
-                    font-size: 18px;
-                }
             }
 
             strong {
@@ -379,8 +376,8 @@ main {
 
             h3 {
                 margin-bottom: 60px;
-                font-size: 18px;
                 text-align: left;
+                @include gothic_font(semibold, 18px);
             }
             
             > div {
@@ -405,6 +402,48 @@ main {
                         width: calc(480px / 1440px * 100%);
                         margin-right: calc(100px / 1440px * 100%);
                     }
+
+                    .group-title {
+                        @include flex_between();
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        padding-bottom: 14px;
+                        border-bottom: 2px solid #000;
+
+                        @include responsive(tablet-screens) {
+                            padding: 0;
+                            padding-bottom: 36px;
+                        }
+
+                        h4 {
+                            @include gothic_font(semibold, 20px);
+
+                            @include responsive(pc-screens) {
+                                font-size: 30px;
+                            }
+
+                            span {
+                                margin-left: 10px;
+                                color: $bk2;
+                                @include gothic_font(regular, calc(1em - 6px));
+
+                                @include responsive(pc-screens) {
+                                    margin-left: 20px;
+                                    // font-size: 24px;
+                                }
+                            }
+                        }
+
+                        .dropdown {
+                            @include icon_rotate(180deg);
+                            width: calc(15px / 350px) * 100%;
+                            cursor: pointer;
+    
+                            @include responsive(tablet-screens) {
+                                display: none;
+                            }
+                        }
+                    } // group-title
 
                     .group-option {
                         display: none;
@@ -445,7 +484,7 @@ main {
                                         repeat: no-repeat ;
                                         position: center right;
                                         origin: content-box;
-                                        size: 37px 28px;
+                                        size: 34px 24px;
                                     }
                                 }
                             }
@@ -455,25 +494,14 @@ main {
                             }
 
                             span {
-                                padding-top: 3px;
-                                margin-left: 15px;
+                                margin-top: 2px;
+                                margin-left: 10px;
                                 vertical-align: top;
                                 font-size: calc(1em - 4px);
 
                                 @include responsive(pc-screens) {
                                     margin-left: 15px;
-                                }
-                            }
-                            img {
-                                position: absolute;
-                                top: 98px;
-                                right: 20px;
-                                width:18px;
-                                height:23px;
-                                @include icon_rotate(180deg);
-                                cursor: pointer;
-                                @include responsive(tablet-screens) {
-                                    display: none;
+                                    font-size: 24px;
                                 }
                             }
                         }
@@ -485,7 +513,6 @@ main {
 
                     @include responsive(tablet-screens) {
                         width: calc(800px / 1440px * 100%);
-                        margin-top: 5px;
                     }
                     
                     ul { 
@@ -506,22 +533,51 @@ main {
                             img {
                                 width: 100%;
                                 margin-bottom: 25px;
+                                @include responsive(pc-screens) {
+                                    margin-top: 42px;
+                                    height:800px;
+                                } 
                             }
                         }
                     } // floor-img
 
                     .floor-txt {
                         
-                        
+                        .txt-flex {
+                            @include flex_between();
+                            
+                            strong, b {
+                                line-height: 24px;
+                            }
+                            
+                            strong {
+                                padding-left: 5px;
+                                font-size: 24px;
+                                width: calc(40px / 350px * 100%);
+                                
+                                @include responsive(pc-screens) {
+                                    font-size: $h3;
+                                }
+                            }
+                            
+                            b {
+                                width: calc(250px / 350px *100%);
+                                
+                                @include responsive(pc-screens) {
+                                    font-size: 24px;
+                                }
+                            }
+                            
+                            
+                        }
 
                         p {
                             @include content_align(left, 2em);
-                            width:100%;
+                        
                             margin: {
-                                top: 15px;      
-                                right: 60px / 350px * 100%;
+                                top: 15px;
                             }
-                            font-size: calc(1em - 2px);
+                            font-size: 15px;
                         }
                     } // floor-txt
                 } // floor-con-group
