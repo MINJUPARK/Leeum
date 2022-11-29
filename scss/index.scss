@@ -224,15 +224,15 @@ header {
 
         .item { 
 
-          .title { animation: fadeOutDown 1s both;  }
-          .date { animation: fadeOutDown 1s both;  }
+          .title  { animation: fadeOutDown 1s both;  }
+          .date   { animation: fadeOutDown 1s both;  }
           .notice { animation: fadeOutDown 2s both;  }
         }
 
         .item.slick-active {
 
-          .title { animation: fadeInUp 1s both; }
-          .date { animation: fadeInUp 1s both; }
+          .title  { animation: fadeInUp 1s both; }
+          .date   { animation: fadeInUp 1s both; }
           .notice { animation: fadeInUp 1.5s both; }
         }
       }
@@ -251,10 +251,10 @@ header {
           width: 60px; height: 60px;
           margin: auto;
           font-size: 0;
-          background-color: transparent;
-          z-index: 2;
           opacity: 0.3;
           transition: opacity .3s;
+          background-color: transparent;
+          z-index: 2;
 
           &::before {
             content: '';
@@ -396,7 +396,11 @@ main {
 
   section {
     &:not(:first-child) {
-      margin-top: 105px;
+      margin-top: 75px;
+    }
+
+    &:last-child {
+      margin-top: calc(105px + 50px);
     }
 
     @include responsive(pc-screens) {
@@ -557,7 +561,7 @@ main {
   }
 
   section.exhibition {
-    margin-top: 75px;
+    margin-top: 85px;
     
     @include responsive(pc-screens) {
       margin-top: 150px;
@@ -647,6 +651,7 @@ main {
 
       .slick-list {
         padding: 30px 0 60px !important;
+      }
 
         .slick-slide {
           margin: 0 110px;
@@ -672,7 +677,7 @@ main {
 
       .bg {
         position: relative;
-        width: 350px; height: 250px;
+        height: 24vh;
         margin: 0 -125px;
         border-radius: 15px;
         transform: scale3d(0.8, 0.8, 1);
@@ -680,16 +685,13 @@ main {
         opacity: 0.2;
         overflow: hidden;
 
-        @media screen and (min-width:480px) {
-          width: 450px; height: 350px;
-        }
-
         @include responsive(tablet-screens) {
-          width: 650px; height: 450px;
+          height: 300px;
         }
 
         @include responsive(pc-screens) {
-          width: 850px; height: 550px;
+          width: 700px;
+          height: 400px;
         }
   
         .des {
@@ -1158,7 +1160,17 @@ main {
             }
             
             label {
-              @include poster_label();
+              position: absolute;
+              top: 15px; left: 15px;
+              padding: 8px 16px;
+              border-radius: 5px;
+              @include gothic_font(medium, 14px);
+              color: #fff;
+              background: $red-brown;
+
+              @include responsive(pc-screens) {
+                top: 20px; left: 20px;
+              }
             }
 
             img {
@@ -1173,6 +1185,7 @@ main {
       
             @include responsive(pc-screens) {
               width: 45%;
+              // padding: 60px 40px 60px 0;
             }
             
             > * {
@@ -1183,7 +1196,7 @@ main {
       
             .type {
               display: block;
-              @include gothic_font(medium);
+              @include gothic_font(medium, 14px);
               color: $yellow-brown;
               
               @include responsive(pc-screens) {
@@ -1192,6 +1205,7 @@ main {
             }
         
             .title {
+              font-size: 20px;
               margin: 5px 0 20px;
               line-height: 1.5em;
         
@@ -1202,7 +1216,12 @@ main {
             }
         
             .des {
+              font-size: 15px;
               @include content_align(justify, 1.8em);
+
+              @include responsive(pc-screens) {
+                font-size: 16px;
+              }
             }
         
             .date-resv {
@@ -1214,21 +1233,27 @@ main {
               @media screen and(min-width:480px) {
                 flex-wrap: no-wrap;
               }
-
+              
               @include responsive(pc-screens) {
                 margin-top: 80px;
               }
-        
+              
               .date {
                 width: 100%;
+                font-size: 15px;
                 line-height: 1.8em;
                 
                 @media screen and(min-width:480px) {
                   width: 70%;
                 }
 
+                @include responsive(pc-screens) {
+                  font-size: 16px;
+                }
+
                 time {
                   margin-left: 15px;
+                  font-size: 15px;
                 }
         
                 p:last-child time {
@@ -1239,6 +1264,7 @@ main {
               
               .resv {
                 width: 100%;
+                // height: 100%;
                 padding: 15px;
                 margin-top: 20px;
                 border-radius: 5px;
@@ -1265,7 +1291,7 @@ main {
         justify-content: center;
         align-items: center;
         position: absolute;
-        bottom: -40px;
+        bottom: -50px;
         width: 100%;
         z-index: 1;
   

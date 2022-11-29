@@ -12,6 +12,201 @@ header {
     @include full_bg('publication_header.jpg');
 }
 
+main {
+    section{
+        .image-text {
+
+            @include responsive(pc-screens) {
+
+                display: flex;
+                justify-content: space-between;
+            }
+            .image {
+                @include responsive(pc-screens) {
+                    width: 42.85714285714286%;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .icon-text-down {
+                @include responsive(pc-screens) {
+                    width: 50%;
+                }
+                .icon-box {
+                    margin-left: auto;
+                    margin-top: 24px;
+                    @include flex_between();
+                    width: 120px;
+
+                    @include responsive(pc-screens) {
+                        margin-top: 0;
+                    }
+
+                    img {
+                        height: 25px;
+                        
+                        &.print:hover, &.share:hover {
+                            filter: $svg-black;
+                        }
+                    }
+                    
+                    .big-heart:hover {
+                        filter: $svg-heart;
+                    }
+                }
+
+                .text {
+                    margin-top: 20px;
+
+                    @include responsive(pc-screens) {
+                        border-top: 1px solid $bk3;
+                    }
+
+                    .title-desc {
+                        .title {
+                            strong {
+                                display: block;
+                                font-size: 30px;
+                                margin-bottom: 20px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: 46px;
+                                    margin-bottom: 30px;
+                                    margin-top: 30px;
+                                }
+                            }
+    
+                            p {
+                                @include gothic_font(light, 20px);
+                                color: $bk2;
+                            }
+                        }
+                        .description {
+                            margin-top: 20px;
+                            padding: 20px;
+                            background-color: $bk6;
+                            .tie {
+                                // text-align: center;
+                                // span {
+                                //     margin-right: 20px;
+                                // }
+                                
+                                p {
+                                    display: inline-block;
+                                    margin-left: 20px;
+                                }
+                            }
+                        }
+
+                        /* p {
+                            color: $bk1;
+                            margin-bottom: 40px;
+                            line-height: 28px;
+                            text-align: justify;
+                            
+                            @include responsive(pc-screens) {
+                                font-size: 22px;
+                                line-height: 40px;
+                            }
+                        } */
+                    }
+
+                    .intro {
+                        @include responsive(pc-screens) {
+                            display: flex;
+                        }
+                        
+                        .list {
+                            display: flex;
+                            ul {
+                                 width: 50%;
+                                li {
+                                    font-size: 14px;
+                                    padding-left: 11px;
+                                    margin-bottom: 20px;
+                                    line-height: 28px;
+                                    background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
+                                    background-size: 2px;
+                                    
+                                    @include responsive(tablet-screens) {
+                                        padding-left: 14px;
+                                        margin-bottom: 30px;
+                                        font-size: 17px;
+                                    }
+                                }
+                            }
+                        }
+
+                        // .list {
+                        //     display: flex;
+                        //     font-size: 15px;
+                        //     color: $bk1;
+
+                        //     @include responsive(pc-screens) {
+                        //         font-size: 22px;
+                        //     }
+                        //     p {
+                        //         width: 50%;
+                        //         font-size: 15px;
+                        //         color: $bk1;
+                        //         margin-bottom: 30px;
+                        //         line-height: 28px;
+    
+                        //         @include responsive(pc-screens) {
+                        //             font-size: 22px;
+                        //             line-height: 36px;
+    
+                        //             &:last-child {
+                        //                 margin-bottom: 64px;
+                        //             }
+                        //         }
+                        //     }
+                        // }
+
+                    }
+                    
+                    .down-img {
+                        text-align: center;
+                        border: 1px solid #000;
+                        padding: 5px;
+                        border-radius: 5px;
+                        background-color: $dark-brown;
+
+                        @include responsive(pc-screens) {
+                            padding: 10px;
+                        }
+                        p {
+                            img{
+                                width: 16px;
+                                filter: $svg-white;
+                                margin-right: 10px;
+
+                                @include responsive(pc-screens) {
+                                    width: 20px;
+                                }
+
+                            }
+                            color: white;
+                            @include gothic_font(medium, 18px);
+
+                            @include responsive(pc-screens) {
+                                font-size: 22px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.movePage {
+        @include move_page();
+    }
+}
+
 footer {
     @include footer();
 }

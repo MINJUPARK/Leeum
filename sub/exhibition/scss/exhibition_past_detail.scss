@@ -29,17 +29,7 @@ main {
                 .main-pic {
                     height: auto;
         
-                    // video {
-                    //     width: 100%; height: 280px;
-                    //     background: #000;
-                    //     object-fit: cover;
 
-                    //     @include responsive(pc-screens) {
-                    //         height: auto;
-                    //         background: transparent;
-                    //         object-fit: initial;
-                    //     }
-                    // }
                 }
             }
 
@@ -110,32 +100,6 @@ main {
                         }
                     }
 
-                    // .request {
-
-                    //     a {
-                    //         width: 100%;
-                    //         margin: 40px 0;
-                    //         padding: 15px;
-                    //         @include gothic_font(medium);
-                    //         text-align: center;
-                    //         color: #f00;
-                    //         border: 1px solid #f00;
-                    //         border-radius: 5px;
-                            
-                    //         &:hover {
-                    //             background-color: #f00;
-                    //             color: #fff;
-                    //             transition: all .3s;
-                    //         }
-
-                    //         @include responsive(pc-screens){
-                    //             font-size: 22px;
-                    //             padding: 20px;
-                    //             width: 480px;
-                    //             // margin-left: -20px;
-                    //         }
-                    //     }
-                    // }
 
                     .exp {
 
@@ -158,19 +122,6 @@ main {
     h1 {
         display: none;
     }
-
-    // img {
-    //     width: 100%;
-    //     position: relative;
-
-    //     @include responsive(pc-screens){
-    //         // padding-left: 240px;
-    //         // padding-right: 240px;
-    //         height: 810px;
-    //         position: relative;
-
-    //     }
-    // }
 
 
     .text {
@@ -232,16 +183,12 @@ main {
                 @include responsive(pc-screens){
                     font-size: 18px;
                     padding: 20px;
-                    // width: 480px;
-                    // margin-left: -20px;
+
                 }
             }
         }
     
-        .request-desc {
-            // background-color: $bk6;
-            // padding: 30px 0;
-            
+        .request-desc {            
     
             .content {
                 span {
@@ -307,9 +254,8 @@ main {
 
     .o-i-p {
         @include responsive(pc-screens){
-            // margin-top: 80px;
             width: 60%;
-            // margin-left: 240px;
+
         }
         
         .introduce {
@@ -340,34 +286,7 @@ main {
             }
         }
 
-        .ticket-info {
-
-            h6 {
-                margin: 25px 0;
-                @include gothic_font(semibold, 18px);
-
-                @include responsive(pc-screens){
-                    font-size: 18px;
-                }
-            }
-
-            ul {
-                li {
-                    padding-left: 11px;
-                    margin-bottom: 20px;
-                    line-height: calc(1em - 2px + 10px);
-                    background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
-                    background-size: 2px;
-                    
-                    @include responsive(tablet-screens) {
-                        padding-left: 14px;
-                        margin-bottom: 30px;
-                        font-size: 17px;
-                    }
-                }
-            }
-        }
-
+        
         
         
         p {
@@ -460,6 +379,8 @@ main {
 
             h3 {
                 margin-bottom: 60px;
+                font-size: 18px;
+                text-align: left;
             }
             
             > div {
@@ -484,48 +405,6 @@ main {
                         width: calc(480px / 1440px * 100%);
                         margin-right: calc(100px / 1440px * 100%);
                     }
-
-                    .group-title {
-                        @include flex_between();
-                        padding-left: 10px;
-                        padding-right: 10px;
-                        padding-bottom: 14px;
-                        border-bottom: 2px solid #000;
-
-                        @include responsive(tablet-screens) {
-                            padding: 0;
-                            padding-bottom: 36px;
-                        }
-
-                        h4 {
-                            @include gothic_font(semibold, 20px);
-
-                            @include responsive(pc-screens) {
-                                font-size: 30px;
-                            }
-
-                            span {
-                                margin-left: 10px;
-                                color: $bk2;
-                                @include gothic_font(regular, calc(1em - 6px));
-
-                                @include responsive(pc-screens) {
-                                    margin-left: 20px;
-                                    // font-size: 24px;
-                                }
-                            }
-                        }
-
-                        .dropdown {
-                            @include icon_rotate(180deg);
-                            width: 15px / 350px * 100%;
-                            cursor: pointer;
-    
-                            @include responsive(tablet-screens) {
-                                display: none;
-                            }
-                        }
-                    } // group-title
 
                     .group-option {
                         display: none;
@@ -576,12 +455,25 @@ main {
                             }
 
                             span {
-                                margin-left: 10px;
+                                padding-top: 3px;
+                                margin-left: 15px;
                                 vertical-align: top;
                                 font-size: calc(1em - 4px);
 
                                 @include responsive(pc-screens) {
                                     margin-left: 15px;
+                                }
+                            }
+                            img {
+                                position: absolute;
+                                top: 98px;
+                                right: 20px;
+                                width:18px;
+                                height:23px;
+                                @include icon_rotate(180deg);
+                                cursor: pointer;
+                                @include responsive(tablet-screens) {
+                                    display: none;
                                 }
                             }
                         }
@@ -593,6 +485,7 @@ main {
 
                     @include responsive(tablet-screens) {
                         width: calc(800px / 1440px * 100%);
+                        margin-top: 5px;
                     }
                     
                     ul { 
@@ -619,40 +512,13 @@ main {
 
                     .floor-txt {
                         
-                        .txt-flex {
-                            @include flex_between();
-                            
-                            strong, b {
-                                line-height: 24px;
-                            }
-                            
-                            strong {
-                                padding-left: 5px;
-                                font-size: 24px;
-                                width: calc(40px / 350px * 100%);
-                                
-                                @include responsive(pc-screens) {
-                                    font-size: $h3;
-                                }
-                            }
-                            
-                            b {
-                                width: calc(250px / 350px *100%);
-                                
-                                @include responsive(pc-screens) {
-                                    font-size: 24px;
-                                }
-                            }
-                            
-                            
-                        }
+                        
 
                         p {
                             @include content_align(left, 2em);
-                            height: 40px;
+                            width:100%;
                             margin: {
-                                top: 15px;
-                                left: 40px / 350px * 100%;
+                                top: 15px;      
                                 right: 60px / 350px * 100%;
                             }
                             font-size: calc(1em - 2px);
@@ -663,6 +529,7 @@ main {
         } // section.floor-info
     } // vr-floor-wrap
     
+
 
     section.movePage {
         @include move_page();

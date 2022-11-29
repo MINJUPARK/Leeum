@@ -805,8 +805,9 @@ main .texture-research-wrap .texture-research ul.texture-lsit li {
 }
 @media screen and (min-width: 1440px) {
   main .texture-research-wrap .texture-research ul.texture-lsit li {
-    width: 440px;
+    width: 440px !important;
     height: 400px;
+    margin-right: 0 !important;
   }
   main .texture-research-wrap .texture-research ul.texture-lsit li:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -822,7 +823,7 @@ main .texture-research-wrap .texture-research ul.texture-lsit li {
 }
 @media screen and (min-width: 1440px) {
   main .texture-research-wrap .texture-research ul.texture-lsit li:nth-child(4), main .texture-research-wrap .texture-research ul.texture-lsit li:nth-child(5) {
-    width: 680px;
+    width: 680px !important;
     margin-top: 44px;
   }
 }

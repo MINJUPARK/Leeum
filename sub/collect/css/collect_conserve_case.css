@@ -935,6 +935,8 @@ main .conservation-method-wrap .conservation-method ul.method-list {
 main .conservation-method-wrap .conservation-method ul.method-list li {
   position: relative;
   margin-top: 90px;
+  opacity: 0.2;
+  transition: all 0.5s;
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li {
@@ -971,6 +973,9 @@ main .conservation-method-wrap .conservation-method ul.method-list li::before, m
     bottom: 0;
     right: 0;
   }
+}
+main .conservation-method-wrap .conservation-method ul.method-list li.border-effect {
+  opacity: 1;
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li.border-effect::before, main .conservation-method-wrap .conservation-method ul.method-list li.border-effect::after {

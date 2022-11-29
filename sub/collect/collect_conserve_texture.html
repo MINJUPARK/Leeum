@@ -7,13 +7,14 @@
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/collect_conserve_texture.css">
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="./js/aos.js"></script>
     <script type="text/javascript" src="./js/side_tab.js"></script>
-    <script type="text/javascript" src="./js/zoom.js"></script>
-    <script type="text/javascript" src="./js/border_event.js"></script>
+    <script defer type="text/javascript" src="./js/border_event.js"></script>
+    <script defer type="text/javascript" src="./js/zoom.js"></script>
     <title>Leeum</title>
 </head>
 <body>
@@ -236,10 +237,8 @@
             <h2>texture-intro-section</h2>
             <div class="container">
                 <div class="texture-intro">
-                    <div class="intro-img">
-                        <!-- <img src="./image/conserve_texture_intro.png" alt="금속재질"> -->
-                    </div>
-                    <div class="intro-flex" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="intro-img" data-aos="fade-up" data-aos-duration="1500"></div>
+                    <div class="intro-flex" data-aos="fade-up" data-aos-duration="1500">
                         <h3>금속유물</h3>
                         <div class="into-txt">
                             <p>금속유물은 철, 금, 은, 구리 합금 등 금속재질로 만들어진 것으로 불상, 장신구, 무기, 마구, 의기 등 다양한 문화재가 전해지고 있다.  대부분의 금속유물은 오랫동안 부식과 손상이 진행되어 제작 당시 유물이 지닌 형태나 표면상태를 잃어버린 경우가 많다. 따라서 유물 원래의 형태, 빛깔, 표면상태 등을 최대한 되찾아주기 위하여 보존처리를 실시한다.</p>
@@ -253,7 +252,7 @@
         <section class="damage-type-wrap">
             <h2>damage-section</h2>
             <div class="container">
-                <div class="damage-type">
+                <div class="damage-type" data-aos="fade-up" data-aos-duration="1500">
                     <h3>금속유물의 손상 유형</h3>
                     <div class="side-tab type-box">
                         <ul class="tab-wrap type-select">
@@ -295,7 +294,7 @@
             <h2>conservation-method-section</h2>
             <div class="container">
                 <div class="conservation-method">
-                    <h3>금속유물의 보존처리 방법</h3>
+                    <h3 data-aos="fade-up" data-aos-duration="1500">금속유물의 보존처리 방법</h3>
                     <ul class="method-list">
                         <li>
                             <strong>X-선 촬영</strong>
@@ -353,6 +352,8 @@
             </div>
         </section>
     </main>
+
+
 
     
     <footer>

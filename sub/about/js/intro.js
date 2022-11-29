@@ -3,6 +3,7 @@ window.onload = function() {
     const slide = document.querySelector('.slide-in');
     let page = document.referrer;
     let scrollLocation = window.scrollY;
+    console.log(page);
     
     window.addEventListener('scroll', () => {
         scrollLocation = this.scrollY;

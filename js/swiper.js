@@ -5,7 +5,7 @@ $(function() {
     $(window).on('load resize', function() {
 
         swiper = new Swiper(".mySwiper", {
-            slidesPerView: 2,
+            slidesPerView: 1.4,
             centeredSlides: false,
             spaceBetween: '2%',
             grabCursor: true

@@ -921,12 +921,9 @@ main .gift-membership-wrap .table .tr:last-child {
     border-bottom: 2px solid #c5c5c5;
   }
 }
-main .gift-membership-wrap {
-  margin-top: 80px;
-}
 @media screen and (min-width: 1440px) {
-  main .gift-membership-wrap {
-    margin-top: 160px;
+  main .membership-wrap {
+    margin-top: 100px;
   }
 }
 main .membership-wrap .membership .table .tbody > div.td1 a, main .membership-wrap .membership .table .tbody > div.td2 a {
@@ -954,6 +951,11 @@ main .membership-wrap .membership .table .tbody > div.td2 a:hover {
   color: #fff;
   border-color: #be6a15;
   background-color: #be6a15;
+}
+@media screen and (min-width: 1440px) {
+  main .gift-membership-wrap {
+    margin-top: 160px;
+  }
 }
 main .gift-membership-wrap .gift-membership .table .tbody > div.td1 a, main .gift-membership-wrap .gift-membership .table .tbody > div.td2 a {
   width: 150px;

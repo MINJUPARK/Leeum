@@ -743,122 +743,113 @@ main {
             .guide-point-wrap {
                 margin-top: 100px;
                 margin-bottom: 140px;
-                background-color: darkblue;
+                // background-color: darkblue;
 
                 @include responsive(pc-screens) {
                     position: relative;
                     margin-top: 100px;
                 }
 
-                .guide-point-txt,
-                .guide-point-img {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 580px / 350px * 100%; 
-                    padding-left: 80px / 350px * 100%;
-                    padding-right: 80px / 350px * 100%;
+                .guide-point-m {
+
+                    @include responsive(pc-screens) {
+                        display: none;
+                    }
+
+                    .point-m {
+                        @include flex_between();
+                        width: 580px / 350px * 100%; 
+                        padding-left: 80px / 350px * 100%;
+                        padding-right: 80px / 350px * 100%;
+    
+                        > li {
+                            width: 190px / 420px * 100%;
+
+                            .point-m-txt {
+                                margin-bottom: 20px;                    
+                                                    
+                                span {
+                                    display: block;
+                                    text-align: center;
+                                    font-size: calc(1em + 2px);
+                                    color: $red-brown;
+                                }
+            
+                                strong {
+                                    display: block;
+                                    margin: 20px auto;
+                                    line-height: 28px;
+            
+                                    @include responsive(tablet-screens) {
+                                        line-height: calc(1em + 6px + 10px);
+                                    }
+            
+                                }
+                                
+                                .p {
+                                    @include content_align(center, 2em);
+                                    font-size: calc(1em - 2px);
+                                }
+                            } // guide-point-txt
+                        }
+                    } 
+                }
+                .guide-point-pc {
+                    display: none;
                     
                     @include responsive(pc-screens) {
-                        padding-left: 0;
-                        padding-right: 0;
-                    }
-
-                    > li {
-                        width: 190px / 420px * 100%;
-
-                        @include responsive(pc-screens) {
-                            width: 100%;
-                        }
-                    }
-                } // .guide-point-txt, .guide-point-img
-
-                .guide-point-txt {
-                    margin-bottom: 20px;
-                    // background-color: yellow;
-
-                    @include responsive(pc-screens) {
-                        position: absolute;
-                        right: 0; bottom: 0;
                         display: block;
-                        width: 626px / 1400px * 100%;
-                        margin-bottom: 0;
-                        order: 2;
                     }
-                    
-                    li.hidden { // 토글
-                        visibility: hidden;
-                    }
+                }
+
+                .point-pc {
                     
                     > li {
-                        // background-color: rosybrown;
-                        
-                        @include responsive(pc-screens) {
-                            height: 300px;
-                        }
-
-                        br { @include responsive(pc-screens) { display: none; } }
-                        
-                        span {
-                            display: block;
-                            text-align: center;
-                            font-size: calc(1em + 2px);
-                            color: $red-brown;
-
-                            @include responsive(pc-screens) {
-                                text-align: left;
-                                font-size: 26px;
-                            }
-                        }
-
-                        strong {
-                            display: block;
-                            margin: 20px auto;
-                            line-height: 28px;
-
-                            @include responsive(tablet-screens) {
-                                line-height: calc(1em + 6px + 10px);
-                            }
-
-                            @include responsive(pc-screens) {
-                                line-height: calc(1em + 6px);
-                                margin-bottom: 30px;
-                            }
-
-                        }
-                        
-                        .p {
-                            @include content_align(center, 2em);
-                            font-size: calc(1em - 2px);
-
-                            @include responsive(pc-screens) {
-                                text-align: left;
-                                line-height: 36px;
-                            }
-                        }
+                        width: 100%;
                     }
-                } // guide-point-txt
+                }
 
-                .guide-point-img {
+                .point-pc-txt {
+                    position: absolute;
+                    right: 0; bottom: 0;
+                    display: block;
+                    width: 626px / 1400px * 100%;
+                    margin-bottom: 0;
+                    order: 2;
 
-                    @include responsive(pc-screens) {
-                        order: 1;
-                        width: 620px / 1400px * 100%;
+                    height: 300px;
+
+                    span {
+                        display: block;
+                        text-align: left;
+                        font-size: 26px;
+                        color: $red-brown;
                     }
+                    
+                    strong {
+                        display: block;
+                        line-height: 2em;
+                        margin-bottom: 30px;
+                        
+                    }
+
+                    .p {
+                        @include content_align(left, 2em);
+                    }
+                }
+
+
+                .point-pc-img {
+                    width: 620px / 1400px * 100%;
 
                     li {
-
-                        @include responsive(pc-screens) {
-                            width: 300px;
-                        }
+                        width: 300px;
 
                         &:first-child {
-
-                            @include responsive(pc-screens) {
-                                margin-top: 107px;
-                            }
+                            margin-top: 107px;
                         }
                         
-                        img { width: 100% }
+                        // img { width: 100% }
                     }
                 } // guide-point-img
             } // guide-point-wrap 

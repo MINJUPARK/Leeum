@@ -172,11 +172,11 @@ main {
                     transition: box-shadow .3s;
                     
                     @include responsive(pc-screens) {
-                        width: 440px; height: 400px;
+                        width: 440px !important;
+                        height: 400px;
+                        margin-right: 0 !important;
 
                         &:hover {
-                            // border-bottom-left-radius: 5px;
-                            // border-bottom-right-radius: 5px;
                             box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
                             a {
@@ -197,7 +197,7 @@ main {
                     &:nth-child(5) {
                         
                         @include responsive(pc-screens) {
-                            width: 680px;
+                            width: 680px !important;
                             margin-top: 44px;
                         }
                     }
