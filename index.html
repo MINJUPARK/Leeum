@@ -5,22 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" property="og:title" content="리움미술관">
-    <meta name="images" property="og:image" content="./images/leeum_thumnail.jpg">
+    <meta name="images" property="og:image" content="./image/leeum_thumnail.jpg">
     <meta name="description" property="og:description" content="관객과 소통하는 리움, 예술과 삶을 더욱 풍부하게">
     <meta name="type" property="og:type" content="article">
     <link rel="icon" href="./image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="./image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'>
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script> -->
     <script type="text/javascript" src="./js/common.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+    <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
     <script type="text/javascript" src="./js/slick.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
     <script type="text/javascript" src="./js/swiper.js"></script>
     <script type="text/javascript" src="./js/vaccordion.js"></script>
     <title>Leeum</title>
@@ -32,7 +34,7 @@
                 <div class="item">
                     <div class="item-con">
                         <video poster="./image/index_video(1)_poster.jpg" autoplay muted loop>
-                            <!-- <source src="http://gdurl.com/5YE3o" type="video/mp4"> -->
+                            <source src="http://gdurl.com/5YE3o" type="video/mp4">
                         </video>
                         <div class="info-wrap">
                             <div class="container">
@@ -69,7 +71,7 @@
                 <div class="item">
                     <div class="item-con">
                         <video poster="./image/index_video(2)_poster.png" autoplay muted loop>
-                            <!-- <source src="https://gdurl.com/tX_rB" type="video/mp4"> -->
+                            <source src="https://gdurl.com/tX_rB" type="video/mp4">
                         </video>
                         <div class="info-wrap">
                             <div class="container">
@@ -95,7 +97,7 @@
                 <div class="item">
                     <div class="item-con">
                         <video poster="./image/index_video(3)_poster.jpg" autoplay muted loop>
-                            <!-- <source src="https://gdurl.com/q3ak" type="video/mp4"> -->
+                            <source src="https://gdurl.com/q3ak" type="video/mp4">
                         </video>
                         <div class="info-wrap">
                             <div class="container">
@@ -121,7 +123,7 @@
                 <div class="item">
                     <div class="item-con">
                         <video poster="./image/index_video(4)_poster.jpg" autoplay muted loop>
-                            <!-- <source src="https://gdurl.com/5khc" type="video/mp4"> -->
+                            <source src="https://gdurl.com/5khc" type="video/mp4">
                         </video>
                         <div class="info-wrap">
                             <div class="container">
@@ -360,7 +362,7 @@
                 <div class="title-box center">
                     <div class="container">
                         <div class="con">
-                            <h3>exhibition</h3>
+                            <a href="./sub/exhibition/exhibition_now.html"><h3>exhibition</h3></a>
                             <p>고품격 소장품을 바탕으로 리움만의 수준 높은 전시</p>
                         </div>
                         <div class="btn right">
@@ -374,33 +376,16 @@
                                 <div class="swipe-tabs">
                                     <div class="swipe-tab">인기 전시</div>
                                     <div class="swipe-tab">신규오픈 전시</div>
-                                    <div class="swipe-tab">종료임박 전시</div>
                                     <div class="swipe-tab">상설진행 전시</div>
+                                    <div class="swipe-tab">종료임박 전시</div>
                                     <div class="swipe-tab">진행예정 전시</div>
                                 </div>
                             </div>
                         </div>
                     <div class="main-container">
                         <div class="swipe-tabs-container">
-                            <div class="swipe-tab-content">
+                            <div class="swipe-tab-content"> <!-- 인기 전시 -->
                                 <div class="ehb-slider">
-                                    <div class="item">
-                                        <a href="./sub/exhibition/exhibition_now_detail.html">
-                                            <div class="bg">
-                                                <div class="des">
-                                                    <div>
-                                                        <h6 class="type">기획전</h6>
-                                                        <h4 class="title">구름산책자</h4>
-                                                        <time>2022.09.02 – 2023.01.08.</time>
-                                                    </div>
-                                                    <div class="loc">
-                                                        <span>아동교육문화센터</span>
-                                                    </div>
-                                                </div>
-                                                <img src="./sub/exhibition/image/current_exhibition(1).png">
-                                            </div>
-                                            </a>
-                                    </div>
                                     <div class="item">
                                         <a href="./sub/exhibition/exhibition_now_detail.html">
                                             <div class="bg">
@@ -424,21 +409,17 @@
                                                 <div class="des">
                                                     <div class="info">
                                                         <h6 class="type">특별프로젝트</h6>
-                                                        <h4 class="title">장영규: 추종자</h4>
-                                                        <time>2022.09.02. ~ 2023.09.03.</time>
+                                                        <h4 class="title">아트스펙트럼2022</h4>
+                                                        <time>2022. 09. 02. ~ 2023. 09. 03.</time>
                                                     </div>
                                                     <div class="loc">
-                                                        <span>강당 라운지</span>
+                                                        <span>그라운드갤러리</span>
                                                     </div>
                                                 </div>
-                                                <img src="./sub/exhibition/image/current_exhibition(5).png">
+                                                <img src="./sub/exhibition/image/past_exhibition(3).png">
                                             </div>
                                         </a>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="swipe-tab-content">
-                                <div class="ehb-slider">
                                     <div class="item">
                                         <a href="./sub/exhibition/exhibition_now_detail.html">
                                             <div class="bg">
@@ -446,7 +427,7 @@
                                                     <div>
                                                         <h6 class="type">기획전</h6>
                                                         <h4 class="title">구름산책자</h4>
-                                                        <time>2022.09.02 – 2023.01.08.</time>
+                                                        <time>2022. 09. 02. ~ 2023. 01. 08.</time>
                                                     </div>
                                                     <div class="loc">
                                                         <span>아동교육문화센터</span>
@@ -454,22 +435,22 @@
                                                 </div>
                                                 <img src="./sub/exhibition/image/current_exhibition(1).png">
                                             </div>
-                                            </a>
+                                        </a>
                                     </div>
                                     <div class="item">
                                         <a href="./sub/exhibition/exhibition_now_detail.html">
                                             <div class="bg">
                                                 <div class="des">
-                                                    <div>
+                                                    <div class="info">
                                                         <h6 class="type">특별프로젝트</h6>
-                                                        <h4 class="title">칼레이도스코프 아이즈</h4>
-                                                        <time>2022. 09. 02. ~ 2022. 11. 27.</time>
+                                                        <h4 class="title">이안 쳉: 세계건설</h4>
+                                                        <time>2022. 03. 02. ~ 2022. 07. 03.</time>
                                                     </div>
                                                     <div class="loc">
-                                                        <span>AR 전시</span>
+                                                        <span>블랙박스</span>
                                                     </div>
                                                 </div>
-                                                <img src="./sub/exhibition/image/current_exhibition_popular,(4).png">
+                                                <img src="./sub/exhibition/image/past_exhibition(2).png">
                                             </div>
                                         </a>
                                     </div>
@@ -480,7 +461,7 @@
                                                     <div class="info">
                                                         <h6 class="type">특별프로젝트</h6>
                                                         <h4 class="title">장영규: 추종자</h4>
-                                                        <time>2022.09.02. ~ 2023.09.03.</time>
+                                                        <time>2022. 09. 02. ~ 2023. 09. 03.</time>
                                                     </div>
                                                     <div class="loc">
                                                         <span>강당 라운지</span>
@@ -492,9 +473,80 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swipe-tab-content">3</div>
-                            <div class="swipe-tab-content">
+                            <div class="swipe-tab-content"> <!-- 신규오픈 전시 -->
                                 <div class="ehb-slider">
+                                    <div class="item">
+                                        <a href="./sub/exhibition/exhibition_now_detail.html">
+                                            <div class="bg">
+                                                <div class="des">
+                                                    <div>
+                                                        <h6 class="type">기획전</h6>
+                                                        <h4 class="title">구름산책자</h4>
+                                                        <time>2022. 09. 02. ~ 2023. 01. 08.</time>
+                                                    </div>
+                                                    <div class="loc">
+                                                        <span>아동교육문화센터</span>
+                                                    </div>
+                                                </div>
+                                                <img src="./sub/exhibition/image/current_exhibition(1).png">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="./sub/exhibition/exhibition_now_detail.html">
+                                            <div class="bg">
+                                                <div class="des">
+                                                    <div>
+                                                        <h6 class="type">상설 기획전</h6>
+                                                        <h4 class="title">공예 지금</h4>
+                                                        <time>2022. 09. 02. ~ 2023. 01. 29.</time>
+                                                    </div>
+                                                    <div class="loc">
+                                                        <span>M1</span>
+                                                    </div>
+                                                </div>
+                                                <img src="./sub/exhibition/image/current_exhibition(3).png">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="./sub/exhibition/exhibition_now_detail.html">
+                                            <div class="bg">
+                                                <div class="des">
+                                                    <div>
+                                                        <h6 class="type">특별프로젝트</h6>
+                                                        <h4 class="title">전소정 : 그린 스크린</h4>
+                                                        <time>2022. 09. 02. ~ 2022. 11. 27.</time>
+                                                    </div>
+                                                    <div class="loc">
+                                                        <span>로비</span>
+                                                    </div>
+                                                </div>
+                                                <img src="./sub/exhibition/image/current_exhibition(6).gif">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swipe-tab-content"> <!-- 상설진행 전시 -->
+                                <div class="ehb-slider">
+                                    <div class="item">
+                                        <a href="./sub/exhibition/exhibition_now_detail.html">
+                                            <div class="bg">
+                                                <div class="des">
+                                                    <div>
+                                                        <h6 class="type">상설 기획전</h6>
+                                                        <h4 class="title">여월지항如月之缸: 박영숙 백자</h4>
+                                                        <time>2022. 09. 02. ~</time>
+                                                    </div>
+                                                    <div class="loc">
+                                                        <span>M2</span>
+                                                    </div>
+                                                </div>
+                                                <img src="./sub/exhibition/image/current_exhibition(2).png">
+                                            </div>
+                                        </a>
+                                    </div>
                                     <div class="item">
                                         <a href="./sub/exhibition/exhibition_now_detail.html">
                                             <div class="bg">
@@ -514,7 +566,98 @@
                                     </div>
                                 </div> 
                             </div>
-                            <div class="swipe-tab-content">5</div>
+                            <div class="swipe-tab-content"> <!-- 종료임박 전시 -->
+                                <div class="ehb-slider">
+                                    <div class="item">
+                                        <a href="./sub/exhibition/exhibition_now_detail.html">
+                                            <div class="bg">
+                                                <div class="des">
+                                                    <div class="info">
+                                                        <h6 class="type">특별프로젝트</h6>
+                                                        <h4 class="title">아트스펙트럼2022</h4>
+                                                        <time>2022. 03. 02. ~ 2022. 07. 03.</time>
+                                                    </div>
+                                                    <div class="loc">
+                                                        <span>그라운드갤러리</span>
+                                                    </div>
+                                                </div>
+                                                <img src="./sub/exhibition/image/past_exhibition(3).png">
+                                                <label>5일 남음</label>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="./sub/exhibition/exhibition_now_detail.html">
+                                            <div class="bg">
+                                                <div class="des">
+                                                    <div class="info">
+                                                        <h6 class="type">특별프로젝트</h6>
+                                                        <h4 class="title">유지영: 시간들의 서랍</h4>
+                                                        <time>2022. 06. 21. ~ 2022. 12. 18.</time>
+                                                    </div>
+                                                    <div class="loc">
+                                                        <span>로비</span>
+                                                    </div>
+                                                </div>
+                                                <img src="./sub/exhibition/image/current_exhibition(7).png">
+                                                <label>20일 남음</label>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swipe-tab-content">  <!-- 진행예정 전시 -->
+                                <div class="ehb-slider">
+                                    <div class="item">
+                                        <div class="bg">
+                                            <div class="des">
+                                                <div class="info">
+                                                    <h6 class="type">기획전</h6>
+                                                    <h4 class="title">올라퍼 엘리아슨 세상의 모든 가능성</h4>
+                                                    <time>2023. 01. 28. ~ 2023. 02. 26.</time>
+                                                </div>
+                                                <div class="loc">
+                                                    <span>기획전시장</span>
+                                                </div>
+                                            </div>
+                                            <img src="./sub/exhibition/image/past_exhibition(5).png">
+                                            <label>10일 남음</label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bg">
+                                            <div class="des">
+                                                <div class="info">
+                                                    <h6 class="type">상설 기획전</h6>
+                                                    <h4 class="title">산수, 이상향의 재현</h4>
+                                                    <time>2022. 03. 02. ~ 2022. 07. 03.</time>
+                                                </div>
+                                                <div class="loc">
+                                                    <span>M1</span>
+                                                </div>
+                                            </div>
+                                            <img src="./sub/exhibition/image/past_exhibition(6).png">
+                                            <label>15일 남음</label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bg">
+                                            <div class="des">
+                                                <div class="info">
+                                                    <h6 class="type">특별프로젝트</h6>
+                                                    <h4 class="title">아트스펙트럼2023</h4>
+                                                    <time>2023. 03. 02. ~ 2023. 07. 03.</time>
+                                                </div>
+                                                <div class="loc">
+                                                    <span>그라운드갤러리</span>
+                                                </div>
+                                            </div>
+                                            <img src="./sub/exhibition/image/past_exhibition(8).png">
+                                            <label>30일 남음</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -738,7 +881,7 @@
                             <div class="va-wrapper">
                                 <div class="va-slice">
                                     <img src="./image/index_artist(1).png" class="a1">
-                                    <h3 class="va-title">강서경<span style="font-size:15px; margin-left: 10px; font-weight: normal;">Seo-kyung Kang</span></h3>
+                                    <h3 class="va-title">강서경<span>Seo-kyung Kang</span></h3>
                                     <div class="va-content">
                                         <p>일상 오브제를 통해 한국의 전통을 현대적으로 재해석하는 작업들을 <br>선보이고 있습니다. 불안정하지만 아름다운 균형을 찾는 작품,<br>전통 한국화와 현대 미술을 결합한 회화 작품 등에서 '균형'을 조율하고자 합니다.</p>
                                         <div class="btn">
@@ -748,7 +891,7 @@
                                 </div>
                                 <div class="va-slice">
                                     <img src="./image/index_artist(2)_.jpg" class="a2">
-                                    <h3 class="va-title">구본창<span style="font-size:15px; margin-left: 10px; font-weight: normal;">Bohn-chang Koo</span></h3>
+                                    <h3 class="va-title">구본창<span>Bohn-chang Koo</span></h3>
                                     <div class="va-content">
                                         <p>일상의 빛나는 순간을 포착해 대상의 에너지, 피사체에 숨겨진 이야기를<br>사진에 담아내고 있습니다. 이를 통해 우리가 미처 모르고 <br>지나갔을 대상의 아름다움, 분위기, 그리고 시간의 흔적을 바라보게 됩니다.</p>
                                         <div class="btn">
@@ -758,7 +901,7 @@
                                 </div>
                                 <div class="va-slice">
                                     <img src="./image/index_artist(3)_.png" class="a3">
-                                    <h3 class="va-title">김아영<span style="font-size:15px; margin-left: 10px; font-weight: normal;">A-young Kim</span></h3>
+                                    <h3 class="va-title">김아영<span>A-young Kim</span></h3>
                                     <div class="va-content">
                                         <p>방대한 리서치를 바탕으로 과학적 근거가 필요 없는,<br>벌어지지 않을 것 같은 일을 상상하는 <br>사변적 소설로 풀어내는 작품을 선보이고 있습니다. </p>
                                         <div class="btn">
@@ -768,7 +911,7 @@
                                 </div>
                                 <div class="va-slice">
                                     <img src="./image/index_artist(4).jpg" class="a4">
-                                    <h3 class="va-title">김도균<span style="font-size:15px; margin-left: 10px; font-weight: normal;">Do-keun Kim</span></h3>
+                                    <h3 class="va-title">김도균<span>Do-kyun Kim</span></h3>
                                     <div class="va-content">
                                         <p>
                                             현대미술 안에서 사진의 정의를 변주하며, 사진의 매체적 특징을<br>실험하고 있습니다. 이를 통해 작가의 시선을 기록 및 공유함과 동시에<br>사진을 최대한 객관적으로 보여주고자 객관적인 데이터를<br>수집하고, 일련의 규칙을 정해 따릅니다.</p>
