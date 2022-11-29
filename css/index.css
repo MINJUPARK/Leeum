@@ -1699,10 +1699,6 @@ main section.program .prg-slider .slide-wrap .slide-item .slide-pic img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  opacity: 0;
-  transition: all 0.3s;
 }
 main section.program .prg-slider .slide-wrap .slide-item .slide-con {
   width: 100%;
@@ -1807,7 +1803,7 @@ main section.program .prg-slider .slide-paging {
   z-index: 1;
 }
 @media screen and (min-width: 1440px) {
-  main section.program .prg-slider__pagination {
+  main section.program .prg-slider .slide-paging {
     -moz-column-gap: 10px;
          column-gap: 10px;
     right: 0;
