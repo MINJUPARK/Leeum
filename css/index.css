@@ -2,7 +2,6 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 .container {
   position: relative;
   width: 100%;
@@ -184,6 +183,56 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
+.animate__duration-5ms {
+  --animate-duration: 500ms !important;
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-duration: var(--animate-duration);
+  animation-duration: var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__duration-15s {
+  --animate-duration: 1.5s !important;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: var(--animate-duration);
+  animation-duration: var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__delay-500ms {
+  --animate-delay: 500ms !important;
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__delay-1s {
+  --animate-delay: 1s !important;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__delay-15s {
+  --animate-delay: 1.5s !important;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 header {
   position: relative;
   height: 280px;
@@ -860,17 +909,22 @@ main .title-box .con h3 {
   font-size: 30px;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  main .title-box .con h3 {
+    font-size: 36px;
+  }
+}
 @media screen and (min-width: 1440px) {
   main .title-box .con h3 {
     font-size: 46px;
   }
 }
 main .title-box .con p {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 14px;
   color: #5c5c5c;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   main .title-box .con p {
     font-size: 16px;
   }
@@ -898,14 +952,14 @@ main .btn .more.pc {
   }
 }
 main section:not(:first-child) {
-  margin-top: 105px;
+  margin-top: 75px;
 }
 main section:last-child {
   margin-top: 155px;
 }
 @media screen and (min-width: 1440px) {
   main section {
-    margin-bottom: 150px;
+    margin-bottom: 10%;
   }
 }
 main section.infoBox {
@@ -1123,18 +1177,24 @@ main section.exhibition .slick-initialized .swipe-tab {
   justify-content: center;
   height: 40px;
   line-height: 40px;
-  color: #acacac;
+  padding: 20px 0;
   text-align: center;
+  color: #acacac;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
-  cursor: pointer;
   transition: all 0.5s;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  main section.exhibition .slick-initialized .swipe-tab {
+    font-size: 18px;
+  }
 }
 main section.exhibition .slick-initialized .swipe-tab:hover {
   font-size: 16px;
   font-weight: 600;
   color: #000;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   main section.exhibition .slick-initialized .swipe-tab:hover {
     font-size: 18px;
   }
@@ -1145,14 +1205,8 @@ main section.exhibition .slick-initialized .swipe-tab.active-tab {
   color: #000;
   border-bottom: 2px solid #be6a15;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   main section.exhibition .slick-initialized .swipe-tab.active-tab {
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main section.exhibition .slick-initialized .swipe-tab {
-    padding: 25px 0;
     font-size: 18px;
   }
 }
@@ -1169,23 +1223,25 @@ main section.exhibition .sub-header-wrap .sub-header {
 main section.exhibition .ehb-slider .slick-list {
   padding: 30px 0 40px !important;
 }
-main section.exhibition .ehb-slider .slick-slide {
+main section.exhibition .ehb-slider .slick-list .slick-slide {
   margin: 0 110px;
 }
-main section.exhibition .ehb-slider .slick-center .bg {
+main section.exhibition .ehb-slider .slick-list .slick-slide.slick-center .bg {
   transform: scale3d(1, 1, 1);
   opacity: 1;
 }
-main section.exhibition .ehb-slider .slick-current .bg {
+main section.exhibition .ehb-slider .slick-list .slick-slide.slick-current .bg {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
-main section.exhibition .ehb-slider .slick-current .bg .des {
+main section.exhibition .ehb-slider .slick-list .slick-slide.slick-current .bg label {
+  opacity: 1;
+}
+main section.exhibition .ehb-slider .slick-list .slick-slide.slick-current .bg .des {
   bottom: 0;
 }
 main section.exhibition .ehb-slider .bg {
   position: relative;
-  width: 350px;
-  height: 250px;
+  height: 24vh;
   margin: 0 -125px;
   border-radius: 15px;
   transform: scale3d(0.8, 0.8, 1);
@@ -1193,22 +1249,15 @@ main section.exhibition .ehb-slider .bg {
   opacity: 0.2;
   overflow: hidden;
 }
-@media screen and (min-width: 480px) {
-  main section.exhibition .ehb-slider .bg {
-    width: 450px;
-    height: 350px;
-  }
-}
 @media screen and (min-width: 768px) {
   main section.exhibition .ehb-slider .bg {
-    width: 650px;
-    height: 450px;
+    height: 300px;
   }
 }
 @media screen and (min-width: 1440px) {
   main section.exhibition .ehb-slider .bg {
-    width: 850px;
-    height: 550px;
+    width: 700px;
+    height: 400px;
   }
 }
 main section.exhibition .ehb-slider .bg .des {
@@ -1275,7 +1324,7 @@ main section.exhibition .ehb-slider .bg .des time {
   }
 }
 main section.exhibition .ehb-slider .bg .des .loc {
-  padding: 5px 12px;
+  padding: 5px 10px;
   font-size: 12px;
   border: 1px solid #3c3c3c;
   border-radius: 5px;
@@ -1290,6 +1339,25 @@ main section.exhibition .ehb-slider .bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+main section.exhibition .ehb-slider .bg label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #ac3f21;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+@media screen and (min-width: 1440px) {
+  main section.exhibition .ehb-slider .bg label {
+    top: 20px;
+    left: 20px;
+  }
 }
 @media screen and (min-width: 1440px) {
   main section.collection .art {
@@ -1519,7 +1587,7 @@ main section.facility .banner-box-wrap .con {
   }
 }
 main section.facility .banner-box-wrap .con p {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 200;
   margin: 10px 0 25px;
   line-height: 1.5em;
@@ -1616,7 +1684,8 @@ main section.program .prg-slider .slide-wrap .slide-item {
   display: flex;
   align-items: center;
   flex-direction: column;
-  column-gap: 35px;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
 }
 @media screen and (min-width: 1440px) {
   main section.program .prg-slider .slide-wrap .slide-item {
@@ -1660,9 +1729,16 @@ main section.program .prg-slider .slide-wrap .slide-item .slide-pic {
   opacity: 0;
   transition: opacity 0.3s;
 }
+@media screen and (min-width: 768px) {
+  main section.program .prg-slider .slide-wrap .slide-item .slide-pic {
+    height: 350px;
+    overflow: hidden;
+  }
+}
 @media screen and (min-width: 1440px) {
   main section.program .prg-slider .slide-wrap .slide-item .slide-pic {
     width: 50%;
+    height: auto;
     border-radius: 10px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -1689,8 +1765,7 @@ main section.program .prg-slider .slide-wrap .slide-item .slide-pic label {
 main section.program .prg-slider .slide-wrap .slide-item .slide-pic img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   opacity: 0;
@@ -1814,8 +1889,7 @@ main section.program .prg-slider .slide-paging {
 }
 @media screen and (min-width: 1440px) {
   main section.program .prg-slider__pagination {
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
     right: 0;
     width: auto;
   }
@@ -1854,7 +1928,8 @@ main section.artist .btn img {
 }
 main section.artist .va-container {
   position: relative;
-  margin: 40px auto 0 auto;
+  margin: 40px auto 0;
+  overflow: hidden;
 }
 main section.artist .va-nav button {
   display: none;
@@ -1949,6 +2024,17 @@ main section.artist .va-slice .va-title {
 @media screen and (min-width: 768px) {
   main section.artist .va-slice .va-title {
     margin: 0 50px;
+  }
+}
+main section.artist .va-slice .va-title span {
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  main section.artist .va-slice .va-title span {
+    font-size: 18px;
+    margin-left: 20px;
   }
 }
 main section.artist .va-slice .va-content {
