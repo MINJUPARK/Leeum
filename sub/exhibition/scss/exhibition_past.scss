@@ -110,15 +110,9 @@ main {
             ul.item-box {
                 @include itemList_box();
                 position: relative;
-                height: 5000px;
                 overflow: hidden;
                 
-                @include responsive(tablet-screens) {
-                    height: 3000px;
-                }
-                @include responsive(pc-screens) {
-                    height: 1800px;
-                }
+
     
                 li.item {
                     width: 100%;
@@ -133,7 +127,7 @@ main {
                         width: 440px;
 
                         &:hover {
-                            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+                            
 
                             a {
 
@@ -171,11 +165,21 @@ main {
                                 white-space: nowrap;
                                 text-overflow: ellipsis;
                                 overflow: hidden;
-                                margin-top: 20px;
+                                font-size:20px;
+                                margin-top: 0;
+                                @include responsive(pc-screens) {
+                                    font-size: 22px;
+                                }
+
                             }
     
                             p {
-                                margin-bottom: 0;
+                                font-size: 15px; 
+                                line-height: 1.5em; 
+                                margin: 10px 0 20px 0;
+                                @include responsive(pc-screens) {
+                                    font-size: 16px
+                                }
                             }
                         }
                     }
