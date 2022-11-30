@@ -948,18 +948,14 @@ main .conservation-method-wrap .conservation-method ul.method-list li {
 main .conservation-method-wrap .conservation-method ul.method-list li:first-child {
   margin-top: 0;
 }
-main .conservation-method-wrap .conservation-method ul.method-list li::before, main .conservation-method-wrap .conservation-method ul.method-list li::after {
-  box-sizing: inherit;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li::before, main .conservation-method-wrap .conservation-method ul.method-list li::after {
-    border: 2px solid transparent;
+    box-sizing: inherit;
+    content: "";
+    position: absolute;
     width: 0;
     height: 0;
+    border: 2px solid transparent;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -974,7 +970,7 @@ main .conservation-method-wrap .conservation-method ul.method-list li::before, m
     right: 0;
   }
 }
-main .conservation-method-wrap .conservation-method ul.method-list li.border-effect {
+main .conservation-method-wrap .conservation-method ul.method-list li.opacity {
   opacity: 1;
 }
 @media screen and (min-width: 1440px) {
