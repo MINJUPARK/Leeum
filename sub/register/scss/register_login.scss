@@ -15,7 +15,9 @@ header {
 }
 
 main {
+
     section.login {
+        // @include flex_between_center();
         ul.angle-select {
             @include flex_between();
             border-top: 1px solid $bk4;
@@ -77,17 +79,34 @@ main {
         .id-pw-login {
             border: 1px solid $bk4;
             padding: 50px 30px;
-
+            border-top: 0;
             form {
-                float: left;
-                padding-left: 10px;
+                // padding-left: 10px;
                 // width: 30px;
                 .id-pw {
+                    margin-bottom: 20px;
+                    text-align: center;
                     input {
-                        margin-bottom: 20px;
+                        width: 100%;
                     }
                 }
             }
+
+            // table {
+                
+            //     border-bottom: 1px solid $bk4;
+            //     tr {
+            //         td {
+            //             &:last-child{
+            //                 padding: 10px 0;
+            //                 border-bottom: 1px solid $bk4;
+            //                 // width: 100%;
+            //             }
+            //             width: 20%;
+            //         }
+            //     }
+            // }
+
         }
     }
 }

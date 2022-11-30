@@ -183,10 +183,110 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
+header .image {
+  display: flex;
+  margin-top: 60px;
+}
 header .image img {
   width: 36px;
+  margin-right: 16px;
 }
 
-main section.login ul.gnb {
+main section .select {
+  margin: 0 auto;
+}
+main section .select .p {
+  border: 1px solid #c5c5c5;
   display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  text-align: center;
+}
+main section .select .p p {
+  margin: 0 auto;
+  padding: 10px;
+}
+main section .type {
+  border: 1px solid #c5c5c5;
+  margin-top: 30px;
+  padding: 60px 15px;
+  text-align: center;
+}
+main section .type strong {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+main section .type strong span {
+  font-size: 22px;
+  font-weight: 200;
+}
+main section .type strong:last-child {
+  font-size: 18px;
+  font-weight: 500;
+}
+main section .type .fee.free {
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #6e3b3b;
+}
+main section .type .fee.hun {
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #ac3f21;
+}
+main section .type .fee.three-hun {
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #be6a15;
+}
+main section .type p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5c5c5c;
+  line-height: 26px;
+}
+main section .type .button.join {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 8px;
+  border: 1px solid #6e3b3b;
+  border-radius: 5px;
+  background-color: #6e3b3b;
+}
+main section .type .button.join a {
+  color: #fff;
+}
+main section .type .button.ask {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 8px;
+  border: 1px solid #be6a15;
+  border-radius: 5px;
+  background-color: #be6a15;
+}
+main section .type .button.ask a {
+  color: #fff;
+}
+main section .type .request {
+  justify-content: space-between;
+}
+main section .type .request .mem,
+main section .type .request .non-mem {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 8px;
+  border: 1px solid #ac3f21;
+  border-radius: 5px;
+  background-color: #ac3f21;
+  width: 49%;
+}
+main section .type .request .mem a,
+main section .type .request .non-mem a {
+  color: #fff;
 }/*# sourceMappingURL=register_join_type.css.map */

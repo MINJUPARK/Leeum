@@ -248,11 +248,12 @@ main section.login ul.angle-select li.on span {
 main section.login .id-pw-login {
   border: 1px solid #c5c5c5;
   padding: 50px 30px;
+  border-top: 0;
 }
-main section.login .id-pw-login form {
-  float: left;
-  padding-left: 10px;
+main section.login .id-pw-login form .id-pw {
+  margin-bottom: 20px;
+  text-align: center;
 }
 main section.login .id-pw-login form .id-pw input {
-  margin-bottom: 20px;
+  width: 100%;
 }/*# sourceMappingURL=register_login.css.map */

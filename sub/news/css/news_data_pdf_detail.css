@@ -664,6 +664,7 @@ main section .image-text .image img {
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down {
+    position: relative;
     width: 50%;
   }
 }
@@ -676,7 +677,9 @@ main section .image-text .icon-text-down .icon-box {
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down .icon-box {
-    margin-top: 0;
+    position: absolute;
+    margin-top: -40px;
+    right: 0;
   }
 }
 main section .image-text .icon-text-down .icon-box img {
@@ -688,9 +691,6 @@ main section .image-text .icon-text-down .icon-box img.print:hover, main section
 main section .image-text .icon-text-down .icon-box .big-heart:hover {
   filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
 }
-main section .image-text .icon-text-down .text {
-  margin-top: 20px;
-}
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down .text {
     border-top: 1px solid #acacac;
@@ -698,14 +698,14 @@ main section .image-text .icon-text-down .text {
 }
 main section .image-text .icon-text-down .text .title strong {
   display: block;
-  font-size: 30px;
+  font-size: 27px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down .text .title strong {
     font-size: 46px;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
 }
 main section .image-text .icon-text-down .text .title span {
@@ -739,7 +739,6 @@ main section .image-text .icon-text-down .text .title p {
 main section .image-text .icon-text-down .text .intro strong {
   display: block;
   font-size: 18px;
-  margin-bottom: 24px;
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down .text .intro strong {
@@ -747,28 +746,32 @@ main section .image-text .icon-text-down .text .intro strong {
     margin-right: 70px;
   }
 }
-main section .image-text .icon-text-down .text .intro .museum-list .museum {
+main section .image-text .icon-text-down .text .intro .museum-list .strong-p {
+  padding: 15px 0;
+}
+main section .image-text .icon-text-down .text .intro .museum-list .strong-p strong.museum {
   font-size: 15px;
   color: #3c3c3c;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 1440px) {
-  main section .image-text .icon-text-down .text .intro .museum-list .museum {
+  main section .image-text .icon-text-down .text .intro .museum-list .strong-p strong.museum {
     font-size: 22px;
   }
 }
-main section .image-text .icon-text-down .text .intro .museum-list p {
+main section .image-text .icon-text-down .text .intro .museum-list .strong-p p {
   font-size: 15px;
   color: #3c3c3c;
-  margin-bottom: 30px;
   line-height: 22px;
 }
 @media screen and (min-width: 1440px) {
-  main section .image-text .icon-text-down .text .intro .museum-list p {
+  main section .image-text .icon-text-down .text .intro .museum-list .strong-p p {
     font-size: 22px;
     line-height: 36px;
+    margin-bottom: 50px;
   }
-  main section .image-text .icon-text-down .text .intro .museum-list p:last-child {
-    margin-bottom: 64px;
+  main section .image-text .icon-text-down .text .intro .museum-list .strong-p p:last-child {
+    margin-bottom: 0;
   }
 }
 main section .image-text .icon-text-down .text .down-img {
@@ -777,10 +780,12 @@ main section .image-text .icon-text-down .text .down-img {
   padding: 5px;
   border-radius: 5px;
   background-color: #6e3b3b;
+  margin-top: 25px;
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down .text .down-img {
     padding: 10px;
+    margin-top: 79px;
   }
 }
 main section .image-text .icon-text-down .text .down-img p {

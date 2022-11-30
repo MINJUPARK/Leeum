@@ -664,6 +664,7 @@ main section .image-text .image img {
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down {
+    position: relative;
     width: 50%;
   }
 }
@@ -676,7 +677,9 @@ main section .image-text .icon-text-down .icon-box {
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down .icon-box {
-    margin-top: 0;
+    position: absolute;
+    margin-top: -40px;
+    right: 0;
   }
 }
 main section .image-text .icon-text-down .icon-box img {
@@ -693,6 +696,7 @@ main section .image-text .icon-text-down .text {
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down .text {
+    margin-top: 0;
     border-top: 1px solid #acacac;
   }
 }
@@ -711,14 +715,14 @@ main section .image-text .icon-text-down .text .title-desc {
 }
 main section .image-text .icon-text-down .text .title-desc .title strong {
   display: block;
-  font-size: 30px;
+  font-size: 27px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down .text .title-desc .title strong {
     font-size: 46px;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 40px;
   }
 }
 main section .image-text .icon-text-down .text .title-desc .title p {
@@ -726,14 +730,39 @@ main section .image-text .icon-text-down .text .title-desc .title p {
   font-weight: 200;
   color: #5c5c5c;
 }
-main section .image-text .icon-text-down .text .title-desc .description {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #f3f3f3;
+main section .image-text .icon-text-down .text .title-desc .description table.mini-box {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 20px 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  line-height: 2em;
+  background: #f3f3f3;
 }
-main section .image-text .icon-text-down .text .title-desc .description .tie p {
-  display: inline-block;
-  margin-left: 20px;
+@media screen and (min-width: 1440px) {
+  main section .image-text .icon-text-down .text .title-desc .description table.mini-box {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    border-radius: 5px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section .image-text .icon-text-down .text .title-desc .description table.mini-box th {
+    width: 30%;
+    text-align: left;
+  }
+}
+main section .image-text .icon-text-down .text .title-desc .description table.mini-box td {
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main section .image-text .icon-text-down .text .intro {
@@ -744,12 +773,19 @@ main section .image-text .icon-text-down .text .intro .list {
   display: flex;
 }
 main section .image-text .icon-text-down .text .intro .list ul {
+  margin-top: 15px;
   width: 50%;
+}
+@media screen and (min-width: 1440px) {
+  main section .image-text .icon-text-down .text .intro .list ul {
+    margin-top: 0;
+    margin-left: 40px;
+    width: 50.4273504274%;
+  }
 }
 main section .image-text .icon-text-down .text .intro .list ul li {
   font-size: 14px;
   padding-left: 11px;
-  margin-bottom: 20px;
   line-height: 28px;
   background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
   background-size: 2px;
@@ -757,40 +793,8 @@ main section .image-text .icon-text-down .text .intro .list ul li {
 @media screen and (min-width: 768px) {
   main section .image-text .icon-text-down .text .intro .list ul li {
     padding-left: 14px;
-    margin-bottom: 30px;
+    line-height: 36px;
     font-size: 17px;
-  }
-}
-main section .image-text .icon-text-down .text .down-img {
-  text-align: center;
-  border: 1px solid #000;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #6e3b3b;
-}
-@media screen and (min-width: 1440px) {
-  main section .image-text .icon-text-down .text .down-img {
-    padding: 10px;
-  }
-}
-main section .image-text .icon-text-down .text .down-img p {
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-}
-main section .image-text .icon-text-down .text .down-img p img {
-  width: 16px;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
-  margin-right: 10px;
-}
-@media screen and (min-width: 1440px) {
-  main section .image-text .icon-text-down .text .down-img p img {
-    width: 20px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main section .image-text .icon-text-down .text .down-img p {
-    font-size: 22px;
   }
 }
 main section.movePage {

@@ -33,6 +33,7 @@ main {
 
             .icon-text-down {
                 @include responsive(pc-screens) {
+                    position: relative;
                     width: 50%;
                 }
                 .icon-box {
@@ -42,7 +43,9 @@ main {
                     width: 120px;
 
                     @include responsive(pc-screens) {
-                        margin-top: 0;
+                        position: absolute;
+                        margin-top: -40px;
+                        right: 0;
                     }
 
                     img {
@@ -59,7 +62,7 @@ main {
                 }
 
                 .text {
-                    margin-top: 20px;
+                    // margin-top: 20px;
 
                     @include responsive(pc-screens) {
                         border-top: 1px solid $bk3;
@@ -68,13 +71,13 @@ main {
                     .title {
                         strong {
                             display: block;
-                            font-size: 30px;
+                            font-size: 27px;
                             margin-bottom: 20px;
 
                             @include responsive(pc-screens) {
                                 font-size: 46px;
                                 margin-bottom: 30px;
-                                margin-top: 30px;
+                                margin-top: 40px;
                             }
                         }
 
@@ -109,7 +112,6 @@ main {
                         strong {
                             display: block;
                             font-size: 18px;
-                            margin-bottom: 24px;
 
                             @include responsive(pc-screens) {
                                 font-size: 26px;
@@ -118,27 +120,32 @@ main {
                         }
                         
                         .museum-list {
-                            .museum {
-                                font-size: 15px;
-                                color: $bk1;
+                            .strong-p {
+                                padding: 15px 0;
+                                strong.museum {
+                                    font-size: 15px;
+                                    color: $bk1;
+                                    margin-bottom: 10px;
 
-                                @include responsive(pc-screens) {
-                                    font-size: 22px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 22px;
+                                    }
                                 }
-                            }
 
-                            p {
-                                font-size: 15px;
-                                color: $bk1;
-                                margin-bottom: 30px;
-                                line-height: 22px;
+                                p {
+                                    font-size: 15px;
+                                    color: $bk1;
+                                    // margin-bottom: 30px;
+                                    line-height: 22px;
 
-                                @include responsive(pc-screens) {
-                                    font-size: 22px;
-                                    line-height: 36px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 22px;
+                                        line-height: 36px;
+                                        margin-bottom: 50px;
 
-                                    &:last-child {
-                                        margin-bottom: 64px;
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
                                     }
                                 }
                             }
@@ -151,9 +158,11 @@ main {
                         padding: 5px;
                         border-radius: 5px;
                         background-color: $dark-brown;
+                        margin-top: 25px;
 
                         @include responsive(pc-screens) {
                             padding: 10px;
+                            margin-top: 79px;
                         }
                         p {
                             img{

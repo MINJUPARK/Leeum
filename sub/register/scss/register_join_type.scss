@@ -5,16 +5,124 @@
 
 header {
     .image {
+        display: flex;
+        margin-top: 60px;
         img {
             width: 36px;
+            margin-right: 16px;
         }
     }
 }
 main {
-    section.login {
-        
-        ul.gnb {
-            display: flex;
+    section {
+        .select{
+            margin: 0 auto;
+            .p {
+                border: 1px solid $bk4;
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+                text-align: center;
+
+                p {
+                    // border: 1px solid $bk4;
+                    margin: 0 auto;
+                    padding: 10px;
+
+                }
+            }
+        }
+
+        .type {
+            border: 1px solid $bk4;
+            margin-top: 30px;
+            padding: 60px 15px;
+            text-align: center;
+
+            strong{
+                display: block;
+                margin-bottom: 30px;
+                @include gothic-font(semibold, 24px);
+                span {
+                    @include gothic-font(light, 22px);
+                }
+
+                &:last-child {
+                    @include gothic-font(medium, 18px);
+                }
+            }
+
+            .fee{
+
+                &.free {
+                    margin-bottom: 30px;
+                    @include gothic-font(bold, 21px);
+                    color: $dark-brown;
+                }
+                
+                &.hun {
+                    margin-bottom: 30px;
+                    @include gothic-font(bold, 21px);
+                    color: $red-brown;
+                }
+
+                &.three-hun {
+                    margin-bottom: 30px;
+                    @include gothic-font(bold, 21px);
+                    color: $yellow-brown;
+                }
+            }
+
+            
+            p {
+                margin-bottom: 30px;
+                @include gothic-font(medium, 18px);
+                color: $bk2;
+                line-height: 26px;
+            }
+
+            .button {
+                &.join {
+                @include gothic-font(semibold, 22px);
+                padding: 8px;
+                border: 1px solid $dark-brown;
+                border-radius: 5px;
+                background-color: $dark-brown;
+                a {
+                    color: #fff;
+                }
+                }
+
+                
+
+                &.ask {
+                    @include gothic-font(semibold, 22px);
+                    padding: 8px;
+                    border: 1px solid $yellow-brown;
+                    border-radius: 5px;
+                    background-color: $yellow-brown;
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .request {
+                justify-content: space-between;
+                
+                .mem,
+                .non-mem {
+                @include gothic-font(semibold, 22px);
+                padding: 8px;
+                border: 1px solid $red-brown;
+                border-radius: 5px;
+                background-color: $red-brown;
+                width: 49%;
+                a {
+                    color: #fff;
+                }
+                }
+            }
         }
     }
 }
