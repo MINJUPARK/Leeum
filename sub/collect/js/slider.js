@@ -7,4 +7,27 @@ window.addEventListener("load", function () {
     sliderChange();
     document.querySelector("#slider").addEventListener("input", sliderChange, false);
     document.querySelector("#slider").addEventListener("change", sliderChange, false);
+    
+    this.setTimeout(slidermove, 1500);
+    
+    var sliderPos;
+    function slidermove() {
+        sliderPos = document.querySelector("#slider").value;
+        // for(let i = sliderPos.value; i >= 0; i--) {
+            let move1 = setInterval(() => {
+                sliderPos--;
+                sliderChange();
+            }, 8);
+            
+            if(sliderPos < 1) {
+                clearInterval(move1);
+
+                let move2 = setInterval(() => {
+                    sliderPos++;
+                    sliderChange();
+                }, 10);
+            }
+
+        // }
+    }
 })

@@ -144,6 +144,7 @@ main {
     
     .texture-research-wrap {
         margin-top: 120px;
+        overflow: hidden;
         
         @include responsive(pc-screens) {
             margin-top: 330px;

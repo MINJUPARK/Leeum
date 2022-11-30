@@ -177,34 +177,44 @@ main {
                             position: relative;
                             display: block;
 
-                            img {
+                            a {
                                 width: 100%;
-                                cursor: none;
-                            }
 
-                            .img-l {
-                                background: {
-                                    image: url("../image/conserve_texture_damage\(0\).png"); repeat: no-repeat;
-                                    color: #fff;
+                                img {
+                                    width: 100%;
+
+                                    @include responsive(pc-screens) {
+                                        cursor: none;
+                                    }
                                 }
-                                width: 250px;
-                                height: 250px;
-                                box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
-                                pointer-events: none;
-                                position: absolute;
-                                border: 4px solid #efefef;
-                                z-index: 99;
-                                border-radius: 100%;
-                                display: block;
-                                /* transform: scale(0); */
-                                opacity: 0;
-                                transition: opacity 0.2s;
-                            }
-
-                            &:hover .img-l, 
-                            &:active .img-l {
-                            /* transform: scale(1); */
-                            opacity: 1;
+    
+                                .img-l {
+                                    
+                                    @include responsive(pc-screens) {
+                                        background: {
+                                            image: url("../image/conserve_texture_damage\(0\).png"); repeat: no-repeat;
+                                            color: #fff;
+                                        }
+                                        width: 250px;
+                                        height: 250px;
+                                        box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+                                        pointer-events: none;
+                                        position: absolute;
+                                        border: 4px solid #efefef;
+                                        z-index: 99;
+                                        border-radius: 100%;
+                                        display: block;
+                                        /* transform: scale(0); */
+                                        opacity: 0;
+                                        transition: opacity 0.2s;
+                                    }
+                                }
+    
+                                &:hover .img-l, 
+                                &:active .img-l {
+                                /* transform: scale(1); */
+                                opacity: 1;
+                                }
                             }
                         }                         
                     }
@@ -254,6 +264,7 @@ main {
                 li {
                     position: relative;
                     margin-top: 90px;
+                    opacity: 0.2;
                     
                     transition: all .5s;
                     
@@ -261,7 +272,6 @@ main {
                         margin-top: 170px;
                         padding: 55px 120px;
                         box-shadow: inset 0 0 0 1px $bk4;
-                        opacity: 0.2;
                     }
                     
                     &:first-child {
@@ -300,10 +310,13 @@ main {
                         }
                     }
 
+                    &.opacity {
+                        opacity: 1;
+                    }
+                    
                     &.border-effect {
                         
                         @include responsive(pc-screens) {
-                            opacity: 1;
                           
                             &::before,
                             &::after {
@@ -389,4 +402,20 @@ main {
 
 footer {
     @include footer();
+}
+
+.fancybox-container {
+    @include responsive(pc-screens) {
+        display: none;
+    }
+
+    .fancybox-toolbar {
+        
+        .fancybox-button--play,
+        .fancybox-button--fullscreen,
+        .fancybox-button--thumbs,
+        .fancybox-button--share {
+            display: none !important;
+        }
+    }
 }

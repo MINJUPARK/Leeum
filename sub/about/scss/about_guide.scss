@@ -15,7 +15,7 @@ header {
 }
 
 main {
-    // @include tab_menu();
+    @include tab_menu();
     
     .m-br {
         @include responsive(pc-screens) {
@@ -744,8 +744,11 @@ main {
                 margin-top: 100px;
                 margin-bottom: 140px;
                 // background-color: darkblue;
+                @include out_container();
+                overflow: hidden;
 
                 @include responsive(pc-screens) {
+                    @include in_container();
                     position: relative;
                     margin-top: 100px;
                 }
@@ -778,13 +781,22 @@ main {
 
                     ul.point-m {
                         @include flex_between();
-                        width: 580px / 350px * 100%; 
-                        padding-left: 80px / 350px * 100%;
-                        padding-right: 80px / 350px * 100%;
-    
+                        width: calc(600px / 350px) * 100%; 
+                        
                         > li {
-                            width: 190px / 420px * 100%;
                             
+                            &:first-child {
+                                width: calc(205px / 600px) * 100%;
+                                padding-left: calc(80px / 600px) * 100%;
+                                padding-right: calc(15px / 600px) * 100%;
+                            }
+                            
+                            &:nth-child(2) {
+                                width: calc(205px / 600px) * 100%;
+                                padding-left: calc(15px / 600px) * 100%;
+                                padding-right: calc(80px / 600px) * 100%;
+                            }
+
                             .point-m-txt {
                                 height: 275px;
 

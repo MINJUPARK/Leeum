@@ -1,5 +1,6 @@
 $('.side-tab .type-img').find('li').on("mousemove", zoom);
 
+
 function zoom(e) {
     let imgS = this.querySelector(".img-s"),
         imgL = this.querySelector(".img-l"),

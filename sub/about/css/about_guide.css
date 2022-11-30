@@ -639,6 +639,63 @@ header .breadcrumb-wrap {
   }
 }
 
+main .tabmenu-wrap .tab-nav {
+  display: table;
+  width: 100%;
+}
+main .tabmenu-wrap .tab-nav .nav {
+  display: table-cell;
+  width: 50px;
+}
+main .tabmenu-wrap .tab-nav .nav a {
+  transition: 0.4s;
+  position: relative;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  color: #acacac;
+  text-align: center;
+  border-bottom: 1px solid #d4d4d4;
+  height: 40px;
+}
+@media screen and (min-width: 768px) {
+  main .tabmenu-wrap .tab-nav .nav a {
+    height: 50px;
+    font-size: 24px;
+  }
+}
+main .tabmenu-wrap .tab-nav .nav a:after {
+  content: "";
+  transition: 0.4s;
+  width: 0px;
+}
+main .tabmenu-wrap .tab-nav .nav.on a {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+main .tabmenu-wrap .tab-nav .nav.on a:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+@media screen and (min-width: 768px) {
+  main .tabmenu-wrap .tab-nav .nav.on a {
+    font-size: 24px;
+  }
+}
+main .tabmenu-wrap .tab-con {
+  padding-top: 60px;
+}
+main .tabmenu-wrap .tab-con .con-box {
+  display: none;
+}
 @media screen and (min-width: 1440px) {
   main .m-br {
     display: none;
@@ -1298,9 +1355,21 @@ main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .gui
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap {
   margin-top: 100px;
   margin-bottom: 140px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
     position: relative;
     margin-top: 100px;
   }
@@ -1331,12 +1400,17 @@ main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .poi
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m {
   display: flex;
   justify-content: space-between;
-  width: 165.7142857143%;
-  padding-left: 22.8571428571%;
-  padding-right: 22.8571428571%;
+  width: 171.4285714286%;
 }
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li {
-  width: 45.2380952381%;
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li:first-child {
+  width: 34.1666666667%;
+  padding-left: 13.3333333333%;
+  padding-right: 2.5%;
+}
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li:nth-child(2) {
+  width: 34.1666666667%;
+  padding-left: 2.5%;
+  padding-right: 13.3333333333%;
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt {
   height: 275px;
