@@ -2,3 +2,19 @@
 @import '../../../scss/style.scss';
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
+
+header {
+    .image {
+        img {
+            width: 36px;
+        }
+    }
+}
+main {
+    section.login {
+        
+        ul.gnb {
+            display: flex;
+        }
+    }
+}

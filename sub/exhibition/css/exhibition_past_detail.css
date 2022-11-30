@@ -1100,11 +1100,6 @@ main .o-i-p .introduce h6 {
   font-size: 18px;
   font-weight: 600;
 }
-@media screen and (min-width: 1440px) {
-  main .o-i-p .introduce h6 {
-    font-size: 18px;
-  }
-}
 main .o-i-p .introduce strong {
   font-size: 18px;
   margin-bottom: 15px;
@@ -1203,8 +1198,9 @@ main .vr-floor-info-wrap section.floor-info {
 }
 main .vr-floor-info-wrap section.floor-info h3 {
   margin-bottom: 60px;
-  font-size: 18px;
   text-align: left;
+  font-size: 18px;
+  font-weight: 600;
 }
 main .vr-floor-info-wrap section.floor-info > div {
   margin-bottom: 100px;
@@ -1227,6 +1223,53 @@ main .vr-floor-info-wrap section.floor-info > div.cultural-center > .floor-selec
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group {
     width: 33.3333333333%;
     margin-right: 6.9444444444%;
+  }
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #000;
+}
+@media screen and (min-width: 768px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title {
+    padding: 0;
+    padding-bottom: 36px;
+  }
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 {
+    font-size: 30px;
+  }
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 span {
+  margin-left: 10px;
+  color: #5c5c5c;
+  font-size: calc(1em - 6px);
+  font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 span {
+    margin-left: 20px;
+  }
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown {
+  transition: 0.3s;
+  width: 4.2857142857%;
+  cursor: pointer;
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown.active {
+  transform: rotate(180deg);
+}
+@media screen and (min-width: 768px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown {
+    display: none;
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option {
@@ -1271,38 +1314,22 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-opt
     background-repeat: no-repeat;
     background-position: center right;
     background-origin: content-box;
-    background-size: 37px 28px;
+    background-size: 34px 24px;
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li b {
   font-weight: 500;
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
-  padding-top: 3px;
-  margin-left: 15px;
+  margin-top: 2px;
+  margin-left: 10px;
   vertical-align: top;
   font-size: calc(1em - 4px);
 }
 @media screen and (min-width: 1440px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
     margin-left: 15px;
-  }
-}
-main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li img {
-  position: absolute;
-  top: 98px;
-  right: 20px;
-  width: 18px;
-  height: 23px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li img.active {
-  transform: rotate(180deg);
-}
-@media screen and (min-width: 768px) {
-  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li img {
-    display: none;
+    font-size: 24px;
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group {
@@ -1311,7 +1338,6 @@ main .vr-floor-info-wrap section.floor-info > div .floor-con-group {
 @media screen and (min-width: 768px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-con-group {
     width: 55.5555555556%;
-    margin-top: 5px;
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group ul li {
@@ -1324,14 +1350,43 @@ main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-img li
   width: 100%;
   margin-bottom: 25px;
 }
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-img li img {
+    margin-top: 42px;
+    height: 800px;
+  }
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex {
+  display: flex;
+  justify-content: space-between;
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex strong, main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
+  line-height: 24px;
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex strong {
+  padding-left: 5px;
+  font-size: 24px;
+  width: 11.4285714286%;
+}
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex strong {
+    font-size: 30px;
+  }
+}
+main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
+  width: 71.4285714286%;
+}
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
+    font-size: 24px;
+  }
+}
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt p {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
-  width: 100%;
   margin-top: 15px;
-  margin-right: 17.1428571429%;
-  font-size: calc(1em - 2px);
+  font-size: 15px;
 }
 main section.movePage {
   margin-top: 40px;

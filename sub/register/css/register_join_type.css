@@ -182,4 +182,11 @@ h6 {
   font-size: 18px;
 }
 
-/* -------------------------------------------------------------------------------------------------------------------- *//*# sourceMappingURL=register_join_type.css.map */
+/* -------------------------------------------------------------------------------------------------------------------- */
+header .image img {
+  width: 36px;
+}
+
+main section.login ul.gnb {
+  display: flex;
+}/*# sourceMappingURL=register_join_type.css.map */

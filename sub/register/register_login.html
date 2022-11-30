@@ -11,44 +11,71 @@
     <link rel="icon" href="./image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="./image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/register.css">
-    <link rel="stylesheet" type="text/css" href="./css/register_join_type.css">
+    <link rel="stylesheet" type="text/css" href="./css/register_login.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./js/register.js"></script>
     <title>Leeum</title>
 </head>
 <body>
-    <div class="type">
+    <header>
         <div class="container">
-            <ul class="gnb">
-                <li class="tab">웹 회원</li>
-                <li>프렌즈 회원</li>
-                <li>패밀리 회원</li>
-            </ul>
+            <div class="image">
+                <img src="../../image/logo_leeum_vertical.svg" alt="">
+            </div> 
         </div>
-    </div>
-
-    <section>
-        <h1>id, pw</h1>
-        <div class="container">
-            <form action="#">
-                <div class="flex-box-inner">
+    </header>
+    <main>
+        <!-- <section class="login">
+            <h2>id, pw</h2>
+            <div class="container">
+                <div class="type">
+                        <ul class="gnb">
+                            <li class="tab">웹 회원</li>
+                            <li>프렌즈 회원</li>
+                            <li>패밀리 회원</li>
+                        </ul>
+                </div>
+                <form action="#">
                     <div>
-                        <label>아이디<input type="text" id="id"></label>
-                        <label>비밀번호<input type="text" id="pw"></label>
+                        <div>
+                            <label>아이디<input type="text" id="id"></label>
+                            <label>비밀번호<input type="text" id="pw"></label>
+                        </div>
+                    </div>
+                    <input type="button" value="로그인">
+                </form>
+            </div>
+        </section> -->
+    
+        <section class="login">
+            <h2>로그인</h2>
+            <div class="container">
+                <div class="side-tab before-after">
+                    <ul class="tab-wrap angle-select">
+                        <li class="tab on"><span>웹 회원</span></li>
+                        <li class="tab"><span>프렌즈 회원</span></li>
+                        <li class="tab"><span>패밀리 회원</span></li>
+                    </ul>
+                </div>
+
+                <div class="id-pw-login">
+                    <form action="#">
+                        <div class="id-pw">
+                            <label>아이디<input type="text" id="id"></label>
+                            <label>비밀번호<input type="password" id="pw"></label>
+                        </div>
+                        <input type="button" value="로그인">
+                    </form>
+                    <div class="list">
+                        <input type="checkbox" id="n-treasure"><label for="n-treasure">아이디 저장</label>
+                    </div>
+                    <div class="id-pw-join">
+                        <a href="">아이디 · 비밀번호 찾기</a>
+                        <a href="">회원가입</a>
                     </div>
                 </div>
-                <input type="button" value="로그인">
-            </form>
-        </div>
-    </section>
-    <!-- <div class="container">
-        <form action="#">
-            <div>
-                <label>아이디<input type="text" id="id"></label>
-                <label>비밀번호<input type="password" id="pw"></label>
             </div>
-            <input type="button" value="로그인">
-        </form>
-    </div> -->
+        </section>
+    </main>
 </body>
 </html>

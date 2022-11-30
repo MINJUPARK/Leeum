@@ -30,7 +30,7 @@ main {
 
             img {
                 width:100%;
-                height: (350+1vh)px;
+                height: (450+1.5vh)px;
                 @include responsive(pc-screens) {
                     width:100%;
                     height:100%;
@@ -117,32 +117,39 @@ main {
                     
                 .img {
                     position: relative;
-                    width: 0;
-                    height: 140px;
-                    align-items: center;
+                    top:-90px;
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                    width:190px;
+                    height:190px;
+                    background-color: $bk3;
+                    overflow:hidden;
+                    @include responsive(pc-screens) {
+                        width:400px;
+                        height:400px;
+                        left:-500px; top: -230px;
+                    }
 
-                    img {
-                            position: absolute;
-                            top: -60px;
-                            width:190px;
-                            height:190px;
+                    img {    
+                            position: relative;
+                            left: 3px; top:10px;
+                            width: 100%;
                             margin: 0 auto;
-
+                            
                             @include responsive(pc-screens) {
-                                width:400px;
-                                height:400px;
-                                left:-600px; top: -230px;
+                                width: 100%;
+                                left:10px; top: 40px;
                             }
                         }
                 }
                 
                 .name {
-                    margin-top: 10px;
+                    margin-top: -55px;
                     text-align: center;
                     
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:60px; left:-400px;
+                        top:-130px; left:-400px;
                     }
 
                     p:first-child {
@@ -177,7 +184,7 @@ main {
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold, 36px);  
                         position: relative;
-                        left: -56px; top:-250px;
+                        left: -56px; top:-450px;
                     }
                     
                 }
@@ -203,7 +210,7 @@ main {
 
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-270px; left:620px;
+                        top:-470px; left:620px;
                         text-align: left;
                         @include gothic_font(regular,20px);       
                     }
@@ -218,7 +225,7 @@ main {
                         @include responsive(pc-screens) {
                             @include gothic_font(semibold,18px);
                             position: relative;
-                            top:-280px; left:-50px;
+                            top:-480px; left:-50px;
                             
                         }
     
@@ -275,25 +282,28 @@ main {
                     
                 .img {
                     position: relative;
-                    width: 0;
-                    height: 200px;
-                    align-items: center;
-                    // margin: 0 auto;
-
-                    img {
-                            position: absolute;
-                            top: -60px;
-                            width:190px;
-                            height:190px;
+                    top:-90px;
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                    width:190px;
+                    height:190px;
+                    background-color: $bk3;
+                    overflow:hidden;
+                    @include responsive(pc-screens) {
+                        width:400px;
+                        height:400px;
+                        left:280px; top: -230px;
+                    }
+                    img {    
+                            position: relative;
+                            left: 3px; top:10px;
+                            width: 100%;
                             margin: 0 auto;
-
+                            
                             @include responsive(pc-screens) {
-                                width:400px;
-                                height:400px;
-                                top:-250px;
-                                left:300px;
+                                width: 100%;
+                                left:15px; top: 30px;
                             }
-        
                         }
                 }
                 
@@ -303,7 +313,7 @@ main {
                     
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:43px; left:400px;
+                        top:-150px; left:380px;
                     }
 
                     p:first-child {
@@ -338,7 +348,7 @@ main {
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,36px);  
                         position: relative;
-                        top:-230px; left:50px;
+                        top:-450px; left:50px;
                     }
                 }
 
@@ -349,7 +359,7 @@ main {
 
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-250px; left:-620px;
+                        top:-470px; left:-620px;
                         text-align: right; 
                         @include gothic_font(regular,20px);       
                     }
@@ -365,7 +375,7 @@ main {
                         @include responsive(pc-screens) {
                             @include gothic_font(semibold,18px);
                             position: relative;
-                            top:-260px; left:40px;
+                            top:-490px; left:50px;
                             
                         }
                         
@@ -421,24 +431,27 @@ main {
                 
                 .img {
                     position: relative;
-                    width: 0;
-                    height: 200px;
-                    align-items: center;
-                    // margin: 0 auto;
-
-                    img {
-                            position: absolute;
-                            top: -60px;
-                            width:190px;
-                            height:190px;
+                    top:-90px;
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                    width:190px;
+                    height:190px;
+                    background-color: $bk3;
+                    overflow:hidden;
+                    @include responsive(pc-screens) {
+                        width:400px;
+                        height:400px;
+                        left:-500px; top: -230px;
+                    }
+                    img {    
+                            position: relative;
+                            left: 10px; top:10px;
+                            width: 90%;
                             margin: 0 auto;
                             
-                            @include responsive(pc-screens) {
-                                width:400px;
-                                height:400px;
-                                left:-600px; top: -230px;
+                            @include responsive(pc-screens) {  
+                                left: 20px;
                             }
-
                         }
                 }
                 
@@ -448,7 +461,7 @@ main {
                     
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:60px; left:-380px;
+                        top:-140px; left:-400px;
                     }
 
                     p:first-child {
@@ -482,7 +495,7 @@ main {
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,36px);  
                         position: relative;
-                        left: 0px; top:-250px;
+                        left: 0px; top:-450px;
                     }
 
                 }
@@ -494,7 +507,7 @@ main {
 
                     @include responsive(pc-screens) {
                         position: relative;
-                        top:-270px; left:580px;
+                        top:-460px; left:580px;
                         text-align: left;  
                         @include gothic_font(regular,20px);       
                     }
@@ -522,7 +535,7 @@ main {
                         @include responsive(pc-screens) {
                             @include gothic_font(semibold,18px);
                             position: relative;
-                            top:-280px; left:-80px;
+                            top:-470px; left:-85px;
                             
                         }
                         
@@ -917,14 +930,6 @@ main {
                                     font-size: 20px;
                                 } 
     
-                            span {
-                                @include gothic_font(semibold,18px);
-
-                                @include responsive(pc-screens) {
-                                    @include gothic_font(semibold,20px);
-                                    line-height: 40px;
-                                }
-                            }
                             br {
                                 &:first-of-type {
                                     display: none;
@@ -935,6 +940,18 @@ main {
                             }
                         }
                         
+                        &:nth-of-type(3) {
+                            margin-top: 15px;
+                            margin-bottom: 5px;
+                            span {
+                                @include gothic_font(semibold,18px);
+
+                                @include responsive(pc-screens) {
+                                    @include gothic_font(semibold,20px);
+                                    line-height: 40px;
+                                }
+                            }
+                        }
                         &:last-of-type {
                             margin:0px 0 60px 0;
                             font-size: 14px;

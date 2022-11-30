@@ -1085,6 +1085,9 @@ main .r-d .request-desc table.mini-box td {
 main .r-d .request-desc table.mini-box .writer {
   vertical-align: top;
 }
+main .o-i-p {
+  margin-bottom: 100px;
+}
 @media screen and (min-width: 1440px) {
   main .o-i-p {
     width: 60%;
@@ -1201,6 +1204,123 @@ main .o-i-p .content.precaution p {
     font-size: 22px;
     font-weight: 400;
   }
+}
+main section.image .ehb-slider {
+  margin-bottom: 100px;
+}
+@media screen and (min-width: 1440px) {
+  main section.image .ehb-slider {
+    margin-bottom: 200px;
+  }
+}
+main section.image .ehb-slider .slick-list {
+  padding: 30px 0 40px !important;
+}
+main section.image .ehb-slider .slick-slide {
+  margin: 0 110px;
+}
+main section.image .ehb-slider .slick-center .bg {
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+main section.image .ehb-slider .slick-current .bg {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+main section.image .ehb-slider .slick-current .bg .des {
+  bottom: 0;
+}
+main section.image .ehb-slider .bg {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  margin: 0 -125px;
+  border-radius: 15px;
+  transform: scale3d(0.8, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.2;
+  overflow: hidden;
+}
+@media screen and (min-width: 480px) {
+  main section.image .ehb-slider .bg {
+    width: 450px;
+    height: 350px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main section.image .ehb-slider .bg {
+    width: 650px;
+    height: 450px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.image .ehb-slider .bg {
+    width: 850px;
+    height: 550px;
+  }
+}
+main section.image .ehb-slider .bg .des {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  bottom: -120px;
+  width: 100%;
+  color: #000;
+  background-color: #fff;
+  transition: bottom 0.5s;
+  padding: 15px 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.image .ehb-slider .bg .des {
+    bottom: -180px;
+    padding: 25px 40px;
+  }
+}
+main section.image .ehb-slider .bg .des .type {
+  font-size: 14px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  main section.image .ehb-slider .bg .des .type {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.image .ehb-slider .bg .des .type {
+    font-size: 18px;
+  }
+}
+main section.image .ehb-slider .bg .des .title {
+  margin: 5px 0 15px;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  main section.image .ehb-slider .bg .des .title {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.image .ehb-slider .bg .des .title {
+    font-size: 18px;
+  }
+}
+main section.image .ehb-slider .bg .des .loc {
+  padding: 5px 12px;
+  font-size: 12px;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main section.image .ehb-slider .bg .des .loc {
+    padding: 6px 18px;
+    font-size: 14px;
+  }
+}
+main section.image .ehb-slider .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main section.movePage {
   margin-top: 40px;

@@ -803,7 +803,6 @@ main .damage-type-wrap .damage-type .type-box ul.type-img li {
   display: none;
   width: 100%;
   aspect-ratio: 10/7;
-  background-color: darkblue;
 }
 main .damage-type-wrap .damage-type .type-box ul.type-img li.view {
   position: relative;
@@ -876,7 +875,6 @@ main .conservation-method-wrap .conservation-method ul.method-list {
 main .conservation-method-wrap .conservation-method ul.method-list li {
   position: relative;
   margin-top: 90px;
-  opacity: 0.2;
   transition: all 0.5s;
 }
 @media screen and (min-width: 1440px) {
@@ -884,6 +882,7 @@ main .conservation-method-wrap .conservation-method ul.method-list li {
     margin-top: 170px;
     padding: 55px 120px;
     box-shadow: inset 0 0 0 1px #c5c5c5;
+    opacity: 0.2;
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li:first-child {
@@ -915,10 +914,10 @@ main .conservation-method-wrap .conservation-method ul.method-list li::before, m
     right: 0;
   }
 }
-main .conservation-method-wrap .conservation-method ul.method-list li.border-effect {
-  opacity: 1;
-}
 @media screen and (min-width: 1440px) {
+  main .conservation-method-wrap .conservation-method ul.method-list li.border-effect {
+    opacity: 1;
+  }
   main .conservation-method-wrap .conservation-method ul.method-list li.border-effect::before, main .conservation-method-wrap .conservation-method ul.method-list li.border-effect::after {
     width: 100%;
     height: 100%;

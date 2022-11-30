@@ -748,6 +748,9 @@ main .tabmenu-wrap .tab-nav .nav:hover a:after {
     font-size: 24px;
   }
 }
+main .tabmenu-wrap .tab-con .con-box {
+  display: block;
+}
 main .membership-wrap .table,
 main .gift-membership-wrap .table {
   margin-top: 40px;
@@ -952,9 +955,12 @@ main .membership-wrap .membership .table .tbody > div.td2 a:hover {
   border-color: #be6a15;
   background-color: #be6a15;
 }
+main .gift-membership-wrap {
+  margin-top: 120px;
+}
 @media screen and (min-width: 1440px) {
   main .gift-membership-wrap {
-    margin-top: 160px;
+    margin-top: 280px;
   }
 }
 main .gift-membership-wrap .gift-membership .table .tbody > div.td1 a, main .gift-membership-wrap .gift-membership .table .tbody > div.td2 a {
@@ -972,14 +978,20 @@ main .gift-membership-wrap .gift-membership .table .tbody > div.td1 a:hover, mai
 main .gift-membership-wrap .gift-membership .table .tbody > div.td1 .fee, main .gift-membership-wrap .gift-membership .table .tbody > div.td2 .fee {
   color: #ac3f21;
 }
+main .gift-membership-wrap .gift-membership .gift-detail {
+  margin-top: 80px;
+}
+@media screen and (min-width: 1440px) {
+  main .gift-membership-wrap .gift-membership .gift-detail {
+    margin-top: 240px;
+  }
+}
 main .gift-membership-wrap .gift-membership .gift-detail h4 {
   font-size: 26px;
-  margin-top: 80px;
 }
 @media screen and (min-width: 1440px) {
   main .gift-membership-wrap .gift-membership .gift-detail h4 {
     font-size: 36px;
-    margin-top: 160px;
   }
 }
 main .gift-membership-wrap .gift-membership .gift-detail ul {
@@ -1075,15 +1087,15 @@ main .gift-membership-wrap .gift-membership .gift-detail ul li:last-child div .r
     margin-top: 15px;
   }
 }
-main .corporate-member-wrap {
+main section.corporate-member-wrap {
   margin-top: 100px;
 }
 @media screen and (min-width: 1440px) {
-  main .corporate-member-wrap {
+  main section.corporate-member-wrap {
     margin-top: 200px;
   }
 }
-main .corporate-member-wrap .corporate-member {
+main section.corporate-member-wrap .corporate-member {
   position: relative;
   left: 50%;
   right: 50%;
@@ -1099,7 +1111,7 @@ main .corporate-member-wrap .corporate-member {
   background-size: 271.7142857143%;
 }
 @media screen and (min-width: 1440px) {
-  main .corporate-member-wrap .corporate-member {
+  main section.corporate-member-wrap .corporate-member {
     position: static;
     left: 0;
     right: 0;
@@ -1112,7 +1124,7 @@ main .corporate-member-wrap .corporate-member {
     background-size: 1527px;
   }
 }
-main .corporate-member-wrap .corporate-member::before {
+main section.corporate-member-wrap .corporate-member::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1123,11 +1135,11 @@ main .corporate-member-wrap .corporate-member::before {
   background: linear-gradient(#000 0%, transparent);
 }
 @media screen and (min-width: 1440px) {
-  main .corporate-member-wrap .corporate-member::before {
+  main section.corporate-member-wrap .corporate-member::before {
     background: none;
   }
 }
-main .corporate-member-wrap .corporate-member .back-cover {
+main section.corporate-member-wrap .corporate-member .back-cover {
   content: "";
   position: absolute;
   left: 0;
@@ -1137,52 +1149,52 @@ main .corporate-member-wrap .corporate-member .back-cover {
   background-color: rgba(0, 0, 0, 0.6);
 }
 @media screen and (min-width: 1440px) {
-  main .corporate-member-wrap .corporate-member .back-cover {
+  main section.corporate-member-wrap .corporate-member .back-cover {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
-main .corporate-member-wrap .corporate-member p, main .corporate-member-wrap .corporate-member a {
+main section.corporate-member-wrap .corporate-member p, main section.corporate-member-wrap .corporate-member a {
   font-size: calc(1em + 2px);
 }
 @media screen and (min-width: 1440px) {
-  main .corporate-member-wrap .corporate-member .corporate-txt {
+  main section.corporate-member-wrap .corporate-member .corporate-txt {
     margin-left: 120px;
   }
 }
-main .corporate-member-wrap .corporate-member .corporate-txt h3 {
+main section.corporate-member-wrap .corporate-member .corporate-txt h3 {
   margin-top: 50px;
   font-size: calc(1em + 10px);
 }
 @media screen and (min-width: 1440px) {
-  main .corporate-member-wrap .corporate-member .corporate-txt h3 {
+  main section.corporate-member-wrap .corporate-member .corporate-txt h3 {
     margin-top: 65px;
     font-size: 36px;
     text-align: left;
   }
 }
-main .corporate-member-wrap .corporate-member .corporate-txt p {
+main section.corporate-member-wrap .corporate-member .corporate-txt p {
   line-height: 2em;
   margin-top: 30px;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
-  main .corporate-member-wrap .corporate-member .corporate-txt p {
+  main section.corporate-member-wrap .corporate-member .corporate-txt p {
     margin-top: 40px;
     text-align: left;
   }
 }
-main .corporate-member-wrap .corporate-member .corporate-bt {
+main section.corporate-member-wrap .corporate-member .corporate-bt {
   position: absolute;
   right: 50%;
   bottom: 50px;
   width: 150px;
   height: 50px;
   transform: translateX(50%);
-  border: 1px solid #fff;
+  box-shadow: inset 0 0 0 1px #fff;
   border-radius: 5px;
 }
 @media screen and (min-width: 1440px) {
-  main .corporate-member-wrap .corporate-member .corporate-bt {
+  main section.corporate-member-wrap .corporate-member .corporate-bt {
     right: 120px;
     bottom: 44px;
     width: 200px;
@@ -1190,33 +1202,63 @@ main .corporate-member-wrap .corporate-member .corporate-bt {
     transform: translateX(0);
   }
 }
-main .corporate-member-wrap .corporate-member .corporate-bt a {
+main section.corporate-member-wrap .corporate-member .corporate-bt::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  width: 0;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: width 0.8s 0s, border-radius 0s 0.8s;
+}
+main section.corporate-member-wrap .corporate-member .corporate-bt:hover::before {
+  width: 100%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+main section.corporate-member-wrap .corporate-member .corporate-bt:hover a {
+  color: black;
+}
+main section.corporate-member-wrap .corporate-member .corporate-bt a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   line-height: 50px;
   text-align: center;
   color: #fff;
+  transition: color 1s;
 }
 @media screen and (min-width: 1440px) {
-  main .corporate-member-wrap .corporate-member .corporate-bt a {
+  main section.corporate-member-wrap .corporate-member .corporate-bt a {
     line-height: 66px;
   }
 }
 main .associate-wrap {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 @media screen and (min-width: 1440px) {
   main .associate-wrap {
-    margin-top: 200px;
+    margin-top: 260px;
   }
 }
 main .associate-wrap .associate ul.associate-con {
   margin-top: 40px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   main .associate-wrap .associate ul.associate-con {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .associate-wrap .associate ul.associate-con {
     margin-top: 100px;
   }
 }
@@ -1226,6 +1268,12 @@ main .associate-wrap .associate ul.associate-con li {
   width: 100%;
   height: 142px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  main .associate-wrap .associate ul.associate-con li {
+    width: 48%;
+    height: 200px;
+  }
 }
 @media screen and (min-width: 1440px) {
   main .associate-wrap .associate ul.associate-con li {

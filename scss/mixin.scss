@@ -1096,8 +1096,8 @@
     }
 
     img {
-    width: 16px; height: 14px;
-    margin-left: 10px;
+        width: 16px; height: 14px;
+        margin-left: 10px;
     }
 }
 
@@ -1117,5 +1117,6 @@
 
     @include responsive(pc-screens) {
         top: 20px; left: 20px;
+        zoom: 1.2;
     }
 }

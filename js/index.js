@@ -14,8 +14,8 @@ $(function() {
         
         setVisible($('section.program'), 'fadeInUp animate__delay-1s');
 
-        setVisible($('section.artist .con'), 'fadeInUp animate__delay-500ms');
-        setVisible($('section.artist .va-wrapper'), 'fadeInUp');
+        setVisible($('section.artist'), 'fadeInUp animate__delay-500ms');
+        // setVisible($('section.artist .content-box'), 'fadeInUp');
     })
 })
 

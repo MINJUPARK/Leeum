@@ -858,7 +858,6 @@ main section.itemList-wrap .itemList ul.item-box {
   width: 100%;
   margin-top: 50px;
   position: relative;
-  height: 5000px;
   overflow: hidden;
 }
 main section.itemList-wrap .itemList ul.item-box .item {
@@ -1016,16 +1015,6 @@ main section.itemList-wrap .itemList ul.item-box .item .i-des .loc div:last-chil
   right: 0;
   width: 48px;
 }
-@media screen and (min-width: 768px) {
-  main section.itemList-wrap .itemList ul.item-box {
-    height: 3000px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main section.itemList-wrap .itemList ul.item-box {
-    height: 1800px;
-  }
-}
 main section.itemList-wrap .itemList ul.item-box li.item {
   width: 100%;
   text-align: center;
@@ -1039,9 +1028,6 @@ main section.itemList-wrap .itemList ul.item-box li.item {
 @media screen and (min-width: 1440px) {
   main section.itemList-wrap .itemList ul.item-box li.item {
     width: 440px;
-  }
-  main section.itemList-wrap .itemList ul.item-box li.item:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
   main section.itemList-wrap .itemList ul.item-box li.item:hover a .i-pic img {
     transform: scale(1.3);
@@ -1062,10 +1048,23 @@ main section.itemList-wrap .itemList ul.item-box li.item a .i-des strong {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-top: 20px;
+  font-size: 20px;
+  margin-top: 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList ul.item-box li.item a .i-des strong {
+    font-size: 22px;
+  }
 }
 main section.itemList-wrap .itemList ul.item-box li.item a .i-des p {
-  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 10px 0 20px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.itemList-wrap .itemList ul.item-box li.item a .i-des p {
+    font-size: 16px;
+  }
 }
 
 section.paging {
