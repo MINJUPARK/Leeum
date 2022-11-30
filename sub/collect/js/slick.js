@@ -1,4 +1,6 @@
 $(function() {
+
+    // 상세페이지용 이미지 슬라이드
     const $slideMain = $(".slide-main");
     const $slideNav = $(".slide-nav");
     
@@ -8,7 +10,7 @@ $(function() {
         slidesToScroll: 1,
         adaptiveWidth: true,
         adaptiveHeight: true,
-        infinite: true,
+        infinite: false,
         speed: 300,
     });
 

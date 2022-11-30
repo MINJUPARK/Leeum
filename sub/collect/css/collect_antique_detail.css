@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -775,8 +766,7 @@ main section.info .item-wrap .i-slide .main-pic {
 main section.info .item-wrap .i-slide .main-pic img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-slide .main-pic img {
@@ -797,10 +787,8 @@ main section.info .item-wrap .i-slide .sub-pic {
   main section.info .item-wrap .i-slide .sub-pic img {
     width: 30%;
     border-radius: 5px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0 -35px;
-       object-position: 0 -35px;
+    object-fit: cover;
+    object-position: 0 -35px;
   }
   main section.info .item-wrap .i-slide .sub-pic img:not(:first-child) {
     opacity: 0.4;
@@ -891,6 +879,59 @@ main section.info .item-wrap .i-des .tit-exp p {
     font-size: 17px;
   }
 }
+main section.info .slick-track, main section.info .slick-list {
+  height: 100%;
+}
+main section.info .slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main section.info .slide-main {
+  width: 100%;
+  height: 700px;
+  background: #000;
+}
+@media screen and (min-width: 1440px) {
+  main section.info .slide-main {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+main section.info .slide-main .slide-item a {
+  width: 100%;
+  height: 100%;
+}
+main section.info .slide-nav {
+  display: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+@media screen and (min-width: 1440px) {
+  main section.info .slide-nav {
+    display: block;
+  }
+}
+main section.info .slide-nav .slick-track {
+  display: flex;
+  column-gap: 20px;
+  width: 100% !important;
+  height: 100px;
+  margin: 0 auto;
+}
+main section.info .slide-nav .slide-item {
+  width: 33.3333333333% !important;
+  opacity: 0.5;
+}
+@media screen and (min-width: 1440px) {
+  main section.info .slide-nav .slide-item {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+main section.info .slide-nav .is-active {
+  opacity: 1;
+}
 main section.info .slick-arrow {
   position: absolute;
   top: 0;
@@ -926,7 +967,7 @@ main section.info .slick-arrow:hover {
   opacity: 1;
 }
 main section.info .slick-prev {
-  left: 30px;
+  left: 20px;
 }
 @media screen and (min-width: 1440px) {
   main section.info .slick-prev {
@@ -937,7 +978,7 @@ main section.info .slick-prev::before {
   transform: rotate(-45deg) translate(2px, 2px);
 }
 main section.info .slick-next {
-  right: 30px;
+  right: 20px;
 }
 @media screen and (min-width: 1440px) {
   main section.info .slick-next {
@@ -946,50 +987,6 @@ main section.info .slick-next {
 }
 main section.info .slick-next::before {
   transform: rotate(135deg) translate(2px, 2px);
-}
-main section.info .slick-track, main section.info .slick-list {
-  height: 100%;
-}
-main section.info .slide-main {
-  width: 100%;
-  height: 700px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-main section.info .slide-nav {
-  display: none;
-  margin-top: 20px;
-}
-@media screen and (min-width: 1440px) {
-  main section.info .slide-nav {
-    display: block;
-  }
-}
-main section.info .slide-nav .slick-slide {
-  cursor: pointer;
-}
-main section.info .slide-nav .slick-track {
-  display: flex;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  width: 100% !important;
-  height: 100px;
-  margin: 0 auto;
-}
-main section.info .slide-nav .slide-item {
-  width: 33.3333333333% !important;
-  border-radius: 5px;
-  opacity: 0.5;
-  overflow: hidden;
-}
-main section.info .slide-nav .is-active {
-  opacity: 1 !important;
-}
-main section.info .slide-item img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 main section.similarItem .item-box {
   display: flex;
@@ -1049,8 +1046,7 @@ main section.similarItem .item-box .item .i-pic {
 main section.similarItem .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -1225,6 +1221,14 @@ main section.movePage .movePage-wrap a p {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+}
+
+.fancybox-thumbs__list a:before {
+  border: 6px solid #be6a15 !important;
+}
+
+.fancybox-progress {
+  background: #be6a15 !important;
 }
 
 @media screen and (min-width: 1440px) {
@@ -1507,4 +1511,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=collect_antique_detail.css.map */
+}
