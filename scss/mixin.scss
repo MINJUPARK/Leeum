@@ -714,12 +714,12 @@
                     }
 
                     .lang {
-                        margin-top: 5px;
+                        // margin-top: 5px;
                         font-size: 18px;
                         color: $bk2;
                         
                         @include responsive(pc-screens) {
-                            margin-top: 15px;
+                            // margin-top: 15px;
                             font-size: 22px;
                         }
 
@@ -1105,11 +1105,15 @@
 @mixin poster_label() {
     position: absolute;
     top: 15px; left: 15px;
-    padding: 6px 14px;
+    padding: 6px 12px;
     border-radius: 5px;
-    @include gothic_font(medium, 13px);
+    @include gothic_font(medium, 12px);
     color: #fff;
     background: $red-brown;
+
+    @include responsive(tablet-screens) {
+        zoom: 1.2;
+    }
 
     @include responsive(pc-screens) {
         top: 20px; left: 20px;
