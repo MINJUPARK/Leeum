@@ -18,6 +18,106 @@ main {
 
     section.info {
         @include detail_info();
+
+        .slick-arrow {
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 40px; height: 0;
+            margin: auto;
+            font-size: 0;
+            opacity: 0.3;
+            transition: opacity .3s;
+            background-color: transparent;
+            z-index: 2;
+            
+            @include responsive(pc-screens) {
+                display: none !important;
+            }
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0; right: 0; bottom: 0; left: 0;
+              width: 15px; height: 15px;
+              margin: auto;
+              border-top: 2px solid #fff;
+              border-left: 2px solid #fff;
+            }
+  
+            &:hover {
+              opacity: 1;
+            }
+          }
+    
+          .slick-prev {
+            left: 30px;
+            
+            @include responsive(pc-screens) {
+                display: none !important;
+            }
+
+            &::before {
+                transform: rotate(-45deg) translate(2px, 2px);
+            }
+          }
+    
+          .slick-next {
+            right: 30px;
+            
+            @include responsive(pc-screens) {
+                display: none !important;
+            }
+
+            &::before {
+                transform: rotate(135deg) translate(2px, 2px);
+            } 
+          }
+
+        .slick-track, .slick-list {
+            height: 100%;
+        }
+          
+          .slide-main {
+            width: 100%; height: 700px;
+            border-radius: 5px;
+            overflow: hidden;
+          }
+          
+          .slide-nav {
+            display: none;
+            margin-top: 20px;
+
+            @include responsive(pc-screens) {
+                display: block;
+            }
+          }
+          
+          .slide-nav .slick-slide {
+            cursor: pointer;
+          }
+          
+          .slide-nav .slick-track {
+            display: flex;
+            column-gap: 20px;
+            width: 100% !important; height: 100px;
+            margin: 0 auto;
+          }
+          
+          .slide-nav .slide-item {
+            width: calc(100% / 3) !important;
+            border-radius: 5px;
+            opacity: 0.5;
+            overflow: hidden;
+          }
+          
+          .slide-nav .is-active {
+            opacity: 1 !important;
+          }
+
+          .slide-item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+          }
     }
 
     section.similarItem {
