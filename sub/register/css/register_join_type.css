@@ -183,75 +183,194 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-header .image {
-  display: flex;
-  margin-top: 60px;
-}
-header .image img {
-  width: 36px;
-  margin-right: 16px;
-}
+main {
+  /*  section.logo {
+       .image {
+           display: flex;
+           margin: 60px 0 44px 0;
 
+           img {
+               width: 36px;
+               margin-right: 16px;
+
+               @include responsive(pc-screens) {
+                   width: 70px;
+               }
+           }
+           p {
+               @include gothic-font(medium, 12px);
+
+               @include responsive(pc-screens) {
+                   font-size: 22px;
+               }
+           }
+
+           strong {
+               font-size: 24px;
+
+               @include responsive(pc-screens) {
+                   font-size: 46px;
+               }
+           }
+       }
+   } */
+}
 main section .select {
   margin: 0 auto;
 }
-main section .select .p {
-  border: 1px solid #c5c5c5;
+main section .select .image-info {
+  position: relative;
+  display: flex;
+  margin: 60px 0 44px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section .select .image-info {
+    position: relative;
+  }
+}
+main section .select .image-info img {
+  width: 36px;
+  margin-right: 16px;
+}
+@media screen and (min-width: 1440px) {
+  main section .select .image-info img {
+    width: 70px;
+  }
+}
+main section .select .image-info p {
+  font-size: 12px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  main section .select .image-info p {
+    font-size: 22px;
+  }
+}
+main section .select .image-info strong {
+  font-size: 24px;
+}
+@media screen and (min-width: 1440px) {
+  main section .select .image-info strong {
+    font-size: 46px;
+  }
+}
+main section .select .image-info .info ul.select {
+  align-items: center;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
   display: flex;
   justify-content: space-between;
+  border: 1px solid #c5c5c5;
+  border-left: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main section .select .image-info .info ul.select {
+    position: absolute;
+    width: 42.8571428571%;
+    right: 0;
+    margin-top: 0;
+  }
+}
+main section .select .image-info .info ul.select li {
+  height: 30px;
+  border-left: 1px solid #c5c5c5;
+}
+@media screen and (min-width: 1440px) {
+  main section .select .image-info .info ul.select li {
+    position: relative;
+  }
+}
+main section .select .image-info .info ul.select li:first-child {
+  background-color: #5c5c5c;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 26.8571428571%;
+}
+main section .select .image-info .info ul.select li:nth-child(2) {
+  width: 46.2857142857%;
+}
+main section .select .image-info .info ul.select li:last-child {
+  width: 26.8571428571%;
+}
+main section .select .image-info .info ul.select li span {
+  bottom: 0;
+  width: 100%;
   font-size: 14px;
+  font-weight: 500;
   text-align: center;
 }
-main section .select .p p {
-  margin: 0 auto;
-  padding: 10px;
+@media screen and (min-width: 1440px) {
+  main section .select .image-info .info ul.select li span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
-main section .type {
+main section .select .image-info .info ul.select li.on span {
+  color: #fff;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main section .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main section .flex .type {
   border: 1px solid #c5c5c5;
   margin-top: 30px;
   padding: 60px 15px;
   text-align: center;
 }
-main section .type strong {
+@media screen and (min-width: 1440px) {
+  main section .flex .type {
+    width: 31.7142857143%;
+  }
+}
+main section .flex .type strong {
   display: block;
   margin-bottom: 30px;
   font-size: 24px;
   font-weight: 600;
 }
-main section .type strong span {
+main section .flex .type strong span {
   font-size: 22px;
   font-weight: 200;
 }
-main section .type strong:last-child {
+main section .flex .type strong:last-child {
   font-size: 18px;
   font-weight: 500;
 }
-main section .type .fee.free {
+main section .flex .type .fee.free {
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 700;
   color: #6e3b3b;
 }
-main section .type .fee.hun {
+main section .flex .type .fee.hun {
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 700;
   color: #ac3f21;
 }
-main section .type .fee.three-hun {
+main section .flex .type .fee.three-hun {
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 700;
   color: #be6a15;
 }
-main section .type p {
+main section .flex .type p {
   margin-bottom: 30px;
   font-size: 18px;
   font-weight: 500;
   color: #5c5c5c;
   line-height: 26px;
 }
-main section .type .button.join {
+main section .flex .type .button.join {
   font-size: 22px;
   font-weight: 600;
   padding: 8px;
@@ -259,10 +378,10 @@ main section .type .button.join {
   border-radius: 5px;
   background-color: #6e3b3b;
 }
-main section .type .button.join a {
+main section .flex .type .button.join a {
   color: #fff;
 }
-main section .type .button.ask {
+main section .flex .type .button.ask {
   font-size: 22px;
   font-weight: 600;
   padding: 8px;
@@ -270,14 +389,14 @@ main section .type .button.ask {
   border-radius: 5px;
   background-color: #be6a15;
 }
-main section .type .button.ask a {
+main section .flex .type .button.ask a {
   color: #fff;
 }
-main section .type .request {
+main section .flex .type .request {
   justify-content: space-between;
 }
-main section .type .request .mem,
-main section .type .request .non-mem {
+main section .flex .type .request .mem,
+main section .flex .type .request .non-mem {
   font-size: 22px;
   font-weight: 600;
   padding: 8px;
@@ -286,7 +405,7 @@ main section .type .request .non-mem {
   background-color: #ac3f21;
   width: 49%;
 }
-main section .type .request .mem a,
-main section .type .request .non-mem a {
+main section .flex .type .request .mem a,
+main section .flex .type .request .non-mem a {
   color: #fff;
-}
+}/*# sourceMappingURL=register_join_type.css.map */

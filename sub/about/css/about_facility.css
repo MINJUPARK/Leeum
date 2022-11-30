@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -774,6 +783,11 @@ main .info .des {
     display: none !important;
   }
 }
+@media screen and (min-width: 1440px) {
+  main .M1 {
+    margin-top: 150px;
+  }
+}
 main .M1 img {
   width: 100%;
   overflow-x: hidden;
@@ -918,7 +932,7 @@ main .M1 .M1-detail p:last-of-type span {
 @media screen and (min-width: 1440px) {
   main .M1 .M1-detail p:last-of-type {
     position: relative;
-    top: -470px;
+    top: -460px;
     left: 620px;
     text-align: left;
     font-size: 20px;
@@ -938,7 +952,7 @@ main .M1 .M1-detail .link a {
     font-size: 18px;
     font-weight: 600;
     position: relative;
-    top: -480px;
+    top: -460px;
     left: -50px;
   }
 }
@@ -959,7 +973,7 @@ main .M1 .M1-detail .link a img {
 }
 @media screen and (min-width: 1440px) {
   main .M2 {
-    margin-top: 300px;
+    margin-top: 200px;
   }
 }
 main .M2 img {
@@ -1094,7 +1108,7 @@ main .M2 .M2-detail p:last-of-type {
 @media screen and (min-width: 1440px) {
   main .M2 .M2-detail p:last-of-type {
     position: relative;
-    top: -470px;
+    top: -460px;
     left: -620px;
     text-align: right;
     font-size: 20px;
@@ -1114,7 +1128,7 @@ main .M2 .M2-detail .link a {
     font-size: 18px;
     font-weight: 600;
     position: relative;
-    top: -490px;
+    top: -455px;
     left: 50px;
   }
 }
@@ -1135,7 +1149,7 @@ main .M2 .M2-detail .link a img {
 }
 @media screen and (min-width: 1440px) {
   main .Kid {
-    margin-top: -140px;
+    margin-top: -150px;
   }
 }
 main .Kid img {
@@ -1268,7 +1282,7 @@ main .Kid .Kid-detail p:last-of-type {
 @media screen and (min-width: 1440px) {
   main .Kid .Kid-detail p:last-of-type {
     position: relative;
-    top: -460px;
+    top: -455px;
     left: 580px;
     text-align: left;
     font-size: 20px;
@@ -1301,7 +1315,7 @@ main .Kid .Kid-detail .link a {
     font-size: 18px;
     font-weight: 600;
     position: relative;
-    top: -470px;
+    top: -450px;
     left: -85px;
   }
 }
@@ -1463,7 +1477,7 @@ main .container .Champcoffee p:nth-of-type(2) {
 }
 @media screen and (min-width: 1440px) {
   main .container .Champcoffee p:nth-of-type(2) {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 40px;
   }
@@ -1502,7 +1516,6 @@ main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail img
   main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail img {
     width: 18px;
     height: 18px;
-    margin-top: -3px;
   }
 }
 main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
@@ -1515,6 +1528,7 @@ main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
   main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail a {
     font-size: 20px;
     font-weight: 500;
+    margin-top: 40px;
   }
 }
 main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail .shortcut {
@@ -1604,7 +1618,7 @@ main .container .Locker p .type {
 }
 @media screen and (min-width: 1440px) {
   main .container .Locker p .type {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
   }
 }
@@ -1668,7 +1682,7 @@ main .container .ticketing-machine p:nth-of-type(2) {
 @media screen and (min-width: 1440px) {
   main .container .parking {
     position: relative;
-    top: -1450px;
+    top: -1432px;
     width: 46.5277777778%;
   }
 }
@@ -1732,14 +1746,17 @@ main .container .parking p:nth-of-type(3) {
   margin-top: 15px;
   margin-bottom: 5px;
 }
+@media screen and (min-width: 1440px) {
+  main .container .parking p:nth-of-type(3) {
+    font-size: 18px;
+  }
+}
 main .container .parking p:nth-of-type(3) span {
   font-size: 18px;
   font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:nth-of-type(3) span {
-    font-size: 20px;
-    font-weight: 600;
     line-height: 40px;
   }
 }
@@ -1749,7 +1766,7 @@ main .container .parking p:last-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:last-of-type {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 main .container .parking p span {
@@ -2054,7 +2071,7 @@ main .others p:nth-of-type(2) {
 .renewal-detail ul li p:first-of-type {
   font-size: 24px;
   font-weight: 600;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 12px;
 }
 @media screen and (min-width: 1440px) {
@@ -2073,7 +2090,7 @@ main .others p:nth-of-type(2) {
   line-height: 1.5em;
   color: #3c3c3c;
   color: #5c5c5c;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 @media screen and (min-width: 1440px) {
   .renewal-detail ul li p:last-of-type {
@@ -2369,4 +2386,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=about_facility.css.map */

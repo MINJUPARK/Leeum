@@ -3,124 +3,241 @@
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
 
-header {
-    .image {
-        display: flex;
-        margin-top: 60px;
-        img {
-            width: 36px;
-            margin-right: 16px;
-        }
-    }
-}
 main {
+
+   /*  section.logo {
+        .image {
+            display: flex;
+            margin: 60px 0 44px 0;
+
+            img {
+                width: 36px;
+                margin-right: 16px;
+
+                @include responsive(pc-screens) {
+                    width: 70px;
+                }
+            }
+            p {
+                @include gothic-font(medium, 12px);
+
+                @include responsive(pc-screens) {
+                    font-size: 22px;
+                }
+            }
+
+            strong {
+                font-size: 24px;
+
+                @include responsive(pc-screens) {
+                    font-size: 46px;
+                }
+            }
+        }
+    } */
+
     section {
         .select{
             margin: 0 auto;
-            .p {
-                border: 1px solid $bk4;
+
+            .image-info {
+                position: relative;
                 display: flex;
-                justify-content: space-between;
-                font-size: 14px;
-                text-align: center;
+                margin: 60px 0 44px 0;
 
+                
+                @include responsive(pc-screens) {
+                    position: relative;
+                }
+    
+                img {
+                    width: 36px;
+                    margin-right: 16px;
+    
+                    @include responsive(pc-screens) {
+                        width: 70px;
+                    }
+                }
                 p {
-                    // border: 1px solid $bk4;
-                    margin: 0 auto;
-                    padding: 10px;
-
+                    @include gothic-font(medium, 12px);
+    
+                    @include responsive(pc-screens) {
+                        font-size: 22px;
+                    }
                 }
-            }
-        }
-
-        .type {
-            border: 1px solid $bk4;
-            margin-top: 30px;
-            padding: 60px 15px;
-            text-align: center;
-
-            strong{
-                display: block;
-                margin-bottom: 30px;
-                @include gothic-font(semibold, 24px);
-                span {
-                    @include gothic-font(light, 22px);
+    
+                strong {
+                    font-size: 24px;
+    
+                    @include responsive(pc-screens) {
+                        font-size: 46px;
+                    }
                 }
+                .info{
+                    ul.select {
+                        align-items: center;
+                        position: absolute;
+                        bottom: -40px;
+                        left: 0;
 
-                &:last-child {
-                    @include gothic-font(medium, 18px);
-                }
-            }
+                        @include flex_between();
+                        border: 1px solid $bk4;
+                        border-left: 0;
+                        width: 100%;
+                        border-radius: 5px;
+                        
+                        @include responsive(pc-screens) {
+                            position: absolute;
+                            width: 42.85714285714286%;
+                            right: 0;
+                            margin-top: 0;
+                        }
+    
+    
+                        li {
+                            height: 30px;
+                            border-left: 1px solid $bk4;
+                            @include responsive(pc-screens) {
+                                position: relative;
+                            }
+                            
+                            &:first-child{
+                                background-color: $bk2;
+                                border-top-left-radius: 5px;
+                                border-bottom-left-radius: 5px;
+                                width: 26.85714285714286%;
+                            }
+    
+                            &:nth-child(2) {
+                                width: 46.28571428571429%;
+                            }
+    
+                            &:last-child {
+                                width: 26.85714285714286%;
+                            }
+                            
+                            span {
+                                bottom: 0;
+                                width: 100%;
+                                @include gothic-font(medium, 14px);
+                                text-align: center;
 
-            .fee{
-
-                &.free {
-                    margin-bottom: 30px;
-                    @include gothic-font(bold, 21px);
-                    color: $dark-brown;
-                }
-                
-                &.hun {
-                    margin-bottom: 30px;
-                    @include gothic-font(bold, 21px);
-                    color: $red-brown;
-                }
-
-                &.three-hun {
-                    margin-bottom: 30px;
-                    @include gothic-font(bold, 21px);
-                    color: $yellow-brown;
-                }
-            }
-
-            
-            p {
-                margin-bottom: 30px;
-                @include gothic-font(medium, 18px);
-                color: $bk2;
-                line-height: 26px;
-            }
-
-            .button {
-                &.join {
-                @include gothic-font(semibold, 22px);
-                padding: 8px;
-                border: 1px solid $dark-brown;
-                border-radius: 5px;
-                background-color: $dark-brown;
-                a {
-                    color: #fff;
-                }
-                }
-
-                
-
-                &.ask {
-                    @include gothic-font(semibold, 22px);
-                    padding: 8px;
-                    border: 1px solid $yellow-brown;
-                    border-radius: 5px;
-                    background-color: $yellow-brown;
-                    a {
-                        color: #fff;
+                                @include responsive(pc-screens) {
+                                    @include element_center();
+                                }
+                            }
+                            
+                            &.on {
+                                span {
+                                    color: #fff;
+                                    font-weight: 600;
+                                }
+                            }
+                            
+                        }
                     }
                 }
             }
 
-            .request {
-                justify-content: space-between;
-                
-                .mem,
-                .non-mem {
-                @include gothic-font(semibold, 22px);
-                padding: 8px;
-                border: 1px solid $red-brown;
-                border-radius: 5px;
-                background-color: $red-brown;
-                width: 49%;
-                a {
-                    color: #fff;
+        }
+
+        .flex{
+            @include responsive(pc-screens) {
+                @include flex_between();
+            }
+            .type {
+                border: 1px solid $bk4;
+                margin-top: 30px;
+                padding: 60px 15px;
+                text-align: center;
+
+            @include responsive(pc-screens) {
+                width: 31.71428571428571%;
+            }
+
+                strong{
+                    display: block;
+                    margin-bottom: 30px;
+                    @include gothic-font(semibold, 24px);
+                    span {
+                        @include gothic-font(light, 22px);
+                    }
+
+                    &:last-child {
+                        @include gothic-font(medium, 18px);
+                    }
                 }
+
+                .fee{
+
+                    &.free {
+                        margin-bottom: 30px;
+                        @include gothic-font(bold, 21px);
+                        color: $dark-brown;
+                    }
+                    
+                    &.hun {
+                        margin-bottom: 30px;
+                        @include gothic-font(bold, 21px);
+                        color: $red-brown;
+                    }
+
+                    &.three-hun {
+                        margin-bottom: 30px;
+                        @include gothic-font(bold, 21px);
+                        color: $yellow-brown;
+                    }
+                }
+
+                
+                p {
+                    margin-bottom: 30px;
+                    @include gothic-font(medium, 18px);
+                    color: $bk2;
+                    line-height: 26px;
+                }
+
+                .button {
+                    &.join {
+                    @include gothic-font(semibold, 22px);
+                    padding: 8px;
+                    border: 1px solid $dark-brown;
+                    border-radius: 5px;
+                    background-color: $dark-brown;
+                    a {
+                        color: #fff;
+                    }
+                    }
+
+                    
+
+                    &.ask {
+                        @include gothic-font(semibold, 22px);
+                        padding: 8px;
+                        border: 1px solid $yellow-brown;
+                        border-radius: 5px;
+                        background-color: $yellow-brown;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .request {
+                    justify-content: space-between;
+                    
+                    .mem,
+                    .non-mem {
+                    @include gothic-font(semibold, 22px);
+                    padding: 8px;
+                    border: 1px solid $red-brown;
+                    border-radius: 5px;
+                    background-color: $red-brown;
+                    width: 49%;
+                    a {
+                        color: #fff;
+                    }
+                    }
                 }
             }
         }
