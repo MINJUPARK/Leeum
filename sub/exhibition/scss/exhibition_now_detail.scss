@@ -179,6 +179,7 @@ main {
             border: 1px solid #f00;
     
                 @include responsive(pc-screens){
+                    margin-top: 20px;
                     font-size: 18px;
                     padding: 20px;
                 }
@@ -427,7 +428,7 @@ main {
               }
       
               @include responsive(pc-screens) {
-                width: 850px; height: 550px;
+                width: 850px; height: 650px;
               }
         
               .des {
