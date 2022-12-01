@@ -13,7 +13,8 @@ header {
 }
 
 main {
-
+    overflow-x: hidden;
+    
     section.info {
         @include detail_info();
 
@@ -179,7 +180,7 @@ main {
             border: 1px solid #f00;
     
                 @include responsive(pc-screens){
-                    margin-top: 20px;
+                    margin-top: 25px;
                     font-size: 18px;
                     padding: 20px;
                 }
@@ -420,15 +421,15 @@ main {
               overflow: hidden;
       
               @media screen and (min-width:480px) {
-                width: 450px; height: 350px;
+                width: 450px; height: 550px;
               }
       
               @include responsive(tablet-screens) {
-                width: 650px; height: 450px;
+                width: 650px; height: 750px;
               }
       
               @include responsive(pc-screens) {
-                width: 850px; height: 650px;
+                width: 850px; height: 850px;
               }
         
               .des {
@@ -472,19 +473,7 @@ main {
                     font-size: $h6;
                   }
                 }
-                
-        
-                .loc {
-                  padding: 5px 12px;
-                  font-size: 12px;
-                  border: 1px solid $bk1;
-                  border-radius: 5px;
-                  
-                  @include responsive(pc-screens) {
-                    padding: 6px 18px;
-                    font-size: 14px;
-                  }
-                }
+
               }
       
               img {

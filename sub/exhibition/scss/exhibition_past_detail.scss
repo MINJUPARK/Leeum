@@ -515,27 +515,22 @@ main {
                         width: calc(800px / 1440px * 100%);
                     }
                     
-                    ul { 
-                        
-                        li {
-                            display: none;
-
-                            &.view {
-                                display: block;
-                            } 
+                    .side-con-box {
+                        display: none;
+                        &.view {
+                            display: block;
                         } 
                     }
                     
                     .floor-img {
                         
-                        li {
+                        li {   
                             
                             img {
                                 width: 100%;
                                 margin-bottom: 25px;
                                 @include responsive(pc-screens) {
                                     margin-top: 42px;
-                                    height:800px;
                                 } 
                             }
                         }

@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -811,7 +802,8 @@ main .container .detail .material .material-detail p:first-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .material .material-detail p:first-of-type {
-    font-size: 22px;
+    margin-top: 10px;
+    font-size: 20px;
     font-weight: 500;
   }
 }
@@ -883,7 +875,8 @@ main .container .detail .lobby .lobby-detail p:first-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .lobby .lobby-detail p:first-of-type {
-    font-size: 22px;
+    margin-top: 10px;
+    font-size: 20px;
     font-weight: 500;
   }
 }
@@ -955,7 +948,8 @@ main .container .detail .rotunda .rotunda-detail p:first-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .rotunda .rotunda-detail p:first-of-type {
-    font-size: 23px;
+    margin-top: 10px;
+    font-size: 20px;
     font-weight: 500;
   }
 }
@@ -1027,7 +1021,8 @@ main .container .detail .display-area .display-area-detail p:first-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .display-area .display-area-detail p:first-of-type {
-    font-size: 23px;
+    margin-top: 10px;
+    font-size: 20px;
     font-weight: 500;
   }
 }
@@ -1124,9 +1119,15 @@ main .container .constructor-info .detail {
     height: 100%;
     float: left;
     margin-top: 30px;
-    margin-bottom: 140px;
+    margin-bottom: 160px;
     margin-right: 20px;
     height: 250px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .detail table {
+    padding: 15px 35px;
+    width: 100%;
   }
 }
 main .container .constructor-info .detail table .detail-des td {
@@ -1141,7 +1142,7 @@ main .container .constructor-info .detail table .detail-des td:first-of-type {
   main .container .constructor-info .detail table .detail-des td:first-of-type {
     font-size: 16px;
     font-weight: 600;
-    padding-top: 27px;
+    padding-top: 25px;
   }
 }
 main .container .constructor-info .detail table .detail-des td:last-of-type {
@@ -1154,7 +1155,7 @@ main .container .constructor-info .detail table .detail-des td:last-of-type {
   main .container .constructor-info .detail table .detail-des td:last-of-type {
     font-size: 16px;
     font-weight: 400;
-    padding-top: 28px;
+    padding-top: 24px;
   }
 }
 main .container .constructor-info .detail table .detail-des td:last-of-type .ex {
@@ -1179,7 +1180,8 @@ main .container .constructor-info .simple p {
     font-family: "KoPub Batang";
     font-size: 35px;
     font-weight: 400;
-    line-height: 40px;
+    line-height: 30px;
+    margin-bottom: -10px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1313,14 +1315,14 @@ main .container .constructor-info .faq ul .faq-detail .answer {
   width: 100%;
   background-color: #f3f3f3;
   border-radius: 5px;
-  margin-top: 10px;
+  margin: 30px 0;
 }
 main .container .constructor-info .faq ul .faq-detail .answer p {
-  padding: 20px;
+  padding: 20px 40px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
-  text-align: left;
+  line-height: 2em;
+  text-align: justify;
   margin: 0;
 }
 main .container .constructor-info .faq ul .faq-detail-etc {
@@ -1363,14 +1365,14 @@ main .container .constructor-info .faq ul .faq-detail-etc .answer {
   width: 100%;
   background-color: #f3f3f3;
   border-radius: 5px;
-  margin-top: 10px;
+  margin: 30px 0;
 }
 main .container .constructor-info .faq ul .faq-detail-etc .answer p {
-  padding: 20px;
+  padding: 20px 40px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
-  text-align: left;
+  line-height: 2em;
+  text-align: justify;
   margin: 0;
 }
 
@@ -1654,4 +1656,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=about_facility_detail.css.map */
+}
