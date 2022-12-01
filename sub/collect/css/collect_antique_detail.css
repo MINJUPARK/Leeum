@@ -943,7 +943,7 @@ main section.info .slide-nav .slide-item {
     overflow: hidden;
   }
 }
-main section.info .slide-nav .is-active {
+main section.info .slide-nav .slide-item.is-active {
   opacity: 1;
 }
 main section.info .slick-arrow {
@@ -956,7 +956,6 @@ main section.info .slick-arrow {
   font-size: 0;
   opacity: 0.3;
   transition: opacity 0.3s;
-  background-color: transparent;
   z-index: 2;
 }
 @media screen and (min-width: 1440px) {
@@ -980,27 +979,30 @@ main section.info .slick-arrow::before {
 main section.info .slick-arrow:hover {
   opacity: 1;
 }
-main section.info .slick-prev {
+main section.info .slick-arrow.slick-prev {
   left: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main section.info .slick-prev {
+  main section.info .slick-arrow.slick-prev {
     display: none !important;
   }
 }
-main section.info .slick-prev::before {
+main section.info .slick-arrow.slick-prev::before {
   transform: rotate(-45deg) translate(2px, 2px);
 }
-main section.info .slick-next {
+main section.info .slick-arrow.slick-next {
   right: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main section.info .slick-next {
+  main section.info .slick-arrow.slick-next {
     display: none !important;
   }
 }
-main section.info .slick-next::before {
+main section.info .slick-arrow.slick-next::before {
   transform: rotate(135deg) translate(2px, 2px);
+}
+main section.info .slick-arrow.slick-prev.slick-disabled:before, main section.info .slick-arrow.slick-next.slick-disabled:before {
+  opacity: 0 !important;
 }
 main section.similarItem .item-box {
   display: flex;
@@ -1236,14 +1238,6 @@ main section.movePage .movePage-wrap a p {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-}
-
-.fancybox-thumbs__list a:before {
-  border: 6px solid #be6a15 !important;
-}
-
-.fancybox-progress {
-  background: #be6a15 !important;
 }
 
 @media screen and (min-width: 1440px) {
@@ -1526,4 +1520,16 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
+}
+
+.fancybox-thumbs__list a:before {
+  border: 6px solid #be6a15 !important;
+}
+
+.fancybox-progress {
+  background: #be6a15 !important;
+}
+
+.fancybox-caption__body {
+  font-size: 18px;
 }/*# sourceMappingURL=collect_antique_detail.css.map */
