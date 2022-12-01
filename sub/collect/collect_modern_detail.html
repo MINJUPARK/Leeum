@@ -11,12 +11,17 @@
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/collect_modern_detail.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js'></script>
+    <script type="text/javascript" src="./js/slick.js"></script>
+    <script type="text/javascript" src="./js/fancybox.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../../js/swiper.js"></script>
-
     <title>Leeum</title>
 </head>
 <body>
@@ -227,12 +232,25 @@
             <div class="container">
                 <div class="item-wrap">
                     <div class="i-slide">
-                        <div class="main-pic">
-                            <img src="./image/modern_item(1).jpg" alt="설백(雪白) 난쟁이(심술이),<br>설백(雪白) 난쟁이(잠꾸러기2)">
+                        <div class="slide-main">
+                            <div class="slide-item">
+                                <a href="./image/modern_item(1).jpg" data-fancybox="modern" data-caption="설백(雪白) 난쟁이(심술이)">
+                                    <img src="./image/modern_item(1).jpg" alt="설백(雪白) 난쟁이(심술이)">
+                                </a>
+                            </div>
+                            <div class="slide-item">
+                                <a href="./image/modern_detail_sub(1).jpg" data-fancybox="modern" data-caption="설백(雪白) 난쟁이(잠꾸러기2)">
+                                    <img src="./image/modern_detail_sub(1).jpg" alt="설백(雪白) 난쟁이(잠꾸러기2)">
+                                </a>
+                            </div>
                         </div>
-                        <div class="sub-pic">
-                            <img src="./image/modern_item(1).jpg" alt="설백(雪白) 난쟁이(심술이)">
-                            <img src="./image/modern_detail_sub(1).jpg" alt="설백(雪白) 난쟁이(잠꾸러기2)">
+                        <div class="slide-nav">
+                            <div class="slide-item">
+                                <img src="./image/modern_item(1).jpg" alt="설백(雪白) 난쟁이(심술이)">
+                            </div>
+                            <div class="slide-item">
+                                <img src="./image/modern_detail_sub(1).jpg" alt="설백(雪白) 난쟁이(잠꾸러기2)">
+                            </div>
                         </div>
                     </div>
                     <div class="i-des">

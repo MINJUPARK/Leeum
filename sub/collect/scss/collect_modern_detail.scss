@@ -18,6 +18,7 @@ main {
 
     section.info {
         @include detail_info();
+        @include detail_slide(2);
 
         .item-wrap .tit-exp {
             margin-bottom: 0 !important;
@@ -56,3 +57,5 @@ main {
 footer {
     @include footer();
 }
+
+@include fancybox_style();
