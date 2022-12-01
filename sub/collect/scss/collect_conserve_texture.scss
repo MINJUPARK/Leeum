@@ -13,9 +13,11 @@ header {
 }
 
 main {
+    @include main_sub();
+    overflow: hidden;
     word-break: keep-all; // 단어를 기준으로 줄바꿈
 
-    @include responsive(tablet-screens) { font-size: 20px; }
+    @include responsive(tablet-screens) { font-size: 18px; }
 
     .mobile-view {
         @include responsive(tablet-screens) {
@@ -25,15 +27,15 @@ main {
 
     h3 {
         text-align: center;
-        font-size: calc(1em + 14px);
-
+        font-size: $h4;
+        
         @include responsive(pc-screens) {
-            font-size: 36px;
+            font-size: $h3;
         }
     }
+
     
     .texture-intro-wrap {
-        margin-top: 50px;
         
         @include responsive(pc-screens) {
             margin-top: 120px;
@@ -42,14 +44,17 @@ main {
         .texture-intro {
             
             .intro-img {
+                @include out_container();
                 @include full_bg('conserve_texture_intro.png', sub);
-                width: 100%; height: 180px;
+                content: '';
+                height: 380px;
 
                 @include responsive(tablet-screens) {
                     height: 300px;
                 }
 
                 @include responsive(pc-screens) {
+                    @include in_container();
                     height: 450px;
                 }
             }
@@ -63,8 +68,10 @@ main {
                 }
                 
                 h3 {
+                    font-size: $h3;
                     
                     @include responsive(pc-screens) {
+                        font-size: $h2;
                         width: 310px;
                     }
                 }
@@ -78,11 +85,9 @@ main {
                     p {
                         @include content_align(justify, 2em);
                         margin-top: 35px;
-                        font-size: $h6;
                         
                         @include responsive(pc-screens) {
                             margin-top: 0;
-                            font-size: 20px;
                         }
                     }
                 }
@@ -116,7 +121,7 @@ main {
                     li {
                         position: relative;
                         width: calc(100% / 4);
-                        height: 68px;
+                        height: 55px;
                         cursor: pointer;
                         border-left: 1px solid $bk4;
                         
@@ -142,7 +147,7 @@ main {
                         span {
                             @include element_center();
                             width: 100%;
-                            font-size: 20px;
+                            font-size: $h6;
                             text-align: center;
                             
                             transition: color 0.7s;
@@ -230,11 +235,6 @@ main {
                     li {
                         @include content_align(center, 2em);
                         display: none;
-                        font-size: $h6;
-
-                        @include responsive(pc-screens) {
-                            font-size: 20px;
-                        }
 
                         &.view {
                             display: block;
@@ -344,7 +344,7 @@ main {
                     } // &.locate
 
                     strong {
-                        @include gothic_font(semibold, calc(1em + 8px));
+                        @include gothic_font(semibold, calc(1em + 6px));
                         color: $red-brown;
                         
                         @include responsive(pc-screens) {
@@ -355,11 +355,9 @@ main {
                     p {
                         @include content_align(justify, 2em);
                         margin-top: 28px;
-                        font-size: $h6;
                         
                         @include responsive(pc-screens) {
                             margin-top: 40px;
-                            font-size: 20px;
                         }
                     }
                     

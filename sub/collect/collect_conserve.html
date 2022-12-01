@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" property="og:title" content="리움미술관">
+    <meta name="images" property="og:image" content="./image/leeum_thumnail.jpg">
+    <meta name="description" property="og:description" content="관객과 소통하는 리움, 예술과 삶을 더욱 풍부하게">
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/collect_conserve.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css'>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"> -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js'></script>
     <script type="text/javascript" src="../../js/common.js"></script>
-    <script type="text/javascript" src="./js/conserce_swiper.js"></script>
     <script type="text/javascript" src="./js/aos.js"></script>
+    <script type="text/javascript" src="./js/conserve_slick.js"></script>
     <title>Leeum</title>
 <body>
     <header>
@@ -192,7 +198,7 @@
                     <li class="home"><a href="/../../index.html"></a></li>
                     <li class="loc">
                         <div class="step">
-                            <a href="">소장품</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                            <a href="../collect/collect_antique.html">소장품</a><img src="../../image/icon_dropdown.svg" class="dropdown">
                         </div>
                         <ul class="opt">
                             <li><a href="../about/about_intro.html">리움</a></li>
@@ -205,12 +211,12 @@
                     </li>
                     <li class="loc">
                         <div class="step">
-                            <a href="">보존연구</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                            <a href="../collect/collect_conserve.html">보존연구</a><img src="../../image/icon_dropdown.svg" class="dropdown">
                         </div>
                         <ul class="opt">
                             <li><a href="../collect/collect_antique.html">고미술</a></li>
                             <li><a href="../collect/collect_modern.html">현대미술</a></li>
-                            <li><a href="" class="on">보존연구</a></li>
+                            <li><a href="../collect/collect_conserve.html" class="on">보존연구</a></li>
                             <li><a href="../collect/collect_sign.html">수어해설</a></li>
                         </ul>
                     </li>
@@ -262,47 +268,45 @@
                 </div><!-- lab-role -->
             </div><!-- container -->
         </section><!-- lab-role-wrap -->
-
+        <!-- data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" data-aos-offset="200" -->
         <section class="texture-research-wrap">
             <h2>texture-section</h2>
             <div class="container">
                 <div class="texture-research">
                     <h3 data-aos="fade-up" data-aos-duration="1300" data-aos-offset="300">재질별 보존처리</h3>
                     <!-- <div class="swiper mySwiper"> -->
-                    <div class="swiper mySwiper">
-                        <ul class="texture-lsit item-box swiper-wrapper" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" data-aos-offset="200">
-                            <li class="item swiper-slide">
-                                <a href="./collect_conserve_texture.html">
-                                    <h4>금속유물</h4>
-                                    <img src="./image/conserve_texture(1).png" alt="작품 재질1">
-                                </a>
-                            </li>
-                            <li class="item swiper-slide">
-                                <a href="#">
-                                    <h4>도자기</h4>
-                                    <img src="./image/conserve_texture(2).png" alt="작품 재질2">
-                                </a>
-                            </li>
-                            <li class="item swiper-slide">
-                                <a href="#">
-                                    <h4>현대조각</h4>
-                                    <img src="./image/conserve_texture(3).png" alt="작품 재질3">
-                                </a>
-                            </li>
-                            <li class="item swiper-slide">
-                                <a href="#">
-                                    <h4>고서화</h4>
-                                    <img src="./image/conserve_texture(4).png" alt="작품 재질4">
-                                </a>
-                            </li>
-                            <li class="item swiper-slide">
-                                <a href="#">
-                                    <h4>현대회화</h4>
-                                    <img src="./image/conserve_texture(5).png" alt="작품 재질5">
-                                </a>
-                            </li>
-                        </ul><!-- texture -->
-                    </div>
+                    <div class="texture-lsit slide-main" >
+                        <div class="slide-item">
+                            <a href="./collect_conserve_texture.html">
+                                <h4>금속유물</h4>
+                                <img src="./image/conserve_texture(1).png" alt="작품 재질1">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="#">
+                                <h4>도자기</h4>
+                                <img src="./image/conserve_texture(2).png" alt="작품 재질2">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="#">
+                                <h4>현대조각</h4>
+                                <img src="./image/conserve_texture(3).png" alt="작품 재질3">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="#">
+                                <h4>고서화</h4>
+                                <img src="./image/conserve_texture(4).png" alt="작품 재질4">
+                            </a>
+                        </div>
+                        <div class="slide-item">
+                            <a href="#">
+                                <h4>현대회화</h4>
+                                <img src="./image/conserve_texture(5).png" alt="작품 재질5">
+                            </a>
+                        </div>
+                    </div><!-- texture -->
                 </div><!-- texture-research -->
             </div><!-- container -->
         </section><!-- texture-research-wrap -->
@@ -340,14 +344,18 @@
                     <ul class="case-list">
                         <li data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
                             <a href="./collect_conserve_case.html">
-                                <img src="./image/conserve_case(1).png" alt="보존 처리 사례1">
+                                <div class="case-img">
+                                    <img src="./image/conserve_case(1).png" alt="보존 처리 사례1">
+                                </div>
                                 <h4>분청사기 양형명기 (粉靑沙基 羊形明器)</h4>
                                 <span>고고미술</span>
                             </a>
                         </li>
                         <li data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
                             <a href="#">
-                                <img src="./image/conserve_case(2).png" alt="보존 처리 사례1">
+                                <div class="case-img">
+                                    <img src="./image/conserve_case(2).png" alt="보존 처리 사례1">
+                                </div>
                                 <h4>이인성 &lt;가을 어느 날&gt;</h4>
                                 <span>고고미술</span>
                             </a>

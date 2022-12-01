@@ -14,9 +14,10 @@ header {
 }
 
 main {
+    overflow: hidden;
     word-break: keep-all; // 단어를 기준으로 줄바꿈
 
-    @include responsive(tablet-screens) { font-size: 20px; }
+    @include responsive(tablet-screens) { font-size: 18px; }
 
     .mobile-view {
         @include responsive(tablet-screens) {
@@ -25,10 +26,10 @@ main {
     }
 
     h3 {
-        font-size: calc(1em + 14px);
+        font-size: $h4;
 
         @include responsive(pc-screens) {
-            font-size: 36px;
+            font-size: $h3;
         }
     }
 
@@ -59,7 +60,7 @@ main {
                     li {
                         position: relative;
                         width: calc(100% / 4);
-                        height: 68px;
+                        height: 55px;
                         border-left: 1px solid $bk4;
                         
                         @include responsive(tablet-screens) {
@@ -84,7 +85,7 @@ main {
                         span {
                             @include element_center();
                             width: 100%;
-                            font-size: 20px;
+                            font-size: $h6;
                             text-align: center;
                             cursor: pointer;
                             
@@ -127,14 +128,15 @@ main {
                         background-size: cover;
                         
                         &.background-img {
-                          background-image: url("../image/conserve_case_before\(0\).png");
+                            background-image: url("../image/conserve_case_after\(0\).png");
                         }
                         
                         &.foreground-img {
-                            background-image: url("../image/conserve_case_after\(0\).png");
+                            background-image: url("../image/conserve_case_before\(0\).png");
                             width: 50%;
                         }
                     }
+                    
                     .slider {
                         position: absolute;
                         -webkit-appearance: none;
@@ -227,6 +229,14 @@ main {
                 }
                 
                 .case-titile {
+
+                    h3 {
+                        font-size: $h3;
+
+                        @include responsive(pc-screens) {
+                            font-size: $h2;
+                        }
+                    }
                     
                     h4 {
                         @include gothic_font(light, calc(1em + 4px));
@@ -249,11 +259,7 @@ main {
 
                     p {
                         @include content_align(left, 2em);
-                        font-size: $h6;
-                        
-                        @include responsive(tablet-screens) {
-                            font-size: 20px;
-                        }
+                        text-align: justify;
                         
                         &:last-child {
                             margin-top: 45px;
@@ -286,11 +292,10 @@ main {
                 
                 p {
                     @include content_align(center, 2em);
-                    margin-top: 15px;
-                    font-size: $h6;
+                    margin-top: 20px;
                     
                     @include responsive(tablet-screens) {
-                        font-size: 20px;
+                        margin-top: 6px;
                     }
                 }
             } // method-intro
@@ -385,7 +390,7 @@ main {
                         display: flex;
 
                         .step-num {
-                            width: 70px; height: 40px;
+                            width: 65px; height: 35px;
                             text-align: center;
                             border-radius: 5px;
                             background-color: $red-brown;
@@ -395,8 +400,8 @@ main {
                             }
                             
                             span {
-                                @include gothic_font(semibold, calc(1em + 4px));
-                                line-height: 40px;
+                                @include gothic_font(semibold, calc(1em + 2px));
+                                line-height: 35px;
                                 color: #fff;
 
                                 @include responsive(pc-screens) {
@@ -406,7 +411,7 @@ main {
                         }
 
                         strong {
-                            @include gothic_font(semibold, calc(1em + 8px));
+                            @include gothic_font(semibold, calc(1em + 6px));
                             margin: {
                                 top: auto;
                                 bottom: auto;
@@ -426,11 +431,9 @@ main {
                         p {
                             @include content_align(justify, 2em);
                             margin-top: 28px;
-                            font-size: $h6;
                             
                             @include responsive(pc-screens) {
                                 margin-top: 40px;
-                                font-size: 20px;
                             }
                         }
                     }

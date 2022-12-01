@@ -649,11 +649,12 @@ header .breadcrumb-wrap {
 }
 
 main {
+  overflow: hidden;
   word-break: keep-all;
 }
 @media screen and (min-width: 768px) {
   main {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -662,11 +663,11 @@ main {
   }
 }
 main h3 {
-  font-size: calc(1em + 14px);
+  font-size: 26px;
 }
 @media screen and (min-width: 1440px) {
   main h3 {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 main .before-after-case-intro {
@@ -697,7 +698,7 @@ main .before-after-case-intro .intro-flex .before-after ul.angle-select {
 main .before-after-case-intro .intro-flex .before-after ul.angle-select li {
   position: relative;
   width: 25%;
-  height: 68px;
+  height: 55px;
   border-left: 1px solid #c5c5c5;
 }
 @media screen and (min-width: 768px) {
@@ -726,7 +727,7 @@ main .before-after-case-intro .intro-flex .before-after ul.angle-select li span 
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   cursor: pointer;
   transition: color 0.7s;
@@ -761,10 +762,10 @@ main .before-after-case-intro .intro-flex .before-after .before-after-img .img {
   background-size: cover;
 }
 main .before-after-case-intro .intro-flex .before-after .before-after-img .img.background-img {
-  background-image: url("../image/conserve_case_before(0).png");
+  background-image: url("../image/conserve_case_after(0).png");
 }
 main .before-after-case-intro .intro-flex .before-after .before-after-img .img.foreground-img {
-  background-image: url("../image/conserve_case_after(0).png");
+  background-image: url("../image/conserve_case_before(0).png");
   width: 50%;
 }
 main .before-after-case-intro .intro-flex .before-after .before-after-img .slider {
@@ -859,6 +860,14 @@ main .before-after-case-intro .intro-flex .case-intro {
     margin-top: 80px;
   }
 }
+main .before-after-case-intro .intro-flex .case-intro .case-titile h3 {
+  font-size: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main .before-after-case-intro .intro-flex .case-intro .case-titile h3 {
+    font-size: 36px;
+  }
+}
 main .before-after-case-intro .intro-flex .case-intro .case-titile h4 {
   font-size: calc(1em + 4px);
   font-weight: 200;
@@ -883,12 +892,7 @@ main .before-after-case-intro .intro-flex .case-intro .case-txt p {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
-  font-size: 18px;
-}
-@media screen and (min-width: 768px) {
-  main .before-after-case-intro .intro-flex .case-intro .case-txt p {
-    font-size: 20px;
-  }
+  text-align: justify;
 }
 main .before-after-case-intro .intro-flex .case-intro .case-txt p:last-child {
   margin-top: 45px;
@@ -916,12 +920,11 @@ main .conservation-method-wrap .conservation-method .method-intro p {
   text-align: center;
   line-height: 2em;
   color: #3c3c3c;
-  margin-top: 15px;
-  font-size: 18px;
+  margin-top: 20px;
 }
 @media screen and (min-width: 768px) {
   main .conservation-method-wrap .conservation-method .method-intro p {
-    font-size: 20px;
+    margin-top: 6px;
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list {
@@ -993,8 +996,8 @@ main .conservation-method-wrap .conservation-method ul.method-list li .step-titl
   display: flex;
 }
 main .conservation-method-wrap .conservation-method ul.method-list li .step-title .step-num {
-  width: 70px;
-  height: 40px;
+  width: 65px;
+  height: 35px;
   text-align: center;
   border-radius: 5px;
   background-color: #ac3f21;
@@ -1006,9 +1009,9 @@ main .conservation-method-wrap .conservation-method ul.method-list li .step-titl
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li .step-title .step-num span {
-  font-size: calc(1em + 4px);
+  font-size: calc(1em + 2px);
   font-weight: 600;
-  line-height: 40px;
+  line-height: 35px;
   color: #fff;
 }
 @media screen and (min-width: 1440px) {
@@ -1017,7 +1020,7 @@ main .conservation-method-wrap .conservation-method ul.method-list li .step-titl
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li .step-title strong {
-  font-size: calc(1em + 8px);
+  font-size: calc(1em + 6px);
   font-weight: 600;
   margin-top: auto;
   margin-bottom: auto;
@@ -1035,12 +1038,10 @@ main .conservation-method-wrap .conservation-method ul.method-list li .step-txt 
   line-height: 2em;
   color: #3c3c3c;
   margin-top: 28px;
-  font-size: 18px;
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li .step-txt p {
     margin-top: 40px;
-    font-size: 20px;
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li .step-img {

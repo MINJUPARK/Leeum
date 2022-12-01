@@ -10,6 +10,18 @@ $(function() {
             spaceBetween: '2%',
             grabCursor: true
         });
+        swiper = new Swiper(".conserve-swiper", {
+            slidesPerView: 1.4,
+            centeredSlides: false,
+            spaceBetween: '2%',
+            grabCursor: true
+        });
+        swiper = new Swiper(".guide-swiper", {
+            slidesPerView: 1.2,
+            centeredSlides: false,
+            spaceBetween: '2%',
+            grabCursor: true
+        });
     });
 
     swiper = new Swiper('.prg-slider', {

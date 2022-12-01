@@ -648,6 +648,9 @@ header .breadcrumb-wrap {
   }
 }
 
+main {
+  overflow: hidden;
+}
 main .tabmenu-wrap .tab-nav {
   display: table;
   width: 100%;

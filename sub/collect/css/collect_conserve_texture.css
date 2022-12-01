@@ -649,11 +649,18 @@ header .breadcrumb-wrap {
 }
 
 main {
+  overflow: hidden;
   word-break: keep-all;
+}
+@media screen and (min-width: 1440px) {
+  main {
+    position: static !important;
+    top: 0 !important;
+  }
 }
 @media screen and (min-width: 768px) {
   main {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -663,15 +670,12 @@ main {
 }
 main h3 {
   text-align: center;
-  font-size: calc(1em + 14px);
+  font-size: 26px;
 }
 @media screen and (min-width: 1440px) {
   main h3 {
-    font-size: 36px;
+    font-size: 30px;
   }
-}
-main .texture-intro-wrap {
-  margin-top: 50px;
 }
 @media screen and (min-width: 1440px) {
   main .texture-intro-wrap {
@@ -679,12 +683,18 @@ main .texture-intro-wrap {
   }
 }
 main .texture-intro-wrap .texture-intro .intro-img {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background: url(../image/conserve_texture_intro.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 180px;
+  content: "";
+  height: 380px;
 }
 @media screen and (min-width: 768px) {
   main .texture-intro-wrap .texture-intro .intro-img {
@@ -693,6 +703,11 @@ main .texture-intro-wrap .texture-intro .intro-img {
 }
 @media screen and (min-width: 1440px) {
   main .texture-intro-wrap .texture-intro .intro-img {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
     height: 450px;
   }
 }
@@ -705,8 +720,12 @@ main .texture-intro-wrap .texture-intro .intro-flex {
     margin-top: 80px;
   }
 }
+main .texture-intro-wrap .texture-intro .intro-flex h3 {
+  font-size: 30px;
+}
 @media screen and (min-width: 1440px) {
   main .texture-intro-wrap .texture-intro .intro-flex h3 {
+    font-size: 36px;
     width: 310px;
   }
 }
@@ -720,12 +739,10 @@ main .texture-intro-wrap .texture-intro .intro-flex .into-txt p {
   line-height: 2em;
   color: #3c3c3c;
   margin-top: 35px;
-  font-size: 18px;
 }
 @media screen and (min-width: 1440px) {
   main .texture-intro-wrap .texture-intro .intro-flex .into-txt p {
     margin-top: 0;
-    font-size: 20px;
   }
 }
 main .damage-type-wrap {
@@ -754,7 +771,7 @@ main .damage-type-wrap .damage-type .type-box ul.type-select {
 main .damage-type-wrap .damage-type .type-box ul.type-select li {
   position: relative;
   width: 25%;
-  height: 68px;
+  height: 55px;
   cursor: pointer;
   border-left: 1px solid #c5c5c5;
 }
@@ -784,7 +801,7 @@ main .damage-type-wrap .damage-type .type-box ul.type-select li span {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   transition: color 0.7s;
   color: #acacac;
@@ -855,12 +872,6 @@ main .damage-type-wrap .damage-type .type-box ul.type-txt li {
   line-height: 2em;
   color: #3c3c3c;
   display: none;
-  font-size: 18px;
-}
-@media screen and (min-width: 1440px) {
-  main .damage-type-wrap .damage-type .type-box ul.type-txt li {
-    font-size: 20px;
-  }
 }
 main .damage-type-wrap .damage-type .type-box ul.type-txt li.view {
   display: block;
@@ -943,7 +954,7 @@ main .conservation-method-wrap .conservation-method ul.method-list li.opacity {
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li strong {
-  font-size: calc(1em + 8px);
+  font-size: calc(1em + 6px);
   font-weight: 600;
   color: #ac3f21;
 }
@@ -957,12 +968,10 @@ main .conservation-method-wrap .conservation-method ul.method-list li p {
   line-height: 2em;
   color: #3c3c3c;
   margin-top: 28px;
-  font-size: 18px;
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li p {
     margin-top: 40px;
-    font-size: 20px;
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li .method-img {

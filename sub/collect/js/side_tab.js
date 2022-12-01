@@ -40,8 +40,8 @@ $(function() {
             $all_tab.removeClass('on');
             $this.addClass('on');
             
-            $back_img.css("background-image", "url('../collect/image/conserve_case_before\(" + $index + "\).png')");
-            $fore_img.css("background-image", "url('../collect/image/conserve_case_after\(" + $index + "\).png')");
+            $back_img.css("background-image", "url('../collect/image/conserve_case_after\(" + $index + "\).png')");
+            $fore_img.css("background-image", "url('../collect/image/conserve_case_before\(" + $index + "\).png')");
         }
     });
 }) 

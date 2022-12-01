@@ -15,6 +15,7 @@ header {
 }
 
 main {
+    overflow: hidden;
     @include tab_menu();
     
     .m-br {
