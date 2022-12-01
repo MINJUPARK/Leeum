@@ -183,9 +183,18 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
+main .container {
+  padding: 0;
+}
 main .image {
   display: flex;
-  margin: 60px 0 44px 0;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 1440px) {
+  main .image {
+    margin-bottom: 150px;
+  }
 }
 main .image img {
   width: 36px;
@@ -213,44 +222,208 @@ main .image strong {
     font-size: 46px;
   }
 }
-main .join-term strong {
-  /*  display: block; */
+main .join-term p.title {
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term p.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 110px;
+  }
 }
 main .join-term .agreement {
-  /*   padding: 10px 20px; */
+  padding: 0 20px;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement {
+    padding: 0;
+  }
+}
+main .join-term .agreement .agr-plus {
   position: relative;
   left: 50%;
   right: 50%;
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
+  border-bottom: 1px solid #000;
 }
-main .join-term .agreement .agr {
-  position: relative;
-  padding: 10px 20px;
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+  }
 }
-main .join-term .agreement .agr:last-child {
+main .join-term .agreement .agr-plus:last-child {
   border-bottom: 0;
 }
-main .join-term .agreement .agr input[type=checkbox] + label {
-  font-size: 13px;
+main .join-term .agreement .agr-plus .agr {
+  position: relative;
 }
-main .join-term .agreement .agr strong {
+main .join-term .agreement .agr-plus .agr .chk {
+  padding: 10px 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .chk {
+    padding: 10px 40px;
+  }
+}
+main .join-term .agreement .agr-plus .agr .chk input {
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .chk input {
+    width: 23px;
+    height: 23px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .chk label span {
+    font-size: 23px;
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .chk strong {
+    font-size: 24px;
+  }
+}
+main .join-term .agreement .agr-plus .agr .chk .plus {
+  padding: 10px 0;
+  margin-right: 20px;
+}
+main .join-term .agreement .agr-plus .agr.whole {
+  padding: 10px 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr.whole {
+    padding: 10px 40px;
+  }
+}
+main .join-term .agreement .agr-plus .agr.whole input {
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr.whole input {
+    width: 23px;
+    height: 23px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr.whole label span {
+    font-size: 23px;
+    margin-left: 10px;
+  }
+}
+main .join-term .agreement .agr-plus .agr:last-child {
+  border-bottom: 0;
+}
+main .join-term .agreement .agr-plus .agr input[type=checkbox] + label {
+  font-size: 13px;
+  margin-left: 0;
+}
+main .join-term .agreement .agr-plus .agr strong {
   color: red;
   font-size: 13px;
 }
-main .join-term .agreement .agr .plus {
+main .join-term .agreement .agr-plus .agr .plus {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 10px 20px;
 }
-main .join-term .agreement .agr .plus span {
+main .join-term .agreement .agr-plus .agr .plus span {
   font-size: 11px;
 }
-main .join-term .agreement .agr .plus img {
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .plus span {
+    font-size: 23px;
+    margin-right: 10px;
+  }
+}
+main .join-term .agreement .agr-plus .agr .plus img {
   width: 8px;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .plus img {
+    width: 23px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .agree-term {
+    background-color: #f3f3f3;
+  }
+}
+main .join-term .agreement .agr-plus .agr .agree-term p {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .agree-term p {
+    font-size: 22px;
+    color: #3c3c3c;
+    display: block;
+    text-align: left;
+    padding: 40px 60px;
+    line-height: 40px;
+    width: 91.6666666667%;
+    text-align: justify;
+  }
+}
+main .join-term .agreement .agr-plus .agr .agree-term p span {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .agree-term p span {
+    font-size: 22px;
+    font-weight: 500;
+    color: #3c3c3c;
+    display: block;
+    margin-bottom: 20px;
+  }
+  main .join-term .agreement .agr-plus .agr .agree-term p span:last-child {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .agree-person {
+    background-color: #f3f3f3;
+  }
+}
+main .join-term .agreement .agr-plus .agr .agree-person p {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .agree-person p {
+    display: block;
+    padding: 40px 60px;
+    font-size: 22px;
+    color: #3c3c3c;
+    line-height: 40px;
+    width: 91.6666666667%;
+    text-align: justify;
+  }
+}
+main .join-term .agreement .agr-plus .agr .agree-person p span {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .join-term .agreement .agr-plus .agr .agree-person p span {
+    display: block;
+    margin-bottom: 26px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #3c3c3c;
+  }
+}
+main .join-term .agreement .agr-plus .agr .agree-person p .preservation {
+  margin-top: 70px;
 }/*# sourceMappingURL=register_join_terms.css.map */
