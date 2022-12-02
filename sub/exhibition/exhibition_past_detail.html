@@ -7,10 +7,16 @@
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/exhibition_past_detail.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js'></script>
     <script type="text/javascript" src="./js/side_tab1.js"></script>
     <script type="text/javascript" src="../about/js/dropdown.js"></script>
+    <script type="text/javascript" src="../collect/js/slick.js"></script>
+    <script type="text/javascript" src="../collect/js/fancybox.js"></script>
     <title>Leeum</title>
 </head>
 <body>
@@ -280,13 +286,12 @@
         <section class="vr-floor-info-wrap">
             <h2>전시 작품</h2>
             <div class="container">
-
                 <section class="floor-info">
                     <h3><span class="br-bar"></span>전시 작품</h3>
                     <div class="side-tab cultural-center">
                         <div class="floor-select-group">
                             <div class="group-title">
-                                <h4>M2 현대미술<span>상설 전시</span></h4><img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기" class="dropdown active">
+                                <h5>M2 현대미술<span>상설 전시</span></h5><img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기" class="dropdown active">
                             </div>
                             <ul class="tab-wrap group-option">
                                 <li class="tab selected"><b>2F</b><span>검은 공백</span></li>
@@ -295,31 +300,66 @@
                             </ul>
                         </div>
                         <div class="floor-con-group">
-                            <div id="f0" class="side-con-box floor-img view">
-                                <ul>
-                                    <li><img src="./image/past_exhibition_detail(1).png" alt="검은공백"></li>
-                                    <li><img src="./image/past_exhibition_detail(2).png"></li>
-                                    <li><img src="./image/past_exhibition_detail(3).png"></li>
-                                </ul>
+                            <div id="f0" class="side-con-box view">
+                                <div class="slide-main">
+                                    <div class="slide-item">
+                                        <a href="./image/past_exhibition_detail(1).png" data-fancybox="f0" data-caption="폴 매카시 《설백 난쟁이》">
+                                            <img src="./image/past_exhibition_detail(1).png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-item">
+                                        <a href="./image/past_exhibition_detail(2).png" data-fancybox="f0" data-caption="서세옥 《군무》">
+                                            <img src="./image/past_exhibition_detail(2).png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-item">
+                                        <a href="./image/past_exhibition_detail(3).png" data-fancybox="f0" data-caption="줄리 메레투 《석비2(부두교)》">
+                                            <img src="./image/past_exhibition_detail(3).png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
                                 <p class="floor-txt">전통 수묵화부터 현대 추상화에 이르기까지 우리는 많은 미술작품에서 검은색을 볼 수 있습니다. 검정은 흔히 죽음과 절망, 어둠, 저항, 미지의 세계 등을 상징하고 동양에서는 물과 북방을 의미하기도 합니다. 현대미술, 특히 추상미술에서 검정은 극단적 간결미를 드러내거나 초월적이고 절대적인 세계를 그리는 색이기도 했습니다. 모든 빛이 흡수되어 사라져버린 검정에는  이처럼 긍정과 부정을 넘나드는 폭넓은 상징과 의미가 가득합니다. 이 전시에서는 그 검은 공백이 품고 있는 다양한 이야기들을  소장품을 통해 살펴보고자 합니다.</p>
                             </div>
-                            <div id="f1" class="side-con-box floor-img"> 
-                                <ul>
-                                    <li><img src="./image/past_exhibition(4).png" alt="검은공백"></li>
-                                    <li><img src="./image/past_exhibition(5).png"></li>
-                                    <li><img src="./image/past_exhibition(6).png"></li>
-                                </ul> 
-                                <p class="floor-txt">이 전시실에 있어서 물질과 비물질의 경계를 생각해보게 하는 작품들로 구성되어 있습니다. 유속, 아크릴 등으로 제작된 이 작품들은 재료 본래의 물성을 갖고 있으나, 작품이 가진 투명빛, 움직임 등의 특징 때문에 마치 시간을 초월하거나 무중력 공간에 존재하는 듯한 초감각을 자아냅니다. 이 투명한 공간 속에서 시시각각 변화하는 관람객의 움직임과 주은 작품과 늘 새로운 관계를 만들어 나갑니다. 위층의 <검은 공백>과 아래층의 <이상한 행성> 위치한 이 전시는 두 공간을 연결하는 전환의 공간이기도 합니다.</p>
+                            <div id="f1" class="side-con-box">
+                                <div class="slide-main">
+                                    <div class="slide-item">
+                                        <a href="./image/past_exhibition_detail(4).png" data-fancybox="f1" data-caption="아니쉬 카푸어 《프로토 프로토》">
+                                            <img src="./image/past_exhibition_detail(4).png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-item">
+                                        <a href="./image/past_exhibition_detail(5).png" data-fancybox="f1" data-caption="로버트 어윈  《무제》">
+                                            <img src="./image/past_exhibition_detail(5).png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-item">
+                                        <a href="./image/past_exhibition_detail(6).png" data-fancybox="f1" data-caption="댄 그래이엄 《슬라이스》">
+                                            <img src="./image/past_exhibition_detail(6).png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="floor-txt">이 전시실은 미술에 있어서 물질과 비물질의 경계를 생각해보게 하는 작품들로 구성되어 있습니다. 유리나 금속, 아크릴 등으로 제작된 이 작품들은 재료 본래의 물성을 갖고 있으나, 작품이 가진 투명성이나 빛, 움직임 등의 특징 때문에 마치 시간을 초월하거나 무중력 공간에 존재하는 듯한 초현실적 감각을 자아냅니다. 이 투명한 공간 속에서 시시각각 변화하는 관람객의 움직임과 주변 환경은 작품과 늘 새로운 관계를 만들어 나갑니다. 위층의 &lt;검은 공백&gt;과 아래층의 &lt;이상한 행성&gt; 사이에 위치한 이 전시는 두 공간을 연결하는 전환의 공간이기도 합니다.</p>
                             </div>
-                            <div id="f2" class="side-con-box floor-img">
-                                <ul>
-                                    <li><img src="./image/past_exhibition_detail(7).png" alt="검은공백"></li>
-                                    <li><img src="./image/past_exhibition_detail(8).png"></li>
-                                    <li><img src="./image/past_exhibition_detail(9).png"></li>
-                                </ul> 
-                                <p class="floor-txt">미술은 우리를 깊은 사색에 잠기게 하기도, 기이한 상상의 세계로 데려가기도 합니다. 환상적인 풍경이 펼쳐지고 괴물, 기계 생명체와 같은 생경한 존재들이 부유하는 이 전시의 제목은 <이상한 행성>입니다. 전시된 작품들은 인간과 그를 둘러싼 주변 환경, 그리고 공존하는 존재들에 대한 탐구를 보여줍니다. 마치 낯선 행성에 불시착한 듯한 인상을 주는 이 전시실에서는 생태와 환경, 기계와 인간, 의식과 무의식 등 다양한 논의를 작품을 통해 읽어봅니다</p>
+                            <div id="f2" class="side-con-box">
+                                <div class="slide-main">
+                                    <div class="slide-item">
+                                        <a href="./image/past_exhibition_detail(7).png" data-fancybox="f2" data-caption="최우람 《쿠스토스 카붐》 ">
+                                            <img src="./image/past_exhibition_detail(7).png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-item">
+                                        <a href="./image/past_exhibition_detail(8).png" data-fancybox="f2" data-caption="이불 《몬스터 : 블랙》">
+                                            <img src="./image/past_exhibition_detail(8).png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="slide-item">
+                                        <a href="./image/past_exhibition_detail(9).png" data-fancybox="f2" data-caption="이승조 《핵》">
+                                            <img src="./image/past_exhibition_detail(9).png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="floor-txt">미술은 우리를 깊은 사색에 잠기게 하기도, 기이한 상상의 세계로 데려가기도 합니다. 환상적인 풍경이 펼쳐지고 괴물, 기계 생명체와 같은 생경한 존재들이 부유하는 이 전시의 제목은 &lt;이상한 행성&gt;입니다. 전시된 작품들은 인간과 그를 둘러싼 주변 환경, 그리고 공존하는 존재들에 대한 탐구를 보여줍니다. 마치 낯선 행성에 불시착한 듯한 인상을 주는 이 전시실에서는 생태와 환경, 기계와 인간, 의식과 무의식 등 다양한 논의를 작품을 통해 읽어봅니다.</p>
                             </div>
-                           
                         </div><!-- floor-con -->
                     </div><!-- cultural_center -->
                 </section>

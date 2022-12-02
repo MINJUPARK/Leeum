@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, b, strong, label, time {
+img, span, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -729,12 +720,7 @@ main .main-img {
 main .main-img img {
   width: 100%;
   height: 100%;
-}
-@media screen and (min-width: 1440px) {
-  main .main-img img {
-    width: 100%;
-    height: 100%;
-  }
+  object-fit: cover;
 }
 main .info .title {
   margin-top: 30px;
@@ -1729,6 +1715,7 @@ main .container .parking p:nth-of-type(2) {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:nth-of-type(2) {
@@ -1742,10 +1729,6 @@ main .container .parking p:nth-of-type(2) br:first-of-type {
   main .container .parking p:nth-of-type(2) br:first-of-type {
     display: block;
   }
-}
-main .container .parking p:nth-of-type(3) {
-  margin-top: 15px;
-  margin-bottom: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:nth-of-type(3) {
@@ -1762,12 +1745,13 @@ main .container .parking p:nth-of-type(3) span {
   }
 }
 main .container .parking p:last-of-type {
-  margin: 0px 0 60px 0;
+  margin: 10px 0 60px 0;
   font-size: 14px;
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:last-of-type {
     font-size: 18px;
+    margin-top: 0;
   }
 }
 main .container .parking p span {
@@ -2387,4 +2371,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=about_facility.css.map */
+}
