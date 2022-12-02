@@ -39,15 +39,28 @@
                     <p class="title">약관 동의</p>
                     <div class="agreement">
                         <div class="agr-plus">
-                            <div class="agr whole">
-                            <input type="checkbox"><label><span>전체 동의</span></label>
+                            <div class="agr term">
+                                <div class="chk">
+                                    <div class="agr-whole">
+                                        <input type="checkbox" class="chkbox" id="tot-storage">
+                                        <label for="tot-storage">전체동의</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <!-- <div class="agr-plus">
+                            <div class="agr whole">
+                                <input type="checkbox" class="chkbox" id="tot-agree-storage">
+                                <label for="tot-agree-storage">전체 동의</label>
+                            </div>
+                        </div> -->
                         <div class="agr-plus">
                             <div class="agr term">
                                 <div class="chk">
-                                    <input type="checkbox"><label><span> 이용약관 동의</span></label>
-                                    <strong>(필수)</strong>
+                                    <div class="agr-whole">
+                                        <input type="checkbox" class="chkbox" id="term-storage">
+                                        <label for="term-storage">이용약관 동의 <strong>(필수)</strong></label>
+                                    </div>
                                     <div class="plus">
                                         <span>자세히</span>
                                         <img src="../../image/icon_arrow_thin.svg" alt="">
@@ -70,8 +83,10 @@
                         <div class="agr-plus">
                             <div class="agr term">
                                 <div class="chk">
-                                    <input type="checkbox"><label><span>개인정보 수집 이용에 대한 동의</span></label>
-                                    <strong>(필수)</strong>
+                                    <div class="agr-whole">
+                                        <input type="checkbox" class="chkbox" id="per-info-storage">
+                                        <label for="per-info-storage">개인정보 수집 이용에 대한 동의 <strong>(필수)</strong></label>
+                                    </div>
                                     <div class="plus">
                                         <span>자세히</span>
                                         <img src="../../image/icon_arrow_thin.svg" alt="">

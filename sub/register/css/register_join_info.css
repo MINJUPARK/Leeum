@@ -182,4 +182,112 @@ h6 {
   font-size: 18px;
 }
 
-/* -------------------------------------------------------------------------------------------------------------------- *//*# sourceMappingURL=register_join_info.css.map */
+/* -------------------------------------------------------------------------------------------------------------------- */
+div.logo .image {
+  display: flex;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 1440px) {
+  div.logo .image {
+    margin-bottom: 150px;
+  }
+}
+div.logo .image img {
+  width: 36px;
+  margin-right: 16px;
+}
+@media screen and (min-width: 1440px) {
+  div.logo .image img {
+    width: 70px;
+  }
+}
+div.logo .image p {
+  font-size: 12px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  div.logo .image p {
+    font-size: 22px;
+  }
+}
+div.logo .image strong {
+  font-size: 24px;
+}
+@media screen and (min-width: 1440px) {
+  div.logo .image strong {
+    font-size: 46px;
+  }
+}
+
+div.join-info form {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+div.join-info form .id-text,
+div.join-info form .date-text {
+  padding: 10px 0;
+}
+div.join-info form .id-text label,
+div.join-info form .date-text label {
+  width: 25.7142857143%;
+  font-size: 13px;
+  font-weight: 600;
+}
+div.join-info form .id-text input,
+div.join-info form .date-text input {
+  padding: 5px;
+}
+div.join-info form .date-text input {
+  width: 27%;
+}
+div.join-info form .date-text .back {
+  width: 10%;
+}
+div.join-info form .phone-certify-name {
+  width: 100%;
+}
+div.join-info form .phone-certify-name .phone {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+}
+div.join-info form .phone-certify-name .phone .cer-name {
+  text-align: center;
+}
+div.join-info form .phone-certify-name .phone .cer-name label {
+  font-size: 13px;
+  font-weight: 600;
+}
+div.join-info form .phone-certify-name .phone .name-num {
+  display: flex;
+  width: 74.2857142857%;
+}
+div.join-info form .phone-certify-name .phone .name-num select {
+  background: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 5px center;
+  background-color: #fff;
+  background-size: 10px;
+  width: 19%;
+  padding: 5px;
+}
+div.join-info form .phone-certify-name .phone .name-num select:first-child {
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  div.join-info form .phone-certify-name .phone .name-num select {
+    width: 15.5172413793%;
+    flex-wrap: nowrap;
+  }
+}
+div.join-info form .phone-certify-name .phone .name-num span {
+  margin: 0 3px;
+}
+div.join-info form .phone-certify-name .phone .name-num input {
+  width: 20.2857142857%;
+  padding: 3px 5px;
+}/*# sourceMappingURL=register_join_info.css.map */

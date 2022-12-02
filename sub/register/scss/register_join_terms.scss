@@ -77,108 +77,76 @@ main {
                 }
 
                 .agr {
-                    .chk {
-                        padding: 10px 20px;
-                        @include responsive(pc-screens) {
-                            padding: 10px 40px;
-                        }
+                        .chk {
+                            
+                            @include flex_between();
+                            
+                            padding: 10px;
 
-
-                        input {
-                            margin-right: 10px;
-                            @include responsive(pc-screens) {
-                                width: 23px;
-                                height: 23px;
-                            }
-                        }
-
-                        label {
-                            span {
+                            input {
+                                margin-right: 3px;
                                 @include responsive(pc-screens) {
-                                    font-size: 23px;
-                                    margin-left: 10px;
+                                    width: 23px;
+                                    height: 23px;
+                                }
+                            }
+
+                            label {
+                                span {
+                                    // font-size: 14px;
+                                    @include responsive(pc-screens) {
+                                        font-size: 23px;
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+
+                            strong {
+                                @include responsive(pc-screens) {
+                                    font-size: 24px;
+                                }
+
+                            }
+
+                            .plus {
+                                // position: absolute;
+                                right: 0;
+                                top: 0;
+                                span {
+                                    font-size: 13px;
+        
+                                    @include responsive(pc-screens) {
+                                        font-size: 23px;
+                                        margin-right: 10px;
+                                    }
+                                }
+        
+                                img {
+                                    width: 8px;
+        
+                                    @include responsive(pc-screens) {
+                                        width: 23px;
+                                        height: 10px;
+                                    }
                                 }
                             }
                         }
 
-                        strong {
-                            @include responsive(pc-screens) {
-                                font-size: 24px;
-                            }
-
-                        }
-                        .plus {
-                            padding: 10px 0;
-                            margin-right: 20px;
-                            @include responsive(pc-screens) {
-                            }
+                        &:last-child {
+                            border-bottom: 0;
                         }
 
-                    }
-
-                    &.whole {
-                        padding: 10px 20px;
-
-                        @include responsive(pc-screens) {
-                            padding: 10px 40px;
-                        }
-
-                        input {
-                            margin-right: 10px;
-                            @include responsive(pc-screens) {
-                                width: 23px;
-                                height: 23px;
-                            }
-
-                        }
-                        label {
-                            span{
-                                @include responsive(pc-screens) {
-                                    font-size: 23px;
-                                    margin-left: 10px;
-                                }
-                            }
-                        }
-                    }
-
-
-                    position: relative;
-                    &:last-child {
-                        border-bottom: 0;
-                    }
-
-                    input[type=checkbox] + label {
-                    font-size: 13px;
-                    margin-left: 0;
-                    }
-
-                    strong {
-                    color: red;
-                    font-size: 13px;
-                    }
-
-                    .plus {
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        span {
-                            font-size: 11px;
-
+                        input[type=checkbox] + label {
+                            font-size: 14px;
+                            margin-left: 0;
                             @include responsive(pc-screens) {
                                 font-size: 23px;
-                                margin-right: 10px;
                             }
                         }
-
-                        img {
-                            width: 8px;
-
-                            @include responsive(pc-screens) {
-                                width: 23px;
-                                height: 10px;
-                            }
+                        strong {
+                        color: red;
+                        font-size: 13px;
                         }
-                    }
 
                     .agree-term{
                         @include responsive(pc-screens) {
@@ -194,7 +162,6 @@ main {
                                 text-align: left;
                                 padding: 40px 60px;
                                 line-height: 40px;
-                                width: 91.66666666666667%;
                                 text-align: justify;
 
                             }
@@ -228,7 +195,6 @@ main {
                                 font-size: 22px;
                                 color: $bk1;
                                 line-height: 40px;
-                                width: 91.66666666666667%;
                                 text-align: justify;
                             }
 
@@ -247,8 +213,6 @@ main {
                             }
                         }
                     }
-
-                    
                 }
             }
         }

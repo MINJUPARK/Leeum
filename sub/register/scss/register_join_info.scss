@@ -2,3 +2,184 @@
 @import '../../../scss/style.scss';
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
+
+
+div.logo {
+    .image {
+        display: flex;
+        padding-left: 20px;
+        margin-bottom: 15px;
+
+        @include responsive(pc-screens) {
+            margin-bottom: 150px;
+        }
+
+        img {
+            width: 36px;
+            margin-right: 16px;
+
+            @include responsive(pc-screens) {
+                width: 70px;
+            }
+        }
+        p {
+            @include gothic-font(medium, 12px);
+
+            @include responsive(pc-screens) {
+                font-size: 22px;
+            }
+        }
+
+        strong {
+            font-size: 24px;
+
+            @include responsive(pc-screens) {
+                font-size: 46px;
+            }
+        }
+    }
+}
+
+div.join-info {
+    form {
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+
+        .id-text,
+        .date-text {
+            label {
+                width: 25.71428571428571%;
+                @include gothic-font(semibold, 13px);
+            }
+            padding: 10px 0;
+            
+            input {
+                padding: 5px;
+            }
+        }
+
+
+        .id-text{
+            input {
+                // border: 0;
+            }
+        }
+
+        .date-text {
+            input {
+                width: 27%;
+            } 
+            
+            .back {
+                width: 10%;
+            }
+
+        }
+
+    //     .phone-certify {
+    //         display: flex;
+    //         justify-content: space-between;
+    //         // width: 100%;
+            
+    //       /*   .news-agency {
+    //             width: 100%;
+    //         } */
+
+    //        /*  @include responsive(pc-screens) {
+    //             width: calc(100% - 120px);
+    //         } */
+            
+            
+    // /* 
+    //         .agency-select,
+    //         .phone-num{
+    //             select {
+    //             @include full_bg('icon_arrow_bk.svg', index);
+    //                 background-position: right 5px center;
+    //                 background-color: #fff;
+    //                 background-size: 10px;
+    //                 width: 18%;
+    //                 padding: 3px 5px;
+        
+    //                 @include responsive(pc-screens) {
+    //                     width: 15.51724137931034%;
+    //                     flex-wrap: nowrap;
+    //                 }
+    //             }
+    //         } */
+
+    //       /*   .news-agency {
+    //             display: flex;
+    //             margin-left: 20px;
+
+    //             .agency-select {
+
+    //             }
+
+    //             .phone-num {
+    //                 width: 50%;
+    //                 input {
+    //                     width: 20%;
+    //                     padding: 3px 5px;
+        
+    //                 }
+    //             }
+    //         }
+    //  */
+            
+    //     }
+
+        .phone-certify-name {
+            width: 100%;
+
+            .phone {
+                @include flex_between();
+                padding: 10px 0;
+                align-items: center;
+
+                .cer-name {
+                    text-align: center;
+                    label{
+                        @include gothic-font(semibold, 13px);
+                        // width: 25.71428571428571%;
+                    }
+                }
+                .name-num {
+                    display: flex;
+
+                    width: 74.28571428571429%;
+                    select {
+                        @include full_bg('icon_arrow_bk.svg', index);
+                        background-position: right 5px center;
+                        background-color: #fff;
+                        background-size: 10px;
+                        width: 19%;
+                        padding: 5px;
+                        // padding: 10px;
+                        
+                        &:first-child {
+                            margin-right: 10px;
+                            
+                        }
+
+                        
+                        @include responsive(pc-screens) {
+                            width: 15.51724137931034%;
+                            flex-wrap: nowrap;
+                        }
+                        
+                    }
+                    span {
+                        margin: 0 3px;
+                    }
+                    input {
+                        width: 20.28571428571429%;
+                        padding: 3px 5px;
+
+                    }
+                }
+
+            }
+        }
+    }
+}

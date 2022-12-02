@@ -17,26 +17,83 @@
     <title>Leeum</title>
 </head>
 <body>
-    <header>
-
-    </header>
-    <main>
-        <section>
-            <h2>본인 인증</h2>
-            <div class="container">
-                <div class="image">
-                    <img src="../../image/favicon_light.svg" alt="">
-                    <div class="text">
-                        <p>LEEUM</p>
-                        <strong>회원가입</strong>
-                    </div>
+    <div class="logo">
+        <div class="container">
+            <div class="image">
+                <img src="../../image/favicon_light.svg" alt="">
+                <div class="text">
+                    <p>LEEUM</p>
+                    <strong>회원가입</strong>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-    </main>
-    <footer>
-        
-    </footer>
+    <div class="join-info">
+        <div class="container">
+            <p>본인 인증</p>
+            <form action="#" method="post">
+                <div class="id-text">
+                    <label for="name">이름</label>
+                    <input type="text" class="name" id="name" placeholder="이름을 입력해 주세요">  
+                </div>
+                <div class="date-text">
+                    <label for="date">생년월일</label>
+                    <input type="text" class="front" id="front" placeholder="생년월일 6자리">
+                    <span>-</span>
+                    <input type="text" class="back" id="back">
+                    <span>●●●●●●</span>
+                </div>
+
+                <!-- <div class="phone-certify">
+                        <div class="phone-certify-name">
+                                <span>통신사</span>
+                        </div>
+                            <div class="news-agency">
+                                <div class="agency-select">
+                                    <select>
+                                        <option value="SKT">SKT</option>
+                                        <option value="KT">KT</option>
+                                        <option value="LG">LG</option>
+                                    </select>
+                                </div>
+                                <div class="phone-num">
+                                    <select>
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                    </select>
+                                    <span>-</span>
+                                    <input type="text">
+                                    <span>-</span>
+                                    <input type="text">
+                                </div>
+                            </div>
+                </div> -->
+            
+                <div class="phone-certify-name">
+                    <div class="phone">
+                        <div class="cer-name">
+                            <label>휴대폰 인증</label>
+                        </div>
+                        <div class="name-num">
+                            <select>
+                                <option value="SKT">SKT</option>
+                                <option value="KT">KT</option>
+                                <option value="LG">LG</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                            </select>
+                            <span>-</span>
+                            <input type="text">
+                            <span>-</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
