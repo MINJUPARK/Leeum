@@ -648,6 +648,11 @@ header .breadcrumb-wrap {
   }
 }
 
+main .mark {
+  font-size: 120%;
+  margin-right: 5px;
+  color: #be6a15;
+}
 main .question {
   font-size: 18px;
   white-space: nowrap;
@@ -659,43 +664,37 @@ main .question {
     font-size: 22px;
   }
 }
-main .question .mark {
-  font-size: 120%;
-  margin-right: 5px;
-  color: #be6a15;
-}
 main .faq-content {
-  background-color: #f3f3f3;
   padding: 20px;
+  margin-top: 20px;
   border-radius: 5px;
-  margin: 0 10px 20px;
+  background-color: #f3f3f3;
+  text-align: right;
 }
 @media screen and (min-width: 1440px) {
   main .faq-content {
-    margin: 0 10px 50px;
     padding: 40px;
   }
 }
 main .faq-content .explain {
-  text-align: left;
-  line-height: 2em;
+  text-align: justify;
+  line-height: 1.8em;
   color: #3c3c3c;
-  margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
   main .faq-content .explain {
-    font-size: 22px;
-    margin-bottom: 40px;
+    font-size: 18px;
   }
 }
 main .faq-content .shortcut {
   font-size: 15px;
   font-weight: 600;
   color: #be6a15;
+  margin-top: 20px;
 }
 @media screen and (min-width: 1440px) {
   main .faq-content .shortcut {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 main .faq-content .shortcut img {
@@ -703,16 +702,13 @@ main .faq-content .shortcut img {
   height: 12px;
   filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
-main h2 {
-  display: none;
-}
 main li {
   border-bottom: 1px solid #d4d4d4;
+  padding: 20px 10px;
 }
 @media screen and (min-width: 1440px) {
   main li {
-    width: 1440px;
-    margin: 0 auto;
+    padding: 30px 20px;
   }
 }
 main li:first-child {
@@ -722,16 +718,10 @@ main .text-arrow {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
-}
-@media screen and (min-width: 1440px) {
-  main .text-arrow {
-    padding: 40px 10px;
-  }
 }
 main .text-arrow p {
   white-space: nowrap;
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 500;
 }
 @media screen and (min-width: 1440px) {

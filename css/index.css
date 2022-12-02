@@ -961,9 +961,15 @@ main .btn .more label {
   font-weight: 600;
 }
 main .btn .more img {
-  width: 16px;
-  height: 14px;
+  width: 14px;
+  height: 12px;
   margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  main .btn .more img {
+    width: 16px;
+    height: 14px;
+  }
 }
 main .btn .more.pc {
   display: none;
@@ -1075,9 +1081,15 @@ main section.infoBox .time-notice .notice .des .more label {
   font-weight: 600;
 }
 main section.infoBox .time-notice .notice .des .more img {
-  width: 16px;
-  height: 14px;
+  width: 14px;
+  height: 12px;
   margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  main section.infoBox .time-notice .notice .des .more img {
+    width: 16px;
+    height: 14px;
+  }
 }
 @media screen and (min-width: 1440px) {
   main section.infoBox .time-notice .tit {
@@ -1974,9 +1986,15 @@ main section.artist .btn label {
   font-weight: 600;
 }
 main section.artist .btn img {
-  width: 16px;
-  height: 14px;
+  width: 14px;
+  height: 12px;
   margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  main section.artist .btn img {
+    width: 16px;
+    height: 14px;
+  }
 }
 main section.artist .va-container {
   position: relative;

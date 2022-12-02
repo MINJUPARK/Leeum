@@ -9,121 +9,147 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_data.jpg');
+    @include full_bg('data_header.jpg');
 }
 
 main {
-    
-    section.WorkBook {
-        h3 {
-            text-align: center;
-            @include responsive(pc-screens){
-                font-size: $h1;
-            }
+    overflow: hidden;
+
+    section {
+        margin-bottom: 100px;
+
+        @include responsive(tablet-screens){
+            margin-bottom: 10%;
         }
-        .plus {
-            text-align: right;
-            margin-bottom: 35px;
 
-            @include responsive(pc-screens){
-                margin-bottom: 100px;
-            }
+        &:last-child { margin-bottom: 0; }
 
-            a {
-                span {
-                    @include gothic_font(semibold);
-                    margin-right: 10px;
-                    @include responsive(pc-screens){
-                        font-size: 20px;
-                    }
-                }
-
-                img {
-                    width: 15px;
-                    height: 10px;
-
-                    @include responsive(pc-screens){
-                        width: 20px;
-                        height: 15px;
-                    }
-                }
-            }
-        }
-        
-        .flex {
-            justify-content: space-between;
-            flex-wrap: wrap;
+        .sec-tit {
+            position: relative;
             display: flex;
-            @include responsive(pc-screens){
+            justify-content: flex-end;
+            align-items: center;
+            height: 40px;
+            margin-bottom: 30px;
+
+            @include responsive(tablet-screens){
+                margin-bottom: 5%;
+            }
+
+            h5 {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+    
+                @include responsive(tablet-screens){
+                    font-size: $h4;
+                }
+
+                @include responsive(pc-screens){
+                    font-size: $h3;
+                }
+            }
+
+            .btn .more {
+                @include more_btn();
+            }
+        }
+    }
+
+    section.workBook {
+
+        .flex {
+            @include flex_between();
+            flex-wrap: wrap;
+
+            @include responsive(tablet-screens) {
                 flex-wrap: nowrap;
+                column-gap: 20px;
             }
         
             .workbook {
-                // width: 100%;
-                // margin-bottom: 20px;
-                width: 48.57142857142857% !important;
+                width: 48% !important;
                 margin-bottom: 20px;
-                @include responsive(pc-screens){
-                    // margin-bottom: 50px;
-                    width: 22.85714285714286% !important;
+
+                @include responsive(tablet-screens){
+                    width: 25% !important;
                 }
                 
                 .image-text {
                     text-align: center;
-                    .image{
+
+                    .image {
                         width: 100%;
-                        margin-bottom: 10px;
-                        border: 1px solid $bk4;
-                        
-                        @include responsive(pc-screens){
-                            // height: 260px;
-                        }
+                        margin-bottom: 20px;
+                        border: 1px solid $bk5;
                         
                         img{
                             width: 100%;
                             height: 238px;
+                            object-fit: cover;
+                            
+                            @include responsive(tablet-screens) {
+                                height: 338px;
+                            }
 
                             @include responsive(pc-screens) {
-                                height: 455px;
+                                height: 438px;
                             }
                         }
                     }  
                     
                     .text {
-                        margin-bottom: 20px;
+                        margin-bottom: 40px;
 
-                        /* @include responsive(pc-screens){
-                            padding: 26px 40px 40px 40px;
-                        } */
                         span {
                             width: 100%;
-                            @include gothic_font(semibold, 17px);
-                            margin-bottom: 7px;
+                            @include gothic_font(semibold, 16px);
+                            margin-bottom: 10px;
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
                             
-                            @include responsive(pc-screens){
+                            @include responsive(tablet-screens){
                                 font-size: 18px;
-                                margin-bottom: 15px;
                             }
-                        }   
 
+                            @include responsive(pc-screens){
+                                font-size: 20px;
+                            }
+                        }
+                        
                         p {
-                            margin-bottom: 7px;
+                            font-size: 14px;
+                            color: $bk2;
 
-                        }       
+                            @include responsive(tablet-screens){
+                                font-size: 15px;
+                            }
+
+                            @include responsive(pc-screens){
+                                font-size: 16px;
+                            }
+                        }
                     }
 
                     .down-img {
-                        a {
-                            padding: 5px;
-                            width: 100%;
-                            border: 1px solid #000;
-                            border-radius: 5px;
-                            @include gothic_font(medium, 12px);
-                            img {
-                                width: 10px;
+                        display: none;
+
+                        @include responsive(tablet-screens) {
+                            display: block;
+
+                            a {
+                                padding: 10px 15px;
+                                width: 100%;
+                                border: 1px solid $bk4;
+                                border-radius: 5px;
+                                font-size: 15px;
+                                color: $bk2;
+
+                                img {
+                                    height: 12px;
+                                    margin-right: 10px;
+                                }
                             }
                         }
                     }
@@ -132,42 +158,7 @@ main {
         }
     }
 
-    section.Public {
-        h3 {
-            text-align: center;
-            margin-top: 100px;
-            @include responsive(pc-screens){
-                font-size: $h1;
-            }
-        }
-        .plus {
-            text-align: right;
-            margin-bottom: 35px;
-
-            @include responsive(pc-screens){
-                margin-bottom: 100px;
-            }
-
-            a {
-                span {
-                    @include gothic_font(semibold);
-                    margin-right: 10px;
-                    @include responsive(pc-screens){
-                        font-size: 20px;
-                    }
-                }
-
-                img {
-                    width: 15px;
-                    height: 10px;
-
-                    @include responsive(pc-screens){
-                        width: 20px;
-                        height: 15px;
-                    }
-                }
-            }
-        }
+    section.public {
 
         .preview {
                 @include out_container();
@@ -184,18 +175,18 @@ main {
                     margin: auto;
                     overflow: hidden;
 
-                    @include responsive(pc-screens) {
-                        &::before, &::after {
-                            content: '';
-                            position: absolute;
-                            width: 200px; height: 400px;
-                            background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-                            z-index: 2;
-                        }
+                    // @include responsive(pc-screens) {
+                    //     &::before, &::after {
+                    //         content: '';
+                    //         position: absolute;
+                    //         width: 200px; height: 400px;
+                    //         background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+                    //         z-index: 2;
+                    //     }
     
-                        &::before { top: 0; left: 0; }
-                        &::after  { top: 0; right: 0; transform: rotateZ(180deg); }
-                    }
+                    //     &::before { top: 0; left: 0; }
+                    //     &::after  { top: 0; right: 0; transform: rotateZ(180deg); }
+                    // }
                     
                     .slide-track {
                         display: flex;
@@ -217,7 +208,7 @@ main {
 
                                 .i-pic {
                                     
-                                    &::after {
+                                    &:hover::after {
                                         content: '';
                                         position: absolute;
                                         left: 0; top: 0;
@@ -245,78 +236,42 @@ main {
                                         );
                                     }
                                     
-                                    .bg {
-                                        height: 320px;
-                                        border-radius: 5px;
-                                    }
+                                .bg {
+                                    height: 320px;
+                                    border-radius: 5px;
                                 }
-    
-                                .i-des {
-                                    position: absolute;
-                                    bottom: 20px;
-                                    width: 100%;
-                                    text-align: center;
-                                    color: #fff;
-                            
-                                    h6 {
-                                        @include gothic_font(semibold, 18px);
-                                    }
-                            
-                                    span {
-                                        @include gothic_font(light, 14px);
-                                        margin-top: 5px;
-                                        opacity: 0.7;
-                                    }
+                            }
+
+                            .i-des {
+                                position: absolute;
+                                bottom: 20px;
+                                width: 100%;
+                                text-align: center;
+                                color: #fff;
+                        
+                                h6 {
+                                    @include gothic_font(semibold, 18px);
+                                }
+                        
+                                span {
+                                    @include gothic_font(light, 14px);
+                                    margin-top: 5px;
+                                    opacity: 0.7;
                                 }
                             }
                         }
                     }
                 }
             }
+        }
     }
 
-
-    section.Video {
-        h3 {
-            text-align: center;
-            margin-top: 100px;
-            @include responsive(pc-screens){
-                font-size: $h1;
-            }
-        }
-        .plus {
-            text-align: right;
-            margin-bottom: 35px;
-
-            @include responsive(pc-screens){
-                margin-bottom: 100px;
-            }
-
-            a {
-                span {
-                    @include gothic_font(semibold);
-                    margin-right: 10px;
-                    @include responsive(pc-screens){
-                        font-size: 20px;
-                    }
-                }
-
-                img {
-                    width: 15px;
-                    height: 10px;
-
-                    @include responsive(pc-screens){
-                        width: 20px;
-                        height: 15px;
-                    }
-                }
-            }
-        }
+    section.video {
         
         ul.item-box {
             @include itemList_box();
             position: relative;
-            /* height: 1400px; */
+            margin-top: 0;
             overflow: hidden;
             
             @include responsive(pc-screens) {
@@ -329,11 +284,10 @@ main {
                 transition: all .3s;
 
                 @include responsive(tablet-screens) {
-                    width: 45%;
+                    width: calc(96% / 3);
                 }
 
                 @include responsive(pc-screens) {
-                    width: 440px;
 
                     &:hover {
 
@@ -397,101 +351,6 @@ main {
     }
 }
 
- /* main {
-    
-    h1 {
-        display: none;
-    }
-
-    .data-image {
-        h2 {
-            text-align: center;
-            @include gothic_font(semibold, 20px); 
-        }
-
-        .plus {
-            display: flex;
-            img {
-                width: 15px; height: 11px;
-            }
-        }
-
-        .flex {
-            display: flex;
-            margin-bottom: 40px;
-            width: 50%;
-
-            .workbook{
-                text-align: center;
-                img:first-child {
-                    width: 170px;
-                    height: 237px;
-                }
-
-                span {
-                    @include gothic_font(semibold, 17px);
-                    margin-top: 20px;
-                }
-
-                p {
-                    @include gothic_font(light, 13px);
-                    margin-top: 10px;
-                    margin-bottom: 20px;
-                    color: $bk2;
-                }
-
-                a {
-                    @include gothic_font(medium, 12px);
-                    color: $bk1;
-                    border: 1px solid #000;
-                    border-radius: 5px;
-                    padding: 10px 40px;
-                }
-
-                img:last-child {
-                    width: 11px;
-                    height: 11px;
-                    margin-right: 10px;
-                }
-            }
-        }
-
-    }
-} */
-
-// main {
-//     h1 {
-//         display: none;
-//     }
-
-//     .data-image {
-//         h2 {
-//             @include gothic_font(semibold, 20px);
-//         }
-
-//         .plus {
-//             span {
-//                 @include gothic_font(semibold);
-//             }
-
-//             img {
-//                 width: 15px;
-//                 height: 10px;
-//             }
-//         }
-
-//         .flex {
-//             display: flex;
-//             width: 50%;
-            
-//             /* img {
-//                 width: 170px;
-//             } */
-//         }
-//     }
-
-
-// }
 
 footer {
     @include footer();

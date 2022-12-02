@@ -657,6 +657,11 @@ main section.intro .intro-wrap {
 main section.intro .intro-wrap h3 {
   margin-top: 30px;
 }
+@media screen and (min-width: 768px) {
+  main section.intro .intro-wrap h3 {
+    font-size: 36px;
+  }
+}
 @media screen and (min-width: 1440px) {
   main section.intro .intro-wrap h3 {
     font-size: 46px;
@@ -678,6 +683,11 @@ main section.intro .intro-wrap .des span {
 @media screen and (min-width: 1440px) {
   main section.intro .intro-wrap .des span {
     display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  main section.intro .intro-wrap .des {
+    font-size: 18px;
   }
 }
 main section.intro .intro-wrap .des.top {
@@ -1551,7 +1561,7 @@ main section.artistList .item-box .item .i-des h6 {
 }
 @media screen and (min-width: 768px) {
   main section.artistList .item-box .item .i-des h6 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 main section.artistList .item-box .item .i-des span {
