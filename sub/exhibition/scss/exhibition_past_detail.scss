@@ -17,6 +17,7 @@ main {
     section.info {
         @include detail_info();
 
+
         .item-wrap {
             margin-bottom: 0;
 
@@ -74,7 +75,7 @@ main {
                     .tit {
 
                         & * {
-                            text-align: left;
+                            text-align: center;
                         }
 
                         @include responsive(pc-screens) {
@@ -350,6 +351,7 @@ main {
     }
 
     .vr-floor-info-wrap {
+        @include detail_slide(0);
 
         h3 {
             text-align: center;  
@@ -400,43 +402,43 @@ main {
 
                     @include responsive(tablet-screens) {
                         width: calc(480px / 1440px * 100%);
-                        margin-right: calc(100px / 1440px * 100%);
+                        // margin-right: calc(100px / 1440px * 100%);
                     }
 
                     .group-title {
-                        @include flex_between();
+                        @include flex_between_center();
                         padding-left: 10px;
                         padding-right: 10px;
                         padding-bottom: 14px;
                         border-bottom: 2px solid #000;
 
                         @include responsive(tablet-screens) {
-                            padding: 0;
-                            padding-bottom: 36px;
+                            // padding: 0;
+                            padding-bottom: 24px;
                         }
 
-                        h4 {
-                            @include gothic_font(semibold, 20px);
+                        h5 {
+                            @include gothic_font(semibold, $h5);
 
                             @include responsive(pc-screens) {
-                                font-size: 30px;
+                                font-size: $h4;
                             }
 
                             span {
                                 margin-left: 10px;
                                 color: $bk2;
-                                @include gothic_font(regular, calc(1em - 6px));
+                                @include gothic_font(regular, 18px);
 
                                 @include responsive(pc-screens) {
-                                    margin-left: 20px;
-                                    // font-size: 24px;
+                                    font-size: 20px;
                                 }
                             }
                         }
 
                         .dropdown {
                             @include icon_rotate(180deg);
-                            width: calc(15px / 350px) * 100%;
+                            // width: calc(15px / 350px) * 100%;
+                            height: 10px;
                             cursor: pointer;
     
                             @include responsive(tablet-screens) {
@@ -467,8 +469,8 @@ main {
                             }
 
                             @include responsive(pc-screens) {
-                                height: 52px * 2;
-                                line-height: 52px * 2;
+                                height: 52px * 1.75;
+                                line-height: 52px * 1.75;
                                 padding: 0 20px;
                                 font-size: 28px;
                             }
@@ -482,26 +484,42 @@ main {
                                     background: {
                                         image: url(../../../image/icon_arrow_tail.svg);
                                         repeat: no-repeat ;
-                                        position: center right;
+                                        position: right 32px;
                                         origin: content-box;
-                                        size: 34px 24px;
+                                        size: 34px 18px;
                                     }
+                                }
+
+                                @include responsive(pc-screens) {
+                                    background-position: right center;
                                 }
                             }
 
                             b {
                                 font-weight: 500;
+                                font-size: 20px;
+
+                                @include responsive(tablet-screens) {
+                                    font-size: 24px;
+                                }
+
+                                @include responsive(pc-screens) {
+                                    font-size: 26px;
+                                }
                             }
 
                             span {
-                                margin-top: 2px;
                                 margin-left: 10px;
                                 vertical-align: top;
                                 font-size: calc(1em - 4px);
 
+                                @include responsive(tablet-screens) {
+                                    font-size: 20px;
+                                }
+
                                 @include responsive(pc-screens) {
                                     margin-left: 15px;
-                                    font-size: 24px;
+                                    font-size: 22px;
                                 }
                             }
                         }
@@ -509,7 +527,14 @@ main {
                 } // floor-select-group
 
                 .floor-con-group {
-                    margin-top: 30px;
+                    p {
+                        @include content_align(left, 2em);
+                    
+                        margin: {
+                            top: 15px;
+                        }
+                        font-size: 15px;
+                    }
                     
                     @include responsive(tablet-screens) {
                         width: calc(800px / 1440px * 100%);
@@ -521,60 +546,9 @@ main {
                             display: block;
                         } 
                     }
-                    
-                    .floor-img {
-                        
-                        li {   
-                            
-                            img {
-                                width: 100%;
-                                margin-bottom: 25px;
-                                @include responsive(pc-screens) {
-                                    margin-top: 42px;
-                                } 
-                            }
-                        }
-                    } // floor-img
-
-                    .floor-txt {
-                        
-                        .txt-flex {
-                            @include flex_between();
-                            
-                            strong, b {
-                                line-height: 24px;
-                            }
-                            
-                            strong {
-                                padding-left: 5px;
-                                font-size: 24px;
-                                width: calc(40px / 350px * 100%);
-                                
-                                @include responsive(pc-screens) {
-                                    font-size: $h3;
-                                }
-                            }
-                            
-                            b {
-                                width: calc(250px / 350px *100%);
-                                
-                                @include responsive(pc-screens) {
-                                    font-size: 24px;
-                                }
-                            }
-                            
-                            
-                        }
-
-                        p {
-                            @include content_align(left, 2em);
-                        
-                            margin: {
-                                top: 15px;
-                            }
-                            font-size: 15px;
-                        }
-                    } // floor-txt
+                    @include responsive(mobile-screens) {
+                        margin-top: 30px;
+                    }
                 } // floor-con-group
             } // > div
         } // section.floor-info
@@ -591,8 +565,8 @@ main {
     }
 }
 
-
-
 footer {
     @include footer();
 }
+
+@include fancybox_style();

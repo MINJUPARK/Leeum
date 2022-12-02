@@ -120,7 +120,7 @@ main {
                     transition: all .3s;
     
                     @include responsive(tablet-screens) {
-                        width: 45%;
+                        width: 48%;
                     }
     
                     @include responsive(pc-screens) {

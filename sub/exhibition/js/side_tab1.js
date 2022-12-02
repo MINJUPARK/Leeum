@@ -11,5 +11,6 @@ $(function() {
         
         $tab_contents.removeClass('view');
         $tab_contents.parents('.floor-con-group').children(`#f${$index}`).addClass('view');
+        $(".slide-main").slick("refresh");
     });
 }) 
