@@ -48,9 +48,24 @@ main {
         .fee-time {
             
             @include responsive(tablet-screens) {
-                font-size: 20px;
+                font-size: 18px;
             }
             
+            h3 {
+                font-size: calc(1em + 4px);
+                margin-bottom: 20px ;
+                
+                @include responsive (tablet-screens) {
+                    height: 34px;
+                    margin-bottom: 50px;
+                }
+            }
+            
+            span {
+                color: $bk1;
+                font-size: calc(1em - 2px);
+            }
+
             .time,
             .ticket-info {
  
@@ -66,29 +81,22 @@ main {
                 }
             }
 
-            h3 {
-                font-size: calc(1em + 4px);
-                margin-bottom: 20px ;
-    
-                @include responsive (tablet-screens) {
-                    height: 34px;
-                    margin-bottom: 50px;
-                }
-            }
-
-            span {
-                color: $bk1;
-                font-size: calc(1em - 2px);
-            }
-
             .time {
-                
-                p {
-                    margin-bottom: 10px;
-                    @include gothic_font(semibold, 1em);
 
-                    b {
-                        color: #f44321;
+                .time-txt {
+                    padding-left: 12px;
+
+                    @include responsive(pc-screens) {
+                        padding-left: 0;
+                    }
+
+                    p {
+                        margin-bottom: 10px;
+                        @include gothic_font(semibold, calc(1em + 2px));
+    
+                        b {
+                            color: #f44321;
+                        }
                     }
                 }
             } // time
@@ -143,6 +151,10 @@ main {
                         text-align: center;
                         font-size: calc(1em - 2px);
                         border-top: 1px solid $bk5;
+
+                        @include responsive(pc-screens) {
+                            font-size: $h6;
+                        }
                     }
                 }
             } // fee
@@ -152,18 +164,21 @@ main {
                 .ticket-info {
 
                     ul {
+                        padding-left: 12px;
+
+                        @include responsive(pc-screens) {
+                            padding-left: 0;
+                        }
 
                         li {
                             @include content_align(left, 2em);
                             padding-left: 11px;
                             margin-bottom: 20px;
-                            font-size: calc(1em - 2px);
-                            background: url(../image/icon_bullet_dot.svg) no-repeat left 0.7em;
+                            background: url(../image/icon_bullet_dot.svg) no-repeat left 1em;
                             background-size: 2px;
                             
                             @include responsive(tablet-screens) {
                                 padding-left: 14px;
-                                font-size: 20px;
                             }
                         }
                     }
@@ -190,13 +205,10 @@ main {
                         border: 1px solid $red-brown;
                         background-color: $red-brown;
 
-                        &:hover {
-                            color: $red-brown;
-                            background-color: #fff;
+                        transition: all 0.3s;
 
-                            img {
-                                filter: $svg-redbrown;
-                            }
+                        &:hover {
+                            box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 25px -10px;
                         }
                         
                         img {
@@ -209,10 +221,10 @@ main {
             } // ticket-wrap
 
             .please-note {
-                margin-top: 80px;
+                margin-top: 120px;
 
                 @include responsive (tablet-screens) {
-                    margin-top: 100px;
+                    margin-top: 200px;
                 }
 
                 .note-flex {
@@ -281,7 +293,7 @@ main {
                                 height: 78.26086956521739%;
                                 text-align: center;
 
-                                @include responsive (tablet-screens) {
+                                @media screen and(min-width: 860px) {
                                     height: 55.15021459227468%;
                                 }
                                 
@@ -319,8 +331,8 @@ main {
                                     
                                     @include responsive (tablet-screens) {
                                         width: 310px;
-                                        line-height: 1.5em;
-                                        font-size: 22px;
+                                        line-height: 1.8em;
+                                        font-size: 20px;
                                         margin-top: 40px;
                                     }
                                 }
@@ -409,10 +421,12 @@ main {
 
         section.floor-info {
             margin-top: 80px;
+            
+            $tablet2: 920px;
     
-            @include responsive(tablet-screens) {
+            @media screen and(min-width: $tablet2) {
                 margin-top: 160px;
-                font-size: 20px;
+                font-size: 18px;
             }
 
             h3 {
@@ -422,12 +436,12 @@ main {
             > div {
                 margin-bottom: 100px;
                 
-                @include responsive(tablet-screens) {
+                @media screen and(min-width: $tablet2) {
                     display: flex;
                     justify-content: space-between;
                 }
                 
-                @include responsive(tablet-screens) {
+                @media screen and(min-width: $tablet2) {
                     margin-bottom: 150px;
                 }
 
@@ -437,7 +451,7 @@ main {
 
                 .floor-select-group {
 
-                    @include responsive(tablet-screens) {
+                    @media screen and(min-width: $tablet2) {
                         width: calc(480px / 1440px * 100%);
                         margin-right: calc(100px / 1440px * 100%);
                     }
@@ -478,7 +492,7 @@ main {
                             width: 15px / 350px * 100%;
                             cursor: pointer;
     
-                            @include responsive(tablet-screens) {
+                            @media screen and(min-width: $tablet2) {
                                 display: none;
                             }
                         }
@@ -487,7 +501,7 @@ main {
                     .group-option {
                         display: none;
                         
-                        @include responsive(tablet-screens) {
+                        @media screen and(min-width: $tablet2) {
                             display: block;
                         }
                         
@@ -499,7 +513,7 @@ main {
                             color: $bk2;
                             border-bottom: 1px solid $bk4;
 
-                            @include responsive(tablet-screens) {
+                            @media screen and(min-width: $tablet2) {
                                 height: 52px * 1.5;
                                 line-height: 52px * 1.5;
                                 font-size: 20px + 5px;
@@ -517,7 +531,7 @@ main {
                                 color: #000;
                                 background-color: $bk6;
                                 
-                                @include responsive(tablet-screens) {
+                                @media screen and(min-width: $tablet2) {
                                     background: {
                                         image: url(../../../image/icon_arrow_tail.svg);
                                         repeat: no-repeat ;
@@ -525,7 +539,7 @@ main {
                                         origin: content-box;
                                         size: 37px 28px;
                                     }
-                                }
+                                 }
                             }
 
                             b {
@@ -548,7 +562,7 @@ main {
                 .floor-con-group {
                     margin-top: 30px;
 
-                    @include responsive(tablet-screens) {
+                    @media screen and(min-width: $tablet2) {
                         width: calc(800px / 1440px * 100%);
                     }
                     
@@ -590,29 +604,38 @@ main {
                                 
                                 @include responsive(pc-screens) {
                                     font-size: $h3;
+                                    width: calc(30px / 350px * 100%);
                                 }
                             }
                             
                             b {
-                                width: calc(250px / 350px *100%);
+                                font-size: $h6;
+                                width: calc(240px / 350px *100%);
                                 
                                 @include responsive(pc-screens) {
                                     font-size: 24px;
+                                    width: calc(280px / 350px *100%);
                                 }
                             }
                             
                             .toilet {
-                                width: calc(60px / 350px * 100%);
+                                width: calc(70px / 350px * 100%);
                                 padding-right: 5px;
                                 text-align: right;
                                 height: 22px;
-
+                                
                                 @include responsive(pc-screens) {
+                                    width: calc(40px / 350px * 100%);
                                     height: 26px;
                                 }
                                 
                                 img {
                                     height: 100%;
+
+                                    &.toilet-padding {
+                                        padding-left: 5px;
+                                        padding-right: 3px;
+                                    }
                                 }
                             }
                         }
@@ -620,12 +643,18 @@ main {
                         p {
                             @include content_align(left, 2em);
                             height: 40px;
-                            margin: {
-                                top: 15px;
-                                left: 40px / 350px * 100%;
-                                right: 60px / 350px * 100%;
+                            margin-top: 15px;
+                            padding: {
+                                left: 5px;
+                                right: 5px;
                             }
-                            font-size: calc(1em - 2px);
+
+                            @include responsive(pc-screens) {
+                                margin: {
+                                    left: 30px / 350px * 100%;
+                                    right: 40px / 350px * 100%;
+                                }                                
+                            }
                         }
                     } // floor-txt
                 } // floor-con-group
@@ -634,19 +663,22 @@ main {
     } // section.vr-floor-wrap
 
     section.digital-guide-did-wrap {
-        // overflow: hidden;
-        word-break: keep-all; // 단어를 기준으로 줄바꿈
+        word-break: keep-all;
+        text-align: center;
         
         @include responsive(tablet-screens) {
-            font-size: 20px;
+            font-size: 18px;
         }
         
         @include responsive(pc-screens) {
             margin-top: 100px;
+            text-align: left;
         }
-        
-        h3, h4 { text-align: center; }
-        
+
+        h3, h4 {
+            text-align: center;
+        }
+                
         h3 { 
             font-size: calc(1em + 10px);
             
@@ -668,22 +700,22 @@ main {
         }
 
         strong, h5 {
-            font-size: calc(1em + 1.538461538vw);
-            text-align: center;
+            // font-size: calc(1em + 1.538461538vw);
+            font-size: calc(1em + 6px);
             line-height: 2em;
 
-            @include responsive(pc-screens) {
-                text-align: left;
-            }
+            // @include responsive(pc-screens) {
+            //     text-align: left;
+            // }
         }
 
         p {
-            @include content_align(center, 2em);
-            font-size: calc(1em - 2px);
+            line-height: 2em;
+            color: $bk1
             
-            @include responsive(pc-screens) {
-                text-align: left;
-            }
+            // @include responsive(pc-screens) {
+            //     text-align: left;
+            // }
         }
 
         section.digital-guide {
@@ -701,10 +733,17 @@ main {
                     }
     
                     .guide-intro-img {
-    
+                        margin-left: auto;
+                        margin-right: auto;
+                        
+                        @include responsive(tablet-screens) {
+                            width: 700px;
+                        }
+                        
                         @include responsive(pc-screens) {
+                            margin-left: 0;
+                            margin-right: 0;
                             order: 2;
-                            width: 700px / 1400px * 100%;
                         }
                     } // guide-intro-img
     
@@ -727,10 +766,6 @@ main {
                         
                         p {
                             margin-top: 30px; 
-
-                            @include responsive(pc-screens) {
-                                line-height: 32px;
-                            }
                             
                             span {
                                 @include gothic_font(semibold);
@@ -744,13 +779,8 @@ main {
             .guide-point-wrap {
                 margin-top: 100px;
                 margin-bottom: 140px;
-                // background-color: darkblue;
-                @include out_container();
-                overflow: hidden;
 
                 @include responsive(pc-screens) {
-                    @include in_container();
-                    position: relative;
                     margin-top: 100px;
                 }
 
@@ -785,46 +815,39 @@ main {
                         width: calc(600px / 350px) * 100%; 
                         
                         > li {
+                            width: calc(285px / 570px) * 100%;
                             
                             &:first-child {
-                                width: calc(205px / 600px) * 100%;
                                 padding-left: calc(80px / 600px) * 100%;
                                 padding-right: calc(15px / 600px) * 100%;
                             }
                             
                             &:nth-child(2) {
-                                width: calc(205px / 600px) * 100%;
                                 padding-left: calc(15px / 600px) * 100%;
                                 padding-right: calc(80px / 600px) * 100%;
                             }
 
                             .point-m-txt {
-                                height: 275px;
-
+                                height: 300px;
+                                
                                 @include responsive(tablet-screens) {
-                                    height: 365px;                  
+                                    height: 355px;                  
                                 }
-
+                                
                                 span {
-                                    text-align: center;
                                     font-size: calc(1em + 2px);
                                 }
-            
+                                
                                 strong {
                                     margin: 20px auto;
                                     line-height: 30px;
             
                                     @include responsive(tablet-screens) {
                                         line-height: calc(1em + 6px + 10px);
-                                    }
-                                    
-                                }
-                                
-                                .p {
-                                    text-align: center;
-                                    font-size: calc(1em - 2px);
+                                    }   
                                 }
                             } // guide-point-txt
+                            
                         }
                     } 
                 }
@@ -859,18 +882,12 @@ main {
                                 height: 300px;
                                 
                                 span {
-                                    text-align: left;
                                     font-size: 26px;
                                 }
                                 
                                 strong {
                                     line-height: 2em;
                                     margin-bottom: 20px;
-                                }
-            
-                                .p {
-                                    text-align: left;
-                                    font-size: 20px;
                                 }
                             }
                         } // point-pc-txt
@@ -936,8 +953,8 @@ main {
                             color: #fff;
                             
                             @include responsive(pc-screens) {
-                                margin-top: 0;
                                 color: $bk1;
+                                margin-top: 0;
                             }
                         }
                     } // awards-txt
@@ -953,17 +970,21 @@ main {
                 
                 .did-img2 {
                     overflow: hidden;
-                    aspect-ratio: 35 / 36;
+                    aspect-ratio: 35 / 39;
                     background-color: #000;
                     border-radius: 20px;
-
+                    
+                    @include responsive(tablet-screens) {
+                        aspect-ratio: 35 / 36;
+                    }
+                    
                     @include responsive(pc-screens) {
                         position: absolute;
                         top: 370px;
                         width: 480px;
                         aspect-ratio: 24 / 29;
                     }
-
+                    
                     img {
                         width: 640px / 350px * 100%;
                         margin-left: 52px / 640px * -100%;

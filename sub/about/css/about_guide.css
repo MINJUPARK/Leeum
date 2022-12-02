@@ -736,19 +736,7 @@ main section.fee-time-wrap .fee-time > div {
 }
 @media screen and (min-width: 768px) {
   main section.fee-time-wrap .fee-time {
-    font-size: 20px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main section.fee-time-wrap .fee-time .time,
-main section.fee-time-wrap .fee-time .ticket-info {
-    display: flex;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main section.fee-time-wrap .fee-time .time h3,
-main section.fee-time-wrap .fee-time .ticket-info h3 {
-    width: 14.2857142857%;
+    font-size: 18px;
   }
 }
 main section.fee-time-wrap .fee-time h3 {
@@ -765,12 +753,32 @@ main section.fee-time-wrap .fee-time span {
   color: #3c3c3c;
   font-size: calc(1em - 2px);
 }
-main section.fee-time-wrap .fee-time .time p {
+@media screen and (min-width: 1440px) {
+  main section.fee-time-wrap .fee-time .time,
+main section.fee-time-wrap .fee-time .ticket-info {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.fee-time-wrap .fee-time .time h3,
+main section.fee-time-wrap .fee-time .ticket-info h3 {
+    width: 14.2857142857%;
+  }
+}
+main section.fee-time-wrap .fee-time .time .time-txt {
+  padding-left: 12px;
+}
+@media screen and (min-width: 1440px) {
+  main section.fee-time-wrap .fee-time .time .time-txt {
+    padding-left: 0;
+  }
+}
+main section.fee-time-wrap .fee-time .time .time-txt p {
   margin-bottom: 10px;
-  font-size: 1em;
+  font-size: calc(1em + 2px);
   font-weight: 600;
 }
-main section.fee-time-wrap .fee-time .time p b {
+main section.fee-time-wrap .fee-time .time .time-txt p b {
   color: #f44321;
 }
 main section.fee-time-wrap .fee-time .fee table {
@@ -816,20 +824,31 @@ main section.fee-time-wrap .fee-time .fee table td {
   font-size: calc(1em - 2px);
   border-top: 1px solid #d4d4d4;
 }
+@media screen and (min-width: 1440px) {
+  main section.fee-time-wrap .fee-time .fee table td {
+    font-size: 18px;
+  }
+}
+main section.fee-time-wrap .fee-time .ticket-wrap .ticket-info ul {
+  padding-left: 12px;
+}
+@media screen and (min-width: 1440px) {
+  main section.fee-time-wrap .fee-time .ticket-wrap .ticket-info ul {
+    padding-left: 0;
+  }
+}
 main section.fee-time-wrap .fee-time .ticket-wrap .ticket-info ul li {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
   padding-left: 11px;
   margin-bottom: 20px;
-  font-size: calc(1em - 2px);
-  background: url(../image/icon_bullet_dot.svg) no-repeat left 0.7em;
+  background: url(../image/icon_bullet_dot.svg) no-repeat left 1em;
   background-size: 2px;
 }
 @media screen and (min-width: 768px) {
   main section.fee-time-wrap .fee-time .ticket-wrap .ticket-info ul li {
     padding-left: 14px;
-    font-size: 20px;
   }
 }
 main section.fee-time-wrap .fee-time .ticket-wrap .ticketing {
@@ -854,13 +873,10 @@ main section.fee-time-wrap .fee-time .ticket-wrap .ticketing a {
   color: #fff;
   border: 1px solid #ac3f21;
   background-color: #ac3f21;
+  transition: all 0.3s;
 }
 main section.fee-time-wrap .fee-time .ticket-wrap .ticketing a:hover {
-  color: #ac3f21;
-  background-color: #fff;
-}
-main section.fee-time-wrap .fee-time .ticket-wrap .ticketing a:hover img {
-  filter: brightness(0) saturate(100%) invert(24%) sepia(15%) saturate(7470%) hue-rotate(350deg) brightness(103%) contrast(85%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 25px -10px;
 }
 main section.fee-time-wrap .fee-time .ticket-wrap .ticketing a img {
   width: calc(1em + 4px);
@@ -868,11 +884,11 @@ main section.fee-time-wrap .fee-time .ticket-wrap .ticketing a img {
   margin-right: 10px;
 }
 main section.fee-time-wrap .fee-time .please-note {
-  margin-top: 80px;
+  margin-top: 120px;
 }
 @media screen and (min-width: 768px) {
   main section.fee-time-wrap .fee-time .please-note {
-    margin-top: 100px;
+    margin-top: 200px;
   }
 }
 main section.fee-time-wrap .fee-time .please-note .note-flex {
@@ -948,7 +964,7 @@ main section.fee-time-wrap .fee-time .please-note .note-flex .note-group .note-i
   height: 78.2608695652%;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 860px) {
   main section.fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .note-con {
     height: 55.1502145923%;
   }
@@ -987,8 +1003,8 @@ main section.fee-time-wrap .fee-time .please-note .note-flex .note-group .note-i
 @media screen and (min-width: 768px) {
   main section.fee-time-wrap .fee-time .please-note .note-flex .note-group .note-item .note-con p {
     width: 310px;
-    line-height: 1.5em;
-    font-size: 22px;
+    line-height: 1.8em;
+    font-size: 20px;
     margin-top: 40px;
   }
 }
@@ -1051,10 +1067,10 @@ main section.vr-floor-info-wrap section.vr iframe {
 main section.vr-floor-info-wrap section.floor-info {
   margin-top: 80px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info {
     margin-top: 160px;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 main section.vr-floor-info-wrap section.floor-info h3 {
@@ -1063,13 +1079,13 @@ main section.vr-floor-info-wrap section.floor-info h3 {
 main section.vr-floor-info-wrap section.floor-info > div {
   margin-bottom: 100px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info > div {
     display: flex;
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info > div {
     margin-bottom: 150px;
   }
@@ -1077,7 +1093,7 @@ main section.vr-floor-info-wrap section.floor-info > div {
 main section.vr-floor-info-wrap section.floor-info > div.cultural-center > .floor-select-group > .group-option {
   display: block;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group {
     width: 33.3333333333%;
     margin-right: 6.9444444444%;
@@ -1125,7 +1141,7 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown.active {
   transform: rotate(180deg);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown {
     display: none;
   }
@@ -1133,7 +1149,7 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option {
     display: block;
   }
@@ -1146,7 +1162,7 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
   color: #5c5c5c;
   border-bottom: 1px solid #c5c5c5;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li {
     height: 78px;
     line-height: 78px;
@@ -1166,7 +1182,7 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
   color: #000;
   background-color: #f3f3f3;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li.selected {
     background-image: url(../../../image/icon_arrow_tail.svg);
     background-repeat: no-repeat;
@@ -1191,7 +1207,7 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group {
   margin-top: 30px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-con-group {
     width: 55.5555555556%;
   }
@@ -1221,29 +1237,37 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex strong {
     font-size: 30px;
+    width: 8.5714285714%;
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
-  width: 71.4285714286%;
+  font-size: 18px;
+  width: 68.5714285714%;
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
     font-size: 24px;
+    width: 80%;
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet {
-  width: 17.1428571429%;
+  width: 20%;
   padding-right: 5px;
   text-align: right;
   height: 22px;
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet {
+    width: 11.4285714286%;
     height: 26px;
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img {
   height: 100%;
+}
+main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img.toilet-padding {
+  padding-left: 5px;
+  padding-right: 3px;
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt p {
   text-align: left;
@@ -1251,21 +1275,28 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor
   color: #3c3c3c;
   height: 40px;
   margin-top: 15px;
-  margin-left: 11.4285714286%;
-  margin-right: 17.1428571429%;
-  font-size: calc(1em - 2px);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media screen and (min-width: 1440px) {
+  main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt p {
+    margin-left: 8.5714285714%;
+    margin-right: 11.4285714286%;
+  }
 }
 main section.digital-guide-did-wrap {
   word-break: keep-all;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   main section.digital-guide-did-wrap {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap {
     margin-top: 100px;
+    text-align: left;
   }
 }
 main section.digital-guide-did-wrap h3, main section.digital-guide-did-wrap h4 {
@@ -1296,25 +1327,12 @@ main section.digital-guide-did-wrap img {
   border-radius: 20px;
 }
 main section.digital-guide-did-wrap strong, main section.digital-guide-did-wrap h5 {
-  font-size: calc(1em + 1.538461538vw);
-  text-align: center;
+  font-size: calc(1em + 6px);
   line-height: 2em;
-}
-@media screen and (min-width: 1440px) {
-  main section.digital-guide-did-wrap strong, main section.digital-guide-did-wrap h5 {
-    text-align: left;
-  }
 }
 main section.digital-guide-did-wrap p {
-  text-align: center;
   line-height: 2em;
   color: #3c3c3c;
-  font-size: calc(1em - 2px);
-}
-@media screen and (min-width: 1440px) {
-  main section.digital-guide-did-wrap p {
-    text-align: left;
-  }
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide strong {
@@ -1327,10 +1345,20 @@ main section.digital-guide-did-wrap p {
     justify-content: space-between;
   }
 }
+main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .guide-intro .guide-intro-img {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .guide-intro .guide-intro-img {
+    width: 700px;
+  }
+}
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .guide-intro .guide-intro-img {
+    margin-left: 0;
+    margin-right: 0;
     order: 2;
-    width: 50%;
   }
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .guide-intro .guide-intro-txt {
@@ -1354,11 +1382,6 @@ main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .gui
 main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .guide-intro .guide-intro-txt p {
   margin-top: 30px;
 }
-@media screen and (min-width: 1440px) {
-  main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .guide-intro .guide-intro-txt p {
-    line-height: 32px;
-  }
-}
 main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .guide-intro .guide-intro-txt p span {
   font-size: 16px;
   font-weight: 600;
@@ -1367,22 +1390,9 @@ main section.digital-guide-did-wrap section.digital-guide .guide-intro-wrap .gui
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap {
   margin-top: 100px;
   margin-bottom: 140px;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  width: 100vw;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap {
-    position: static;
-    left: 0;
-    right: 0;
-    width: auto;
-    margin: 0;
-    position: relative;
     margin-top: 100px;
   }
 }
@@ -1414,26 +1424,26 @@ main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .poi
   justify-content: space-between;
   width: 171.4285714286%;
 }
+main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li {
+  width: 50%;
+}
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li:first-child {
-  width: 34.1666666667%;
   padding-left: 13.3333333333%;
   padding-right: 2.5%;
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li:nth-child(2) {
-  width: 34.1666666667%;
   padding-left: 2.5%;
   padding-right: 13.3333333333%;
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt {
-  height: 275px;
+  height: 300px;
 }
 @media screen and (min-width: 768px) {
   main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt {
-    height: 365px;
+    height: 355px;
   }
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt span {
-  text-align: center;
   font-size: calc(1em + 2px);
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt strong {
@@ -1444,10 +1454,6 @@ main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .poi
   main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt strong {
     line-height: calc(1em + 6px + 10px);
   }
-}
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-m-wrap ul.point-m > li .point-m-txt .p {
-  text-align: center;
-  font-size: calc(1em - 2px);
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap {
   display: none;
@@ -1481,16 +1487,11 @@ main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .poi
   height: 300px;
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-txt .txt span {
-  text-align: left;
   font-size: 26px;
 }
 main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-txt .txt strong {
   line-height: 2em;
   margin-bottom: 20px;
-}
-main section.digital-guide-did-wrap section.digital-guide .guide-point-wrap .point-pc-wrap .point-pc .point-pc-txt .txt .p {
-  text-align: left;
-  font-size: 20px;
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.did {
@@ -1551,8 +1552,8 @@ main section.digital-guide-did-wrap section.did .did-awards .awards-flex .awards
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.did .did-awards .awards-flex .awards-txt p {
-    margin-top: 0;
     color: #3c3c3c;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1563,9 +1564,14 @@ main section.digital-guide-did-wrap section.did .did-awards .awards-flex .awards
 }
 main section.digital-guide-did-wrap section.did .did-awards .did-img2 {
   overflow: hidden;
-  aspect-ratio: 35/36;
+  aspect-ratio: 35/39;
   background-color: #000;
   border-radius: 20px;
+}
+@media screen and (min-width: 768px) {
+  main section.digital-guide-did-wrap section.did .did-awards .did-img2 {
+    aspect-ratio: 35/36;
+  }
 }
 @media screen and (min-width: 1440px) {
   main section.digital-guide-did-wrap section.did .did-awards .did-img2 {

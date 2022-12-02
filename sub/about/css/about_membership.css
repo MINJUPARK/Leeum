@@ -1184,23 +1184,14 @@ main section.corporate-member-wrap .corporate-member .corporate-txt p {
   }
 }
 main section.corporate-member-wrap .corporate-member .corporate-bt {
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 5px;
   position: absolute;
   right: 50%;
   bottom: 50px;
   width: 150px;
   height: 50px;
   transform: translateX(50%);
-  box-shadow: inset 0 0 0 1px #fff;
-  border-radius: 5px;
-}
-@media screen and (min-width: 1440px) {
-  main section.corporate-member-wrap .corporate-member .corporate-bt {
-    right: 120px;
-    bottom: 44px;
-    width: 200px;
-    height: 66px;
-    transform: translateX(0);
-  }
 }
 main section.corporate-member-wrap .corporate-member .corporate-bt::before {
   content: "";
@@ -1220,23 +1211,36 @@ main section.corporate-member-wrap .corporate-member .corporate-bt:hover::before
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-main section.corporate-member-wrap .corporate-member .corporate-bt:hover a {
-  color: black;
+main section.corporate-member-wrap .corporate-member .corporate-bt:hover a span {
+  color: #000;
 }
 main section.corporate-member-wrap .corporate-member .corporate-bt a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: color 1s;
+}
+main section.corporate-member-wrap .corporate-member .corporate-bt a span {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: block;
   width: 100%;
-  line-height: 50px;
   text-align: center;
   color: #fff;
-  transition: color 1s;
+}
+@media screen and (min-width: 768px) {
+  main section.corporate-member-wrap .corporate-member .corporate-bt {
+    width: 200px;
+    height: 66px;
+  }
 }
 @media screen and (min-width: 1440px) {
-  main section.corporate-member-wrap .corporate-member .corporate-bt a {
-    line-height: 66px;
+  main section.corporate-member-wrap .corporate-member .corporate-bt {
+    right: 120px;
+    bottom: 44px;
+    transform: translateX(0);
   }
 }
 main .associate-wrap {
