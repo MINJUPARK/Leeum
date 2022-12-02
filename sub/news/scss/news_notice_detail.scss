@@ -37,7 +37,6 @@ main {
                 display: block;
                 /* padding: 10px; */
                 width: 60px;
-                font-size: 18px;
             }
         }
 
@@ -131,8 +130,6 @@ main {
     .mini-box {
         @include out_container();
         padding: 20px 30px;
-        // margin-top: 30px;
-        // margin-bottom: 50px;
         line-height: 2em;
         background: $bk6;
         
@@ -144,7 +141,7 @@ main {
         }
 
         th {
-            width: 15%;
+            width: 25%;
 
             @include responsive(pc-screens) {
                 text-align: left;

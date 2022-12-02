@@ -719,12 +719,13 @@ main .research-intro-wrap .research-intro .intro-flex .intro-txt {
   }
 }
 main .research-intro-wrap .research-intro .intro-flex .intro-txt p {
-  line-height: 28px;
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   main .research-intro-wrap .research-intro .intro-flex .intro-txt p {
     font-size: 20px;
-    line-height: 44px;
   }
 }
 main .research-intro-wrap .research-intro .intro-flex .intro-txt p:last-child {
@@ -852,7 +853,7 @@ main .texture-research-wrap .texture-research .texture-lsit .slide-item a h4 {
   position: absolute;
   color: #fff;
   left: 50%;
-  bottom: 16px;
+  bottom: 25px;
   transform: translateX(-50%);
   z-index: 2;
   transition: all 0.3s;

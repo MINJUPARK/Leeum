@@ -6,21 +6,34 @@ window.addEventListener("load", function () {
         document.querySelector(".slider-button").style.left = "calc(" + sliderPos + "% - 24px)";
     }
     
-    let move
+    let move;
     let sliderPos = document.querySelector("#slider");
     
-    function slidermove() {
-        move = setInterval(() => {
+    function slidermove(bool) {
+        if(bool) {
+            sliderPos.value = 0;
+            move = setInterval(() => {
             sliderPos.value++;
             sliderChange();
+            console.log(sliderPos.value);
+    
+            if(sliderPos.value == 100) {
+                clearInterval(move);
+            }
         }, 7);
+        } else {
+            clearInterval(move);
+        }
     }
+
+    document.querySelector(".tab-wrap").addEventListener("click", () => {
+        slidermove(false);
+        slidermove(true);
+    });
     
     
-    this.setTimeout(slidermove, 1200);
+    this.setTimeout(slidermove(true), 1200);
     sliderChange();        
     document.querySelector("#slider").addEventListener("input", sliderChange, false);
     document.querySelector("#slider").addEventListener("change", sliderChange, false);
-    document.querySelector("#slider").addEventListener("touchstart", () => clearInterval(move), false);
-    document.querySelector("#slider").addEventListener("mouseover", () => clearInterval(move), false);
 })

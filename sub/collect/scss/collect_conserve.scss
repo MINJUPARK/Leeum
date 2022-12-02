@@ -81,11 +81,10 @@ main {
                     }
                     
                     p {
-                        line-height: 28px;
+                        @include content_align(justify, 2em);
                         
                         @include responsive(pc-screens) {
                             font-size: 20px;
-                            line-height: 44px;
                         }
 
                         &:last-child {
@@ -214,7 +213,7 @@ main {
                                 @include gothic_font(medium, 1em);
                                 position: absolute;
                                 color: #fff;
-                                left: 50%; bottom: 16px;
+                                left: 50%; bottom: 25px;
                                 transform: translateX(-50%);
                                 z-index: 2;
     
