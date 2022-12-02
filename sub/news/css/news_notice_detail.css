@@ -673,7 +673,6 @@ main .content-title span:first-child {
     display: block;
     /* padding: 10px; */
     width: 60px;
-    font-size: 18px;
   }
 }
 main .content-title span.red-brown {
@@ -774,7 +773,7 @@ main .mini-box {
   }
 }
 main .mini-box th {
-  width: 15%;
+  width: 25%;
 }
 @media screen and (min-width: 1440px) {
   main .mini-box th {

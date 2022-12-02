@@ -18,10 +18,9 @@ main {
 
         .count {
             @include flex_between_center();
-            font-size: 15px;
             
             @include responsive(pc-screens) {
-                border-bottom: 1px solid $bk4;
+                border-bottom: 1px solid $bk5;
             }
     
             b {
@@ -40,12 +39,10 @@ main {
     }
     
     .tab-menu .gnb {
-        /* @include flex_between(); */
         display: flex;
-        height: 45px;
-        line-height: 45px;
+        height: 50px;
+        line-height: 50px;
         text-align: center;
-        // background-color: $bk6;
 
         @include responsive(pc-screens){
             width: 64.28571428571429%;
@@ -54,26 +51,37 @@ main {
         }
         
         li {
+            position: relative;
             width: 25%;
-            border-top: 1px solid $bk4;
-            border-right: 1px solid $bk4;
-            border-bottom: 1px solid $bk4;
+            border-top: 1px solid $bk5;
+            border-right: 1px solid $bk5;
+            border-bottom: 1px solid $bk5;
             cursor: pointer;
-            @include gothic_font(regular, 15px);
 
             a {
-                color: $bk5;
+                color: $bk3;
+                // font-size: 18px;
             }
         }
 
-        .border {
-            border-top : 5px solid #000;
+        .on {
             border-bottom: none;
             background-color: #fff;
             
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -1px;
+                width: calc(100% + 1px);
+                height: 4px;
+                background-color: #000;
+                z-index: 1;
+            }
+
             a {
                 color: #000;
-                @include gothic_font(semibold, 15px);
+                @include gothic_font(semibold);
             }
         }
     }
@@ -94,29 +102,22 @@ main {
 
     .tab-menu span {
         display: none;
+
         @include responsive(pc-screens) {
-            display: block
+            display: block;
         }
     }
-    .cont {
-        margin-top: 10px;
 
-        a {
-            width: 100%;
-        }
+    .cont {
 
         .content {
             @include flex_between_center();
             column-gap: 20px;
             padding : 12px 5px;
-            border-bottom: 1px solid $bk5;
-    
-            
+            border-bottom: 1px solid $bk7;
     
             @include responsive(pc-screens){
                 padding: 22px;
-                /* height: 80px;
-                text-align: center; */
             }
     
             span:first-child {
@@ -124,21 +125,11 @@ main {
                 
                 @include responsive(pc-screens) {
                     display: block;
-                    width: 60px;
                     padding: 5px;
-                    // font-size: 16px;
                     color: $bk1;
                 }
             }
     
-            /* .color {
-                border-radius: 5px;
-                border: 1px solid $dark-brown;
-                @include gothic_font(medium, 12px);
-                color: #fff;
-                background-color: $dark-brown;
-                text-align: center;
-            } */
             .type {
                 display: none;
 
@@ -152,56 +143,40 @@ main {
                     border-radius: 5px;
                 }
                 
-                &.dark-brown {
-                    background-color: $dark-brown;
-                }
-
-                &.red-brown {
-                    background-color: $red-brown;
-                }
-
-                &.yellow-brown {
-                background-color: $yellow-brown;
-                }
-
-                &.yellow {
-                background-color: #f3cf7a;
-                }
+                &.dark-brown   { background-color: $dark-brown; }
+                &.red-brown    { background-color: $red-brown; }
+                &.yellow-brown { background-color: $yellow-brown; }
+                &.yellow       { background-color: #f3cf7a; }
             }
     
-            p {
-                // display: flex;
+            a {
                 padding: 10px 0;
                 @include gothic_font(medium, 15px);
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                // width: 350px;
-    
-    
+                
                 @include responsive(pc-screens){
-                    width: 1110px;
-                    padding: 5px 0 5px 60px;
-                    margin-left: 0;
+                    width: 1080px;
+                    padding: 10px 20px;
                     font-size: 18px;
                 }
             }
+
+            p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
             
             span.date {
-                // padding: 10px;
                 font-size: 14px;
                 white-space: nowrap;
-                // justify-content: space-between;
-                /* margin-left: -80px; */
-                // @include gothic_font(regula 14px);
                 color: $bk2;
     
     
                 @include responsive(pc-screens){
-                    // padding-right: 0;
-                    // font-size: 18px;
-                    font-size: 16px;
                     margin: 0;
+                    font-size: 15px;
                 }
             }
     

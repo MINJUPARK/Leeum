@@ -15,20 +15,18 @@ $(function() {
         $(id).show();
     });
 
-    // 메인 '달라진 리움' 배너에서 -> 공용공간 리뉴얼 탭으로 이동
-    function specificTab(e) {
-        var hash;
-        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    // 다른 페이지에서 -> 해당 페이지의 탭메뉴로 다이렉트 이동
+    var hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
 
-        for(var i = 0; i < hashes.length; i++) {
-            hash = hashes[i].split('=');
-        }
-        if(hash[1] == 'renewal') {
-            $('.tabmenu-wrap .tab-nav').find('.nav').removeClass('on');
-            $('[href="#renewal"]').parent().addClass('on');
-            $('.tab-con').find('.con-box').hide();
-            $('.tab-con').find('#renewal').show();
-        }
+    for(var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
     }
-    specificTab();
+
+    if(hash[1]) {
+        $('.tabmenu-wrap .tab-nav').find('.nav').removeClass('on');
+        $(`[href='#${hash[1]}']`).parent().addClass('on');
+        $('.tab-con').find('.con-box').hide();
+        $('.tab-con').find(`#${hash[1]}`).show();
+    }
 }) 

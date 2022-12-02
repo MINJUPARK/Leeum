@@ -13,7 +13,8 @@ header {
 }
 
 main {
-
+    overflow-x: hidden;
+    
     section.info {
         @include detail_info();
 
@@ -73,7 +74,7 @@ main {
                     .tit {
 
                         & * {
-                            text-align: left;
+                            text-align: center;
                         }
 
                         @include responsive(pc-screens) {
@@ -168,29 +169,45 @@ main {
         }
 
         .request {
+            position: fixed;
+            left: 0; bottom: 0;
+            width: 100%;
+            z-index: 95;
             
+
+            @include responsive(pc-screens){
+                position: relative;
+                width: 100%;
+            }
+
             a {
             @include gothic_font(semibold);
             width: 100%;
             padding: 13px;
-            border-radius: 5px;
             text-align: center;
-            color: #f00;
-            border: 1px solid #f00;
+            border: 1px solid #be6a15;
+            background: #be6a15;
+            color:#fff;
+            padding: 23px;
+            font-size: 18px;
     
                 @include responsive(pc-screens){
-                    margin-top: 20px;
-                    font-size: 18px;
+                    margin-top: 25px;
                     padding: 20px;
+                    border-radius: 5px;
+                }
+                img{
+                    width:20px;
+                    height:20px;
+                    margin-right: 5px;
+                    padding-bottom: 3px;
                 }
             }
+            
         }
     
         .request-desc {
-            // background-color: $bk6;
-            // padding: 30px 0;
-            
-    
+
             .content {
                 span {
                     @include gothic_font(semibold, 18px);
@@ -388,7 +405,7 @@ main {
             }
 
             .slick-list {
-              padding: 30px 0 40px !important;
+              padding: 30px 0 70px !important;
             }
       
             .slick-slide {
@@ -407,6 +424,30 @@ main {
                 bottom: 0;
               }
             }
+
+            .slick-dots li {
+
+                button::before {
+                  content: '';
+                  display: block;
+                  width: 20px; height: 4px;
+                  text-indent: -9999px;
+                  border-radius: 3px;
+                  background: $bk5;
+                  overflow: hidden;
+                  opacity: 1;
+                  transition: background .3s;
+                }
+          
+                &.slick-active {
+                
+                  button::before {
+                    width: 20px;
+                    background: $bk1;
+                    opacity: 1;
+                  }
+                }
+              }
       
             .bg {
               position: relative;
@@ -420,15 +461,15 @@ main {
               overflow: hidden;
       
               @media screen and (min-width:480px) {
-                width: 450px; height: 350px;
+                width: 450px; height: 550px;
               }
       
               @include responsive(tablet-screens) {
-                width: 650px; height: 450px;
+                width: 650px; height: 750px;
               }
       
               @include responsive(pc-screens) {
-                width: 850px; height: 650px;
+                width: 850px; 
               }
         
               .des {
@@ -472,19 +513,7 @@ main {
                     font-size: $h6;
                   }
                 }
-                
-        
-                .loc {
-                  padding: 5px 12px;
-                  font-size: 12px;
-                  border: 1px solid $bk1;
-                  border-radius: 5px;
-                  
-                  @include responsive(pc-screens) {
-                    padding: 6px 18px;
-                    font-size: 14px;
-                  }
-                }
+
               }
       
               img {

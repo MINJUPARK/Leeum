@@ -13,7 +13,11 @@ header {
 }
 
 main {
-
+    .mark {
+        font-size: 120%;
+        margin-right: 5px;
+        color: $yellow-brown;
+    }
     .question {
         font-size: 18px;
         white-space: nowrap;
@@ -24,42 +28,37 @@ main {
             font-size: 22px;
         }
 
-        .mark {
-            font-size: 120%;
-            margin-right: 5px;
-            color: $yellow-brown;
-        }
+        
     }
 
     .faq-content {
-        background-color: $bk6;
         padding: 20px;
+        margin-top: 20px;
         border-radius: 5px;
-        margin: 0 10px 20px;
+        background-color: $bk6;
+        text-align: right;
 
         @include responsive(pc-screens) {
-            margin: 0 10px 50px;
+            // margin: 0 10px 50px;
             padding: 40px;
         }
 
 
         .explain {
-            // @include gothic_font(medium);
-            @include content_align();
-            margin-bottom: 20px;
+            @include content_align(justify, 1.8em);
 
             @include responsive(pc-screens) {
-                font-size: 22px;
-                margin-bottom: 40px;
+                font-size: 18px;
             }
         }
 
         .shortcut {
             @include gothic_font(semibold, 15px);
             color: $yellow-brown;
+            margin-top: 20px;
 
             @include responsive(pc-screens) {
-                font-size: 20px;
+                font-size: 17px;
             }
 
             img {
@@ -70,38 +69,25 @@ main {
         }
     }
 
-    h2 {
-        display: none;
-    }
-
-
     li {
         border-bottom: 1px solid $bk5;
+        padding: 20px 10px;
 
-        @include responsive(pc-screens){
-            width: 1440px;
-            margin: 0 auto;
+        @include responsive(pc-screens) {
+            padding: 30px 20px;
         }
-
         &:first-child {
             border-top: 1px solid $bk5;
         }
 
     }
 
-
     .text-arrow {
         @include flex_between_center();
-        padding: 20px 10px;
-
-        @include responsive(pc-screens){
-            padding: 40px 10px;
-        }
-
 
         p {
             white-space: nowrap;
-            @include gothic_font(medium, 21px);
+            @include gothic_font(medium, 20px);
 
             @include responsive(pc-screens){
                 font-size: 28px;

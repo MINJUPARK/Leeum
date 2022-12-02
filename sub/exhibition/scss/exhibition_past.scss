@@ -120,7 +120,7 @@ main {
                     transition: all .3s;
     
                     @include responsive(tablet-screens) {
-                        width: 45%;
+                        width: 48%;
                     }
     
                     @include responsive(pc-screens) {
@@ -148,7 +148,7 @@ main {
                         .i-pic {
                             position: relative;
                             height: calc(195px / 350px) * 100%;
-
+                            border-radius: 5px 5px 0 0;
                             &:first-of-type {
                                 height:260px;
                             }
@@ -176,7 +176,8 @@ main {
                             p {
                                 font-size: 15px; 
                                 line-height: 1.5em; 
-                                margin: 10px 0 20px 0;
+                                margin-top: 10px;
+                                margin-bottom: 0;
                                 @include responsive(pc-screens) {
                                     font-size: 16px
                                 }

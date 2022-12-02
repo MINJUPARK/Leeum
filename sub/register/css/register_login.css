@@ -191,6 +191,22 @@ header .image img {
   width: 70px;
 }
 
+main section.login {
+  /* .id-pw-login {
+      border: 1px solid $bk4;
+      padding: 50px 30px;
+      border-top: 0;
+      form {
+          .id-pw {
+              margin-bottom: 20px;
+              text-align: center;
+              input {
+                  width: 100%;
+              }
+          }
+      }
+  } */
+}
 main section.login ul.angle-select {
   display: flex;
   justify-content: space-between;
@@ -245,15 +261,42 @@ main section.login ul.angle-select li.on span {
   color: #000;
   font-weight: 600;
 }
-main section.login .id-pw-login {
+main section.login .login-form {
   border: 1px solid #c5c5c5;
-  padding: 50px 30px;
   border-top: 0;
-}
-main section.login .id-pw-login form .id-pw {
-  margin-bottom: 20px;
-  text-align: center;
-}
-main section.login .id-pw-login form .id-pw input {
+  /*   background-color: #eeeff1; */
   width: 100%;
+  /*  height: 336px; */
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+}
+main section.login .text-field,
+main section.login .pwd-field {
+  width: 83.1428571429%;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  border-bottom: 1px solid #c5c5c5;
+}
+main section.login .pwd-field {
+  margin-bottom: 20px;
+}
+main section.login .submit-btn {
+  font-size: 14px;
+  color: white;
+  background-color: #000;
+  margin-bottom: 30px;
+  padding: 10px;
+  width: 83.1428571429%;
+}
+main section.login label {
+  /*  input{
+       margin-bottom: 30px;
+   } */
+}
+main section.login .id-pw-join {
+  justify-content: space-between;
 }/*# sourceMappingURL=register_login.css.map */
