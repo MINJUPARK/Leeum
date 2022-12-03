@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, b, strong, label, time {
+img, span, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -661,6 +661,14 @@ main {
     display: none;
   }
 }
+main .pc-br {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .pc-br {
+    display: block;
+  }
+}
 main h3 {
   font-size: 30px;
   text-align: center;
@@ -859,39 +867,96 @@ main .gift-membership-wrap .table .tr .tbody > div.td2 .card-title {
   display: block;
   margin-top: 22px;
 }
+@media screen and (min-width: 1440px) {
+  main .membership-wrap .table .tr .tbody > div.td1 .card-title, main .membership-wrap .table .tr .tbody > div.td2 .card-title,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-title,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-title {
+    margin-top: 40px;
+    font-size: 26px;
+  }
+}
 main .membership-wrap .table .tr .tbody > div.td1 .card-txt, main .membership-wrap .table .tr .tbody > div.td2 .card-txt,
 main .gift-membership-wrap .table .tr .tbody > div.td1 .card-txt,
 main .gift-membership-wrap .table .tr .tbody > div.td2 .card-txt {
   line-height: calc(1em + 10px);
-  margin-top: 5px;
+  margin-top: 10px;
   color: #5c5c5c;
 }
-main .membership-wrap .table .tr .tbody > div.td1 a, main .membership-wrap .table .tr .tbody > div.td2 a,
-main .gift-membership-wrap .table .tr .tbody > div.td1 a,
-main .gift-membership-wrap .table .tr .tbody > div.td2 a {
-  font-size: calc(1em + 2px);
-  font-weight: 500;
-  display: block;
-  height: 44px;
-  line-height: 44px;
-  margin: 26px auto 0;
+@media screen and (min-width: 1440px) {
+  main .membership-wrap .table .tr .tbody > div.td1 .card-txt, main .membership-wrap .table .tr .tbody > div.td2 .card-txt,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-txt,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-txt {
+    margin-top: 15px;
+  }
+}
+main .membership-wrap .table .tr .tbody > div.td1 .card-bt, main .membership-wrap .table .tr .tbody > div.td2 .card-bt,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-bt,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-bt {
   box-shadow: inset 0 0 0 1px #d4d4d4;
   border-radius: 5px;
-  transition: background-color 0.7s;
+  height: 44px;
+  margin: 26px auto 0;
 }
-main .membership-wrap .table .tr .tbody > div.td1 a:hover, main .membership-wrap .table .tr .tbody > div.td2 a:hover,
-main .gift-membership-wrap .table .tr .tbody > div.td1 a:hover,
-main .gift-membership-wrap .table .tr .tbody > div.td2 a:hover {
-  box-shadow: none;
+main .membership-wrap .table .tr .tbody > div.td1 .card-bt a, main .membership-wrap .table .tr .tbody > div.td2 .card-bt a,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-bt a,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-bt a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main .membership-wrap .table .tr .tbody > div.td1 .card-bt a::before, main .membership-wrap .table .tr .tbody > div.td2 .card-bt a::before,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-bt a::before,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-bt a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  width: 0;
+  background-color: #ac3f21;
+  border-radius: 3px;
+  transition: width 0.8s 0s, border-radius 0s 0.8s;
+}
+main .membership-wrap .table .tr .tbody > div.td1 .card-bt a span, main .membership-wrap .table .tr .tbody > div.td2 .card-bt a span,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-bt a span,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-bt a span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  transition: color 0.4s;
+}
+main .membership-wrap .table .tr .tbody > div.td1 .card-bt a:hover::before, main .membership-wrap .table .tr .tbody > div.td2 .card-bt a:hover::before,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-bt a:hover::before,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-bt a:hover::before {
+  width: 100%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+main .membership-wrap .table .tr .tbody > div.td1 .card-bt a:hover span, main .membership-wrap .table .tr .tbody > div.td2 .card-bt a:hover span,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-bt a:hover span,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-bt a:hover span {
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
-  main .membership-wrap .table .tr .tbody > div.td1 a, main .membership-wrap .table .tr .tbody > div.td2 a,
-main .gift-membership-wrap .table .tr .tbody > div.td1 a,
-main .gift-membership-wrap .table .tr .tbody > div.td2 a {
+  main .membership-wrap .table .tr .tbody > div.td1 .card-bt, main .membership-wrap .table .tr .tbody > div.td2 .card-bt,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-bt,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-bt {
     height: 70px;
-    line-height: 70px;
     margin-top: 50px;
   }
+}
+main .membership-wrap .table .tr .tbody > div.td1 .card-bt a span, main .membership-wrap .table .tr .tbody > div.td2 .card-bt a span,
+main .gift-membership-wrap .table .tr .tbody > div.td1 .card-bt a span,
+main .gift-membership-wrap .table .tr .tbody > div.td2 .card-bt a span {
+  font-size: calc(1em + 2px);
+  font-weight: 500;
 }
 main .membership-wrap .table .tr .tbody > div.td2,
 main .gift-membership-wrap .table .tr .tbody > div.td2 {
@@ -929,20 +994,16 @@ main .gift-membership-wrap .table .tr:last-child {
     margin-top: 100px;
   }
 }
-main .membership-wrap .membership .table .tbody > div.td1 a, main .membership-wrap .membership .table .tbody > div.td2 a {
-  width: 130px;
+main .membership-wrap .membership .table .tbody > div.td1 .card-bt, main .membership-wrap .membership .table .tbody > div.td2 .card-bt {
+  width: 150px;
 }
 @media screen and (min-width: 768px) {
-  main .membership-wrap .membership .table .tbody > div.td1 a, main .membership-wrap .membership .table .tbody > div.td2 a {
+  main .membership-wrap .membership .table .tbody > div.td1 .card-bt, main .membership-wrap .membership .table .tbody > div.td2 .card-bt {
     width: 250px;
   }
 }
 main .membership-wrap .membership .table .tbody > div.td1 .fee {
   color: #ac3f21;
-}
-main .membership-wrap .membership .table .tbody > div.td1 a:hover {
-  color: #fff;
-  background-color: #ac3f21;
 }
 main .membership-wrap .membership .table .tbody > div.td2 {
   border-left: 1px solid #c5c5c5;
@@ -950,9 +1011,7 @@ main .membership-wrap .membership .table .tbody > div.td2 {
 main .membership-wrap .membership .table .tbody > div.td2 .fee {
   color: #be6a15;
 }
-main .membership-wrap .membership .table .tbody > div.td2 a:hover {
-  color: #fff;
-  border-color: #be6a15;
+main .membership-wrap .membership .table .tbody > div.td2 .card-bt a::before {
   background-color: #be6a15;
 }
 main .gift-membership-wrap {
@@ -963,17 +1022,13 @@ main .gift-membership-wrap {
     margin-top: 280px;
   }
 }
-main .gift-membership-wrap .gift-membership .table .tbody > div.td1 a, main .gift-membership-wrap .gift-membership .table .tbody > div.td2 a {
-  width: 150px;
+main .gift-membership-wrap .gift-membership .table .tbody > div.td1 .card-bt, main .gift-membership-wrap .gift-membership .table .tbody > div.td2 .card-bt {
+  width: 160px;
 }
 @media screen and (min-width: 768px) {
-  main .gift-membership-wrap .gift-membership .table .tbody > div.td1 a, main .gift-membership-wrap .gift-membership .table .tbody > div.td2 a {
+  main .gift-membership-wrap .gift-membership .table .tbody > div.td1 .card-bt, main .gift-membership-wrap .gift-membership .table .tbody > div.td2 .card-bt {
     width: 250px;
   }
-}
-main .gift-membership-wrap .gift-membership .table .tbody > div.td1 a:hover, main .gift-membership-wrap .gift-membership .table .tbody > div.td2 a:hover {
-  color: #fff;
-  background-color: #ac3f21;
 }
 main .gift-membership-wrap .gift-membership .table .tbody > div.td1 .fee, main .gift-membership-wrap .gift-membership .table .tbody > div.td2 .fee {
   color: #ac3f21;
@@ -991,7 +1046,7 @@ main .gift-membership-wrap .gift-membership .gift-detail h4 {
 }
 @media screen and (min-width: 1440px) {
   main .gift-membership-wrap .gift-membership .gift-detail h4 {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 main .gift-membership-wrap .gift-membership .gift-detail ul {
@@ -1022,32 +1077,38 @@ main .gift-membership-wrap .gift-membership .gift-detail ul li strong {
     margin-left: 40px;
   }
 }
-main .gift-membership-wrap .gift-membership .gift-detail ul li > div {
-  line-height: calc(1em + 12px);
+main .gift-membership-wrap .gift-membership .gift-detail ul li .detail-txt {
+  text-align: left;
+  line-height: 2em;
+  color: #3c3c3c;
   margin-top: 30px;
   margin-left: 10px;
 }
 @media screen and (min-width: 1440px) {
-  main .gift-membership-wrap .gift-membership .gift-detail ul li > div {
+  main .gift-membership-wrap .gift-membership .gift-detail ul li .detail-txt {
     width: 1120px;
     margin-top: 0;
     margin-left: 0;
   }
 }
-main .gift-membership-wrap .gift-membership .gift-detail ul li > div p {
+main .gift-membership-wrap .gift-membership .gift-detail ul li .detail-txt p {
   margin-top: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main .gift-membership-wrap .gift-membership .gift-detail ul li > div p {
+  main .gift-membership-wrap .gift-membership .gift-detail ul li .detail-txt p {
     margin-top: 30px;
   }
 }
-main .gift-membership-wrap .gift-membership .gift-detail ul li > div p:first-child {
+main .gift-membership-wrap .gift-membership .gift-detail ul li .detail-txt p:first-child {
   margin-top: 0;
 }
-main .gift-membership-wrap .gift-membership .gift-detail ul li > div p .light-s {
+main .gift-membership-wrap .gift-membership .gift-detail ul li .detail-txt p .light-s {
   font-size: calc(1em - 2px);
   color: #5c5c5c;
+}
+main .gift-membership-wrap .gift-membership .gift-detail ul li .detail-txt p a {
+  color: #3c3c3c;
+  text-decoration: underline;
 }
 main .gift-membership-wrap .gift-membership .gift-detail ul li:first-child p {
   padding-left: 11px;
@@ -1193,7 +1254,12 @@ main section.corporate-member-wrap .corporate-member .corporate-bt {
   height: 50px;
   transform: translateX(50%);
 }
-main section.corporate-member-wrap .corporate-member .corporate-bt::before {
+main section.corporate-member-wrap .corporate-member .corporate-bt a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main section.corporate-member-wrap .corporate-member .corporate-bt a::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1206,20 +1272,6 @@ main section.corporate-member-wrap .corporate-member .corporate-bt::before {
   border-radius: 3px;
   transition: width 0.8s 0s, border-radius 0s 0.8s;
 }
-main section.corporate-member-wrap .corporate-member .corporate-bt:hover::before {
-  width: 100%;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-main section.corporate-member-wrap .corporate-member .corporate-bt:hover a span {
-  color: #000;
-}
-main section.corporate-member-wrap .corporate-member .corporate-bt a {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: color 1s;
-}
 main section.corporate-member-wrap .corporate-member .corporate-bt a span {
   position: absolute;
   left: 50%;
@@ -1229,6 +1281,15 @@ main section.corporate-member-wrap .corporate-member .corporate-bt a span {
   width: 100%;
   text-align: center;
   color: #fff;
+  transition: color 0.4s;
+}
+main section.corporate-member-wrap .corporate-member .corporate-bt a:hover::before {
+  width: 100%;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+main section.corporate-member-wrap .corporate-member .corporate-bt a:hover span {
+  color: #000;
 }
 @media screen and (min-width: 768px) {
   main section.corporate-member-wrap .corporate-member .corporate-bt {
@@ -1270,21 +1331,22 @@ main .associate-wrap .associate ul.associate-con li {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 142px;
+  height: 158px;
   margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   main .associate-wrap .associate ul.associate-con li {
     width: 48%;
-    height: 200px;
+    height: 175px;
   }
 }
 @media screen and (min-width: 1440px) {
   main .associate-wrap .associate ul.associate-con li {
     width: 680px;
-    height: 275px;
-    border: 1px solid #c5c5c5;
-    border-radius: 5px;
+    height: 260px;
+    margin-bottom: 30px;
     overflow: hidden;
   }
 }
@@ -1314,7 +1376,7 @@ main .associate-wrap .associate ul.associate-con li .store-txt p {
 }
 @media screen and (min-width: 1440px) {
   main .associate-wrap .associate ul.associate-con li .store-txt p {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 main .associate-wrap .associate ul.associate-con li .store-txt b {
@@ -1332,8 +1394,9 @@ main .associate-wrap .associate ul.associate-con li .store-txt b .red {
   color: #f00;
 }
 main .associate-wrap .associate ul.associate-con li .store-txt address,
-main .associate-wrap .associate ul.associate-con li .store-txt a {
+main .associate-wrap .associate ul.associate-con li .store-txt .tel {
   font-size: 14px;
+  color: #3c3c3c;
 }
 main .associate-wrap .associate ul.associate-con li .store-txt address {
   margin-top: 16px;
@@ -1344,13 +1407,16 @@ main .associate-wrap .associate ul.associate-con li .store-txt address {
     font-size: 18px;
   }
 }
+main .associate-wrap .associate ul.associate-con li .store-txt .tel {
+  margin-top: 8px;
+}
 @media screen and (min-width: 1440px) {
-  main .associate-wrap .associate ul.associate-con li .store-txt a {
+  main .associate-wrap .associate ul.associate-con li .store-txt .tel {
     margin-top: 10px;
     font-size: 16px;
   }
 }
-main .associate-wrap .associate ul.associate-con li .store-txt a img {
+main .associate-wrap .associate ul.associate-con li .store-txt .tel img {
   width: 10px;
   margin-right: 4px;
 }

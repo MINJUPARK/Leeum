@@ -5,47 +5,45 @@
 @mixin bt-hover($border, $txt, $hover-back, $hover-txt) {
     box-shadow: inset 0 0 0 1px $border;
     border-radius: 5px;
-    
-    &::before {
-        @include overlay_bk(1);
-        width: 0;
-        background-color: $hover-back;
-        border-radius: 3px;
-        
-        transition: 
-            width .8s 0s,
-            border-radius 0s .8s;
-    }
-    
-    &:hover {
-
-        &::before {
-            width: 100%;
-            border-top-right-radius: 3px;
-            border-bottom-right-radius: 3px;
-        }
-
-        a {
-            
-            span {
-                color: $hover-txt;
-            }
-        }
-    }
 
     a {
         position: relative;
         width: 100%;
         height: 100%;
         
-        transition: color 1s;
-        
+        &::before {
+            @include overlay_bk(1);
+            width: 0;
+            background-color: $hover-back;
+            border-radius: 3px;
+            
+            transition: 
+                width .8s 0s,
+                border-radius 0s .8s;
+
+        }
+
         span {
             @include element_center();
             display: block;
             width: 100%;
             text-align: center;
             color: $txt;
+
+            transition: color .4s;
+        }
+        
+        &:hover {
+
+            &::before {
+                width: 100%;
+                border-top-right-radius: 3px;
+                border-bottom-right-radius: 3px;
+            }
+
+            span {
+                color: $hover-txt;
+            }
         } 
     }
 }

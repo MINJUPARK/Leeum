@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, b, strong, label, time {
+img, span, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -937,13 +937,11 @@ main .conservation-method-wrap .conservation-method ul.method-list {
 }
 main .conservation-method-wrap .conservation-method ul.method-list li {
   position: relative;
-  margin-top: 90px;
   opacity: 0.2;
   transition: all 0.5s;
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li {
-    margin-top: 170px;
     padding: 55px 120px;
     box-shadow: inset 0 0 0 1px #c5c5c5;
   }
@@ -1075,12 +1073,39 @@ main .conservation-method-wrap .conservation-method ul.method-list li .step-img 
     width: 560px;
   }
 }
-main .conservation-method-wrap .conservation-method ul.method-list li:nth-child(2) .step-img {
-  display: block;
+main .conservation-method-wrap .conservation-method ul.method-list li .step-img.one-img {
   width: 100%;
 }
-main .conservation-method-wrap .conservation-method ul.method-list li:nth-child(2) .step-img img {
+main .conservation-method-wrap .conservation-method ul.method-list li .step-img.one-img img {
   width: 100%;
+}
+main .conservation-method-wrap .conservation-method ul.method-list .arrow {
+  display: block;
+  width: 27px;
+  margin: 37px auto;
+  filter: brightness(0) saturate(100%) invert(24%) sepia(15%) saturate(7470%) hue-rotate(350deg) brightness(103%) contrast(85%);
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 1.5s 0.8s, transform 1.5s 0.8s;
+}
+@media screen and (min-width: 768px) {
+  main .conservation-method-wrap .conservation-method ul.method-list .arrow {
+    width: 34px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .conservation-method-wrap .conservation-method ul.method-list .arrow {
+    width: 51px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+main .conservation-method-wrap .conservation-method ul.method-list .arrow:last-child {
+  display: none;
+}
+main .conservation-method-wrap .conservation-method ul.method-list .arrow.on {
+  opacity: 1;
+  transform: translateY(0);
 }
 main section.movePage {
   margin-top: 40px;

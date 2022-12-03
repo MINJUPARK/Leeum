@@ -15,7 +15,6 @@ window.addEventListener("load", function () {
             move = setInterval(() => {
             sliderPos.value++;
             sliderChange();
-            console.log(sliderPos.value);
     
             if(sliderPos.value == 100) {
                 clearInterval(move);
@@ -31,9 +30,9 @@ window.addEventListener("load", function () {
         slidermove(true);
     });
     
-    
-    this.setTimeout(slidermove(true), 1200);
+    setTimeout(slidermove, 1000, true);
     sliderChange();        
     document.querySelector("#slider").addEventListener("input", sliderChange, false);
     document.querySelector("#slider").addEventListener("change", sliderChange, false);
+    
 })
