@@ -4,7 +4,7 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 @import '../../../scss/mixin_footer.scss';
-
+@import '../../about/scss/about_mixin_MD.scss';
 header {
     @include header_common();
     @include header_sub();
@@ -341,18 +341,18 @@ main {
             }
 
             .request {
+                @include bt-hover($bk5, #000, $red-brown, #fff);
                 text-align: center;
-                border: 1px solid $bk1;
-                padding: 10px;
-                border-radius: 5px;
                 
-
-                a {
-                @include gothic_font(semibold);
-                width: 100%;
-                color: $bk1;
-
                 border-radius: 5px;
+                height: 44px;
+                margin: 26px auto 0;
+                
+                
+                a {
+                    @include gothic_font(semibold);
+                    width: 100%;
+                    border: 1px solid $bk1;
 
         
                     @include responsive(pc-screens){
@@ -365,42 +365,18 @@ main {
                 }
             }
 
-            .request {
-                text-align: center;
-                border: 1px solid $bk1;
-                padding: 10px;
-                border-radius: 5px;
-                
-
-                a {
-                @include gothic_font(semibold);
-                width: 100%;
-                color: $bk1;
-                border-radius: 5px;
-
-        
-                    @include responsive(pc-screens){
-                        font-size: 20px;
-                        text-align: center;
-                        margin: 0 auto;
-                        width: 600px;
-                        padding: 5px 0;
-                    }
-                }
-            }
 
             .request1 {
+                @include bt-hover($bk5, #000, $red-brown, #fff);
                 text-align: center;
-                border: 1px solid $bk1;
-                padding: 10px;
                 border-radius: 5px;
                 margin-top: -50px;
-
+                height: 44px;
                 a {
-                @include gothic_font(semibold);
-                width: 100%;
-                color: $bk1;
-                border-radius: 5px;
+                    @include gothic_font(semibold);
+                    width: 100%;
+                    border: 1px solid $bk1;
+
 
         
                     @include responsive(pc-screens){

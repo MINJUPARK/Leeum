@@ -4,11 +4,11 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 @import '../../../scss/mixin_footer.scss';
+@import '../../about/scss/about_mixin_MD.scss';
 
 header {
     @include header_common();
     @include header_sub();
-
     @include full_bg('exhibition_header.png');
 }
 
@@ -142,7 +142,6 @@ main {
 
         h2 {
             @include gothic_font(bold, 30px);
-            // white-space: nowrap;
 
             @include responsive(pc-screens){
                 font-size: 46px;
@@ -174,33 +173,42 @@ main {
             width: 100%;
             z-index: 95;
             
-
+            
             @include responsive(pc-screens){
+                @include bt-hover($bk5, #000, $red-brown, #fff);
+                box-shadow: none;
                 position: relative;
                 width: 100%;
+                margin-top: 30px;
+                
             }
 
             a {
             @include gothic_font(semibold);
             width: 100%;
-            padding: 13px;
-            text-align: center;
             border: 1px solid #be6a15;
             background: #be6a15;
+            padding: 13px;
+            text-align: center;
             color:#fff;
             padding: 23px;
             font-size: 18px;
     
                 @include responsive(pc-screens){
-                    margin-top: 25px;
-                    padding: 20px;
+                    border: 1px solid black;
+                    background-color: #fff;
                     border-radius: 5px;
+                    
                 }
                 img{
                     width:20px;
                     height:20px;
                     margin-right: 5px;
-                    padding-bottom: 3px;
+
+                    @include responsive(pc-screens){
+                        position: absolute;
+                        top: 13px; left: 185px;
+                    }
                 }
             }
             
