@@ -5,20 +5,10 @@ window.onload = function() {
     let scrollLocation = window.scrollY;
     console.log(page);
     
-    window.addEventListener('scroll', () => {
-        scrollLocation = this.scrollY;
-        let viewH = this.innerHeight;
-        let documentH = document.body.scrollHeight;
-
-        if (scrollLocation + viewH >= documentH) {
-            close.classList.toggle("end");
-        };
-    });
-    
     close.addEventListener('click', e => {
         e.preventDefault();
         window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-
+        
         window.onscroll = () => {
             if(scrollLocation < 100) {
                 slide.classList.add("silde-out");
@@ -27,12 +17,22 @@ window.onload = function() {
                 }, 350); 
             }
         }
-
+        
         if(scrollLocation < 100) {
             slide.classList.add("silde-out");
             setTimeout(() => {
                 location.href = `${page}`;
             }, 350); 
         }        
+    });
+    
+    window.addEventListener('scroll', () => {
+        scrollLocation = this.scrollY;
+        let viewH = this.innerHeight;
+        let documentH = document.body.scrollHeight;
+    
+        if (scrollLocation + viewH >= documentH) {
+            close.classList.toggle("end");
+        };
     });
 }
