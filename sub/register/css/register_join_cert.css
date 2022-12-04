@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, b, strong, label, time {
+img, span, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -182,4 +182,107 @@ h6 {
   font-size: 18px;
 }
 
-/* -------------------------------------------------------------------------------------------------------------------- *//*# sourceMappingURL=register_join_cert.css.map */
+/* -------------------------------------------------------------------------------------------------------------------- */
+div.logo .image {
+  display: flex;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 1440px) {
+  div.logo .image {
+    margin-bottom: 150px;
+  }
+}
+div.logo .image img {
+  width: 36px;
+  margin-right: 16px;
+}
+@media screen and (min-width: 1440px) {
+  div.logo .image img {
+    width: 70px;
+  }
+}
+div.logo .image p {
+  font-size: 12px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  div.logo .image p {
+    font-size: 22px;
+  }
+}
+div.logo .image strong {
+  font-size: 24px;
+}
+@media screen and (min-width: 1440px) {
+  div.logo .image strong {
+    font-size: 46px;
+  }
+}
+
+.member h6 {
+  text-align: center;
+}
+.member p {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.member .field {
+  text-align: justify;
+  /* input {
+      width: 65.71428571428571%;
+  } */
+}
+.member .field label {
+  font-size: 16px;
+  font-weight: 600;
+}
+.member .field label:first-child {
+  width: 34.2857142857%;
+}
+.member .field.name input {
+  width: 17.3913043478%;
+}
+.member .field.birth input {
+  width: 43.4782608696%;
+}
+.member .field.id input, .member .field.tel-number input {
+  width: 38.5652173913%;
+  margin-right: 20px;
+}
+.member .field.id input:last-child, .member .field.tel-number input:last-child {
+  width: 19.0869565217%;
+  text-align: center;
+  margin-right: 0;
+}
+.member .field.mail input {
+  width: 16.6956521739%;
+  /* #opt {
+      width: 5.69565217391304%;
+      text-align: center;
+  } */
+}
+.member .field.address {
+  /* label {
+      width: 34.28571428571429%;
+
+  } */
+}
+.member .field.address input {
+  width: 31.695652%;
+  /*  &:nth-child(2) {
+       width: 46.69565217391304%;
+   } */
+  /* &:nth-child(2) {
+      width: 60.34782608695652%;
+  } */
+}
+.member .field.address span {
+  text-align: right;
+  /*  width: 60.69565217391304%; */
+  /*  65.71428571428571 */
+}
+.member .field.address span input {
+  width: 25%;
+}/*# sourceMappingURL=register_join_cert.css.map */

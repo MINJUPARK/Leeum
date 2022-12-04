@@ -2,3 +2,130 @@
 @import '../../../scss/style.scss';
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
+
+div.logo {
+    .image {
+        display: flex;
+        // padding-left: 20px;
+        margin-bottom: 15px;
+
+        @include responsive(pc-screens) {
+            margin-bottom: 150px;
+        }
+
+        img {
+            width: 36px;
+            margin-right: 16px;
+
+            @include responsive(pc-screens) {
+                width: 70px;
+            }
+        }
+        p {
+            @include gothic-font(medium, 12px);
+
+            @include responsive(pc-screens) {
+                font-size: 22px;
+            }
+        }
+
+        strong {
+            font-size: 24px;
+
+            @include responsive(pc-screens) {
+                font-size: 46px;
+            }
+        }
+    }
+}
+.member {
+
+    h6 {
+        text-align: center;
+    }
+
+    p {
+        text-align: right;
+        @include gothic-font(medium, 14px);
+        margin-bottom: 20px;
+    }
+
+    .field {
+        text-align: justify;
+
+        label {
+            @include gothic-font(semibold);
+        }
+
+        label:first-child{
+            width: 34.28571428571429%;
+        }
+
+        &.name {
+            input{
+                width: 17.39130434782609%;
+            }
+        }
+
+        &.birth {
+            input {
+                width: 43.47826086956522%;
+            }
+        }
+
+        &.id,
+        &.tel-number {
+            input{
+                width: 38.56521739130435%;
+                margin-right: 20px;
+                &:last-child {
+                    width: 19.08695652173913%;
+                    text-align: center;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &.mail {
+            input {
+                width: 16.69565217391304%;
+                /* #opt {
+                    width: 5.69565217391304%;
+                    text-align: center;
+                } */
+            }
+        }
+
+        &.address {
+            input{
+                width: 31.695652%;
+                
+               /*  &:nth-child(2) {
+                    width: 46.69565217391304%;
+                } */
+                /* &:nth-child(2) {
+                    width: 60.34782608695652%;
+                } */
+            }
+            /* label {
+                width: 34.28571428571429%;
+
+            } */
+            label {
+            }
+            span {
+                text-align: right;
+               /*  width: 60.69565217391304%; */
+               input {
+                width: 25%;
+               }
+               /*  65.71428571428571 */
+            }
+        }
+
+        /* input {
+            width: 65.71428571428571%;
+        } */
+ 
+    }
+}

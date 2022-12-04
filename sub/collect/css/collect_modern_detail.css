@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, b, strong, label, time {
+img, span, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
