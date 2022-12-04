@@ -670,14 +670,6 @@ main h3 {
     font-size: 30px;
   }
 }
-main .before-after-case-intro {
-  margin-top: 60px;
-}
-@media screen and (min-width: 1440px) {
-  main .before-after-case-intro {
-    margin-top: 120px;
-  }
-}
 @media screen and (min-width: 1440px) {
   main .before-after-case-intro .intro-flex {
     display: flex;

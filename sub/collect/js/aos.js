@@ -1,5 +1,3 @@
 $(function() {
-    $(window).on("scroll", function() {
-        AOS.init();
-    })
+    AOS.init();
 }) 

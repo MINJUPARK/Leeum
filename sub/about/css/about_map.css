@@ -653,7 +653,7 @@ main {
 }
 @media screen and (min-width: 768px) {
   main {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 main .tablet-view {
@@ -724,7 +724,6 @@ main .map-wrap .map .way-wrap .way1 address, main .map-wrap .map .way-wrap .way1
 main .map-wrap .map .way-wrap .way2 address,
 main .map-wrap .map .way-wrap .way2 p {
   margin-top: 16px;
-  font-size: calc(1em - 2px);
   line-height: 2em;
   color: #3c3c3c;
 }
@@ -749,7 +748,6 @@ main .map-wrap .map .way-wrap .way1 address {
 main .map-wrap .map .way-wrap .way1 a {
   margin-top: 10px;
   padding-left: 30px;
-  font-size: calc(1em - 2px);
   background-image: url(../../../image/icon_call.svg);
   background-repeat: no-repeat;
   background-position-y: center;

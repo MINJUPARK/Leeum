@@ -37,10 +37,6 @@ main {
     
     .texture-intro-wrap {
         
-        @include responsive(pc-screens) {
-            margin-top: 120px;
-        }
-        
         .texture-intro {
             
             .intro-img {

@@ -648,9 +648,6 @@ header .breadcrumb-wrap {
   }
 }
 
-main {
-  word-break: keep-all;
-}
 @media screen and (min-width: 768px) {
   main {
     font-size: 20px;
@@ -1421,12 +1418,97 @@ main .associate-wrap .associate ul.associate-con li .store-txt .tel img {
   margin-right: 4px;
 }
 main .faq-wrap {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 @media screen and (min-width: 1440px) {
   main .faq-wrap {
     margin-top: 200px;
   }
+}
+main .faq-wrap ul.faq-list {
+  margin-top: 60px;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list {
+    margin-top: 120px;
+  }
+}
+main .faq-wrap ul.faq-list li {
+  border-bottom: 1px solid #d4d4d4;
+  padding: 20px 10px;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list li {
+    padding: 30px 20px;
+  }
+}
+main .faq-wrap ul.faq-list li:first-child {
+  border-top: 1px solid #d4d4d4;
+}
+main .faq-wrap ul.faq-list li .q-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .faq-wrap ul.faq-list li .q-box p {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list li .q-box p {
+    font-size: 22px;
+  }
+}
+main .faq-wrap ul.faq-list li .q-box p b {
+  font-size: 120%;
+  margin-right: 5px;
+  color: #be6a15;
+}
+main .faq-wrap ul.faq-list li .q-box .dropdown {
+  transition: 0.3s;
+  height: 8px;
+  cursor: pointer;
+}
+main .faq-wrap ul.faq-list li .q-box .dropdown.active {
+  transform: rotate(180deg);
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list li .q-box .dropdown {
+    height: 12px;
+  }
+}
+main .faq-wrap ul.faq-list li .a-box {
+  display: none;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list li .a-box {
+    padding: 40px;
+  }
+}
+main .faq-wrap ul.faq-list li .a-box p {
+  text-align: justify;
+  line-height: 1.8em;
+  color: #3c3c3c;
+}
+main .faq-wrap ul.faq-list li .a-box p a {
+  text-decoration: underline;
+}
+main .faq-wrap ul.faq-list li .a-box a .shortcut {
+  font-size: 1em;
+  font-weight: 600;
+  color: #be6a15;
+}
+main .faq-wrap ul.faq-list li .a-box a .shortcut img {
+  margin-left: 10px;
+  height: 12px;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
 main img {
   width: 10%;
