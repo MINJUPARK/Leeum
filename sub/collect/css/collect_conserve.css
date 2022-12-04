@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, b, strong, label, time {
+img, span, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -650,7 +650,6 @@ header .breadcrumb-wrap {
 
 main {
   overflow: hidden;
-  word-break: keep-all;
 }
 @media screen and (min-width: 768px) {
   main {
@@ -678,11 +677,6 @@ main h3 {
 }
 main .research-intro-wrap {
   margin-top: 35px;
-}
-@media screen and (min-width: 1440px) {
-  main .research-intro-wrap {
-    margin-top: 70px;
-  }
 }
 main .research-intro-wrap .research-intro strong {
   font-family: "KoPub Batang";
@@ -748,11 +742,11 @@ main .lab-role-wrap .lab-role ul.role {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 @media screen and (min-width: 1440px) {
   main .lab-role-wrap .lab-role ul.role {
-    margin-top: 110px;
+    margin-top: 120px;
   }
 }
 main .lab-role-wrap .lab-role ul.role li {
@@ -777,7 +771,7 @@ main .lab-role-wrap .lab-role ul.role li p {
   }
 }
 main .texture-research-wrap {
-  margin-top: 120px;
+  margin-top: 150px;
 }
 @media screen and (min-width: 1440px) {
   main .texture-research-wrap {
@@ -885,7 +879,7 @@ main .texture-research-wrap .texture-research .texture-lsit .slide-item a img {
   }
 }
 main .conserve-type-wrap {
-  margin-top: 120px;
+  margin-top: 150px;
 }
 @media screen and (min-width: 1440px) {
   main .conserve-type-wrap {
@@ -959,7 +953,7 @@ main .conserve-type-wrap .conserve-type ul.type-lsit li:last-child {
   }
 }
 main .conserve-case-wrap {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 @media screen and (min-width: 1440px) {
   main .conserve-case-wrap {
@@ -1035,15 +1029,85 @@ main .conserve-case-wrap .conserve-case ul.case-list li:last-child {
   }
 }
 main .faq-wrap {
-  margin-top: 120px;
+  margin-top: 140px;
 }
 @media screen and (min-width: 1440px) {
   main .faq-wrap {
     margin-top: 330px;
   }
 }
-main img {
-  width: 30px;
+main .faq-wrap ul.faq-list {
+  margin-top: 60px;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list {
+    margin-top: 120px;
+  }
+}
+main .faq-wrap ul.faq-list li {
+  border-bottom: 1px solid #d4d4d4;
+  padding: 20px 10px;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list li {
+    padding: 30px 20px;
+  }
+}
+main .faq-wrap ul.faq-list li:first-child {
+  border-top: 1px solid #d4d4d4;
+}
+main .faq-wrap ul.faq-list li .q-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .faq-wrap ul.faq-list li .q-box p {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list li .q-box p {
+    font-size: 22px;
+  }
+}
+main .faq-wrap ul.faq-list li .q-box p b {
+  font-size: 120%;
+  margin-right: 5px;
+  color: #be6a15;
+}
+main .faq-wrap ul.faq-list li .q-box .dropdown {
+  transition: 0.3s;
+  height: 8px;
+  cursor: pointer;
+}
+main .faq-wrap ul.faq-list li .q-box .dropdown.active {
+  transform: rotate(180deg);
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list li .q-box .dropdown {
+    height: 12px;
+  }
+}
+main .faq-wrap ul.faq-list li .a-box {
+  display: none;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  text-align: right;
+}
+@media screen and (min-width: 1440px) {
+  main .faq-wrap ul.faq-list li .a-box {
+    padding: 40px;
+  }
+}
+main .faq-wrap ul.faq-list li .a-box p {
+  text-align: justify;
+  line-height: 1.8em;
+  color: #3c3c3c;
 }
 
 @media screen and (min-width: 1440px) {

@@ -15,7 +15,6 @@ header {
 }
 
 main {
-    word-break: keep-all; // 단어를 기준으로 줄바꿈
 
     @include responsive(tablet-screens) { font-size: 20px; }
     
@@ -735,10 +734,103 @@ main {
     } // affiliate-wrap
     
     .faq-wrap {
-        margin-top: 100px;
-        
+        margin-top: 130px;
+
         @include responsive(pc-screens) {
-            margin-top: 100px * 2;
+            margin-top: 200px;
+        }
+
+        ul.faq-list {
+            margin-top: 60px;
+
+            @include responsive(pc-screens) {
+                margin-top: 120px;
+            }
+
+            li {
+                border-bottom: 1px solid $bk5;
+                padding: 20px 10px;
+        
+                @include responsive(pc-screens) {
+                    padding: 30px 20px;
+                }
+
+                &:first-child {
+                    border-top: 1px solid $bk5;
+                }
+
+                .q-box {
+                    @include flex_between_center();
+                    
+                    p {
+                        @include gothic_font(semibold, 18px);
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        
+                        @include responsive(pc-screens) {
+                            font-size: 22px;
+                        }
+    
+                        b {
+                            font-size: 120%;
+                            margin-right: 5px;
+                            color: $yellow-brown;
+                        }
+                    }
+
+                    .dropdown {
+                        @include icon_rotate(180deg);
+                        height: 8px;
+                        cursor: pointer;
+            
+                        @include responsive(pc-screens){
+                            height: 12px; //
+                            // top: 50px;
+                        }
+                    }
+                }
+                
+                .a-box {
+                    display: none;
+                    padding: 20px;
+                    margin-top: 20px;
+                    border-radius: 5px;
+                    background-color: $bk6;
+                    // text-align: right;
+            
+                    @include responsive(pc-screens) {
+                        padding: 40px;
+                    }
+            
+            
+                    p {
+                        @include content_align(justify, 1.8em);
+
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+            
+                    a {
+                        .shortcut {
+                            @include gothic_font(semibold, 1em);
+                            color: $yellow-brown;
+                            // margin-top: 20px;
+                
+                            // @include responsive(pc-screens) {
+                            //     font-size: 17px;
+                            // }
+                
+                            img {
+                                margin-left: 10px;
+                                height: 12px;
+                                filter: $svg-yellowbrown;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 

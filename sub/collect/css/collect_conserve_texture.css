@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, b, strong, label, time {
+img, span, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -675,11 +675,6 @@ main h3 {
 @media screen and (min-width: 1440px) {
   main h3 {
     font-size: 30px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main .texture-intro-wrap {
-    margin-top: 120px;
   }
 }
 main .texture-intro-wrap .texture-intro .intro-img {
