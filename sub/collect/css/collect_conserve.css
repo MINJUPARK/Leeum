@@ -1057,6 +1057,9 @@ main .faq-wrap ul.faq-list li {
 main .faq-wrap ul.faq-list li:first-child {
   border-top: 1px solid #d4d4d4;
 }
+main .faq-wrap ul.faq-list li:first-child .a-box {
+  display: block;
+}
 main .faq-wrap ul.faq-list li .q-box {
   display: flex;
   justify-content: space-between;
@@ -1089,7 +1092,7 @@ main .faq-wrap ul.faq-list li .q-box .dropdown.active {
 }
 @media screen and (min-width: 1440px) {
   main .faq-wrap ul.faq-list li .q-box .dropdown {
-    height: 12px;
+    height: 10px;
   }
 }
 main .faq-wrap ul.faq-list li .a-box {

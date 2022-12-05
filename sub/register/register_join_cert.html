@@ -30,20 +30,121 @@
         </div>
     </div>
 
-    <div class="join-cert">
+    <div class="member">
         <div class="container">
-            <p>정보 입력</p>
+            <h6>정보 입력</h6>
+            <p><span>*</span>필수입력사항</p>
             <form>
-                <div class="id-text">
-                    <label for="id">아이디</label>
-                    <input type="text" class="id" id="id">
+                <div class="field name">
+                    <label>이름</label>
+                    <input type="text">
                 </div>
-                <div class="pw-text">
-                    <label for="pw">비밀번호</label>
-                    <input type="password" class="pw" id="pw">
+                <div class="field birth">
+                    <label>생년월일</label>
+                    <input type="text">
                 </div>
+
+                <div class="field id">
+                    <label><span>*</span>아이디</label>
+                    <input type="text" placeholder="영문, 숫자 10~12자리 이내">
+                    <input type="button" value="중복확인">
+                </div>
+
+                <div class="field pw">
+                    <label><span>*</span>비밀번호</label>
+                    <input type="password" class="userpw" placeholder="영문, 숫자 10~12자리 이내">
+                </div>
+
+                <div class="field pw-confirm">
+                    <label><span>*</span>비밀번호 확인</label>
+                    <input type="password" class="userpw-confirm" placeholder="비밀번호를 한 번 더 입력">
+                </div>
+
+                <div class="field tel-number">
+                    <label>휴대폰 번호</label>
+                    <input type="tel">
+                    <input type="text" value="인증완료" readonly>
+                </div>
+                
+                <div class="field mail">
+                    <label>이메일</label>
+                    <input type="text"> 
+                    <span>@</span> 
+                    <input type="text" placeholder="직접 입력"> 
+                    <select id="opt">
+                        <option>메일 선택</option>
+                        <option>naver.com</option>
+                        <option>gmail.com</option>
+                        <option>daum.net</option>
+                        <option>hanmail.net</option>
+                        <option>hotmail.com</option>
+                        <option>nate.com</option>
+                        <option>yahoo.co.kr</option>
+                        <option>empas.com</option>
+                        <option>freechal.com</option>
+                        <option>lycos.co.kr</option>
+                        <option>korea.com</option>
+                        <option>hanmir.com</option>
+                        <option>dreamwiz.com</option>
+                        <option>paran.com</option>
+                    </select>
+                </div>
+
+                <div class="field address">
+                    <label>주소</label>
+                    <div class="add">
+                        <span>
+                            <input type="text" id="" class="" readonly>
+                            <input type="button" id="" class="=" onclick="" value="우편번호 찾기" readonly>
+                        </span>
+                        <span>
+                            <input type="text" id="middle" class="middle" readonly>
+                            <label>기본 주소</label>
+                        </span>
+                        <span>
+                            <input type="text" id="last" class="last">
+                            <label>나머지 주소</label>
+                        </span>
+                    </div>
+                </div>
+                <!--    
+                    <div class="field address">
+                            <label>주소</label>
+                            <div class="address-text">
+                                <input type="text" id="" class="" readonly>
+                                <input type="button" id="" class="=" onclick="" value="우편번호 찾기" readonly>
+                                <span>
+                                    <input type="text" id="" class="" readonly>
+                                    <label>기본 주소</label>
+                                </span>
+                                <span>
+                                    <input type="text" id="" class="">
+                                    <label>나머지 주소</label>
+                                </span>
+                            </div>
+                    </div> -->
+
+                <div class="field gender">
+                    <label>성별</label>
+                    <label><input type="radio" name="gender">남자</label>
+                    <label><input type="radio" name="gender">여자</label>
+                </div>
+
+                <div class="field agree">
+                    <label>뉴스레터 수신동의</label>
+                    <label><input type="radio" name="agree">동의</label>
+                    <label><input type="radio" name="agree">비동의</label>
+                    <p>※ 동의 거부 시 서비스가 제한이 될 수 있습니다.</p>
+                </div>
+                
             </form>
+            <div class="submit">
+                <input type="submit" value="가입하기">
+            </div>
         </div>
     </div>
+  
+  
+
 </body>
 </html>

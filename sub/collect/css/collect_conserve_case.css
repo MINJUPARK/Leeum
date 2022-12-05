@@ -994,8 +994,8 @@ main .conservation-method-wrap .conservation-method ul.method-list li .step-titl
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li .step-title .step-num {
-    width: 90px;
-    height: 50px;
+    width: 80px;
+    height: 45px;
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li .step-title .step-num span {
@@ -1006,7 +1006,7 @@ main .conservation-method-wrap .conservation-method ul.method-list li .step-titl
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li .step-title .step-num span {
-    line-height: 50px;
+    line-height: 45px;
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li .step-title strong {
@@ -1020,7 +1020,7 @@ main .conservation-method-wrap .conservation-method ul.method-list li .step-titl
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li .step-title strong {
     margin-left: 15px;
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li .step-txt p {

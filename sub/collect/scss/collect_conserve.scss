@@ -435,8 +435,13 @@ main {
                 @include responsive(pc-screens) {
                     padding: 30px 20px;
                 }
+
                 &:first-child {
                     border-top: 1px solid $bk5;
+                    
+                    .a-box {
+                        display: block;
+                    }
                 }
 
                 .q-box {
@@ -465,8 +470,7 @@ main {
                         cursor: pointer;
                         
                         @include responsive(pc-screens){
-                            height: 12px; //
-                            // top: 50px;
+                            height: 10px;
                         }
                     }
                 }

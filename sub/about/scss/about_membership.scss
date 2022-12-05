@@ -790,8 +790,7 @@ main {
                         cursor: pointer;
             
                         @include responsive(pc-screens){
-                            height: 12px; //
-                            // top: 50px;
+                            height: 10px;
                         }
                     }
                 }
