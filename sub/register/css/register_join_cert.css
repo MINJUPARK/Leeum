@@ -228,61 +228,101 @@ div.logo .image strong {
   font-weight: 500;
   margin-bottom: 20px;
 }
-.member .field {
-  text-align: justify;
-  /* input {
-      width: 65.71428571428571%;
-  } */
+.member form {
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
 }
-.member .field label {
+.member form input {
+  padding: 3px;
+}
+.member form .field {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+}
+.member form .field label {
   font-size: 16px;
   font-weight: 600;
 }
-.member .field label:first-child {
+.member form .field label:first-child {
   width: 34.2857142857%;
 }
-.member .field.name input {
+.member form .field.name input {
   width: 17.3913043478%;
 }
-.member .field.birth input {
-  width: 43.4782608696%;
+.member form .field.birth input {
+  width: 40.5652173913%;
 }
-.member .field.id input, .member .field.tel-number input {
-  width: 38.5652173913%;
+.member form .field.id input, .member form .field.tel-number input {
+  width: 40.5652173913%;
   margin-right: 20px;
 }
-.member .field.id input:last-child, .member .field.tel-number input:last-child {
-  width: 19.0869565217%;
+.member form .field.id input:last-child, .member form .field.tel-number input:last-child {
+  width: 17.0869565217%;
   text-align: center;
   margin-right: 0;
 }
-.member .field.mail input {
-  width: 16.6956521739%;
-  /* #opt {
-      width: 5.69565217391304%;
-      text-align: center;
-  } */
+.member form .field.id input {
+  border: 0;
 }
-.member .field.address {
-  /* label {
-      width: 34.28571428571429%;
-
-  } */
+.member form .field.pw input, .member form .field.pw-confirm input {
+  width: 40.5652173913%;
+  border: 0;
 }
-.member .field.address input {
-  width: 31.695652%;
-  /*  &:nth-child(2) {
-       width: 46.69565217391304%;
-   } */
-  /* &:nth-child(2) {
-      width: 60.34782608695652%;
-  } */
+.member form .field.id span, .member form .field.pw span, .member form .field.pw-confirm span {
+  color: red;
 }
-.member .field.address span {
-  text-align: right;
-  /*  width: 60.69565217391304%; */
-  /*  65.71428571428571 */
+.member form .field.mail select {
+  background: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 3px center;
+  padding: 3px;
+  background-color: #fff;
+  background-size: 10px;
+  width: 19.6956521739%;
 }
-.member .field.address span input {
-  width: 25%;
+.member form .field.mail input {
+  width: 18.6956521739%;
+}
+.member form .field.address {
+  display: flex;
+}
+.member form .field.address label {
+  width: 34.2857142857%;
+}
+.member form .field.address .add {
+  width: 65.7142857143%;
+  margin-left: 6px;
+}
+.member form .field.address .add span {
+  margin-bottom: 5px;
+}
+.member form .field.address .add span input {
+  width: 36.0869565217%;
+}
+.member form .field.address .add span label {
+  font-size: 13px;
+  font-weight: 500;
+}
+.member form .field.address .add span .middle,
+.member form .field.address .add span .last {
+  width: 63.2173913043%;
+}
+.member form .field.gender label:nth-child(2), .member form .field.agree label:nth-child(2) {
+  margin-right: 6px;
+}
+.member form .field.agree {
+  border-bottom: 0;
+}
+.member form .field.agree p {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 200;
+  color: #c5c5c5;
+  margin-right: 26px;
+  margin-top: 6px;
+}
+.member .submit {
+  text-align: center;
 }/*# sourceMappingURL=register_join_cert.css.map */

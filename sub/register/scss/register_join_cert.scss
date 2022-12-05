@@ -50,82 +50,141 @@ div.logo {
         margin-bottom: 20px;
     }
 
-    .field {
-        text-align: justify;
+    form {
 
-        label {
-            @include gothic-font(semibold);
+        input {
+            padding: 3px;
         }
 
-        label:first-child{
-            width: 34.28571428571429%;
-        }
-
-        &.name {
-            input{
-                width: 17.39130434782609%;
+        border-bottom: 2px solid #000;
+        border-top: 2px solid #000;
+        .field {
+            border-bottom: 1px solid #000;
+            padding: 10px 0;
+    
+            label {
+                @include gothic-font(semibold);
             }
-        }
-
-        &.birth {
-            input {
-                width: 43.47826086956522%;
+    
+            label:first-child{
+                width: 34.28571428571429%;
             }
-        }
+    
+            &.name {
+                input{
+                    width: 17.39130434782609%;
+                }
+            }
+    
+            &.birth {
+                input {
+                    width: 40.5652173913%;
+                }
+            }
+    
+            &.id,
+            &.tel-number {
+                input{
+                    width: 40.56521739130435%;
+                    margin-right: 20px;
+                    // border: 0;
+                    &:last-child {
+                        width: 17.08695652173913%;
+                        text-align: center;
+                        margin-right: 0;
+                    }
+                }
+            }
 
-        &.id,
-        &.tel-number {
-            input{
-                width: 38.56521739130435%;
-                margin-right: 20px;
-                &:last-child {
-                    width: 19.08695652173913%;
-                    text-align: center;
-                    margin-right: 0;
+            &.id {
+                input {
+                    border: 0;
+                }
+            }
+
+            &.pw,
+            &.pw-confirm {
+                input {
+                    width: 40.5652173913%;
+                    border: 0;
+                }
+            }
+
+            &.id,
+            &.pw,
+            &.pw-confirm{
+                span {
+                    color: red;
+                }
+            } 
+    
+            &.mail {
+                select{
+
+                    @include full_bg('icon_arrow_bk.svg', index);
+                    background-position: right 3px center;
+                    padding: 3px;
+                    background-color: #fff;
+                    background-size: 10px;
+                    width: 19.69565217391304%;
+                }
+
+                input {
+                    width: 18.69565217391304%;
+                }
+            }
+    
+            &.address {
+                display: flex;
+                label{
+                    width: 34.28571428571429%;
+                }
+
+                .add {
+                    width: 65.71428571428571%;
+                    margin-left: 6px;
+                    span {
+
+                        margin-bottom: 5px;
+
+                        input {
+                            width: 36.08695652173913%;
+                        }
+                        label {
+                            @include gothic-font(medium, 13px);
+                        }
+                        .middle,
+                        .last {
+                            width: 63.21739130434783%;
+                        }
+                    }
+                }
+
+            }
+
+            &.gender,
+            &.agree {
+                label {
+                    &:nth-child(2) {
+                        margin-right: 6px;
+                    }
+                }
+            }
+
+            &.agree {
+                border-bottom: 0;
+                p {
+                    margin-bottom: 0;
+                    @include gothic-font(light, 12px);
+                    color: $bk4;
+                    margin-right: 26px;
+                    margin-top: 6px;
                 }
             }
         }
 
-        &.mail {
-            input {
-                width: 16.69565217391304%;
-                /* #opt {
-                    width: 5.69565217391304%;
-                    text-align: center;
-                } */
-            }
-        }
-
-        &.address {
-            input{
-                width: 31.695652%;
-                
-               /*  &:nth-child(2) {
-                    width: 46.69565217391304%;
-                } */
-                /* &:nth-child(2) {
-                    width: 60.34782608695652%;
-                } */
-            }
-            /* label {
-                width: 34.28571428571429%;
-
-            } */
-            label {
-            }
-            span {
-                text-align: right;
-               /*  width: 60.69565217391304%; */
-               input {
-                width: 25%;
-               }
-               /*  65.71428571428571 */
-            }
-        }
-
-        /* input {
-            width: 65.71428571428571%;
-        } */
- 
+    }
+    .submit {
+        text-align: center;
     }
 }
