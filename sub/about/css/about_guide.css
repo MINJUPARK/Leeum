@@ -70,7 +70,7 @@ header a:hover, footer a:hover {
   font-weight: bold;
 }
 
-img, span, b, strong, label, time {
+img, span, strong, label, time {
   display: inline-block;
   vertical-align: middle;
 }
@@ -1265,9 +1265,12 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img {
   height: 100%;
 }
-main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img.toilet-padding {
+main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img.left-rigt {
   padding-left: 5px;
   padding-right: 3px;
+}
+main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img.left {
+  padding-left: 3px;
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt p {
   text-align: left;

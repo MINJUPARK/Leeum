@@ -1211,9 +1211,6 @@ main section.corporate-member-wrap .corporate-member .back-cover {
     background-color: rgba(0, 0, 0, 0.4);
   }
 }
-main section.corporate-member-wrap .corporate-member p, main section.corporate-member-wrap .corporate-member a {
-  font-size: calc(1em + 2px);
-}
 @media screen and (min-width: 1440px) {
   main section.corporate-member-wrap .corporate-member .corporate-txt {
     margin-left: 120px;
@@ -1231,13 +1228,15 @@ main section.corporate-member-wrap .corporate-member .corporate-txt h3 {
   }
 }
 main section.corporate-member-wrap .corporate-member .corporate-txt p {
-  line-height: 2em;
   margin-top: 30px;
+  font-size: 18px;
+  line-height: 2em;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
   main section.corporate-member-wrap .corporate-member .corporate-txt p {
     margin-top: 40px;
+    font-size: 20px;
     text-align: left;
   }
 }
@@ -1290,8 +1289,8 @@ main section.corporate-member-wrap .corporate-member .corporate-bt a:hover span 
 }
 @media screen and (min-width: 768px) {
   main section.corporate-member-wrap .corporate-member .corporate-bt {
-    width: 200px;
-    height: 66px;
+    width: 160px;
+    height: 56px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1299,6 +1298,11 @@ main section.corporate-member-wrap .corporate-member .corporate-bt a:hover span 
     right: 120px;
     bottom: 44px;
     transform: translateX(0);
+  }
+}
+@media screen and (min-width: 768px) {
+  main section.corporate-member-wrap .corporate-member .corporate-bt a span {
+    font-size: 18px;
   }
 }
 main .associate-wrap {
@@ -1330,7 +1334,8 @@ main .associate-wrap .associate ul.associate-con li {
   width: 100%;
   height: 158px;
   margin-bottom: 20px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -1363,7 +1368,7 @@ main .associate-wrap .associate ul.associate-con li .store-txt {
 }
 @media screen and (min-width: 1440px) {
   main .associate-wrap .associate ul.associate-con li .store-txt {
-    padding-top: 54px;
+    padding-top: 42px;
     padding-left: 40px;
   }
 }

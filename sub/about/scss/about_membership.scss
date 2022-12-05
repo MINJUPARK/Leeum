@@ -558,11 +558,6 @@ main {
                     background-color: rgba(0, 0, 0, 0.4);   
                 }
             }
-            // background-color: darkblue;
-
-            p, a {
-                font-size: calc(1em + 2px);
-            }
 
             .corporate-txt {
                 
@@ -582,18 +577,18 @@ main {
                 }
 
                 p {
-                    line-height: 2em;
                     margin-top: 30px;
+                    font-size: 18px;
+                    line-height: 2em;
                     text-align: center;
                     
                     @include responsive(pc-screens) {
                         margin-top: 40px;
+                        font-size: 20px;
                         text-align: left;
                     }
                 }
             } // corporate-txt
-            
-            
             
             .corporate-bt {
                 @include bt-hover(#fff, #fff, #fff, #000);
@@ -603,12 +598,22 @@ main {
                 transform: translateX(50%);
 
                 @include responsive(tablet-screens) {
-                    width: 200px; height: 66px;
+                    width: 160px; height: 56px;
                 }
                 
                 @include responsive(pc-screens) {
                     right: 120px; bottom: 44px;
                     transform: translateX(0);
+                }
+
+                a {
+
+                    span {
+
+                        @include responsive(tablet-screens) {
+                            font-size: 18px;
+                        }
+                    }
                 }
             }
         } // corporate-member
@@ -640,8 +645,8 @@ main {
                     width: 100%; 
                     height: 158px;
                     margin-bottom: 20px;
-                    // border-radius: 5px;
-                    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+                    border-radius: 10px;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                     overflow: hidden;
                     
                     @include responsive(tablet-screens) {
@@ -672,7 +677,7 @@ main {
                         padding: 22px 10px;
                         
                         @include responsive(pc-screens) {
-                            padding-top: 54px;
+                            padding-top: 42px;
                             padding-left: 40px
                         }
                         

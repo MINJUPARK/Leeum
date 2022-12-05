@@ -632,9 +632,13 @@ main {
                                 img {
                                     height: 100%;
 
-                                    &.toilet-padding {
+                                    &.left-rigt {
                                         padding-left: 5px;
                                         padding-right: 3px;
+                                    }
+                                    
+                                    &.left {
+                                        padding-left: 3px;
                                     }
                                 }
                             }
@@ -651,8 +655,8 @@ main {
 
                             @include responsive(pc-screens) {
                                 margin: {
-                                    left: 30px / 350px * 100%;
-                                    right: 40px / 350px * 100%;
+                                    left: calc(30px / 350px) * 100%;
+                                    right: calc(40px / 350px) * 100%;
                                 }                                
                             }
                         }
