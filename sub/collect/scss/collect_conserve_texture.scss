@@ -265,7 +265,7 @@ main {
                     transition: all .5s;
                     
                     @include responsive(pc-screens) {
-                        margin-top: 170px;
+                        margin-top: 180px;
                         padding: 55px 120px;
                         box-shadow: inset 0 0 0 1px $bk4;
                     }
