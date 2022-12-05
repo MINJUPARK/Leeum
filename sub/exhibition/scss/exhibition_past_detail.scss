@@ -527,6 +527,7 @@ main {
                 } // floor-select-group
 
                 .floor-con-group {
+                    margin-top: 30px;
                     p {
                         @include content_align(left, 2em);
                     
@@ -545,9 +546,6 @@ main {
                         &.view {
                             display: block;
                         } 
-                    }
-                    @include responsive(mobile-screens) {
-                        margin-top: 30px;
                     }
                 } // floor-con-group
             } // > div
