@@ -1088,7 +1088,7 @@ main .faq-wrap ul.faq-list li .q-box .dropdown.active {
 }
 @media screen and (min-width: 1440px) {
   main .faq-wrap ul.faq-list li .q-box .dropdown {
-    height: 12px;
+    height: 10px;
   }
 }
 main .faq-wrap ul.faq-list li .a-box {

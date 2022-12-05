@@ -665,6 +665,7 @@ main .question {
   }
 }
 main .faq-content {
+  display: none;
   padding: 20px;
   margin-top: 20px;
   border-radius: 5px;
@@ -719,24 +720,17 @@ main .text-arrow {
   justify-content: space-between;
   align-items: center;
 }
-main .text-arrow p {
-  white-space: nowrap;
-  font-size: 20px;
-  font-weight: 500;
-}
-@media screen and (min-width: 1440px) {
-  main .text-arrow p {
-    font-size: 28px;
-  }
-}
-main .text-arrow p span {
-  margin-right: 10px;
-}
-main .text-arrow img {
+main .text-arrow .dropdown {
+  transition: 0.3s;
   height: 8px;
+  cursor: pointer;
+}
+main .text-arrow .dropdown.active {
+  transform: rotate(180deg);
 }
 @media screen and (min-width: 1440px) {
-  main .text-arrow img {
+  main .text-arrow .dropdown {
+    height: 10px;
     top: 50px;
   }
 }
