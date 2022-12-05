@@ -32,6 +32,7 @@ main {
     }
 
     .faq-content {
+        display: none;
         padding: 20px;
         margin-top: 20px;
         border-radius: 5px;
@@ -85,23 +86,13 @@ main {
     .text-arrow {
         @include flex_between_center();
 
-        p {
-            white-space: nowrap;
-            @include gothic_font(medium, 20px);
-
-            @include responsive(pc-screens){
-                font-size: 28px;
-            }
-
-            span {
-                margin-right: 10px;
-            }
-        }
-
-        img {
+        .dropdown {
+            @include icon_rotate(180deg);
             height: 8px;
-
+            cursor: pointer;
+            
             @include responsive(pc-screens){
+                height: 10px;
                 top: 50px;
             }
         }
