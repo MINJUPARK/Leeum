@@ -739,10 +739,10 @@ main {
     } // affiliate-wrap
     
     .faq-wrap {
-        margin-top: 130px;
+        margin-top: 140px;
 
         @include responsive(pc-screens) {
-            margin-top: 200px;
+            margin-top: 330px;
         }
 
         ul.faq-list {
@@ -788,7 +788,7 @@ main {
                         @include icon_rotate(180deg);
                         height: 8px;
                         cursor: pointer;
-            
+                        
                         @include responsive(pc-screens){
                             height: 10px;
                         }
@@ -801,7 +801,7 @@ main {
                     margin-top: 20px;
                     border-radius: 5px;
                     background-color: $bk6;
-                    // text-align: right;
+                    text-align: right;
             
                     @include responsive(pc-screens) {
                         padding: 40px;
@@ -810,36 +810,10 @@ main {
             
                     p {
                         @include content_align(justify, 1.8em);
-
-                        a {
-                            text-decoration: underline;
-                        }
-                    }
-            
-                    a {
-                        .shortcut {
-                            @include gothic_font(semibold, 1em);
-                            color: $yellow-brown;
-                            // margin-top: 20px;
-                
-                            // @include responsive(pc-screens) {
-                            //     font-size: 17px;
-                            // }
-                
-                            img {
-                                margin-left: 10px;
-                                height: 12px;
-                                filter: $svg-yellowbrown;
-                            }
-                        }
                     }
                 }
             }
         }
-    }
-
-    img {
-        width: 10%;
     }
 } // main
 

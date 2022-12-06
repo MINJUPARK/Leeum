@@ -1057,9 +1057,6 @@ main .faq-wrap ul.faq-list li {
 main .faq-wrap ul.faq-list li:first-child {
   border-top: 1px solid #d4d4d4;
 }
-main .faq-wrap ul.faq-list li:first-child .a-box {
-  display: block;
-}
 main .faq-wrap ul.faq-list li .q-box {
   display: flex;
   justify-content: space-between;

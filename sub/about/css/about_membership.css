@@ -1423,11 +1423,11 @@ main .associate-wrap .associate ul.associate-con li .store-txt .tel img {
   margin-right: 4px;
 }
 main .faq-wrap {
-  margin-top: 130px;
+  margin-top: 140px;
 }
 @media screen and (min-width: 1440px) {
   main .faq-wrap {
-    margin-top: 200px;
+    margin-top: 330px;
   }
 }
 main .faq-wrap ul.faq-list {
@@ -1491,6 +1491,7 @@ main .faq-wrap ul.faq-list li .a-box {
   margin-top: 20px;
   border-radius: 5px;
   background-color: #f3f3f3;
+  text-align: right;
 }
 @media screen and (min-width: 1440px) {
   main .faq-wrap ul.faq-list li .a-box {
@@ -1501,22 +1502,6 @@ main .faq-wrap ul.faq-list li .a-box p {
   text-align: justify;
   line-height: 1.8em;
   color: #3c3c3c;
-}
-main .faq-wrap ul.faq-list li .a-box p a {
-  text-decoration: underline;
-}
-main .faq-wrap ul.faq-list li .a-box a .shortcut {
-  font-size: 1em;
-  font-weight: 600;
-  color: #be6a15;
-}
-main .faq-wrap ul.faq-list li .a-box a .shortcut img {
-  margin-left: 10px;
-  height: 12px;
-  filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
-}
-main img {
-  width: 10%;
 }
 
 @media screen and (min-width: 1440px) {

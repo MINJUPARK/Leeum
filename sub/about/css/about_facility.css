@@ -1555,7 +1555,7 @@ main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail .sh
 @media screen and (min-width: 1440px) {
   main .container .Locker {
     position: relative;
-    top: -780px;
+    top: -825px;
     width: 46.5277777778%;
   }
 }
@@ -1570,7 +1570,7 @@ main .container .Locker img {
 main .container .Locker p:first-of-type {
   font-size: 16px;
   font-weight: 600;
-  margin: 15px 0 25px 0;
+  margin: 19px 0 23px 0;
 }
 @media screen and (min-width: 1440px) {
   main .container .Locker p:first-of-type {
@@ -1601,21 +1601,33 @@ main .container .Locker p:nth-of-type(2) {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
-  margin-bottom: 67px;
 }
 @media screen and (min-width: 1440px) {
   main .container .Locker p:nth-of-type(2) {
     font-size: 20px;
   }
 }
-main .container .Locker p .type {
+main .container .Locker p:last-of-type {
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
+  margin-bottom: 67px;
+  line-height: 25px;
+  font-size: 16px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .Locker p:last-of-type {
+    font-size: 18px;
+  }
+}
+main .container .Locker p:last-of-type .type {
   font-size: 16px;
   font-weight: 700;
   margin-right: 5px;
 }
 @media screen and (min-width: 1440px) {
-  main .container .Locker p .type {
-    font-size: 20px;
+  main .container .Locker p:last-of-type .type {
+    font-size: 18px;
     font-weight: 700;
   }
 }
@@ -1751,6 +1763,7 @@ main .container .parking p:nth-of-type(3) span {
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:nth-of-type(3) span {
+    font-size: 22px;
     line-height: 40px;
   }
 }
@@ -1760,7 +1773,7 @@ main .container .parking p:last-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p:last-of-type {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 0;
   }
 }
@@ -1771,7 +1784,7 @@ main .container .parking p span {
 }
 @media screen and (min-width: 1440px) {
   main .container .parking p span {
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 700;
   }
 }

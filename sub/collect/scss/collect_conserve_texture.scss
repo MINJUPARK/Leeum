@@ -400,7 +400,7 @@ footer {
 
 .fancybox-container {
     @include responsive(pc-screens) {
-        display: none;
+        display: none !important;
     }
 
     .fancybox-toolbar {

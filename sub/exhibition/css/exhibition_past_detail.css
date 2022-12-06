@@ -1462,6 +1462,9 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-opt
     font-size: 22px;
   }
 }
+main .vr-floor-info-wrap section.floor-info > div .floor-con-group {
+  margin-top: 30px;
+}
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group p {
   text-align: left;
   line-height: 2em;
@@ -1479,11 +1482,6 @@ main .vr-floor-info-wrap section.floor-info > div .floor-con-group .side-con-box
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group .side-con-box.view {
   display: block;
-}
-@media screen and (min-width: 320px) {
-  main .vr-floor-info-wrap section.floor-info > div .floor-con-group {
-    margin-top: 30px;
-  }
 }
 main section.movePage {
   margin-top: 40px;
