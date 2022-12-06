@@ -34,7 +34,7 @@ main {
     .faq-content {
         display: none;
         padding: 20px;
-        margin-top: 20px;
+        margin-bottom: 20px;
         border-radius: 5px;
         background-color: $bk6;
         text-align: right;
@@ -72,10 +72,10 @@ main {
 
     li {
         border-bottom: 1px solid $bk5;
-        padding: 20px 10px;
+        padding: 0 10px;
 
         @include responsive(pc-screens) {
-            padding: 30px 20px;
+            padding: 0 20px;
         }
         &:first-child {
             border-top: 1px solid $bk5;
@@ -83,13 +83,20 @@ main {
 
     }
 
-    .text-arrow {
+    .q-box {
         @include flex_between_center();
+        padding-top: 20px;
+        padding-bottom: 20px;
+        cursor: pointer;
+
+        @include responsive(pc-screens) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
 
         .dropdown {
             @include icon_rotate(180deg);
             height: 8px;
-            cursor: pointer;
             
             @include responsive(pc-screens){
                 height: 10px;

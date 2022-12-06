@@ -775,8 +775,13 @@ main section.fee-time-wrap .fee-time .time .time-txt {
 }
 main section.fee-time-wrap .fee-time .time .time-txt p {
   margin-bottom: 10px;
-  font-size: calc(1em + 2px);
+  font-size: 1em;
   font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  main section.fee-time-wrap .fee-time .time .time-txt p {
+    font-size: 20px;
+  }
 }
 main section.fee-time-wrap .fee-time .time .time-txt p b {
   color: #f44321;
@@ -1106,6 +1111,7 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
   padding-right: 10px;
   padding-bottom: 14px;
   border-bottom: 2px solid #000;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title {
@@ -1136,7 +1142,6 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown {
   transition: 0.3s;
   width: 4.2857142857%;
-  cursor: pointer;
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown.active {
   transform: rotate(180deg);

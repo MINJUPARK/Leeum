@@ -641,7 +641,7 @@ h6 {
     font-size: 46px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .slide-in main .m-br {
     display: none;
   }
@@ -649,7 +649,7 @@ h6 {
 .slide-in main .pc-br {
   display: none;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .slide-in main .pc-br {
     display: inline;
   }
@@ -811,6 +811,8 @@ h6 {
 }
 @media screen and (min-width: 1440px) {
   .slide-in main section.intro-mission-wrap .mission .mission-txt .mobile-relative img {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     right: 100px;
     width: 380px;
   }

@@ -99,7 +99,7 @@
         }
     
         .m-br { 
-            @include responsive(pc-screens) { 
+            @include responsive(tablet-screens) { 
                 display: none; 
             } 
         }
@@ -107,7 +107,7 @@
         .pc-br { 
             display: none; 
     
-            @include responsive(pc-screens) { 
+            @include responsive(tablet-screens) { 
                 display: inline; 
             } 
         }
@@ -263,8 +263,10 @@
                             width: 170px / 390px * 100%;
                             border-top-left-radius: 5px;
                             border-bottom-left-radius: 5px;
-    
+                            
                             @include responsive(pc-screens) {
+                                border-top-right-radius: 5px;
+                                border-bottom-right-radius: 5px;
                                 right: 100px;
                                 width: 380px;
                             }

@@ -667,7 +667,7 @@ main .question {
 main .faq-content {
   display: none;
   padding: 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
   background-color: #f3f3f3;
   text-align: right;
@@ -705,36 +705,44 @@ main .faq-content .shortcut img {
 }
 main li {
   border-bottom: 1px solid #d4d4d4;
-  padding: 20px 10px;
+  padding: 0 10px;
 }
 @media screen and (min-width: 1440px) {
   main li {
-    padding: 30px 20px;
+    padding: 0 20px;
   }
 }
 main li:first-child {
   border-top: 1px solid #d4d4d4;
 }
-main .text-arrow {
+main .q-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-main .text-arrow .dropdown {
-  transition: 0.3s;
-  height: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   cursor: pointer;
 }
-main .text-arrow .dropdown.active {
+@media screen and (min-width: 1440px) {
+  main .q-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+main .q-box .dropdown {
+  transition: 0.3s;
+  height: 8px;
+}
+main .q-box .dropdown.active {
   transform: rotate(180deg);
 }
 @media screen and (min-width: 1440px) {
-  main .text-arrow .dropdown {
+  main .q-box .dropdown {
     height: 10px;
     top: 50px;
   }
 }
-main .text-arrow span {
+main .q-box span {
   color: #ac3f21;
 }
 

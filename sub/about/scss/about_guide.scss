@@ -92,7 +92,11 @@ main {
 
                     p {
                         margin-bottom: 10px;
-                        @include gothic_font(semibold, calc(1em + 2px));
+                        @include gothic_font(semibold, 1em);
+
+                        @include responsive(pc-screens) {
+                            font-size: 20px;
+                        }
     
                         b {
                             color: #f44321;
@@ -455,13 +459,14 @@ main {
                         width: calc(480px / 1440px * 100%);
                         margin-right: calc(100px / 1440px * 100%);
                     }
-
+                    
                     .group-title {
                         @include flex_between();
                         padding-left: 10px;
                         padding-right: 10px;
                         padding-bottom: 14px;
                         border-bottom: 2px solid #000;
+                        cursor: pointer;
 
                         @include responsive(tablet-screens) {
                             padding: 0;
@@ -490,7 +495,6 @@ main {
                         .dropdown {
                             @include icon_rotate(180deg);
                             width: 15px / 350px * 100%;
-                            cursor: pointer;
     
                             @media screen and(min-width: $tablet2) {
                                 display: none;

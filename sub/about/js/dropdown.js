@@ -1,9 +1,9 @@
 $(function() {
     function dropdown() {
-        $(this).toggleClass('active');
-        $(this).parent().siblings().slideToggle();
+        $(this).children('.dropdown').toggleClass('active');
+        $(this).next().slideToggle();
     }
     
-    $('.floor-info .dropdown').on('click', dropdown);
-    $('.faq-list .dropdown').on('click', dropdown);
+    $('.floor-info .group-title').on('click', dropdown);
+    $('.faq-list .q-box').on('click', dropdown);
 })
