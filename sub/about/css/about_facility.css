@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -651,6 +642,9 @@ header .breadcrumb-wrap {
 main {
   overflow: hidden;
 }
+main .container {
+  height: auto;
+}
 main .container .tabmenu-wrap .tab-nav {
   display: table;
   width: 100%;
@@ -729,8 +723,7 @@ main .main-img {
 main .main-img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .info .title {
   margin-top: 30px;
@@ -1331,6 +1324,14 @@ main .Kid .Kid-detail .link a img {
     left: 10px;
   }
 }
+main .container #facility.con-box {
+  height: auto;
+}
+@media screen and (min-width: 1440px) {
+  main .container #facility.con-box {
+    height: 3000px;
+  }
+}
 @media screen and (min-width: 1440px) {
   main .container .leeumstore {
     width: 46.5277777778%;
@@ -1555,7 +1556,7 @@ main .container .Champcoffee .Champcoffee-detail-flexbox .Champcoffee-detail .sh
 @media screen and (min-width: 1440px) {
   main .container .Locker {
     position: relative;
-    top: -825px;
+    top: -807px;
     width: 46.5277777778%;
   }
 }
@@ -1614,6 +1615,7 @@ main .container .Locker p:last-of-type {
   margin-bottom: 67px;
   line-height: 25px;
   font-size: 16px;
+  margin-top: 15px;
 }
 @media screen and (min-width: 1440px) {
   main .container .Locker p:last-of-type {
@@ -2394,4 +2396,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=about_facility.css.map */
+}

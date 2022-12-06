@@ -18,6 +18,7 @@ main {
 
     .container{
         @include tab_menu();
+        height: auto;
     }
 
         
@@ -560,7 +561,14 @@ main {
             } //Kid-detail
         } //Kid
 
-        .container {     
+        .container {   
+            #facility.con-box {
+                height: auto;
+                @include responsive(pc-screens) {
+                    height: 3000px;
+                }
+
+            }
                 .leeumstore {
                     @include responsive(pc-screens) {
                         width:46.52777777777778%;
@@ -776,7 +784,7 @@ main {
                 .Locker {
                     @include responsive(pc-screens) {
                         position: relative;
-                        top: -825px;
+                        top: -807px;
                         width:46.52777777777778%;
 
                     }
@@ -814,7 +822,7 @@ main {
     
                             &:nth-of-type(2) {
                                 @include content_align(justify,2em);
-   
+                                
                                 
     
                                 @include responsive(pc-screens) {
@@ -827,6 +835,7 @@ main {
                                 margin-bottom: 67px; 
                                 line-height: 25px;
                                 font-size: 16px;
+                                margin-top: 15px;
                                 @include responsive(pc-screens) {
                                     font-size: 18px;
                                 }   
@@ -1081,7 +1090,7 @@ main {
             .director {
                 width: 190px;
                 margin: 0 auto;
-
+                
                 .background {
                     @include out_container();
                     height:431px;
@@ -1236,6 +1245,7 @@ main {
             }//renewal-info
 
             .renewal-detail {
+                
                 h4 {
                     @include gothic_font(semibold,18px);
                     margin-bottom:30px;

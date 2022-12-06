@@ -460,7 +460,6 @@ main {
             .bg {
               position: relative;
               width: 350px;
-              height: 550px;
               margin: 0 -125px;
               border-radius: 15px;
               transform: scale3d(0.8, 0.8, 1);
@@ -469,11 +468,11 @@ main {
               overflow: hidden;
       
               @media screen and (min-width:480px) {
-                width: 450px; height: 550px;
+                width: 450px; height:400px;
               }
       
               @include responsive(tablet-screens) {
-                width: 650px; height: 750px;
+                width: 650px; height: 550px;
               }
       
               @include responsive(pc-screens) {

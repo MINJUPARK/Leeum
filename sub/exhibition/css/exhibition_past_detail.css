@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -648,6 +639,9 @@ header .breadcrumb-wrap {
   }
 }
 
+main {
+  overflow-x: hidden;
+}
 main section.info .item-wrap {
   margin-bottom: 100px;
 }
@@ -766,8 +760,7 @@ main section.info .item-wrap .i-slide .main-pic {
 main section.info .item-wrap .i-slide .main-pic img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-slide .main-pic img {
@@ -788,10 +781,8 @@ main section.info .item-wrap .i-slide .sub-pic {
   main section.info .item-wrap .i-slide .sub-pic img {
     width: 30%;
     border-radius: 5px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0 -35px;
-       object-position: 0 -35px;
+    object-fit: cover;
+    object-position: 0 -35px;
   }
   main section.info .item-wrap .i-slide .sub-pic img:not(:first-child) {
     opacity: 0.4;
@@ -909,8 +900,7 @@ main section.info .item-wrap .i-des .loc-icon {
 }
 main section.info .item-wrap .i-des .loc-icon .loc-box {
   display: flex;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 main section.info .item-wrap .i-des .loc-icon .loc-box .loc div.tag {
   width: 50px;
@@ -1177,8 +1167,7 @@ main .vr-floor-info-wrap .slick-track, main .vr-floor-info-wrap .slick-list {
 main .vr-floor-info-wrap .slide-item img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .vr-floor-info-wrap .slide-main {
   width: 100%;
@@ -1207,8 +1196,7 @@ main .vr-floor-info-wrap .slide-nav {
 }
 main .vr-floor-info-wrap .slide-nav .slick-track {
   display: flex;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   width: 100% !important;
   height: 100px;
   margin: 0 auto;
@@ -1470,7 +1458,8 @@ main .vr-floor-info-wrap section.floor-info > div .floor-con-group p {
   line-height: 2em;
   color: #3c3c3c;
   margin-top: 15px;
-  font-size: 15px;
+  font-size: 16px;
+  text-align: justify;
 }
 @media screen and (min-width: 768px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-con-group {
@@ -1853,4 +1842,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright p {
 
 .fancybox-caption__body {
   font-size: 18px;
-}/*# sourceMappingURL=exhibition_past_detail.css.map */
+}

@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -651,9 +642,17 @@ header .breadcrumb-wrap {
 main {
   overflow-x: hidden;
 }
+@media screen and (min-width: 1440px) {
+  main {
+    position: static !important;
+    top: 0 !important;
+  }
+}
 main .container .main-img img {
-  margin-top: 30px;
+  margin-top: 0px;
   width: 100%;
+  height: 300px;
+  object-fit: cover;
   position: relative;
   left: 50%;
   right: 50%;
@@ -668,10 +667,19 @@ main .container .main-img img {
     right: 0;
     width: auto;
     margin: 0;
+    margin-top: 30px;
     width: 100%;
+    height: auto;
   }
 }
 main .container .info {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  left: -24px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background-color: #f3f3f3;
@@ -679,16 +687,36 @@ main .container .info {
 }
 @media screen and (min-width: 1440px) {
   main .container .info {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
     width: 30%;
     float: right;
     margin-top: 82px;
   }
 }
 main .container .info table {
-  padding: 30px 0 30px 26px;
+  padding: 20px 30px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+@media screen and (min-width: 1440px) {
+  main .container .info table {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+  }
 }
 main .container .info table .des td:first-child {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   padding: 12px 0;
 }
@@ -700,7 +728,7 @@ main .container .info table .des td:first-child {
 }
 main .container .info table .des td:last-child {
   padding-left: 23px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   color: #3c3c3c;
 }
@@ -1120,30 +1148,42 @@ main .container .constructor-info .detail {
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   background-color: #f3f3f3;
-  height: 217px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
     width: 460px;
-    height: 100%;
     float: left;
     margin-top: 30px;
     margin-bottom: 160px;
     margin-right: 20px;
-    height: 250px;
   }
+}
+main .container .constructor-info .detail table {
+  padding: 10px 30px 20px 30px;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .detail table {
-    padding: 15px 35px;
     width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
   }
 }
 main .container .constructor-info .detail table .detail-des td {
   vertical-align: top;
 }
 main .container .constructor-info .detail table .detail-des td:first-of-type {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   padding: 24px 60px 0 30px;
 }
@@ -1155,7 +1195,7 @@ main .container .constructor-info .detail table .detail-des td:first-of-type {
   }
 }
 main .container .constructor-info .detail table .detail-des td:last-of-type {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   padding-top: 24px;
   color: #5b5b5b;
@@ -1221,18 +1261,22 @@ main .container .constructor-info .constructor-detail .detail-left p {
   font-size: 16px;
   font-weight: 400;
 }
+main .container .constructor-info .constructor-detail .detail-left p:first-of-type {
+  text-align: justify;
+}
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:first-of-type {
     font-size: 18px;
     font-weight: 400;
-    text-align: justify;
   }
+}
+main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) {
+  text-align: justify;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) {
     font-size: 18px;
     font-weight: 400;
-    text-align: justify;
   }
 }
 main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) span {
@@ -1248,11 +1292,13 @@ main .container .constructor-info .constructor-detail .detail-left p:nth-of-type
     font-weight: 600;
   }
 }
+main .container .constructor-info .constructor-detail .detail-left p:last-of-type {
+  text-align: justify;
+}
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:last-of-type {
     font-size: 18px;
     font-weight: 400;
-    text-align: justify;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1267,17 +1313,23 @@ main .container .constructor-info .constructor-detail .detail-right p {
   color: #3c3c3c;
   font-size: 16px;
   font-weight: 400;
+  text-align: justify;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-right p {
     font-size: 18px;
     font-weight: 400;
-    text-align: justify;
   }
 }
 main .container .constructor-info .faq h4 {
   font-size: 20px;
   font-weight: 600;
+  margin: 100px 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .constructor-info .faq h4 {
+    margin: 20px 0 20px;
+  }
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .faq br {
@@ -1383,6 +1435,83 @@ main .container .constructor-info .faq ul .faq-detail-etc .answer p {
   line-height: 2em;
   text-align: justify;
   margin: 0;
+}
+main section.movePage {
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.movePage {
+    margin-top: 100px;
+  }
+}
+main section.movePage .movePage-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section.movePage .movePage-wrap a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+main section.movePage .movePage-wrap a:hover {
+  color: #000;
+}
+main section.movePage .movePage-wrap a:hover::after {
+  transform: scale(1);
+}
+main section.movePage .movePage-wrap a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: #000;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+main section.movePage .movePage-wrap a img {
+  height: 14px;
+  filter: #3c3c3c;
+}
+main section.movePage .movePage-wrap a.prev img {
+  margin-right: 10px;
+  transform: rotate(180deg);
+}
+main section.movePage .movePage-wrap a.next .title {
+  text-align: right;
+}
+main section.movePage .movePage-wrap a.next img {
+  margin-left: 10px;
+}
+main section.movePage .movePage-wrap a p {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.movePage .movePage-wrap a p {
+    display: inline-block;
+  }
+  main section.movePage .movePage-wrap a p .vert-bar {
+    width: 1px;
+    height: 16px;
+    margin: 0 15px;
+    vertical-align: middle;
+    background: #acacac;
+  }
+  main section.movePage .movePage-wrap a p .title {
+    font-size: 16px;
+    font-weight: 400;
+    width: 200px;
+    color: #5c5c5c;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.movePage {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -1665,4 +1794,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=about_facility_detail.css.map */
+}

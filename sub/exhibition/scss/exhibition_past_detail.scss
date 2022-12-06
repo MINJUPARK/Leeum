@@ -13,7 +13,7 @@ header {
 }
 
 main {
-
+    overflow-x: hidden;
     section.info {
         @include detail_info();
 
@@ -534,7 +534,8 @@ main {
                         margin: {
                             top: 15px;
                         }
-                        font-size: 15px;
+                        font-size: 16px;
+                        text-align: justify;
                     }
                     
                     @include responsive(tablet-screens) {
