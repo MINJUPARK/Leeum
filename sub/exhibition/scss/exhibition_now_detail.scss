@@ -4,7 +4,6 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 @import '../../../scss/mixin_footer.scss';
-@import '../../about/scss/about_mixin_MD.scss';
 
 header {
     @include header_common();
@@ -175,7 +174,6 @@ main {
             
             
             @include responsive(pc-screens){
-                @include bt-hover($bk5, #000, $red-brown, #fff);
                 box-shadow: none;
                 position: relative;
                 width: 100%;
@@ -195,10 +193,20 @@ main {
             font-size: 18px;
     
                 @include responsive(pc-screens){
-                    border: 1px solid black;
-                    background-color: #fff;
+                    border: 1px solid #be6a15;
+                    background-color: transparent;
+                    color:#be6a15;
                     border-radius: 5px;
                     
+                    &:hover {
+                        background-color: #be6a15;
+                        color: white;
+                        transition: background 0.8s;
+                        img{
+                            filter:none;
+                        }
+                    }
+
                 }
                 img{
                     width:20px;
@@ -207,7 +215,8 @@ main {
 
                     @include responsive(pc-screens){
                         position: absolute;
-                        top: 13px; left: 185px;
+                        top: 25px; left: 185px;  
+                        filter:$svg-yellowbrown;  
                     }
                 }
             }

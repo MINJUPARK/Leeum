@@ -1014,49 +1014,10 @@ main .r-d .request {
 }
 @media screen and (min-width: 1440px) {
   main .r-d .request {
-    box-shadow: inset 0 0 0 1px #d4d4d4;
-    border-radius: 5px;
     box-shadow: none;
     position: relative;
     width: 100%;
     margin-top: 30px;
-  }
-  main .r-d .request a {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  main .r-d .request a::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    width: 0;
-    background-color: #ac3f21;
-    border-radius: 3px;
-    transition: width 0.8s 0s, border-radius 0s 0.8s;
-  }
-  main .r-d .request a span {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: #000;
-    transition: color 0.4s;
-  }
-  main .r-d .request a:hover::before {
-    width: 100%;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-  main .r-d .request a:hover span {
-    color: #fff;
   }
 }
 main .r-d .request a {
@@ -1073,9 +1034,18 @@ main .r-d .request a {
 }
 @media screen and (min-width: 1440px) {
   main .r-d .request a {
-    border: 1px solid black;
-    background-color: #fff;
+    border: 1px solid #be6a15;
+    background-color: transparent;
+    color: #be6a15;
     border-radius: 5px;
+  }
+  main .r-d .request a:hover {
+    background-color: #be6a15;
+    color: white;
+    transition: background 0.8s;
+  }
+  main .r-d .request a:hover img {
+    filter: none;
   }
 }
 main .r-d .request a img {
@@ -1086,8 +1056,9 @@ main .r-d .request a img {
 @media screen and (min-width: 1440px) {
   main .r-d .request a img {
     position: absolute;
-    top: 13px;
+    top: 25px;
     left: 185px;
+    filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
   }
 }
 main .r-d .request-desc .content span {
