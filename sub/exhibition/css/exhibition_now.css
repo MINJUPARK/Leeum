@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -694,8 +685,7 @@ main .img-text a {
 main .img-text img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .img-text .limit-text {
   position: absolute;
@@ -848,8 +838,7 @@ main .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 main .list-control .view-type .sort-list {
   display: flex;
@@ -1068,55 +1057,18 @@ main .img-explain-date-register .explain-date-register .register p {
   }
 }
 main .img-explain-date-register .explain-date-register .request {
-  box-shadow: inset 0 0 0 1px #d4d4d4;
-  border-radius: 5px;
   text-align: center;
   border-radius: 5px;
-  height: 44px;
+  height: 60px;
   margin: 26px auto 0;
-}
-main .img-explain-date-register .explain-date-register .request a {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-main .img-explain-date-register .explain-date-register .request a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-  width: 0;
-  background-color: #ac3f21;
-  border-radius: 3px;
-  transition: width 0.8s 0s, border-radius 0s 0.8s;
-}
-main .img-explain-date-register .explain-date-register .request a span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  transition: color 0.4s;
-}
-main .img-explain-date-register .explain-date-register .request a:hover::before {
-  width: 100%;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-main .img-explain-date-register .explain-date-register .request a:hover span {
-  color: #fff;
 }
 main .img-explain-date-register .explain-date-register .request a {
   font-size: 16px;
   font-weight: 600;
   width: 100%;
   border: 1px solid #3c3c3c;
+  height: 40px;
+  padding-top: 8px;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .request a {
@@ -1127,56 +1079,24 @@ main .img-explain-date-register .explain-date-register .request a {
     padding: 5px 0;
   }
 }
+main .img-explain-date-register .explain-date-register .request a:hover {
+  background-color: #be6a15;
+  color: white;
+  transition: background 0.7s;
+}
 main .img-explain-date-register .explain-date-register .request1 {
-  box-shadow: inset 0 0 0 1px #d4d4d4;
-  border-radius: 5px;
   text-align: center;
   border-radius: 5px;
   margin-top: -50px;
   height: 44px;
 }
 main .img-explain-date-register .explain-date-register .request1 a {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-main .img-explain-date-register .explain-date-register .request1 a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-  width: 0;
-  background-color: #ac3f21;
-  border-radius: 3px;
-  transition: width 0.8s 0s, border-radius 0s 0.8s;
-}
-main .img-explain-date-register .explain-date-register .request1 a span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 100%;
-  text-align: center;
-  color: #000;
-  transition: color 0.4s;
-}
-main .img-explain-date-register .explain-date-register .request1 a:hover::before {
-  width: 100%;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-main .img-explain-date-register .explain-date-register .request1 a:hover span {
-  color: #fff;
-}
-main .img-explain-date-register .explain-date-register .request1 a {
   font-size: 16px;
   font-weight: 600;
   width: 100%;
   border: 1px solid #3c3c3c;
+  height: 40px;
+  padding-top: 8px;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .request1 a {
@@ -1186,6 +1106,11 @@ main .img-explain-date-register .explain-date-register .request1 a {
     width: 600px;
     padding: 5px 0;
   }
+}
+main .img-explain-date-register .explain-date-register .request1 a:hover {
+  background-color: #be6a15;
+  color: white;
+  transition: background 0.7s;
 }
 main section.filter {
   background: #f3f3f3;
@@ -1495,8 +1420,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search {
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box {
     width: 100%;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    column-gap: 40px;
   }
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type {
@@ -1890,4 +1814,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=exhibition_now.css.map */
+}

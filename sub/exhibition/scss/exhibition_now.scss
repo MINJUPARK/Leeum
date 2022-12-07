@@ -4,7 +4,7 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 @import '../../../scss/mixin_footer.scss';
-@import '../../about/scss/about_mixin_MD.scss';
+
 header {
     @include header_common();
     @include header_sub();
@@ -341,19 +341,16 @@ main {
             }
 
             .request {
-                @include bt-hover($bk5, #000, $red-brown, #fff);
                 text-align: center;
-                
                 border-radius: 5px;
-                height: 44px;
+                height: 60px;
                 margin: 26px auto 0;
-                
-                
                 a {
                     @include gothic_font(semibold);
                     width: 100%;
                     border: 1px solid $bk1;
-
+                    height: 40px;
+                    padding-top: 8px;
         
                     @include responsive(pc-screens){
                         font-size: 20px;
@@ -362,12 +359,17 @@ main {
                         width: 600px;
                         padding: 5px 0;
                     }
+
+                    &:hover {
+                        background-color: #be6a15;
+                        color: white;
+                        transition: background 0.7s;
+                    }
                 }
             }
 
 
             .request1 {
-                @include bt-hover($bk5, #000, $red-brown, #fff);
                 text-align: center;
                 border-radius: 5px;
                 margin-top: -50px;
@@ -376,7 +378,8 @@ main {
                     @include gothic_font(semibold);
                     width: 100%;
                     border: 1px solid $bk1;
-
+                    height: 40px;
+                    padding-top: 8px;
 
         
                     @include responsive(pc-screens){
@@ -386,6 +389,12 @@ main {
                         width: 600px;
                         padding: 5px 0;
                     }
+                    &:hover {
+                        background-color: #be6a15;
+                        color: white;
+                        transition: background 0.7s;
+                    }
+                    
                 }
             }
         }
