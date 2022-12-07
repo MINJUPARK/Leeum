@@ -6,7 +6,7 @@
 div.logo {
     .image {
         display: flex;
-        // padding-left: 20px;
+        padding-left: 20px;
         margin-bottom: 15px;
 
         @include responsive(pc-screens) {
@@ -38,153 +38,133 @@ div.logo {
         }
     }
 }
-.member {
 
-    h6 {
-        text-align: center;
-    }
-
+div.join-info {
     p {
-        text-align: right;
-        @include gothic-font(medium, 14px);
+        text-align: center;
+        @include gothic-font(semibold, 15px);
         margin-bottom: 20px;
+
+        @include responsive(pc-screens) {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
     }
-
     form {
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
 
-        input {
-            padding: 3px;
+        label {
+            @include responsive(pc-screens) {
+                width: 14.28571428571429%;
+            }
         }
 
-        border-bottom: 2px solid #000;
-        border-top: 2px solid #000;
-        .field {
-            border-bottom: 1px solid #000;
-            padding: 10px 0;
-    
-            label {
-                @include gothic-font(semibold);
-            }
-    
-            label:first-child{
-                width: 34.28571428571429%;
-            }
-    
-            &.name {
-                input{
-                    width: 17.39130434782609%;
-                }
-            }
-    
-            &.birth {
-                input {
-                    width: 40.5652173913%;
-                }
-            }
-    
+        .text {
             &.id,
-            &.tel-number {
-                input{
-                    width: 40.56521739130435%;
-                    margin-right: 20px;
-                    // border: 0;
-                    &:last-child {
-                        width: 17.08695652173913%;
-                        text-align: center;
-                        margin-right: 0;
+            &.date,
+            &.phone-certify-name {
+                label {
+                    width: 19.71428571428571%;
+                    @include gothic-font(semibold, 13px);
+                    /* margin-left: 20px; */
+    
+                    @include responsive(pc-screens) {
+                        width: 14.28571428571429%;
+                    }
+
+                    @include responsive(pc-screens) {
+                        font-size: 26px;
                     }
                 }
+                padding: 10px 20px;
+                border-bottom: 1px solid #000;
+
+                @include responsive(pc-screens) {
+                    padding: 20px;
+                }
+    
+                &:last-child {
+                    border: 0;
+                }
+                
+                select,
+                input {
+                    padding: 5px;
+                    font-size: 12px;
+
+                    @include responsive(pc-screens) {
+                        font-size: 20px;
+                    }
+                }
+                
             }
 
             &.id {
                 input {
                     border: 0;
                 }
+
             }
 
-            &.pw,
-            &.pw-confirm {
+            &.date,
+            &.phone-certify-name {
                 input {
-                    width: 40.5652173913%;
                     border: 0;
+                    background-color: $bk6;
+                }    
+            }   
+
+            &.date {
+                input {
+                    width: 23%;
+    
+                    @include responsive(pc-screens) {
+                        width: 11%;
+                    }
+                } 
+                
+                .back {
+                    width: 7%;
+    
+                    @include responsive(pc-screens) {
+                        width: 2%;
+                    }
                 }
+    
             }
 
-            &.id,
-            &.pw,
-            &.pw-confirm{
-                span {
-                    color: red;
-                }
-            } 
-    
-            &.mail {
-                select{
-
+            &.phone-certify-name {
+                select {
                     @include full_bg('icon_arrow_bk.svg', index);
-                    background-position: right 3px center;
-                    padding: 3px;
+                    background-position: right 5px center;
                     background-color: #fff;
                     background-size: 10px;
-                    width: 19.69565217391304%;
-                }
+                    width: 14%;
+                    border: 0;
+                    background-color: $bk6;
+                    margin-right: 4px;
 
-                input {
-                    width: 18.69565217391304%;
+                    &:first-child {
+                        margin-right: 10px;
+                        
+                    }
+                    
+                    @include responsive(pc-screens) {
+                        width: 5.517241%;
+                    }
                 }
-            }
     
-            &.address {
-                display: flex;
-                label{
-                    width: 34.28571428571429%;
-                }
-
-                .add {
-                    width: 65.71428571428571%;
-                    margin-left: 6px;
-                    span {
-
-                        margin-bottom: 5px;
-
-                        input {
-                            width: 36.08695652173913%;
-                        }
-                        label {
-                            @include gothic-font(medium, 13px);
-                        }
-                        .middle,
-                        .last {
-                            width: 63.21739130434783%;
-                        }
-                    }
-                }
-
-            }
-
-            &.gender,
-            &.agree {
-                label {
-                    &:nth-child(2) {
-                        margin-right: 6px;
+                input {
+                    width: 14%;
+    
+                    @include responsive(pc-screens) {
+                        width: 5%;
                     }
                 }
             }
-
-            &.agree {
-                border-bottom: 0;
-                p {
-                    margin-bottom: 0;
-                    @include gothic-font(light, 12px);
-                    color: $bk4;
-                    margin-right: 26px;
-                    margin-top: 6px;
-                }
-            }
+            
         }
-
-    }
-    .submit {
-        text-align: center;
-    }
+    }  
 }
+
