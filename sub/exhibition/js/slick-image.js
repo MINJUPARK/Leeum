@@ -1,3 +1,4 @@
+
 $(function() {
     $('.ehb-slider').slick({
         dots: true,
@@ -18,7 +19,7 @@ $(function() {
                 breakpoint: 1440,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1,
+                    slidesToScroll: 1
                 }
             },
             {
@@ -30,4 +31,7 @@ $(function() {
             }
         ]
     });
+    
+    
 })
+
