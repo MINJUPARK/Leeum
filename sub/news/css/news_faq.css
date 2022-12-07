@@ -675,6 +675,8 @@ main .faq-content {
 @media screen and (min-width: 1440px) {
   main .faq-content {
     padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 }
 main .faq-content .explain {
@@ -709,7 +711,7 @@ main li {
 }
 @media screen and (min-width: 1440px) {
   main li {
-    padding: 0 20px;
+    padding: 30px 20px;
   }
 }
 main li:first-child {
@@ -725,8 +727,8 @@ main .q-box {
 }
 @media screen and (min-width: 1440px) {
   main .q-box {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 main .q-box .dropdown {

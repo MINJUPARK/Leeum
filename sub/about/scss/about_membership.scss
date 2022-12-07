@@ -757,7 +757,7 @@ main {
                 padding: 0 10px;
         
                 @include responsive(pc-screens) {
-                    padding: 0 20px;
+                    padding: 30px 20px;
                 }
                 
                 &:first-child {
@@ -771,8 +771,8 @@ main {
                     cursor: pointer;
                     
                     @include responsive(pc-screens) {
-                        padding-top: 30px;
-                        padding-bottom: 30px;
+                        padding-top: 0;
+                        padding-bottom: 0;
                     }
                     
                     p {
@@ -808,15 +808,27 @@ main {
                     margin-bottom: 20px;
                     border-radius: 5px;
                     background-color: $bk6;
-                    text-align: right;
             
                     @include responsive(pc-screens) {
                         padding: 40px;
+                        margin-top: 20px;
+                        margin-bottom: 0;
                     }
             
             
                     p {
                         @include content_align(justify, 1.8em);
+                    }
+
+                    .shortcut {
+                        @include gothic_font(semibold, 1em);
+                        color: $yellow-brown;
+            
+                        img {
+                            margin-left: 10px;
+                            height: 12px;
+                            filter: $svg-yellowbrown;
+                        }
                     }
                 }
             }
