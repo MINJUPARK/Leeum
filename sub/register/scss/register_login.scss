@@ -55,7 +55,7 @@ div.login {
                 // width: 100%
             }
 
-            ul.angle-select {
+            ul.login-select {
                 @include flex_between();
                 border-top: 1px solid $bk4;
                 width: 100%;
@@ -65,26 +65,19 @@ div.login {
                     width: 33.33333333333333%;
                     height: 68px;
                     border-left: 1px solid $bk4;
+                    background-color: $bk6;
+                    border-bottom: 1px solid $bk4;
+                    span {
+                        color: $bk5;
+                    }
                     
                     @include responsive(tablet-screens) {
                         height: 65px;
                     }
 
-                    &:nth-child(2) {
-                        border-bottom: 1px solid $bk4;
-                        background-color: $bk6;
-                        span {
-                            color: $bk5;
-                        }
-                    }
                     
                     &:last-child {
                         border-right: 1px solid $bk4;
-                        border-bottom: 1px solid $bk4;
-                        background-color: $bk6;
-                        span {
-                            color: $bk5;
-                        }
                     }
                     
                     &::after {
@@ -105,13 +98,14 @@ div.login {
                         text-align: center;
                         cursor: pointer;
                         
-                        transition: color 0.7s;
+                        /* transition: color 0.7s;
                         
-                        color: $bk3;
+                        color: $bk3; */
                     }
                     
                     &.on {
                         background-color: transparent;
+                        border-bottom: 0;
                         
                         &::after {
                             scale: 1;

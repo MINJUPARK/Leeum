@@ -225,39 +225,32 @@ div.login .login-wrap .login-tab-form {
     margin: 0 auto;
   }
 }
-div.login .login-wrap .login-tab-form ul.angle-select {
+div.login .login-wrap .login-tab-form ul.login-select {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #c5c5c5;
   width: 100%;
 }
-div.login .login-wrap .login-tab-form ul.angle-select li {
+div.login .login-wrap .login-tab-form ul.login-select li {
   position: relative;
   width: 33.3333333333%;
   height: 68px;
   border-left: 1px solid #c5c5c5;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #c5c5c5;
+}
+div.login .login-wrap .login-tab-form ul.login-select li span {
+  color: #d4d4d4;
 }
 @media screen and (min-width: 768px) {
-  div.login .login-wrap .login-tab-form ul.angle-select li {
+  div.login .login-wrap .login-tab-form ul.login-select li {
     height: 65px;
   }
 }
-div.login .login-wrap .login-tab-form ul.angle-select li:nth-child(2) {
-  border-bottom: 1px solid #c5c5c5;
-  background-color: #f3f3f3;
-}
-div.login .login-wrap .login-tab-form ul.angle-select li:nth-child(2) span {
-  color: #d4d4d4;
-}
-div.login .login-wrap .login-tab-form ul.angle-select li:last-child {
+div.login .login-wrap .login-tab-form ul.login-select li:last-child {
   border-right: 1px solid #c5c5c5;
-  border-bottom: 1px solid #c5c5c5;
-  background-color: #f3f3f3;
 }
-div.login .login-wrap .login-tab-form ul.angle-select li:last-child span {
-  color: #d4d4d4;
-}
-div.login .login-wrap .login-tab-form ul.angle-select li::after {
+div.login .login-wrap .login-tab-form ul.login-select li::after {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -269,7 +262,7 @@ div.login .login-wrap .login-tab-form ul.angle-select li::after {
   z-index: 1;
   scale: 0;
 }
-div.login .login-wrap .login-tab-form ul.angle-select li span {
+div.login .login-wrap .login-tab-form ul.login-select li span {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -278,16 +271,18 @@ div.login .login-wrap .login-tab-form ul.angle-select li span {
   font-size: 20px;
   text-align: center;
   cursor: pointer;
-  transition: color 0.7s;
-  color: #acacac;
+  /* transition: color 0.7s;
+
+  color: $bk3; */
 }
-div.login .login-wrap .login-tab-form ul.angle-select li.on {
+div.login .login-wrap .login-tab-form ul.login-select li.on {
   background-color: transparent;
+  border-bottom: 0;
 }
-div.login .login-wrap .login-tab-form ul.angle-select li.on::after {
+div.login .login-wrap .login-tab-form ul.login-select li.on::after {
   scale: 1;
 }
-div.login .login-wrap .login-tab-form ul.angle-select li.on span {
+div.login .login-wrap .login-tab-form ul.login-select li.on span {
   color: #000;
   font-weight: 600;
 }
