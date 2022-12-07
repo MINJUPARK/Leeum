@@ -1444,7 +1444,7 @@ main .faq-wrap ul.faq-list li {
 }
 @media screen and (min-width: 1440px) {
   main .faq-wrap ul.faq-list li {
-    padding: 0 20px;
+    padding: 30px 20px;
   }
 }
 main .faq-wrap ul.faq-list li:first-child {
@@ -1460,8 +1460,8 @@ main .faq-wrap ul.faq-list li .q-box {
 }
 @media screen and (min-width: 1440px) {
   main .faq-wrap ul.faq-list li .q-box {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 main .faq-wrap ul.faq-list li .q-box p {
@@ -1499,17 +1499,28 @@ main .faq-wrap ul.faq-list li .a-box {
   margin-bottom: 20px;
   border-radius: 5px;
   background-color: #f3f3f3;
-  text-align: right;
 }
 @media screen and (min-width: 1440px) {
   main .faq-wrap ul.faq-list li .a-box {
     padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 }
 main .faq-wrap ul.faq-list li .a-box p {
   text-align: justify;
   line-height: 1.8em;
   color: #3c3c3c;
+}
+main .faq-wrap ul.faq-list li .a-box .shortcut {
+  font-size: 1em;
+  font-weight: 600;
+  color: #be6a15;
+}
+main .faq-wrap ul.faq-list li .a-box .shortcut img {
+  margin-left: 10px;
+  height: 12px;
+  filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
 
 @media screen and (min-width: 1440px) {
