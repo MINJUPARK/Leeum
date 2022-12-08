@@ -492,7 +492,7 @@ main {
                 @include flex_between();
                 align-items: flex-end;
                 position: absolute;
-                bottom: -120px;
+                bottom: -150px;
                 width: 100%;
                 color: #000;
                 background-color: #fff;
@@ -554,3 +554,5 @@ main {
 footer {
     @include footer();
 }
+
+@include fancybox_style();

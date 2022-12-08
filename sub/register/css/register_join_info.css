@@ -189,13 +189,7 @@ h6 {
 
 div.logo .image {
   display: flex;
-  padding-left: 20px;
-  margin-bottom: 15px;
-}
-@media screen and (min-width: 1440px) {
-  div.logo .image {
-    margin-bottom: 150px;
-  }
+  margin: 20px;
 }
 div.logo .image img {
   width: 36px;
@@ -220,123 +214,251 @@ div.logo .image strong {
 }
 @media screen and (min-width: 1440px) {
   div.logo .image strong {
-    font-size: 46px;
+    font-size: 36px;
   }
 }
 
-div.join-info p {
+.member h6 {
   text-align: center;
-  font-size: 15px;
-  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  .member h6 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+.member p {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1440px) {
-  div.join-info p {
-    font-size: 32px;
-    margin-bottom: 40px;
-  }
+.member p span {
+  color: red;
+  margin-right: 10px;
 }
-div.join-info form {
-  border-top: 2px solid #000;
+.member form {
   border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+}
+.member form label {
+  display: inline;
+}
+.member form input {
+  padding: 3px;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form label {
-    width: 14.2857142857%;
+  .member form input {
+    font-size: 14px;
+    padding: 5px;
   }
 }
-div.join-info form .text.id, div.join-info form .text.date, div.join-info form .text.phone-certify-name {
-  padding: 10px 20px;
+.member form .field {
+  display: flex;
   border-bottom: 1px solid #000;
+  padding: 20px 0;
 }
-div.join-info form .text.id label, div.join-info form .text.date label, div.join-info form .text.phone-certify-name label {
-  width: 19.7142857143%;
-  font-size: 13px;
+.member form .field .letter {
+  padding: 0 0 0 20px;
+  font-size: 16px;
   font-weight: 600;
-  /* margin-left: 20px; */
+  display: flex;
+  align-items: center;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.id label, div.join-info form .text.date label, div.join-info form .text.phone-certify-name label {
-    width: 14.2857142857%;
+  .member form .field .letter {
+    font-size: 18px;
   }
+}
+.member form .field label:first-child {
+  width: 34.2857142857%;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.id label, div.join-info form .text.date label, div.join-info form .text.phone-certify-name label {
-    font-size: 26px;
+  .member form .field label:first-child {
+    width: 17.1428571429%;
   }
+}
+.member form .field.birth input:first-child, .member form .field.id input:first-child, .member form .field.pw input:first-child, .member form .field.pw-confirm input:first-child, .member form .field.tel-number input:first-child {
+  width: 73%;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.id, div.join-info form .text.date, div.join-info form .text.phone-certify-name {
-    padding: 20px;
+  .member form .field.birth input:first-child, .member form .field.id input:first-child, .member form .field.pw input:first-child, .member form .field.pw-confirm input:first-child, .member form .field.tel-number input:first-child {
+    width: 13%;
   }
 }
-div.join-info form .text.id:last-child, div.join-info form .text.date:last-child, div.join-info form .text.phone-certify-name:last-child {
+.member form .field.name input {
+  width: 40.3913043478%;
+}
+@media screen and (min-width: 1440px) {
+  .member form .field.name input {
+    width: 7.391304%;
+  }
+}
+.member form .field.id input:last-child, .member form .field.tel-number input:last-child {
+  text-align: center;
+  margin-right: 0;
+  margin-left: 10px;
+}
+.member form .field.id input {
   border: 0;
 }
-div.join-info form .text.id select,
-div.join-info form .text.id input, div.join-info form .text.date select,
-div.join-info form .text.date input, div.join-info form .text.phone-certify-name select,
-div.join-info form .text.phone-certify-name input {
-  padding: 5px;
-  font-size: 12px;
+.member form .field.id .entry {
+  display: flex;
+}
+.member form .field.id .entry input:last-child {
+  width: 27.086957%;
+  background-color: black;
+  color: white;
+  border: 0;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.id select,
-div.join-info form .text.id input, div.join-info form .text.date select,
-div.join-info form .text.date input, div.join-info form .text.phone-certify-name select,
-div.join-info form .text.phone-certify-name input {
-    font-size: 20px;
+  .member form .field.id .entry input:last-child {
+    width: 7.086957%;
   }
 }
-div.join-info form .text.id input {
+.member form .field.tel-number input:last-child {
+  width: 27.086957%;
+  background-color: #be6a15;
+  color: white;
   border: 0;
 }
-div.join-info form .text.date input, div.join-info form .text.phone-certify-name input {
+@media screen and (min-width: 1440px) {
+  .member form .field.tel-number input:last-child {
+    width: 7.086957%;
+  }
+}
+.member form .field.tel-number .entry {
+  display: flex;
+}
+.member form .field.pw input, .member form .field.pw-confirm input {
   border: 0;
+}
+.member form .field.id span, .member form .field.pw span, .member form .field.pw-confirm span {
+  color: red;
+}
+.member form .field.mail input, .member form .field.address input {
   background-color: #f3f3f3;
+  border: 0;
 }
-div.join-info form .text.date input {
-  width: 23%;
+.member form .field.mail .entry {
+  position: relative;
+  display: flex;
 }
-@media screen and (min-width: 1440px) {
-  div.join-info form .text.date input {
-    width: 11%;
-  }
-}
-div.join-info form .text.date .back {
-  width: 7%;
-}
-@media screen and (min-width: 1440px) {
-  div.join-info form .text.date .back {
-    width: 2%;
-  }
-}
-div.join-info form .text.phone-certify-name select {
+.member form .field.mail .entry select {
+  position: absolute;
   background: url(../../../image/icon_arrow_bk.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-position: right 5px center;
+  background-position: right 3px center;
+  padding: 3px;
   background-color: #fff;
   background-size: 10px;
-  width: 14%;
-  border: 0;
-  background-color: #f3f3f3;
-  margin-right: 4px;
-}
-div.join-info form .text.phone-certify-name select:first-child {
-  margin-right: 10px;
+  width: 27.6956521739%;
+  right: 20px;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.phone-certify-name select {
-    width: 5.517241%;
+  .member form .field.mail .entry select {
+    left: 0;
+    margin-left: 250px;
+    text-align: center;
+    width: 8.695652%;
+    padding: 4px;
   }
 }
-div.join-info form .text.phone-certify-name input {
-  width: 14%;
+.member form .field.mail .entry input {
+  width: 28.695652%;
+  text-align: center;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.phone-certify-name input {
-    width: 5%;
+  .member form .field.mail .entry input {
+    width: 25.695652%;
+  }
+}
+.member form .field.address .add span {
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 1440px) {
+  .member form .field.address .add span {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+.member form .field.address .add span input {
+  width: 35.608696%;
+}
+.member form .field.address .add span input:nth-child(2) {
+  background-color: black;
+  color: white;
+}
+@media screen and (min-width: 1440px) {
+  .member form .field.address .add span input {
+    width: 8.608696%;
+  }
+}
+.member form .field.address .add span label {
+  font-size: 13px;
+  font-weight: 500;
+}
+.member form .field.address .add span .middle,
+.member form .field.address .add span .last {
+  width: 73%;
+  width: 65.2173913043%;
+}
+@media screen and (min-width: 1440px) {
+  .member form .field.address .add span .middle,
+.member form .field.address .add span .last {
+    width: 19.217391%;
+  }
+}
+.member form .field .entry {
+  width: 65.7142857143%;
+  padding: 0 20px 0 10px;
+}
+@media screen and (min-width: 1440px) {
+  .member form .field .entry {
+    width: 100%;
+  }
+}
+.member form .field.gender label:first-child, .member form .field.agree label:first-child {
+  margin-right: 5px;
+}
+.member form .field.agree {
+  border-bottom: 0;
+}
+@media screen and (min-width: 1440px) {
+  .member form .field.agree .entry {
+    position: relative;
+    margin-bottom: 25px;
+  }
+}
+.member form .field.agree .entry p {
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 200;
+  color: #c5c5c5;
+  margin-top: 6px;
+}
+@media screen and (min-width: 1440px) {
+  .member form .field.agree .entry p {
+    position: absolute;
+  }
+}
+.member .submit {
+  text-align: center;
+}
+.member .submit input {
+  margin-top: 50px;
+  padding: 10px 15px;
+  border: 0;
+  color: white;
+  background-color: #6e3b3b;
+  font-size: 12px;
+  font-weight: 600;
+}
+@media screen and (min-width: 1440px) {
+  .member .submit input {
+    font-size: 16px;
+    padding: 10px 22px;
   }
 }
