@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <meta name="title" property="og:title" content="리움미술관">
+    <meta name="images" property="og:image" content="./image/leeum_thumnail.jpg">
+    <meta name="description" property="og:description" content="관객과 소통하는 리움, 예술과 삶을 더욱 풍부하게">
+    <meta name="type" property="og:type" content="article">
+    <link rel="icon" href="./image/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/news_data.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="./js/news.js"></script>
     <title>Leeum</title>
 </head>
 <body>
@@ -234,7 +239,7 @@
                                 </a>
                                 <div class="text">
                                     <span>2020 틴즈 워크북</span>
-                                    <p>2020. 06. 23</p>
+                                    <p>2020. 06. 23 발행</p>
                                 </div>
                                 <div class="down-img">
                                     <a href="https://drive.google.com/file/d/14z2tlyk5paC_ozAEGdksZDkw5--xwYVV/view?usp=share_link" download>
@@ -254,7 +259,7 @@
                                 </a>
                                 <div class="text">
                                     <span>꽃을 찾아 떠나는 여행 - 한국 고미술</span>
-                                    <p>2019. 05. 07</p>
+                                    <p>2019. 05. 07 발행</p>
                                 </div>
                                 <div class="down-img">
                                     <a href="https://drive.google.com/file/d/1KE41AL7bABXgYF0-uFiOsR-qr1vQ6zDW/view?usp=share_link">
@@ -274,7 +279,7 @@
                                 </a>
                                 <div class="text">
                                     <span>리움 속 풍경 - 현대미술</span>
-                                    <p>2018. 04. 20</p>
+                                    <p>2018. 04. 20 발행</p>
                                 </div>
                                 <div class="down-img">
                                     <a href="https://drive.google.com/file/d/1vyHHvTn4Yn0xBrFkIfGYLlI1gJNppTQW/view?usp=share_link">
@@ -289,12 +294,12 @@
                             <div class="image-text">
                                 <a href="./news_data_pdf_detail.html">
                                     <div class="image">
-                                            <img src="./image/workbook/workbook4.jpg" alt="">
+                                        <img src="./image/workbook/workbook4.jpg" alt="">
                                     </div>
                                 </a>
                                 <div class="text">
                                     <span>고미술</span>
-                                    <p>2017. 01. 13</p>
+                                    <p>2017. 01. 13 발행</p>
                                 </div>
                                 <div class="down-img">
                                     <a href="https://drive.google.com/file/d/1Zsh81vfqf6HZIrX8SyQ66jOUztfxzLLo/view?usp=share_link">
@@ -308,7 +313,6 @@
                 </div>
             </div>
         </section>
-
         <section class="public">
             <h2>출판물</h2>
             <div class="container">
@@ -323,266 +327,322 @@
                         <div class="slide-track">
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication1.jpg" alt="김도균" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김도균</h6>
-                                        <span>Do-kyun Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication1.jpg" alt="조선말기회화전" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>조선말기회화전</h6>
+                                            <span>삼성미술관 Leeum, 2006</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication2.jpg" alt="김아영" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김아영</h6>
-                                        <span>A-young Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication2.jpg" alt="ARTSPECTRUM 2014" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>ARTSPECTRUM 2014</h6>
+                                            <span>삼성미술관 Leeum, 2014</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication3.jpg" alt="구본창" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>구본창</h6>
-                                        <span>Bon-chang Koo</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication3.jpg" alt="세밀가귀 細密可貴" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>세밀가귀 細密可貴</h6>
+                                            <span>삼성미술관 Leeum, 2015</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication4.jpg" alt="김수자" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김수자</h6>
-                                        <span>Su-ja Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication4.jpg" alt="코끼리를 쏘다 象 코끼리를 생각하다" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>코끼리를 쏘다 象<br>코끼리를 생각하다</h6>
+                                            <span>삼성미술관 Leeum, 2015</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication5.jpg" alt="김희천" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김희천</h6>
-                                        <span>Hee-cheon Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication5.jpg" alt="교감" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>교감</h6>
+                                            <span>삼성미술관 Leeum, 2014</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication6.jpg" alt="강서경" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>강서경</h6>
-                                        <span>Seo-kyung Kang</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication6.jpg" alt="땅의 깨달음, 한국 건축" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>땅의 깨달음, 한국 건축</h6>
+                                            <span>삼성미술관 Leeum, 2015</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication7.jpg" alt="김지원" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김지원</h6>
-                                        <span>Ji-won Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication7.jpg" alt="미장센 - 연출된 장면들" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>미장센 - 연출된 장면들</h6>
+                                            <span>삼성미술관 Leeum, 2013</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication8.jpg" alt="김민애" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김민애</h6>
-                                        <span>Min-ae Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication8.jpg" alt="금은보화: 한국 전통공예의 미" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>금은보화: 한국 전통공예의 미</h6>
+                                            <span>삼성미술관 Leeum, 2006</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication9.jpg" alt="김홍주" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김홍주</h6>
-                                        <span>Hong-ju Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication9.jpg" alt="미래의 기억들" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>미래의 기억들</h6>
+                                            <span>삼성미술관 Leeum, 2010</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication10.jpg" alt="권오상" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>권오상</h6>
-                                        <span>Oh-sang Kwon</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication10.jpg" alt="앤디 워홀 팩토리" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>앤디 워홀 팩토리</h6>
+                                            <span>삼성미술관Leeum, 2007</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication1.jpg" alt="강서경" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>강서경</h6>
-                                        <span>Seo-kyung Kang</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication1.jpg" alt="조선말기회화전" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>조선말기회화전</h6>
+                                            <span>삼성미술관 Leeum, 2006</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication2.jpg" alt="문경원 / 전준호" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>문경원 / 전준호</h6>
-                                        <span>Kyung-won Moon<br>Jun-ho Jeon</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication2.jpg" alt="ARTSPECTRUM 2014" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>ARTSPECTRUM 2014</h6>
+                                            <span>삼성미술관 Leeum, 2014</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication3.jpg" alt="김도균" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김도균</h6>
-                                        <span>Do-kyun Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication3.jpg" alt="세밀가귀 細密可貴" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>세밀가귀 細密可貴</h6>
+                                            <span>삼성미술관 Leeum, 2015</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication4.jpg" alt="김아영" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김아영</h6>
-                                        <span>A-young Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication4.jpg" alt="코끼리를 쏘다 象 코끼리를 생각하다" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>코끼리를 쏘다 象<br>코끼리를 생각하다</h6>
+                                            <span>삼성미술관 Leeum, 2015</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication5.jpg" alt="강서경" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>구본창</h6>
-                                        <span>Bon-chang Koo</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication5.jpg" alt="교감" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>교감</h6>
+                                            <span>삼성미술관 Leeum, 2014</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication6.jpg" alt="김수자" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김수자</h6>
-                                        <span>Su-ja Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication6.jpg" alt="땅의 깨달음, 한국 건축" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>땅의 깨달음, 한국 건축</h6>
+                                            <span>삼성미술관 Leeum, 2015</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication7.jpg" alt="김홍석" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김홍석</h6>
-                                        <span>Hong-seok KiM</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication7.jpg" alt="미장센 - 연출된 장면들" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>미장센 - 연출된 장면들</h6>
+                                            <span>삼성미술관 Leeum, 2013</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication8.jpg" alt="강서경" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>강서경</h6>
-                                        <span>Seo-kyung Kang</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication8.jpg" alt="금은보화: 한국 전통공예의 미" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>금은보화: 한국 전통공예의 미</h6>
+                                            <span>삼성미술관 Leeum, 2006</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication9.jpg" alt="김지원" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김지원</h6>
-                                        <span>Ji-won Kim</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication9.jpg" alt="미래의 기억들" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>미래의 기억들</h6>
+                                            <span>삼성미술관 Leeum, 2010</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="slide">
                                 <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication10.jpg" alt="김민애" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김민애</h6>
-                                        <span>Min-ae Kim</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication1.jpg" alt="김홍주" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>김홍주</h6>
-                                        <span>Hong-ju Kim</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication2.jpg" alt="권오상" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>권오상</h6>
-                                        <span>Oh-sang Kwon</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication3.jpg" alt="강서경" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>강서경</h6>
-                                        <span>Seo-kyung Kang</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                            <div class="slide">
-                                <div class="item">
-                                    <div class="i-pic">
-                                        <img src="./image/publication/publication4.jpg" alt="문경원 / 전준호" class="bg">
-                                    </div>
-                                    <!-- <div class="i-des">
-                                        <h6>문경원 / 전준호</h6>
-                                        <span>Kyung-won Moon<br>Jun-ho Jeon</span>
-                                    </div> -->
+                                    <a href="./news_data_book_detail.html">
+                                        <div class="i-pic">
+                                            <img src="./image/publication/publication10.jpg" alt="앤디 워홀 팩토리" class="bg">
+                                        </div>
+                                        <div class="i-des">
+                                            <h6>앤디 워홀 팩토리</h6>
+                                            <span>삼성미술관Leeum, 2007</span>
+                                            <div class="btn">
+                                                <label>더보기</label><img src="../../image/icon_arrow_tail.svg">
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

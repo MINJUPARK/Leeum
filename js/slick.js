@@ -129,7 +129,7 @@ $(function() {
 
     $('.ehb-slider').slick({
       dots: true,
-      infinite: false,
+      infinite: true,
       touchThreshold : 100,
       autoplay: true,
       speed: 300,

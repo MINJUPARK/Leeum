@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <meta name="title" property="og:title" content="리움미술관">
+    <meta name="images" property="og:image" content="./image/leeum_thumnail.jpg">
+    <meta name="description" property="og:description" content="관객과 소통하는 리움, 예술과 삶을 더욱 풍부하게">
+    <meta name="type" property="og:type" content="article">
+    <link rel="icon" href="./image/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/news_data_pdf_detail.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="./js/news.js"></script>
     <title>Leeum</title>
 </head>
 <body>
@@ -210,7 +215,7 @@
                     </li>
                     <li class="loc">
                         <div class="step">
-                            <a href="">워크북</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                            <a href="../news/news_data_pdf.html">워크북</a><img src="../../image/icon_dropdown.svg" class="dropdown">
                         </div>
                         <ul class="opt">
                             <li><a href="../news/news_data_pdf.html" class="on">워크북</a></li>
@@ -222,64 +227,63 @@
             </div>
         </div>
     </header>
-
     <main>
-        <section>
-            <h2>워크북 상세</h2>
+        <section class="info">
+            <h2>작품 상세정보</h2>
             <div class="container">
-                <div class="image-text">
-                    <div class="image">
-                            <img src="./image/workbook/workbook1.jpg" alt="">
+                <div class="item-wrap">
+                    <div class="i-slide">
+                        <img src="./image/workbook/workbook1.jpg" alt="2020 틴즈 워크북">
                     </div>
-                    <div class="icon-text-down">
-                        <div class="icon-box">
-                            <button type="button"><img src="../../image/icon_heart_storke.svg" alt="북마크" class="big-heart"></button>
-                            <button type="button" onclick="window.print()"><img src="../../image/icon_print.svg" alt="프린트" class="print"></button>
-                            <button type="button"><img src="../../image/icon_share.svg" alt="SNS 공유" class="share"></button>
-                        </div>
-                        <div class="text">
-                            <div class="title">
-                                <strong>2020 틴즈 워크북</strong>
-                                <span>2020. 06. 23</span>
-                                <p>
-                                    이 워크북은 청소년 여러분이 리움에서 꼭 감상하기를 바라는 작품 6점을 골라 소개하고 있습니다. 이 작품들이 아니더라도 다른 작품들을 감상하며 여러분만의 미술관 경험을 만들어보길 바랍니다.
-                                </p>
+                    <div class="i-des">
+                        <div class="loc-icon">    
+                            <div class="icon-box">
+                                <button type="button"><img src="../../image/icon_heart_storke.svg" alt="북마크" class="big-heart"></button>
+                                <button type="button" onclick="window.print()"><img src="../../image/icon_print.svg" alt="프린트" class="print"></button>
+                                <button type="button"><img src="../../image/icon_share.svg" alt="SNS 공유" class="share"></button>
                             </div>
-                            <div class="intro">
-                                <strong>책 소개</strong>
-                                <div class="museum-list">
-                                    <div class="strong-p">
-                                        <strong class="museum">MUSEUM 1</strong>
-                                        <p>
-                                            <청자진사 연화문 표형주자> <br>
-                                            정선의 <쌍도정도>, <취성도> <br>
-                                            <용두보당>
-                                        </p>
-                                    </div>
-                                    <div class="strong-p">
-                                        <strong class="museum">MUSEUM 2</strong>
-                                        <p>
-                                            박수근 <나무와 두 여인> <br>
-                                            루이즈 부르주아 <밀실 XI(초상)> <br>
-                                            올라퍼 엘리아슨 <당신의 예측불가능한 여정>
-                                        </p>
-                                    </div>
+                        </div>
+                        <div class="tit-exp">
+                            <div class="tit">
+                                <h2>2020 틴즈 워크북</h2>
+                                <p class="lang">2020. 06. 23 발행</span></p>
+                            </div>
+                            <div class="exp">
+                                <table class="mini-box">
+                                    <tr>
+                                        <td>
+                                            <p>이 워크북은 청소년 여러분이 리움에서 꼭 감상하기를 바라는 작품 6점을 골라 소개하고 있습니다. 이 작품들이 아니더라도 다른 작품들을 감상하며 여러분만의 미술관 경험을 만들어보길 바랍니다.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="down-img">
+                                    <a href="https://drive.google.com/file/d/14z2tlyk5paC_ozAEGdksZDkw5--xwYVV/view?usp=share_link">
+                                        <img src="../../image/icon_download.svg" alt="다운로드">
+                                        <span>PDF 다운로드<span>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="down-img">
-                                <a href="">
-                                    <p>
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    PDF 다운로드
-                                    </p>
-                                </a>
+                            <div class="introduce">
+                                <h6><span class="br-bar"></span>목차 소개</h6>
+                                <strong>MUSEUM 1</strong>
+                                <p>
+                                    &lt;청자진사 연화문 표형주자&gt;<br>
+                                    정선의 &lt;쌍도정도&gt;, &lt;취성도&gt;<br>
+                                    &lt;용두보당&gt;
+                                </p>
+                                <br>
+                                <strong>MUSEUM 2</strong>
+                                <p>
+                                    박수근 &lt;나무와 두 여인&gt;<br>
+                                    루이즈 부르주아 &lt;밀실 XI(초상)&gt;<br>
+                                    올라퍼 엘리아슨 &lt;당신의 예측불가능한 여정&gt;
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="movePage">
             <h2>페이지 이동</h2>
             <div class="container">
@@ -299,8 +303,7 @@
             </div>
         </section>
     </main>
-
-    <footer>
+    <footer class="sub">
         <div class="sitemap-banner-wrap">
             <div class="container">
                 <div class="sob">

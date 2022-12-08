@@ -9,12 +9,12 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_program.jpg');
+    @include full_bg('program_header.jpg');
 }
 
 main {
+    overflow-x: hidden;
 
-    
     .popular-program {
         margin-top: 60px;
     }
@@ -27,18 +27,25 @@ main {
         }
     }
 
+    .pp {
+        // padding: 0 20px 40px 20px;
+        border-radius: 10px;
+        box-shadow: rgb(0 0 0 / 20%) 0px 18px 50px -10px;
+    }
     .img-text {
         position: relative;
         width: 100%;
-        overflow: hidden;
         margin: 40px auto 30px;
-        @include out_container();
+        overflow: hidden;
+        // @include out_container();
         
         @include responsive(pc-screens) {
-            @include in_container();
+            // @include in_container();
+            height: 650px;
             margin-top: 60px;
-            height: 810px;
+            border-radius: 5px;
         }
+
         .image, a, img {
             height: 100%;
         }
@@ -58,31 +65,12 @@ main {
         }
 
         .limit-text {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 15px;
-            background-color: $red-brown;
-            color: #fff;
-            border-radius: 5px;
-
-            @include responsive(pc-screens) {
-                top: 30px;
-                left: 30px;
-                font-size: 22px;
-            }
-
-            p {
-                @include gothic_font(meidum, 14px);
-
-                @include responsive(pc-screens){
-                    font-size: 20px;
-                    padding: 5px 10px;
-                }
-            }
+            @include poster_label();
+            zoom: 1.2;
         }
     }
     .text-explain {
+        padding: 0 20px 40px 20px;
 
         .text-explain-text {
             @include responsive(pc-screens) {
@@ -119,17 +107,15 @@ main {
 
                 @include responsive(pc-screens) {
                     font-size: $h3; 
-                    padding-bottom: 40px;
+                    padding-bottom: 30px;
                 }
             }
 
             p:last-child {
-                // @include gothic_font(regular);
-                // padding-bottom: 40px;
                 color: $bk2;
 
                 @include responsive(pc-screens) {
-                    font-size: 22px;
+                    font-size: 20px;
                 }
             }
         }
@@ -140,13 +126,11 @@ main {
             }
 
             p {
-                // font-size: 16px;
                 @include content_align(justify);
                 color: $bk2;
 
                 @include responsive(pc-screens) {
-                    font-size: 20px;
-                   /*  width: 50%; */
+                    font-size: 18px;
                     padding-right: 60px;
                     padding-top: 60px;
                 }
@@ -180,16 +164,14 @@ main {
     }
 
     .img-explain-date-register {
-        @include responsive(pc-screens) {
-            // display: flex;
-            // padding-top: 50px;
-        }
+
         .img-text-explain {
             margin: 25px 0 75px;
             
             @include responsive(pc-screens) {
                 display: flex;
                 align-items: center;
+                 column-gap: 120px;
                 margin: 50px 0 150px;
 
                 &:first-child {
@@ -199,6 +181,7 @@ main {
         }
 
         .image-text {
+            flex: 1;
             width: 100%;
             // margin: 30px auto;
             position: relative;
@@ -213,56 +196,66 @@ main {
             }
 
             .limit-text-1 {
-                position: absolute;
-                top: 20px;
-                left: 20px;
-                padding: 10px 15px;
-                background-color: $red-brown;
-                color: #fff;
-                border-radius: 5px;
-                
-                @include responsive(pc-screens) {
-                    padding: 10px 20px;
-                }
-
-                p {
-                    font-size: 14px;
-
-                    @include responsive(pc-screens) {
-                        text-align: center;
-                        font-size: 18px;
-                    }
-                }
+                @include poster_label();
             }
         }
 
         .explain-date-register {
+            flex: 1;
             margin-top: 20px;
 
             @include responsive(pc-screens) {
                 width: 600px;
+                margin-top: 0;
             }
 
             .explain {
+                position: relative;
 
-                p:first-child {
+                .icon-box {
+                    @include flex_between();
+                    position: absolute;
+                    top: 5px; right: 5px;
+
+                    @include responsive(pc-screens) {
+                        top: 0; right: 0;
+                    }
+            
+                    img {
+                        height: 22px;
+                        
+                        @include responsive(pc-screens) {
+                            height: 25px;
+                        }
+
+                        &.print:hover, &.share:hover {
+                            filter: $svg-black;
+                        }
+                    }
+                    
+                    .big-heart:hover {
+                        filter: $svg-heart;
+                    }
+                }
+
+                .type {
                     @include gothic_font(medium);
                     color: $yellow-brown;
                     padding-bottom: 5px;
 
                     @include responsive(pc-screens) {
-                        font-size: 22px;
+                        margin-bottom: 5px;
+                        font-size: 20px;
                         color: $yellow-brown;
                     }
                 }
 
                 h5 {
-                    // font-size: 22px;
                     padding-bottom: 20px;
                     line-height: 1.3em;
 
                     @include responsive(pc-screens) {
-                        font-size: 36px;
+                        font-size: $h3;
                     }
                 }
 
@@ -272,8 +265,7 @@ main {
                     color: $bk2;
 
                     @include responsive(pc-screens) {
-                        text-align: left;
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                 }
             }
@@ -320,35 +312,18 @@ main {
             }
 
             .request {
-                text-align: center;
-                border: 1px solid $bk1;
-                padding: 10px;
-                border-radius: 5px;
-                
-                &:first-child{
-                    @include responsive(pc-screens){
-                        // margin-top: 300px;
-                    }   
-                }
-
-                a {
-                @include gothic_font(semibold);
                 width: 100%;
-                color: $bk1;
-                // margin: 40px 0;
-               /*  padding: 13px; */
+                padding: 12px;
+                text-align: center;
+                @include gothic_font(semibold);
+                border: 1px solid $bk3;
                 border-radius: 5px;
-                // text-align: center;
-        
-                    @include responsive(pc-screens){
-                        font-size: 20px;
-                        text-align: center;
-                        margin: 0 auto;
-                        width: 600px;
-                        /* margin-left: 440px; */
-                        // padding: 20px 30px;
-                        padding: 5px 0;
-                    }
+                transition: all .3s;
+
+                &:hover {
+                    color: #fff;
+                    border: 1px solid $yellow-brown;
+                    background-color: $yellow-brown;
                 }
             }
         }

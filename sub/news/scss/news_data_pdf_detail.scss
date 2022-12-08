@@ -9,180 +9,239 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('publication_header.jpg');
+    @include full_bg('data_pdf_header.jpg');
 }
 
 main {
-    section{
-        .image-text {
+    @include main_sub();
+    overflow-x: hidden;
 
-            @include responsive(pc-screens) {
+    // section {
+        
+    //     .image-text {
 
-                display: flex;
-                justify-content: space-between;
+    //         @include responsive(pc-screens) {
+    //             @include flex_between();
+    //         }
+
+    //         .image {
+    //             @include responsive(pc-screens) {
+    //                 width: 42.85714285714286%;
+    //             }
+
+    //             img {
+    //                 width: 100%;
+    //             }
+    //         }
+
+    //         .icon-text-down {
+    //             @include responsive(pc-screens) {
+    //                 position: relative;
+    //                 width: 50%;
+    //             }
+    //             .icon-box {
+    //                 @include flex_between();
+    //                 width: 120px;
+    //                 margin-top: 24px;
+    //                 margin-left: auto;
+
+    //                 @include responsive(pc-screens) {
+    //                     position: absolute;
+    //                     margin-top: -40px;
+    //                     right: 0;
+    //                 }
+
+    //                 img {
+    //                     height: 25px;
+                        
+    //                     &.print:hover, &.share:hover {
+    //                         filter: $svg-black;
+    //                     }
+    //                 }
+                    
+    //                 .big-heart:hover {
+    //                     filter: $svg-heart;
+    //                 }
+    //             }
+
+    //             .text {
+    //                 // margin-top: 20px;
+
+    //                 @include responsive(pc-screens) {
+    //                     border-top: 1px solid $bk3;
+    //                 }
+
+    //                 .title {
+    //                     strong {
+    //                         display: block;
+    //                         font-size: 27px;
+    //                         margin-bottom: 20px;
+
+    //                         @include responsive(pc-screens) {
+    //                             font-size: 46px;
+    //                             margin-bottom: 30px;
+    //                             margin-top: 40px;
+    //                         }
+    //                     }
+
+    //                     span {
+    //                         font-size: 20px;
+    //                         color: $bk2;
+    //                         margin-bottom: 30px;
+                            
+    //                         @include responsive(pc-screens) {
+    //                             font-size: 26px;
+    //                             margin-bottom: 40px;
+    //                         }
+    //                     }
+    //                     p {
+    //                         color: $bk1;
+    //                         margin-bottom: 40px;
+    //                         line-height: 28px;
+    //                         text-align: justify;
+                            
+    //                         @include responsive(pc-screens) {
+    //                             font-size: 22px;
+    //                             line-height: 40px;
+    //                         }
+    //                     }
+    //                 }
+
+    //                 .intro {
+    //                     @include responsive(pc-screens) {
+    //                         display: flex;
+    //                     }
+                        
+    //                     strong {
+    //                         display: block;
+    //                         font-size: 18px;
+
+    //                         @include responsive(pc-screens) {
+    //                             font-size: 26px;
+    //                             margin-right: 70px;
+    //                         }
+    //                     }
+                        
+    //                     .museum-list {
+    //                         .strong-p {
+    //                             padding: 15px 0;
+    //                             strong.museum {
+    //                                 font-size: 15px;
+    //                                 color: $bk1;
+    //                                 margin-bottom: 10px;
+
+    //                                 @include responsive(pc-screens) {
+    //                                     font-size: 22px;
+    //                                 }
+    //                             }
+
+    //                             p {
+    //                                 font-size: 15px;
+    //                                 color: $bk1;
+    //                                 // margin-bottom: 30px;
+    //                                 line-height: 22px;
+
+    //                                 @include responsive(pc-screens) {
+    //                                     font-size: 22px;
+    //                                     line-height: 36px;
+    //                                     margin-bottom: 50px;
+
+    //                                     &:last-child {
+    //                                         margin-bottom: 0;
+    //                                     }
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+                    
+    //                 .down-img {
+    //                     text-align: center;
+    //                     border: 1px solid #000;
+    //                     padding: 5px;
+    //                     border-radius: 5px;
+    //                     background-color: $dark-brown;
+    //                     margin-top: 25px;
+
+    //                     @include responsive(pc-screens) {
+    //                         padding: 10px;
+    //                         margin-top: 79px;
+    //                     }
+    //                     p {
+    //                         img{
+    //                             width: 16px;
+    //                             filter: $svg-white;
+    //                             margin-right: 10px;
+
+    //                             @include responsive(pc-screens) {
+    //                                 width: 20px;
+    //                             }
+
+    //                         }
+    //                         color: white;
+    //                         @include gothic_font(medium, 18px);
+
+    //                         @include responsive(pc-screens) {
+    //                             font-size: 22px
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    section.info {
+        @include detail_info();
+
+        .i-slide img {
+            width: 100%;
+        }
+
+        .i-des .loc-icon {
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .mini-box {
+            margin-bottom: 20px !important;
+
+            td {
+                @include content_align(justify);
             }
-            .image {
-                @include responsive(pc-screens) {
-                    width: 42.85714285714286%;
+        }
+
+        .introduce strong {
+                margin-top: 20px;
+                margin-bottom: 5px;
+        }
+
+        .down-img {
+            width: 100%;
+            text-align: center;
+            
+            a {
+                padding: 10px 15px;
+                width: 100%;
+                border: 1px solid $bk4;
+                border-radius: 5px;
+                font-size: 15px;
+                color: $bk2;
+                transition:  all .3s;
+
+                &:hover {
+                    color: #fff;
+                    background: $dark-brown;
+                    border: 1px solid $dark-brown;
+                }
+
+                &:nth-child(2) {
+                    margin-top: 20px;
                 }
 
                 img {
-                    width: 100%;
-                }
-            }
-
-            .icon-text-down {
-                @include responsive(pc-screens) {
-                    position: relative;
-                    width: 50%;
-                }
-                .icon-box {
-                    margin-left: auto;
-                    margin-top: 24px;
-                    @include flex_between();
-                    width: 120px;
-
-                    @include responsive(pc-screens) {
-                        position: absolute;
-                        margin-top: -40px;
-                        right: 0;
-                    }
-
-                    img {
-                        height: 25px;
-                        
-                        &.print:hover, &.share:hover {
-                            filter: $svg-black;
-                        }
-                    }
-                    
-                    .big-heart:hover {
-                        filter: $svg-heart;
-                    }
-                }
-
-                .text {
-                    // margin-top: 20px;
-
-                    @include responsive(pc-screens) {
-                        border-top: 1px solid $bk3;
-                    }
-
-                    .title {
-                        strong {
-                            display: block;
-                            font-size: 27px;
-                            margin-bottom: 20px;
-
-                            @include responsive(pc-screens) {
-                                font-size: 46px;
-                                margin-bottom: 30px;
-                                margin-top: 40px;
-                            }
-                        }
-
-                        span {
-                            font-size: 20px;
-                            color: $bk2;
-                            margin-bottom: 30px;
-                            
-                            @include responsive(pc-screens) {
-                                font-size: 26px;
-                                margin-bottom: 40px;
-                            }
-                        }
-                        p {
-                            color: $bk1;
-                            margin-bottom: 40px;
-                            line-height: 28px;
-                            text-align: justify;
-                            
-                            @include responsive(pc-screens) {
-                                font-size: 22px;
-                                line-height: 40px;
-                            }
-                        }
-                    }
-
-                    .intro {
-                        @include responsive(pc-screens) {
-                            display: flex;
-                        }
-                        
-                        strong {
-                            display: block;
-                            font-size: 18px;
-
-                            @include responsive(pc-screens) {
-                                font-size: 26px;
-                                margin-right: 70px;
-                            }
-                        }
-                        
-                        .museum-list {
-                            .strong-p {
-                                padding: 15px 0;
-                                strong.museum {
-                                    font-size: 15px;
-                                    color: $bk1;
-                                    margin-bottom: 10px;
-
-                                    @include responsive(pc-screens) {
-                                        font-size: 22px;
-                                    }
-                                }
-
-                                p {
-                                    font-size: 15px;
-                                    color: $bk1;
-                                    // margin-bottom: 30px;
-                                    line-height: 22px;
-
-                                    @include responsive(pc-screens) {
-                                        font-size: 22px;
-                                        line-height: 36px;
-                                        margin-bottom: 50px;
-
-                                        &:last-child {
-                                            margin-bottom: 0;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    .down-img {
-                        text-align: center;
-                        border: 1px solid #000;
-                        padding: 5px;
-                        border-radius: 5px;
-                        background-color: $dark-brown;
-                        margin-top: 25px;
-
-                        @include responsive(pc-screens) {
-                            padding: 10px;
-                            margin-top: 79px;
-                        }
-                        p {
-                            img{
-                                width: 16px;
-                                filter: $svg-white;
-                                margin-right: 10px;
-
-                                @include responsive(pc-screens) {
-                                    width: 20px;
-                                }
-
-                            }
-                            color: white;
-                            @include gothic_font(medium, 18px);
-
-                            @include responsive(pc-screens) {
-                                font-size: 22px
-                            }
-                        }
-                    }
+                    height: 12px;
+                    margin-right: 6px;
                 }
             }
         }

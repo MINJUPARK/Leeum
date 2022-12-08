@@ -9,134 +9,155 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_program.jpg');
+    @include full_bg('program_header.jpg');
 }
 
-/* main {
-    h1 {
-        display: none;
-    }
-
-    .flex {
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-} */
-
 main {
-    h1 {
-        display: none;
-    }
 
-    .flex {
-        /* justify-content: space-between;
-        flex-wrap: wrap; */
-        @include responsive(pc-screens){
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-    
-    .past-program {
-        width: 100%;
-        margin-bottom: 20px;
-        @include responsive(pc-screens){
-            width: 48.57142857142857% !important;
-            margin-bottom: 50px;
-            width: 50%;
+    section.filter {
+        @include section_filter();
 
-          /*   &:first-child {
-                padding-right: 20px;
-            }
-
-            &:last-child {
-                padding-left: 20px;
-            } */
-        }
-        
-        .image-text {
-            position: relative;
-            border: 1px solid $bk5;
-            border-radius: 5px;
-            .image{
-                width: 100%;
-                height: 110px;
-                overflow: hidden;
-
-                @include responsive(pc-screens){
-                    height: 260px;
-                }
-
-                img{
-                    width: 100%;
-                    border-top-left-radius: 5px;
-                    border-top-right-radius: 5px;
-                }
-            }  
+        .filter-wrap {
+            @include filter_wrap();
             
-            .text {
-                padding: 14px 20px 21px 20px;
-
-                @include responsive(pc-screens){
-                    padding: 26px 40px 40px 40px;
-                }
-                span {
-                    @include gothic_font(medium, 12px); 
-                    color: $yellow-brown;
-                    margin-bottom: 7px;
-
-                    @include responsive(pc-screens){
-                        font-size: 18px;
-                        margin-bottom: 15px;
-                    }
-                }
-                
-                .bold {
-                    @include gothic_font(semibold, 16px); 
-                    margin-bottom: 20px;
-                   
-                    @include responsive(pc-screens){
-                        margin-bottom: 40px;
-                        font-size: 26px;
-                    }
-                    
-                }
-    
-                .grey {
-                    @include gothic_font(regular, 12px); 
-                    color: $bk1;
-
-                    @include responsive(pc-screens){
-                        font-size: 16px;
-                    }
-                    
-                }
-    
-                
+            .speed-search {
+                @include speed_search();
             }
 
-            .place {
-                position: absolute;
-                text-align: right;
-                @include gothic_font(medium, 12px); 
-                color: $bk2;
-                text-align: center;
-                padding: 5px 10px;
-                border: 1px solid #000;
-                border-radius: 5px;
-                bottom: 13px;
-                right: 20px;
+            .detail-search-wrap {
+                @include detail_search();
 
-                @include responsive(pc-screens){
-                    right: 40px;
-                    font-size: 16px;
-                    padding: 10px 20px;
-                    bottom: 25px;
+                .detail-search {
+                    display: block;
+
+                    form[name=detail] .chk-box {
+                        margin-top: 0;
+
+                        ul.grp:nth-child(2) {
+                            border-right: 1px solid $bk5;
+                        }
+                    }
                 }
             }
         }
-
     }
+
+    section.list {
+        margin-top: 40px;
+
+        @include responsive(pc-screens){
+            margin-top: 80px;
+        }
+
+        .list-control {
+            @include list_control();
+        }
+
+        .flex {
+            margin-top: 50px;
+
+            @include responsive(pc-screens){
+                @include flex_between();
+                flex-wrap: wrap;
+            }
+        
+            .past-program {
+                width: 100%;
+                margin-bottom: 20px;
+    
+                @include responsive(pc-screens){
+                    width: 49% !important;
+                    margin-bottom: 30px;
+                }
+                
+                .heart {
+                    @include icon_heart();
+                }
+
+                .image-text {
+                    position: relative;
+                    border: 1px solid $bk5;
+                    border-radius: 5px;
+    
+                    .image {
+                        
+                        width: 100%;
+                        height: 180px;
+                        overflow: hidden;
+    
+                        @include responsive(pc-screens){
+                            height: 260px;
+                        }
+
+                        img {
+                            width: 100%;
+                            border-top-left-radius: 5px;
+                            border-top-right-radius: 5px;
+                        }
+                    }  
+                    
+                    .text {
+                        padding: 20px;
+    
+                        @include responsive(pc-screens){
+                            padding: 25px 40px;
+                        }
+
+                        span {
+                            @include gothic_font(medium, 14px); 
+                            color: $yellow-brown;
+    
+                            @include responsive(pc-screens){
+                                font-size: 18px;
+                            }
+                        }
+                        
+                        .bold {
+                            @include gothic_font(semibold, 20px); 
+                            margin: 5px 0 15px;
+    
+                            @include responsive(pc-screens){
+                                font-size: 24px;
+                                margin-bottom: 20px;
+                            }
+                            
+                        }
+            
+                        .grey-place {
+                            @include flex_between();
+                            align-items: center;
+                        }
+
+                        .grey {
+                            @include gothic_font(regular, 14px); 
+                            color: $bk1;
+    
+                            @include responsive(pc-screens){
+                                font-size: 16px;
+                            }
+                            
+                        }
+
+                        .place {
+                            padding: 5px 10px;
+                            @include gothic_font(medium, 13px); 
+                            text-align: center;
+                            color: $bk2;
+                            border: 1px solid #000;
+                            border-radius: 5px;
+        
+                            @include responsive(pc-screens){
+                                padding: 8px 16px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.paging {
+        @include paging();
     }
 }
 

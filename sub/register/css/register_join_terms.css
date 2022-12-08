@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
@@ -395,4 +395,4 @@ main .join-term .agreement .agr-plus .agr .agree-person p span {
 }
 main .join-term .agreement .agr-plus .agr .agree-person p .preservation {
   margin-top: 70px;
-}/*# sourceMappingURL=register_join_terms.css.map */
+}

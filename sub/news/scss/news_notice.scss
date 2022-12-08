@@ -51,23 +51,24 @@ main {
         }
         
         li {
+            &:first-child {
+                border-left: 1px solid $bk5;
+            }
             position: relative;
             width: 25%;
             border-top: 1px solid $bk5;
             border-right: 1px solid $bk5;
             border-bottom: 1px solid $bk5;
+            color: $bk3;
             cursor: pointer;
-
-            a {
-                color: $bk3;
-                // font-size: 18px;
-            }
         }
 
         .on {
             border-bottom: none;
-            background-color: #fff;
-            
+            color: #000;
+            @include gothic_font(semibold);
+            transition: all .5s;
+
             &::after {
                 content: '';
                 display: block;

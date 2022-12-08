@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -570,8 +561,13 @@ header .sub-title .eng {
 }
 header .sub-title .kor {
   font-family: "KoPub Batang";
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  header .sub-title .kor {
+    font-size: 36px;
+  }
 }
 header .breadcrumb-wrap {
   display: none;
@@ -662,14 +658,9 @@ main section.intro .intro-wrap h3 {
     font-size: 36px;
   }
 }
-@media screen and (min-width: 1440px) {
-  main section.intro .intro-wrap h3 {
-    font-size: 46px;
-  }
-}
 main section.intro .intro-wrap .des {
   text-align: center;
-  line-height: 1.8em;
+  line-height: 2em;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
@@ -715,15 +706,6 @@ main section.intro .intro-wrap .preview {
   margin-left: -50vw;
   margin-right: -50vw;
 }
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-2712px);
-    will-change: transform;
-  }
-}
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -763,8 +745,7 @@ main section.intro .intro-wrap .preview .slider .slide-track {
   display: flex;
   width: 5424px;
   height: 400px;
-  -webkit-animation: scroll 20s linear infinite;
-          animation: scroll 20s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 main section.intro .intro-wrap .preview .slider .slide-track .slide {
   display: flex;
@@ -1230,8 +1211,7 @@ main section.artistList .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 main section.artistList .list-control .view-type .sort-list {
   display: flex;
@@ -1335,8 +1315,7 @@ main section.artistList .item-box .item .i-pic {
 main section.artistList .item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -1885,4 +1864,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=artist.css.map */
+}

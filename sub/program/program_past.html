@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <meta name="title" property="og:title" content="리움미술관">
+    <meta name="images" property="og:image" content="./image/leeum_thumnail.jpg">
+    <meta name="description" property="og:description" content="관객과 소통하는 리움, 예술과 삶을 더욱 풍부하게">
+    <meta name="type" property="og:type" content="article">
+    <link rel="icon" href="./image/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/program_past.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
     <title>Leeum</title>
-    <!-- <style>
-        .flex {
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .past-program {
-            width: 48.57142857142857% !important;      
-        }
-    </style> -->
 </head>
 <body>
     <header>
@@ -67,7 +62,7 @@
                             <ul class="opt">
                                 <li><a href="../collect/collect_antique.html">고미술</a></li>
                                 <li><a href="../collect/collect_modern.html">현대미술</a></li>
-                                <li><a href="../collect/collect_preserve.html">보존연구</a></li>
+                                <li><a href="../collect/collect_conserve.html">보존연구</a></li>
                                 <li><a href="../collect/collect_sign.html">수어해설</a></li>
                             </ul>
                         </div>
@@ -136,7 +131,7 @@
                                     <ul class="opt hidden">
                                         <li><a href="../collect/collect_antique.html">고미술</a></li>
                                         <li><a href="../collect/collect_modern.html">현대미술</a></li>
-                                        <li><a href="../collect/collect_preserve.html">보존연구</a></li>
+                                        <li><a href="../collect/collect_conserve.html">보존연구</a></li>
                                         <li><a href="../collect/collect_sign.html">수어해설</a></li>
                                     </ul>
                                 </li>
@@ -209,7 +204,7 @@
                     </li>
                     <li class="loc">
                         <div class="step">
-                            <a href="">지난 프로그램</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                            <a href="../program/program_past.html">지난 프로그램</a><img src="../../image/icon_dropdown.svg" class="dropdown">
                         </div>
                         <ul class="opt">
                             <li><a href="../program/program_now.html">현재 프로그램</a></li>
@@ -220,144 +215,260 @@
             </div>
         </div>
     </header>
-
     <main>
-        <section>
-            <h1>지난 프로그램</h1>
+        <section class="filter">
+            <h2>검색 및 필터</h2>
             <div class="container">
-                <div class="flex">
-                    <div class="past-program">
-                        <a href="./program_past_detail.html">
-                            <div class="image-text">
-                                <div class="image">
-                                        <img src="./image/past_program1.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span>멤버십</span>
-                                    <p class="bold">보존연구실 투어 - 분석실</p>
-                                    <p class="grey">2022. 10. 27 (목) 10:00 - 14:00</p>
-                                </div>
-                                <p class="place">리움미술관 보존연구실</p>
-                            </div>
-                        </a>
+                <div class="filter-wrap">
+                    <div class="speed-search">
+                        <h6>키워드 검색</h6>
+                        <form name="keyword" action="#" method="post">
+                            <select>
+                                <option hidden>분류</option>
+                                <option value="title">프로그램명</option>
+                                <option value="target">대상</option>
+                                <option value="type">유형</option>
+                            </select>
+                            <input type="search" placeholder="검색어를 입력하세요">
+                            <button type="button"><img src="../../image/icon_search.svg">빠른 검색</button>
+                        </form>
                     </div>
+                    <div class="detail-search-wrap">
+                        <button type="button" class="ds-btn">상세 검색 <span class="status">닫기</span><img src="../../image/icon_arrow.svg" class="active"></button>
+                        <div class="detail-search">
+                            <form name="detail" action="#" method="post">
+                                <div class="chk-box">
+                                    <ul class="grp target">
+                                        <li class="title">대상별</li>
+                                        <li>
+                                            <ul class="list">
+                                                <li><input type="checkbox" id="membership"><label for="membership">멤버십</label></li>
+                                                <li><input type="checkbox" id="adult"><label for="adult">성인</label></li>
+                                                <li><input type="checkbox" id="collage"><label for="collage">대학생</label></li>
+                                                <li><input type="checkbox" id="teen"><label for="teen">청소년</label></li>
+                                                <li><input type="checkbox" id="child"><label for="child">어린이</label></li>
+                                                <li><input type="checkbox" id="family"><label for="child">가족</label></li>
+                                                <li><input type="checkbox" id="school"><label for="school">학교</label></li>
+                                                <li><input type="checkbox" id="teacher"><label for="teacher">교사</label></li>
+                                                <li><input type="checkbox" id="expert"><label for="expert">전문가</label></li>
+                                                <li><input type="checkbox" id="foreigner"><label for="foreigner">외국인</label></li>
+                                                <li><input type="checkbox" id="tg-etc"><label for="tg-etc">기타</label></li>
 
-                    <div class="past-program">
-                        <a href="./program_past_detail.html">
-                            <div class="image-text">
-                                <div class="image">
-                                    <img src="./image/past_program2.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span>기타</span>
-                                    <p class="bold">낭독 극장 : 석상공원</p>
-                                    <p class="grey">2022. 10. 27 ~ 10. 28 (금) 19:30</p>
-                                </div>
-                                <p class="place">구름산책자 전시장(GG공간)</p>
-                            </div>
-                        </a>
-                    </div>
+                                            </ul>
+                                            
+                                        </li>
+                                    </ul>
+                                    <ul class="grp type">
+                                        <li class="title">유형별</li>
+                                        <li>
+                                            <ul class="list">
+                                                <li><input type="checkbox" id="speech"><label for="speech">강연</label></li>
+                                                <li><input type="checkbox" id="symposium"><label for="symposium">심포지엄</label></li>
+                                                <li><input type="checkbox" id="seminar"><label for="seminar">세미나</label></li>
+                                                <li><input type="checkbox" id="workshop"><label for="workshop">워크숍</label></li>
+                                                <li><input type="checkbox" id="e-connect"><label for="e-connect">전시연계</label></li>
+                                                <li><input type="checkbox" id="e-comment"><label for="e-comment">전시해설</label></li>
+                                                <li><input type="checkbox" id="show"><label for="show">공연</label></li>
+                                                <li><input type="checkbox" id="screening"><label for="screening">상영</label></li>
+                                                <li><input type="checkbox" id="internship"><label for="internship">인턴쉽</label></li>
+                                                <li><input type="checkbox" id="tp-etc"><label for="tp-etc">기타</label></li>
 
-                    <div class="past-program">
-                        <a href="./program_past_detail.html">
-                            <div class="image-text">
-                                <div class="image">
-                                    <img src="./image/past_program3.jpg" alt="">
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="text">
-                                    <span>멤버십</span>
-                                    <p class="bold">10월 음악회 - 박수예 바이올린 리사이틀</p>
-                                    <p class="grey">2022. 10. 26 ~ 10. 30 (일) 17:00</p>
+                                <div class="btn-box">
+                                    <button type="submit"><img src="../../image/icon_search.svg">상세 검색</button>
+                                    <button type="reset"><img src="../../image/icon_reset.svg">초기화</button>
                                 </div>
-                                <p class="place">리움미술관 지하 2층 강당</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="past-program">
-                        <a href="./program_past_detail.html">
-                            <div class="image-text">
-                                <div class="image">
-                                    <img src="./image/past_program4.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span>기타</span>
-                                    <p class="bold">PATH #2 메타버스, 뇌과학으로 성찰하다</p>
-                                    <p class="grey">2022. 10. 22 (토) 16:00 - 17:30</p>
-                                </div>
-                                <p class="place">리움 강당</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="past-program">
-                        <a href="./program_past_detail.html">
-                            <div class="image-text">
-                                <div class="image">
-                                    <img src="./image/past_program5.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span>기타</span>
-                                    <p class="bold">PATH #1 미래의 역사:도나 해러웨이와 SF적 상상력의 궤적</p>
-                                    <p class="grey">2022. 10. 08 (토) 14:00 - 15:30</p>
-                                </div>
-                                <p class="place">리움 강당</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="past-program">
-                        <a href="./program_past_detail.html">
-                            <div class="image-text">
-                                <div class="image">
-                                    <img src="./image/past_program6.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span>멤버십</span>
-                                    <p class="bold">10월 다르게 보기</p>
-                                    <p class="grey">2022. 10. 04 ~ 10. 25 (화) 18:00</p>
-                                </div>
-                                <p class="place">리움미술관 로비</p>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="past-program">
-                        <a href="./program_past_detail.html">
-                            <div class="image-text">
-                                <div class="image">
-                                    <img src="./image/past_program7.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span>기타</span>
-                                    <p class="bold">다른 감각으로 구름을 걸으며</p>
-                                    <p class="grey">2022. 09. 28 ~ 09. 29 (목) 15:00 - 16:30</p>
-                                </div>
-                                <p class="place">리움 B2 컨퍼런스룸</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="past-program">
-                        <a href="./program_past_detail.html">
-                            <div class="image-text">
-                                <div class="image">
-                                    <img src="./image/past_program8.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <span>멤버십</span>
-                                    <p class="bold">9월 음악회 - 노부스 콰르텟</p>
-                                    <p class="grey">2022. 09. 25 (토) 17:00</p>
-                                </div>
-                                <p class="place">리움미술관 지하 2층 강당</p>
-                            </div>
-                        </a>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="list">
+            <h2>지난 프로그램</h2>
+            <div class="container">
+                <div class="list-control">
+                    <div class="count">
+                        <span>총 <b>191</b>건</span>
+                    </div>
+                    <button class="sort"><img src="../../image/icon_filter.svg"><span>정렬 방식</span></button>
+                    <div class="view-type">
+                        <ul class="sort-list">
+                            <li class="on">조회순</li>
+                            <li>최근등록순</li>
+                        </ul>
+                        <select name="nth-view">
+                            <option value="n-12">12개씩 보기</option>
+                            <option value="n-24">24개씩 보기</option>
+                            <option value="n-36">36개씩 보기</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="past-program">
+                        <div class="image-text">
+                            <button type="button" class="heart"></button>
+                            <a href="./program_past_detail.html">
+                                <div class="image">
+                                    <img src="./image/past_program1.jpg" alt="보존연구실 투어 - 분석실">
+                                </div>
+                                <div class="text">
+                                    <span>멤버십</span>
+                                    <p class="bold">보존연구실 투어 - 분석실</p>
+                                    <div class="grey-place">
+                                        <p class="grey">2022. 10. 27 (목) 10:00 - 14:00</p>
+                                        <p class="place">리움미술관 보존연구실</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="past-program">
+                        <div class="image-text">
+                            <button type="button" class="heart"></button>
+                            <a href="./program_past_detail.html">
+                                <div class="image">
+                                    <img src="./image/past_program2.jpg" alt="낭독 극장 : 석상공원">
+                                </div>
+                                <div class="text">
+                                    <span>기타</span>
+                                    <p class="bold">낭독 극장 : 석상공원</p>
+                                    <div class="grey-place">
+                                        <p class="grey">2022. 10. 27 ~ 10. 28 (금) 19:30</p>
+                                        <p class="place">구름산책자 전시장(GG공간)</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="past-program">
+                        <div class="image-text">
+                            <button type="button" class="heart"></button>
+                            <a href="./program_past_detail.html">
+                                <div class="image">
+                                    <img src="./image/past_program3.jpg" alt="10월 음악회 - 박수예 바이올린 리사이틀">
+                                </div>
+                                <div class="text">
+                                    <span>멤버십</span>
+                                    <p class="bold">10월 음악회 - 박수예 바이올린 리사이틀</p>
+                                    <div class="grey-place">
+                                        <p class="grey">2022. 10. 26 ~ 10. 30 (일) 17:00</p>
+                                        <p class="place">리움미술관 지하 2층 강당</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="past-program">
+                        <div class="image-text">
+                            <button type="button" class="heart"></button>
+                            <a href="./program_past_detail.html">
+                                <div class="image">
+                                    <img src="./image/past_program4.jpg" alt="PATH #2 메타버스, 뇌과학으로 성찰하다">
+                                </div>
+                                <div class="text">
+                                    <span>기타</span>
+                                    <p class="bold">PATH #2 메타버스, 뇌과학으로 성찰하다</p>
+                                    <div class="grey-place">
+                                        <p class="grey">2022. 10. 22 (토) 16:00 - 17:30</p>
+                                        <p class="place">리움 강당</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="past-program">
+                        <div class="image-text">
+                            <button type="button" class="heart"></button>
+                            <a href="./program_past_detail.html">
+                                <div class="image">
+                                    <img src="./image/past_program5.jpg" alt="PATH #1 미래의 역사 : 도나 해러웨이와 SF적 상상력의 궤적">
+                                </div>
+                                <div class="text">
+                                    <span>기타</span>
+                                    <p class="bold">PATH #1 미래의 역사 : 도나 해러웨이와 SF적 상상력의 궤적</p>
+                                    <div class="grey-place">
+                                        <p class="grey">2022. 10. 08 (토) 14:00 - 15:30</p>
+                                        <p class="place">리움 강당</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="past-program">
+                        <div class="image-text">
+                            <button type="button" class="heart"></button>
+                            <a href="./program_past_detail.html">
+                                <div class="image">
+                                    <img src="./image/past_program6.jpg" alt="10월 다르게 보기">
+                                </div>
+                                <div class="text">
+                                    <span>멤버십</span>
+                                    <p class="bold">10월 다르게 보기</p>
+                                    <div class="grey-place">
+                                        <p class="grey">2022. 10. 04 ~ 10. 25 (화) 18:00</p>
+                                        <p class="place">리움미술관 로비</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="past-program">
+                        <div class="image-text">
+                            <button type="button" class="heart"></button>
+                            <a href="./program_past_detail.html">
+                                <div class="image">
+                                    <img src="./image/past_program7.jpg" alt="다른 감각으로 구름을 걸으며">
+                                </div>
+                                <div class="text">
+                                    <span>기타</span>
+                                    <p class="bold">다른 감각으로 구름을 걸으며</p>
+                                    <div class="grey-place">
+                                        <p class="grey">2022. 09. 28 ~ 09. 29 (목) 15:00 - 16:30</p>
+                                        <p class="place">리움 B2 컨퍼런스룸</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="past-program">
+                        <div class="image-text">
+                            <button type="button" class="heart"></button>
+                            <a href="./program_past_detail.html">
+                                <div class="image">
+                                    <img src="./image/past_program8.jpg" alt="9월 음악회 - 노부스 콰르텟">
+                                </div>
+                                <div class="text">
+                                    <span>멤버십</span>
+                                    <p class="bold">9월 음악회 - 노부스 콰르텟</p>
+                                    <div class="grey-place">
+                                        <p class="grey">2022. 09. 25 (토) 17:00</p>
+                                        <p class="place">리움미술관 지하 2층 강당</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="paging">
+            <div class="container">
+                <ul>
+                    <li><a href="#" class="prev"></a></li>
+                    <li><a href="#" class="on">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"class="next"></a></li>
+                </ul>
+            </div>
+        </section>
     </main>
-    
     <footer>
         <div class="sitemap-banner-wrap">
             <div class="container">
@@ -385,7 +496,7 @@
                             <ul>
                                 <li><a href="../collect/collect_antique.html">고미술</a></li>
                                 <li><a href="../collect/collect_modern.html">현대미술</a></li>
-                                <li><a href="../collect/collect_preserve.html">보존연구</a></li>
+                                <li><a href="../collect/collect_conserve.html">보존연구</a></li>
                                 <li><a href="../collect/collect_sign.html">수어해설</a></li>
                             </ul>
                         </div>

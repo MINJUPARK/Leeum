@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <meta name="title" property="og:title" content="리움미술관">
+    <meta name="images" property="og:image" content="./image/leeum_thumnail.jpg">
+    <meta name="description" property="og:description" content="관객과 소통하는 리움, 예술과 삶을 더욱 풍부하게">
+    <meta name="type" property="og:type" content="article">
+    <link rel="icon" href="./image/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/news_data_book_detail.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
@@ -210,7 +214,7 @@
                     </li>
                     <li class="loc">
                         <div class="step">
-                            <a href="">출판물</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                            <a href="../news/news_data_book.html">출판물</a><img src="../../image/icon_dropdown.svg" class="dropdown">
                         </div>
                         <ul class="opt">
                             <li><a href="../news/news_data_pdf.html">워크북</a></li>
@@ -222,67 +226,49 @@
             </div>
         </div>
     </header>
-
     <main>
-        <section>
-            <h2>워크북 상세</h2>
+        <section class="info">
+            <h2>작품 상세정보</h2>
             <div class="container">
-                <div class="image-text">
-                    <div class="image">
-                            <img src="./image/publication/publication-2.jpg" alt="">
+                <div class="item-wrap">
+                    <div class="i-slide">
+                        <img src="./image/publication/publication-2.jpg" alt="올라퍼 엘리아슨: 세상의 모든 가능성">
                     </div>
-                    <div class="icon-text-down">
-                        <div class="icon-box">
-                            <button type="button"><img src="../../image/icon_heart_storke.svg" alt="북마크" class="big-heart"></button>
-                            <button type="button" onclick="window.print()"><img src="../../image/icon_print.svg" alt="프린트" class="print"></button>
-                            <button type="button"><img src="../../image/icon_share.svg" alt="SNS 공유" class="share"></button>
-                        </div>
-                        <div class="text">
-                            <div class="title-desc">
-                                <div class="title">
-                                    <strong>올라퍼 엘리아슨: 세상의 모든 가능성</strong>
-                                    <p>(Olafur Eliasson: The parliament of possibilities)</p>
-                                </div>
-                                <div class="description">
-                                    <table class="mini-box">
-                                        <tr>
-                                            <th>저자 · 발행</th>
-                                            <td>서울, 리움미술관, 2016</td>
-                                        </tr>
-                                        <tr>
-                                            <th>크기 · 도판</th>
-                                            <td>25 X 34cm, 215p, 컬러 도판 수록</td>
-                                        </tr>
-                                        <tr>
-                                            <th>ISBN</th>
-                                            <td>978-89-85468-72-5</td>
-                                        </tr>
-                                        <tr>
-                                            <th>전시 기간</th>
-                                            <td>2016. 09. 28 - 2017. 02. 26</td>
-                                        </tr>
-                                    </table>
-                                    <!-- <div class="tie">
-                                        <span>저자 · 발행</span>
-                                        <p>서울, 리움미술관, 2016</p>
-                                    </div>
-                                    <div class="tie">
-                                        <span>크기 · 도판</span>
-                                        <p>25 X 34cm, 215p, 컬러 도판 수록</p>
-                                    </div>
-                                    <div class="tie">
-                                        <span>ISBN</span>
-                                        <p>978-89-85468-72-5</p>
-                                    </div>
-                                    <div class="tie">
-                                        <span>전시 기간</span>
-                                        <p>2016. 09. 28 - 2017. 02. 26</p>
-                                    </div> -->
-                                </div>
+                    <div class="i-des">
+                        <div class="loc-icon">    
+                            <div class="icon-box">
+                                <button type="button"><img src="../../image/icon_heart_storke.svg" alt="북마크" class="big-heart"></button>
+                                <button type="button" onclick="window.print()"><img src="../../image/icon_print.svg" alt="프린트" class="print"></button>
+                                <button type="button"><img src="../../image/icon_share.svg" alt="SNS 공유" class="share"></button>
                             </div>
-                            
-                            <div class="intro">
-                                <strong>책 목차</strong>
+                        </div>
+                        <div class="tit-exp">
+                            <div class="tit">
+                                <h2>올라퍼 엘리아슨: 세상의 모든 가능성</h2>
+                                <p class="lang">Olafur Eliasson: The parliament of possibilities</span></p>
+                            </div>
+                            <div class="exp">
+                                <table class="mini-box">
+                                    <tr>
+                                        <th>저자 · 발행</th>
+                                        <td>서울, 리움미술관, 2016</td>
+                                    </tr>
+                                    <tr>
+                                        <th>크기 · 도판</th>
+                                        <td>25 X 34cm, 215p, 컬러 도판 수록</td>
+                                    </tr>
+                                    <tr>
+                                        <th>ISBN</th>
+                                        <td>978-89-85468-72-5</td>
+                                    </tr>
+                                    <tr>
+                                        <th>전시 기간</th>
+                                        <td>2016. 09. 28. - 2017. 02. 26.</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="introduce">
+                                <h6><span class="br-bar"></span>목차 소개</h6>
                                 <div class="list">
                                     <ul>
                                         <li>인사말</li>
@@ -295,7 +281,7 @@
                                         <li>무제(돌 바닥)</li>
                                         <li>뒤집힌 폭포</li>
                                         <li>도마달루의 일광 연작(북쪽)</li>
-                                        <li>먼발치의 음산한 열정 - 티모시 <br> 모튼</li>
+                                        <li>먼발치의 음산한 열정 - 티모시 모튼</li>
                                         <li>자아가 사라지는 벽</li>
                                     </ul>
                                     <ul>
@@ -312,56 +298,25 @@
                                         <li>감사의 글</li>
                                     </ul>
                                 </div>
-                                <!-- <div class="list">
-                                    <p>
-                                        · 인사말 <br>
-                                        · 이끼 벽 <br>
-                                        · 환풍기 <br>
-                                        · 부드러운 나선 / 강한 나선 <br>
-                                        · 기상학적 원들 <br>
-                                        · 희미해지는 바다 <br>
-                                        · 색채 스펙트럼 연작 조클라 연작 <br>
-                                        · 무제(돌 바닥) <br>
-                                        · 뒤집힌 폭포 <br>
-                                        · 도마달루의 일광 연작(북쪽) <br>
-                                        · 먼발치의 음산한 열정 - 티모시 모튼 <br>
-                                        · 자아가 사라지는 벽
-                                    </p>
-                                    <p>
-                                        · 사라지는 시간의 형상 <br>
-                                        · 당신의 예측 불가능한 여정 <br>
-                                        · 당신의 미술관 경험을 위한 준비 <br>
-                                        · 당신의 예측 불가능한 동일성 <br>
-                                        · 무지개 집합 <br>
-                                        · 세상의 모든 당신 - 우혜수 <br>
-                                        · 작품목록 <br>
-                                        · 필자 및 작가 소개 <br>
-                                        · 주요 전시 및 프로젝트 <br>
-                                        · 주요 출판물 <br>
-                                        · 감사의 글 <br>
-                                        · 사진저작권
-                                    </p>
-                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="movePage">
             <h2>페이지 이동</h2>
             <div class="container">
                 <div class="movePage-wrap">
-                    <a href="./news_data_pdf_detail.html" class="prev">
+                    <a href="./news_data_book_detail.html" class="prev">
                         <img src="../../image/icon_arrow_tail.svg">
-                        <label>이전 워크북</label>
-                        <p><span class="vert-bar"></span><span class="title">고서화&공예</span></p>
+                        <label>이전 출판물</label>
+                        <p><span class="vert-bar"></span><span class="title">인간 人間 일곱 개의 질문 (Human 7 questions)</span></p>
                     </a>
-                    <a href="../news/news_data_pdf.html" class="home">목록으로</a>
-                    <a href="./news_data_pdf_detail.html" class="next">
-                        <p><span class="title">꽃을 찾아 떠나는 여행 - 한국 고미술</span><span class="vert-bar"></span></p>
-                        <label>다음 워크북</label>
+                    <a href="../news/news_data_book.html" class="home">목록으로</a>
+                    <a href="./news_data_book_detail.html" class="next">
+                        <p><span class="title">아트스펙트럼 2016</span><span class="vert-bar"></span></p>
+                        <label>다음 출판물</label>
                         <img src="../../image/icon_arrow_tail.svg">
                     </a>
                 </div>
@@ -369,7 +324,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="sub">
         <div class="sitemap-banner-wrap">
             <div class="container">
                 <div class="sob">

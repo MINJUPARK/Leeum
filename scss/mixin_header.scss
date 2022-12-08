@@ -349,7 +349,11 @@
         }
 
         .kor {
-            @include batang_font(medium, $h2);
+            @include batang_font(medium, 32px);
+
+            @include responsive(pc-screens) {
+                font-size: $h2;
+            }
         }
     }
 

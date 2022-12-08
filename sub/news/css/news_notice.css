@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -570,8 +561,13 @@ header .sub-title .eng {
 }
 header .sub-title .kor {
   font-family: "KoPub Batang";
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  header .sub-title .kor {
+    font-size: 36px;
+  }
 }
 header .breadcrumb-wrap {
   display: none;
@@ -690,14 +686,18 @@ main .tab-menu .gnb li {
   border-top: 1px solid #d4d4d4;
   border-right: 1px solid #d4d4d4;
   border-bottom: 1px solid #d4d4d4;
+  color: #acacac;
   cursor: pointer;
 }
-main .tab-menu .gnb li a {
-  color: #acacac;
+main .tab-menu .gnb li:first-child {
+  border-left: 1px solid #d4d4d4;
 }
 main .tab-menu .gnb .on {
   border-bottom: none;
-  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.5s;
 }
 main .tab-menu .gnb .on::after {
   content: "";
@@ -737,8 +737,7 @@ main .cont .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   padding: 12px 5px;
   border-bottom: 1px solid #eeeeee;
 }
@@ -1149,4 +1148,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=news_notice.css.map */
+}

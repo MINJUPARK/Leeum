@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -570,8 +561,13 @@ header .sub-title .eng {
 }
 header .sub-title .kor {
   font-family: "KoPub Batang";
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  header .sub-title .kor {
+    font-size: 36px;
+  }
 }
 header .breadcrumb-wrap {
   display: none;
@@ -862,8 +858,7 @@ main .texture-research-wrap .texture-research .texture-lsit .slide-item a h4 {
 main .texture-research-wrap .texture-research .texture-lsit .slide-item a img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 @media screen and (min-width: 1440px) {
@@ -1401,4 +1396,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=collect_conserve.css.map */
+}

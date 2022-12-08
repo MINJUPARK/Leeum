@@ -10,12 +10,32 @@ $(function() {
             spaceBetween: '2%',
             grabCursor: true
         });
+
+        swiper = new Swiper('.prg-slider', {
+            spaceBetween: 30,
+            effect: 'fade',
+            loop: true,
+            autoplay: {
+                delay: 15000,
+                disableOnInteraction: false,
+            },
+            autoHeight: true,
+            pagination: {
+                el: '.slide-paging',
+                clickable: true,
+            }
+            // mousewheel: {
+            //   invert: false,
+            // },
+        });
+
         swiper = new Swiper(".conserve-swiper", {
             slidesPerView: 1.4,
             centeredSlides: false,
             spaceBetween: '2%',
             grabCursor: true
         });
+
         swiper = new Swiper(".guide-swiper", {
             slidesPerView: 1.2,
             centeredSlides: false,
@@ -23,22 +43,4 @@ $(function() {
             grabCursor: true
         });
     });
-
-    swiper = new Swiper('.prg-slider', {
-        spaceBetween: 30,
-        effect: 'fade',
-        loop: true,
-        autoplay: {
-            delay: 15000,
-            disableOnInteraction: false,
-        },
-        autoHeight: true,
-        pagination: {
-          el: '.slide-paging',
-          clickable: true,
-        }
-        // mousewheel: {
-        //   invert: false,
-        // },
-     });
 })

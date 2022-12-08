@@ -21,6 +21,17 @@ main {
 
             .speed-search {
                 @include speed_search();
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border: 0;
+
+                form[name=keyword] input {
+                    width: 100%;
+
+                    @include responsive(pc-screens) {
+                        width: 84%;
+                    }
+                }
             }
         }
     }
@@ -38,85 +49,127 @@ main {
 
         .flex {
 
-            @include responsive(pc-screens) {
-                display: flex;
-                justify-content: space-between;
+            @include responsive(tablet-screens) {
+                @include flex_between();
                 flex-wrap: wrap;
             }
             .workbook {
-                @include responsive(pc-screens) {
-                    width: 48.57142857142857%;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+
+                @include flex_between();
+                margin-bottom: 40px;
+
+                @include responsive(tablet-screens) {
+                    width: 48%;
+                    margin-bottom: 60px;
                 }
-
-                justify-content: space-between;
-                display: flex;
-                margin-bottom: 30px;
-
-                @include responsive(pc-screens) {
-                    margin-bottom: 50px;
+                
+                > a {
+                    width: 50%;
                 }
-
-                /* &:last-child {
-                    margin-bottom: 0;
-                } */
                 .w-img {
-                    img {
-                        width: 170px;
 
-                    @include responsive(pc-screens) {
-                        width: 320px;
-                    }
+                    img {
+                        
+                        width: 100%;
+
+                        @include responsive(pc-screens) {
+                            width: 320px;
+                        }
                     }
                 }
 
                 .text-pdf {
+                    display: flex;
+                    align-content: space-between;
+                    flex-wrap: wrap;
                     position: relative;
-                    width: 42.85714285714286%;
-                    margin: 20px 0;
+                    width: 42%;
+
+                    @include responsive(tablet-screens) {
+                        margin: 20px 0;
+                    }
+
                     .text {
+                        width: 100%;
+
                         strong {
                             margin-bottom: 10px;
-                            font-size: 18px;
+                            font-size: $h6;
+                            line-height: 1.5em;
 
-                        @include responsive(pc-screens) {
-                            font-size: 30px;
+                            @include responsive(tablet-screens) {
+                                font-size: $h5;
+                            }
+
+                            @include responsive(pc-screens) {
+                                font-size: 24px;
+                            }
                         }
 
                         p {
-                            @include gothic_font(light, 12px);
+                            font-size: 15px;
                             color: $bk2;
-                            @include responsive(pc-screens) {
-                                font-size: 22px;
-                            }
                         }
+
+                        .preview {
+                            display: none;
+
+                            @media screen and (min-width:500px) {
+                                display: block;
+                                margin: 20px 0;
+                                @include content_align(justify, 1.8em);
+                                font-size: 14px;
+                            }
                         }
                     }
-                    .pdf {
-                        position: absolute;
-                        bottom: 0;
-                        text-align: center;
+
+                    .down-img {
+                        // position: absolute;
+                        // bottom: 0;
                         width: 100%;
+                        text-align: center;
+                        
                         a {
-                            padding: 5px;
-                            border-radius: 5px;
+                            padding: 10px 15px;
                             width: 100%;
-                            border: 1px solid #000;
-                            margin-bottom: 5px;
-                            &:last-child {
-                                margin-bottom: 0;
+                            border: 1px solid $bk4;
+                            border-radius: 5px;
+                            font-size: 15px;
+                            color: $bk2;
+                            transition:  all .3s;
+
+                            &:hover {
+                                color: #fff;
+                                background: $dark-brown;
+                                border: 1px solid $dark-brown;
                             }
+
+                            &:nth-child(2) {
+                                margin-top: 15px;
+                            }
+
                             img {
-                                width: 10px;
-                                @include responsive(pc-screens) {
-                                    width: 20px;
+                                display: none;
+                                height: 12px;
+                                margin-right: 6px;
+
+                                @media screen and (min-width:400px) {
+                                    display: inline-block;
                                 }
                             }
-                            span {
-                                @include gothic_font(medium, 12px);
-                                margin-left: 10px;
 
-                                @include responsive(pc-screens) {
-                                    font-size: 22px;
+                            span br {
+                                @media screen and (min-width:590px) {
+                                    display: none;
+                                }
+                                @include responsive(tablet-screens) {
+                                    display: block;
+                                }
+                                @media screen and (min-width:1068px) {
+                                    display: none;
                                 }
                             }
                         }
@@ -124,6 +177,9 @@ main {
                 }
             }
         }
+    }
+    section.paging {
+        @include paging();
     }
 }
 

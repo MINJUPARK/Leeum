@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -570,8 +561,13 @@ header .sub-title .eng {
 }
 header .sub-title .kor {
   font-family: "KoPub Batang";
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  header .sub-title .kor {
+    font-size: 36px;
+  }
 }
 header .breadcrumb-wrap {
   display: none;
@@ -713,8 +709,7 @@ main section.workBook .flex {
 @media screen and (min-width: 768px) {
   main section.workBook .flex {
     flex-wrap: nowrap;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
   }
 }
 main section.workBook .flex .workbook {
@@ -737,8 +732,7 @@ main section.workBook .flex .workbook .image-text .image {
 main section.workBook .flex .workbook .image-text .image img {
   width: 100%;
   height: 238px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (min-width: 768px) {
   main section.workBook .flex .workbook .image-text .image img {
@@ -800,10 +794,16 @@ main section.workBook .flex .workbook .image-text .down-img {
     border-radius: 5px;
     font-size: 15px;
     color: #5c5c5c;
+    transition: all 0.3s;
+  }
+  main section.workBook .flex .workbook .image-text .down-img a:hover {
+    color: #fff;
+    background: #6e3b3b;
+    border: 1px solid #6e3b3b;
   }
   main section.workBook .flex .workbook .image-text .down-img a img {
     height: 12px;
-    margin-right: 10px;
+    margin-right: 6px;
   }
 }
 main section.public .preview {
@@ -813,15 +813,6 @@ main section.public .preview {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
-}
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-2712px);
-    will-change: transform;
-  }
 }
 @keyframes scroll {
   0% {
@@ -841,40 +832,38 @@ main section.public .preview .slider {
 main section.public .preview .slider .slide-track {
   display: flex;
   width: 5424px;
-  -webkit-animation: scroll 20s linear infinite;
-          animation: scroll 20s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 main section.public .preview .slider .slide-track .slide {
-  display: flex;
   margin: 0 20px;
-}
-main section.public .preview .slider .slide-track .slide:nth-child(even) {
-  align-items: flex-end;
 }
 main section.public .preview .slider .slide-track .slide .item {
   position: relative;
+  width: 240px;
   height: 320px;
 }
-main section.public .preview .slider .slide-track .slide .item .i-pic:hover::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
+main section.public .preview .slider .slide-track .slide .item a {
   width: 100%;
-  height: 100%;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background: linear-gradient(to bottom, hsla(0deg, 0%, 0%, 0) 0%, hsla(0deg, 0%, 0%, 0.01) 5.6%, hsla(0deg, 0%, 0%, 0.037) 12.4%, hsla(0deg, 0%, 0%, 0.079) 20%, hsla(0deg, 0%, 0%, 0.135) 28.3%, hsla(0deg, 0%, 0%, 0.201) 37%, hsla(0deg, 0%, 0%, 0.277) 46%, hsla(0deg, 0%, 0%, 0.359) 55%, hsla(0deg, 0%, 0%, 0.446) 63.7%, hsla(0deg, 0%, 0%, 0.536) 72%, hsla(0deg, 0%, 0%, 0.625) 79.6%, hsla(0deg, 0%, 0%, 0.713) 86.4%, hsla(0deg, 0%, 0%, 0.796) 92%, hsla(0deg, 0%, 0%, 0.873) 96.3%, hsla(0deg, 0%, 0%, 0.942) 99%, hsl(0deg, 0%, 0%) 100%);
+}
+main section.public .preview .slider .slide-track .slide .item .i-pic {
+  transition: 0.3s all;
 }
 main section.public .preview .slider .slide-track .slide .item .i-pic .bg {
+  width: 100%;
   height: 320px;
   border-radius: 5px;
 }
 main section.public .preview .slider .slide-track .slide .item .i-des {
   position: absolute;
-  bottom: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+main section.public .preview .slider .slide-track .slide .item .i-des * {
   color: #fff;
 }
 main section.public .preview .slider .slide-track .slide .item .i-des h6 {
@@ -886,6 +875,27 @@ main section.public .preview .slider .slide-track .slide .item .i-des span {
   font-weight: 200;
   margin-top: 5px;
   opacity: 0.7;
+}
+main section.public .preview .slider .slide-track .slide .item .i-des .btn {
+  margin-top: 30px;
+}
+main section.public .preview .slider .slide-track .slide .item .i-des .btn label {
+  font-size: 14px;
+  font-weight: 600;
+}
+main section.public .preview .slider .slide-track .slide .item .i-des .btn img {
+  width: 14px;
+  height: 12px;
+  margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  main section.public .preview .slider .slide-track .slide .item .i-des .btn img {
+    width: 16px;
+    height: 14px;
+  }
+}
+main section.public .preview .slider .slide-track .slide .item .i-des .btn img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 main section.video ul.item-box {
   display: flex;
@@ -947,8 +957,7 @@ main section.video ul.item-box .item .i-pic {
 main section.video ul.item-box .item .i-pic .bg {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -1051,11 +1060,6 @@ main section.video ul.item-box .item .i-des .loc div.tag {
 main section.video ul.item-box .item .i-des .loc div:last-child {
   right: 0;
   width: 48px;
-}
-@media screen and (min-width: 1440px) {
-  main section.video ul.item-box {
-    /* height: 1400px; */
-  }
 }
 main section.video ul.item-box li.item {
   width: 100%;
@@ -1404,4 +1408,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=news_data.css.map */
+}

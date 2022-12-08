@@ -10,7 +10,7 @@ $(function() {
         slidesToScroll: 1,
         adaptiveWidth: true,
         adaptiveHeight: true,
-        infinite: false,
+        infinite: true,
         speed: 300,
     });
 
@@ -39,4 +39,7 @@ $(function() {
         var goToMainSlide = $(this).data("slick-index");
         $slideMain.slick("slickGoTo", goToMainSlide);
     });
+
+    $('.slick-cloned a').removeAttr('data-fancybox'); 
+    $('.slick-cloned a').attr('data-fancybox-trigger', 'collect');
 })

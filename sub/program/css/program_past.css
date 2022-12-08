@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
@@ -187,7 +187,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/header_program.jpg);
+  background: url(../image/program_header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -570,8 +561,13 @@ header .sub-title .eng {
 }
 header .sub-title .kor {
   font-family: "KoPub Batang";
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  header .sub-title .kor {
+    font-size: 36px;
+  }
 }
 header .breadcrumb-wrap {
   display: none;
@@ -648,129 +644,588 @@ header .breadcrumb-wrap {
   }
 }
 
-/* main {
-    h1 {
-        display: none;
-    }
-
-    .flex {
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-} */
-main h1 {
-  display: none;
-}
-main .flex {
-  /* justify-content: space-between;
-  flex-wrap: wrap; */
+main section.filter {
+  background: #f3f3f3;
 }
 @media screen and (min-width: 1440px) {
-  main .flex {
+  main section.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+  }
+}
+main section.filter .filter-wrap {
+  padding: 40px 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap {
+    width: 100%;
+    border-radius: 5px;
+    padding: 40px 80px;
+    background: #f3f3f3;
+  }
+}
+main section.filter .filter-wrap h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+main section.filter .filter-wrap .speed-search {
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d4d4d4;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+main section.filter .filter-wrap .speed-search h6 {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search h6 {
+    display: inline-block;
+    width: 120px;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] {
+    width: calc(100% - 120px);
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] * {
+  height: 50px;
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] select {
+  background: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 20px center;
+  background-color: #fff;
+  background-size: 10px;
+  width: 37%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] select {
+    width: 15.5172413793%;
+    flex-wrap: nowrap;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] input {
+  width: 60%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] input {
+    width: 67.2413793103%;
+    flex-wrap: nowrap;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 20px;
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .speed-search form[name=keyword] button {
+    width: 13.7931034483%;
+    margin-top: 0;
+  }
+}
+main section.filter .filter-wrap .speed-search form[name=keyword] button img {
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .ds-btn {
+    margin-bottom: 40px;
+    text-align: right;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn span {
+  vertical-align: initial;
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn img {
+  width: 10px;
+  margin-left: 10px;
+  filter: brightness(0) saturate(100%);
+  transition: 0.3s;
+}
+main section.filter .filter-wrap .detail-search-wrap .ds-btn img.active {
+  transform: rotate(180deg);
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search {
+  display: none;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] h6 {
+  margin: 20px 0 12px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85.9375%;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box h6 {
+    margin: 0;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul {
+    width: calc(100% - 120px);
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  color: #3c3c3c;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li {
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  border: 1px solid #d4d4d4;
+  background: #fff;
+  cursor: pointer;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li:not(:first-child) {
+  border-left: 0;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box ul.opt li.on {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #3c3c3c;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box {
+    flex-wrap: nowrap;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp {
+  width: 50%;
+  border: 1px solid #d4d4d4;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+  border-bottom: 0;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(odd) {
+  border-right: 0;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:first-child, main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+    border-bottom: 1px solid #d4d4d4;
+  }
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+    border-right: 0;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp li.title {
+  height: 45px;
+  line-height: 45px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list {
+  height: 125px;
+  padding: 15px 20px;
+  background: #fff;
+  overflow-y: auto;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 225px;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list li {
+  height: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list li {
+    width: 30%;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp ul.list li label {
+  margin-left: 5px;
+  font-size: 14px;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box {
+    display: inline-block;
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
+  font-size: 16px;
+  font-weight: 500;
+  width: 120px;
+  height: 50px;
+  color: #fff;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button {
+    margin: 0 auto;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button img {
+  height: 18px;
+  padding-bottom: 3px;
+  margin-right: 5px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=submit] {
+  width: 74%;
+  background: #000;
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=submit] {
+    width: 150px;
+    margin-right: 1%;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=reset] {
+  width: 24%;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 1440px) {
+  main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .btn-box button[type=reset] {
+    width: 150px;
+  }
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search {
+  display: block;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box {
+  margin-top: 0;
+}
+main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .chk-box ul.grp:nth-child(2) {
+  border-right: 1px solid #d4d4d4;
+}
+main section.list {
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main section.list {
+    margin-top: 80px;
+  }
+}
+main section.list .list-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #d4d4d4;
+}
+@media screen and (min-width: 1440px) {
+  main section.list .list-control {
+    padding-bottom: 20px;
+  }
+}
+main section.list .list-control .count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+main section.list .list-control .count b {
+  margin-right: 2px;
+}
+main section.list .list-control .count span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+main section.list .list-control .sort {
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+}
+main section.list .list-control .sort img {
+  height: 14px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 1440px) {
+  main section.list .list-control .sort span, main section.list .list-control .sort img {
+    display: none;
+  }
+}
+main section.list .list-control .view-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+main section.list .list-control .view-type .sort-list {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 35px;
+}
+@media screen and (min-width: 1440px) {
+  main section.list .list-control .view-type .sort-list {
+    position: static;
+  }
+}
+main section.list .list-control .view-type .sort-list li {
+  font-size: 14px;
+  padding-left: 15px;
+  color: #3c3c3c;
+}
+main section.list .list-control .view-type .sort-list li:hover {
+  text-decoration: underline;
+}
+main section.list .list-control .view-type .sort-list li.on {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #3c3c3c;
+}
+main section.list .list-control .view-type select[name=nth-view] {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main section.list .list-control .view-type select[name=nth-view] {
+    display: block;
+    width: 120px;
+    height: 30px;
+    padding: 0 10px;
+    background: url(../../../image/icon_arrow_bk.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: right 10px center;
+    background-size: 8px;
+  }
+}
+main section.list .flex {
+  margin-top: 50px;
+}
+@media screen and (min-width: 1440px) {
+  main section.list .flex {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 }
-main .flex .past-program {
+main section.list .flex .past-program {
   width: 100%;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main .flex .past-program {
-    width: 48.5714285714% !important;
-    margin-bottom: 50px;
-    width: 50%;
-    /*   &:first-child {
-          padding-right: 20px;
-      }
-
-      &:last-child {
-          padding-left: 20px;
-      } */
+  main section.list .flex .past-program {
+    width: 49% !important;
+    margin-bottom: 30px;
   }
 }
-main .flex .past-program .image-text {
+main section.list .flex .past-program .heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: url("../../../image/icon_heart_motion.png") no-repeat;
+  background-position: 0 0;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  z-index: 97;
+}
+main section.list .flex .past-program .heart:hover {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
+}
+main section.list .flex .past-program .heart.on {
+  transition-duration: 1s;
+  background-position: -1960px 0;
+}
+main section.list .flex .past-program .image-text {
   position: relative;
   border: 1px solid #d4d4d4;
   border-radius: 5px;
 }
-main .flex .past-program .image-text .image {
+main section.list .flex .past-program .image-text .image {
   width: 100%;
-  height: 110px;
+  height: 180px;
   overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
-  main .flex .past-program .image-text .image {
+  main section.list .flex .past-program .image-text .image {
     height: 260px;
   }
 }
-main .flex .past-program .image-text .image img {
+main section.list .flex .past-program .image-text .image img {
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-main .flex .past-program .image-text .text {
-  padding: 14px 20px 21px 20px;
+main section.list .flex .past-program .image-text .text {
+  padding: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main .flex .past-program .image-text .text {
-    padding: 26px 40px 40px 40px;
+  main section.list .flex .past-program .image-text .text {
+    padding: 25px 40px;
   }
 }
-main .flex .past-program .image-text .text span {
-  font-size: 12px;
+main section.list .flex .past-program .image-text .text span {
+  font-size: 14px;
   font-weight: 500;
   color: #be6a15;
-  margin-bottom: 7px;
 }
 @media screen and (min-width: 1440px) {
-  main .flex .past-program .image-text .text span {
+  main section.list .flex .past-program .image-text .text span {
     font-size: 18px;
-    margin-bottom: 15px;
   }
 }
-main .flex .past-program .image-text .text .bold {
-  font-size: 16px;
+main section.list .flex .past-program .image-text .text .bold {
+  font-size: 20px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin: 5px 0 15px;
 }
 @media screen and (min-width: 1440px) {
-  main .flex .past-program .image-text .text .bold {
-    margin-bottom: 40px;
-    font-size: 26px;
+  main section.list .flex .past-program .image-text .text .bold {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 }
-main .flex .past-program .image-text .text .grey {
-  font-size: 12px;
+main section.list .flex .past-program .image-text .text .grey-place {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section.list .flex .past-program .image-text .text .grey {
+  font-size: 14px;
   font-weight: 400;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
-  main .flex .past-program .image-text .text .grey {
+  main section.list .flex .past-program .image-text .text .grey {
     font-size: 16px;
   }
 }
-main .flex .past-program .image-text .place {
-  position: absolute;
-  text-align: right;
-  font-size: 12px;
-  font-weight: 500;
-  color: #5c5c5c;
-  text-align: center;
+main section.list .flex .past-program .image-text .text .place {
   padding: 5px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  color: #5c5c5c;
   border: 1px solid #000;
   border-radius: 5px;
-  bottom: 13px;
-  right: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main .flex .past-program .image-text .place {
-    right: 40px;
-    font-size: 16px;
-    padding: 10px 20px;
-    bottom: 25px;
+  main section.list .flex .past-program .image-text .text .place {
+    padding: 8px 16px;
+    font-size: 14px;
   }
+}
+main section.paging {
+  margin: 30px 0 60px;
+}
+main section.paging ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  main section.paging ul {
+    width: 50%;
+    margin: 80px auto 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.paging ul {
+    width: 30%;
+  }
+}
+main section.paging ul li {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 5px;
+  text-align: center;
+}
+main section.paging ul li a {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+main section.paging ul li a:hover {
+  font-weight: bold;
+  background: #f3f3f3;
+}
+main section.paging ul li a.on {
+  color: #fff;
+  font-weight: bold;
+  background: #3c3c3c;
+}
+main section.paging ul li a.prev, main section.paging ul li a.next {
+  background: url(../../../image/icon_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: 10px;
+  filter: brightness(0) saturate(100%);
+}
+main section.paging ul li a.prev {
+  transform: rotate(90deg);
+}
+main section.paging ul li a.next {
+  transform: rotate(-90deg);
 }
 
 @media screen and (min-width: 1440px) {
@@ -1053,4 +1508,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=program_past.css.map */
+}

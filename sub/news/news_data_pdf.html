@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <meta name="title" property="og:title" content="리움미술관">
+    <meta name="images" property="og:image" content="./image/leeum_thumnail.jpg">
+    <meta name="description" property="og:description" content="관객과 소통하는 리움, 예술과 삶을 더욱 풍부하게">
+    <meta name="type" property="og:type" content="article">
+    <link rel="icon" href="./image/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/news_data_pdf.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="./js/news.js"></script>
+
     <title>Leeum</title>
 </head>
 <body>
@@ -266,18 +272,21 @@
                     <div class="workbook">
                         <a href="./news_data_pdf_detail.html">
                             <div class="w-img">
-                                <img src="./image/workbook/workbook1.jpg" alt="워크북1">
+                                <img src="./image/workbook/workbook1.jpg" alt="2020 틴즈 워크북">
                             </div>
                         </a>
                         <div class="text-pdf">
                             <div class="text">
                                 <strong>2020 틴즈 워크북</strong>
-                                <p>2020. 06. 23</p>
+                                <p>2020. 06. 23 발행</p>
+                                <p class="preview">
+                                    청소년 여러분이 리움에서 꼭 감상하기를 바라는 작품 6점을 골라 소개합니다.
+                                </p>
                             </div>
-                            <div class="pdf">
-                                <a href="">
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    <span>PDF 다운로드</span>
+                            <div class="down-img">
+                                <a href="https://drive.google.com/file/d/14z2tlyk5paC_ozAEGdksZDkw5--xwYVV/view?usp=share_link">
+                                    <img src="../../image/icon_download.svg" alt="다운로드">
+                                    <span>PDF 다운로드<span>
                                 </a>
                             </div>
                         </div>
@@ -285,18 +294,21 @@
                     <div class="workbook">
                         <a href="./news_data_pdf_detail.html">
                             <div class="w-img">
-                                <img src="./image/workbook/workbook2.jpg" alt="워크북2">
+                                <img src="./image/workbook/workbook2.jpg" alt="꽃을 찾아 떠나는 여행 - 한국 고미술">
                             </div>
                         </a>
                         <div class="text-pdf">
                             <div class="text">
                                 <strong>꽃을 찾아 떠나는 여행 <br> - 한국 고미술</strong>
-                                <p>2019. 05. 07</p>
+                                <p>2019. 05. 07 발행</p>
+                                <p class="preview">
+                                    미술관에서는 무슨 꽃을 발견할 수 있을까요? 워크북과 함께 꽃을 찾아 M1 고미술 전시실로 떠나 봅시다.
+                                </p>
                             </div>
-                            <div class="pdf">
-                                <a href="">
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    <span>PDF 다운로드</span>
+                            <div class="down-img">
+                                <a href="https://drive.google.com/file/d/1KE41AL7bABXgYF0-uFiOsR-qr1vQ6zDW/view?usp=share_link">
+                                    <img src="../../image/icon_download.svg" alt="다운로드">
+                                    <span>PDF 다운로드<span>
                                 </a>
                             </div>
                         </div>
@@ -304,54 +316,65 @@
                     <div class="workbook">
                         <a href="./news_data_pdf_detail.html">
                             <div class="w-img">
-                                <img src="./image/workbook/workbook3.jpg" alt="워크북3">
+                                <img src="./image/workbook/workbook3.jpg" alt="리움 속 풍경 - 현대미술">
                             </div>
                         </a>
                         <div class="text-pdf">
                             <div class="text">
                                 <strong>리움 속 풍경 - 현대미술</strong>
-                                <p>2018. 04. 20</p>
+                                <p>2018. 04. 20 발행</p>
+                                <p class="preview">
+                                    풍경은 오래 전부터 작품의 좋은 소개가 되어 왔습니다. 다양한 풍경을 지니고 있는 미술관 작품을 감상해 봅시다.
+                                </p>
                             </div>
-                            <div class="pdf">
-                                <a href="">
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    <span>PDF 다운로드</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="workbook">
-                        <div class="w-img">
-                            <img src="./image/workbook/workbook4.jpg" alt="워크북4">
-                        </div>
-                        <div class="text-pdf">
-                            <div class="text">
-                                <strong>고미술</strong>
-                                <p>2017. 01. 13</p>
-                            </div>
-                            <div class="pdf">
-                                <a href="">
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    <span>PDF 다운로드</span>
+                            <div class="down-img">
+                                <a href="https://drive.google.com/file/d/1vyHHvTn4Yn0xBrFkIfGYLlI1gJNppTQW/view?usp=share_link">
+                                    <img src="../../image/icon_download.svg" alt="다운로드">
+                                    <span>PDF 다운로드<span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="workbook">
                         <a href="./news_data_pdf_detail.html">
-                        <div class="w-img">
-                            <img src="./image/workbook/workbook5.jpg" alt="워크북5">
+                            <div class="w-img">
+                                <img src="./image/workbook/workbook4.jpg" alt="고미술">
+                            </div>
+                        </a>
+                        <div class="text-pdf">
+                            <div class="text">
+                                <strong>고미술</strong>
+                                <p>2017. 01. 13 발행</p>
+                                <p class="preview">
+                                    리움 상설 전시에 소개된 작품 중 고미술을 주제로 주요 소장품을 교과서에도 나오는 부분을 포함하여 청소년 눈높이에 맞춰 구성하였습니다.
+                                </p>
+                            </div>
+                            <div class="down-img">
+                                <a href="https://drive.google.com/file/d/1Zsh81vfqf6HZIrX8SyQ66jOUztfxzLLo/view?usp=share_link">
+                                    <img src="../../image/icon_download.svg" alt="다운로드">
+                                    <span>PDF 다운로드<span>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="workbook">
+                        <a href="./news_data_pdf_detail.html">
+                            <div class="w-img">
+                                <img src="./image/workbook/workbook5.jpg" alt="현대미술">
+                            </div>
                         </a>
                         <div class="text-pdf">
                             <div class="text">
                                 <strong>현대미술</strong>
-                                <p>2016. 08. 08</p>
+                                <p>2016. 08. 08 발행</p>
+                                <p class="preview">
+                                    리움 상설 전시에 소개된 작품 중 현대미술을 주제로 주요 소장품을 교과서에도 나오는 부분을 포함하여 청소년 눈높이에 맞춰 구성하였습니다.
+                                </p>
                             </div>
-                            <div class="pdf">
-                                <a href="">
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    <span>PDF 다운로드</span>
+                            <div class="down-img">
+                                <a href="https://drive.google.com/file/d/1upUibQWoCMxAc510Lm7YK0N8m0UtUGep/view?usp=share_link">
+                                    <img src="../../image/icon_download.svg" alt="다운로드">
+                                    <span>PDF 다운로드<span>
                                 </a>
                             </div>
                         </div>
@@ -359,18 +382,21 @@
                     <div class="workbook">
                         <a href="./news_data_pdf_detail.html">
                             <div class="w-img">
-                                <img src="./image/workbook/workbook6.jpg" alt="워크북6">
+                                <img src="./image/workbook/workbook6.jpg" alt="한국건축예찬 - 땅의 깨달음">
                             </div>
                         </a>
                         <div class="text-pdf">
                             <div class="text">
-                                <strong>한국건축예찬</strong>
-                                <p>2016. 08. 08</p>
+                                <strong>한국건축예찬 - 땅의 깨달음</strong>
+                                <p>2016. 08. 08 발행</p>
+                                <p class="preview">
+                                    2015년 &lt;한국건축예찬-땅의 깨달음&gt; 전시와 연계하여 제작된 미니 워크북 입니다.
+                                </p>
                             </div>
-                            <div class="pdf">
-                                <a href="">
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    <span>PDF 다운로드</span>
+                            <div class="down-img">
+                                <a href="https://drive.google.com/file/d/1P5TKFHBkOivKMpW0X9E4nHPDLqhsnETS/view?usp=sharing">
+                                    <img src="../../image/icon_download.svg" alt="다운로드">
+                                    <span>PDF 다운로드<span>
                                 </a>
                             </div>
                         </div>
@@ -378,22 +404,25 @@
                     <div class="workbook">
                         <a href="./news_data_pdf_detail.html">
                             <div class="w-img">
-                                <img src="./image/workbook/workbook7.jpg" alt="워크북7">
+                                <img src="./image/workbook/workbook7.jpg" alt="세밀가귀">
                             </div>
                         </a>
                         <div class="text-pdf">
                             <div class="text">
                                 <strong>세밀가귀</strong>
-                                <p>2016. 08. 08</p>
+                                <p>2016. 08. 08 발행</p>
+                                <p class="preview">
+                                    2015년 &lt;세밀가귀: 한국미술의 품격&gt; 전시와 연계하여 제작된 워크북 입니다.
+                                </p>
                             </div>
-                            <div class="pdf">
-                                <a href="">
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    <span>PDF 다운로드</span>
+                            <div class="down-img">
+                                <a href="https://drive.google.com/file/d/1F_rano1_uShgf8Vvo2-xsbvFsIxCLRv2/view?usp=share_link">
+                                    <img src="../../image/icon_download.svg" alt="다운로드">
+                                    <span>PDF 다운로드<br> (학생용)<span>
                                 </a>
-                                <a href="">
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    <span>PDF 다운로드</span>
+                                <a href="https://drive.google.com/file/d/1fxYspQJcVaPsSEtgiudEvYAJHsrSBk3v/view?usp=share_link">
+                                    <img src="../../image/icon_download.svg" alt="다운로드">
+                                    <span>PDF 다운로드<br> (교사용)<span>
                                 </a>
                             </div>
                         </div>
@@ -401,23 +430,36 @@
                     <div class="workbook">
                         <a href="./news_data_pdf_detail.html">
                             <div class="w-img">
-                                <img src="./image/workbook/workbook8.jpg" alt="워크북8">
+                                <img src="./image/workbook/workbook8.jpg" alt="Between You and Me">
                             </div>
                         </a>
                         <div class="text-pdf">
                             <div class="text">
                                 <strong>Between You and Me</strong>
-                                <p>2016. 08. 08</p>
+                                <p>2016. 08. 08 발행</p>
+                                <p class="preview">
+                                    2014년 리움 개관 10주년을 맞이하여 선보인 이 워크북은 전통과 현대, 동양과 서양의 미술이 공존하는 소장품의 특성을 적극 반영하여 &lt;교감&gt;이라는 하나의 주제로 구성된 워크북 입니다.
+                                </p>
                             </div>
-                            <div class="pdf">
-                                <a href="">
-                                    <img src="../../image/icon_download.svg" alt="">
-                                    <span>PDF 다운로드</span>
+                            <div class="down-img">
+                                <a href="https://drive.google.com/file/d/1bRfGPtNjRWuRmCSsLmMngjGLtombO75x/view?usp=share_link">
+                                    <img src="../../image/icon_download.svg" alt="다운로드">
+                                    <span>PDF 다운로드<span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="paging">
+            <div class="container">
+                <ul>
+                    <li><a href="#" class="prev"></a></li>
+                    <li><a href="#" class="on">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#"class="next"></a></li>
+                </ul>
             </div>
         </section>
     </main>

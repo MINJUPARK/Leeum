@@ -26,15 +26,11 @@ main {
                 @include responsive(tablet-screens) {
                     font-size: $h2;
                 }
-
-                @include responsive(pc-screens) {
-                    font-size: $h1;
-                }
             }
 
             .des {
                 @include line_break();
-                @include content_align(center, 1.8em);
+                @include content_align(center);
                 
                 @include responsive(tablet-screens) {
                     font-size: 18px;

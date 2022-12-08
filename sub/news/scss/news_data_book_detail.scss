@@ -9,197 +9,226 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('publication_header.jpg');
+    @include full_bg('data_book_header.jpg');
 }
 
 main {
-    section{
-        .image-text {
+    @include main_sub();
+    overflow-x: hidden;
 
-            @include responsive(pc-screens) {
+    // section{
+    //     .image-text {
 
-                display: flex;
-                justify-content: space-between;
-            }
-            .image {
-                @include responsive(pc-screens) {
-                    width: 42.85714285714286%;
-                }
+    //         @include responsive(pc-screens) {
 
-                img {
-                    width: 100%;
-                }
-            }
+    //             display: flex;
+    //             justify-content: space-between;
+    //         }
+    //         .image {
+    //             @include responsive(pc-screens) {
+    //                 width: 42.85714285714286%;
+    //             }
 
-            .icon-text-down {
-                @include responsive(pc-screens) {
-                    position: relative;
-                    width: 50%;
-                }
-                .icon-box {
-                    margin-left: auto;
-                    margin-top: 24px;
-                    @include flex_between();
-                    width: 120px;
+    //             img {
+    //                 width: 100%;
+    //             }
+    //         }
 
-                    @include responsive(pc-screens) {
-                        position: absolute;
-                        margin-top: -40px;
-                        right: 0;
-                    }
+    //         .icon-text-down {
+    //             @include responsive(pc-screens) {
+    //                 position: relative;
+    //                 width: 50%;
+    //             }
+    //             .icon-box {
+    //                 margin-left: auto;
+    //                 margin-top: 24px;
+    //                 @include flex_between();
+    //                 width: 120px;
 
-                    img {
-                        height: 25px;
+    //                 @include responsive(pc-screens) {
+    //                     position: absolute;
+    //                     margin-top: -40px;
+    //                     right: 0;
+    //                 }
+
+    //                 img {
+    //                     height: 25px;
                         
-                        &.print:hover, &.share:hover {
-                            filter: $svg-black;
-                        }
-                    }
+    //                     &.print:hover, &.share:hover {
+    //                         filter: $svg-black;
+    //                     }
+    //                 }
                     
-                    .big-heart:hover {
-                        filter: $svg-heart;
-                    }
+    //                 .big-heart:hover {
+    //                     filter: $svg-heart;
+    //                 }
+    //             }
+
+    //             .text {
+    //                 margin-top: 20px;
+
+    //                 @include responsive(pc-screens) {
+    //                     margin-top: 0;
+    //                     border-top: 1px solid $bk3;
+    //                 }
+
+    //                 .title-desc {
+    //                     .title {
+    //                         strong {
+    //                             display: block;
+    //                             font-size: 27px;
+    //                             margin-bottom: 20px;
+    
+    //                             @include responsive(pc-screens) {
+    //                                 font-size: 46px;
+    //                                 margin-bottom: 30px;
+    //                                 margin-top: 40px;
+    //                             }
+    //                         }
+    
+    //                         p {
+    //                             @include gothic_font(light, 20px);
+    //                             color: $bk2;
+    //                         }
+    //                     }
+    //                     .description {
+                            
+    //                         table.mini-box {
+    //                             @include out_container();
+    //                             padding: 20px 30px;
+    //                             margin-top: 30px;
+    //                             margin-bottom: 50px;
+    //                             line-height: 2em;
+    //                             background: $bk6;
+                                
+    //                             @include responsive(pc-screens) {
+    //                                 @include in_container();
+    //                                 margin-top: 40px;
+    //                                 margin-bottom: 80px;
+    //                                 border-radius: 5px;
+    //                             }
+        
+    //                             th {
+    //                                 @include responsive(pc-screens) {
+    //                                     width: 30%;
+    //                                     text-align: left;
+    //                                 }
+    //                             }
+        
+    //                             td {
+    //                                 color: $bk1;
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+
+    //                 .intro {
+    //                     @include responsive(pc-screens) {
+    //                         display: flex;
+    //                     }
+                        
+    //                     .list {
+    //                         display: flex;
+    //                         ul {
+    //                             margin-top: 15px;
+    //                             width: 50%;
+    //                             @include responsive(pc-screens) {
+    //                                 margin-top: 0;
+    //                                 margin-left: 40px;
+    //                                 width: 50.42735042735043%;
+    //                             }
+
+    //                             li {
+    //                                 font-size: 14px;
+    //                                 padding-left: 11px;
+    //                                 line-height: 28px;
+    //                                 background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
+    //                                 background-size: 2px;
+                                    
+    //                                 @include responsive(tablet-screens) {
+    //                                     padding-left: 14px;
+    //                                     line-height: 36px;
+    //                                     font-size: 17px;
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    section.info {
+        @include detail_info();
+
+        .i-slide img {
+            width: 100%;
+        }
+
+        .i-des .loc-icon {
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .mini-box {
+            margin-bottom: 20px !important;
+
+            th {
+                width: 25% !important;
+
+                @include responsivet(tablet-screens) {
+                    width: 15% !important;
                 }
 
-                .text {
-                    margin-top: 20px;
+                @include responsive(pc-screens) {
+                    width: 30% !important;
+                }
+            }
+        }
 
+        .introduce {
+
+            strong {
+                margin-top: 20px;
+                margin-bottom: 5px;
+            }
+
+            .list {
+                margin-left: 10px;
+                
+                @media screen and(min-width:400px) {
+                    display: flex;
+                    column-gap: 20px;
+                }
+                
+
+                @include responsive(pc-screens) {
+                    justify-content: space-between;
+                    width: calc(100% - 120px);
+                }
+
+                ul {
+                    margin-top: 15px;
+                    
                     @include responsive(pc-screens) {
+                        width: 50%;
                         margin-top: 0;
-                        border-top: 1px solid $bk3;
                     }
-
-                    .title-desc {
-                        .title {
-                            strong {
-                                display: block;
-                                font-size: 27px;
-                                margin-bottom: 20px;
     
-                                @include responsive(pc-screens) {
-                                    font-size: 46px;
-                                    margin-bottom: 30px;
-                                    margin-top: 40px;
-                                }
-                            }
-    
-                            p {
-                                @include gothic_font(light, 20px);
-                                color: $bk2;
-                            }
-                        }
-                        .description {
-                            // margin-top: 20px;
-                            // padding: 20px;
-                            // background-color: $bk6;
-                            
-                            table.mini-box {
-                                @include out_container();
-                                padding: 20px 30px;
-                                margin-top: 30px;
-                                margin-bottom: 50px;
-                                line-height: 2em;
-                                background: $bk6;
-                                
-                                @include responsive(pc-screens) {
-                                    @include in_container();
-                                    margin-top: 40px;
-                                    margin-bottom: 80px;
-                                    border-radius: 5px;
-                                }
-        
-                                th {
-                                    @include responsive(pc-screens) {
-                                        width: 30%;
-                                        text-align: left;
-                                    }
-                                }
-        
-                                td {
-                                    color: $bk1;
-                                }
-                            }
-                        }
-
-                        /* p {
-                            color: $bk1;
-                            margin-bottom: 40px;
-                            line-height: 28px;
-                            text-align: justify;
-                            
-                            @include responsive(pc-screens) {
-                                font-size: 22px;
-                                line-height: 40px;
-                            }
-                        } */
-                    }
-
-                    .intro {
-                        @include responsive(pc-screens) {
-                            display: flex;
-                        }
-                        
-                        .list {
-                            display: flex;
-                            ul {
-                                margin-top: 15px;
-                                width: 50%;
-                                @include responsive(pc-screens) {
-                                    margin-top: 0;
-                                    margin-left: 40px;
-                                    width: 50.42735042735043%;
-                                }
-
-                                li {
-                                    font-size: 14px;
-                                    padding-left: 11px;
-                                    // margin-bottom: 20px;
-                                    line-height: 28px;
-                                    background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
-                                    background-size: 2px;
-                                    
-                                    @include responsive(tablet-screens) {
-                                        padding-left: 14px;
-                                        // margin-bottom: 30px;
-                                        line-height: 36px;
-                                        font-size: 17px;
-                                    }
-                                }
-                            }
-                        }
-
-                        // .list {
-                        //     display: flex;
-                        //     font-size: 15px;
-                        //     color: $bk1;
-
-                        //     @include responsive(pc-screens) {
-                        //         font-size: 22px;
-                        //     }
-                        //     p {
-                        //         width: 50%;
-                        //         font-size: 15px;
-                        //         color: $bk1;
-                        //         margin-bottom: 30px;
-                        //         line-height: 28px;
-    
-                        //         @include responsive(pc-screens) {
-                        //             font-size: 22px;
-                        //             line-height: 36px;
-    
-                        //             &:last-child {
-                        //                 margin-bottom: 64px;
-                        //             }
-                        //         }
-                        //     }
-                        // }
-
+                    li {
+                        @include content_align();
+                        padding-left: 10px;
+                        // line-height: 30px;
+                        background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
+                        background-size: 2px;
+                        background-position: left center;
                     }
                 }
             }
         }
     }
-
+    
     section.movePage {
         @include move_page();
     }

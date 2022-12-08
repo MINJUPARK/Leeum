@@ -9,10 +9,11 @@ header {
     @include header_common();
     @include header_sub();
 
-    @include full_bg('header_program.jpg');
+    @include full_bg('program_header.jpg');
 }
 
 main {
+    overflow-x: hidden;
 
     section.info {
         @include detail_info();
@@ -21,25 +22,15 @@ main {
             margin-bottom: 0;
 
             .i-slide {
-
+                
                 @include responsive(pc-screens) {
                     width: 100%;
+                    border: 1px solid #d4d4d4;
+                    border-radius: 5px;
                 }
 
                 .main-pic {
                     height: auto;
-        
-                    // video {
-                    //     width: 100%; height: 280px;
-                    //     background: #000;
-                    //     object-fit: cover;
-
-                    //     @include responsive(pc-screens) {
-                    //         height: auto;
-                    //         background: transparent;
-                    //         object-fit: initial;
-                    //     }
-                    // }
                 }
             }
 
@@ -52,6 +43,7 @@ main {
                 .loc-icon {
                     justify-content: flex-end;
                     margin-bottom: 20px;
+
                     @include responsive(pc-screens) {
                         margin-top: 40px;
                     }
@@ -84,7 +76,7 @@ main {
                     .tit {
 
                         & * {
-                            text-align: left;
+                            text-align: center;
                         }
 
                         @include responsive(pc-screens) {
@@ -109,33 +101,6 @@ main {
                             }
                         }
                     }
-
-                    // .request {
-
-                    //     a {
-                    //         width: 100%;
-                    //         margin: 40px 0;
-                    //         padding: 15px;
-                    //         @include gothic_font(medium);
-                    //         text-align: center;
-                    //         color: #f00;
-                    //         border: 1px solid #f00;
-                    //         border-radius: 5px;
-                            
-                    //         &:hover {
-                    //             background-color: #f00;
-                    //             color: #fff;
-                    //             transition: all .3s;
-                    //         }
-
-                    //         @include responsive(pc-screens){
-                    //             font-size: 22px;
-                    //             padding: 20px;
-                    //             width: 480px;
-                    //             // margin-left: -20px;
-                    //         }
-                    //     }
-                    // }
 
                     .exp {
 
@@ -211,41 +176,44 @@ main {
     }
 
     .r-d {
-        // margin-bottom: 60px;
 
         @include responsive(pc-screens){
-            // position: absolute;
-            // margin-left: 1180px;
             width: 34.28571428571429%;
-            // margin-top: 80px;
         }
 
         .request {
-            
-            a {
+            @include out_container();
+            position: fixed;
+            bottom: 0;
+            z-index: 1;
+
             @include gothic_font(semibold);
-            width: 100%;
-            // margin: 40px 0;
-            padding: 13px;
-            border-radius: 5px;
+            padding: 23px;
             text-align: center;
-            color: #f00;
-            border: 1px solid #f00;
-    
-                @include responsive(pc-screens){
-                    font-size: 18px;
-                    padding: 20px;
-                    // width: 480px;
-                    // margin-left: -20px;
+            color: #fff;
+            background-color: $yellow-brown;
+            transition: all .3s;
+            
+            @include responsive(pc-screens){
+                @include in_container();
+                position: static;
+                width: 100%;
+                border-radius: 5px;
+                color: $yellow-brown;
+                border: 1px solid $yellow-brown;
+                background-color: #fff;
+                font-size: 18px;
+                padding: 20px;
+
+                &:hover {
+                    color: #fff;
+                    background-color: $yellow-brown;
                 }
             }
         }
     
         .request-desc {
-            // background-color: $bk6;
-            // padding: 30px 0;
             
-    
             .content {
                 span {
                     @include gothic_font(semibold, 18px);
@@ -305,21 +273,25 @@ main {
     }
 
     .o-i-p {
-        @include responsive(pc-screens){
-            // margin-top: 80px;
+        @include responsive(pc-screens) {
             width: 60%;
-            // margin-left: 240px;
+
+            h6:first-child {
+                margin-top: 0 !important;
+            }
         }
-        
+
         .introduce {
             @include responsive(pc-screens){
                 margin-bottom: 60px;
             }
 
             h6 {
-                margin: 25px 0;
+                margin: 40px 0 20px;
                 @include gothic_font(semibold, 18px);
 
+                
+                
                 @include responsive(pc-screens){
                     font-size: 18px;
                 }
@@ -332,17 +304,13 @@ main {
 
             p {
                 margin-bottom: 10px;
-
-                @include responsive(pc-screens){
-                    font-size: 17px;
-                }
             }
         }
 
         .ticket-info {
 
             h6 {
-                margin: 25px 0;
+                margin: 40px 0 20px;
                 @include gothic_font(semibold, 18px);
 
                 @include responsive(pc-screens){
@@ -352,50 +320,29 @@ main {
 
             ul {
                 li {
+                    @include content_align(justify, 1.8em);
+                    @include gothic_font(medium);
                     padding-left: 11px;
-                    margin-bottom: 20px;
-                    line-height: calc(1em - 2px + 10px);
+                    margin-bottom: 10px;
                     background: url(../../about/image/icon_bullet_dot.svg) no-repeat left 0.7em;
                     background-size: 2px;
                     
                     @include responsive(tablet-screens) {
                         padding-left: 14px;
-                        margin-bottom: 30px;
                         font-size: 17px;
+                    }
+
+                    br {
+                        display: none;
+
+                        @include responsive(pc-screens) {
+                            display: block;
+                        }
                     }
                 }
             }
         }
 
-        /* -------------------- */
-        /* .introduce {
-            @include responsive(pc-screens){
-                margin-bottom: 60px;
-            }
-
-            h6 {
-                margin: 25px 0;
-                @include gothic_font(semibold, 18px);
-
-                @include responsive(pc-screens){
-                    font-size: 18px;
-                }
-            }
-
-            strong {
-                font-size: 18px;
-                margin-bottom: 15px;
-            }   
-
-            p {
-                margin-bottom: 10px;
-
-                @include responsive(pc-screens){
-                    font-size: 17px;
-                }
-            }
-        } */
-        
         p {
             @include content_align(justify);
 
@@ -457,76 +404,6 @@ main {
                 }
             }
         }
-
-        // .outline {
-        //     text-align: justify;
-    
-        //     .outline2 {
-        //         line-height: 28px;
-        //         margin-bottom: 40px;
-
-        //         @include responsive(pc-screens){
-        //             @include gothic_font(regular, 22px);
-        //             color: $bk1;
-        //             line-height: 44px;
-        //         }
-        //     } 
-        // }
-    
-        // .intro {
-        //     span {
-        //         @include gothic_font(semibold, 18px);
-        //         margin-bottom: 30px;
-                
-        //         @include responsive(pc-screens){
-        //             font-size: 28px;
-        //         }
-        //     }
-    
-        //     .first {
-        //         @include gothic_font(semibold);
-        //         margin-bottom: 20px;
-
-        //         @include responsive(pc-screens){
-        //             @include gothic_font(semibold, 24px);
-                    
-        //         }
-        //     }
-    
-        //     .second {
-        //         line-height: 28px;
-        //         margin-bottom: 40px;
-
-        //         @include responsive(pc-screens){
-        //             @include gothic_font(regular, 22px);
-        //             color: $bk1;
-        //             line-height: 44px;
-        //         }
-        //     }
-        // }
-    
-        // .precaution {
-        //     span {
-        //         @include gothic_font(semibold, 18px);
-        //         margin-bottom: 20px;
-
-        //         @include responsive(pc-screens){
-        //             font-size: 28px;
-        //         }
-        //     }
-    
-        //     p {
-        //         line-height: 28px;
-        //         margin-bottom: 10px;
-
-        //         @include responsive(pc-screens){
-        //             @include gothic_font(regular, 22px);
-        //             color: $bk1;
-        //             // line-height: 44px;
-        //             width: 620px;
-        //         }
-        //     }
-        // }
     }
 
     section.movePage {

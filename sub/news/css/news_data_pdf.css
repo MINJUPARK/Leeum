@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-jp-dynamic-subset.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
 @import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -570,8 +561,13 @@ header .sub-title .eng {
 }
 header .sub-title .kor {
   font-family: "KoPub Batang";
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 400;
+}
+@media screen and (min-width: 1440px) {
+  header .sub-title .kor {
+    font-size: 36px;
+  }
 }
 header .breadcrumb-wrap {
   display: none;
@@ -678,6 +674,9 @@ main section.search-wrap .search-box .speed-search {
   padding-bottom: 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #d4d4d4;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: 0;
 }
 @media screen and (min-width: 1440px) {
   main section.search-wrap .search-box .speed-search {
@@ -756,6 +755,14 @@ main section.search-wrap .search-box .speed-search form[name=keyword] button img
   margin-right: 8px;
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
+main section.search-wrap .search-box .speed-search form[name=keyword] input {
+  width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  main section.search-wrap .search-box .speed-search form[name=keyword] input {
+    width: 84%;
+  }
+}
 main section .list-control {
   display: flex;
   justify-content: space-between;
@@ -805,8 +812,7 @@ main section .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 main section .list-control .view-type .sort-list {
   display: flex;
@@ -855,7 +861,7 @@ main section .list-control .view-type select[name=nth-view] {
     margin-top: 80px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   main section .flex {
     display: flex;
     justify-content: space-between;
@@ -863,25 +869,24 @@ main section .list-control .view-type select[name=nth-view] {
   }
 }
 main section .flex .workbook {
-  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
-  margin-bottom: 30px;
-  /* &:last-child {
-      margin-bottom: 0;
-  } */
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   main section .flex .workbook {
-    width: 48.5714285714%;
+    width: 48%;
+    margin-bottom: 60px;
   }
 }
-@media screen and (min-width: 1440px) {
-  main section .flex .workbook {
-    margin-bottom: 50px;
-  }
+main section .flex .workbook > a {
+  width: 50%;
 }
 main section .flex .workbook .w-img img {
-  width: 170px;
+  width: 100%;
 }
 @media screen and (min-width: 1440px) {
   main section .flex .workbook .w-img img {
@@ -889,62 +894,152 @@ main section .flex .workbook .w-img img {
   }
 }
 main section .flex .workbook .text-pdf {
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
   position: relative;
-  width: 42.8571428571%;
-  margin: 20px 0;
+  width: 42%;
+}
+@media screen and (min-width: 768px) {
+  main section .flex .workbook .text-pdf {
+    margin: 20px 0;
+  }
+}
+main section .flex .workbook .text-pdf .text {
+  width: 100%;
 }
 main section .flex .workbook .text-pdf .text strong {
   margin-bottom: 10px;
   font-size: 18px;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  main section .flex .workbook .text-pdf .text strong {
+    font-size: 22px;
+  }
 }
 @media screen and (min-width: 1440px) {
   main section .flex .workbook .text-pdf .text strong {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
-main section .flex .workbook .text-pdf .text strong p {
-  font-size: 12px;
-  font-weight: 200;
+main section .flex .workbook .text-pdf .text p {
+  font-size: 15px;
   color: #5c5c5c;
 }
-@media screen and (min-width: 1440px) {
-  main section .flex .workbook .text-pdf .text strong p {
-    font-size: 22px;
+main section .flex .workbook .text-pdf .text .preview {
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  main section .flex .workbook .text-pdf .text .preview {
+    display: block;
+    margin: 20px 0;
+    text-align: justify;
+    line-height: 1.8em;
+    color: #3c3c3c;
+    font-size: 14px;
   }
 }
-main section .flex .workbook .text-pdf .pdf {
-  position: absolute;
-  bottom: 0;
+main section .flex .workbook .text-pdf .down-img {
+  width: 100%;
   text-align: center;
-  width: 100%;
 }
-main section .flex .workbook .text-pdf .pdf a {
-  padding: 5px;
+main section .flex .workbook .text-pdf .down-img a {
+  padding: 10px 15px;
+  width: 100%;
+  border: 1px solid #c5c5c5;
   border-radius: 5px;
+  font-size: 15px;
+  color: #5c5c5c;
+  transition: all 0.3s;
+}
+main section .flex .workbook .text-pdf .down-img a:hover {
+  color: #fff;
+  background: #6e3b3b;
+  border: 1px solid #6e3b3b;
+}
+main section .flex .workbook .text-pdf .down-img a:nth-child(2) {
+  margin-top: 15px;
+}
+main section .flex .workbook .text-pdf .down-img a img {
+  display: none;
+  height: 12px;
+  margin-right: 6px;
+}
+@media screen and (min-width: 400px) {
+  main section .flex .workbook .text-pdf .down-img a img {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 590px) {
+  main section .flex .workbook .text-pdf .down-img a span br {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  main section .flex .workbook .text-pdf .down-img a span br {
+    display: block;
+  }
+}
+@media screen and (min-width: 1068px) {
+  main section .flex .workbook .text-pdf .down-img a span br {
+    display: none;
+  }
+}
+main section.paging {
+  margin: 30px 0 60px;
+}
+main section.paging ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  main section.paging ul {
+    width: 50%;
+    margin: 80px auto 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main section.paging ul {
+    width: 30%;
+  }
+}
+main section.paging ul li {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 5px;
+  text-align: center;
+}
+main section.paging ul li a {
   width: 100%;
-  border: 1px solid #000;
-  margin-bottom: 5px;
+  height: 100%;
+  border-radius: 50%;
 }
-main section .flex .workbook .text-pdf .pdf a:last-child {
-  margin-bottom: 0;
+main section.paging ul li a:hover {
+  font-weight: bold;
+  background: #f3f3f3;
 }
-main section .flex .workbook .text-pdf .pdf a img {
-  width: 10px;
+main section.paging ul li a.on {
+  color: #fff;
+  font-weight: bold;
+  background: #3c3c3c;
 }
-@media screen and (min-width: 1440px) {
-  main section .flex .workbook .text-pdf .pdf a img {
-    width: 20px;
-  }
+main section.paging ul li a.prev, main section.paging ul li a.next {
+  background: url(../../../image/icon_arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: 10px;
+  filter: brightness(0) saturate(100%);
 }
-main section .flex .workbook .text-pdf .pdf a span {
-  font-size: 12px;
-  font-weight: 500;
-  margin-left: 10px;
+main section.paging ul li a.prev {
+  transform: rotate(90deg);
 }
-@media screen and (min-width: 1440px) {
-  main section .flex .workbook .text-pdf .pdf a span {
-    font-size: 22px;
-  }
+main section.paging ul li a.next {
+  transform: rotate(-90deg);
 }
 
 @media screen and (min-width: 1440px) {
@@ -1227,4 +1322,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=news_data_pdf.css.map */
+}

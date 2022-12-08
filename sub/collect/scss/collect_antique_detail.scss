@@ -17,9 +17,9 @@ main {
     overflow-x: hidden;
 
     section.info {
-      @include detail_info();
-      @include detail_slide(3);
-  }
+        @include detail_info();
+        @include detail_slide(3);
+    }
 
     section.similarItem {
         
