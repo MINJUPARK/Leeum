@@ -1287,6 +1287,17 @@ main .vr-floor-info-wrap .slick-arrow.slick-next::before {
 main .vr-floor-info-wrap .slick-arrow.slick-prev.slick-disabled:before, main .vr-floor-info-wrap .slick-arrow.slick-next.slick-disabled:before {
   opacity: 0 !important;
 }
+main .vr-floor-info-wrap .slide-main {
+  height: 350px;
+}
+@media screen and (min-width: 768px) {
+  main .vr-floor-info-wrap .slide-main {
+    height: auto;
+  }
+}
+main .vr-floor-info-wrap .slide-item {
+  height: 350px;
+}
 main .vr-floor-info-wrap h3 {
   text-align: center;
   font-size: 26px;

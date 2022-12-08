@@ -19,8 +19,8 @@
 <body>
 
 
-    <div class="logo">
-        <div class="container">
+    <div class="container">
+        <div class="logo">
             <div class="image">
                 <img src="../../image/favicon_light.svg" alt="">
                 <div class="text">
@@ -29,43 +29,58 @@
                 </div>
             </div>
         </div>
-    </div>
+        
+        <div class="all">
+            <div class="join-info">
+                <p>본인 인증</p>
+                <form action="#" method="post">
+                    <div class="text id">
+                        <label for="name">이름</label>
+                        <input type="text" class="name" id="name" placeholder="이름을 입력해 주세요">  
+                    </div>
+                    <div class="text date">
+                        <label for="date">생년월일</label>
+                        <input type="text" class="front" id="front" placeholder="생년월일 6자리">
+                        <span>-</span>
+                        <input type="text" class="back" id="back">
+                        <span>●●●●●●</span>
+                    </div>
+                    
+                    <div class="text phone-certify-name">
+                        <label>휴대폰 인증</label>
+                        <select>
+                            <option value="SKT">SKT</option>
+                            <option value="KT">KT</option>
+                            <option value="LG">LG</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                        </select>
+                        <span>-</span>
+                        <input type="text">
+                        <span>-</span>
+                        <input type="text">
+                    </div>
+                </form>
+            </div>
+        </div>
 
-    <div class="join-info">
-        <div class="container">
-            <p>본인 인증</p>
-            <form action="#" method="post">
-                <div class="text id">
-                    <label for="name">이름</label>
-                    <input type="text" class="name" id="name" placeholder="이름을 입력해 주세요">  
-                </div>
-                <div class="text date">
-                    <label for="date">생년월일</label>
-                    <input type="text" class="front" id="front" placeholder="생년월일 6자리">
-                    <span>-</span>
-                    <input type="text" class="back" id="back">
-                    <span>●●●●●●</span>
-                </div>
-                
-                <div class="text phone-certify-name">
-                    <label>휴대폰 인증</label>
-                    <select>
-                        <option value="SKT">SKT</option>
-                        <option value="KT">KT</option>
-                        <option value="LG">LG</option>
-                    </select>
-                    <select name="" id="">
-                        <option value="010">010</option>
-                        <option value="011">011</option>
-                    </select>
-                    <span>-</span>
-                    <input type="text">
-                    <span>-</span>
-                    <input type="text">
-                </div>
-            </form>
+        <div class="confirm">
+            <a href="./register_join_info.html">
+                <input type="submit" value="인증하기">
+            </a>
+        </div>
+
+        <div class="movePage">
+            <div class="movePage-wrap">
+                <a href="./register_join_type.html" class="prev">
+                    <img src="../../image/icon_arrow_tail.svg">
+                    <label>이전</label>
+                    <p><span class="vert-bar"></span><span class="title">약관 동의</span></p>
+                </a>
+            </div>
         </div>
     </div>
-
 </body>
 </html>

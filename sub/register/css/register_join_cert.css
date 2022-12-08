@@ -183,131 +183,149 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-div.logo .image {
+.container {
+  padding: 0;
+}
+.container div.logo .image {
   display: flex;
-  padding-left: 20px;
-  margin-bottom: 15px;
+  margin: 20px;
 }
-@media screen and (min-width: 1440px) {
-  div.logo .image {
-    margin-bottom: 150px;
-  }
-}
-div.logo .image img {
+.container div.logo .image img {
   width: 36px;
   margin-right: 16px;
 }
 @media screen and (min-width: 1440px) {
-  div.logo .image img {
+  .container div.logo .image img {
     width: 70px;
   }
 }
-div.logo .image p {
+.container div.logo .image p {
   font-size: 12px;
   font-weight: 500;
 }
 @media screen and (min-width: 1440px) {
-  div.logo .image p {
+  .container div.logo .image p {
     font-size: 22px;
   }
 }
-div.logo .image strong {
+.container div.logo .image strong {
   font-size: 24px;
 }
 @media screen and (min-width: 1440px) {
-  div.logo .image strong {
+  .container div.logo .image strong {
     font-size: 46px;
   }
 }
-
-div.join-info p {
+@media screen and (min-width: 1440px) {
+  .container div.all {
+    padding: 0;
+  }
+}
+.container div.all div.join-info {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+@media screen and (min-width: 1440px) {
+  .container div.all div.join-info {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+  }
+}
+.container div.all div.join-info p {
   text-align: center;
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info p {
+  .container div.all div.join-info p {
     font-size: 32px;
     margin-bottom: 40px;
   }
 }
-div.join-info form {
+.container div.all div.join-info form {
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form label {
+  .container div.all div.join-info form label {
     width: 14.2857142857%;
   }
 }
-div.join-info form .text.id, div.join-info form .text.date, div.join-info form .text.phone-certify-name {
+.container div.all div.join-info form .text.id, .container div.all div.join-info form .text.date, .container div.all div.join-info form .text.phone-certify-name {
   padding: 10px 20px;
   border-bottom: 1px solid #000;
 }
-div.join-info form .text.id label, div.join-info form .text.date label, div.join-info form .text.phone-certify-name label {
+.container div.all div.join-info form .text.id label, .container div.all div.join-info form .text.date label, .container div.all div.join-info form .text.phone-certify-name label {
   width: 19.7142857143%;
   font-size: 13px;
   font-weight: 600;
   /* margin-left: 20px; */
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.id label, div.join-info form .text.date label, div.join-info form .text.phone-certify-name label {
+  .container div.all div.join-info form .text.id label, .container div.all div.join-info form .text.date label, .container div.all div.join-info form .text.phone-certify-name label {
     width: 14.2857142857%;
   }
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.id label, div.join-info form .text.date label, div.join-info form .text.phone-certify-name label {
+  .container div.all div.join-info form .text.id label, .container div.all div.join-info form .text.date label, .container div.all div.join-info form .text.phone-certify-name label {
     font-size: 26px;
   }
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.id, div.join-info form .text.date, div.join-info form .text.phone-certify-name {
+  .container div.all div.join-info form .text.id, .container div.all div.join-info form .text.date, .container div.all div.join-info form .text.phone-certify-name {
     padding: 20px;
   }
 }
-div.join-info form .text.id:last-child, div.join-info form .text.date:last-child, div.join-info form .text.phone-certify-name:last-child {
+.container div.all div.join-info form .text.id:last-child, .container div.all div.join-info form .text.date:last-child, .container div.all div.join-info form .text.phone-certify-name:last-child {
   border: 0;
 }
-div.join-info form .text.id select,
-div.join-info form .text.id input, div.join-info form .text.date select,
-div.join-info form .text.date input, div.join-info form .text.phone-certify-name select,
-div.join-info form .text.phone-certify-name input {
+.container div.all div.join-info form .text.id select,
+.container div.all div.join-info form .text.id input, .container div.all div.join-info form .text.date select,
+.container div.all div.join-info form .text.date input, .container div.all div.join-info form .text.phone-certify-name select,
+.container div.all div.join-info form .text.phone-certify-name input {
   padding: 5px;
   font-size: 12px;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.id select,
-div.join-info form .text.id input, div.join-info form .text.date select,
-div.join-info form .text.date input, div.join-info form .text.phone-certify-name select,
-div.join-info form .text.phone-certify-name input {
+  .container div.all div.join-info form .text.id select,
+.container div.all div.join-info form .text.id input, .container div.all div.join-info form .text.date select,
+.container div.all div.join-info form .text.date input, .container div.all div.join-info form .text.phone-certify-name select,
+.container div.all div.join-info form .text.phone-certify-name input {
     font-size: 20px;
   }
 }
-div.join-info form .text.id input {
+.container div.all div.join-info form .text.id input {
   border: 0;
 }
-div.join-info form .text.date input, div.join-info form .text.phone-certify-name input {
+.container div.all div.join-info form .text.date input, .container div.all div.join-info form .text.phone-certify-name input {
   border: 0;
   background-color: #f3f3f3;
 }
-div.join-info form .text.date input {
-  width: 23%;
+.container div.all div.join-info form .text.date input {
+  width: 28%;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.date input {
+  .container div.all div.join-info form .text.date input {
     width: 11%;
   }
 }
-div.join-info form .text.date .back {
+.container div.all div.join-info form .text.date .back {
   width: 7%;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.date .back {
+  .container div.all div.join-info form .text.date .back {
     width: 2%;
   }
 }
-div.join-info form .text.phone-certify-name select {
+.container div.all div.join-info form .text.phone-certify-name select {
   background: url(../../../image/icon_arrow_bk.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -320,19 +338,114 @@ div.join-info form .text.phone-certify-name select {
   background-color: #f3f3f3;
   margin-right: 4px;
 }
-div.join-info form .text.phone-certify-name select:first-child {
+.container div.all div.join-info form .text.phone-certify-name select:first-child {
   margin-right: 10px;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.phone-certify-name select {
+  .container div.all div.join-info form .text.phone-certify-name select {
     width: 5.517241%;
   }
 }
-div.join-info form .text.phone-certify-name input {
+.container div.all div.join-info form .text.phone-certify-name input {
   width: 14%;
 }
 @media screen and (min-width: 1440px) {
-  div.join-info form .text.phone-certify-name input {
+  .container div.all div.join-info form .text.phone-certify-name input {
     width: 5%;
+  }
+}
+.container div.confirm {
+  text-align: center;
+}
+.container div.confirm input {
+  margin-top: 40px;
+  border: 0;
+  background-color: #6e3b3b;
+  color: white;
+  padding: 8px 15px;
+}
+@media screen and (min-width: 1440px) {
+  .container div.confirm input {
+    padding: 13px 20px;
+  }
+}
+.container div.movePage {
+  padding: 0 20px;
+  margin-top: 40px;
+  margin-top: 0;
+}
+@media screen and (min-width: 1440px) {
+  .container div.movePage {
+    margin-top: 100px;
+  }
+}
+.container div.movePage .movePage-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container div.movePage .movePage-wrap a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+.container div.movePage .movePage-wrap a:hover {
+  color: #000;
+}
+.container div.movePage .movePage-wrap a:hover::after {
+  transform: scale(1);
+}
+.container div.movePage .movePage-wrap a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: #000;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+.container div.movePage .movePage-wrap a img {
+  height: 14px;
+  filter: #3c3c3c;
+}
+.container div.movePage .movePage-wrap a.prev img {
+  margin-right: 10px;
+  transform: rotate(180deg);
+}
+.container div.movePage .movePage-wrap a.next .title {
+  text-align: right;
+}
+.container div.movePage .movePage-wrap a.next img {
+  margin-left: 10px;
+}
+.container div.movePage .movePage-wrap a p {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .container div.movePage .movePage-wrap a p {
+    display: inline-block;
+  }
+  .container div.movePage .movePage-wrap a p .vert-bar {
+    width: 1px;
+    height: 16px;
+    margin: 0 15px;
+    vertical-align: middle;
+    background: #acacac;
+  }
+  .container div.movePage .movePage-wrap a p .title {
+    font-size: 16px;
+    font-weight: 400;
+    width: 200px;
+    color: #5c5c5c;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container div.movePage {
+    font-size: 18px;
+    margin-top: 0;
   }
 }/*# sourceMappingURL=register_join_cert.css.map */

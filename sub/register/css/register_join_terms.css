@@ -186,66 +186,60 @@ h6 {
 main .container {
   padding: 0;
 }
-main .image {
+main .container .image {
   display: flex;
-  padding-left: 20px;
-  margin-bottom: 15px;
+  margin: 20px;
 }
-@media screen and (min-width: 1440px) {
-  main .image {
-    margin-bottom: 150px;
-  }
-}
-main .image img {
+main .container .image img {
   width: 36px;
   margin-right: 16px;
 }
 @media screen and (min-width: 1440px) {
-  main .image img {
+  main .container .image img {
     width: 70px;
   }
 }
-main .image p {
+main .container .image p {
   font-size: 12px;
   font-weight: 500;
 }
 @media screen and (min-width: 1440px) {
-  main .image p {
+  main .container .image p {
     font-size: 22px;
   }
 }
-main .image strong {
+main .container .image strong {
   font-size: 24px;
 }
 @media screen and (min-width: 1440px) {
-  main .image strong {
-    font-size: 46px;
+  main .container .image strong {
+    font-size: 34px;
   }
 }
-main .join-term p.title {
+main .container .join-term p.title {
   font-size: 16px;
   font-weight: 600;
   text-align: center;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term p.title {
+  main .container .join-term p.title {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 110px;
   }
 }
-main .join-term .agreement {
+main .container .join-term .agreement {
   padding: 0 20px;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement {
+  main .container .join-term .agreement {
     padding: 0;
   }
 }
-main .join-term .agreement .agr-plus {
+main .container .join-term .agreement .agr-plus {
   position: relative;
   left: 50%;
   right: 50%;
@@ -255,7 +249,7 @@ main .join-term .agreement .agr-plus {
   border-bottom: 1px solid #000;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus {
+  main .container .join-term .agreement .agr-plus {
     position: static;
     left: 0;
     right: 0;
@@ -263,83 +257,83 @@ main .join-term .agreement .agr-plus {
     margin: 0;
   }
 }
-main .join-term .agreement .agr-plus:last-child {
+main .container .join-term .agreement .agr-plus:last-child {
   border-bottom: 0;
 }
-main .join-term .agreement .agr-plus .agr .chk {
+main .container .join-term .agreement .agr-plus .agr .chk {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px 20px;
 }
-main .join-term .agreement .agr-plus .agr .chk input {
+main .container .join-term .agreement .agr-plus .agr .chk input {
   margin-right: 3px;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .chk input {
-    width: 23px;
-    height: 23px;
+  main .container .join-term .agreement .agr-plus .agr .chk input {
+    width: 20px;
+    height: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .chk label span {
-    font-size: 23px;
+  main .container .join-term .agreement .agr-plus .agr .chk label span {
+    font-size: 20px;
     margin-left: 10px;
   }
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .chk strong {
-    font-size: 24px;
+  main .container .join-term .agreement .agr-plus .agr .chk strong {
+    font-size: 20px;
   }
 }
-main .join-term .agreement .agr-plus .agr .chk .plus {
+main .container .join-term .agreement .agr-plus .agr .chk .plus {
   right: 0;
   top: 0;
 }
-main .join-term .agreement .agr-plus .agr .chk .plus span {
+main .container .join-term .agreement .agr-plus .agr .chk .plus span {
   font-size: 13px;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .chk .plus span {
+  main .container .join-term .agreement .agr-plus .agr .chk .plus span {
     font-size: 23px;
     margin-right: 10px;
   }
 }
-main .join-term .agreement .agr-plus .agr .chk .plus img {
+main .container .join-term .agreement .agr-plus .agr .chk .plus img {
   width: 8px;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .chk .plus img {
+  main .container .join-term .agreement .agr-plus .agr .chk .plus img {
     width: 23px;
     height: 10px;
   }
 }
-main .join-term .agreement .agr-plus .agr:last-child {
+main .container .join-term .agreement .agr-plus .agr:last-child {
   border-bottom: 0;
 }
-main .join-term .agreement .agr-plus .agr input[type=checkbox] + label {
+main .container .join-term .agreement .agr-plus .agr input[type=checkbox] + label {
   font-size: 14px;
   margin-left: 0;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr input[type=checkbox] + label {
-    font-size: 23px;
+  main .container .join-term .agreement .agr-plus .agr input[type=checkbox] + label {
+    font-size: 20px;
   }
 }
-main .join-term .agreement .agr-plus .agr strong {
+main .container .join-term .agreement .agr-plus .agr strong {
   color: red;
   font-size: 13px;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .agree-term {
+  main .container .join-term .agreement .agr-plus .agr .agree-term {
     background-color: #f3f3f3;
   }
 }
-main .join-term .agreement .agr-plus .agr .agree-term p {
+main .container .join-term .agreement .agr-plus .agr .agree-term p {
   display: none;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .agree-term p {
-    font-size: 22px;
+  main .container .join-term .agreement .agr-plus .agr .agree-term p {
+    font-size: 20px;
     color: #3c3c3c;
     display: block;
     text-align: left;
@@ -348,51 +342,129 @@ main .join-term .agreement .agr-plus .agr .agree-term p {
     text-align: justify;
   }
 }
-main .join-term .agreement .agr-plus .agr .agree-term p span {
+main .container .join-term .agreement .agr-plus .agr .agree-term p span {
   display: none;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .agree-term p span {
-    font-size: 22px;
+  main .container .join-term .agreement .agr-plus .agr .agree-term p span {
+    font-size: 20px;
     font-weight: 500;
     color: #3c3c3c;
     display: block;
     margin-bottom: 20px;
   }
-  main .join-term .agreement .agr-plus .agr .agree-term p span:last-child {
+  main .container .join-term .agreement .agr-plus .agr .agree-term p span:last-child {
     margin-top: 50px;
   }
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .agree-person {
+  main .container .join-term .agreement .agr-plus .agr .agree-person {
     background-color: #f3f3f3;
   }
 }
-main .join-term .agreement .agr-plus .agr .agree-person p {
+main .container .join-term .agreement .agr-plus .agr .agree-person p {
   display: none;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .agree-person p {
+  main .container .join-term .agreement .agr-plus .agr .agree-person p {
     display: block;
     padding: 40px 60px;
-    font-size: 22px;
+    font-size: 20px;
     color: #3c3c3c;
     line-height: 40px;
     text-align: justify;
   }
 }
-main .join-term .agreement .agr-plus .agr .agree-person p span {
+main .container .join-term .agreement .agr-plus .agr .agree-person p span {
   display: none;
 }
 @media screen and (min-width: 1440px) {
-  main .join-term .agreement .agr-plus .agr .agree-person p span {
+  main .container .join-term .agreement .agr-plus .agr .agree-person p span {
     display: block;
     margin-bottom: 26px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     color: #3c3c3c;
   }
 }
-main .join-term .agreement .agr-plus .agr .agree-person p .preservation {
+main .container .join-term .agreement .agr-plus .agr .agree-person p .preservation {
   margin-top: 70px;
+}
+main .container div.movePage {
+  padding: 0 20px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1440px) {
+  main .container div.movePage {
+    margin-top: 100px;
+  }
+}
+main .container div.movePage .movePage-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .container div.movePage .movePage-wrap a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+main .container div.movePage .movePage-wrap a:hover {
+  color: #000;
+}
+main .container div.movePage .movePage-wrap a:hover::after {
+  transform: scale(1);
+}
+main .container div.movePage .movePage-wrap a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: #000;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+main .container div.movePage .movePage-wrap a img {
+  height: 14px;
+  filter: #3c3c3c;
+}
+main .container div.movePage .movePage-wrap a.prev img {
+  margin-right: 10px;
+  transform: rotate(180deg);
+}
+main .container div.movePage .movePage-wrap a.next .title {
+  text-align: right;
+}
+main .container div.movePage .movePage-wrap a.next img {
+  margin-left: 10px;
+}
+main .container div.movePage .movePage-wrap a p {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  main .container div.movePage .movePage-wrap a p {
+    display: inline-block;
+  }
+  main .container div.movePage .movePage-wrap a p .vert-bar {
+    width: 1px;
+    height: 16px;
+    margin: 0 15px;
+    vertical-align: middle;
+    background: #acacac;
+  }
+  main .container div.movePage .movePage-wrap a p .title {
+    font-size: 16px;
+    font-weight: 400;
+    width: 200px;
+    color: #5c5c5c;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .container div.movePage {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=register_join_terms.css.map */

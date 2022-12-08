@@ -188,13 +188,8 @@ h6 {
 }
 
 div.logo .image {
-  padding: 20px;
   display: flex;
-}
-@media screen and (min-width: 1440px) {
-  div.logo .image {
-    padding: 120px 0 0 20px;
-  }
+  margin: 20px;
 }
 div.logo .image img {
   width: 36px;

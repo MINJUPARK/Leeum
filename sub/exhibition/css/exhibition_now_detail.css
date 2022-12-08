@@ -1319,7 +1319,7 @@ main section.image .ehb-slider .bg .des {
   justify-content: space-between;
   align-items: flex-end;
   position: absolute;
-  bottom: -120px;
+  bottom: -150px;
   width: 100%;
   color: #000;
   background-color: #fff;
@@ -1724,4 +1724,16 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
+}
+
+.fancybox-thumbs__list a:before {
+  border: 6px solid #be6a15 !important;
+}
+
+.fancybox-progress {
+  background: #be6a15 !important;
+}
+
+.fancybox-caption__body {
+  font-size: 18px;
 }/*# sourceMappingURL=exhibition_now_detail.css.map */
