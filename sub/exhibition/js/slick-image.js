@@ -1,4 +1,3 @@
-
 $(function() {
     $('.ehb-slider').slick({
         dots: true,
@@ -30,8 +29,7 @@ $(function() {
                 }
             }
         ]
-    });
-    
+    });    
     
 })
 
