@@ -183,228 +183,216 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-main {
-  /*  section.logo {
-       .image {
-           display: flex;
-           margin: 60px 0 44px 0;
-
-           img {
-               width: 36px;
-               margin-right: 16px;
-
-               @include responsive(pc-screens) {
-                   width: 70px;
-               }
-           }
-           p {
-               @include gothic-font(medium, 12px);
-
-               @include responsive(pc-screens) {
-                   font-size: 22px;
-               }
-           }
-
-           strong {
-               font-size: 24px;
-
-               @include responsive(pc-screens) {
-                   font-size: 46px;
-               }
-           }
-       }
-   } */
-}
-main section .select {
+.container .select {
   margin: 0 auto;
 }
-main section .select .image-info {
+.container .select .image-info {
+  position: relative;
   display: flex;
-  margin: 60px 0 44px 0;
+  margin-top: 20px;
 }
 @media screen and (min-width: 1440px) {
-  main section .select .image-info {
+  .container .select .image-info {
     position: relative;
+    /* margin: 20px; */
   }
 }
-main section .select .image-info img {
-  width: 36px;
+.container .select .image-info img {
+  width: 40px;
   margin-right: 16px;
 }
 @media screen and (min-width: 1440px) {
-  main section .select .image-info img {
-    width: 70px;
+  .container .select .image-info img {
+    width: 60px;
   }
 }
-main section .select .image-info .text p {
+.container .select .image-info .text p {
   font-size: 12px;
   font-weight: 500;
 }
 @media screen and (min-width: 1440px) {
-  main section .select .image-info .text p {
+  .container .select .image-info .text p {
     font-size: 22px;
   }
 }
-main section .select .image-info .text strong {
+.container .select .image-info .text strong {
   font-size: 24px;
 }
 @media screen and (min-width: 1440px) {
-  main section .select .image-info .text strong {
-    font-size: 46px;
+  .container .select .image-info .text strong {
+    font-size: 32px;
   }
 }
-main section .select .image-info .info ul.select {
-  align-items: center;
-  bottom: -40px;
-  left: 0;
+.container .select ul.select {
+  position: absolute;
   display: flex;
   justify-content: space-between;
-  border: 1px solid #c5c5c5;
-  border-left: 0;
-  width: 100%;
-  border-radius: 5px;
+  width: 89.7435897436%;
+  top: 0;
 }
 @media screen and (min-width: 1440px) {
-  main section .select .image-info .info ul.select {
-    position: absolute;
+  .container .select ul.select {
     width: 42.8571428571%;
-    right: 0;
+    right: 20px;
+  }
+}
+.container .select ul.select li {
+  position: relative;
+  height: 45px;
+  border: 1px solid #c5c5c5;
+  margin-top: 70px;
+}
+@media screen and (min-width: 1440px) {
+  .container .select ul.select li {
     margin-top: 0;
   }
 }
-main section .select .image-info .info ul.select li {
-  height: 30px;
-  border-left: 1px solid #c5c5c5;
-}
-@media screen and (min-width: 1440px) {
-  main section .select .image-info .info ul.select li {
-    position: relative;
-  }
-}
-main section .select .image-info .info ul.select li:first-child {
-  background-color: #5c5c5c;
+.container .select ul.select li:first-child {
+  width: 25.7142857143%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  width: 26.8571428571%;
 }
-main section .select .image-info .info ul.select li:nth-child(2) {
-  width: 46.2857142857%;
+.container .select ul.select li:first-child.on {
+  background-color: #3c3c3c;
+  color: white;
 }
-main section .select .image-info .info ul.select li:last-child {
-  width: 26.8571428571%;
+.container .select ul.select li:nth-child(2) {
+  width: 48.5714285714%;
 }
-main section .select .image-info .info ul.select li span {
-  bottom: 0;
+.container .select ul.select li:last-child {
+  width: 25.7142857143%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .container .select ul.select li {
+    height: 55px;
+  }
+}
+.container .select ul.select li span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   font-size: 14px;
   font-weight: 500;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
-  main section .select .image-info .info ul.select li span {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  .container .select ul.select li span {
+    font-size: 20px;
   }
 }
-main section .select .image-info .info ul.select li.on span {
-  color: #fff;
-  font-weight: 600;
-}
 @media screen and (min-width: 1440px) {
-  main section .flex {
+  .container .flex {
     display: flex;
     justify-content: space-between;
   }
 }
-main section .flex .type {
+.container .flex .type {
   border: 1px solid #c5c5c5;
   margin-top: 30px;
-  padding: 60px 15px;
+  padding: 50px 15px;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
-  main section .flex .type {
+  .container .flex .type {
+    margin-top: 50px;
+  }
+}
+.container .flex .type:first-child {
+  margin-top: 100px;
+}
+@media screen and (min-width: 1440px) {
+  .container .flex .type:first-child {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .flex .type {
     width: 31.7142857143%;
     padding: 80px 20px;
   }
 }
-main section .flex .type strong {
+.container .flex .type strong {
   display: block;
   margin-bottom: 30px;
   font-size: 24px;
   font-weight: 600;
 }
-main section .flex .type strong span {
+.container .flex .type strong span {
   font-size: 22px;
   font-weight: 200;
 }
-main section .flex .type strong:last-child {
+.container .flex .type strong:last-child {
   font-size: 18px;
   font-weight: 500;
 }
-main section .flex .type .fee.free {
+.container .flex .type .fee.free {
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 700;
   color: #6e3b3b;
 }
-main section .flex .type .fee.hun {
+.container .flex .type .fee.hun {
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 700;
   color: #ac3f21;
 }
-main section .flex .type .fee.three-hun {
+.container .flex .type .fee.three-hun {
   margin-bottom: 30px;
   font-size: 21px;
   font-weight: 700;
   color: #be6a15;
 }
-main section .flex .type p {
+.container .flex .type p {
   margin-bottom: 30px;
   font-size: 18px;
   font-weight: 500;
   color: #5c5c5c;
   line-height: 26px;
 }
-main section .flex .type .button.join {
+.container .flex .type .button.origin a {
+  width: 100%;
+}
+.container .flex .type .button.origin a button {
   font-size: 22px;
   font-weight: 600;
   padding: 8px;
   border: 1px solid #6e3b3b;
   border-radius: 5px;
   background-color: #6e3b3b;
+  color: white;
+  width: 100%;
 }
-main section .flex .type .button.join a {
-  color: #fff;
+.container .flex .type .button.friends .request {
+  display: flex;
 }
-main section .flex .type .button.ask {
-  font-size: 22px;
-  font-weight: 600;
-  padding: 8px;
-  border: 1px solid #be6a15;
-  border-radius: 5px;
-  background-color: #be6a15;
+.container .flex .type .button.friends .request a {
+  width: 100%;
 }
-main section .flex .type .button.ask a {
-  color: #fff;
-}
-main section .flex .type .request {
-  justify-content: space-between;
-}
-main section .flex .type .request .mem,
-main section .flex .type .request .non-mem {
+.container .flex .type .button.friends .request a button {
   font-size: 22px;
   font-weight: 600;
   padding: 8px;
   border: 1px solid #ac3f21;
   border-radius: 5px;
   background-color: #ac3f21;
-  width: 49%;
+  color: white;
+  width: 95%;
 }
-main section .flex .type .request .mem a,
-main section .flex .type .request .non-mem a {
-  color: #fff;
+.container .flex .type .button.family a {
+  width: 100%;
 }
+.container .flex .type .button.family a button {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 8px;
+  border: 1px solid #be6a15;
+  border-radius: 5px;
+  background-color: #be6a15;
+  color: white;
+  width: 100%;
+}/*# sourceMappingURL=register_join_type.css.map */

@@ -362,7 +362,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -1361,4 +1370,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright p {
 .fancybox-container .fancybox-toolbar .fancybox-button--thumbs,
 .fancybox-container .fancybox-toolbar .fancybox-button--share {
   display: none !important;
-}
+}/*# sourceMappingURL=collect_conserve_texture.css.map */

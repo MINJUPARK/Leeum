@@ -3,59 +3,27 @@
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
 
-main {
-
-   /*  section.logo {
-        .image {
-            display: flex;
-            margin: 60px 0 44px 0;
-
-            img {
-                width: 36px;
-                margin-right: 16px;
-
-                @include responsive(pc-screens) {
-                    width: 70px;
-                }
-            }
-            p {
-                @include gothic-font(medium, 12px);
-
-                @include responsive(pc-screens) {
-                    font-size: 22px;
-                }
-            }
-
-            strong {
-                font-size: 24px;
-
-                @include responsive(pc-screens) {
-                    font-size: 46px;
-                }
-            }
-        }
-    } */
-
-    section {
+    .container{
         .select{
             margin: 0 auto;
 
             .image-info {
-                // position: relative;
+                position: relative;
                 display: flex;
-                margin: 60px 0 44px 0;
-
+                margin-top: 20px;
+                
                 
                 @include responsive(pc-screens) {
                     position: relative;
+                    /* margin: 20px; */
                 }
-    
+
                 img {
-                    width: 36px;
+                    width: 40px;
                     margin-right: 16px;
-    
+
                     @include responsive(pc-screens) {
-                        width: 70px;
+                        width: 60px;
                     }
                 }
 
@@ -72,76 +40,74 @@ main {
                         font-size: 24px;
         
                         @include responsive(pc-screens) {
-                            font-size: 46px;
+                            font-size: 32px;
                         }
                     }
+                }
+
+                    
+            }
+            ul.select {
+                position: absolute;
+                @include flex_between();
+                width: 89.74358974358974%;
+                top: 0;
+
+                @include responsive(pc-screens) {
+                    width: 42.85714285714286%;
+                    right: 20px;
+
                 }
                 
-                .info{
-                    ul.select {
-                        align-items: center;
-                        // position: absolute;
-                        bottom: -40px;
-                        left: 0;
+                li {
+                    position: relative;
+                    height: 45px;
+                    border: 1px solid $bk4;
+                    margin-top: 70px;
 
-                        @include flex_between();
-                        border: 1px solid $bk4;
-                        border-left: 0;
-                        width: 100%;
-                        border-radius: 5px;
-                        
-                        @include responsive(pc-screens) {
-                            position: absolute;
-                            width: 42.85714285714286%;
-                            right: 0;
-                            margin-top: 0;
-                        }
-    
-    
-                        li {
-                            height: 30px;
-                            border-left: 1px solid $bk4;
-                            @include responsive(pc-screens) {
-                                position: relative;
-                            }
-                            
-                            &:first-child{
-                                background-color: $bk2;
-                                border-top-left-radius: 5px;
-                                border-bottom-left-radius: 5px;
-                                width: 26.85714285714286%;
-                            }
-    
-                            &:nth-child(2) {
-                                width: 46.28571428571429%;
-                            }
-    
-                            &:last-child {
-                                width: 26.85714285714286%;
-                            }
-                            
-                            span {
-                                bottom: 0;
-                                width: 100%;
-                                @include gothic-font(medium, 14px);
-                                text-align: center;
+                    @include responsive(pc-screens) {
+                        margin-top: 0;
+                    }
 
-                                @include responsive(pc-screens) {
-                                    @include element_center();
-                                }
-                            }
-                            
-                            &.on {
-                                span {
-                                    color: #fff;
-                                    font-weight: 600;
-                                }
-                            }
-                            
+                    &:first-child {
+                        width: 25.71428571428571%;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+
+                        &.on {
+                            background-color: $bk1;
+                            color: white;
                         }
                     }
+
+                    &:nth-child(2) {
+                        width: 48.57142857142857%;
+                    }
+                    
+                    &:last-child {
+                        width: 25.71428571428571%;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                    }
+
+                    @include responsive(tablet-screens) {
+                        height: 55px;
+                    }
+
+                    span {
+                        @include element_center();
+                        width: 100%;
+                        @include gothic-font(medium, 14px);
+                        text-align: center;
+
+                        @include responsive(pc-screens) {
+                            font-size: 20px;
+                        }
+                    }
+                    
+                    
                 }
-            }
+            } 
 
         }
 
@@ -152,13 +118,25 @@ main {
             .type {
                 border: 1px solid $bk4;
                 margin-top: 30px;
-                padding: 60px 15px;
+                padding: 50px 15px;
                 text-align: center;
 
-            @include responsive(pc-screens) {
-                width: 31.71428571428571%;
-                padding: 80px 20px;
-            }
+                @include responsive(pc-screens) {
+                    margin-top: 50px;
+                }
+
+                &:first-child {
+                    margin-top: 100px;
+                    
+                    @include responsive(pc-screens) {
+                        margin-top: 50px;
+                    }
+                }
+
+                @include responsive(pc-screens) {
+                    width: 31.71428571428571%;
+                    padding: 80px 20px;
+                }
 
                 strong{
                     display: block;
@@ -166,6 +144,7 @@ main {
                     @include gothic-font(semibold, 24px);
                     span {
                         @include gothic-font(light, 22px);
+
                     }
 
                     &:last-child {
@@ -203,48 +182,56 @@ main {
                 }
 
                 .button {
-                    &.join {
-                    @include gothic-font(semibold, 22px);
-                    padding: 8px;
-                    border: 1px solid $dark-brown;
-                    border-radius: 5px;
-                    background-color: $dark-brown;
-                    a {
-                        color: #fff;
-                    }
-                    }
-
-                    
-
-                    &.ask {
-                        @include gothic-font(semibold, 22px);
-                        padding: 8px;
-                        border: 1px solid $yellow-brown;
-                        border-radius: 5px;
-                        background-color: $yellow-brown;
+                    &.origin{
                         a {
-                            color: #fff;
+                            width: 100%;
+                            button {
+                                @include gothic-font(semibold, 22px);
+                                padding: 8px;
+                                border: 1px solid $dark-brown;
+                                border-radius: 5px;
+                                background-color: $dark-brown;
+                                color: white;
+                                width: 100%;
+                            }
+                        }
+                            
+                    }
+
+                    &.friends {
+                        .request {
+                            display: flex;
+                            a{
+                                width: 100%;
+                                button{
+                                    @include gothic-font(semibold, 22px);
+                                    padding: 8px;
+                                    border: 1px solid $red-brown;
+                                    border-radius: 5px;
+                                    background-color: $red-brown;
+                                    color: white;
+                                    width: 95%;
+                                }
+                            }
+                        }
+                    }
+
+                    &.family {
+                        a {
+                            width: 100%;
+                            button {
+                                @include gothic-font(semibold, 22px);
+                                padding: 8px;
+                                border: 1px solid $yellow-brown;
+                                border-radius: 5px;
+                                background-color: $yellow-brown;
+                                color: white;
+                                width: 100%;
+                            }
                         }
                     }
                 }
 
-                .request {
-                    justify-content: space-between;
-                    
-                    .mem,
-                    .non-mem {
-                    @include gothic-font(semibold, 22px);
-                    padding: 8px;
-                    border: 1px solid $red-brown;
-                    border-radius: 5px;
-                    background-color: $red-brown;
-                    width: 49%;
-                    a {
-                        color: #fff;
-                    }
-                    }
-                }
             }
         }
     }
-}
