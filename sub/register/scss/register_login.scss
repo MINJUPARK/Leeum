@@ -16,6 +16,13 @@ div.login {
     // @include element_center();
     //     top: calc(50% - 150px);
     //     transform: translate(-50%, calc(-50% + 150px));
+
+    @include responsive(tablet-screens) {
+        @include element_center();
+        top: calc(50% - 150px);
+        transform: translate(-50%, calc(-50% + 150px));
+    }
+
     @include responsive(pc-screens) {
         @include element_center();
         top: calc(50% - 150px);

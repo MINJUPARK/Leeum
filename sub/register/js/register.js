@@ -88,14 +88,40 @@ if (front.value == "") {
   return false;
 };
 
+var frontCheck = /^(?=.*[0-9]).{6}$/;
+
+if (!frontCheck.test(front.value)) {
+  alert("숫자 6자리를 입력해 주세요");
+  front.focus();
+  return false;
+};
+
+
 if (back.value == "") {
-  alert("생년월일을 입력하세요.");
+  alert("주민번호 맨 앞자리를 입력하세요.");
   back.focus();
   return false;
 };
 
+var backCheck = /^(?=.*[1-6]).{1}$/;
+
+if (!backCheck.test(back.value)) {
+  alert("숫자 1자리를 입력해 주세요");
+  back.focus();
+  return false;
+};
+
+
 if (phone.value == "") {
   alert("휴대폰 번호를 입력하세요.");
+  phone.focus();
+  return false;
+};
+
+var phoneCheck = /^(?=.*[0-9]).{3,4}$/;
+
+if(!phoneCheck.test(phone.value)) {
+  alert("숫자 3 ~ 4자리를 입력해주세요")
   phone.focus();
   return false;
 };
@@ -106,39 +132,81 @@ if (phoneBack.value == "") {
   return false;
 };
 
+var phoneBackCheck = /^(?=.*[0-9]).{4}$/;
+
+if(!phoneBackCheck.test(phoneBack.value)) {
+  alert("숫자 4자리를 입력해주세요")
+  phoneBack.focus();
+  return false;
+};
+
 location.href = "http://127.0.0.1:5501/sub/register/register_join_info.html";
 }
 
 // join_info
 function joinform_check() {
 
-var join_cert = document.join_cert;
-if(!join_cert.id.value) {
-    alert("아이디를 입력하세요!");
+/* var join_cert = document.join_cert; */
+/* if(!join_cert.id.value) {
+    alert("아이디를 입력해 주세요");
     join_cert.id.focus();
     return false;
 }
 
- var idCheck = /^(?=.*[a-zA-Z])(?=.*[0-6]).{5,12}$/;
+var idCheck = /^(?=.*[a-zA-Z])(?=.*[0-6]).{5,12}$/;
 
 if (!idCheck.test(id.value)) {
   alert("아이디는 영문+숫자 조합으로 5~12자리 사용해야 합니다.");
   id.focus();
   return false;
-};
-
+}; */
+var name = document.getElementById("name");
+var date = document.getElementById("date");
+var join_cert = document.join_cert;
 var pw = document.getElementById("pw");
 var pw_confirm = document.getElementById("pw_confirm");
+var phone = document.getElementById("phone");
 var mail = document.getElementById("mail");
 var postcode = document.getElementById("postcode");
 var restAddress = document.getElementById("restAddress");
-var female = document.getElementById("female");
-var male = document.getElementById("male");
-/*   var agree = document.getElementById("agree"); */
-/*  var non_agree = document.getElementById("non_agree"); */
+
+if (name.value == "") {
+  alert("이름을 입력하세요.");
+  name.focus();
+  return false;
+};
+
+if (date.value == "") {
+  alert("생년월일을 입력하세요.");
+  date.focus();
+  return false;
+};
+
+var dateCheck = /^(?=.*[0-9]).{6}$/;
+
+if (!dateCheck.test(date.value)) {
+  alert("숫자 6자리를 입력해 주세요");
+  date.focus();
+  return false;
+};
+
+if(!join_cert.id.value) {
+  alert("아이디를 입력해 주세요");
+  join_cert.id.focus();
+  return false;
+}
+
+var idCheck = /^(?=.*[a-zA-Z])(?=.*[0-6]).{5,12}$/;
+
+if (!idCheck.test(id.value)) {
+alert("아이디는 영문+숫자 조합으로 5~12자리 사용해야 합니다.");
+id.focus();
+return false;
+};
+
 
 if (pw.value == "") {
-  alert("비밀번호를 입력하세요.");
+  alert("비밀번호를 입력해 주세요");
   pw.focus();
   return false;
 };
@@ -151,11 +219,32 @@ if (!pwdCheck.test(pw.value)) {
   return false;
 };
 
+if (pw_confirm.value == "") {
+  alert("비밀번호를 한 번 더 입력해 주세요");
+  pw_confirm.focus();
+  return false;
+};
+
 if (pw_confirm.value !== pw.value) {
   alert("비밀번호가 일치하지 않습니다.");
   pw_confirm.focus();
   return false;
 };
+
+if (phone.value == "") {
+  alert("휴대폰 번호를 입력해 주세요");
+  phone.focus();
+  return false;
+};
+
+var phoneCheck = /^(?=.*[0-9]).{10,11}$/;
+
+if (!phoneCheck.test(phone.value)) {
+  alert("휴대폰 번호는 숫자 10~11자리 사용해야 합니다.");
+  phone.focus();
+  return false;
+};
+
 
 if (mail.value == "") {
   alert("이메일 주소를 입력하세요.");
@@ -181,11 +270,6 @@ if (restAddress.value == "") {
   return false;
 }
 
-if (!female.checked && !male.checked) {
-  alert("성별을 선택해 주세요.");
-  female.focus();
-  return false;
-}
 
 /*  if (!agree.checked) {
   alert("약관 동의를 체크하세요.");
@@ -207,9 +291,29 @@ email_add.value = val;
 }
 
 
-function id_check() {
+/* function id_check() {
 //window.open("팝업될 문서 경로", "팝업될 문서 이름", "옵션");
 window.open("", "", "width=600, height=200, left=200, top=100");
+}
+ */
+
+function id_check() {
+  // 값 불러오기
+  var uid = document.getElementById("id");
+
+  // value 불러오기
+  var id = getId.value;
+
+  // 유효성 검사?
+  var regExp = /&[a-zA-Z0-9]{3,12}$/;
+
+  // 
+  if (!regExp.test(id)) {
+    alert("아이디 다시 설정!");
+    uid.value = "";
+    uid.focus();
+    return false;
+  }
 }
 
 // 주소

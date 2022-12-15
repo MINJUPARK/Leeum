@@ -42,13 +42,13 @@
                     <div class="field name">
                         <label class="letter">이름</label>
                         <div class="entry">
-                            <input type="text" id="nameOut" readonly>
+                            <input type="text" id="name">
                         </div>
                     </div>
                     <div class="field birth">
                         <label class="letter">생년월일</label>
                         <div class="entry">
-                            <input type="text" id="frontOut">
+                            <input type="text" id="date">
                         </div>
                     </div>
 
@@ -70,15 +70,15 @@
                     <div class="field pw-confirm">
                         <label class="letter" for="pw_confirm"><span>*</span>비밀번호 확인</label>
                         <div class="entry">
-                            <input type="password" class="userpw-confirm" id="pw_confirm" placeholder="비밀번호를 한 번 더 입력">
+                            <input type="password" class="userpw-confirm" id="pw_confirm" maxlength="12" placeholder="비밀번호를 한 번 더 입력">
                         </div>
                     </div>
 
                     <div class="field tel-number">
                         <label class="letter">휴대폰 번호</label>
                         <div class="entry">
-                            <input type="tel">
-                            <input type="text" value="인증완료" readonly>
+                            <input type="tel" id="phone">
+                            <!-- <input type="text" value="인증완료" readonly> -->
                         </div>
                     </div>
                     

@@ -243,33 +243,13 @@
             &.id,
             &.tel-number {
                 input:last-child{
-                    text-align: center;
                     margin-right: 0;
-                    margin-left: 10px;
                 }
             }
 
             &.id {
                 input {
                     border: 0;
-                }
-
-            }
-
-            &.tel-number {
-                .entry {
-                    display: flex;
-                    input:last-child{
-                            width: 27.086957%;
-                            background-color: $yellow-brown;
-                            color: white;
-                            border: 0;
-    
-                            @include responsive(pc-screens) {
-                                width: 7.086957%;
-    
-                            }
-                    }
                 }
 
             }
@@ -296,8 +276,7 @@
                     border: 0;
                 }
             }
-           
-    
+
             &.mail {
                 .entry {
                     position: relative;

@@ -425,26 +425,10 @@ h6 {
   }
 }
 .member form .field.id input:last-child, .member form .field.tel-number input:last-child {
-  text-align: center;
   margin-right: 0;
-  margin-left: 10px;
 }
 .member form .field.id input {
   border: 0;
-}
-.member form .field.tel-number .entry {
-  display: flex;
-}
-.member form .field.tel-number .entry input:last-child {
-  width: 27.086957%;
-  background-color: #be6a15;
-  color: white;
-  border: 0;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.tel-number .entry input:last-child {
-    width: 7.086957%;
-  }
 }
 .member form .field.pw input, .member form .field.pw-confirm input {
   border: 0;

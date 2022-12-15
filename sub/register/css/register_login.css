@@ -189,6 +189,16 @@ h6 {
   }
 }
 
+@media screen and (min-width: 768px) {
+  div.login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    top: calc(50% - 150px);
+    transform: translate(-50%, calc(-50% + 150px));
+  }
+}
 @media screen and (min-width: 1440px) {
   div.login {
     position: absolute;
