@@ -34,15 +34,19 @@
                     </div>
 
                     <div class="login-form">
-                        <form>
-                            <input type="text" name="id" class="text-field" placeholder="아이디">
-                            <input type="password" name="pwd" id="pwd" class="pwd-field" placeholder="비밀번호">
-                            <input type="submit" value="로그인" class="submit-btn">
-                            <div class="id-chk"> 
+                        <form class="loginForm">
+                            <div class="inputForm">
+                                <input type="text" name="id" id="id" class="text-field" maxlength="12" placeholder="아이디">
+                                <input type="password" name="pwd" id="pwd" class="pwd-field" maxlength="12" placeholder="비밀번호">
+                            </div>
+                        </form>
+                        <div>
+                            <input type="submit" value="로그인" class="submit-btn" onclick="login1()">
+                        </div>
+                                <div class="id-chk"> 
                                 <input type="checkbox" class="chkbox" id="id-storage">
                                 <label for="id-storage">아이디 저장</label>
                             </div>
-                        </form>
                         <div class="id-pw-join">
                             <div class="id-pw">
                                 <a href="">
@@ -55,6 +59,10 @@
                                 </a>
                             </div>
                         </div>
+                      <!--   <div class="loginForm hide">
+                            <span></span>
+                            <button value="submit">로그아웃</button>
+                        </div> -->
                     </div>
                 </div>
             </div>

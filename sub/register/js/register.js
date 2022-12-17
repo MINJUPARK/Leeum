@@ -1,3 +1,40 @@
+// login
+function login1(){
+  var id = document.getElementById("id");
+  var pwd = document.getElementById("pwd");
+  
+  if (id.value == "") {
+    alert("아이디를 입력해 주세요");
+    id.focus();
+    return false;
+  };
+  
+  var idCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,12}$/;
+  
+  if (!idCheck.test(id.value)) {
+    alert("아이디는는 영문+숫자 조합으로 10~12자리를 입력해 주세요");
+    id.focus();
+    return false;
+  };
+
+  
+  if (pwd.value == "") {
+    alert("비밀번호를 입력해 주세요");
+    pwd.focus();
+    return false;
+  };
+  
+  var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,12}$/;
+  
+  if (!pwdCheck.test(pwd.value)) {
+    alert("비밀번호는 영문+숫자 조합으로 10~12자리를 입력해 주세요");
+    pwd.focus();
+    return false;
+  };
+
+  location.href = "http://127.0.0.1:5501/index.html";
+}
+
 $(function() {
   $('.side-tab .tab-wrap').find('li').on('click', function(e) {
       var $this = $(this);
@@ -26,6 +63,7 @@ $(function() {
   });
 }) 
 
+// join_terms
 function checkSelectAll()  {
   const checkboxes 
     = document.querySelectorAll('input[name="agree"]');
@@ -163,6 +201,7 @@ if (!idCheck.test(id.value)) {
 var name = document.getElementById("name");
 var date = document.getElementById("date");
 var join_cert = document.join_cert;
+var id = document.getElementById("id");
 var pw = document.getElementById("pw");
 var pw_confirm = document.getElementById("pw_confirm");
 var phone = document.getElementById("phone");
@@ -211,9 +250,9 @@ if (pw.value == "") {
   return false;
 };
 
-var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[0-11]).{10,12}$/;
+var pwCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,12}$/;
 
-if (!pwdCheck.test(pw.value)) {
+if (!pwCheck.test(pw.value)) {
   alert("비밀번호는 영문+숫자 조합으로 10~12자리 사용해야 합니다.");
   pw.focus();
   return false;
@@ -294,20 +333,14 @@ email_add.value = val;
 /* function id_check() {
 //window.open("팝업될 문서 경로", "팝업될 문서 이름", "옵션");
 window.open("", "", "width=600, height=200, left=200, top=100");
-}
- */
+} */
+
 
 function id_check() {
-  // 값 불러오기
   var uid = document.getElementById("id");
-
-  // value 불러오기
   var id = getId.value;
-
-  // 유효성 검사?
   var regExp = /&[a-zA-Z0-9]{3,12}$/;
 
-  // 
   if (!regExp.test(id)) {
     alert("아이디 다시 설정!");
     uid.value = "";
