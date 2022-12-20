@@ -14,6 +14,8 @@ header {
 
 main {
     
+    overflow-x: hidden;
+
     .popular-program {
         margin-top: 60px;
     }
@@ -26,18 +28,24 @@ main {
         }
     }
 
+  .pp {
+        border-radius: 10px;
+        box-shadow: rgb(0 0 0 / 20%) 0px 18px 50px -10px;
+    }  
     .img-text {
         position: relative;
         width: 100%;
-        overflow: hidden;
         margin: 40px auto 30px;
-        @include out_container();
+        overflow: hidden;
+        // @include out_container();
         
         @include responsive(pc-screens) {
-            @include in_container();
+            // @include in_container();
+            height: 650px;
             margin-top: 60px;
-            height: 810px;
+            border-radius: 5px;
         }
+
         .image, a, img {
             height: 100%;
         }
@@ -56,32 +64,9 @@ main {
             object-fit: cover;
         }
 
-        .limit-text {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 15px;
-            background-color: $red-brown;
-            color: #fff;
-            border-radius: 5px;
-
-            @include responsive(pc-screens) {
-                top: 30px;
-                left: 30px;
-                font-size: 22px;
-            }
-
-            p {
-                @include gothic_font(meidum, 14px);
-
-                @include responsive(pc-screens){
-                    font-size: 20px;
-                    padding: 5px 10px;
-                }
-            }
-        }
     }
     .text-explain {
+        padding: 0 20px 40px 20px;
 
         .text-explain-text {
             @include responsive(pc-screens) {
@@ -118,17 +103,15 @@ main {
 
                 @include responsive(pc-screens) {
                     font-size: $h3; 
-                    padding-bottom: 40px;
+                    padding-bottom: 30px;
                 }
             }
 
             p:last-child {
-                // @include gothic_font(regular);
-                // padding-bottom: 40px;
                 color: $bk2;
 
                 @include responsive(pc-screens) {
-                    font-size: 22px;
+                    font-size: 20px;
                 }
             }
         }
@@ -139,13 +122,11 @@ main {
             }
 
             p {
-                // font-size: 16px;
                 @include content_align(justify);
                 color: $bk2;
 
                 @include responsive(pc-screens) {
-                    font-size: 20px;
-                   /*  width: 50%; */
+                    font-size: 18px;
                     padding-right: 60px;
                     padding-top: 60px;
                 }

@@ -362,16 +362,7 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    -webkit-animation: stretch-w 0.5s;
-            animation: stretch-w 0.5s;
-  }
-  @-webkit-keyframes stretch-w {
-    from {
-      width: 0;
-    }
-    to {
-      width: 220px;
-    }
+    animation: stretch-w 0.5s;
   }
   @keyframes stretch-w {
     from {
@@ -653,6 +644,9 @@ header .breadcrumb-wrap {
   }
 }
 
+main {
+  overflow-x: hidden;
+}
 main .popular-program {
   margin-top: 60px;
 }
@@ -664,27 +658,21 @@ main h4 {
     font-size: 36px;
   }
 }
+main .pp {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
 main .img-text {
   position: relative;
   width: 100%;
-  overflow: hidden;
   margin: 40px auto 30px;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  width: 100vw;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
   main .img-text {
-    position: static;
-    left: 0;
-    right: 0;
-    width: auto;
-    margin: 0;
+    height: 650px;
     margin-top: 60px;
-    height: 810px;
+    border-radius: 5px;
   }
 }
 main .img-text .image, main .img-text a, main .img-text img {
@@ -699,33 +687,10 @@ main .img-text a {
 main .img-text img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-main .img-text .limit-text {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  padding: 10px 15px;
-  background-color: #ac3f21;
-  color: #fff;
-  border-radius: 5px;
-}
-@media screen and (min-width: 1440px) {
-  main .img-text .limit-text {
-    top: 30px;
-    left: 30px;
-    font-size: 22px;
-  }
-}
-main .img-text .limit-text p {
-  font-size: 14px;
-}
-@media screen and (min-width: 1440px) {
-  main .img-text .limit-text p {
-    font-size: 20px;
-    padding: 5px 10px;
-  }
+main .text-explain {
+  padding: 0 20px 40px 20px;
 }
 @media screen and (min-width: 1440px) {
   main .text-explain .text-explain-text {
@@ -762,7 +727,7 @@ main .text-explain .text h3 {
 @media screen and (min-width: 1440px) {
   main .text-explain .text h3 {
     font-size: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 }
 main .text-explain .text p:last-child {
@@ -770,7 +735,7 @@ main .text-explain .text p:last-child {
 }
 @media screen and (min-width: 1440px) {
   main .text-explain .text p:last-child {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -786,8 +751,7 @@ main .text-explain .explain-text p {
 }
 @media screen and (min-width: 1440px) {
   main .text-explain .explain-text p {
-    font-size: 20px;
-    /*  width: 50%; */
+    font-size: 18px;
     padding-right: 60px;
     padding-top: 60px;
   }
@@ -853,8 +817,7 @@ main .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
 }
 main .list-control .view-type .sort-list {
   display: flex;
@@ -1436,8 +1399,7 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search {
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box {
     width: 100%;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    column-gap: 40px;
   }
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type {
@@ -1831,4 +1793,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=exhibition_now.css.map */
+}
