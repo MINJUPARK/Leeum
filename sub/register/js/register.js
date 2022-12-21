@@ -9,10 +9,10 @@ function login1(){
     return false;
   };
   
-  var idCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,12}$/;
+  var idCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{5,12}$/;
   
   if (!idCheck.test(id.value)) {
-    alert("아이디는는 영문+숫자 조합으로 10~12자리를 입력해 주세요");
+    alert("아이디는는 영문+숫자 조합으로 5~12자리를 입력해 주세요");
     id.focus();
     return false;
   };
