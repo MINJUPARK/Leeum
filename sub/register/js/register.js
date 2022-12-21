@@ -303,19 +303,6 @@ if (postcode.value == "") {
   return false;
 }
 
-if (restAddress.value == "") {
-  alert("주소를 입력하세요.");
-  restAddress.focus();
-  return false;
-}
-
-
-/*  if (!agree.checked) {
-  alert("약관 동의를 체크하세요.");
-  agree.focus();
-  return false;
-} */
-
 location.href = "http://127.0.0.1:5501/index.html";
 }
 
