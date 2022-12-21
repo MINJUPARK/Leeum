@@ -132,6 +132,10 @@ input[type=checkbox]:checked + label {
   font-weight: 600;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 a, input, button, select, label {
   cursor: pointer;
 }
@@ -362,7 +366,16 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     right: 0;
     width: 220px;
     margin-top: 25px;
-    animation: stretch-w 0.5s;
+    -webkit-animation: stretch-w 0.5s;
+            animation: stretch-w 0.5s;
+  }
+  @-webkit-keyframes stretch-w {
+    from {
+      width: 0;
+    }
+    to {
+      width: 220px;
+    }
   }
   @keyframes stretch-w {
     from {
@@ -687,7 +700,8 @@ main .img-text a {
 main .img-text img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .text-explain {
   padding: 0 20px 40px 20px;
@@ -817,7 +831,8 @@ main .list-control .view-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 main .list-control .view-type .sort-list {
   display: flex;
@@ -873,6 +888,8 @@ main .img-explain-date-register .img-text-explain {
   main .img-explain-date-register .img-text-explain {
     display: flex;
     align-items: center;
+    -moz-column-gap: 120px;
+         column-gap: 120px;
     margin: 50px 0 150px;
   }
   main .img-explain-date-register .img-text-explain:first-child {
@@ -880,6 +897,7 @@ main .img-explain-date-register .img-text-explain {
   }
 }
 main .img-explain-date-register .image-text {
+  flex: 1;
   width: 100%;
   position: relative;
 }
@@ -890,80 +908,80 @@ main .img-explain-date-register .image-text img {
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .image-text img {
     width: 720px;
-    height: 405px;
   }
-}
-main .img-explain-date-register .image-text .heart {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 70px;
-  height: 70px;
-  background: url("../../../image/icon_heart_motion.png") no-repeat;
-  background-position: 0 0;
-  transition: background-position 1s steps(28);
-  transition-duration: 0s;
-  z-index: 97;
-}
-main .img-explain-date-register .image-text .heart:hover {
-  filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
-}
-main .img-explain-date-register .image-text .heart.on {
-  transition-duration: 1s;
-  background-position: -1960px 0;
 }
 main .img-explain-date-register .image-text .limit-text-1 {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  padding: 10px 15px;
-  background-color: #ac3f21;
-  color: #fff;
+  top: 15px;
+  left: 15px;
+  padding: 6px 12px;
   border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: #ac3f21;
+}
+@media screen and (min-width: 768px) {
+  main .img-explain-date-register .image-text .limit-text-1 {
+    zoom: 1.2;
+  }
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .image-text .limit-text-1 {
-    padding: 10px 20px;
-  }
-}
-main .img-explain-date-register .image-text .limit-text-1 p {
-  font-size: 14px;
-}
-@media screen and (min-width: 1440px) {
-  main .img-explain-date-register .image-text .limit-text-1 p {
-    text-align: center;
-    font-size: 18px;
+    top: 20px;
+    left: 20px;
+    zoom: 1.4;
   }
 }
 main .img-explain-date-register .explain-date-register {
+  flex: 1;
   margin-top: 20px;
-  position: relative;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register {
     width: 600px;
+    margin-top: 0;
   }
 }
-main .img-explain-date-register .explain-date-register .icon-box {
-  text-align: right;
-  width: 20%;
-  float: right;
+main .img-explain-date-register .explain-date-register .explain {
+  position: relative;
 }
-main .img-explain-date-register .explain-date-register .icon-box img {
-  height: 25px;
+main .img-explain-date-register .explain-date-register .explain .icon-box {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 5px;
 }
-main .img-explain-date-register .explain-date-register .icon-box .big-heart:hover {
+@media screen and (min-width: 1440px) {
+  main .img-explain-date-register .explain-date-register .explain .icon-box {
+    top: 0;
+    right: 0;
+  }
+}
+main .img-explain-date-register .explain-date-register .explain .icon-box img {
+  height: 22px;
+}
+@media screen and (min-width: 1440px) {
+  main .img-explain-date-register .explain-date-register .explain .icon-box img {
+    height: 25px;
+  }
+}
+main .img-explain-date-register .explain-date-register .explain .icon-box img.print:hover, main .img-explain-date-register .explain-date-register .explain .icon-box img.share:hover {
+  filter: brightness(0) saturate(100%);
+}
+main .img-explain-date-register .explain-date-register .explain .icon-box .big-heart:hover {
   filter: brightness(0) saturate(100%) invert(23%) sepia(49%) saturate(5931%) hue-rotate(330deg) brightness(92%) contrast(90%);
 }
-main .img-explain-date-register .explain-date-register .explain p:first-child {
+main .img-explain-date-register .explain-date-register .explain .type {
   font-size: 16px;
   font-weight: 500;
   color: #be6a15;
   padding-bottom: 5px;
 }
 @media screen and (min-width: 1440px) {
-  main .img-explain-date-register .explain-date-register .explain p:first-child {
-    font-size: 22px;
+  main .img-explain-date-register .explain-date-register .explain .type {
+    margin-bottom: 5px;
+    font-size: 20px;
     color: #be6a15;
   }
 }
@@ -973,20 +991,18 @@ main .img-explain-date-register .explain-date-register .explain h5 {
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .explain h5 {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 main .img-explain-date-register .explain-date-register .explain p:last-child {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   text-align: justify;
   line-height: 1.8em;
   color: #3c3c3c;
-  color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .explain p:last-child {
-    text-align: left;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 main .img-explain-date-register .explain-date-register .date,
@@ -1017,13 +1033,6 @@ main .img-explain-date-register .explain-date-register .register p {
 }
 main .img-explain-date-register .explain-date-register .date {
   padding-bottom: 15px;
-  margin-bottom: 40px;
-}
-main .img-explain-date-register .explain-date-register .date.jump {
-  padding-bottom: 65px;
-}
-main .img-explain-date-register .explain-date-register .register {
-  padding-bottom: 35px;
 }
 main .img-explain-date-register .explain-date-register .register p {
   color: #ac3f21;
@@ -1036,60 +1045,20 @@ main .img-explain-date-register .explain-date-register .register p {
   }
 }
 main .img-explain-date-register .explain-date-register .request {
+  width: 100%;
+  padding: 12px;
+  margin-top: 35px;
   text-align: center;
-  border-radius: 5px;
-  height: 60px;
-  margin: 26px auto 0;
-}
-main .img-explain-date-register .explain-date-register .request a {
   font-size: 16px;
   font-weight: 600;
-  width: 100%;
-  border: 1px solid #3c3c3c;
-  height: 40px;
-  padding-top: 8px;
-}
-@media screen and (min-width: 1440px) {
-  main .img-explain-date-register .explain-date-register .request a {
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
-    width: 600px;
-    padding: 5px 0;
-  }
-}
-main .img-explain-date-register .explain-date-register .request a:hover {
-  background-color: #be6a15;
-  color: white;
-  transition: background 0.7s;
-}
-main .img-explain-date-register .explain-date-register .request1 {
-  text-align: center;
+  border: 1px solid #c5c5c5;
   border-radius: 5px;
-  margin-top: -50px;
-  height: 44px;
+  transition: all 0.3s;
 }
-main .img-explain-date-register .explain-date-register .request1 a {
-  font-size: 16px;
-  font-weight: 600;
-  width: 100%;
-  border: 1px solid #3c3c3c;
-  height: 40px;
-  padding-top: 8px;
-}
-@media screen and (min-width: 1440px) {
-  main .img-explain-date-register .explain-date-register .request1 a {
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
-    width: 600px;
-    padding: 5px 0;
-  }
-}
-main .img-explain-date-register .explain-date-register .request1 a:hover {
+main .img-explain-date-register .explain-date-register .request:hover {
+  color: #fff;
+  border: 1px solid #be6a15;
   background-color: #be6a15;
-  color: white;
-  transition: background 0.7s;
 }
 main section.filter {
   background: #f3f3f3;
@@ -1399,7 +1368,8 @@ main section.filter .filter-wrap .detail-search-wrap .detail-search {
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box {
     width: 100%;
-    column-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
   }
 }
 main section.filter .filter-wrap .detail-search-wrap .detail-search form[name=detail] .opt-box .type {
@@ -1793,4 +1763,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   margin-top: 20px;
-}
+}/*# sourceMappingURL=exhibition_now.css.map */

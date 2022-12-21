@@ -27,8 +27,6 @@ main {
         @include responsive(pc-screens) {
             font-size: 22px;
         }
-
-        
     }
 
     .faq-content {
@@ -40,12 +38,10 @@ main {
         text-align: right;
 
         @include responsive(pc-screens) {
-            // margin: 0 10px 50px;
             padding: 40px;
             margin-top: 20px;
             margin-bottom: 0;
         }
-
 
         .explain {
             @include content_align(justify, 1.8em);
@@ -82,7 +78,6 @@ main {
         &:first-child {
             border-top: 1px solid $bk5;
         }
-
     }
 
     .q-box {

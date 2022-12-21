@@ -28,7 +28,6 @@ main {
 
                 .main-pic {
                     height: auto;
-        
                 }
             }
 
@@ -182,21 +181,21 @@ main {
             }
 
             a {
-            @include gothic_font(semibold);
-            width: 100%;
-            border: 1px solid #be6a15;
-            background: #be6a15;
-            padding: 13px;
-            text-align: center;
-            color:#fff;
-            padding: 23px;
-            font-size: 18px;
+                display: flex;
+                justify-content: center;
+                column-gap: 5px;
+                @include gothic_font(semibold, 18px);
+                width: 100%;
+                padding: 23px;
+                border: 1px solid #be6a15;
+                background: #be6a15;
+                color:#fff;
     
                 @include responsive(pc-screens){
-                    border: 1px solid #be6a15;
-                    background-color: transparent;
                     color:#be6a15;
+                    border: 1px solid #be6a15;
                     border-radius: 5px;
+                    background-color: transparent;
                     
                     &:hover {
                         background-color: #be6a15;
@@ -206,21 +205,18 @@ main {
                             filter:none;
                         }
                     }
-
                 }
                 img{
                     width:20px;
                     height:20px;
+                    margin-top: 1px;
                     margin-right: 5px;
 
                     @include responsive(pc-screens){
-                        position: absolute;
-                        top: 25px; left: 185px;  
                         filter:$svg-yellowbrown;  
                     }
                 }
-            }
-            
+            }  
         }
     
         .request-desc {
@@ -236,7 +232,6 @@ main {
                 }
                 
                 p {
-                    // font-size: 16x;
                     padding: 15px 0 25px 0;
                     border-bottom: 1px solid $bk5;
 
@@ -280,7 +275,7 @@ main {
                     color: $bk1;
                 }
 
-                .writer{
+                .writer {
                     vertical-align: top;
                 }
             }
@@ -349,8 +344,6 @@ main {
             }
         }
 
-        
-        
         p {
             @include content_align(justify);
 
@@ -373,13 +366,11 @@ main {
     
             p {
                 @include content_align();
-                // line-height: 28px;
                 margin-bottom: 30px;
 
                 @include responsive(pc-screens){
                     @include gothic_font(regular, 22px);
                     color: $bk1;
-                    // line-height: 44px;
                 }
 
                 &.title {
@@ -422,122 +413,121 @@ main {
             }
 
             .slick-list {
-              padding: 30px 0 70px !important;
+                padding: 30px 0 70px !important;
             }
-      
+
             .slick-slide {
-              margin: 0 110px;
+                margin: 0 110px;
             }
-      
+
             .slick-center .bg {
-              transform: scale3d(1.0, 1.0, 1);
-              opacity: 1;
+                transform: scale3d(1.0, 1.0, 1);
+                opacity: 1;
             }
-      
+
             .slick-current .bg {
-              box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
         
-              .des {
+                .des {
                 bottom: 0;
-              }
+                }
             }
 
             .slick-dots li {
 
                 button::before {
-                  content: '';
-                  display: block;
-                  width: 20px; height: 4px;
-                  text-indent: -9999px;
-                  border-radius: 3px;
-                  background: $bk5;
-                  overflow: hidden;
-                  opacity: 1;
-                  transition: background .3s;
-                }
-          
-                &.slick-active {
-                
-                  button::before {
-                    width: 20px;
-                    background: $bk1;
+                    content: '';
+                    display: block;
+                    width: 20px; height: 4px;
+                    text-indent: -9999px;
+                    border-radius: 3px;
+                    background: $bk5;
+                    overflow: hidden;
                     opacity: 1;
-                  }
-                }
-              }
-      
-            .bg {
-              position: relative;
-              width: 350px;
-              margin: 0 -125px;
-              border-radius: 15px;
-              transform: scale3d(0.8, 0.8, 1);
-              transition: all .3s ease-in-out;
-              opacity: .2;
-              overflow: hidden;
-      
-              @media screen and (min-width:480px) {
-                width: 450px; height:400px;
-              }
-      
-              @include responsive(tablet-screens) {
-                width: 650px; height: 550px;
-              }
-      
-              @include responsive(pc-screens) {
-                width: 850px; 
-              }
-        
-              .des {
-                @include flex_between();
-                align-items: flex-end;
-                position: absolute;
-                bottom: -150px;
-                width: 100%;
-                color: #000;
-                background-color: #fff;
-                transition: bottom .5s;
-                padding: 15px 30px;
-                
-                @include responsive(pc-screens) {
-                  bottom: -180px;
-                  padding: 25px 40px;
-                }
-                
-        
-                .type {
-                  @include gothic_font(bold,14px);
- 
-                  @include responsive(tablet-screens) {
-                    font-size: 16px;
-                  }
-      
-                  @include responsive(pc-screens) {
-                    font-size: $h6;
-                  }
-                }
-        
-                .title { 
-                  margin: 5px 0 15px;
-                  font-size: 14px;
-                  
-                  @include responsive(tablet-screens) {
-                    font-size: 16px;
-                  }
-      
-                  @include responsive(pc-screens) {
-                    font-size: $h6;
-                  }
+                    transition: background .3s;
                 }
 
-              }
-      
-              img {
+                &.slick-active {
+                
+                    button::before {
+                        width: 20px;
+                        background: $bk1;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .bg {
+                position: relative;
+                width: 350px;
+                margin: 0 -125px;
+                border-radius: 15px;
+                transform: scale3d(0.8, 0.8, 1);
+                transition: all .3s ease-in-out;
+                opacity: .2;
+                overflow: hidden;
+        
+                @media screen and (min-width:480px) {
+                    width: 450px; height:400px;
+                }
+        
+                @include responsive(tablet-screens) {
+                    width: 650px; height: 550px;
+                }
+        
+                @include responsive(pc-screens) {
+                    width: 850px; 
+                }
+        
+                .des {
+                    @include flex_between();
+                    align-items: flex-end;
+                    position: absolute;
+                    bottom: -150px;
+                    width: 100%;
+                    color: #000;
+                    background-color: #fff;
+                    transition: bottom .5s;
+                    padding: 15px 30px;
+                    
+                    @include responsive(pc-screens) {
+                        bottom: -180px;
+                        padding: 25px 40px;
+                    }
+                    
+            
+                    .type {
+                        @include gothic_font(bold,14px);
+
+                        @include responsive(tablet-screens) {
+                        font-size: 16px;
+                        }
+            
+                        @include responsive(pc-screens) {
+                        font-size: $h6;
+                        }
+                    }
+        
+                    .title { 
+                        margin: 5px 0 15px;
+                        font-size: 14px;
+                        
+                        @include responsive(tablet-screens) {
+                        font-size: 16px;
+                        }
+            
+                        @include responsive(pc-screens) {
+                        font-size: $h6;
+                        }
+                    }
+                }
+
+                img {
                 width: 100%; height: 100%;
                 object-fit: cover;
-              }
+                }
             }
-          }
+        }
     }
         
     section.movePage {

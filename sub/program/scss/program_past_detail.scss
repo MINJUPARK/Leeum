@@ -162,7 +162,6 @@ main {
             a {
             @include gothic_font(semibold);
             width: 100%;
-            // margin: 40px 0;
             padding: 13px;
             border-radius: 5px;
             text-align: center;
@@ -325,7 +324,6 @@ main {
                 @include responsive(pc-screens){
                     @include gothic_font(regular, 22px);
                     color: $bk1;
-                    // line-height: 44px;
                 }
 
                 &.title {

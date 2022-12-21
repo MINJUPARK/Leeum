@@ -1126,7 +1126,6 @@ main section ul.item-box {
   width: 100%;
   margin-top: 50px;
   position: relative;
-  /* height: 1400px; */
   overflow: hidden;
 }
 main section ul.item-box .item {
@@ -1283,11 +1282,6 @@ main section ul.item-box .item .i-des .loc div.tag {
 main section ul.item-box .item .i-des .loc div:last-child {
   right: 0;
   width: 48px;
-}
-@media screen and (min-width: 1440px) {
-  main section ul.item-box {
-    /* height: 1400px; */
-  }
 }
 main section ul.item-box li.item {
   width: 100%;

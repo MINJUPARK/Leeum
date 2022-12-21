@@ -966,9 +966,6 @@ main section.info .item-wrap .i-des .tit-exp .exp a img {
   margin-left: 5px;
   filter: brightness(0) saturate(100%) invert(39%) sepia(95%) saturate(617%) hue-rotate(355deg) brightness(95%) contrast(87%);
 }
-main h1 {
-  display: none;
-}
 @media screen and (min-width: 1440px) {
   main .text {
     position: relative;

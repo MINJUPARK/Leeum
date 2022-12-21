@@ -24,18 +24,12 @@ main {
         padding: 10px 0;
         text-align: center;
         border-bottom: 1px solid $bk5;
-        @media screen and(min-width:$break-pc) {
-            /* padding: 20px; */
-            /* height: 80px; */
-            // text-align: center;
-        }
 
         span:first-child {
             display: none;
 
             @media screen and(min-width:$break-pc) {
                 display: block;
-                /* padding: 10px; */
                 width: 60px;
             }
         }
@@ -62,7 +56,6 @@ main {
 
 
         p {
-            // display: flex;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -108,23 +101,15 @@ main {
     .text {
         @include flex_between();
         align-items: flex-start;
-        // width: 100%;
         flex-wrap: wrap;
         margin-top: 20px;
         
         @include responsive(pc-screens){
             width: 1240px;
-            margin: 60px auto ;
-            // flex-wrap: nowrap;
+            margin: 60px auto;
             flex-direction: row-reverse;
         }
         
-    }
-    .text > div {
-
-        @include responsive(pc-screens){
-            // margin-top: 60px;
-        }
     }
     
     .mini-box {
@@ -135,8 +120,6 @@ main {
         
         @include responsive(pc-screens) {
             @include in_container();
-            // margin-top: 40px;
-            // margin-bottom: 80px;
             border-radius: 5px;
         }
 
@@ -166,11 +149,9 @@ main {
     }
 
     .normal-text {
-        // padding-top: 40px;
 
         @include responsive(pc-screens){
             width: 60%;
-            // padding: 0 80px;
             font-size: 24px;
         }
         
@@ -183,46 +164,18 @@ main {
             }
 
         }
-        // a {
-        //     color: $yellow-brown;
-        //     .program {
-        //         padding-right: 20px;
-        //         @include gothic_font(semibold, 15px);
-
-        //         @include responsive(pc-screens){
-        //             font-size: 20px;
-        //         }
-        //     }
-
-        //     img {
-        //         width: 12px; height: 12px;
-        //         margin-bottom: 20px;
-        //         filter: $svg-yellowbrown;
-
-        //         @include responsive(pc-screens){
-        //             width: 18px; height: 18px;
-        //         }
-        //     }
-        // }
     }
 
     .import-text{
-        // width: 100%;
         margin-bottom: 30px;
         padding: 24px 30px;
         background-color: $bk6;
-        // line-height: 40px;
 
 
         @include responsive(pc-screens){
             align-items: flex-start;
-            // width: 1240px;
-            // margin: 0 auto;
             width: 480px;
-            // height: 116px;
-            // margin-top: 60px;
             font-size: 18px;
-            // line-height: 65px;
         }
 
         p {
@@ -258,21 +211,6 @@ main {
             }
         }
     }
-
-    // .announce {
-    //     text-align: right;
-    //     // padding-top: 24px;
-    //     // padding-left: 20px;
-    //     border-bottom: 2px solid $bk2;
-    //     // padding-bottom: 40px;
-
-    //     @include responsive(pc-screens){
-    //         font-size: 20px;
-    //         padding-right: 80px;
-    //         margin-top: -80px;
-    //         padding-bottom: 80px;
-    //     }
-    // }
     
     section.movePage {
         @include move_page();

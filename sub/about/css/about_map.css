@@ -729,6 +729,7 @@ main .map-wrap .map .way-wrap .way1 address, main .map-wrap .map .way-wrap .way1
 main .map-wrap .map .way-wrap .way2 address,
 main .map-wrap .map .way-wrap .way2 p {
   margin-top: 16px;
+  text-align: left;
   line-height: 2em;
   color: #3c3c3c;
 }

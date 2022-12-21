@@ -7,7 +7,6 @@ $(function() {
             
             const header_height = $('header').outerHeight(true);
             const main_height = $('main').outerHeight(true);
-            // const footer = main_height - header_height;
             const header = header_height * (-1);
 
             $('main, footer.sub').css({
@@ -127,9 +126,6 @@ $(function() {
         $('.chk-box input[type=checkbox]').attr('checked', false);
     });
 
-    // $('.more-btn').click(function() {
-    //     $('.item-box').height($('.item-box').height() + 770);
-    // });
 
     // 모션이 있는 하트
     $(".heart").on('click', function() {

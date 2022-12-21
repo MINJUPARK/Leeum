@@ -1340,6 +1340,7 @@ main .Kid .Kid-detail .link a img {
   }
 }
 main .container #facility.con-box {
+  display: block;
   height: auto;
 }
 @media screen and (min-width: 1440px) {
@@ -1890,12 +1891,11 @@ main .others p:nth-of-type(2) {
     font-size: 20px;
   }
 }
-
-.director {
+main .director {
   width: 190px;
   margin: 0 auto;
 }
-.director .background {
+main .director .background {
   position: relative;
   left: 50%;
   right: 50%;
@@ -1905,12 +1905,12 @@ main .others p:nth-of-type(2) {
   height: 431px;
 }
 @media screen and (min-width: 1440px) {
-  .director .background {
+  main .director .background {
     height: 650px;
     margin-top: 120px;
   }
 }
-.director .director {
+main .director .director {
   position: absolute;
   top: 60px;
   margin-left: -40px;
@@ -1918,7 +1918,7 @@ main .others p:nth-of-type(2) {
   height: 549px;
 }
 @media screen and (min-width: 1440px) {
-  .director .director {
+  main .director .director {
     position: absolute;
     top: 70px;
     left: 510px;
@@ -1926,7 +1926,7 @@ main .others p:nth-of-type(2) {
     height: 1028px;
   }
 }
-.director h3 {
+main .director h3 {
   position: absolute;
   top: 280px;
   margin-left: 65px;
@@ -1936,7 +1936,7 @@ main .others p:nth-of-type(2) {
   font-weight: 700;
 }
 @media screen and (min-width: 1440px) {
-  .director h3 {
+  main .director h3 {
     left: 695px;
     top: 580px;
     margin-left: 0px;
@@ -1945,7 +1945,7 @@ main .others p:nth-of-type(2) {
     line-height: 68px;
   }
 }
-.director p {
+main .director p {
   position: absolute;
   top: 320px;
   margin-left: 60px;
@@ -1956,7 +1956,7 @@ main .others p:nth-of-type(2) {
   font-weight: 200;
 }
 @media screen and (min-width: 1440px) {
-  .director p {
+  main .director p {
     left: 693px;
     top: 640px;
     margin-left: 0px;
@@ -1964,22 +1964,22 @@ main .others p:nth-of-type(2) {
     font-weight: 200;
   }
 }
-.director .award {
+main .director .award {
   display: none;
 }
-.director .award .title {
+main .director .award .title {
   font-size: 20px;
   font-weight: 600;
   opacity: 0.8;
   margin-bottom: 10px;
 }
-.director .award .sub {
+main .director .award .sub {
   font-size: 14px;
   font-weight: 400;
   opacity: 0.8;
 }
 @media screen and (min-width: 1440px) {
-  .director .award {
+  main .director .award {
     position: absolute;
     left: 1100px;
     top: 300px;
@@ -1988,7 +1988,7 @@ main .others p:nth-of-type(2) {
     line-height: 28px;
   }
 }
-.director .director-info {
+main .director .director-info {
   position: absolute;
   top: 380px;
   margin-left: -20px;
@@ -1999,20 +1999,20 @@ main .others p:nth-of-type(2) {
   font-weight: 200;
 }
 @media screen and (min-width: 1440px) {
-  .director .director-info br {
+  main .director .director-info br {
     display: none !important;
   }
 }
-.director .director-info span {
+main .director .director-info span {
   display: inline;
 }
 @media screen and (min-width: 1440px) {
-  .director .director-info span {
+  main .director .director-info span {
     display: block;
   }
 }
 @media screen and (min-width: 1440px) {
-  .director .director-info {
+  main .director .director-info {
     font-size: 18px;
     line-height: 36px;
     margin-left: 0px;
@@ -2020,60 +2020,58 @@ main .others p:nth-of-type(2) {
     top: 700px;
   }
 }
-
-.renewal-info {
+main .renewal-info {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 1440px) {
-  .renewal-info {
+  main .renewal-info {
     flex-direction: row;
   }
 }
-.renewal-info p {
+main .renewal-info p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
-  .renewal-info p {
+  main .renewal-info p {
     width: 45.3472222222%;
     font-size: 18px;
   }
 }
-.renewal-info p:first-of-type {
+main .renewal-info p:first-of-type {
   margin: 60px 0 60px 0;
 }
-.renewal-info p:first-of-type span {
+main .renewal-info p:first-of-type span {
   font-size: 16px;
   font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
-  .renewal-info p:first-of-type span {
+  main .renewal-info p:first-of-type span {
     font-size: 18px;
   }
 }
-.renewal-info p:last-of-type {
+main .renewal-info p:last-of-type {
   margin-bottom: 100px;
 }
 @media screen and (min-width: 1440px) {
-  .renewal-info p:last-of-type {
+  main .renewal-info p:last-of-type {
     margin: 60px 0 200px 130px;
   }
 }
-
-.renewal-detail h4 {
+main .renewal-detail h4 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1440px) {
-  .renewal-detail h4 {
+  main .renewal-detail h4 {
     font-size: 26px;
     font-weight: 600;
   }
 }
-.renewal-detail ul li img {
+main .renewal-detail ul li img {
   position: relative;
   left: 50%;
   right: 50%;
@@ -2082,7 +2080,7 @@ main .others p:nth-of-type(2) {
   margin-right: -50vw;
 }
 @media screen and (min-width: 1440px) {
-  .renewal-detail ul li img {
+  main .renewal-detail ul li img {
     position: static;
     left: 0;
     right: 0;
@@ -2090,17 +2088,17 @@ main .others p:nth-of-type(2) {
     margin: 0;
   }
 }
-.renewal-detail ul li p {
+main .renewal-detail ul li p {
   text-align: center;
 }
-.renewal-detail ul li p:first-of-type {
+main .renewal-detail ul li p:first-of-type {
   font-size: 24px;
   font-weight: 600;
   margin-top: 30px;
   margin-bottom: 12px;
 }
 @media screen and (min-width: 1440px) {
-  .renewal-detail ul li p:first-of-type {
+  main .renewal-detail ul li p:first-of-type {
     font-size: 28px;
     font-weight: 600;
     line-height: 20px;
@@ -2108,7 +2106,7 @@ main .others p:nth-of-type(2) {
     margin-bottom: 6px;
   }
 }
-.renewal-detail ul li p:last-of-type {
+main .renewal-detail ul li p:last-of-type {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
@@ -2118,7 +2116,7 @@ main .others p:nth-of-type(2) {
   margin-bottom: 50px;
 }
 @media screen and (min-width: 1440px) {
-  .renewal-detail ul li p:last-of-type {
+  main .renewal-detail ul li p:last-of-type {
     font-size: 22px;
     font-weight: 400;
     line-height: 54px;
@@ -2126,7 +2124,7 @@ main .others p:nth-of-type(2) {
   }
 }
 @media screen and (min-width: 1440px) {
-  .renewal-detail ul li br {
+  main .renewal-detail ul li br {
     display: none !important;
   }
 }

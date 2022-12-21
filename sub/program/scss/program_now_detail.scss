@@ -93,7 +93,6 @@ main {
                         }
 
                         h4 {
-                            // @include gothic_font(medium, 1px);
                             font-size: 30px;
 
                             @include responsive(pc-screens){
@@ -118,25 +117,6 @@ main {
             }
         }
     }
-            
-
-    h1 {
-        display: none;
-    }
-
-    // img {
-    //     width: 100%;
-    //     position: relative;
-
-    //     @include responsive(pc-screens){
-    //         // padding-left: 240px;
-    //         // padding-right: 240px;
-    //         height: 810px;
-    //         position: relative;
-
-    //     }
-    // }
-
 
     .text {
         @include responsive(pc-screens){

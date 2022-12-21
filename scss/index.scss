@@ -55,21 +55,16 @@
   animation-fill-mode: both;
 }
 
-// .animate__animated {
-//   --animate-duration: 1.5s;
-//   --animate-delay: 1s;
-// }
-
 header {
     @include header_common();
     margin-bottom: 0;
 
     &.index {
-      height: 480px; // 280px;
+      height: 480px;
       overflow-x: hidden;
 
       @include responsive(pc-screens) {
-        height: 880px; // 480px;
+        height: 880px;
       }
     }
 

@@ -13,6 +13,7 @@ header {
 }
 
 main {
+
     section.search-wrap {
         @include section_filter();
 
@@ -24,79 +25,78 @@ main {
                 margin-bottom: 20px;
                 border-bottom: 1px solid $bk5;
     
-    @include responsive(pc-screens) {
-        @include flex_between_center();
+                @include responsive(pc-screens) {
+                    @include flex_between_center();
+                }
+
+                h6 { 
+                    display: none;
+
+                    @include responsive(pc-screens) {
+                        display: inline-block;
+                        width: 120px;
+                    }
+                }
+
+                form[name=keyword] {
+                    @include flex_between();
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    @include responsive(pc-screens) {
+                        width: calc(100% - 120px);
+                    }
+
+                    & * {
+                        height: 50px;
+                    }
+
+                    select {
+                        @include full_bg('icon_arrow_bk.svg', index);
+                        background-position: right 20px center;
+                        background-color: #fff;
+                        background-size: 10px;
+                        width: 37%;
+                        padding: 0 20px;
+
+                        @include responsive(pc-screens) {
+                            width: 15.51724137931034%;
+                            flex-wrap: nowrap;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        padding: 0 20px;
+                        @include responsive(pc-screens) {
+                            width: 80%;
+                            flex-wrap: nowrap;
+                        }
+                    }
+
+                    button {
+                        @include gothic_font(medium);
+                        width: 100%;
+                        margin-top: 20px;
+                        background: #000;
+                        color: #fff;
+
+                        @include responsive(pc-screens) {
+                            width: 13.79310344827586%;
+                            margin-top: 0;
+                        }
+
+                        img {
+                            height: 18px;
+                            padding-bottom: 3px;
+                            margin-right: 8px;
+                            filter: $svg-white;
+                        }
+                    }
+                }
+            }
+        }
     }
-
-    h6 { 
-        display: none;
-
-        @include responsive(pc-screens) {
-            display: inline-block;
-            width: 120px;
-        }
-    }
-
-    form[name=keyword] {
-        @include flex_between();
-        align-items: center;
-        flex-wrap: wrap;
-
-        @include responsive(pc-screens) {
-            width: calc(100% - 120px);
-        }
-
-        & * {
-            height: 50px;
-        }
-
-        select {
-            @include full_bg('icon_arrow_bk.svg', index);
-            background-position: right 20px center;
-            background-color: #fff;
-            background-size: 10px;
-            width: 37%;
-            padding: 0 20px;
-
-            @include responsive(pc-screens) {
-                width: 15.51724137931034%;
-                flex-wrap: nowrap;
-            }
-        }
-
-        input {
-            width: 100%;
-            padding: 0 20px;
-            @include responsive(pc-screens) {
-                width: 80%;
-                flex-wrap: nowrap;
-            }
-        }
-
-        button {
-            @include gothic_font(medium);
-            width: 100%;
-            margin-top: 20px;
-            background: #000;
-            color: #fff;
-
-            @include responsive(pc-screens) {
-                width: 13.79310344827586%;
-                margin-top: 0;
-            }
-
-            img {
-                height: 18px;
-                padding-bottom: 3px;
-                margin-right: 8px;
-                filter: $svg-white;
-            }
-        }
-    }
-                
-            }
-        } // search-box
-    } // section.search-wrap
 
     section.itemList-wrap {
         margin-top: 80px;
@@ -112,8 +112,6 @@ main {
                 position: relative;
                 overflow: hidden;
                 
-
-    
                 li.item {
                     width: 100%;
                     text-align: center;
@@ -127,7 +125,6 @@ main {
                         width: 440px;
 
                         &:hover {
-                            
 
                             a {
 
@@ -141,8 +138,6 @@ main {
                         }
                     }
     
-
-    
                     a {
         
                         .i-pic {
@@ -155,7 +150,6 @@ main {
                             img {
                                 transition: transform .3s;
                             }
-    
                         }
     
                         .i-des {
@@ -170,7 +164,6 @@ main {
                                 @include responsive(pc-screens) {
                                     font-size: 22px;
                                 }
-
                             }
     
                             p {
@@ -184,8 +177,8 @@ main {
                             }
                         }
                     }
-                } // item
-            } // ul.item-box
+                }
+            }
         }
     }
 }

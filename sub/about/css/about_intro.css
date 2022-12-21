@@ -607,7 +607,6 @@ h6 {
   display: block;
   width: 25px;
   height: 25px;
-  cursor: pointer;
   z-index: 20;
   transition: transform 0.7s;
 }
@@ -898,29 +897,29 @@ h6 {
     border-bottom: 3px dashed rgba(255, 255, 255, 0.6);
   }
 }
-.slide-in main section.core-value-wrap .core-value ul li .vlaue {
+.slide-in main section.core-value-wrap .core-value ul li .value {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.slide-in main section.core-value-wrap .core-value ul li .vlaue span {
+.slide-in main section.core-value-wrap .core-value ul li .value span {
   display: block;
 }
-.slide-in main section.core-value-wrap .core-value ul li .vlaue span.eng-val {
+.slide-in main section.core-value-wrap .core-value ul li .value span.eng-val {
   font-size: calc(1em + 14px);
   font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
-  .slide-in main section.core-value-wrap .core-value ul li .vlaue span.eng-val {
+  .slide-in main section.core-value-wrap .core-value ul li .value span.eng-val {
     font-size: 36px;
   }
 }
-.slide-in main section.core-value-wrap .core-value ul li .vlaue span.ko-val {
+.slide-in main section.core-value-wrap .core-value ul li .value span.ko-val {
   font-size: calc(1em + 4px);
 }
 @media screen and (min-width: 1440px) {
-  .slide-in main section.core-value-wrap .core-value ul li .vlaue span.ko-val {
+  .slide-in main section.core-value-wrap .core-value ul li .value span.ko-val {
     font-size: 26px;
   }
 }

@@ -8,14 +8,12 @@
 
 @keyframes slideup {
     from {
-        // transform: translateY(100%);
         margin-top: 100vh;
         opacity: 0;
         visibility: visible;
     }
     
     to {
-        // transform: translateY(0%);
         margin-top: 0;
         opacity: 1;
     }
@@ -23,16 +21,13 @@
 
 @keyframes slidedown {
     from {
-        // transform: translateY(0%);
         margin-top: 100;
         opacity: 1;
     }
     
     to {
-        // transform: translateY(100%);
         margin-top: 100vh;
         opacity: 0;
-        // visibility: visible;
     }
 }
 
@@ -41,7 +36,6 @@
     transition: all 0.5s;    
 
     &.silde-out {
-        // animation: slidedown 0.4s cubic-bezier(0, .4, .1 , .8);
         animation: slidedown 0.4s ease-out;
     }
 
@@ -54,8 +48,8 @@
         &:before {
             background: transparent;
         }
-    
-    
+
+
         #close {
             
             a {
@@ -63,8 +57,6 @@
                 top: 20px; right: 20px;
                 display: block;
                 width: 25px; height: 25px;
-                cursor: pointer;
-                // filter: $svg-black;
                 z-index: 20;
                 
                 transition: transform 0.7s;
@@ -83,10 +75,10 @@
                 }
             }
         }
-    } // header
-    
+    }
+
     main {
-        word-break: keep-all; // 단어를 기준으로 줄바꿈
+        word-break: keep-all;
         
         @include responsive(tablet-screens) { font-size: 20px; }
         
@@ -97,35 +89,35 @@
                 font-size: 46px;
             }
         }
-    
+
         .m-br { 
             @include responsive(tablet-screens) { 
                 display: none; 
             } 
         }
-    
+
         .pc-br { 
             display: none; 
-    
+
             @include responsive(tablet-screens) { 
                 display: inline; 
             } 
         }
-    
-    
+
+
         section.intro-mission-wrap {
             
             p {
                 @include content_align($align: left, $height: 2em);
                 @include responsive(tablet-screens) { line-height: 36px; }
                 @include responsive(pc-screens) { line-height: 44px; }
-    
+
                 b {
                     font-size: calc(1em + 2px);
                     color: $red-brown;
                 }
             }
-    
+
             .intro {
                 margin-top: 60px;
                 
@@ -138,7 +130,7 @@
                     text-align: center;
                     @include batang_font(medium, 28px);
                     line-height: 44px;
-    
+
                     @include responsive(pc-screens) {
                         text-align: left;
                         font-size: 46px;
@@ -151,7 +143,7 @@
                     margin-top: 60px;
                     width: calc(100% + 20px);
                     overflow: hidden;
-    
+
                     @include responsive(pc-screens) {
                         border-radius: 5px;
                     }
@@ -174,7 +166,7 @@
                             width: 100%;
                             margin-top: 116px;
                         }
-    
+
                         img {
                             width: 100%;
                         }
@@ -183,7 +175,7 @@
                     p {
                         margin-top: 30px;
                     }
-                } // info-absolute
+                }
                 
                 .info-img2 {
                     position: relative;
@@ -203,14 +195,14 @@
                         position: absolute;
                         bottom: 0;
                         width: 448px / 390px * 100%;
-    
+
                         @include responsive(pc-screens) {
                             margin-left: -191px;
                             width: 987px;
                         }
                     }
-                } // info-img2
-            } // intro
+                }
+            }
             
             .mission {
                 margin-top: 40px;
@@ -218,16 +210,16 @@
                 @include responsive(pc-screens) {
                     margin-top: 120px;
                 }
-    
+
                 h2, p {
-    
+
                     @include responsive(pc-screens) {
                         margin-left: 80px;
                     }
                 }
                 
                 .mission-txt {
-    
+
                     @include responsive(pc-screens) {
                         position: relative;
                         margin-top: 50px;
@@ -248,10 +240,10 @@
                         @include responsive(pc-screens) {
                             position: static;
                         }
-    
+
                         p { 
                             width: 190px / 350px * 100%;
-    
+
                             @include responsive(pc-screens) {
                                 width: 716px;
                             }
@@ -272,10 +264,10 @@
                             }
                         }
                     }
-                } // mission-txt
-            } // mission
-        } // section.intro-mission-wrap
-    
+                }
+            }
+        }
+
         section.core-value-wrap {
             position: relative;
             margin-top: 100px / 350px * 100%;
@@ -296,7 +288,7 @@
                 
                 h2 {
                     margin-top: 56px;
-    
+
                     @include responsive(pc-screens) {
                         margin-top: 140px;
                     }
@@ -304,7 +296,7 @@
                 
                 ul {
                     margin-top: 30px;
-    
+
                     @include responsive(pc-screens) {
                         display: flex;
                         justify-content: space-between;
@@ -336,7 +328,7 @@
                             }
                             
                             &::after {
-    
+
                                 @include responsive(pc-screens) {
                                     position: absolute;
                                     left: (-63px - 30px); top: 50%;
@@ -345,9 +337,9 @@
                                     border-bottom: 3px dashed rgba(255, 255, 255, 0.6);
                                 }
                             }
-                        } // li:nth-child(2), li:last-child
+                        }
                         
-                        .vlaue {
+                        .value {
                             @include element_center();
                             
                             span {
@@ -356,7 +348,7 @@
                             
                             span.eng-val {
                                 @include gothic_font(semibold, calc(1em + 14px));
-    
+
                                 @include responsive(pc-screens) {
                                     font-size: 36px;
                                 }
@@ -364,19 +356,19 @@
                             
                             span.ko-val {
                                 font-size: calc(1em + 4px);
-    
+
                                 @include responsive(pc-screens) {
                                     font-size: 26px;
                                 }
                             }
-                        } // vlaue
-                    } // li
-                } // ul
+                        }
+                    }
+                }
                 
                 .val-text {
                     margin-top: 56px;
                     padding-bottom: 80px;
-    
+
                     @include responsive(pc-screens) {
                         margin-top: 130px;
                         padding-bottom: 235px;
@@ -384,7 +376,7 @@
                     
                     strong {
                         @include gothic_font(medium, calc(1em + 6px));
-    
+
                         @include responsive(pc-screens) {
                             font-size: 36px;
                         }
@@ -393,15 +385,15 @@
                     p {
                         margin-top: 40px;
                         line-height: 2em;
-    
+
                         @include responsive(pc-screens) {
                             line-height: 44px;
                         }
                     }
-                } // val-text
-            } // core-value
-        } // section.core-value
-    
+                }
+            }
+        }
+
         section.mi-wrap {
             margin-top: 100px;
             
@@ -422,20 +414,20 @@
                         margin-top: 45px;
                         font-size: 20px;
                     }
-    
+
                     span, b {
                         @include gothic_font(semibold, 1em);
                     }
-    
+
                     span {
                         color: $red-brown;
                     }
-    
+
                     b {
                         color: #000;
                     }
                 }
-    
+
                 .mi-grid {
                     position: relative;
                     width: 100%; height: 100%;
@@ -463,13 +455,13 @@
                     
                     .mi-grid > img {
                         width: 170px;
-    
+
                         @include responsive(pc-screens) {
                             width: 324px;
                         }
                     }
                 }
-    
+
                 .mi-type {
                     margin-top: 90px;
                     padding-bottom: 165px;
@@ -479,7 +471,7 @@
                         margin-top: 200px;
                         padding-bottom: 330px;
                     }
-    
+
                     strong {
                         display: block;
                         text-align: left;
@@ -490,9 +482,8 @@
                             font-size: $h3;
                             margin-bottom: 40px;
                         }
-    
                     }
-    
+
                     > .col-type {
                         
                         @include responsive(pc-screens) {
@@ -501,20 +492,20 @@
                         
                         .col-view {
                             width: 100%; height: 220px;
-    
+
                             @include responsive(pc-screens) {
                                 height: 446px;
                             }
-    
+
                             .mi-grid > img {
                                 width: 116px;
-    
+
                                 @include responsive(pc-screens) {
                                     width: 211px;
                                 }
                             }
                         }
-                    } // col-type
+                    }
                     
                     > .row-type {
                         margin-top: 40px;
@@ -523,10 +514,10 @@
                             width: 800px;
                             margin-top: 0;
                         }
-    
+
                         .row-view {
                             width: 100%; height: 170px;
-    
+
                             @include responsive(pc-screens) {
                                 height: 446px;
                             }
@@ -534,15 +525,15 @@
                             .mi-grid > img {
                                 width: 270px;
                                 filter: $svg-black;
-    
+
                                 @include responsive(pc-screens) {
                                     width: 562px;
                                 }
                             }
                         }
-                    } // row-type
-                } // mi-type
-            } // mi
-        } // mi-wrap
-    } // main
+                    }
+                }
+            }
+        }
+    }
 }

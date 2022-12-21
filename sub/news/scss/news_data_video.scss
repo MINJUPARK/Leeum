@@ -49,10 +49,6 @@ main {
                                 ul.opt {
                                     flex-wrap: wrap;
                                     justify-content: flex-start;
-
-                                    // li:nth-child(5) ~ li:last-child {
-                                    //     border-top: 0;
-                                    // }
                                     
                                     li {
                                         width: calc(100% / 4);
@@ -125,16 +121,10 @@ main {
         ul.item-box {
             @include itemList_box();
             position: relative;
-            /* height: 1400px; */
             overflow: hidden;
-            
-            @include responsive(pc-screens) {
-                /* height: 1400px; */
-            }
 
             li.item {
                 width: 100%;
-
                 transition: all .3s;
 
                 @include responsive(tablet-screens) {

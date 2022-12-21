@@ -4,14 +4,13 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 @import '../../../scss/mixin_footer.scss';
-@import './about_mixin_DH.scss';
+@import './_about_mixin.scss';
 
 header {
     @include header_common();
     @include header_sub();
 
     @include full_bg('guide_header.png');
-    // margin-bottom: 0;
 }
 
 main {
@@ -68,7 +67,7 @@ main {
 
             .time,
             .ticket-info {
- 
+
                 @include responsive(pc-screens) {
                     display: flex;
                 }
@@ -103,7 +102,7 @@ main {
                         }
                     }
                 }
-            } // time
+            }
             
             .fee {
     
@@ -149,7 +148,7 @@ main {
                                 display: none;
                             }
                         }
-                    } // th
+                    }
                     
                     td {
                         text-align: center;
@@ -161,7 +160,7 @@ main {
                         }
                     }
                 }
-            } // fee
+            }
 
             .ticket-wrap {
                 
@@ -186,7 +185,7 @@ main {
                             }
                         }
                     }
-                } // ticket-info
+                }
 
                 .ticketing {
                     margin: 60px auto;
@@ -221,8 +220,8 @@ main {
                             margin-right: 10px;
                         }
                     }
-                } // ticketing
-            } // ticket-wrap
+                }
+            }
 
             .please-note {
                 margin-top: 120px;
@@ -314,18 +313,17 @@ main {
                                     
                                     img {
                                         
-                                        &:first-child { // 아이콘
+                                        &:first-child {
                                             @include element_center();
                                             height: 64.47368421052632%;
                                         }
                                         
-                                        &:nth-child(2) { // 금지 아이콘
+                                        &:nth-child(2) {
                                             position: absolute;
                                             left: 0; top: 0;
                                         }
                                     }
-                                    
-                                } // note-img
+                                }
                                 
                                 p {
                                     @include gothic_font(medium, 1em);
@@ -340,12 +338,12 @@ main {
                                         margin-top: 40px;
                                     }
                                 }
-                            } // note-con
-                        } // note-item
+                            }
+                        }
 
                         &:nth-child(2) { 
 
-                            .note-item:first-child { // 손 아이콘 박스
+                            .note-item:first-child {
 
                                 img:first-child {
                                     margin-left: -2px;
@@ -359,18 +357,17 @@ main {
 
                         &:last-child { 
 
-                            .note-item:first-child { // 소음 아이콘 박스
-
+                            .note-item:first-child {
                                 img:first-child {
                                     height: 57%;
                                 }
                             }       
                         }
-                    } // note-group
-                } // note-flex
-            } // please-note
-        } // fee-time
-    } // section.fee-time-wrap
+                    }
+                }
+            }
+        }
+    }
 
     section.vr-floor-info-wrap {
 
@@ -421,7 +418,7 @@ main {
                     height: 667px;
                 }
             }
-        } // vr
+        }
 
         section.floor-info {
             margin-top: 80px;
@@ -487,7 +484,6 @@ main {
 
                                 @include responsive(pc-screens) {
                                     margin-left: 20px;
-                                    // font-size: 24px;
                                 }
                             }
                         }
@@ -500,7 +496,7 @@ main {
                                 display: none;
                             }
                         }
-                    } // group-title
+                    }
 
                     .group-option {
                         display: none;
@@ -543,7 +539,7 @@ main {
                                         origin: content-box;
                                         size: 37px 28px;
                                     }
-                                 }
+                                }
                             }
 
                             b {
@@ -560,8 +556,8 @@ main {
                                 }
                             }
                         }
-                    } // group-option
-                } // floor-select-group
+                    }
+                }
 
                 .floor-con-group {
                     margin-top: 30px;
@@ -590,7 +586,7 @@ main {
                                 margin-bottom: 25px;
                             }
                         }
-                    } // floor-img
+                    }
 
                     .floor-txt {
                         
@@ -664,11 +660,11 @@ main {
                                 }                                
                             }
                         }
-                    } // floor-txt
-                } // floor-con-group
-            } // > div
-        } // section.floor-info
-    } // section.vr-floor-wrap
+                    }
+                }
+            }
+        }
+    }
 
     section.digital-guide-did-wrap {
         word-break: keep-all;
@@ -708,22 +704,13 @@ main {
         }
 
         strong, h5 {
-            // font-size: calc(1em + 1.538461538vw);
             font-size: calc(1em + 6px);
             line-height: 2em;
-
-            // @include responsive(pc-screens) {
-            //     text-align: left;
-            // }
         }
 
         p {
             line-height: 2em;
             color: $bk1
-            
-            // @include responsive(pc-screens) {
-            //     text-align: left;
-            // }
         }
 
         section.digital-guide {
@@ -753,7 +740,7 @@ main {
                             margin-right: 0;
                             order: 2;
                         }
-                    } // guide-intro-img
+                    }
     
                     .guide-intro-txt {
                         margin-top: 30px; 
@@ -780,9 +767,9 @@ main {
                                 color: $red-brown;
                             }
                         }
-                    } // guide-intro-txt
-                } // guide-intro
-            } // guide-intro-wrap
+                    }
+                }
+            }
 
             .guide-point-wrap {
                 margin-top: 100px;
@@ -854,15 +841,14 @@ main {
                                         line-height: calc(1em + 6px + 10px);
                                     }   
                                 }
-                            } // guide-point-txt
-                            
+                            }
                         }
                     } 
                 }
 
                 .point-pc-wrap {
                     display: none;
-                     
+
                     @include responsive(pc-screens) { display: block; }
 
                     .point-pc {
@@ -879,7 +865,7 @@ main {
                                     margin-top: 107px;
                                 }
                             }
-                        } // point-pc-img
+                        }
 
                         .point-pc-txt {
                             margin-top: auto;
@@ -898,11 +884,11 @@ main {
                                     margin-bottom: 20px;
                                 }
                             }
-                        } // point-pc-txt
-                    } // point-pc
-                } // point-pc-wrap
-            } // guide-point-wrap 
-        } // section.digital-guide
+                        }
+                    }
+                }
+            }
+        }
 
         section.did {
             
@@ -965,7 +951,7 @@ main {
                                 margin-top: 0;
                             }
                         }
-                    } // awards-txt
+                    }
     
                     img {
                         
@@ -974,7 +960,7 @@ main {
                             width: 680px;
                         }
                     }
-                } // awards-flex
+                }
                 
                 .did-img2 {
                     overflow: hidden;
@@ -1003,10 +989,9 @@ main {
                             margin-left: -262px;
                             margin-top: 0;
                         }
-    
                     }
-                } // did-img2
-            } // did-awards
+                }
+            }
 
             .did-point,
             .did-video {
@@ -1037,7 +1022,7 @@ main {
                         margin-bottom: 50px;
                     }
                 }
-            } // did-point
+            }
             
             .did-video {
                 
@@ -1057,10 +1042,10 @@ main {
                         border-radius: 20px;
                     }
                 }
-            } // did-video
-        } // did
-    } // section.digital-guide-did-wrap
-} // main
+            }
+        }
+    }
+}
 
 footer {
     @include footer();

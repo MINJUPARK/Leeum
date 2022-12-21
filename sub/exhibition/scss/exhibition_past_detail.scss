@@ -29,8 +29,6 @@ main {
 
                 .main-pic {
                     height: auto;
-        
-
                 }
             }
 
@@ -92,7 +90,6 @@ main {
                         }
 
                         h4 {
-                            // @include gothic_font(medium, 1px);
                             font-size: 30px;
 
                             @include responsive(pc-screens){
@@ -100,7 +97,6 @@ main {
                             }
                         }
                     }
-
 
                     .exp {
 
@@ -118,12 +114,10 @@ main {
             }
         }
     }
-            
 
     h1 {
         display: none;
     }
-
 
     .text {
         @include responsive(pc-screens){
@@ -144,7 +138,6 @@ main {
 
         h2 {
             @include gothic_font(bold, 30px);
-            // white-space: nowrap;
 
             @include responsive(pc-screens){
                 font-size: 46px;
@@ -164,7 +157,6 @@ main {
 
     .r-d {
 
-
         @include responsive(pc-screens){
             width: 34.28571428571429%;
         }
@@ -172,14 +164,13 @@ main {
         .request {
             
             a {
-            @include gothic_font(semibold);
-            width: 100%;
-            // margin: 40px 0;
-            padding: 13px;
-            border-radius: 5px;
-            text-align: center;
-            color: #f00;
-            border: 1px solid #f00;
+                @include gothic_font(semibold);
+                width: 100%;
+                padding: 13px;
+                border-radius: 5px;
+                text-align: center;
+                color: #f00;
+                border: 1px solid #f00;
     
                 @include responsive(pc-screens){
                     font-size: 18px;
@@ -202,7 +193,6 @@ main {
                 }
                 
                 p {
-                    // font-size: 16x;
                     padding: 15px 0 25px 0;
                     border-bottom: 1px solid $bk5;
 
@@ -284,9 +274,6 @@ main {
             }
         }
 
-        
-        
-        
         p {
             @include content_align(justify);
 
@@ -309,13 +296,11 @@ main {
     
             p {
                 @include content_align();
-                // line-height: 28px;
                 margin-bottom: 30px;
 
                 @include responsive(pc-screens){
                     @include gothic_font(regular, 22px);
                     color: $bk1;
-                    // line-height: 44px;
                 }
 
                 &.title {
@@ -375,8 +360,6 @@ main {
             }
         }
 
-        
-
         section.floor-info {
             margin-top: 80px;
     
@@ -411,7 +394,6 @@ main {
 
                     @include responsive(tablet-screens) {
                         width: calc(480px / 1440px * 100%);
-                        // margin-right: calc(100px / 1440px * 100%);
                     }
 
                     .group-title {
@@ -422,7 +404,6 @@ main {
                         border-bottom: 2px solid #000;
 
                         @include responsive(tablet-screens) {
-                            // padding: 0;
                             padding-bottom: 24px;
                         }
 
@@ -453,7 +434,7 @@ main {
                                 display: none;
                             }
                         }
-                    } // group-title
+                    }
 
                     .group-option {
                         display: none;
@@ -531,8 +512,8 @@ main {
                                 }
                             }
                         }
-                    } // group-option
-                } // floor-select-group
+                    }
+                }
 
                 .floor-con-group {
                     margin-top: 30px;
@@ -557,13 +538,11 @@ main {
                             display: block;
                         } 
                     }
-                } // floor-con-group
-            } // > div
-        } // section.floor-info
-    } // vr-floor-wrap
+                }
+            }
+        }
+    }
     
-
-
     section.movePage {
         @include move_page();
         

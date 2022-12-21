@@ -664,19 +664,12 @@ main .content-title {
   text-align: center;
   border-bottom: 1px solid #d4d4d4;
 }
-@media screen and (min-width: 1440px) {
-  main .content-title {
-    /* padding: 20px; */
-    /* height: 80px; */
-  }
-}
 main .content-title span:first-child {
   display: none;
 }
 @media screen and (min-width: 1440px) {
   main .content-title span:first-child {
     display: block;
-    /* padding: 10px; */
     width: 60px;
   }
 }

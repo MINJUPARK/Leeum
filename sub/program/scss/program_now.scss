@@ -28,7 +28,6 @@ main {
     }
 
     .pp {
-        // padding: 0 20px 40px 20px;
         border-radius: 10px;
         box-shadow: rgb(0 0 0 / 20%) 0px 18px 50px -10px;
     }
@@ -37,10 +36,8 @@ main {
         width: 100%;
         margin: 40px auto 30px;
         overflow: hidden;
-        // @include out_container();
         
         @include responsive(pc-screens) {
-            // @include in_container();
             height: 650px;
             margin-top: 60px;
             border-radius: 5px;
@@ -143,7 +140,6 @@ main {
         font-size: 26px;
         margin-top: 100px;
         margin-bottom: 40px;
-        // padding-bottom: 40px;
 
         h4 {
             @include responsive(pc-screens) {
@@ -171,7 +167,7 @@ main {
             @include responsive(pc-screens) {
                 display: flex;
                 align-items: center;
-                 column-gap: 120px;
+                column-gap: 120px;
                 margin: 50px 0 150px;
 
                 &:first-child {
@@ -183,7 +179,6 @@ main {
         .image-text {
             flex: 1;
             width: 100%;
-            // margin: 30px auto;
             position: relative;
     
             img {
@@ -215,7 +210,7 @@ main {
                 .icon-box {
                     @include flex_between();
                     position: absolute;
-                    top: 5px; right: 5px;
+                    right: 5px;
 
                     @include responsive(pc-screens) {
                         top: 0; right: 0;
@@ -262,7 +257,6 @@ main {
                 p:last-child {
                     padding-bottom: 40px;
                     @include content_align(justify, 1.8em);
-                    color: $bk2;
 
                     @include responsive(pc-screens) {
                         font-size: 18px;
@@ -292,14 +286,9 @@ main {
 
             .date {
                 padding-bottom: 15px;
-                
-                &.jump {
-                    padding-bottom: 65px;
-                }
             }
 
             .register {
-                padding-bottom: 35px;
                 
                 p {
                     color: $red-brown;
@@ -314,9 +303,10 @@ main {
             .request {
                 width: 100%;
                 padding: 12px;
+                margin-top: 35px;
                 text-align: center;
                 @include gothic_font(semibold);
-                border: 1px solid $bk3;
+                border: 1px solid $bk4;
                 border-radius: 5px;
                 transition: all .3s;
 
@@ -365,10 +355,6 @@ main {
                                 ul.opt {
                                     flex-wrap: wrap;
                                     justify-content: flex-start;
-
-                                    // li:nth-child(5) ~ li:last-child {
-                                    //     border-top: 0;
-                                    // }
                                     
                                     li {
                                         width: calc(100% / 4);
