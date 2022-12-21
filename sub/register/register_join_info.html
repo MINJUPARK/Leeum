@@ -46,7 +46,7 @@
                     <div class="field birth">
                         <label class="letter" for="date"><span class="import">*</span>생년월일</label>
                         <div class="entry">
-                            <input type="number" id="date" placeholder="숫자 6자리를 입력해 주세요 ">
+                            <input type="number" id="date" placeholder="생년월일 앞자리 (ex. 901218) ">
                         </div>
                     </div>
 
@@ -54,7 +54,7 @@
                         <label class="letter" for="id"><span class="import">*</span>아이디</label>
                         <div class="entry">
                             <input type="text" id="id" placeholder="영문, 숫자 5~12자리 이내" maxlength="12" required>
-                            <button type="button" onclick="id_check();">중복확인</button>
+                            <button type="button" onclick="id_check()">중복확인</button>
                         </div>
                     </div>
 
@@ -147,7 +147,7 @@
         <div class="movePage">
             <div class="container">
                 <div class="submit">
-                    <input type="submit" value="가입 완료" onclick="joinform_check();">
+                    <input type="submit" value="회원가입" onclick="joinform_check()">
                 </div>
                 <div class="movePage-wrap">
                     <a href="./register_join_cert.html" class="prev">
