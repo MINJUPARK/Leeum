@@ -9,10 +9,10 @@ function login1(){
     return false;
   };
   
-  var idCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,12}$/;
+  var idCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{5,12}$/;
   
   if (!idCheck.test(id.value)) {
-    alert("아이디는는 영문+숫자 조합으로 10~12자리를 입력해 주세요");
+    alert("아이디는는 영문+숫자 조합으로 5~12자리를 입력해 주세요");
     id.focus();
     return false;
   };
@@ -82,7 +82,7 @@ function checkSelectAll()  {
 
 function selectAll(selectAll)  {
   const checkboxes 
-     = document.getElementsByName('agree');
+    = document.getElementsByName('agree');
   
   checkboxes.forEach((checkbox) => {
     checkbox.checked = selectAll.checked
@@ -302,19 +302,6 @@ if (postcode.value == "") {
   postcode.focus();
   return false;
 }
-
-if (restAddress.value == "") {
-  alert("주소를 입력하세요.");
-  restAddress.focus();
-  return false;
-}
-
-
-/*  if (!agree.checked) {
-  alert("약관 동의를 체크하세요.");
-  agree.focus();
-  return false;
-} */
 
 location.href = "http://127.0.0.1:5501/index.html";
 }

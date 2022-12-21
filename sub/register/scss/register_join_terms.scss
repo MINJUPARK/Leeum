@@ -196,6 +196,7 @@
 
                                     span {
                                         font-size: 13px;
+                                        margin-right: 6px;
             
                                         @include responsive(pc-screens) {
                                             font-size: 23px;
@@ -205,11 +206,12 @@
             
                                     .dropdown {
                                         @include icon_rotate(180deg);
-                                        width: 8px;
+                                        width: 10px;
 
                                         @include responsive(pc-screens) {
                                             width: 23px;
                                             height: 10px;
+
                                         }
                                     }
                                 }
@@ -228,6 +230,10 @@
                                 strong {
                                 color: red;
                                 font-size: 13px;
+
+                                    @include responsive(pc-screens) {
+                                        font-size: 20px;
+                                    }
                                 }
         
                             .agree-term{

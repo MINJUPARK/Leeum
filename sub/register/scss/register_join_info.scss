@@ -169,14 +169,14 @@
         @include responsive(pc-screens) {
             font-size: 18px;
         }
+    }
 
-        span {
+      .import {
             color: red;
-            margin-right: 10px;
+            margin-right: 3px;
             @include responsive(pc-screens) {
             }
         }
-    }
 
     form {
         border-bottom: 2px solid #000;
@@ -188,6 +188,7 @@
 
         input {
             padding: 3px;
+            margin-right: 3px;
             @include responsive(pc-screens) {
                 font-size: 14px;
                 padding: 5px;
@@ -216,42 +217,58 @@
                     width: 17.14285714285714%;
                 }
             }
-
+            
+            &.name,
             &.birth,
             &.id,
             &.pw,
-            &.pw-confirm,
-            &.tel-number {
+            &.pw-confirm {
                 input:first-child {
-                    width: 73%;
+                    width: 66%;
 
                     @include responsive(pc-screens) {
-                        width: 13%;
+                        width: 16%;
                     }
                 }
             }
     
             &.name {
                 input{
-                    width: 40.39130434782609%;
                     @include responsive(pc-screens) {
-                        width: 7.391304%;
+                        width: 10%;
                     }
-                }
-            }
-    
-            &.id,
-            &.tel-number {
-                input:last-child{
-                    margin-right: 0;
                 }
             }
 
             &.id {
+                display: flex;
+                input:last-child{
+                    margin-right: 0;
+                }
+            }
+    
+           /*  &.id,
+            &.tel-number {
+                input:last-child{
+                    margin-right: 0;
+                }
+            } */
+
+            &.tel-number {
+                input {
+                    width: 76%;
+
+                    &:last-child {
+                        margin-right: 0;
+                        width: 16%;
+                    }
+                }
+            }
+
+           /*  &.id {
                 input {
                     border: 0;
                 }
-
             }
 
             &.pw,
@@ -259,21 +276,21 @@
                 input {
                     border: 0;
                 }
-            }
+            } */
 
-            &.id,
+            
+          /*   &.id,
             &.pw,
             &.pw-confirm{
                 span {
                     color: red;
                 }
-            } 
+            }  */
 
             &.mail,
             &.address {
                 input {
                     background-color: $bk6;
-                    border: 0;
                 }
             }
 
@@ -301,7 +318,7 @@
                     }
 
                     input {
-                        width: 28.695652%;
+                        width: 27.695652%;
                         text-align: center;
 
                         @include responsive(pc-screens) {
@@ -358,8 +375,8 @@
                     .alone-add {
                         margin-bottom: 5px;
                         
-                            input {                        
-                                width: 87%;
+                            input {        
+                                width: 69%;
                                 @include responsive(pc-screens) {
                                     width: 16%;
                                 }
@@ -376,6 +393,14 @@
             .entry {
                 width: 65.71428571428571%;
                /*  padding: 0 20px 0 10px; */
+               button {
+                background-color: $dark-brown;
+                color: white;
+                padding: 8px;
+               }
+               input {
+                border: 0;
+               }
 
                 @include responsive(pc-screens) {
                     width: 100%;
@@ -393,10 +418,6 @@
             &.agree {
                 label:first-child {
                     margin-right: 5px;
-
-                    @include responsive(pc-screens) {
-                        margin-right: 0;
-                    }
                 }
             }
 

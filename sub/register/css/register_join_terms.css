@@ -376,6 +376,7 @@ h6 {
 }
 .container .join-term form .agr-plus .agr .plus span {
   font-size: 13px;
+  margin-right: 6px;
 }
 @media screen and (min-width: 1440px) {
   .container .join-term form .agr-plus .agr .plus span {
@@ -385,7 +386,7 @@ h6 {
 }
 .container .join-term form .agr-plus .agr .plus .dropdown {
   transition: 0.3s;
-  width: 8px;
+  width: 10px;
 }
 .container .join-term form .agr-plus .agr .plus .dropdown.active {
   transform: rotate(180deg);
@@ -411,6 +412,11 @@ h6 {
 .container .join-term form .agr-plus .agr strong {
   color: red;
   font-size: 13px;
+}
+@media screen and (min-width: 1440px) {
+  .container .join-term form .agr-plus .agr strong {
+    font-size: 20px;
+  }
 }
 .container .join-term form .agr-plus .agr .agree-term {
   display: none;
