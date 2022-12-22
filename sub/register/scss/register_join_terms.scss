@@ -2,7 +2,7 @@
 @import '../../../scss/style.scss';
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
-@import './register.scss';
+// @import './register.scss';
 
     .container {
         padding: 0;
@@ -276,6 +276,15 @@
                                         }
                                     }
                                 }
+
+                                .first-pre {
+                                    overflow-y: scroll;
+                                    height: 200px;
+                                    padding: 20px;
+                                    text-align: justify;
+                                    white-space: pre-line;
+                                }
+
                             }
 
                             .agree-person {
@@ -322,6 +331,14 @@
                                             margin-top: 60px;
                                         }
                                     }
+                                }
+
+                                .second-pre {
+                                    /* overflow-y: scroll;
+                                    height: 100px; */
+                                    padding: 20px;
+                                    justify-content: space-between;
+                                    white-space: pre-line;
                                 }
                             }
                         }
