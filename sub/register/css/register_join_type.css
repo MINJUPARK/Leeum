@@ -187,23 +187,17 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .container .select {
   margin: 0 auto;
 }
 .container .select .image-info {
   position: relative;
   display: flex;
-  margin-top: 20px;
+  margin: 20px 0 20px 0;
 }
 @media screen and (min-width: 1440px) {
   .container .select .image-info {
-    position: relative;
+    /* position: relative; */
     /* margin: 20px; */
   }
 }
@@ -234,16 +228,24 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 .container .select ul.select {
-  position: absolute;
+  position: static;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin: 0;
   display: flex;
   justify-content: space-between;
-  width: 89.7435897436%;
+  position: absolute;
   top: 0;
+  padding: 0 20px 0 20px;
 }
 @media screen and (min-width: 1440px) {
   .container .select ul.select {
-    width: 42.8571428571%;
-    right: 20px;
+    /* width: 42.85714285714286%; */
+    /* right: 20px; */
+    width: 53%;
+    position: absolute;
+    left: inherit;
   }
 }
 .container .select ul.select li {
@@ -258,7 +260,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 .container .select ul.select li:first-child {
-  width: 25.7142857143%;
+  width: 33.3333333333%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -267,10 +269,10 @@ input[type=number]::-webkit-inner-spin-button {
   color: white;
 }
 .container .select ul.select li:nth-child(2) {
-  width: 48.5714285714%;
+  width: 33.3333333333%;
 }
 .container .select ul.select li:last-child {
-  width: 25.7142857143%;
+  width: 33.3333333333%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -285,7 +287,7 @@ input[type=number]::-webkit-inner-spin-button {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 500;
   text-align: center;
 }
@@ -408,7 +410,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .container div.movePage {
   margin-top: 40px;
-  margin: 40px 20px 0 20px;
 }
 @media screen and (min-width: 1440px) {
   .container div.movePage {

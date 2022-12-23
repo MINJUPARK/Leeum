@@ -2,7 +2,7 @@
 @import '../../../scss/style.scss';
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
-@import './register.scss';
+// @import './register.scss';
 
 .container {
     padding: 0;
@@ -53,13 +53,13 @@
         ul.select {
             position: absolute;
             @include flex_between();
-            width: 89.74358974358974%;
+            width: 100%;
             top: 0;
-            margin-left: 20px;
+            padding: 0 20px;
 
             @include responsive(pc-screens) {
-                width: 42.85714285714286%;
-                right: 20px;
+                width: 53%;
+                right: 0;
             }
             
             li {
@@ -73,13 +73,13 @@
                 }
 
                 &:first-child {
-                    width: 25.71428571428571%;
+                    width: 33.33333333333333%;
                     border-top-left-radius: 5px;
                     border-bottom-left-radius: 5px;
                 }
 
                 &:nth-child(2) {
-                    width: 48.57142857142857%;
+                    width: 33.33333333333333%;
                     &.on {
                         background-color: $bk1;
                         color: white;
@@ -87,7 +87,7 @@
                 }
                 
                 &:last-child {
-                    width: 25.71428571428571%;
+                    width: 33.33333333333333%;
                     border-top-right-radius: 5px;
                     border-bottom-right-radius: 5px;
                 }
@@ -99,7 +99,7 @@
                 span {
                     @include element_center();
                     width: 100%;
-                    @include gothic-font(medium, 14px);
+                    @include gothic-font(medium, 12px);
                     text-align: center;
 
                     @include responsive(pc-screens) {

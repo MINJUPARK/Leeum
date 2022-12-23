@@ -187,12 +187,6 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .container {
   padding: 0;
   /*  div.logo {
@@ -277,14 +271,14 @@ input[type=number]::-webkit-inner-spin-button {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  width: 89.7435897436%;
+  width: 100%;
   top: 0;
-  margin-left: 20px;
+  padding: 0 20px;
 }
 @media screen and (min-width: 1440px) {
   .container .select ul.select {
-    width: 42.8571428571%;
-    right: 20px;
+    width: 53%;
+    right: 0;
   }
 }
 .container .select ul.select li {
@@ -299,19 +293,19 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 .container .select ul.select li:first-child {
-  width: 25.7142857143%;
+  width: 33.3333333333%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 .container .select ul.select li:nth-child(2) {
-  width: 48.5714285714%;
+  width: 33.3333333333%;
 }
 .container .select ul.select li:nth-child(2).on {
   background-color: #3c3c3c;
   color: white;
 }
 .container .select ul.select li:last-child {
-  width: 25.7142857143%;
+  width: 33.3333333333%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -326,7 +320,7 @@ input[type=number]::-webkit-inner-spin-button {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   text-align: center;
 }
