@@ -9,10 +9,10 @@
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/about_guide.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
     <script type="text/javascript" src="./js/tab-menu.js"></script>
     <script type="text/javascript" src="./js/aos.js"></script>
@@ -23,7 +23,7 @@
 </head>
 <body>
     <header>
-    <div class="mobile-menu-popup">
+    <div class="mobile-menu-popup hidden">
         <div class="window">
             <img src="../../image/icon_close.svg" alt="메뉴 닫기" class="close">
             <div class="popup">
@@ -304,10 +304,9 @@
                                 <div class="ticketing">
                                     <a href="https://ticket.leeum.org/leeum/personal/exhibitList.do"><img src="../../image/icon_reserve.svg" alt="티겟 아이콘"> 예매하기</a>
                                 </div>
-                            </div><!-- ticket-wrap -->
-
+                            </div>
                             <div class="please-note">
-                                <h3>관람 시 유의사항</h3> 
+                                <h3><span class="br-bar"></span>관람 시 유의사항</h3> 
                                 <div class="note-flex">
                                     <div class="col-line">
                                         <span class="line1"></span>
@@ -322,7 +321,10 @@
                                                     <img src="./image/icon_hand.svg" alt="손">
                                                     <img src="./image/icon_no.svg" alt="금지 ">
                                                 </div>
-                                                <p>작품을 손으로 <br class="m-br">만지지 마세요.</p>
+                                                <p>
+                                                    작품을 손으로 <br class="m-br">
+                                                    만지지 마세요.
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="note-item">
@@ -331,7 +333,11 @@
                                                     <img src="./image/icon_dog_and_food.svg" al t="강아지와 음식">
                                                     <img src="./image/icon_no.svg" alt="금지">
                                                 </div>
-                                                <p>음식물 반입과 애완동물 <br class="m-br">출입은 <br class="pc-br">금지되어 있습니다.<span>(안내견 제외)</span></p>
+                                                <p>
+                                                    음식물 반입과 애완동물 <br class="m-br">
+                                                    출입은 <br class="pc-br">
+                                                    금지되어 있습니다.<span>(안내견 제외)</span>
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="note-item">
@@ -339,7 +345,10 @@
                                                 <div class="note-img">
                                                     <img src="./image/icon_keep.svg" alt="자물쇠">
                                                 </div>
-                                                <p>소지품과 코트는 <br class="m-br">물품보관함에 <br class="pc-br">맡겨 주세요.</p>
+                                                <p>
+                                                    소지품과 코트는 <br class="m-br">
+                                                    물품보관함에 <br class="pc-br">
+                                                    맡겨 주세요.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -350,7 +359,12 @@
                                                     <img src="./image/icon_noise.svg" alt="소음">
                                                     <img src="./image/icon_no.svg" alt="금지">
                                                 </div>
-                                                <p>타 관람객의 관람을 <br class="m-br">방해하지 않도록 <br class="pc-br">조용히 <br class="m-br">관람해 주세요.</p>
+                                                <p>
+                                                    타 관람객의 관람을 <br class="m-br">
+                                                    방해하지 않도록 <br class="pc-br">
+                                                    조용히 <br class="m-br">
+                                                    관람해 주세요.
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="note-item">
@@ -367,27 +381,29 @@
                                                 <div class="note-img">
                                                     <img src="./image/icon_children.svg" alt="어린이">
                                                 </div>
-                                                <p>어린이를 동반할 경우 <br class="m-br">보호자 분의 <br class="pc-br">각별한 주의를 <br class="m-br">부탁드립니다.</p>
+                                                <p>
+                                                    어린이를 동반할 경우 <br class="m-br">
+                                                    보호자 분의 <br class="pc-br">
+                                                    각별한 주의를 <br class="m-br">
+                                                    부탁드립니다.</p>
                                             </div>
                                         </div>
                                     </div>
-                                </div><!-- note-flex -->
-                            </div><!-- please-note -->
-                        </div><!-- fee-time -->
-                    </div><!-- container -->
-                </section><!-- fee-time-wrap -->
-
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section id="tabcon-02" class="con-box vr-floor-info-wrap">
                     <h2>층별안내</h2>
                     <div class="container">
                         <section class="vr">
                             <div class="vr-txt">
                                 <h3>VR 투어</h3>
-                                <a  id="VR" title="전체 화면으로 보기" href="https://mpembed.com/show/?m=RXZGsoaNKJs&mpu=1275" target="_blank">FULL SCREEN <img src="../../image/icon_shortcut.svg"></a>
-                            </div>
-                            <iframe id="eazel-player" src="https://mpembed.com/show/?m=RXZGsoaNKJs&mpu=1275" frameborder="0" scrolling="NO"></iframe>
+                                <a id="VR" title="전체 화면으로 보기" href="https://my.matterport.com/show/?m=2btF8xwpEst" target="_blank">FULL SCREEN <img src="../../image/icon_shortcut.svg"></a>
+                            </div>                           
+                            <iframe id="eazel-player" src="https://my.matterport.com/show/?m=2btF8xwpEst" frameborder="0" scrolling="NO"></iframe>
                         </section>
-
                         <section class="floor-info">
                             <h3>층별 안내</h3>
                             <div class="side-tab cultural-center">
@@ -453,9 +469,8 @@
                                             <p>리움 미술관 고객 전용 주차장입니다.</p>
                                         </li>
                                     </ul>
-                                </div><!-- floor-con -->
-                            </div><!-- cultural_center -->
-
+                                </div>
+                            </div>
                             <div class="side-tab m1">
                                 <div class="floor-select-group">
                                     <div class="group-title">
@@ -532,8 +547,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div><!-- m1 -->
-                            
+                            </div>
                             <div class="side-tab m2">
                                 <div class="floor-select-group">
                                     <div class="group-title">
@@ -563,8 +577,8 @@
                                             <div class="txt-flex">
                                                 <strong>1F</strong><b>중력의 역방향</b>
                                                 <div class="toilet">
-                                                    <img src="./image/icon_man.svg" alt="남자화장실">
                                                     <img src="./image/icon_disabled.svg" alt="장애인화장실" class="left">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
                                                 </div>
                                             </div>
                                             <p>빛과 움직임 등 비물질 영역으로 확장된 작품들을 소개합니다.</p>
@@ -573,19 +587,18 @@
                                             <div class="txt-flex">
                                                 <strong>B1</strong><b>이상한 행성</b>
                                                 <div class="toilet">
-                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
                                                     <img src="./image/icon_disabled.svg" alt="장애인화장실" class="left">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
                                                 </div>
                                             </div>
                                             <p>예술을 통한 자유로운 상상과 사유의 시간으로 우리를 인도하며 다채로운 현대미술의 세계를 체험할 수 있습니다.</p>
                                         </li>
                                     </ul>
                                 </div>
-                            </div><!-- m2 -->
-                        </section><!-- floor-info -->
-                    </div><!-- container -->
-                </section><!-- floor-info -->
-
+                            </div>
+                        </section>
+                    </div>
+                </section>
                 <section id="tabcon-03" class="con-box digital-guide-did-wrap">
                     <h2>21세기 리움</h2>
                     <div class="container">
@@ -598,11 +611,17 @@
                                         <img src="./image/guide_digital_guide(1).png" alt="디지털가이드 사용모습">
                                     </div>
                                     <div data-aos="fade-up" class="guide-intro-txt">
-                                        <strong>내 손안의 도슨트, 디지털 가이드로<br>리움의 작품들과 더욱 가까워지세요</strong>
-                                        <p>2021년, 새롭게 선보이는 갤럭시 S21 Plus 기반의<br>3세대 디지털 가이드는 더욱 똑똑하고 친절해 졌습니다.</p>
-                                        <p>관람을 마치고 <span>End-Ticket</span>을 챙겨보세요.<br>재미있는 선물이 기다리고 있어요.</p>
+                                        <strong>내 손안의 도슨트, 디지털 가이드로 <br>리움의 작품들과 더욱 가까워지세요</strong>
+                                        <p>
+                                            2021년, 새롭게 선보이는 갤럭시 S21 Plus 기반의<br>
+                                            3세대 디지털 가이드는 더욱 똑똑하고 친절해 졌습니다.
+                                        </p>
+                                        <p>
+                                            관람을 마치고 <span>End-Ticket</span>을 챙겨보세요.<br>
+                                            재미있는 선물이 기다리고 있어요.
+                                        </p>
                                     </div>
-                                </div><!-- guide-intro -->
+                                </div>
                             </div>
                             <div class="guide-point-wrap">
                                 <div class="point-m-wrap guide-swiper">
@@ -610,8 +629,11 @@
                                         <li class=" swiper-slide">
                                             <div class="point-m-txt">
                                                 <span>STEP <b>01</b></span>
-                                                <strong>전시 중인 모든<br>작품의 해설 제공</strong>
-                                                <p class="p">디지털 가이드는 한국어, 영어,<br>중국어, 일본어 해설을 제공합니다.</p>
+                                                <strong>전시 중인 모든 <br>작품의 해설 제공</strong>
+                                                <p class="p">
+                                                    디지털 가이드는 한국어, 영어, <br>
+                                                    중국어, 일본어 해설을 제공합니다.
+                                                </p>
                                             </div>
                                             <img src="./image/guide_digital_guide(2).png" alt="작품해설화면">
                                         </li>
@@ -629,9 +651,8 @@
                                             </div>
                                             <img src="./image/guide_digital_guide(3).png" alt="투어프로그램화면">
                                         </li>
-                                    </ul><!-- point-m -->
-                                </div><!-- guide-point-m -->
-    
+                                    </ul>
+                                </div>
                                 <div class="point-pc-wrap">
                                     <div class="point-pc">
                                         <div class="point-pc-img" data-aos="fade-right" data-aos-duration="1000">
@@ -660,11 +681,10 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div><!-- guide-point-wrap -->
-                                </div><!-- point-pc -->
-                            </div><!-- guide-point-wrap -->
-                        </section><!-- digital-guide -->
-                        
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <section class="did">
                             <h3>리움 DID</h3>
                             <h4>Digital Interactive Display</h4>
@@ -672,39 +692,53 @@
                                 <div class="awards-flex">
                                     <div class="awards-txt" data-aos="fade-up-right" data-aos-duration="1000">
                                         <strong>디자인 어워드 최우수상</strong>
-                                        <p><span class="mobile-hidden">leeum의 DID는</span> 삼성전자의 고화질 디스 플레이와 leem의<br>디지털인터랙티브 솔루션이 결합하여 <br class="m-br">만들어진 전시 연출 기법으로</p>
-                                        <p>2013년 레드닷 디자인 어워드 <br class="m-br">최우수상에 선정된 바 있으며,</p>
-                                        <p>2021년 재개관과 함께 <br class="m-br">업그레이드 되었습니다.</p>
+                                        <p>
+                                            <span class="mobile-hidden">leeum의 DID는</span> 삼성전자의 고화질 디스 플레이와 leem의<br>
+                                            디지털인터랙티브 솔루션이 결합하여 <br class="m-br">
+                                            만들어진 전시 연출 기법으로
+                                        </p>
+                                        <p>
+                                            2013년 레드닷 디자인 어워드 <br class="m-br">
+                                            최우수상에 선정된 바 있으며,
+                                        </p>
+                                        <p>
+                                            2021년 재개관과 함께 <br class="m-br">
+                                            업그레이드 되었습니다.
+                                        </p>
                                     </div>
                                     <img class="mobile-hidden" src="./image/guide_did_photo(1).png" alt="did화면1" data-aos="fade-up-left" data-aos-duration="1000">
-                                </div><!-- awards-flex -->
+                                </div>
                                 <div class="did-img2" data-aos="fade-up" data-aos-duration="1000">
                                     <img src="./image/guide_did_photo_(2).PNG" alt="did화면2">
                                 </div>
-                            </div><!-- did-awards -->
-                            
+                            </div>                            
                             <div class="did-point" data-aos="fade-up" data-aos-duration="1000">
                                 <strong>전통 미술의 정교함</strong>
-                                <p>한국의 전통 미술품 중에는 화려함과 정교함이 돋보이는 <br class="m-br">작품들도 많습니다. <br class="pc-br">특히, 귀한 재료를 사용하여 장인의 <br class="m-br">손에 의해 만들어진 공예품과 섬세한 <br class="pc-br">표현이 드러나는 <br class="m-br">회화에서 이러한 아름다움을 느낄 수 있습니다.</p>
+                                <p>
+                                    한국의 전통 미술품 중에는 화려함과 정교함이 돋보이는 <br class="m-br"> 작품들도 많습니다.<br class="pc-br">
+                                    특히, 귀한 재료를 사용하여 장인의 <br class="m-br">손에 의해 만들어진 공예품과 섬세한 <br class="pc-br">
+                                    표현이 드러나는 <br class="m-br">회화에서 이러한 아름다움을 느낄 수 있습니다.
+                                </p>
                                 <img src="./image/guide_did_photo_(3).png" alt="did화면3">
                             </div>
                             <div class="did-video" data-aos="fade-up" data-aos-duration="1000">
                                 <h5>DID사용법</h5>
-                                <p><span class="mobile-hidden">leeum의 DID는 </span>육안으로는 잘 보이지 않는 유물의 미세한 디테일을 <br class="m-br">관찰할 수 있고, <br class="pc-br">작품을 360도로 돌려가며, 작품의 뒷면이나 <br class="m-br">내부와 같이 노출되지 않은 부분까지 감상하실 수 있습니다. </p>
+                                <p>
+                                    <span class="mobile-hidden">leeum의 DID는 </span>육안으로는 잘 보이지 않는 유물의 미세한 디테일을 <br class="m-br">
+                                    관찰할 수 있고, <br class="pc-br">
+                                    작품을 360도로 돌려가며, 작품의 뒷면이나 <br class="m-br">
+                                    내부와 같이 노출되지 않은 부분까지 감상하실 수 있습니다.
+                                </p>
                                 <div class="video-frame"> 
                                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cTBlbVVCt7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
                             </div>
-                        </section><!-- did -->
-                    </div><!-- container -->
-                </section><!-- leeum-21st -->
-            </div><!-- tab-con -->
-        </div><!-- tabmenu-wrap -->
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
-
-
-
-
     <footer>
     <div class="sitemap-banner-wrap">
         <div class="container">

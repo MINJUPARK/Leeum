@@ -92,55 +92,44 @@ function certify() {
   var back = document.getElementById("back");
   var phone = document.getElementById("phone");
   var phoneBack = document.getElementById("phoneBack");
-
-  if (name.value == "") {
-    alert("이름을 입력하세요.");
-    name.focus();
-    return false;
-  };
-
-  if (front.value == "") {
-    alert("생년월일을 입력하세요.");
-    front.focus();
-    return false;
-  };
-
   var frontCheck = /^(?=.*[0-9]).{6}$/;
   var backCheck = /^(?=.*[1-6]).{1}$/;
   var phoneCheck = /^(?=.*[0-9]).{3,4}$/;
   var phoneBackCheck = /^(?=.*[0-9]).{4}$/;
 
-  if (front.value == "" || back.value == "") {
+  if (name.value == "") {
+    alert("이름을 입력하세요.");
+    name.focus();
+    return false;
+  } else if (front.value == "") {
+    alert("생년월일을 입력하세요.");
+    front.focus();
+    return false;
+  } else if (front.value == "" || back.value == "") {
     alert("주민번호를 입력하세요.");
     front.focus();
     return false;
-  };
-
-  if (!frontCheck.test(front.value)) {
+  } else if (!frontCheck.test(front.value)) {
     alert("주민번호 앞자리를 입력하세요. (ex. 901218)");
     front.focus();
     return false;
-  };
-
-  if (!backCheck.test(back.value)) {
+  } else if (!backCheck.test(back.value)) {
     alert("주민번호 뒷자리 중 첫번째 자리만 입력하세요.");
     back.focus();
     return false;
-  };
-
-  if(phone.value == "" || phoneBack.value == "") {
+  } else if(phone.value == "" || phoneBack.value == "") {
     alert("휴대폰번호를 입력하세요.")
     phone.focus();
     return false;
-  };
-
-  if(!phoneCheck.test(phone.value) || !phoneBackCheck.test(phoneBack.value)) {
+  } else if(!phoneCheck.test(phone.value) || !phoneBackCheck.test(phoneBack.value)) {
     alert("휴대폰번호 형식이 올바르지 않습니다. 4자리씩 입력하세요.")
     phone.focus();
     return false;
-  };
+  } else {
+    alert("본인인증이 성공적으로 완료되었습니다.");
+    location.href = "../register/register_join_info.html";
+  }
 
-  location.href = "../register/register_join_info.html";
 }
 
 /* ------ register_join_info ------ */

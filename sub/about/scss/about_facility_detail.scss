@@ -49,35 +49,23 @@ main {
             }
             
             table {
-                padding: 20px 30px;
                 @include out_container();
+                width: 100% !important;
+                padding: 20px 30px;
+                text-align: left;
+
                 @include responsive(pc-screens){
                     @include in_container();
                 }
                 .des {
                     td {
-                        &:first-child {
-                            @include gothic_font(semibold,16px);
-                            padding:12px 0;
-
-                            @include responsive(pc-screens){
-                                @include gothic_font(semibold,17px);
-                            }
-                        }
-
-                        &:last-child {
-                            padding-left: 23px;
-                            @include gothic_font(regular,16px);
-                            color: $bk1;
-
-                            @include responsive(pc-screens){
-                                @include gothic_font(regular,17px);
-                            }
-                        }
+                        padding:8px 0;
+                        color: $bk1;
                     }
                 }
             }
         }
+
 
         .symbol {
 
@@ -133,6 +121,7 @@ main {
             .material {
                 img{
                     @include out_container();
+                    border-radius: 5px;
                     
                     @include responsive(pc-screens){
                         @include in_container();
@@ -145,7 +134,7 @@ main {
                 .material-detail{
                     
                     h4{
-                        @include gothic_font(bold,18px);
+                        @include gothic_font(bold, 20px);
                         margin-top: 25px;
 
                         @include responsive(pc-screens){
@@ -155,16 +144,17 @@ main {
                     }
     
                     p{  
-                        @include content_align();
+                        @include content_align(justify);
 
                         &:first-of-type {
-                            margin-top: 15px;
-                            margin-bottom: 40px;
+                            color: $red-brown;
+                            margin-top: 8px;
+                            margin-bottom: 20px;
                             @include gothic_font(medium);
 
                             @include responsive(pc-screens){
                                 margin-top: 10px;
-                                @include gothic_font(medium,20px);
+                                @include gothic_font(medium, 20px);
                             }
                         }
     
@@ -175,7 +165,6 @@ main {
 
                             @include responsive(pc-screens){
                                 @include gothic_font(regular,18px);
-                                text-align: justify;
                             }
                         }
                         br {
@@ -189,10 +178,11 @@ main {
 
             .lobby {
                 @include responsive(pc-screens){
-                    margin-top: 300px;
+                    margin-top: 400px;
                 }
                 img{
                     @include out_container();
+                    border-radius: 5px;
 
                     @include responsive(pc-screens){
                         @include in_container();
@@ -205,7 +195,7 @@ main {
 
                 .lobby-detail{
                     h4{
-                        @include gothic_font(bold,18px);
+                        @include gothic_font(bold, 20px);
                         margin-top: 25px;
 
                         @include responsive(pc-screens){
@@ -215,11 +205,12 @@ main {
                     }
     
                     p{
-                        @include content_align();
+                        @include content_align(justify);
 
                         &:first-of-type {
-                            margin-top: 15px;
-                            margin-bottom: 40px;
+                            color: $red-brown;
+                            margin-top: 8px;
+                            margin-bottom: 20px;
                             @include gothic_font(medium);
 
                             @include responsive(pc-screens){
@@ -250,12 +241,13 @@ main {
             .rotunda {
 
                 @include responsive(pc-screens){
-                    margin-top: 300px;
+                    margin-top: 400px;
                 }
 
                 img{
                     @include out_container();
-                    
+                    border-radius: 5px;
+
                     @include responsive(pc-screens){
                         @include in_container();
                         width:55.625%;
@@ -268,7 +260,7 @@ main {
                 .rotunda-detail{
                     
                     h4{
-                        @include gothic_font(bold,18px);
+                        @include gothic_font(bold, 20px);
                         margin-top: 25px;
 
                         @include responsive(pc-screens){
@@ -278,10 +270,12 @@ main {
                     }
     
                     p{
-                        @include content_align();
+                        @include content_align(justify);
+
                         &:first-of-type {
-                            margin-top: 15px;
-                            margin-bottom: 40px;
+                            color: $red-brown;
+                            margin-top: 8px;
+                            margin-bottom: 20px;
                             @include gothic_font(medium);
 
                             @include responsive(pc-screens){
@@ -296,9 +290,7 @@ main {
 
                             @include responsive(pc-screens){
                                 @include gothic_font(regular,18px);
-                                text-align: justify;
                             }
-
                         }
                         br {
                             @include responsive(pc-screens){
@@ -311,10 +303,11 @@ main {
 
             .display-area {
                 @include responsive(pc-screens){
-                    margin-top: 270px;
+                    margin-top: 400px;
                 }
                 img{
                     @include out_container();
+                    border-radius: 5px;
 
                     @include responsive(pc-screens){
                         @include in_container();
@@ -327,7 +320,7 @@ main {
                 
                 .display-area-detail{
                     h4{
-                        @include gothic_font(bold,18px);
+                        @include gothic_font(bold,20px);
                         margin-top: 25px;
 
                         @include responsive(pc-screens){
@@ -337,10 +330,12 @@ main {
                     }
     
                     p{
-                        @include content_align();
+                        @include content_align(justify);
+
                         &:first-of-type {
-                            margin-top: 15px;
-                            margin-bottom: 40px;
+                            color: $red-brown;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
                             @include gothic_font(medium);
 
                             @include responsive(pc-screens){
@@ -356,7 +351,6 @@ main {
 
                             @include responsive(pc-screens){
                                 @include gothic_font(regular,18px);
-                                text-align: justify;
                             }
                         }
                         br {
@@ -371,7 +365,7 @@ main {
 
         .constructor-info {
             @include responsive(pc-screens){
-                margin-top: 280px;
+                margin-top: 450px;
             }
 
             h4 {
@@ -386,6 +380,7 @@ main {
             iframe {
                 @include out_container();
                 height: calc(200px + 6vh);
+                border-radius: 5px;
 
                 @include responsive(pc-screens){
                     float: left;
@@ -431,64 +426,53 @@ main {
                     width: 460px;
                     float: left;
                     margin-top: 30px;
-                    margin-bottom: 160px;
+                    margin-bottom: 300px;
                     margin-right: 20px;
                 }
                 
                 table {
-                    padding: 10px 30px 20px 30px;
-                    @include responsive(pc-screens){
-                        width: 100%;
-                        padding-top:10px;
-                        padding-left:10px;
-                    }
+                    width: 100%;
+                    padding: 20px 30px;
+                    text-align: left;
+
                     .detail-des {
-                        td {
+                        th {
                             vertical-align: top;
-                            &:first-of-type {
-                                @include gothic_font(semibold,16px);
-                                padding: 24px 60px 0 30px;
+                        }
 
-                                @include responsive(pc-screens){
-                                    @include gothic_font(semibold,16px);
-                                    padding-top: 25px;
+                        td {
+                            padding-bottom: 15px;
+                            color: $bk1;
+
+                            li {
+                                padding-bottom: 10px;
+                                color: $bk1;
+
+                                &:last-child {
+                                    padding-bottom: 0;
                                 }
                             }
+                        }
 
-                            &:last-of-type {
-                                @include gothic_font(regular,16px);
-                                padding-top: 24px;
-                                color:#5b5b5b;
-
-                                @include responsive(pc-screens){
-                                    @include gothic_font(regular,16px);
-                                    padding-top: 24px;
-                                }
-                                
-                                .ex {
-                                    line-height: 24px;
-                                    margin-top: -4px;
-                                    @include responsive(pc-screens){
-                                        line-height: 28px;
-                                    }
-                                }
-                            }
+                        &:last-child td {
+                            padding-bottom: 0;
                         }
                     }
                 }
                 
             }
             .simple{
+                margin-top: 60px;
                 p {
-                    text-align: left;
-                    line-height: 40px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    line-height: 45px;
                     color: #000;
                     @include batang_font(medium, 26px); 
 
                     @include responsive(pc-screens){
-                        @include batang_font(medium, 35px); 
-                        line-height: 30px;
-                        margin-bottom: -10px;
+                        text-align: left;
+                        font-size: $h2;
                     }
                     
                     br {
@@ -516,31 +500,32 @@ main {
                     }
                     
                     p {
-                        @include content_align();
                         @include gothic_font(regular);
+                        @include content_align(justify);
                         
                         &:first-of-type {
-                            text-align: justify;
+                            text-align: center;
+
                             @include responsive(pc-screens) {
-                                @include gothic_font(regular,18px);
+                                text-align: left;
+                                font-size: 18px;
                             }
                             
                         }
 
-                        &:nth-of-type(2) {
-                            text-align: justify;    
+                        &:nth-of-type(2) { 
                             @include responsive(pc-screens) {
                                 @include gothic_font(regular,18px);
                             }
 
                             span {
+                                display: inline-block;
+                                @include batang_font(bold, $h6);
                                 color:#ac3f21;
-                                @include gothic_font(semibold);
                                 
-                                display: inline;
                                 @include responsive(pc-screens) {
                                     display: block;
-                                    @include gothic_font(semibold,18px);
+                                    font-size: $h5;
                                 }
                             }
                         }
@@ -577,6 +562,8 @@ main {
             }
 
             .faq {
+                margin-bottom: 100px;
+                
                 h4 {
                     @include gothic_font(semibold,20px);
                     margin : 100px 0 20px;
@@ -698,7 +685,6 @@ main {
     }
     
 }
-
 
 footer {
     @include footer();

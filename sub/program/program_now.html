@@ -9,13 +9,13 @@
     <link rel="icon" href="./image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="./image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/program_now.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
     <title>Leeum</title>
 </head>
 <body>
     <header>
-        <div class="mobile-menu-popup">
+        <div class="mobile-menu-popup hidden">
             <div class="window">
                 <img src="../../image/icon_close.svg" alt="메뉴 닫기" class="close">
                 <div class="popup">
@@ -220,12 +220,12 @@
                 <div class="popular-program-wrap">
                     <h4>11월 1주 인기 프로그램</h4>
                     <div class="pp">
+                        <div class="limit-text">
+                            <p>180명 한정</p>
+                        </div>
                         <div class="img-text">
                             <div class="image">
                                 <a href="./program_now_detail.html">
-                                    <div class="limit-text">
-                                        <p>180명 한정</p>
-                                    </div>
                                     <img src="./image/program1.jpg" alt="program1">
                                 </a>
                             </div>

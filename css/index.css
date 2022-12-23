@@ -1866,6 +1866,7 @@ main section.program .prg-slider .slide-wrap .slide-item .slide-con .des {
   text-align: justify;
   line-height: 1.8em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 768px) {
   main section.program .prg-slider .slide-wrap .slide-item .slide-con .des {
@@ -2134,6 +2135,7 @@ main section.artist .va-slice .va-content p {
   text-align: justify;
   line-height: 1.8em;
   color: #3c3c3c;
+  word-break: normal;
   color: #fff;
 }
 @media screen and (min-width: 768px) {

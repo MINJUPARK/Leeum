@@ -191,10 +191,11 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/map_header.png);
+  background: url(../image/map_header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-position: bottom;
 }
 header a {
   color: #fff;
@@ -657,9 +658,6 @@ header .breadcrumb-wrap {
   }
 }
 
-main {
-  word-break: keep-all;
-}
 @media screen and (min-width: 768px) {
   main {
     font-size: 18px;
@@ -736,6 +734,7 @@ main .map-wrap .map .way-wrap .way2 p {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main .map-wrap .map .way-wrap .way1 address, main .map-wrap .map .way-wrap .way1 p,

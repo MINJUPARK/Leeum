@@ -888,6 +888,7 @@ main section.info .item-wrap .i-des .tit-exp p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-des .tit-exp p {
@@ -1126,6 +1127,7 @@ main .o-i-p p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main .o-i-p p {
@@ -1149,6 +1151,7 @@ main .o-i-p .content p {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1440px) {
@@ -1298,6 +1301,7 @@ main .vr-floor-info-wrap .slick-arrow.slick-prev.slick-disabled:before, main .vr
 }
 main .vr-floor-info-wrap .slide-main {
   height: 350px;
+  border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
   main .vr-floor-info-wrap .slide-main {
@@ -1361,46 +1365,46 @@ main .vr-floor-info-wrap section.floor-info > div.cultural-center > .floor-selec
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 14px;
   border-bottom: 2px solid #000;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title {
-    padding-bottom: 24px;
+    padding: 0 10px;
+    padding-bottom: 26px;
   }
 }
-main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h5 {
-  font-size: 22px;
+main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 {
+  font-size: 20px;
   font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
-  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h5 {
+  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 {
     font-size: 26px;
   }
 }
-main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h5 span {
+main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 span {
   margin-left: 10px;
   color: #5c5c5c;
-  font-size: 18px;
+  font-size: calc(1em - 6px);
   font-weight: 400;
 }
 @media screen and (min-width: 1440px) {
-  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h5 span {
-    font-size: 20px;
+  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 span {
+    margin-left: 20px;
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown {
   transition: 0.3s;
-  height: 10px;
-  cursor: pointer;
+  width: 18px;
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown.active {
   transform: rotate(180deg);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown {
     display: none;
   }
@@ -1414,24 +1418,26 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-opt
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li {
+  display: flex;
   height: 52px;
   line-height: 52px;
   padding: 0 10px;
   font-size: 20px;
   color: #5c5c5c;
   border-bottom: 1px solid #c5c5c5;
+  cursor: pointer;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li {
-    height: 78px;
-    line-height: 78px;
+    height: 65px;
+    line-height: 65px;
     font-size: 25px;
   }
 }
 @media screen and (min-width: 1440px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li {
-    height: 91px;
-    line-height: 91px;
+    height: 78px;
+    line-height: 78px;
     padding: 0 20px;
     font-size: 28px;
   }
@@ -1441,48 +1447,33 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-opt
   color: #000;
   background-color: #f3f3f3;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 920px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li.selected {
     background-image: url(../../../image/icon_arrow_tail.svg);
     background-repeat: no-repeat;
-    background-position: right 32px;
+    background-position: center right;
     background-origin: content-box;
-    background-size: 34px 18px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li.selected {
-    background-position: right center;
+    background-size: 50px 20px;
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li b {
+  font-size: 18px;
   font-weight: 500;
-  font-size: 20px;
-}
-@media screen and (min-width: 768px) {
-  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li b {
-    font-size: 24px;
-  }
 }
 @media screen and (min-width: 1440px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li b {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
   margin-left: 10px;
   vertical-align: top;
-  font-size: calc(1em - 4px);
-}
-@media screen and (min-width: 768px) {
-  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
-    font-size: 20px;
-  }
+  font-size: 0.8em;
 }
 @media screen and (min-width: 1440px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
+    font-size: calc(1em - 8px);
     margin-left: 15px;
-    font-size: 22px;
   }
 }
 main .vr-floor-info-wrap section.floor-info > div .floor-con-group {
@@ -1492,6 +1483,7 @@ main .vr-floor-info-wrap section.floor-info > div .floor-con-group p {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   margin-top: 15px;
   font-size: 16px;
   text-align: justify;

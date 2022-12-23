@@ -90,6 +90,23 @@ main {
             padding-top: 0;
             padding-bottom: 0;
         }
+        
+        p {
+            @include gothic_font(semibold, 18px);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            
+            @include responsive(pc-screens) {
+                font-size: 20px;
+            }
+
+            b {
+                font-size: 120%;
+                margin-right: 5px;
+                color: $yellow-brown;
+            }
+        }
 
         .dropdown {
             @include icon_rotate(180deg);
@@ -97,12 +114,7 @@ main {
             
             @include responsive(pc-screens){
                 height: 10px;
-                top: 50px;
             }
-        }
-        
-        span {
-            color: $red-brown;
         }
     }
 }

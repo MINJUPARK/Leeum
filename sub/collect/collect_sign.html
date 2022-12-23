@@ -9,13 +9,13 @@
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/collect_sign.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
     <title>Leeum</title>
 </head>
 <body>
     <header>
-        <div class="mobile-menu-popup">
+        <div class="mobile-menu-popup hidden">
             <div class="window">
                 <img src="../../image/icon_close.svg" alt="메뉴 닫기" class="close">
                 <div class="popup">
@@ -215,8 +215,6 @@
             </div>
         </div>
     </header>
-
-
     <main>
         <section class="search-wrap">
             <h2>search-section</h2>
@@ -235,8 +233,8 @@
                         </form>
                     </div>
                 </div>
-            </div><!-- container -->
-        </section><!-- search-wrap -->
+            </div>
+        </section>
         <section class="itemList-wrap">
             <h2>영상 목록</h2>
             <div class="container">
@@ -254,10 +252,10 @@
                             </ul>
                             <select name="nth-view">
                                 <option value="n-9">9개씩 보기</option>
-                                <option value="n-6">6개씩보기</option>
+                                <option value="n-6">6개씩 보기</option>
                             </select>
-                        </div><!-- view-type -->
-                    </div><!-- list-control -->
+                        </div>
+                    </div>
                     <ul class="item-box">
                         <li class="item">
                             <button type="button" class="heart"></button>
@@ -454,13 +452,13 @@
                                 </div>
                             </a>
                         </li>
-                    </ul><!-- vedio-list -->
+                    </ul>
                     <div class="more-btn">
                         <button type="button">더보기</button>
                     </div>
-                </div><!-- itemList -->
-            </div><!-- container -->
-        </section><!-- itemList-wrap -->
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="sitemap-banner-wrap">

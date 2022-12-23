@@ -137,7 +137,6 @@ main {
 
         h2 {
             @include gothic_font(bold, 30px);
-            // white-space: nowrap;
 
             @include responsive(pc-screens){
                 font-size: 46px;
@@ -205,7 +204,6 @@ main {
                 }
                 
                 p {
-                    // font-size: 16x;
                     padding: 15px 0 25px 0;
                     border-bottom: 1px solid $bk5;
 
@@ -345,13 +343,11 @@ main {
     
             p {
                 @include content_align();
-                // line-height: 28px;
                 margin-bottom: 30px;
 
                 @include responsive(pc-screens){
                     @include gothic_font(regular, 22px);
                     color: $bk1;
-                    // line-height: 44px;
                 }
 
                 &.title {
@@ -388,6 +384,7 @@ main {
 
     section.movePage {
         @include move_page();
+        margin-top: 100px;
         
         @include responsive(pc-screens){
             font-size: 18px;

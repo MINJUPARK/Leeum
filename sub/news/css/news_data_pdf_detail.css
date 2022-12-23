@@ -894,6 +894,7 @@ main section.info .item-wrap .i-des .tit-exp p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-des .tit-exp p {
@@ -902,6 +903,12 @@ main section.info .item-wrap .i-des .tit-exp p {
 }
 main section.info .i-slide img {
   width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  main section.info .i-slide img {
+    border-radius: 5px;
+    margin-top: 40px;
+  }
 }
 main section.info .i-des .loc-icon {
   justify-content: flex-end;
@@ -914,6 +921,7 @@ main section.info .mini-box td {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 main section.info .introduce strong {
   margin-top: 20px;

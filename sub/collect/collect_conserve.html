@@ -22,7 +22,7 @@
     <title>Leeum</title>
 <body>
     <header>
-        <div class="mobile-menu-popup">
+        <div class="mobile-menu-popup hidden">
             <div class="window">
                 <img src="../../image/icon_close.svg" alt="메뉴 닫기" class="close">
                 <div class="popup">
@@ -222,10 +222,6 @@
             </div>
         </div>
     </header>
-
-
-
-
     <main>
         <section class="research-intro-wrap">
             <h2>보존연구란</h2>
@@ -240,10 +236,9 @@
                             <p>보존처리 시에는, 최대한 역사적인 흔적이 제거되지 않는 범위에서 원형을 유지하기 위한 최소한의 처리를 하며, 향후 재처리를 대비하여 가역적인 방법과 재료를 사용합니다.</p>
                         </div>
                     </div>
-                </div><!-- research-intro -->
-            </div><!-- container -->
-        </section><!-- research-intro-wrap -->
-
+                </div>
+            </div>
+        </section>
         <section class="lab-role-wrap">
             <h2>role-section</h2>
             <div class="container">
@@ -251,64 +246,61 @@
                     <h3 data-aos="fade-up" data-aos-duration="1500">리움 보존연구실의 역할</h3>
                     <ul class="role">
                         <li data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
-                            <img src="./image/icon_role(1).svg" alt="역할1">
+                            <img src="./image/icon_role(1).svg" alt="손상요인 구명">
                             <p>손상요인 <br class="m-br">구명</p>
                         </li>
                         <li data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="800">
-                            <img src="./image/icon_role(2).svg" alt="역할2">
+                            <img src="./image/icon_role(2).svg" alt="보존환경 유지">
                             <p>보존환경 <br class="m-br">유지</p>
                         </li>
                         <li data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="1300">
-                            <img src="./image/icon_role(3).svg" alt="역할3">
+                            <img src="./image/icon_role(3).svg" alt="직접적인 보존처리">
                             <p>직접적인 <br class="m-br">보존처리</p>
                         </li>
                     </ul>
-                </div><!-- lab-role -->
-            </div><!-- container -->
-        </section><!-- lab-role-wrap -->
-
+                </div>
+            </div>
+        </section>
         <section class="texture-research-wrap">
             <h2>texture-section</h2>
             <div class="container">
                 <div class="texture-research">
                     <h3 data-aos="fade-up" data-aos-duration="1300" data-aos-offset="300">재질별 보존처리</h3>
-                    <!-- <div class="swiper mySwiper"> -->
                     <div class="texture-lsit slide-main" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
                         <div class="slide-item">
                             <a href="./collect_conserve_texture.html">
                                 <h4>금속유물</h4>
-                                <img src="./image/conserve_texture(1).png" alt="작품 재질1">
+                                <img src="./image/conserve_texture(1).png" alt="금속유물">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="./collect_conserve_texture.html">
                                 <h4>도자기</h4>
-                                <img src="./image/conserve_texture(2).png" alt="작품 재질2">
+                                <img src="../collect/image/antique_item(1).jpg" alt="도자기">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="./collect_conserve_texture.html">
                                 <h4>현대조각</h4>
-                                <img src="./image/conserve_texture(3).png" alt="작품 재질3">
+                                <img src="../collect/image/modern_item(6).jpg" alt="현대조각">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="./collect_conserve_texture.html">
                                 <h4>고서화</h4>
-                                <img src="./image/conserve_texture(4).png" alt="작품 재질4">
+                                <img src="../../image/index_antique(1).jpg" alt="고서화">
                             </a>
                         </div>
                         <div class="slide-item">
                             <a href="./collect_conserve_texture.html">
                                 <h4>현대회화</h4>
-                                <img src="./image/conserve_texture(5).png" alt="작품 재질5">
+                                <img src="../collect/image/modern_item(12).jpg" alt="현대회화">
                             </a>
                         </div>
-                    </div><!-- texture -->
-                </div><!-- texture-research -->
-            </div><!-- container -->
-        </section><!-- texture-research-wrap -->
-        
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="conserve-type-wrap">
             <h2>type-section</h2>
             <div class="container">
@@ -316,24 +308,23 @@
                     <h3 data-aos="fade-up" data-aos-duration="1300">보존 연구 유형</h3>
                     <ul class="type-lsit">
                         <li>
-                            <img src="./image/conserve_type(1).png" alt="연구 유형1" data-aos="fade-right" data-aos-duration="1300" data-aos-delay="500">
+                            <img src="./image/conserve_type(1).png" alt="과학적 연구" data-aos="fade-right" data-aos-duration="1300" data-aos-delay="500">
                             <div class="type-txt" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
                                 <h4>과학적 연구</h4>
                                 <p>작품의 노화양상과 보존처리의 영향에 대한 근거를 제시하기 위한 것으로, 다양한 과학분석법으로 작품의 구조와 재질에 대한 조사를 하며, 손상 상태를 포함한 작품의 물리적, 화학적인 특징을 밝혀냅니다. 이를 통해 작품의 보존처리 방향 설정 및 작품 보존 방법이나 환경관리를 위한 정보를 제시합니다.</p>
                             </div>
                         </li>
                         <li>
-                            <img src="./image/conserve_type(2).png" alt="연구 유형2" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="200">
+                            <img src="./image/conserve_type(2).png" alt="보존환경 유지" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="200">
                             <div class="type-txt" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="200">
                                 <h4>보존환경 유지</h4>
                                 <p>미술관의 환경 관리는 소장품을 온전하게 보존하기 위하여 작품에 영향을 미칠 수 있는 온도와 습도, 조명, 기체상태 오염원 그리고 충해 등을 제어하는 일입니다. 소장품은 다양한 재질과 각기 다른 제작 기법으로 이루어져 있으므로 작품의 재질, 구조, 상태에 따라 차별화하여 전시실 및 수장고 내의 환경을 적절하게 유지하는 것이 무엇보다 중요합니다.</p>
                             </div>
                         </li>
-                    </ul><!-- type-lsit -->
-                </div><!-- conserve-type -->
-            </div><!-- container -->
-        </section><!-- conserve-type-wrap -->
-
+                    </ul>
+                </div>
+            </div>
+        </section>
         <section class="conserve-case-wrap">
             <h2>case-section</h2>
             <div class="container">
@@ -343,7 +334,7 @@
                         <li data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
                             <a href="./collect_conserve_case.html">
                                 <div class="case-img">
-                                    <img src="./image/conserve_case(1).png" alt="보존 처리 사례1">
+                                    <img src="./image/conserve_case(1).png" alt="분청사기 양형명기 (粉靑沙基 羊形明器)">
                                 </div>
                                 <h4>분청사기 양형명기 (粉靑沙基 羊形明器)</h4>
                                 <span>고고미술</span>
@@ -352,17 +343,16 @@
                         <li data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200">
                             <a href="./collect_conserve_case.html">
                                 <div class="case-img">
-                                    <img src="./image/conserve_case(2).png" alt="보존 처리 사례1">
+                                    <img src="./image/conserve_case(2).png" alt="이인성 <가을 어느 날>">
                                 </div>
                                 <h4>이인성 &lt;가을 어느 날&gt;</h4>
                                 <span>고고미술</span>
                             </a>
                         </li>
-                    </ul><!-- case-list -->
-                </div><!-- conserve-case -->
-            </div><!-- container-->
-        </section><!-- class="conserve-case-wrap" -->
-
+                    </ul>
+                </div>
+            </div>
+        </section>
         <section class="faq-wrap">
             <h2>faq-section</h2>
             <div class="container">
@@ -405,16 +395,11 @@
                                 <p>작품은 시간의 흐름과 함께 노화하고 있기 때문에, 처리한 작품이라도 외부 환경이나 보관 및 관리 방법에 따라 또다시 손상될 수 있다. 보존처리에 사용된 재료 또한 시간이 지나면서 노화하므로 재 복원 작업이 요구되기도 한다.</p>
                             </div>
                         </li>
-                    </ul><!-- faq-list -->
-                </div><!-- faq-->
-            </div><!-- container -->
-        </section><!-- faq-wrap -->
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
-
-
-
-
-
     <footer>
         <div class="sitemap-banner-wrap">
             <div class="container">

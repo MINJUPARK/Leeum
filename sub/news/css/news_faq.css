@@ -692,6 +692,7 @@ main .faq-content .explain {
   text-align: justify;
   line-height: 1.8em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main .faq-content .explain {
@@ -740,6 +741,23 @@ main .q-box {
     padding-bottom: 0;
   }
 }
+main .q-box p {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  main .q-box p {
+    font-size: 20px;
+  }
+}
+main .q-box p b {
+  font-size: 120%;
+  margin-right: 5px;
+  color: #be6a15;
+}
 main .q-box .dropdown {
   transition: 0.3s;
   height: 8px;
@@ -750,11 +768,7 @@ main .q-box .dropdown.active {
 @media screen and (min-width: 1440px) {
   main .q-box .dropdown {
     height: 10px;
-    top: 50px;
   }
-}
-main .q-box span {
-  color: #ac3f21;
 }
 
 @media screen and (min-width: 1440px) {

@@ -113,7 +113,6 @@
                 @include responsive(pc-screens) { line-height: 44px; }
 
                 b {
-                    font-size: calc(1em + 2px);
                     color: $red-brown;
                 }
             }
@@ -355,10 +354,11 @@
                             }
                             
                             span.ko-val {
-                                font-size: calc(1em + 4px);
+                                font-size: calc(1em + 2px);
+                                margin-top: 8px;
 
                                 @include responsive(pc-screens) {
-                                    font-size: 26px;
+                                    font-size: $h5;
                                 }
                             }
                         }
@@ -376,6 +376,7 @@
                     
                     strong {
                         @include gothic_font(medium, calc(1em + 6px));
+                        line-height: 1.5em;
 
                         @include responsive(pc-screens) {
                             font-size: 36px;
@@ -385,6 +386,7 @@
                     p {
                         margin-top: 40px;
                         line-height: 2em;
+                        @include gothic_font(light, 18px);
 
                         @include responsive(pc-screens) {
                             line-height: 44px;
@@ -405,26 +407,18 @@
                 text-align: center;
                 
                 p {
-                    @include content_align(center, 2em);
                     margin-top: 30px;
+                    @include content_align(center, 2em);
                     @include gothic_font(medium);
+                    @include line_break();
                     
-                    @include responsive(tablet-screens) { line-height: 36px; }
+                    @include responsive(tablet-screens) {
+                        font-size: 18px;
+                        line-height: 36px;
+                    }
                     @include responsive(pc-screens) {
                         margin-top: 45px;
                         font-size: 20px;
-                    }
-
-                    span, b {
-                        @include gothic_font(semibold, 1em);
-                    }
-
-                    span {
-                        color: $red-brown;
-                    }
-
-                    b {
-                        color: #000;
                     }
                 }
 
@@ -475,11 +469,11 @@
                     strong {
                         display: block;
                         text-align: left;
-                        font-size: calc(1em + 8px);
+                        font-size: calc(1em + 4px);
                         margin-bottom: 20px;
                         
                         @include responsive(pc-screens) {
-                            font-size: $h3;
+                            font-size: $h4;
                             margin-bottom: 40px;
                         }
                     }

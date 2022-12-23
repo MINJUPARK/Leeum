@@ -894,6 +894,7 @@ main section.info .item-wrap .i-des .tit-exp p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-des .tit-exp p {
@@ -1130,6 +1131,7 @@ main .o-i-p .ticket-info ul li {
   text-align: justify;
   line-height: 1.8em;
   color: #3c3c3c;
+  word-break: normal;
   font-size: 16px;
   font-weight: 500;
   padding-left: 11px;
@@ -1155,6 +1157,7 @@ main .o-i-p p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main .o-i-p p {
@@ -1178,6 +1181,7 @@ main .o-i-p .content p {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 1440px) {
@@ -1214,6 +1218,7 @@ main .o-i-p .content.precaution p {
 }
 main section.movePage {
   margin-top: 40px;
+  margin-top: 100px;
 }
 @media screen and (min-width: 1440px) {
   main section.movePage {

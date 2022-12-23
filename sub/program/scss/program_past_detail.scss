@@ -360,6 +360,7 @@ main {
 
     section.movePage {
         @include move_page();
+        margin-top: 100px;
         
         @include responsive(pc-screens){
             font-size: 18px;

@@ -21,8 +21,7 @@
                     height:40px;
 
                     @include responsive(tablet-screens) {
-                        height: 50px;
-                        font-size: 24px;
+                        font-size: 20px;
                     }
 
                 &:after{
@@ -50,7 +49,7 @@
                         }
 
                         @include responsive(tablet-screens) {
-                            font-size: 24px;
+                            font-size: 20px;
                         }
                     }
                 }

@@ -21,6 +21,10 @@ main {
 
         .i-slide img {
             width: 100%;
+            @include responsive(pc-screens) {
+                border-radius: 5px;
+                margin-top: 40px;
+            }
         }
 
         .i-des .loc-icon {
@@ -34,7 +38,7 @@ main {
             th {
                 width: 25% !important;
 
-                @include responsivet(tablet-screens) {
+                @include responsive(tablet-screens) {
                     width: 15% !important;
                 }
 

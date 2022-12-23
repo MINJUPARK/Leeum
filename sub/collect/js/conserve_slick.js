@@ -4,7 +4,7 @@ $(function() {
   
   let slickOpt = {
     slide: ".slide-item",
-    slidesToShow: 1.3,
+    slidesToShow: 1.5,
     slidesToScroll: 1,
     // adaptiveWidth: true,
     // adaptiveHeight: true,

@@ -123,6 +123,10 @@ main {
                                 @include content_align(justify, 1.8em);
                                 font-size: 14px;
                             }
+
+                            @include responsive(pc-screens) {
+                                font-size: 15px;
+                            }
                         }
                     }
 

@@ -1009,6 +1009,7 @@ main section.list .list-control .sort {
   position: absolute;
   right: 0;
   font-size: 15px;
+  cursor: default;
 }
 main section.list .list-control .sort img {
   height: 14px;
@@ -1041,6 +1042,7 @@ main section.list .list-control .view-type .sort-list li {
   font-size: 14px;
   padding-left: 15px;
   color: #3c3c3c;
+  cursor: pointer;
 }
 main section.list .list-control .view-type .sort-list li:hover {
   text-decoration: underline;
@@ -1126,6 +1128,10 @@ main section.list .flex .past-program .image-text .image img {
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  transition: 0.3s;
+}
+main section.list .flex .past-program .image-text .image img:hover {
+  transform: scale(1.3);
 }
 main section.list .flex .past-program .image-text .text {
   padding: 20px;

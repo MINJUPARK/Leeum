@@ -806,6 +806,7 @@ main .normal-text p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main .normal-text p {

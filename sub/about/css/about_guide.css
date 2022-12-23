@@ -681,8 +681,7 @@ main .tabmenu-wrap .tab-nav .nav a {
 }
 @media screen and (min-width: 768px) {
   main .tabmenu-wrap .tab-nav .nav a {
-    height: 50px;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 main .tabmenu-wrap .tab-nav .nav a:after {
@@ -708,7 +707,7 @@ main .tabmenu-wrap .tab-nav .nav.on a:after {
 }
 @media screen and (min-width: 768px) {
   main .tabmenu-wrap .tab-nav .nav.on a {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 main .tabmenu-wrap .tab-con {
@@ -755,10 +754,11 @@ main section.fee-time-wrap .fee-time h3 {
 @media screen and (min-width: 768px) {
   main section.fee-time-wrap .fee-time h3 {
     height: 34px;
-    margin-bottom: 50px;
   }
 }
 main section.fee-time-wrap .fee-time span {
+  margin-bottom: 5px;
+  margin-left: 5px;
   color: #3c3c3c;
   font-size: calc(1em - 2px);
 }
@@ -855,8 +855,9 @@ main section.fee-time-wrap .fee-time .ticket-wrap .ticket-info ul li {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   padding-left: 11px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background: url(../image/icon_bullet_dot.svg) no-repeat left 1em;
   background-size: 2px;
 }
@@ -880,9 +881,12 @@ main section.fee-time-wrap .fee-time .ticket-wrap .ticketing {
   }
 }
 main section.fee-time-wrap .fee-time .ticket-wrap .ticketing a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 20px 0;
-  font-size: calc(1em + 4px);
+  font-size: 18px;
   border-radius: 5px;
   color: #fff;
   border: 1px solid #ac3f21;
@@ -890,11 +894,10 @@ main section.fee-time-wrap .fee-time .ticket-wrap .ticketing a {
   transition: all 0.3s;
 }
 main section.fee-time-wrap .fee-time .ticket-wrap .ticketing a:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 25px -10px;
+  box-shadow: rgba(172, 63, 33, 0.3) 0px 18px 25px -10px;
 }
 main section.fee-time-wrap .fee-time .ticket-wrap .ticketing a img {
   width: calc(1em + 4px);
-  padding-bottom: 4px;
   margin-right: 10px;
 }
 main section.fee-time-wrap .fee-time .please-note {
@@ -1049,7 +1052,7 @@ main section.vr-floor-info-wrap h3 {
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap h3 {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 main section.vr-floor-info-wrap section.vr .vr-txt {
@@ -1124,8 +1127,8 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
 }
 @media screen and (min-width: 768px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title {
-    padding: 0;
-    padding-bottom: 36px;
+    padding: 0 10px;
+    padding-bottom: 26px;
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 {
@@ -1134,7 +1137,7 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title h4 span {
@@ -1150,7 +1153,7 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown {
   transition: 0.3s;
-  width: 4.2857142857%;
+  width: 18px;
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown.active {
   transform: rotate(180deg);
@@ -1169,24 +1172,26 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li {
+  display: flex;
   height: 52px;
   line-height: 52px;
   padding: 0 10px;
   font-size: 20px;
   color: #5c5c5c;
   border-bottom: 1px solid #c5c5c5;
+  cursor: pointer;
 }
 @media screen and (min-width: 920px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li {
-    height: 78px;
-    line-height: 78px;
+    height: 65px;
+    line-height: 65px;
     font-size: 25px;
   }
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li {
-    height: 104px;
-    line-height: 104px;
+    height: 78px;
+    line-height: 78px;
     padding: 0 20px;
     font-size: 28px;
   }
@@ -1202,19 +1207,26 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .gr
     background-repeat: no-repeat;
     background-position: center right;
     background-origin: content-box;
-    background-size: 37px 28px;
+    background-size: 50px 20px;
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li b {
+  font-size: 18px;
   font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li b {
+    font-size: 22px;
+  }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
   margin-left: 10px;
   vertical-align: top;
-  font-size: calc(1em - 4px);
+  font-size: 0.8em;
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li span {
+    font-size: calc(1em - 8px);
     margin-left: 15px;
   }
 }
@@ -1235,6 +1247,7 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-con-group ul li.
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-img li img {
   width: 100%;
   margin-bottom: 25px;
+  border-radius: 5px;
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex {
   display: flex;
@@ -1244,61 +1257,47 @@ main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor
   line-height: 24px;
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex strong {
-  padding-left: 5px;
+  width: 10%;
   font-size: 24px;
-  width: 11.4285714286%;
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex strong {
     font-size: 30px;
-    width: 8.5714285714%;
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
+  flex: 1;
   font-size: 18px;
-  width: 68.5714285714%;
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex b {
     font-size: 24px;
-    width: 80%;
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet {
-  width: 20%;
   padding-right: 5px;
   text-align: right;
   height: 22px;
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet {
-    width: 11.4285714286%;
     height: 26px;
   }
 }
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img {
   height: 100%;
 }
-main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img.left-rigt {
-  padding-left: 5px;
-  padding-right: 3px;
-}
-main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt .txt-flex .toilet img.left {
-  padding-left: 3px;
-}
 main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt p {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   height: 40px;
   margin-top: 15px;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 @media screen and (min-width: 1440px) {
   main section.vr-floor-info-wrap section.floor-info > div .floor-con-group .floor-txt p {
-    margin-left: 8.5714285714%;
-    margin-right: 11.4285714286%;
+    margin-left: 10%;
   }
 }
 main section.digital-guide-did-wrap {

@@ -9,17 +9,17 @@
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="./css/about_facility.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
-    <script src="./js/tab-menu.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/aos.js"></script>
+    <script type="text/javascript" src="./js/aos.js"></script>
+    <script type="text/javascript" src="./js/tab-menu.js"></script>
     <title>Leeum</title>
 </head>
 <body>
     <header>
-        <div class="mobile-menu-popup">
+        <div class="mobile-menu-popup hidden">
             <div class="window">
                 <img src="../../image/icon_close.svg" alt="메뉴 닫기" class="close">
                 <div class="popup">
@@ -206,7 +206,7 @@
                     </li>
                     <li class="loc">
                         <div class="step">
-                            <a href="">시설 안내</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                            <a href="../about/about_facility.html">시설 안내</a><img src="../../image/icon_dropdown.svg" class="dropdown">
                         </div>
                         <ul class="opt">
                             <li><a href="../about/about_intro.html">미술관 소개</a></li>
@@ -244,7 +244,6 @@
                                 M1과 M2는 ‘이미 널리 공인 받은 예술 작품’을 전시합니다. 그와 달리 교육 기능과 기획 전시 기능을 겸하는 아동교육문화센터는 ‘현재 진행 중’이거나 ‘장래 표출될 예술’의 형식을 수용하는 자유분방한 공간입니다. 이 세 건축물은 건축가의 개성을 드러내는 다양한 재료와 혁신적 기법이 사용되었습니다.
                             </p>
                         </div>
-    
                         <div class="M1">
                             <div class="img" data-aos="fade-right" data-aos-duration="1000">
                                 <img src="./image/facility_M1.png" alt="m1">
@@ -325,71 +324,78 @@
                         </div>
                     </div>
                     <div id="facility" class="con-box">
-                        <div class="leeumstore" id="facility">
-                            <div class="facility-detail">
-                                <img src="./image/facility_leeumstore.png" alt="leeumstore">
-                                <p><span>B1 </span><span>리움 스토어(Leeum Store)</span></p>
-                                <p>독립적이면서도 조화롭고 실용적이면서 예술적인 작품들이 어우러져 하나의 빛을 내고 있는 새로운 공간 리움스토어입니다. 국내외에서 활약하고 있는 작가들의 손끝에서 탄생한 감각적 작품들이 가득한 공간으로 작품 하나하나가 주는 특별한 감동과 환경을 생각하는 리움스토어를 느껴보실 수 있습니다.</p>
-                                <div class="leeumstore-detail-flexbox">
-                                    <div class="leeumstore-detail">
-                                        <div class="detail1">
-                                            <img src="../../image/icon_call.svg" alt="call">
-                                            <a href="tel:02-2014-6754">02-2014-6754</a>
-                                        </div>
-                                        <div class="detail2">
-                                            <a href="https://leeumstore.org/" class="shortcut" target="_blank">리움 스토어 홈페이지<img src="../../image/icon_shortcut.svg" alt="icon_shortcut"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Champcoffee">
-                            <div class="facility-detail">
-                                <img src="./image/facility_champcoffee.png" alt="leeumstore">
-                                <p><span>B1 </span><span>챔프 커피 (Champ Coffee)</span></p>
-                                <p>각자의 길을 걷던 삼형제가 향기로운 커피에 반해 오늘까지 함께 조금씩 쌓아온 챔프커피 입니다. 한 땀 한 땀 정성스런 손길, 한 방울 한 방울 흘린 땀의 결실, 시간과 세상을 거스르는 공간 새로운 리움에서 수많은 거장의 작품들과 함께할 작은 여운을 나누고자 합니다.</p>
-                                <div class="Champcoffee-detail-flexbox">
-                                    <div class="Champcoffee-detail">
-                                        <div class="detail1">
-                                            <img src="../../image/icon_call.svg" alt="call">
-                                            <a href="tel:02-2014-6757">02-2014-6757</a>
-                                        </div>
-                                        <div class="detail2">
-                                            <a href="http://champcoffee.kr/" class="shortcut" target="_blank">챔프 커피 홈페이지<img src="../../image/icon_shortcut.svg" alt="icon_shortcut"></a>
+                        <div class="facility-box-wrap">
+                            <div class="facility-box">
+                                <div class="facility-detail">
+                                    <img src="./image/facility_leeumstore.png" alt="리움 스토어">
+                                    <p><span>B1 </span><span>리움 스토어 (Leeum Store)</span></p>
+                                    <p>독립적이면서도 조화롭고 실용적이면서 예술적인 작품들이 어우러져 하나의 빛을 내고 있는 새로운 공간 리움스토어입니다. 국내외에서 활약하고 있는 작가들의 손끝에서 탄생한 감각적 작품들이 가득한 공간으로 작품 하나하나가 주는 특별한 감동과 환경을 생각하는 리움스토어를 느껴보실 수 있습니다.</p>
+                                    <div class="facility-detail-more-wrap">
+                                        <div class="facility-detail-more">
+                                            <div class="detail1">
+                                                <img src="../../image/icon_call.svg" alt="call">
+                                                <a href="tel:02-2014-6754">02-2014-6754</a>
+                                            </div>
+                                            <div class="detail2">
+                                                <a href="https://leeumstore.org/" class="shortcut" target="_blank">리움 스토어 홈페이지<img src="../../image/icon_shortcut.svg" alt="icon_shortcut"></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="Locker">
-                            <img src="./image/facility_locker.png" alt="locker">
-                            <p><span>B1 </span><span>개인물품보관함 (Locker)</span></p>
-                            <p>자율적으로 개인물품을 보관할 수 있으며 귀중품이나 파손 위험이 있는 물품을 안전하게 보관하실 수 있습니다.</p>
-                            <p>
-                                <span class="type">A TYPE</span>: W 325 * D 380 * H 485<br>
-                                <span class="type">B TYPE</span>: W 384 * D 580 * H 475<br>
-                                <span class="type">C TYPE</span>: W 384 * D 580 * H 960
-                            </p>
-                        </div>
-                        <div class="ticketing-machine">
-                            <img src="./image/facility_ticketing-machine.png" alt="ticketing-machine">
-                            <p><span>B1 </span><span>무인발권기</span></p>
-                            <p>현장에서 모바일 QR티켓을 발권할 수 있는 무인발권기 세 대가 로비에 마련되어 있습니다. 비대면 결제를 통해 좀 더 빠르고 편리하게 미술관 관람을 할 수 있습니다.</p>        
-                        </div>
-                        <div class="parking">
-                            <img src="./image/facility_parking.png" alt="parking">
-                            <p><span>B1-B3 </span><span>주차(Parking)</span></p>
-                            <p>미술관 이용 시 주차 가능한 공간이 들어오는 곳과 지하 3층에 마련 되었습니다. <br>(지하 3층에는 전기차 급속 충전기 세 대 설치)</p>
-                            <p><span>운영시간: 10:00 - 18:00</span> (미술관 운영시간 기준)</p>
-                            <p>※ 주차공간이 협소하므로 대중교통 이용을 권장합니다.</p>
-                            <div class="parking-detail">
-                                <a href="./about_map.html">리움 미술관 오시는길<img src="../../image/icon_shortcut.svg" class="shortcut" alt="icon_shortcut"></a>
-                            </div>    
-                        </div>
-                        <div class="others">
-                            <img src="./image/facility_others.png" alt="others">
-                            <p><span>1F-4F </span><span>기타 시설 (Other Facilities)</span></p>
-                            <p>영아와 함께 휴식이 필요한 분들을 위해 소파, 아기침대, 수유쿠션 등이 비치된 수유실이 로비층에 마련되어있으며 안내데스크에서 안내 받으실 수 있습니다. 또한 유모차 및 휠체어 무료 대여를 희망하시는 분은 매표소에서 안내 받을 수 있습니다.</p>        
+                            <div class="facility-box">
+                                <div class="facility-detail">
+                                    <img src="./image/facility_champcoffee.png" alt="챔프 커피">
+                                    <p><span>B1 </span><span>챔프 커피 (Champ Coffee)</span></p>
+                                    <p>각자의 길을 걷던 삼형제가 향기로운 커피에 반해 오늘까지 함께 조금씩 쌓아온 챔프커피 입니다. 한 땀 한 땀 정성스런 손길, 한 방울 한 방울 흘린 땀의 결실, 시간과 세상을 거스르는 공간 새로운 리움에서 수많은 거장의 작품들과 함께할 작은 여운을 나누고자 합니다.</p>
+                                    <div class="facility-detail-more-wrap">
+                                        <div class="facility-detail-more">
+                                            <div class="detail1">
+                                                <img src="../../image/icon_call.svg" alt="call">
+                                                <a href="tel:02-2014-6757">02-2014-6757</a>
+                                            </div>
+                                            <div class="detail2">
+                                                <a href="http://champcoffee.kr/" class="shortcut" target="_blank">챔프 커피 홈페이지<img src="../../image/icon_shortcut.svg" alt="icon_shortcut"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="facility-box">
+                                <div class="facility-detail">
+                                    <img src="./image/facility_locker.png" alt="locker">
+                                    <p><span>B1 </span><span>개인물품보관함 (Locker)</span></p>
+                                    <p>자율적으로 개인물품을 보관할 수 있으며 귀중품이나 파손 위험이 있는 물품을 안전하게 보관하실 수 있습니다.</p>
+                                    <p class="locker">
+                                        <span class="type">A TYPE</span>W 325 * D 380 * H 485<br>
+                                        <span class="type">B TYPE</span>W 384 * D 580 * H 475<br>
+                                        <span class="type">C TYPE</span>W 384 * D 580 * H 960
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="facility-box">
+                                <div class="facility-detail">
+                                    <img src="./image/facility_ticketing-machine.png" alt="ticketing-machine">
+                                    <p><span>B1 </span><span>무인발권기</span></p>
+                                    <p>현장에서 모바일 QR티켓을 발권할 수 있는 무인발권기 세 대가 로비에 마련되어 있습니다. 비대면 결제를 통해 좀 더 빠르고 편리하게 미술관 관람을 할 수 있습니다.</p>
+                                </div>
+                            </div>
+                            <div class="facility-box">
+                                <div class="facility-detail">
+                                    <img src="./image/facility_parking.png" alt="parking">
+                                    <p><span>B1-B3 </span><span>주차(Parking)</span></p>
+                                    <p>미술관 이용 시 주차 가능한 공간이 들어오는 곳과 지하 3층에 마련 되었습니다. <br>(지하 3층에는 전기차 급속 충전기 세 대 설치)</p>
+                                    <p class="time"><b>운영시간 : 10:00 - 18:00</b><span>(미술관 운영시간 기준)</span></p>
+                                    <p class="notice">※ 주차공간이 협소하므로 대중교통 이용을 권장합니다.</p>
+                                </div>
+                            </div>
+                            <div class="facility-box">
+                                <div class="facility-detail">
+                                    <img src="./image/facility_others.png" alt="others">
+                                    <p><span>1F-4F </span><span>기타 시설 (Other Facilities)</span></p>
+                                    <p>영아와 함께 휴식이 필요한 분들을 위해 소파, 아기침대, 수유쿠션 등이 비치된 수유실이 로비층에 마련되어있으며 안내데스크에서 안내 받으실 수 있습니다. 또한 유모차 및 휠체어 무료 대여를 희망하시는 분은 매표소에서 안내 받을 수 있습니다.</p>  
+                                </div>
+                            </div>
                         </div>
                     </div>    
                     <div id="renewal" class="con-box">

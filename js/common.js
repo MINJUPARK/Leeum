@@ -22,18 +22,17 @@ $(function() {
 
 
     // 모바일 메뉴
-    $('.mobile-menu-popup').hide();
     $('.mobile-menu').on('click', function() {
         const sc_width = window.innerWidth - $(window).width();
 
         $(this).hide();
-        $('.mobile-menu-popup').show();
+        $('.mobile-menu-popup').removeClass('hidden');
         $('.window .close').css({ "right" : 20 + sc_width + "px" });
         $('body').css({ "overflow" : "hidden" });
     });
     $('.window .close').on('click', function() {
-        $('.mobile-menu-popup').hide();
-        $('.mobile-menu').show();
+        $('.mobile-menu-popup').addClass("hidden");
+        $('.mobile-menu').css("display", "block");
         $('body').css({ "overflow" : "visible" });
     });
     $('.wh-menu .group').on('click', function() {

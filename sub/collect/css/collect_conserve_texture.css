@@ -659,7 +659,6 @@ header .breadcrumb-wrap {
 
 main {
   overflow: hidden;
-  word-break: keep-all;
 }
 @media screen and (min-width: 1440px) {
   main {
@@ -713,6 +712,7 @@ main .texture-intro-wrap .texture-intro .intro-img {
     width: auto;
     margin: 0;
     height: 450px;
+    border-radius: 5px;
   }
 }
 main .texture-intro-wrap .texture-intro .intro-flex {
@@ -742,6 +742,7 @@ main .texture-intro-wrap .texture-intro .intro-flex .into-txt p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   margin-top: 35px;
 }
 @media screen and (min-width: 1440px) {
@@ -875,6 +876,7 @@ main .damage-type-wrap .damage-type .type-box ul.type-txt li {
   text-align: center;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   display: none;
 }
 main .damage-type-wrap .damage-type .type-box ul.type-txt li.view {
@@ -971,6 +973,7 @@ main .conservation-method-wrap .conservation-method ul.method-list li p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   margin-top: 28px;
 }
 @media screen and (min-width: 1440px) {
@@ -994,10 +997,13 @@ main .conservation-method-wrap .conservation-method ul.method-list li .method-im
   main .conservation-method-wrap .conservation-method ul.method-list li .method-img {
     width: 1160px;
     margin-top: 50px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
 }
 main .conservation-method-wrap .conservation-method ul.method-list li .method-img img {
   width: 270px;
+  border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
   main .conservation-method-wrap .conservation-method ul.method-list li .method-img img {
@@ -1006,7 +1012,8 @@ main .conservation-method-wrap .conservation-method ul.method-list li .method-im
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list li .method-img img {
-    width: 560px;
+    width: 100% !important;
+    margin-right: 0 !important;
   }
 }
 main section.movePage {

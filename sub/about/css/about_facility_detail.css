@@ -717,13 +717,15 @@ main .container .info {
   }
 }
 main .container .info table {
-  padding: 20px 30px;
   position: relative;
   left: 50%;
   right: 50%;
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
+  width: 100% !important;
+  padding: 20px 30px;
+  text-align: left;
 }
 @media screen and (min-width: 1440px) {
   main .container .info table {
@@ -734,28 +736,9 @@ main .container .info table {
     margin: 0;
   }
 }
-main .container .info table .des td:first-child {
-  font-size: 16px;
-  font-weight: 600;
-  padding: 12px 0;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info table .des td:first-child {
-    font-size: 17px;
-    font-weight: 600;
-  }
-}
-main .container .info table .des td:last-child {
-  padding-left: 23px;
-  font-size: 16px;
-  font-weight: 400;
+main .container .info table .des td {
+  padding: 8px 0;
   color: #3c3c3c;
-}
-@media screen and (min-width: 1440px) {
-  main .container .info table .des td:last-child {
-    font-size: 17px;
-    font-weight: 400;
-  }
 }
 @media screen and (min-width: 1440px) {
   main .container .symbol {
@@ -779,6 +762,7 @@ main .container .symbol p {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   text-align: justify;
 }
 @media screen and (min-width: 1440px) {
@@ -819,6 +803,7 @@ main .container .detail .material img {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
+  border-radius: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .material img {
@@ -834,7 +819,7 @@ main .container .detail .material img {
   }
 }
 main .container .detail .material .material-detail h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   margin-top: 25px;
 }
@@ -846,13 +831,15 @@ main .container .detail .material .material-detail h4 {
   }
 }
 main .container .detail .material .material-detail p {
-  text-align: left;
+  text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 main .container .detail .material .material-detail p:first-of-type {
-  margin-top: 15px;
-  margin-bottom: 40px;
+  color: #ac3f21;
+  margin-top: 8px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -872,7 +859,6 @@ main .container .detail .material .material-detail p:last-of-type {
   main .container .detail .material .material-detail p:last-of-type {
     font-size: 18px;
     font-weight: 400;
-    text-align: justify;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -882,7 +868,7 @@ main .container .detail .material .material-detail p:last-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .lobby {
-    margin-top: 300px;
+    margin-top: 400px;
   }
 }
 main .container .detail .lobby img {
@@ -892,6 +878,7 @@ main .container .detail .lobby img {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
+  border-radius: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .lobby img {
@@ -907,7 +894,7 @@ main .container .detail .lobby img {
   }
 }
 main .container .detail .lobby .lobby-detail h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   margin-top: 25px;
 }
@@ -919,13 +906,15 @@ main .container .detail .lobby .lobby-detail h4 {
   }
 }
 main .container .detail .lobby .lobby-detail p {
-  text-align: left;
+  text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 main .container .detail .lobby .lobby-detail p:first-of-type {
-  margin-top: 15px;
-  margin-bottom: 40px;
+  color: #ac3f21;
+  margin-top: 8px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -955,7 +944,7 @@ main .container .detail .lobby .lobby-detail p:last-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .rotunda {
-    margin-top: 300px;
+    margin-top: 400px;
   }
 }
 main .container .detail .rotunda img {
@@ -965,6 +954,7 @@ main .container .detail .rotunda img {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
+  border-radius: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .rotunda img {
@@ -980,7 +970,7 @@ main .container .detail .rotunda img {
   }
 }
 main .container .detail .rotunda .rotunda-detail h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   margin-top: 25px;
 }
@@ -992,13 +982,15 @@ main .container .detail .rotunda .rotunda-detail h4 {
   }
 }
 main .container .detail .rotunda .rotunda-detail p {
-  text-align: left;
+  text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 main .container .detail .rotunda .rotunda-detail p:first-of-type {
-  margin-top: 15px;
-  margin-bottom: 40px;
+  color: #ac3f21;
+  margin-top: 8px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -1018,7 +1010,6 @@ main .container .detail .rotunda .rotunda-detail p:last-of-type {
   main .container .detail .rotunda .rotunda-detail p:last-of-type {
     font-size: 18px;
     font-weight: 400;
-    text-align: justify;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1028,7 +1019,7 @@ main .container .detail .rotunda .rotunda-detail p:last-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .display-area {
-    margin-top: 270px;
+    margin-top: 400px;
   }
 }
 main .container .detail .display-area img {
@@ -1038,6 +1029,7 @@ main .container .detail .display-area img {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
+  border-radius: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .container .detail .display-area img {
@@ -1053,7 +1045,7 @@ main .container .detail .display-area img {
   }
 }
 main .container .detail .display-area .display-area-detail h4 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   margin-top: 25px;
 }
@@ -1065,13 +1057,15 @@ main .container .detail .display-area .display-area-detail h4 {
   }
 }
 main .container .detail .display-area .display-area-detail p {
-  text-align: left;
+  text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
 }
 main .container .detail .display-area .display-area-detail p:first-of-type {
-  margin-top: 15px;
-  margin-bottom: 40px;
+  color: #ac3f21;
+  margin-top: 10px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -1091,7 +1085,6 @@ main .container .detail .display-area .display-area-detail p:last-of-type {
   main .container .detail .display-area .display-area-detail p:last-of-type {
     font-size: 18px;
     font-weight: 400;
-    text-align: justify;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1101,7 +1094,7 @@ main .container .detail .display-area .display-area-detail p:last-of-type {
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info {
-    margin-top: 280px;
+    margin-top: 450px;
   }
 }
 main .container .constructor-info h4 {
@@ -1123,6 +1116,7 @@ main .container .constructor-info iframe {
   margin-left: -50vw;
   margin-right: -50vw;
   height: calc(200px + 6vh);
+  border-radius: 5px;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info iframe {
@@ -1184,60 +1178,39 @@ main .container .constructor-info .detail {
     width: 460px;
     float: left;
     margin-top: 30px;
-    margin-bottom: 160px;
+    margin-bottom: 300px;
     margin-right: 20px;
   }
 }
 main .container .constructor-info .detail table {
-  padding: 10px 30px 20px 30px;
+  width: 100%;
+  padding: 20px 30px;
+  text-align: left;
 }
-@media screen and (min-width: 1440px) {
-  main .container .constructor-info .detail table {
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 10px;
-  }
-}
-main .container .constructor-info .detail table .detail-des td {
+main .container .constructor-info .detail table .detail-des th {
   vertical-align: top;
 }
-main .container .constructor-info .detail table .detail-des td:first-of-type {
-  font-size: 16px;
-  font-weight: 600;
-  padding: 24px 60px 0 30px;
+main .container .constructor-info .detail table .detail-des td {
+  padding-bottom: 15px;
+  color: #3c3c3c;
 }
-@media screen and (min-width: 1440px) {
-  main .container .constructor-info .detail table .detail-des td:first-of-type {
-    font-size: 16px;
-    font-weight: 600;
-    padding-top: 25px;
-  }
+main .container .constructor-info .detail table .detail-des td li {
+  padding-bottom: 10px;
+  color: #3c3c3c;
 }
-main .container .constructor-info .detail table .detail-des td:last-of-type {
-  font-size: 16px;
-  font-weight: 400;
-  padding-top: 24px;
-  color: #5b5b5b;
+main .container .constructor-info .detail table .detail-des td li:last-child {
+  padding-bottom: 0;
 }
-@media screen and (min-width: 1440px) {
-  main .container .constructor-info .detail table .detail-des td:last-of-type {
-    font-size: 16px;
-    font-weight: 400;
-    padding-top: 24px;
-  }
+main .container .constructor-info .detail table .detail-des:last-child td {
+  padding-bottom: 0;
 }
-main .container .constructor-info .detail table .detail-des td:last-of-type .ex {
-  line-height: 24px;
-  margin-top: -4px;
-}
-@media screen and (min-width: 1440px) {
-  main .container .constructor-info .detail table .detail-des td:last-of-type .ex {
-    line-height: 28px;
-  }
+main .container .constructor-info .simple {
+  margin-top: 60px;
 }
 main .container .constructor-info .simple p {
-  text-align: left;
-  line-height: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 45px;
   color: #000;
   font-family: "KoPub Batang";
   font-size: 26px;
@@ -1245,11 +1218,8 @@ main .container .constructor-info .simple p {
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .simple p {
-    font-family: "KoPub Batang";
-    font-size: 35px;
-    font-weight: 400;
-    line-height: 30px;
-    margin-bottom: -10px;
+    text-align: left;
+    font-size: 36px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1274,23 +1244,21 @@ main .container .constructor-info .simple p {
   }
 }
 main .container .constructor-info .constructor-detail .detail-left p {
-  text-align: left;
-  line-height: 2em;
-  color: #3c3c3c;
   font-size: 16px;
   font-weight: 400;
+  text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
+  word-break: normal;
 }
 main .container .constructor-info .constructor-detail .detail-left p:first-of-type {
-  text-align: justify;
+  text-align: center;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:first-of-type {
+    text-align: left;
     font-size: 18px;
-    font-weight: 400;
   }
-}
-main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) {
-  text-align: justify;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) {
@@ -1299,16 +1267,16 @@ main .container .constructor-info .constructor-detail .detail-left p:nth-of-type
   }
 }
 main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) span {
+  display: inline-block;
+  font-family: "KoPub Batang";
+  font-size: 18px;
+  font-weight: 700;
   color: #ac3f21;
-  font-size: 16px;
-  font-weight: 600;
-  display: inline;
 }
 @media screen and (min-width: 1440px) {
   main .container .constructor-info .constructor-detail .detail-left p:nth-of-type(2) span {
     display: block;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 22px;
   }
 }
 main .container .constructor-info .constructor-detail .detail-left p:last-of-type {
@@ -1330,6 +1298,7 @@ main .container .constructor-info .constructor-detail .detail-right p {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   font-size: 16px;
   font-weight: 400;
   text-align: justify;
@@ -1339,6 +1308,9 @@ main .container .constructor-info .constructor-detail .detail-right p {
     font-size: 18px;
     font-weight: 400;
   }
+}
+main .container .constructor-info .faq {
+  margin-bottom: 100px;
 }
 main .container .constructor-info .faq h4 {
   font-size: 20px;

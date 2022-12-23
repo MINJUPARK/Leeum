@@ -672,8 +672,34 @@ main h4 {
   }
 }
 main .pp {
+  position: relative;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+main .limit-text {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: #ac3f21;
+  zoom: 1.2;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  main .limit-text {
+    zoom: 1.2;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .limit-text {
+    top: 20px;
+    left: 20px;
+    zoom: 1.4;
+  }
 }
 main .img-text {
   position: relative;
@@ -702,30 +728,10 @@ main .img-text img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.3s;
 }
-main .img-text .limit-text {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  padding: 6px 12px;
-  border-radius: 5px;
-  font-size: 12px;
-  font-weight: 500;
-  color: #fff;
-  background: #ac3f21;
-  zoom: 1.2;
-}
-@media screen and (min-width: 768px) {
-  main .img-text .limit-text {
-    zoom: 1.2;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main .img-text .limit-text {
-    top: 20px;
-    left: 20px;
-    zoom: 1.4;
-  }
+main .img-text img:hover {
+  transform: scale(1.3);
 }
 main .text-explain {
   padding: 0 20px 40px 20px;
@@ -785,6 +791,7 @@ main .text-explain .explain-text p {
   text-align: justify;
   line-height: 2em;
   color: #3c3c3c;
+  word-break: normal;
   color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
@@ -841,6 +848,7 @@ main .list-control .sort {
   position: absolute;
   right: 0;
   font-size: 15px;
+  cursor: default;
 }
 main .list-control .sort img {
   height: 14px;
@@ -873,6 +881,7 @@ main .list-control .view-type .sort-list li {
   font-size: 14px;
   padding-left: 15px;
   color: #3c3c3c;
+  cursor: pointer;
 }
 main .list-control .view-type .sort-list li:hover {
   text-decoration: underline;
@@ -924,10 +933,15 @@ main .img-explain-date-register .image-text {
   flex: 1;
   width: 100%;
   position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 main .img-explain-date-register .image-text img {
   width: 100%;
-  border-radius: 5px;
+  transition: 0.3s;
+}
+main .img-explain-date-register .image-text img:hover {
+  transform: scale(1.3);
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .image-text img {
@@ -1023,6 +1037,7 @@ main .img-explain-date-register .explain-date-register .explain p:last-child {
   text-align: justify;
   line-height: 1.8em;
   color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main .img-explain-date-register .explain-date-register .explain p:last-child {
