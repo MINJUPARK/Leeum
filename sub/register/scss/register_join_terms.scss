@@ -8,7 +8,8 @@
         padding: 0;
         .select{
             margin: 0 auto;
-
+    
+    
             .image-info {
                 position: relative;
                 display: flex;
@@ -18,16 +19,16 @@
                     position: relative;
                     margin: 20px 20px 0 20px;
                 }
-
+    
                 img {
                     width: 40px;
                     margin-right: 16px;
-
+    
                     @include responsive(pc-screens) {
                         width: 60px;
                     }
                 }
-
+    
                 .text {
                     p {
                         @include gothic-font(medium, 12px);
@@ -45,19 +46,19 @@
                         }
                     }
                 }
-
+    
                     
             }
             ul.select {
                 position: absolute;
                 @include flex_between();
-                width: 89.74358974358974%;
+                width: 100%;
                 top: 0;
-                margin-left: 20px;
-
+                padding: 0 20px;
+    
                 @include responsive(pc-screens) {
-                    width: 42.85714285714286%;
-                    right: 20px;
+                    width: 53%;
+                    right: 0;
                 }
                 
                 li {
@@ -65,19 +66,19 @@
                     height: 45px;
                     border: 1px solid $bk4;
                     margin-top: 70px;
-
+    
                     @include responsive(pc-screens) {
                         margin-top: 0;
                     }
-
+    
                     &:first-child {
-                        width: 25.71428571428571%;
+                        width: 33.33333333333333%;
                         border-top-left-radius: 5px;
                         border-bottom-left-radius: 5px;
                     }
-
+    
                     &:nth-child(2) {
-                        width: 48.57142857142857%;
+                        width: 33.33333333333333%;
                         &.on {
                             background-color: $bk1;
                             color: white;
@@ -85,21 +86,21 @@
                     }
                     
                     &:last-child {
-                        width: 25.71428571428571%;
+                        width: 33.33333333333333%;
                         border-top-right-radius: 5px;
                         border-bottom-right-radius: 5px;
                     }
-
+    
                     @include responsive(tablet-screens) {
                         height: 55px;
                     }
-
+    
                     span {
                         @include element_center();
                         width: 100%;
-                        @include gothic-font(medium, 14px);
+                        @include gothic-font(medium, 12px);
                         text-align: center;
-
+    
                         @include responsive(pc-screens) {
                             font-size: 20px;
                         }
@@ -108,8 +109,10 @@
                     
                 }
             } 
-
+    
         }
+    
+
         /* .image {
             display: flex;
             margin: 0 20px 15px 20px;
@@ -149,7 +152,7 @@
                 text-align: center;
                 margin-bottom: 20px;
                 margin-top: 100px;
-
+                
                 @include responsive(pc-screens) {
                     font-size: 28px;
                     margin-bottom: 40px;
@@ -283,6 +286,11 @@
                                     padding: 20px;
                                     text-align: justify;
                                     white-space: pre-line;
+                                    font-size: 14px;
+
+                                    @include responsive(pc-screens) {
+                                        font-size: 20px;
+                                    }
                                 }
 
                             }
@@ -339,6 +347,11 @@
                                     padding: 20px;
                                     justify-content: space-between;
                                     white-space: pre-line;
+                                    font-size: 14px;
+
+                                    @include responsive(pc-screens) {
+                                        font-size: 20px;
+                                    }
                                 }
                             }
                         }
