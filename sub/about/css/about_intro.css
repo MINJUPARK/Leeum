@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
@@ -26,10 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
@@ -242,7 +236,7 @@ h6 {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/intro_header.png);
+  background-image: url(../image/intro_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -285,7 +279,7 @@ h6 {
   }
 }
 .slide-in header .logo-menu-wrap .logo-menu .logo a {
-  background: url(../../../image/logo_leeum_horizon.svg);
+  background-image: url(../../../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -395,20 +389,20 @@ h6 {
     height: 24px;
   }
   .slide-in header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.login {
-    background: url(../../../image/icon_user.svg);
+    background-image: url(../../../image/icon_user.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   .slide-in header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.reserve {
-    background: url(../../../image/icon_reserve.svg);
+    background-image: url(../../../image/icon_reserve.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 32px;
   }
   .slide-in header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.search {
-    background: url(../../../image/icon_search.svg);
+    background-image: url(../../../image/icon_search.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -628,9 +622,6 @@ h6 {
 .slide-in header #close a.end {
   transform: rotate(360deg);
 }
-.slide-in main {
-  word-break: keep-all;
-}
 @media screen and (min-width: 768px) {
   .slide-in main {
     font-size: 20px;
@@ -823,7 +814,7 @@ h6 {
 .slide-in main section.core-value-wrap {
   position: relative;
   margin-top: 28.5714285714%;
-  background: url(../image/intro_value.png);
+  background-image: url(../image/intro_value.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -951,12 +942,12 @@ h6 {
 .slide-in main section.core-value-wrap .core-value .val-text p {
   margin-top: 40px;
   line-height: 2em;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 200;
 }
 @media screen and (min-width: 1440px) {
   .slide-in main section.core-value-wrap .core-value .val-text p {
-    line-height: 44px;
+    font-size: 18px;
   }
 }
 .slide-in main section.mi-wrap {
@@ -976,8 +967,6 @@ h6 {
   line-height: 2em;
   color: #3c3c3c;
   word-break: normal;
-  font-size: 16px;
-  font-weight: 500;
 }
 @media screen and (min-width: 1440px) {
   .slide-in main section.mi-wrap .mi p br {
@@ -995,7 +984,6 @@ h6 {
 @media screen and (min-width: 768px) {
   .slide-in main section.mi-wrap .mi p {
     font-size: 18px;
-    line-height: 36px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1010,7 +998,7 @@ h6 {
   height: 100%;
   border: 1px solid #d4d4d4;
   border-radius: 5px;
-  background: url(../image/MI_grid.png);
+  background-image: url(../image/MI_grid.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1116,4 +1104,4 @@ h6 {
   .slide-in main section.mi-wrap .mi .mi-type > .row-type .row-view .mi-grid > img {
     width: 562px;
   }
-}/*# sourceMappingURL=about_intro.css.map */
+}

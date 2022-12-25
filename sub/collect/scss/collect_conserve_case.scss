@@ -256,7 +256,7 @@ main {
                         text-align: justify;
                         
                         &:last-child {
-                            margin-top: 45px;
+                            margin-top: 30px;
                         }
                     }
                 }
@@ -472,7 +472,7 @@ main {
                 
                 .arrow {
                     display: block;
-                    width: 27px;
+                    width: 30px;
                     margin: 37px auto;
                     filter: $svg-redbrown;
                     opacity: 0;
@@ -481,11 +481,11 @@ main {
                     transition: opacity 1.5s .8s, transform 1.5s .8s;
 
                     @include responsive(tablet-screens) {
-                        width: 34px;
+                        width: 35px;
                     }
 
                     @include responsive(pc-screens) {
-                        width: 51px;
+                        width: 40px;
                         margin-top: 80px;
                         margin-bottom: 80px;
                     }

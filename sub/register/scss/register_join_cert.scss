@@ -2,154 +2,9 @@
 @import '../../../scss/style.scss';
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
-// @import './register.scss';
+@import './register.scss';
 
 .container {
-    padding: 0;
-
-    .select{
-        margin: 0 auto;
-
-
-        .image-info {
-            position: relative;
-            display: flex;
-            margin: 20px;
-            
-            @include responsive(pc-screens) {
-                position: relative;
-                margin: 20px 20px 0 20px;
-            }
-
-            img {
-                width: 40px;
-                margin-right: 16px;
-
-                @include responsive(pc-screens) {
-                    width: 60px;
-                }
-            }
-
-            .text {
-                p {
-                    @include gothic-font(medium, 12px);
-    
-                    @include responsive(pc-screens) {
-                        font-size: 22px;
-                    }
-                }
-    
-                strong {
-                    font-size: 24px;
-    
-                    @include responsive(pc-screens) {
-                        font-size: 32px;
-                    }
-                }
-            }
-
-                
-        }
-        ul.select {
-            position: absolute;
-            @include flex_between();
-            width: 100%;
-            top: 0;
-            padding: 0 20px;
-
-            @include responsive(pc-screens) {
-                width: 53%;
-                right: 0;
-            }
-            
-            li {
-                position: relative;
-                height: 45px;
-                border: 1px solid $bk4;
-                margin-top: 70px;
-
-                @include responsive(pc-screens) {
-                    margin-top: 0;
-                }
-
-                &:first-child {
-                    width: 33.33333333333333%;
-                    border-top-left-radius: 5px;
-                    border-bottom-left-radius: 5px;
-                }
-
-                &:nth-child(2) {
-                    width: 33.33333333333333%;
-                    &.on {
-                        background-color: $bk1;
-                        color: white;
-                    }
-                }
-                
-                &:last-child {
-                    width: 33.33333333333333%;
-                    border-top-right-radius: 5px;
-                    border-bottom-right-radius: 5px;
-                }
-
-                @include responsive(tablet-screens) {
-                    height: 55px;
-                }
-
-                span {
-                    @include element_center();
-                    width: 100%;
-                    @include gothic-font(medium, 12px);
-                    text-align: center;
-
-                    @include responsive(pc-screens) {
-                        font-size: 20px;
-                    }
-                }
-                
-                
-            }
-        } 
-
-    }
-
-   /*  div.logo {
-        .image {
-            display: flex;
-            margin: 20px 20px 15px 20px;
-
-            @include responsive(pc-screens) {
-                margin-bottom: 0;
-            }
-
-            img {
-                width: 36px;
-                margin-right: 16px;
-
-                @include responsive(pc-screens) {
-                    width: 70px;
-                }
-            }
-            p {
-                @include gothic-font(medium, 12px);
-
-                @include responsive(pc-screens) {
-                    font-size: 22px;
-                }
-            }
-<<<<<<< HEAD
-
-            strong {
-                font-size: 24px;
-
-
-                @include responsive(pc-screens) {
-                    font-size: 46px;
-                }
-            }
-        }
-<<<<<<< HEAD
-    } */
 
     div.join-info {
         p {
@@ -164,9 +19,13 @@
             }
         }
         form {
-
+            @include out_container();
             border-top: 2px solid #000;
             border-bottom: 2px solid #000;
+
+            @include responsive(pc-screens) {
+                @include in_container();
+            }
 
             label {
                 @include responsive(pc-screens) {
@@ -182,7 +41,6 @@
                     label {
                         width: 19.71428571428571%;
                         @include gothic-font(semibold, 13px);
-                        /* margin-left: 20px; */
         
                         @include responsive(pc-screens) {
                             width: 14.28571428571429%;
@@ -281,28 +139,29 @@
             }
         }  
     }
-
-    div.movePage {
-        @include move_page();
-        margin-left: 20px;
-        margin-right: 20px;
-        
-        .submit {
-            text-align: center;
-            input{
-                padding: 10px 15px;
-                border: 0;
-                color: white;
-                background-color: $dark-brown;
-                @include gothic-font(semibold, 12px);
-        
-                @include responsive(pc-screens) {
-                    font-size: 16px;
-                    padding: 10px 22px;
-                }
+    .submit {
+        text-align: center;
+        input{
+            padding: 10px 15px;
+            border: 0;
+            color: white;
+            background-color: $dark-brown;
+            @include gothic-font(semibold, 12px);
+    
+            @include responsive(pc-screens) {
+                font-size: 16px;
+                padding: 10px 22px;
             }
         }
     }
+
+    // div.movePage {
+    //     @include move_page();
+    //     margin-left: 20px;
+    //     margin-right: 20px;
+        
+        
+    // }
 
     
     div.all {
@@ -344,7 +203,6 @@
                         label {
                             width: 19.71428571428571%;
                             @include gothic-font(semibold, 13px);
-                            /* margin-left: 20px; */
             
                             @include responsive(pc-screens) {
                                 width: 14.28571428571429%;
@@ -449,7 +307,6 @@
         text-align: center;
 
         input{
-            // position: absolute;
             margin-top: 40px;
             border: 0;
             background-color: $dark-brown;
@@ -462,14 +319,13 @@
         }
     }
 
-    div.movePage {
-        // padding: 0 20px;
+    // div.movePage {
         
-        @include move_page();
+    //     @include move_page();
 
-        @include responsive(pc-screens){
-            font-size: 18px;
-            // margin-top: 0;
-        }
-    }
+    //     @include responsive(pc-screens){
+    //         font-size: 18px;
+    //         // margin-top: 0;
+    //     }
+    // }
 }

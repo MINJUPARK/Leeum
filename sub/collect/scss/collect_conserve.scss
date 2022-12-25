@@ -47,11 +47,10 @@ main {
 
             strong {
                 @include batang_font(medium, 28px);
-                line-height: 40px;
+                line-height: 1.5em;
                 
                 @include responsive(pc-screens) {
                     font-size: 46px;
-                    line-height: 75px;
                 }
             }
 
@@ -207,11 +206,10 @@ main {
                             left: 50%; bottom: 25px;
                             transform: translateX(-50%);
                             z-index: 2;
-
                             transition: all .3s;
                             
                             @include responsive(pc-screens) {
-                                font-size: 22px;
+                                font-size: 20px;
                                 bottom: 30px;
                             }
                         }
@@ -231,7 +229,7 @@ main {
                             a {
 
                                 h4 {
-                                    @include gothic_font(medium, 24px);
+                                    @include gothic_font(medium, 22px);
                                     bottom: 50px;
                                 }
 
@@ -375,7 +373,7 @@ main {
                         }
                         
                         span {
-                            margin-top: 5px;
+                            margin-top: 10px;
                             color: $bk2;
                             font-size: calc(1em - 2px);
 

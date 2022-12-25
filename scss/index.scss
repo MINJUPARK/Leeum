@@ -5,6 +5,7 @@
 @import './mixin_header.scss'; 
 @import './mixin_footer.scss';
 
+
 .animate__duration-5ms {
   --animate-duration: 500ms !important;
   -webkit-animation-duration: 500ms;
@@ -397,6 +398,8 @@ main {
   }
 
   section {
+    // overflow: hidden;
+
     &:not(:first-child) {
       margin-top: 75px;
     }
@@ -563,6 +566,7 @@ main {
   }
 
   section.exhibition {
+    
     margin-top: 85px;
     
     @include responsive(pc-screens) {
@@ -602,10 +606,11 @@ main {
     }
 
     .slick-initialized .swipe-tab {
-      @include flex_between_center();
+      display: flex;
       justify-content: center;
+      align-items: center;
       height: 40px; line-height: 40px;
-      padding: 20px 0;
+      padding: 25px 0;
       text-align: center;
       color: $bk3;
       border-bottom: 2px solid rgba(0, 0, 0, 0);
@@ -790,9 +795,8 @@ main {
   }
 
   section.collection {
-  
+    
     .art {
-
       @include responsive(pc-screens) {
         @include flex_between();
       }
@@ -820,6 +824,7 @@ main {
           
           .more {
             display: flex;
+            align-items: center;
             flex-direction: row-reverse;
   
             img {
@@ -1105,11 +1110,13 @@ main {
   }
 
   section.program {
+    
     @include index_program();
     @include line_break();
   }
 
   section.artist {
+    
     margin-bottom: 150px;
 
     .btn {
@@ -1194,10 +1201,12 @@ main {
         position: absolute;
         top: 0;
         margin: 0 25px;
+        font-weight: 600;
         text-shadow: 0px 0px 1px white;
         z-index: 1;
 
         @include responsive(tablet-screens) {
+          font-size: $h3;
           margin: 0 50px;
         }
 
@@ -1216,7 +1225,7 @@ main {
       .va-content {
         display:none;
         position: absolute;
-        top: 120px; /* 제목 높이 기준 */
+        top: 120px;
         margin: 0 25px;
         z-index: 1;
         
@@ -1259,6 +1268,7 @@ main {
 }
 
 footer {
+  
     @include footer();
     
     .leeum-info-wrap {

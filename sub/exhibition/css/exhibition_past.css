@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
@@ -26,10 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
@@ -191,7 +185,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/exhibition_header.png);
+  background-image: url(../image/exhibition_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -232,7 +226,7 @@ header .logo-menu-wrap .logo-menu {
   }
 }
 header .logo-menu-wrap .logo-menu .logo a {
-  background: url(../../../image/logo_leeum_horizon.svg);
+  background-image: url(../../../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -342,20 +336,20 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     height: 24px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.login {
-    background: url(../../../image/icon_user.svg);
+    background-image: url(../../../image/icon_user.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.reserve {
-    background: url(../../../image/icon_reserve.svg);
+    background-image: url(../../../image/icon_reserve.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 32px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.search {
-    background: url(../../../image/icon_search.svg);
+    background-image: url(../../../image/icon_search.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -607,7 +601,7 @@ header .breadcrumb-wrap {
     border-bottom: 0;
   }
   header .breadcrumb-wrap .breadcrumb .home a {
-    background: url(../../../image/icon_home.svg);
+    background-image: url(../../../image/icon_home.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -719,7 +713,7 @@ main section.search-wrap .search-box .speed-search form[name=keyword] * {
   height: 50px;
 }
 main section.search-wrap .search-box .speed-search form[name=keyword] select {
-  background: url(../../../image/icon_arrow_bk.svg);
+  background-image: url(../../../image/icon_arrow_bk.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -801,6 +795,7 @@ main section.itemList-wrap .itemList .list-control .sort {
   position: absolute;
   right: 0;
   font-size: 15px;
+  cursor: default;
 }
 main section.itemList-wrap .itemList .list-control .sort img {
   height: 14px;
@@ -833,6 +828,7 @@ main section.itemList-wrap .itemList .list-control .view-type .sort-list li {
   font-size: 14px;
   padding-left: 15px;
   color: #3c3c3c;
+  cursor: pointer;
 }
 main section.itemList-wrap .itemList .list-control .view-type .sort-list li:hover {
   text-decoration: underline;
@@ -852,7 +848,7 @@ main section.itemList-wrap .itemList .list-control .view-type select[name=nth-vi
     width: 120px;
     height: 30px;
     padding: 0 10px;
-    background: url(../../../image/icon_arrow_bk.svg);
+    background-image: url(../../../image/icon_arrow_bk.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -873,8 +869,8 @@ main section.itemList-wrap .itemList ul.item-box .item {
   position: relative;
   width: 48%;
   margin-bottom: 20px;
-  border: 1px solid #d4d4d4;
   border-radius: 5px;
+  overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
   main section.itemList-wrap .itemList ul.item-box .item {
@@ -923,10 +919,17 @@ main section.itemList-wrap .itemList ul.item-box .item .i-pic .bg {
      object-fit: cover;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  transition: 0.3s;
+}
+main section.itemList-wrap .itemList ul.item-box .item .i-pic .bg:hover {
+  transform: scale(1.3);
 }
 main section.itemList-wrap .itemList ul.item-box .item .i-des {
   padding: 10px 20px 15px;
   text-overflow: ellipsis;
+  border: 1px solid #d4d4d4;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -1053,6 +1056,9 @@ main section.itemList-wrap .itemList ul.item-box li.item a .i-pic:first-of-type 
 main section.itemList-wrap .itemList ul.item-box li.item a .i-pic img {
   transition: transform 0.3s;
 }
+main section.itemList-wrap .itemList ul.item-box li.item a .i-des {
+  padding: 20px;
+}
 main section.itemList-wrap .itemList ul.item-box li.item a .i-des strong {
   width: 100%;
   white-space: nowrap;
@@ -1067,70 +1073,72 @@ main section.itemList-wrap .itemList ul.item-box li.item a .i-des strong {
   }
 }
 main section.itemList-wrap .itemList ul.item-box li.item a .i-des p {
-  font-size: 15px;
-  line-height: 1.5em;
   margin-top: 10px;
   margin-bottom: 0;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.5em;
+  color: #3c3c3c;
+  word-break: normal;
 }
 @media screen and (min-width: 1440px) {
   main section.itemList-wrap .itemList ul.item-box li.item a .i-des p {
     font-size: 16px;
   }
 }
-
-section.paging {
+main section.paging {
   margin: 30px 0 60px;
 }
-section.paging ul {
+main section.paging ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 30px;
   font-size: 14px;
 }
 @media screen and (min-width: 768px) {
-  section.paging ul {
+  main section.paging ul {
     width: 50%;
     margin: 80px auto 0;
   }
 }
 @media screen and (min-width: 1440px) {
-  section.paging ul {
+  main section.paging ul {
     width: 30%;
   }
 }
-section.paging ul li {
+main section.paging ul li {
   width: 35px;
   height: 35px;
   line-height: 35px;
   margin: 0 5px;
   text-align: center;
 }
-section.paging ul li a {
+main section.paging ul li a {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-section.paging ul li a:hover {
+main section.paging ul li a:hover {
   font-weight: bold;
   background: #f3f3f3;
 }
-section.paging ul li a.on {
+main section.paging ul li a.on {
   color: #fff;
   font-weight: bold;
   background: #3c3c3c;
 }
-section.paging ul li a.prev, section.paging ul li a.next {
-  background: url(../../../image/icon_arrow.svg);
+main section.paging ul li a.prev, main section.paging ul li a.next {
+  background-image: url(../../../image/icon_arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-size: 10px;
   filter: brightness(0) saturate(100%);
 }
-section.paging ul li a.prev {
+main section.paging ul li a.prev {
   transform: rotate(90deg);
 }
-section.paging ul li a.next {
+main section.paging ul li a.next {
   transform: rotate(-90deg);
 }
 
@@ -1200,7 +1208,7 @@ footer .sitemap-banner-wrap {
   footer .sitemap-banner-wrap .sob .banner-box {
     width: 360px;
     height: 230px;
-    background: url(../../../image/footer_membership_banner.png);
+    background-image: url(../../../image/footer_membership_banner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1320,7 +1328,7 @@ footer .site-info-wrap .site-info .contact {
   }
 }
 footer .leeum-info-wrap {
-  background: url(../../../image/footer_bg_pattern.png);
+  background-image: url(../../../image/footer_bg_pattern.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1412,6 +1420,8 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
   height: 25px;
 }
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
-  font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=exhibition_past.css.map */
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  opacity: 0.7;
+}

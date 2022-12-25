@@ -89,7 +89,6 @@ main {
                         }
 
                         h4 {
-                            // @include gothic_font(medium, 1px);
                             font-size: 30px;
 
                             @include responsive(pc-screens){
@@ -114,7 +113,7 @@ main {
             }
         }
     }
-            
+
 
     h1 {
         display: none;
@@ -479,20 +478,28 @@ main {
                 @include responsive(pc-screens) {
                     width: 850px; 
                 }
-        
+
+                a {
+                    display: block;
+                    height: 100%;
+                }
+
                 .des {
-                    @include flex_between();
-                    align-items: flex-end;
-                    position: absolute;
-                    bottom: -150px;
-                    width: 100%;
-                    color: #000;
-                    background-color: #fff;
-                    transition: bottom .5s;
-                    padding: 15px 30px;
-                    
+                    display: none;
+                    @media screen and (min-width: 490px) {
+                        @include flex_between();
+                        align-items: flex-end;
+                        position: absolute;
+                        bottom: -200px;
+                        width: 100%;
+                        color: #000;
+                        background-color: #fff;
+                        transition: bottom .5s;
+                        padding: 15px 30px;    
+                    }
+
                     @include responsive(pc-screens) {
-                        bottom: -180px;
+                        bottom: -230px;
                         padding: 25px 40px;
                     }
                     
@@ -512,13 +519,14 @@ main {
                     .title { 
                         margin: 5px 0 15px;
                         font-size: 14px;
+                        line-height: 1.5em;
                         
                         @include responsive(tablet-screens) {
-                        font-size: 16px;
+                            font-size: 16px;
                         }
             
                         @include responsive(pc-screens) {
-                        font-size: $h6;
+                            font-size: $h6;
                         }
                     }
                 }

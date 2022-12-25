@@ -153,6 +153,7 @@ main {
                         }
     
                         .i-des {
+                            padding: 20px;
 
                             strong {
                                 width: 100%;
@@ -167,12 +168,12 @@ main {
                             }
     
                             p {
-                                font-size: 15px; 
-                                line-height: 1.5em; 
                                 margin-top: 10px;
                                 margin-bottom: 0;
+                                font-size: 15px;
+                                @include content_align(center, 1.5em);
                                 @include responsive(pc-screens) {
-                                    font-size: 16px
+                                    font-size: 16px;
                                 }
                             }
                         }
@@ -181,10 +182,10 @@ main {
             }
         }
     }
-}
     section.paging {
         @include paging();
     }
+}
 
 footer {
     @include footer();

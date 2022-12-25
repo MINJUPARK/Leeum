@@ -2,13 +2,12 @@ $(function() {
 
     // sub 메뉴 중 detail 페이지의 footer 위치 재조정 (서브헤더가 가려짐에 따라)
     if($('footer').hasClass('sub')) {
-
         $(window).on('load resize', function() {
             
             const header_height = $('header').outerHeight(true);
             const main_height = $('main').outerHeight(true);
             const header = header_height * (-1);
-
+            
             $('main, footer.sub').css({
                 'position' : 'relative',
                 'top' : `${header}px`
@@ -18,7 +17,7 @@ $(function() {
 
 
     // 특정 a 링크만 blank 적용
-    $('.mini-menu a, .reserve, .exp a, footer a, .resv a, .down-img a, .r-d a').attr('target', '_blank');
+    $('.mini-menu a, .info-wrap a, .reserve, .exp a, footer a, .resv a, .down-img a, .r-d a, .detail2 a, .notice-detail-content a, .video a, .ticketing a, .vr a, .faq-content a, .request').attr('target', '_blank');
 
 
     // 모바일 메뉴

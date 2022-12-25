@@ -14,7 +14,7 @@ header {
 }
 
 main {
-
+    overflow-x: hidden;
     @include responsive(tablet-screens) { font-size: 20px; }
     
     .mobile-view {
@@ -42,40 +42,13 @@ main {
     
     @include tab_menu();
 
+    #tabcon-01.con-box {
+        display: block;
+    }
+    
     .tabmenu-wrap{
 
-        .tab-nav{
-            
-            .nav{
-
-                &:hover{
-                    
-                    a{
-                        color:#000;
-                        @include gothic_font(bold, 18px);
-
-                        &:after{
-                            content:"";
-                            position:absolute;
-                            bottom:-1px;
-                            left:0;
-                            right:0;
-                            margin:0 auto;
-                            width:100%;
-                            height:2px;
-                            background-color: #000;
-                        }
-
-                        @include responsive(tablet-screens) {
-                            font-size: 24px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .tab-con{
-            
+        .tab-con {
             .con-box{
                 display: block;
             }
@@ -89,6 +62,7 @@ main {
             margin-top: 40px;
             
             @include responsive(pc-screens) {
+
                 margin-top: 80px;
             }
             
@@ -99,12 +73,8 @@ main {
                 }
                 
                 .thead {
-                    @include gothic_font(semibold, calc(1em + 4px));
-                    padding: {
-                        top: 30px;
-                        bottom: 30px;
-                        left: 20px;
-                    }
+                    @include gothic_font(semibold, calc(1em + 2px));
+                    padding: 20px;
                     border-top: 2px solid $bk5;
                     background-color: $bk6;
                     
@@ -150,8 +120,8 @@ main {
                         
                         @include responsive(pc-screens) {
                             padding: {
-                                top: 56px;
-                                bottom:56px;
+                                top: 50px;
+                                bottom:50px;
                             }
                             line-height: 44px;
                         }
@@ -164,7 +134,8 @@ main {
                             display: block;
                             font-size: calc(1em - 2px);
                             color: $bk2;
-
+                            margin-top: 5px;
+                            
                             @include responsive(pc-screens) {
                                 margin-top: 10px;
                             }
@@ -175,7 +146,7 @@ main {
                             width: 50%;
     
                             .card-title {
-                                @include gothic_font(semibold, calc(1em + 4px));
+                                @include gothic_font(semibold, calc(1em + 2px));
                                 display: block;
                                 margin-top: 22px;
                                 
@@ -186,9 +157,9 @@ main {
                             }
     
                             .card-txt {
-                                line-height: calc(1em + 10px);
                                 margin-top: 10px;
-                                color: $bk2;
+                                font-size: 0.9em;
+                                @include content_align(center, 1.5em);
                                 
                                 @include responsive(pc-screens) {
                                     margin-top: 15px;
@@ -201,13 +172,13 @@ main {
                                 margin: 26px auto 0;
 
                                 @include responsive(tablet-screens) {
-                                    height: 70px;
+                                    height: 50px;
                                     margin-top: 50px;
                                 }
 
                                 a {
                                     span {
-                                        @include gothic_font(medium, calc(1em + 2px));
+                                        @include gothic_font(medium, 0.9em);
                                     }
                                 }
                             }
@@ -215,6 +186,9 @@ main {
                         
                         &.td2 {
                             border-left: 1px solid $bk5;
+                            span {
+                                vertical-align: top;
+                            }
                         }
                         
                         &.td3 {
@@ -346,20 +320,14 @@ main {
                     margin-top: 240px;
                 }
 
-                h4 {
-                    font-size: $h4;
-                    
+                h5 {                    
                     @include responsive(pc-screens) {
-                        font-size: $h3;
+                        font-size: $h4;
                     }
                 }
 
                 ul {
                     margin-top: 40px;
-                    
-                    @include responsive(pc-screens) {
-                        margin-top: 40px * 2;
-                    }
                     
                     li {
                         padding: 30px 0;
@@ -367,7 +335,16 @@ main {
                         
                         @include responsive(pc-screens) {
                             display: flex;
+                            column-gap: 40px;
                             padding: 60px 0;
+                        }
+
+                        h6 {
+                            width: 160px;
+
+                            @include responsive(pc-screens) {
+                                font-size: $h5;
+                            }
                         }
 
                         strong {
@@ -382,8 +359,7 @@ main {
 
                         .detail-txt {
                             @include content_align();
-                            margin-top: 30px;
-                            margin-left: 10px;
+                            margin-top: 10px;
                             
                             @include responsive(pc-screens) {
                                 width: 1120px;
@@ -392,10 +368,10 @@ main {
                             }
                             
                             p {
-                                margin-top: 20px;
+                                margin-top: 10px;
                                 
                                 @include responsive(pc-screens) {
-                                    margin-top: 30px;
+                                    margin-top: 20px;
                                 }
                                 
                                 &:first-child {
@@ -438,7 +414,8 @@ main {
                                 .refund-box {
                                     margin-top: 30px;
                                     margin-left: -10px;
-                                    border: 1px solid $bk4;
+                                    background: $bk6;
+                                    padding: 5px 10px;
                                     border-radius: 5px;
 
                                     @include responsive(pc-screens) {
@@ -452,12 +429,18 @@ main {
                                             margin: 40px;
                                         }
 
-                                        span {
+                                        p {
                                             display: block;
+                                            @include content_align(justify);
                                             margin-top: 10px;
+                                            padding-left: 11px;
+                                            background-image: url(../image/icon_bullet_dot.svg);
+                                            background-repeat: no-repeat;
+                                            background-position: left 0.8em;
+                                            background-size: 2px;
 
                                             @include responsive(pc-screens) {
-                                                margin-top: 15px;
+                                                margin-top: 0;
                                             }
                                         }
                                     }
@@ -482,6 +465,8 @@ main {
             position: relative;
             height: 400px;
             color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
             background: {
                 image: url(../image/membership_corporate.png);
                 repeat: no-repeat;
@@ -603,8 +588,6 @@ main {
                     width: 100%; 
                     height: 158px;
                     margin-bottom: 20px;
-                    border-radius: 10px;
-                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                     overflow: hidden;
                     
                     @include responsive(tablet-screens) {
@@ -615,14 +598,21 @@ main {
                     @include responsive(pc-screens) {
                         width: 680px; 
                         height: 260px;
-                        margin-bottom: 30px;
+                        margin-bottom: 40px;
                         overflow: hidden;
                         
                     }
 
                     .store-img {
-                        width: 180px / 350px * 100%;
+                        width: 45%;
+                        height: 100%;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
                         overflow: hidden;
+                        
+                        @include responsive(tablet-screens) {
+                            width: 50%;
+                        }
 
                         img {
                             width: 100%; height: 100%;
@@ -630,67 +620,83 @@ main {
                         }
                     }
                     
-                    .store-txt {
-                        width: calc(160px / 350px) * 100%;
-                        padding: 22px 10px;
-                        
-                        @include responsive(pc-screens) {
-                            padding-top: 42px;
-                            padding-left: 40px
-                        }
-                        
-                        p {
-                            @include gothic_font(medium);
-                            
-                            @include responsive(pc-screens) {
-                                font-size: 20px;
-                            }
-                        }
-                        
-                        b {
-                            display: block;
-                            margin-top: 8px;
-                            font-size: 22px;
-                            
-                            @include responsive(pc-screens) {
-                                margin-top: 14px;
-                                font-size: 36px;
-                            }
-                            
-                            .red {
-                                color: #f00;
-                            }
-                        }
-                        
-                        address,
-                        .tel {
-                            font-size: 14px;
-                            color: $bk1;
-                        }
-                        
-                        address {
-                            margin-top: 16px;
-                            
-                            @include responsive(pc-screens) {
-                                margin-top: 36px;
-                                font-size: 18px;
-                            }
-                        }
-                        
-                        .tel {
-                            margin-top: 8px;
+                    .store-txt-wrap {
+                        display: flex;
+                        align-items: center;
+                        width: 55%;
+                        height: 100%;
+                        border: 2px dashed #ddd;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        border-left: 0;
 
+                        @include responsive(tablet-screens) {
+                            width: 50%;
+                        }
+
+                        .store-txt {
+                            width: 100%;
+                            padding-left: 20px;
+                            
                             @include responsive(pc-screens) {
-                                margin-top: 10px;
-                                font-size: 16px;
+                                padding-left: 40px;
                             }
 
-                            img {
-                                width: 10px;
-                                margin-right: 4px;
+                            p {
+                                @include gothic_font(medium);
+                                
+                                @include responsive(pc-screens) {
+                                    font-size: 20px;
+                                }
                             }
-                        }   
+                            
+                            b {
+                                display: flex;
+                                margin-top: 8px;
+                                font-size: 22px;
+                                
+                                @include responsive(pc-screens) {
+                                    font-size: 36px;
+                                }
+                                
+                                .red {
+                                    color: #f00;
+                                    margin-right: 5px;
+                                }
+                            }
+                            
+                            address,
+                            .tel {
+                                font-size: 14px;
+                            }
+                            
+                            address {
+                                display: flex;
+                                margin-top: 16px;
+                                @include gothic_font(medium, 14px);
+                                
+                                @include responsive(pc-screens) {
+                                    margin-top: 36px;
+                                    font-size: 16px;
+                                }
+                            }
+                            
+                            .tel {
+                                margin-top: 8px;
+    
+                                @include responsive(pc-screens) {
+                                    margin-top: 10px;
+                                    font-size: 16px;
+                                }
+    
+                                img {
+                                    width: 12px;
+                                    margin-right: 8px;
+                                }
+                            }   
+                        }
                     }
+                    
                 }
             }
         }

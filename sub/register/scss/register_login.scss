@@ -2,7 +2,7 @@
 @import '../../../scss/style.scss';
 @import '../../../scss/common.scss';
 @import '../../../scss/mixin.scss';
-// @import './register.scss';
+@import './register.scss';
 
 div.login {
     @include element_center();
@@ -26,8 +26,9 @@ div.login {
                 height: 80px;
             }
         }
-
+        
         .login-tab-form {
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 
             ul.login-select {
                 @include flex_between();
@@ -108,7 +109,7 @@ div.login {
                 .submit-btn {
                     width: 100%;
                     padding: 10px;
-                    margin: 25px 0;
+                    margin: 25px 0 15px 0;
                     font-size: 14px;
                     color: white;
                     background-color: #000;
@@ -118,17 +119,19 @@ div.login {
                 .id-chk {
                     text-align: left;
                     margin-bottom: 40px;
+
+                    .id-storage {
+                        font-size: 15px;
+                    }
                 }
 
                 .id-pw-join {
                     @include flex_between();
 
-                    .id-pw span {
-                        font-size: 15px;
+                    span {
+                        font-size: 14px;
                     }
                 }
-
-                
             }
         }
     }

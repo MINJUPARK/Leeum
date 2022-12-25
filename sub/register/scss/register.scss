@@ -1,5 +1,132 @@
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.select{
+    @include responsive(pc-screens) {
+        margin-top: 100px;
+    }
+
+    .image-info {
+        position: relative;
+        display: flex;
+        column-gap: 12px;
+        margin: 20px 0 20px 0;
+
+        img {
+            width: 40px;
+
+            @include responsive(pc-screens) {
+                width: 60px;
+            }
+        }
+
+        .text {
+            p {
+                @include gothic-font(regular, 12px);
+                letter-spacing: 0;
+                color: $bk2;
+
+                @include responsive(pc-screens) {
+                    font-size: 20px;
+                }
+            }
+
+            strong {
+                margin-top: 2px;
+                font-size: 22px;
+                color: $bk1;
+
+                @include responsive(pc-screens) {
+                    font-size: 30px;
+                }
+            }
+        }
+
+            
+    }
+    ul.select {
+        @include in_container();
+        @include flex_between();
+        position: absolute;
+        top: 0;
+        padding: 0 20px 0 20px;
+        
+        @include responsive(pc-screens) {
+            width: 40%;
+            padding: 0;
+            right: 20px;
+            left: inherit;
+        }
+        
+        li {
+            position: relative;
+            height: 45px;
+            border: 1px solid $bk4;
+            margin-top: 70px;
+
+            @include responsive(pc-screens) {
+                margin-top: 0;
+            }
+
+            &:first-child {
+                width: 33.33333333333333%;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            &:nth-child(2) {
+                width: 33.33333333333333%;
+                border-left: 0;
+                border-right: 0;
+            }
+            
+            &:last-child {
+                width: 33.33333333333333%;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            &.on {
+                background-color: $bk1;
+
+                span {
+                    color: white;
+                }
+            }
+            
+            @include responsive(tablet-screens) {
+                height: 55px;
+            }
+
+            span {
+                @include element_center();
+                width: 100%;
+                text-align: center;
+                @include gothic-font(medium, 14px);
+                color: $bk2;
+                
+                @include responsive(tablet-screens) {
+                    font-size: 16px;
+                }
+
+                @include responsive(pc-screens) {
+                    font-size: 18px;
+                }
+
+                b {
+                    font-weight: 600;
+                }
+            }
+        }
+    } 
+
+}
+
+div.movePage {
+    @include move_page();
+    margin-bottom: 40px;
 }

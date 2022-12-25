@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
@@ -26,10 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
@@ -192,7 +186,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/conserve_header.png);
+  background-image: url(../image/conserve_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -233,7 +227,7 @@ header .logo-menu-wrap .logo-menu {
   }
 }
 header .logo-menu-wrap .logo-menu .logo a {
-  background: url(../../../image/logo_leeum_horizon.svg);
+  background-image: url(../../../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -343,20 +337,20 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     height: 24px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.login {
-    background: url(../../../image/icon_user.svg);
+    background-image: url(../../../image/icon_user.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.reserve {
-    background: url(../../../image/icon_reserve.svg);
+    background-image: url(../../../image/icon_reserve.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 32px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.search {
-    background: url(../../../image/icon_search.svg);
+    background-image: url(../../../image/icon_search.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -608,7 +602,7 @@ header .breadcrumb-wrap {
     border-bottom: 0;
   }
   header .breadcrumb-wrap .breadcrumb .home a {
-    background: url(../../../image/icon_home.svg);
+    background-image: url(../../../image/icon_home.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -897,7 +891,7 @@ main .before-after-case-intro .intro-flex .case-intro .case-txt p {
   text-align: justify;
 }
 main .before-after-case-intro .intro-flex .case-intro .case-txt p:last-child {
-  margin-top: 45px;
+  margin-top: 30px;
 }
 main .conservation-method-wrap {
   margin-top: 120px;
@@ -1089,7 +1083,7 @@ main .conservation-method-wrap .conservation-method ul.method-list li .step-img.
 }
 main .conservation-method-wrap .conservation-method ul.method-list .arrow {
   display: block;
-  width: 27px;
+  width: 30px;
   margin: 37px auto;
   filter: brightness(0) saturate(100%) invert(24%) sepia(15%) saturate(7470%) hue-rotate(350deg) brightness(103%) contrast(85%);
   opacity: 0;
@@ -1098,12 +1092,12 @@ main .conservation-method-wrap .conservation-method ul.method-list .arrow {
 }
 @media screen and (min-width: 768px) {
   main .conservation-method-wrap .conservation-method ul.method-list .arrow {
-    width: 34px;
+    width: 35px;
   }
 }
 @media screen and (min-width: 1440px) {
   main .conservation-method-wrap .conservation-method ul.method-list .arrow {
-    width: 51px;
+    width: 40px;
     margin-top: 80px;
     margin-bottom: 80px;
   }
@@ -1257,7 +1251,7 @@ footer .sitemap-banner-wrap {
   footer .sitemap-banner-wrap .sob .banner-box {
     width: 360px;
     height: 230px;
-    background: url(../../../image/footer_membership_banner.png);
+    background-image: url(../../../image/footer_membership_banner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1377,7 +1371,7 @@ footer .site-info-wrap .site-info .contact {
   }
 }
 footer .leeum-info-wrap {
-  background: url(../../../image/footer_bg_pattern.png);
+  background-image: url(../../../image/footer_bg_pattern.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1469,6 +1463,8 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
   height: 25px;
 }
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
-  font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=collect_conserve_case.css.map */
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  opacity: 0.7;
+}

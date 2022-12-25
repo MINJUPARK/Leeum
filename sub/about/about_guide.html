@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="김미도">
-    <meta name="Description" content="리움미술관 이용에 꼭 필요한 정보들을 모아 알려드립니다.">
+    <meta name="author" content="김미도">
+    <meta name="description" content="리움미술관 이용에 꼭 필요한 정보들을 모아 알려드립니다.">
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" type="text/css" href="./css/about_guide.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" type="text/css" href="./css/about_guide.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
-    <script type="text/javascript" src="./js/tab-menu.js"></script>
-    <script type="text/javascript" src="./js/aos.js"></script>
-    <script type="text/javascript" src="../collect/js/side_tab.js"></script>
-    <script type="text/javascript" src="./js/dropdown.js"></script>
     <script type="text/javascript" src="../../js/swiper.js"></script>
+    <script type="text/javascript" src="../../js/dropdown.js"></script>
+    <script type="text/javascript" src="../../js/side_tab.js"></script>
+    <script type="text/javascript" src="./js/tab_menu.js"></script>
     <title>Leeum</title>
 </head>
 <body>
@@ -161,7 +162,7 @@
                     </div>
                     <div class="gnb two">
                         <ul class="mini-menu">
-                            <li><a href="https://leeumstore.org/" class="store"><img src="../../image/icon_store.svg">리움스토어</a></li>
+                            <li><a href="https://leeumstore.org/" class="store"><img src="../../image/icon_store.svg">리움 스토어</a></li>
                             <li>
                                 <div class="lang">
                                     <img src="../../image/icon_language.svg">KOR<img src="../../image/icon_arrow.svg" class="dropdown">
@@ -228,13 +229,13 @@
         <div class="tabmenu-wrap">
             <div class="container">
                 <div class="tab-nav">
-                    <span class="nav on"><a href="#tabcon-01">관람요금 및 시간</a></span>
-                    <span class="nav"><a href="#tabcon-02">층별안내</a></span>
-                    <span class="nav"><a href="#tabcon-03">21세기 리움</a></span>
+                    <span class="nav on"><a href="#guide">관람요금 및 시간</a></span>
+                    <span class="nav"><a href="#floor">층별안내</a></span>
+                    <span class="nav"><a href="#did">21세기 리움</a></span>
                 </div>
             </div>
             <div class="tab-con">
-                <section id="tabcon-01" class="con-box fee-time-wrap" style="display: block;">
+                <section id="guide" class="con-box fee-time-wrap">
                     <h2>관람요금 및 시간</h2>
                     <div class="container">
                         <div class="fee-time">
@@ -279,7 +280,7 @@
                                             <td>6,000원</td>
                                         </tr>
                                         <tr>
-                                            <td>미취학 아동 <span>(~만 6세)</span></td>
+                                            <td>미취학 아동 <span>(만 6세까지)</span></td>
                                             <td rowspan="3">무료</td>
                                         </tr>
                                         <tr>
@@ -295,7 +296,7 @@
                                 <div class="ticket-info">
                                     <h3><span class="br-bar"></span>예매 안내</h3>
                                     <ul>
-                                        <li>개인예매는 관람일 2주 전까지만 가능합니다. <span>(인당 4매까지 가능)</span></li>
+                                        <li>개인 예매는 관람일 2주 전까지만 가능합니다. <span>(인당 4매까지 가능)</span></li>
                                         <li>예매를 하지 않고 방문하시는 경우, 현장 발권 후 입장이 가능합니다.</li>
                                         <li>안전하고 쾌적한 관람을 위하여 반드시 예약 사항을 지켜 주시기 바라며, 방문하지 않으시는 경우에는 다른 분들의 방문을 위해 예약 취소를 부탁드립니다.</li>
                                         <li>매월 마지막주 수요일 ‘문화가 있는날’에는 <b>50% 할인</b>된 가격에 관람이 가능합니다. <span>(중복할인 불가)</span></li>
@@ -394,83 +395,10 @@
                         </div>
                     </div>
                 </section>
-                <section id="tabcon-02" class="con-box vr-floor-info-wrap">
+                <section id="floor" class="con-box vr-floor-info-wrap">
                     <h2>층별안내</h2>
                     <div class="container">
-                        <section class="vr">
-                            <div class="vr-txt">
-                                <h3>VR 투어</h3>
-                                <a id="VR" title="전체 화면으로 보기" href="https://my.matterport.com/show/?m=2btF8xwpEst" target="_blank">FULL SCREEN <img src="../../image/icon_shortcut.svg"></a>
-                            </div>                           
-                            <iframe id="eazel-player" src="https://my.matterport.com/show/?m=2btF8xwpEst" frameborder="0" scrolling="NO"></iframe>
-                        </section>
                         <section class="floor-info">
-                            <h3>층별 안내</h3>
-                            <div class="side-tab cultural-center">
-                                <div class="floor-select-group">
-                                    <div class="group-title">
-                                        <h4>아동교육문화센터<span>기획전</span></h4><img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기" class="dropdown active">
-                                    </div>
-                                    <ul class="tab-wrap group-option">
-                                        <li class="tab selected"><b>1F</b><span>블랙박스 라운지 키즈랩</span></li>
-                                        <li class="tab"><b>B1</b><span>블랙박스</span></li>
-                                        <li class="tab"><b>B2</b><span>그라운드 갤러리 강당</span></li>
-                                        <li class="tab"><b>B3</b><span>고객주차장</span></li>
-                                    </ul>
-                                </div>
-                                <div class="floor-con-group">
-                                    <ul class="side-con-box floor-img">
-                                        <li class="view"><img src="./image/guide_floor_cultural_center(1).png" alt="블랙박스 라운지"></li>
-                                        <li><img src="./image/guide_floor_cultural_center(2).png" alt="블랙박스 외관"></li>
-                                        <li><img src="./image/guide_floor_cultural_center(3).png" alt="그라운드 갤러리 전시 작품"></li>
-                                        <li><img src="./image/guide_floor_cultural_center(4).png" alt="주차장"></li>
-                                    </ul>
-                                    <ul class="side-con-box floor-txt">
-                                        <li class="view">
-                                            <div class="txt-flex">
-                                                <strong>1F</strong><b>블랙박스 라운지 키즈랩</b>
-                                                <div class="toilet">
-                                                    <img src="./image/icon_man.svg" alt="남자화장실">
-                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
-                                                </div>
-                                            </div>
-                                            <p>블랙박스 라운지 키즈랩에서는 어린이들을 위한 프로그램이 진행됩니다.</p>
-                                        </li>
-                                        <li>
-                                            <div class="txt-flex">
-                                                <strong>B1</strong><b>블랙박스</b>
-                                                <div class="toilet">
-                                                    <img src="./image/icon_man.svg" alt="남자화장실">
-                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
-                                                </div>
-                                            </div>
-                                            <p>블랙박스에서는 외부와 단절된 독립적인 분위기와 조형작품들을 감상하실 수 있습니다.</p>
-                                        </li>
-                                        <li>
-                                            <div class="txt-flex">
-                                                <strong>B2</strong><b>그라운드 갤러리 강당</b>
-                                                <div class="toilet">
-                                                    <img src="./image/icon_baby_room.svg" alt="수유실">
-                                                    <img src="./image/icon_disabled.svg" alt="장애인화장실" class="left-rigt">
-                                                    <img src="./image/icon_man.svg" alt="남자화장실">
-                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
-                                                </div>
-                                            </div>
-                                            <p>그라운드 갤러리에서는 시기별로 달라지는 기획전시와 독특한 건축구조를 감상하실 수 있습니다.</p>
-                                        </li>
-                                        <li>
-                                            <div class="txt-flex">
-                                                <strong>B3</strong><b>고객주차장</b>
-                                                <div class="toilet">
-                                                    <img src="./image/icon_man.svg" alt="남자화장실">
-                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
-                                                </div>
-                                            </div>
-                                            <p>리움 미술관 고객 전용 주차장입니다.</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                             <div class="side-tab m1">
                                 <div class="floor-select-group">
                                     <div class="group-title">
@@ -543,7 +471,7 @@
                                                     <img src="./image/icon_woman.svg" alt="여자화장실">
                                                 </div>
                                             </div>
-                                            <p>매표&안내 데스크와 리움스토어, 카페, 물품보관함, 미디어룸이 있습니다.</p>
+                                            <p>매표&안내 데스크와 리움 스토어, 카페, 물품보관함, 미디어룸이 있습니다.</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -596,21 +524,93 @@
                                     </ul>
                                 </div>
                             </div>
+                            <div class="side-tab cultural-center">
+                                <div class="floor-select-group">
+                                    <div class="group-title">
+                                        <h4>아동교육문화센터<span>기획전</span></h4><img src="../../image/icon_arrow_thin.svg" alt="펼치고 닫기" class="dropdown">
+                                    </div>
+                                    <ul class="tab-wrap group-option">
+                                        <li class="tab selected"><b>1F</b><span class="floor-titile">블랙박스 라운지 키즈랩</span></li>
+                                        <li class="tab"><b>B1</b><span class="floor-titile">블랙박스</span></li>
+                                        <li class="tab"><b>B2</b><span class="floor-titile">그라운드 갤러리 강당</span></li>
+                                        <li class="tab"><b>B3</b><span class="floor-titile">고객주차장</span></li>
+                                    </ul>
+                                </div>
+                                <div class="floor-con-group">
+                                    <ul class="side-con-box floor-img">
+                                        <li class="view"><img src="./image/guide_floor_cultural_center(1).png" alt="블랙박스 라운지"></li>
+                                        <li><img src="./image/guide_floor_cultural_center(2).png" alt="블랙박스 외관"></li>
+                                        <li><img src="./image/guide_floor_cultural_center(3).png" alt="그라운드 갤러리 전시 작품"></li>
+                                        <li><img src="./image/guide_floor_cultural_center(4).png" alt="주차장"></li>
+                                    </ul>
+                                    <ul class="side-con-box floor-txt">
+                                        <li class="view">
+                                            <div class="txt-flex">
+                                                <strong>1F</strong><b>블랙박스 라운지 키즈랩</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>블랙박스 라운지 키즈랩에서는 어린이들을 위한 프로그램이 진행됩니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>B1</strong><b>블랙박스</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>블랙박스에서는 외부와 단절된 독립적인 분위기와 조형작품들을 감상하실 수 있습니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>B2</strong><b>그라운드 갤러리 강당</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_baby_room.svg" alt="수유실">
+                                                    <img src="./image/icon_disabled.svg" alt="장애인화장실" class="left-rigt">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>그라운드 갤러리에서는 시기별로 달라지는 기획전시와 독특한 건축구조를 감상하실 수 있습니다.</p>
+                                        </li>
+                                        <li>
+                                            <div class="txt-flex">
+                                                <strong>B3</strong><b>고객주차장</b>
+                                                <div class="toilet">
+                                                    <img src="./image/icon_man.svg" alt="남자화장실">
+                                                    <img src="./image/icon_woman.svg" alt="여자화장실">
+                                                </div>
+                                            </div>
+                                            <p>리움 미술관 고객 전용 주차장입니다.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="vr">
+                            <div class="vr-txt">
+                                <h5>VR 투어</h5>
+                                <a id="VR" title="전체화면으로 보기" href="https://my.matterport.com/show/?m=2btF8xwpEst">전체화면으로 보기 <img src="../../image/icon_shortcut.svg"></a>
+                            </div>                           
+                            <iframe id="eazel-player" src="https://my.matterport.com/show/?m=2btF8xwpEst" frameborder="0" scrolling="NO"></iframe>
                         </section>
                     </div>
                 </section>
-                <section id="tabcon-03" class="con-box digital-guide-did-wrap">
+                <section id="did" class="con-box digital-guide-did-wrap">
                     <h2>21세기 리움</h2>
                     <div class="container">
                         <section class="digital-guide">
                             <h3>디지털 가이드</h3>
                             <h4>Digital Guide</h4>
                             <div class="guide-intro-wrap">
-                                <div class="guide-intro" data-aos="fade-up" data-aos-duration="2000">
-                                    <div class="guide-intro-img">
+                                <div class="guide-intro">
+                                    <div class="guide-intro-img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
                                         <img src="./image/guide_digital_guide(1).png" alt="디지털가이드 사용모습">
                                     </div>
-                                    <div data-aos="fade-up" class="guide-intro-txt">
+                                    <div class="guide-intro-txt" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0">
                                         <strong>내 손안의 도슨트, 디지털 가이드로 <br>리움의 작품들과 더욱 가까워지세요</strong>
                                         <p>
                                             2021년, 새롭게 선보이는 갤럭시 S21 Plus 기반의<br>
@@ -625,7 +625,7 @@
                             </div>
                             <div class="guide-point-wrap">
                                 <div class="point-m-wrap guide-swiper">
-                                    <ul class="point-m swiper-wrapper"  data-aos="fade-left" data-aos-duration="1500">
+                                    <ul class="point-m swiper-wrapper" data-aos="fade-left" data-aos-duration="1500">
                                         <li class=" swiper-slide">
                                             <div class="point-m-txt">
                                                 <span>STEP <b>01</b></span>
@@ -693,8 +693,8 @@
                                     <div class="awards-txt" data-aos="fade-up-right" data-aos-duration="1000">
                                         <strong>디자인 어워드 최우수상</strong>
                                         <p>
-                                            <span class="mobile-hidden">leeum의 DID는</span> 삼성전자의 고화질 디스 플레이와 leem의<br>
-                                            디지털인터랙티브 솔루션이 결합하여 <br class="m-br">
+                                            <span class="mobile-hidden">leeum의 DID는</span> 삼성전자의 고화질 디스 플레이와<br>
+                                            leeum의 디지털인터랙티브 솔루션이 결합하여 <br class="m-br">
                                             만들어진 전시 연출 기법으로
                                         </p>
                                         <p>
@@ -716,8 +716,8 @@
                                 <strong>전통 미술의 정교함</strong>
                                 <p>
                                     한국의 전통 미술품 중에는 화려함과 정교함이 돋보이는 <br class="m-br"> 작품들도 많습니다.<br class="pc-br">
-                                    특히, 귀한 재료를 사용하여 장인의 <br class="m-br">손에 의해 만들어진 공예품과 섬세한 <br class="pc-br">
-                                    표현이 드러나는 <br class="m-br">회화에서 이러한 아름다움을 느낄 수 있습니다.
+                                    특히, 귀한 재료를 사용하여 장인의 <br class="m-br">손에 의해 만들어진 공예품과 <br class="pc-br">
+                                    섬세한 표현이 드러나는 <br class="m-br">회화에서 이러한 아름다움을 느낄 수 있습니다.
                                 </p>
                                 <img src="./image/guide_did_photo_(3).png" alt="did화면3">
                             </div>

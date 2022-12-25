@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
@@ -26,10 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
@@ -279,7 +273,7 @@ header .logo-menu-wrap .logo-menu {
   }
 }
 header .logo-menu-wrap .logo-menu .logo a {
-  background: url(../../../image/logo_leeum_horizon.svg);
+  background-image: url(../../../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -389,20 +383,20 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     height: 24px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.login {
-    background: url(../../../image/icon_user.svg);
+    background-image: url(../../../image/icon_user.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.reserve {
-    background: url(../../../image/icon_reserve.svg);
+    background-image: url(../../../image/icon_reserve.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 32px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.search {
-    background: url(../../../image/icon_search.svg);
+    background-image: url(../../../image/icon_search.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -883,25 +877,25 @@ header .main-slider-wrap .slider-progress span.active {
   width: 100%;
 }
 header #logo-menu .logo a {
-  background: url(../image/logo_leeum_horizon.svg);
+  background-image: url(../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 header #icon-menu li a.login {
-  background: url(../image/icon_user.svg);
+  background-image: url(../image/icon_user.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 header #icon-menu li a.reserve {
-  background: url(../image/icon_reserve.svg);
+  background-image: url(../image/icon_reserve.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 header #icon-menu li a.search {
-  background: url(../image/icon_search.svg);
+  background-image: url(../image/icon_search.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1210,12 +1204,11 @@ main section.exhibition .slick-dots li.slick-active button::before {
 }
 main section.exhibition .slick-initialized .swipe-tab {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 40px;
   line-height: 40px;
-  padding: 20px 0;
+  padding: 25px 0;
   text-align: center;
   color: #acacac;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
@@ -1440,6 +1433,7 @@ main section.collection .art.modern {
   }
   main section.collection .art.modern .more {
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
   }
   main section.collection .art.modern .more img {
@@ -2100,11 +2094,13 @@ main section.artist .va-slice .va-title {
   position: absolute;
   top: 0;
   margin: 0 25px;
+  font-weight: 600;
   text-shadow: 0px 0px 1px white;
   z-index: 1;
 }
 @media screen and (min-width: 768px) {
   main section.artist .va-slice .va-title {
+    font-size: 30px;
     margin: 0 50px;
   }
 }
@@ -2122,7 +2118,7 @@ main section.artist .va-slice .va-title span {
 main section.artist .va-slice .va-content {
   display: none;
   position: absolute;
-  top: 120px; /* 제목 높이 기준 */
+  top: 120px;
   margin: 0 25px;
   z-index: 1;
 }
@@ -2228,7 +2224,7 @@ footer .sitemap-banner-wrap {
   footer .sitemap-banner-wrap .sob .banner-box {
     width: 360px;
     height: 230px;
-    background: url(../../../image/footer_membership_banner.png);
+    background-image: url(../../../image/footer_membership_banner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2348,7 +2344,7 @@ footer .site-info-wrap .site-info .contact {
   }
 }
 footer .leeum-info-wrap {
-  background: url(../../../image/footer_bg_pattern.png);
+  background-image: url(../../../image/footer_bg_pattern.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2440,11 +2436,13 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
   height: 25px;
 }
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
-  font-size: 12px;
   margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  opacity: 0.7;
 }
 footer .leeum-info-wrap {
-  background: url(../image/footer_bg_pattern.png);
+  background-image: url(../image/footer_bg_pattern.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2476,8 +2474,8 @@ footer .leeum-info-wrap {
   }
 }
 footer #banner-box {
-  background: url(../image/footer_membership_banner.png);
+  background-image: url(../image/footer_membership_banner.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}/*# sourceMappingURL=index.css.map */
+}

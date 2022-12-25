@@ -7,6 +7,26 @@
         .tab-nav{
             display:table;
             width:100%;
+
+            &.fixed {
+                @include out_container();
+                position: fixed;
+                bottom: -2px;
+                padding-top: 20px;
+                border-top: 1px solid $bk5;
+                background: #fff;
+                z-index: 1;
+
+                .nav {
+
+                    &.on a:after {
+                        bottom: 0;
+                        top: -21px;
+                        height: 3px;
+                    }
+                }
+            }
+
             .nav{
                 display:table-cell;
                 width:50px;
@@ -20,14 +40,32 @@
                     border-bottom: 1px solid $bk5;
                     height:40px;
 
-                    @include responsive(tablet-screens) {
-                        font-size: 20px;
+                    
+                    &:hover {
+                        color:#000;
+                        @include gothic_font(bold, 18px);
+
+                        .shortcut {
+                            filter: $svg-black;
+                        }
                     }
 
-                &:after{
-                        content:"";
+                    &:after {
+                            content:"";
+                            transition:.4s;
+                            width:0px;
+                    }
+                    
+                    .shortcut {
+                        height: 14px;
+                        margin-left: 5px;
+                        margin-bottom: 1px;
+                        filter: $svg-bk3;
                         transition:.4s;
-                        width:0px;
+
+                        @include responsive(tablet-screens) {
+                            margin-left: 10px;
+                        }
                     }
                 }
 
@@ -57,7 +95,11 @@
         }
 
         .tab-con{
-            padding-top: 60px;
+            padding-top: 50px;
+
+            @include responsive(pc-screens) {
+                padding-top: 100px;
+            }
 
             
             .con-box{

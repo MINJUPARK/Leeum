@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
@@ -26,10 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
@@ -191,7 +185,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/exhibition_header.png);
+  background-image: url(../image/exhibition_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -232,7 +226,7 @@ header .logo-menu-wrap .logo-menu {
   }
 }
 header .logo-menu-wrap .logo-menu .logo a {
-  background: url(../../../image/logo_leeum_horizon.svg);
+  background-image: url(../../../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -342,20 +336,20 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     height: 24px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.login {
-    background: url(../../../image/icon_user.svg);
+    background-image: url(../../../image/icon_user.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.reserve {
-    background: url(../../../image/icon_reserve.svg);
+    background-image: url(../../../image/icon_reserve.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 32px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.search {
-    background: url(../../../image/icon_search.svg);
+    background-image: url(../../../image/icon_search.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -607,7 +601,7 @@ header .breadcrumb-wrap {
     border-bottom: 0;
   }
   header .breadcrumb-wrap .breadcrumb .home a {
-    background: url(../../../image/icon_home.svg);
+    background-image: url(../../../image/icon_home.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -831,7 +825,7 @@ main section.info .item-wrap .i-des .tit-exp .tit .lang {
 }
 @media screen and (min-width: 1440px) {
   main section.info .item-wrap .i-des .tit-exp .tit .lang {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 main section.info .item-wrap .i-des .tit-exp .tit .lang .name {
@@ -1302,6 +1296,7 @@ main .vr-floor-info-wrap .slick-arrow.slick-prev.slick-disabled:before, main .vr
 main .vr-floor-info-wrap .slide-main {
   height: 350px;
   border-radius: 5px;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   main .vr-floor-info-wrap .slide-main {
@@ -1404,7 +1399,7 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-tit
 main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown.active {
   transform: rotate(180deg);
 }
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 768px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-title .dropdown {
     display: none;
   }
@@ -1427,7 +1422,7 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-opt
   border-bottom: 1px solid #c5c5c5;
   cursor: pointer;
 }
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 768px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li {
     height: 65px;
     line-height: 65px;
@@ -1447,12 +1442,17 @@ main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-opt
   color: #000;
   background-color: #f3f3f3;
 }
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 768px) {
   main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li.selected {
     background-image: url(../../../image/icon_arrow_tail.svg);
     background-repeat: no-repeat;
     background-position: center right;
     background-origin: content-box;
+    background-size: 40px 15px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .vr-floor-info-wrap section.floor-info > div .floor-select-group .group-option li.selected {
     background-size: 50px 20px;
   }
 }
@@ -1643,7 +1643,7 @@ footer .sitemap-banner-wrap {
   footer .sitemap-banner-wrap .sob .banner-box {
     width: 360px;
     height: 230px;
-    background: url(../../../image/footer_membership_banner.png);
+    background-image: url(../../../image/footer_membership_banner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1763,7 +1763,7 @@ footer .site-info-wrap .site-info .contact {
   }
 }
 footer .leeum-info-wrap {
-  background: url(../../../image/footer_bg_pattern.png);
+  background-image: url(../../../image/footer_bg_pattern.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1855,8 +1855,10 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
   height: 25px;
 }
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
-  font-size: 12px;
   margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  opacity: 0.7;
 }
 
 .fancybox-thumbs__list a:before {
@@ -1869,4 +1871,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright p {
 
 .fancybox-caption__body {
   font-size: 18px;
-}/*# sourceMappingURL=exhibition_past_detail.css.map */
+}

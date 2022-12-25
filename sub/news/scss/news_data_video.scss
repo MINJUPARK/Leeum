@@ -168,7 +168,6 @@ main {
                             aspect-ratio: 38 / 27;
                             background-image: url(../../../image/icon_youtube_black.svg);
                             background-repeat: no-repeat;
-
                             transition: all .3s;
                             
                             @include responsive(pc-screens) {
@@ -179,15 +178,30 @@ main {
 
                     .i-des {
 
+                        span {
+                            @include gothic_font(medium, 14px);
+                            color: $yellow-brown;
+
+                            @include responsive(pc-screens) {
+                                font-size: 16px;
+                            }
+                        }
+
                         strong {
                             width: 100%;
+                            margin-top: 2px;
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             overflow: hidden;
                         }
 
                         p {
+                            margin-top: 10px;
                             margin-bottom: 0;
+
+                            .vert-bar {
+                                font-weight: 400;
+                            }
                         }
                     }
                 }

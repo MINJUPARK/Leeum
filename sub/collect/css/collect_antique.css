@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
@@ -26,10 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
@@ -191,7 +185,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/antique_header.jpg);
+  background-image: url(../image/antique_header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -232,7 +226,7 @@ header .logo-menu-wrap .logo-menu {
   }
 }
 header .logo-menu-wrap .logo-menu .logo a {
-  background: url(../../../image/logo_leeum_horizon.svg);
+  background-image: url(../../../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -342,20 +336,20 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     height: 24px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.login {
-    background: url(../../../image/icon_user.svg);
+    background-image: url(../../../image/icon_user.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.reserve {
-    background: url(../../../image/icon_reserve.svg);
+    background-image: url(../../../image/icon_reserve.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 32px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.search {
-    background: url(../../../image/icon_search.svg);
+    background-image: url(../../../image/icon_search.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -607,7 +601,7 @@ header .breadcrumb-wrap {
     border-bottom: 0;
   }
   header .breadcrumb-wrap .breadcrumb .home a {
-    background: url(../../../image/icon_home.svg);
+    background-image: url(../../../image/icon_home.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -719,15 +713,15 @@ main section.filter .filter-wrap .speed-search form[name=keyword] * {
   height: 50px;
 }
 main section.filter .filter-wrap .speed-search form[name=keyword] select {
-  background: url(../../../image/icon_arrow_bk.svg);
+  background-image: url(../../../image/icon_arrow_bk.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-position: right 20px center;
-  background-color: #fff;
-  background-size: 10px;
   width: 37%;
   padding: 0 20px;
+  background-position: right 20px center;
+  background-size: 10px;
+  background-color: #fff;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .speed-search form[name=keyword] select {
@@ -1028,6 +1022,7 @@ main section.itemList .list-control .sort {
   position: absolute;
   right: 0;
   font-size: 15px;
+  cursor: default;
 }
 main section.itemList .list-control .sort img {
   height: 14px;
@@ -1060,6 +1055,7 @@ main section.itemList .list-control .view-type .sort-list li {
   font-size: 14px;
   padding-left: 15px;
   color: #3c3c3c;
+  cursor: pointer;
 }
 main section.itemList .list-control .view-type .sort-list li:hover {
   text-decoration: underline;
@@ -1079,7 +1075,7 @@ main section.itemList .list-control .view-type select[name=nth-view] {
     width: 120px;
     height: 30px;
     padding: 0 10px;
-    background: url(../../../image/icon_arrow_bk.svg);
+    background-image: url(../../../image/icon_arrow_bk.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1098,8 +1094,8 @@ main section.itemList .item-box .item {
   position: relative;
   width: 48%;
   margin-bottom: 20px;
-  border: 1px solid #d4d4d4;
   border-radius: 5px;
+  overflow: hidden;
 }
 @media screen and (min-width: 1440px) {
   main section.itemList .item-box .item {
@@ -1156,6 +1152,9 @@ main section.itemList .item-box .item .i-pic .bg:hover {
 main section.itemList .item-box .item .i-des {
   padding: 10px 20px 15px;
   text-overflow: ellipsis;
+  border: 1px solid #d4d4d4;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -1258,7 +1257,7 @@ main section.paging {
 }
 main section.paging ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 30px;
   font-size: 14px;
 }
@@ -1295,7 +1294,7 @@ main section.paging ul li a.on {
   background: #3c3c3c;
 }
 main section.paging ul li a.prev, main section.paging ul li a.next {
-  background: url(../../../image/icon_arrow.svg);
+  background-image: url(../../../image/icon_arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1375,7 +1374,7 @@ footer .sitemap-banner-wrap {
   footer .sitemap-banner-wrap .sob .banner-box {
     width: 360px;
     height: 230px;
-    background: url(../../../image/footer_membership_banner.png);
+    background-image: url(../../../image/footer_membership_banner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1495,7 +1494,7 @@ footer .site-info-wrap .site-info .contact {
   }
 }
 footer .leeum-info-wrap {
-  background: url(../../../image/footer_bg_pattern.png);
+  background-image: url(../../../image/footer_bg_pattern.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1587,6 +1586,8 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
   height: 25px;
 }
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
-  font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=collect_antique.css.map */
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  opacity: 0.7;
+}

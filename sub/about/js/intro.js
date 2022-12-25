@@ -1,9 +1,15 @@
+$(function() {
+    $(window).on("scroll", function() {
+        AOS.init();
+    })
+}) 
+
 window.onload = function() {
     const close = document.querySelector('#close > a');
     const slide = document.querySelector('.slide-in');
-    let page = document.referrer;
+    let backUrl = document.referrer;
+    let page = backUrl ? backUrl : '../../index.html';
     let scrollLocation = window.scrollY;
-    console.log(page);
     
     close.addEventListener('click', e => {
         e.preventDefault();

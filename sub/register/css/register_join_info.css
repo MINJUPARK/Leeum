@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
@@ -26,10 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
@@ -187,8 +181,10 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-.container {
-  padding: 0;
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .select {
@@ -197,17 +193,12 @@ h6 {
 .select .image-info {
   position: relative;
   display: flex;
-  margin: 20px;
-}
-@media screen and (min-width: 1440px) {
-  .select .image-info {
-    position: relative;
-    margin: 20px 20px 0 20px;
-  }
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  margin: 20px 0 20px 0;
 }
 .select .image-info img {
   width: 40px;
-  margin-right: 16px;
 }
 @media screen and (min-width: 1440px) {
   .select .image-info img {
@@ -217,6 +208,8 @@ h6 {
 .select .image-info .text p {
   font-size: 12px;
   font-weight: 500;
+  letter-spacing: 0;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text p {
@@ -224,7 +217,8 @@ h6 {
   }
 }
 .select .image-info .text strong {
-  font-size: 24px;
+  margin-top: 2px;
+  font-size: 22px;
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text strong {
@@ -232,17 +226,23 @@ h6 {
   }
 }
 .select ul.select {
-  position: absolute;
+  position: static;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin: 0;
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  position: absolute;
   top: 0;
-  padding: 0 20px;
+  right: 20px;
+  padding: 0 20px 0 20px;
 }
 @media screen and (min-width: 1440px) {
   .select ul.select {
     width: 53%;
-    right: 0;
+    position: absolute;
+    left: inherit;
   }
 }
 .select ul.select li {
@@ -263,15 +263,17 @@ h6 {
 }
 .select ul.select li:nth-child(2) {
   width: 33.3333333333%;
-}
-.select ul.select li:nth-child(2).on {
-  background-color: #3c3c3c;
-  color: white;
+  border-left: 0;
+  border-right: 0;
 }
 .select ul.select li:last-child {
   width: 33.3333333333%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+.select ul.select li.on {
+  background-color: #3c3c3c;
+  color: white;
 }
 @media screen and (min-width: 768px) {
   .select ul.select li {
@@ -284,328 +286,22 @@ h6 {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
 }
 @media screen and (min-width: 1440px) {
   .select ul.select li span {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
-
-/* div.logo {
-    .image {
-        display: flex;
-        margin: 20px;
-
-        @include responsive(pc-screens) {
-            // padding: 120px 0 0 20px;
-        }
-
-        img {
-            width: 36px;
-            margin-right: 16px;
-
-            @include responsive(pc-screens) {
-                width: 70px;
-            }
-        }
-        p {
-            @include gothic-font(medium, 12px);
-
-            @include responsive(pc-screens) {
-                font-size: 22px;
-            }
-        }
-
-        strong {
-            font-size: 24px;
-
-            @include responsive(pc-screens) {
-                font-size: 36px;
-            }
-        }
-    }
-} */
-.member {
-  /*  .submit {
-       text-align: center;
-       input{
-           margin-top: 40px;
-           padding: 10px 15px;
-           border: 0;
-           color: white;
-           background-color: $dark-brown;
-           @include gothic-font(semibold, 12px);
-
-           @include responsive(pc-screens) {
-               font-size: 16px;
-               padding: 10px 22px;
-           }
-       }
-   } */
-}
-.member h6 {
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 100px;
-}
-@media screen and (min-width: 1440px) {
-  .member h6 {
-    font-size: 28px;
-    font-weight: 600;
-  }
-}
-.member p {
-  text-align: right;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0 20px 10px 20px;
-}
-@media screen and (min-width: 1440px) {
-  .member p {
-    font-size: 18px;
-  }
-}
-.member .import {
-  color: red;
-  margin-right: 3px;
-}
-.member form {
-  border-bottom: 2px solid #000;
-  border-top: 2px solid #000;
-}
-.member form label {
-  display: inline;
-}
-.member form input {
-  padding: 3px;
-  margin-right: 3px;
-}
-@media screen and (min-width: 1440px) {
-  .member form input {
-    font-size: 14px;
-    padding: 5px;
-  }
-}
-.member form .field {
-  display: flex;
-  border-bottom: 1px solid #000;
-  padding: 10px 20px;
-  /*  &.id,
-   &.tel-number {
-       input:last-child{
-           margin-right: 0;
-       }
-   } */
-  /*  &.id {
-       input {
-           border: 0;
-       }
-   }
-
-   &.pw,
-   &.pw-confirm {
-       input {
-           border: 0;
-       }
-   } */
-  /*   &.id,
-    &.pw,
-    &.pw-confirm{
-        span {
-            color: red;
-        }
-    }  */
-}
-.member form .field .letter {
-  font-size: 16px;
+.select ul.select li span b {
   font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field .letter {
-    font-size: 18px;
-  }
-}
-.member form .field label:first-child {
-  width: 34.2857142857%;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field label:first-child {
-    width: 17.1428571429%;
-  }
-}
-.member form .field.name input:first-child, .member form .field.birth input:first-child, .member form .field.id input:first-child, .member form .field.pw input:first-child, .member form .field.pw-confirm input:first-child {
-  width: 66%;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.name input:first-child, .member form .field.birth input:first-child, .member form .field.id input:first-child, .member form .field.pw input:first-child, .member form .field.pw-confirm input:first-child {
-    width: 16%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.name input {
-    width: 10%;
-  }
-}
-.member form .field.id {
-  display: flex;
-}
-.member form .field.id input:last-child {
-  margin-right: 0;
-}
-.member form .field.tel-number input {
-  width: 76%;
-}
-.member form .field.tel-number input:last-child {
-  margin-right: 0;
-  width: 75%;
-}
-.member form .field.mail input, .member form .field.address input {
-  background-color: #f3f3f3;
-}
-.member form .field.mail .entry {
-  position: relative;
-  display: flex;
-}
-.member form .field.mail .entry select {
-  position: absolute;
-  background: url(../../../image/icon_arrow_bk.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-position: right 3px center;
-  padding: 3px;
-  background-color: #fff;
-  background-size: 10px;
-  width: 31.695652%;
-  right: 0;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.mail .entry select {
-    left: 0;
-    margin-left: 250px;
-    text-align: center;
-    width: 8.695652%;
-    padding: 4px;
-  }
-}
-.member form .field.mail .entry input {
-  width: 27.695652%;
-  text-align: center;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.mail .entry input {
-    width: 25.695652%;
-  }
-}
-.member form .field.address .add .flex {
-  display: flex;
-  margin-bottom: 5px;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.address .add .flex {
-    width: 100%;
-    margin-bottom: 8px;
-  }
-}
-.member form .field.address .add .flex input:first-child {
-  width: 56%;
-  margin-right: 5px;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.address .add .flex input:first-child {
-    width: 16%;
-  }
-}
-.member form .field.address .add .flex input:last-child {
-  width: 40%;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.address .add .flex input:last-child {
-    width: 13%;
-  }
-}
-.member form .field.address .add .flex .postcode {
-  width: 35.608696%;
-  background-color: black;
-  color: white;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.address .add .flex .postcode {
-    width: 8.608696%;
-  }
-}
-.member form .field.address .add .alone-add {
-  margin-bottom: 5px;
-}
-.member form .field.address .add .alone-add input {
-  width: 67%;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.address .add .alone-add input {
-    width: 16%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.address .add .alone-add {
-    width: 100%;
-    margin-bottom: 8px;
-  }
-}
-.member form .field .entry {
-  width: 65.7142857143%;
-  /*  padding: 0 20px 0 10px; */
-}
-.member form .field .entry button {
-  background-color: #6e3b3b;
-  color: white;
-  padding: 8px;
-}
-.member form .field .entry input {
-  border: 0;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field .entry {
-    width: 100%;
-    padding-left: 0;
-  }
-}
-.member form .field .entry p {
-  text-align: left;
-}
-.member form .field.gender label:first-child, .member form .field.agree label:first-child {
-  margin-right: 5px;
-}
-.member form .field.agree {
-  border-bottom: 0;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.agree .entry {
-    position: relative;
-    margin-bottom: 25px;
-  }
-}
-.member form .field.agree .entry p {
-  margin-bottom: 0;
-  font-size: 13px;
-  font-weight: 200;
-  color: #c5c5c5;
-  margin: 6px 0 0 0;
-}
-@media screen and (min-width: 1440px) {
-  .member form .field.agree .entry p {
-    position: absolute;
-  }
 }
 
 div.movePage {
   margin-top: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -676,10 +372,255 @@ div.movePage .movePage-wrap a p {
     overflow: hidden;
   }
 }
-div.movePage .submit {
+
+.container .member h6 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+@media screen and (min-width: 1440px) {
+  .container .member h6 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+.container .member p {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 20px 10px 20px;
+}
+@media screen and (min-width: 1440px) {
+  .container .member p {
+    font-size: 18px;
+  }
+}
+.container .member .import {
+  color: red;
+  margin-right: 3px;
+}
+.container .member form {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form {
+    position: static;
+    left: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+  }
+}
+.container .member form label {
+  display: inline;
+}
+.container .member form input {
+  padding: 3px;
+  margin-right: 3px;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form input {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+.container .member form .field {
+  display: flex;
+  border-bottom: 1px solid #000;
+  padding: 10px 20px;
+}
+.container .member form .field .letter {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field .letter {
+    font-size: 18px;
+  }
+}
+.container .member form .field label:first-child {
+  width: 34.2857142857%;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field label:first-child {
+    width: 17.1428571429%;
+  }
+}
+.container .member form .field.name input:first-child, .container .member form .field.birth input:first-child, .container .member form .field.id input:first-child, .container .member form .field.pw input:first-child, .container .member form .field.pw-confirm input:first-child {
+  width: 66%;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.name input:first-child, .container .member form .field.birth input:first-child, .container .member form .field.id input:first-child, .container .member form .field.pw input:first-child, .container .member form .field.pw-confirm input:first-child {
+    width: 16%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.name input {
+    width: 10%;
+  }
+}
+.container .member form .field.id {
+  display: flex;
+}
+.container .member form .field.id input:last-child {
+  margin-right: 0;
+}
+.container .member form .field.tel-number input {
+  width: 76%;
+}
+.container .member form .field.tel-number input:last-child {
+  margin-right: 0;
+  width: 75%;
+}
+.container .member form .field.mail input, .container .member form .field.address input {
+  background-color: #f3f3f3;
+}
+.container .member form .field.mail .entry {
+  position: relative;
+  display: flex;
+}
+.container .member form .field.mail .entry select {
+  position: absolute;
+  background-image: url(../../../image/icon_arrow_bk.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: right 3px center;
+  padding: 3px;
+  background-color: #fff;
+  background-size: 10px;
+  width: 31.695652%;
+  right: 0;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.mail .entry select {
+    left: 0;
+    margin-left: 250px;
+    text-align: center;
+    width: 8.695652%;
+    padding: 4px;
+  }
+}
+.container .member form .field.mail .entry input {
+  width: 27.695652%;
   text-align: center;
 }
-div.movePage .submit input {
+@media screen and (min-width: 1440px) {
+  .container .member form .field.mail .entry input {
+    width: 25.695652%;
+  }
+}
+.container .member form .field.address .add .flex {
+  display: flex;
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.address .add .flex {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+.container .member form .field.address .add .flex input:first-child {
+  width: 56%;
+  margin-right: 5px;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.address .add .flex input:first-child {
+    width: 16%;
+  }
+}
+.container .member form .field.address .add .flex input:last-child {
+  width: 40%;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.address .add .flex input:last-child {
+    width: 13%;
+  }
+}
+.container .member form .field.address .add .flex .postcode {
+  width: 35.608696%;
+  background-color: black;
+  color: white;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.address .add .flex .postcode {
+    width: 8.608696%;
+  }
+}
+.container .member form .field.address .add .alone-add {
+  margin-bottom: 5px;
+}
+.container .member form .field.address .add .alone-add input {
+  width: 67%;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.address .add .alone-add input {
+    width: 16%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.address .add .alone-add {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+.container .member form .field .entry {
+  width: 65.7142857143%;
+}
+.container .member form .field .entry button {
+  background-color: #6e3b3b;
+  color: white;
+  padding: 8px;
+}
+.container .member form .field .entry input {
+  border: 0;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field .entry {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+.container .member form .field .entry p {
+  text-align: left;
+}
+.container .member form .field.gender label:first-child, .container .member form .field.agree label:first-child {
+  margin-right: 5px;
+}
+.container .member form .field.agree {
+  border-bottom: 0;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.agree .entry {
+    position: relative;
+    margin-bottom: 25px;
+  }
+}
+.container .member form .field.agree .entry p {
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 200;
+  color: #c5c5c5;
+  margin: 6px 0 0 0;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.agree .entry p {
+    position: absolute;
+  }
+}
+.container .member .submit {
+  text-align: center;
+}
+.container .member .submit input {
   padding: 10px 15px;
   border: 0;
   color: white;
@@ -688,8 +629,8 @@ div.movePage .submit input {
   font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
-  div.movePage .submit input {
+  .container .member .submit input {
     font-size: 16px;
     padding: 10px 22px;
   }
-}/*# sourceMappingURL=register_join_info.css.map */
+}

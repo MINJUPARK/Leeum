@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
@@ -26,10 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
@@ -187,47 +181,54 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-.container .select {
-  margin: 0 auto;
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-.container .select .image-info {
-  position: relative;
-  display: flex;
-  margin: 20px 0 20px 0;
-}
+
 @media screen and (min-width: 1440px) {
-  .container .select .image-info {
-    /* position: relative; */
-    /* margin: 20px; */
+  .select {
+    margin-top: 100px;
   }
 }
-.container .select .image-info img {
+.select .image-info {
+  position: relative;
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  margin: 20px 0 20px 0;
+}
+.select .image-info img {
   width: 40px;
-  margin-right: 16px;
 }
 @media screen and (min-width: 1440px) {
-  .container .select .image-info img {
+  .select .image-info img {
     width: 60px;
   }
 }
-.container .select .image-info .text p {
+.select .image-info .text p {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
-  .container .select .image-info .text p {
-    font-size: 22px;
+  .select .image-info .text p {
+    font-size: 20px;
   }
 }
-.container .select .image-info .text strong {
-  font-size: 24px;
+.select .image-info .text strong {
+  margin-top: 2px;
+  font-size: 22px;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
-  .container .select .image-info .text strong {
-    font-size: 32px;
+  .select .image-info .text strong {
+    font-size: 30px;
   }
 }
-.container .select ul.select {
+.select ul.select {
   position: static;
   left: 0;
   right: 0;
@@ -240,62 +241,149 @@ h6 {
   padding: 0 20px 0 20px;
 }
 @media screen and (min-width: 1440px) {
-  .container .select ul.select {
-    /* width: 42.85714285714286%; */
-    /* right: 20px; */
-    width: 53%;
-    position: absolute;
+  .select ul.select {
+    width: 40%;
+    padding: 0;
+    right: 20px;
     left: inherit;
   }
 }
-.container .select ul.select li {
+.select ul.select li {
   position: relative;
   height: 45px;
   border: 1px solid #c5c5c5;
   margin-top: 70px;
 }
 @media screen and (min-width: 1440px) {
-  .container .select ul.select li {
+  .select ul.select li {
     margin-top: 0;
   }
 }
-.container .select ul.select li:first-child {
+.select ul.select li:first-child {
   width: 33.3333333333%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-.container .select ul.select li:first-child.on {
-  background-color: #3c3c3c;
-  color: white;
-}
-.container .select ul.select li:nth-child(2) {
+.select ul.select li:nth-child(2) {
   width: 33.3333333333%;
+  border-left: 0;
+  border-right: 0;
 }
-.container .select ul.select li:last-child {
+.select ul.select li:last-child {
   width: 33.3333333333%;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.select ul.select li.on {
+  background-color: #3c3c3c;
+}
+.select ul.select li.on span {
+  color: white;
+}
 @media screen and (min-width: 768px) {
-  .container .select ul.select li {
+  .select ul.select li {
     height: 55px;
   }
 }
-.container .select ul.select li span {
+.select ul.select li span {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 11px;
-  font-weight: 500;
   text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c5c5c;
 }
-@media screen and (min-width: 1440px) {
-  .container .select ul.select li span {
-    font-size: 20px;
+@media screen and (min-width: 768px) {
+  .select ul.select li span {
+    font-size: 16px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .select ul.select li span {
+    font-size: 18px;
+  }
+}
+.select ul.select li span b {
+  font-weight: 600;
+}
+
+div.movePage {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 1440px) {
+  div.movePage {
+    margin-top: 100px;
+  }
+}
+div.movePage .movePage-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.movePage .movePage-wrap a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #3c3c3c;
+}
+div.movePage .movePage-wrap a:hover {
+  color: #000;
+}
+div.movePage .movePage-wrap a:hover::after {
+  transform: scale(1);
+}
+div.movePage .movePage-wrap a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: #000;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+div.movePage .movePage-wrap a img {
+  height: 14px;
+  filter: #3c3c3c;
+}
+div.movePage .movePage-wrap a.prev img {
+  margin-right: 10px;
+  transform: rotate(180deg);
+}
+div.movePage .movePage-wrap a.next .title {
+  text-align: right;
+}
+div.movePage .movePage-wrap a.next img {
+  margin-left: 10px;
+}
+div.movePage .movePage-wrap a p {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  div.movePage .movePage-wrap a p {
+    display: inline-block;
+  }
+  div.movePage .movePage-wrap a p .vert-bar {
+    width: 1px;
+    height: 16px;
+    margin: 0 15px;
+    vertical-align: middle;
+    background: #acacac;
+  }
+  div.movePage .movePage-wrap a p .title {
+    font-size: 16px;
+    font-weight: 400;
+    width: 200px;
+    color: #5c5c5c;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .container .flex {
     display: flex;
@@ -303,7 +391,6 @@ h6 {
   }
 }
 .container .flex .type {
-  border: 1px solid #c5c5c5;
   margin-top: 30px;
   padding: 50px 15px;
   text-align: center;
@@ -314,12 +401,19 @@ h6 {
   }
 }
 .container .flex .type:first-child {
+  border: 1px solid #6e3b3b;
   margin-top: 100px;
 }
 @media screen and (min-width: 1440px) {
   .container .flex .type:first-child {
     margin-top: 50px;
   }
+}
+.container .flex .type:nth-child(2) {
+  border: 1px solid #ac3f21;
+}
+.container .flex .type:last-child {
+  border: 1px solid #be6a15;
 }
 @media screen and (min-width: 1440px) {
   .container .flex .type {
@@ -328,14 +422,17 @@ h6 {
   }
 }
 .container .flex .type strong {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 30px;
   font-size: 24px;
   font-weight: 600;
 }
 .container .flex .type strong span {
+  margin-left: 5px;
   font-size: 22px;
-  font-weight: 200;
+  font-weight: 400;
+  color: #3c3c3c;
 }
 .container .flex .type strong:last-child {
   font-size: 18px;
@@ -361,23 +458,27 @@ h6 {
 }
 .container .flex .type p {
   margin-bottom: 30px;
-  font-size: 18px;
-  font-weight: 500;
+  text-align: center;
+  line-height: 1.8em;
+  color: #3c3c3c;
+  word-break: normal;
   color: #5c5c5c;
-  line-height: 26px;
 }
 .container .flex .type .button.origin a {
   width: 100%;
 }
 .container .flex .type .button.origin a button {
-  font-size: 22px;
-  font-weight: 600;
-  padding: 8px;
-  border: 1px solid #6e3b3b;
-  border-radius: 5px;
-  background-color: #6e3b3b;
-  color: white;
+  font-size: 18px;
+  font-weight: 500;
   width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #6e3b3b;
+  transition: 0.3s;
+}
+.container .flex .type .button.origin a button:hover {
+  box-shadow: rgba(110, 59, 59, 0.5) 0px 18px 25px -10px;
 }
 .container .flex .type .button.friends .request {
   display: flex;
@@ -386,97 +487,31 @@ h6 {
   width: 100%;
 }
 .container .flex .type .button.friends .request a button {
-  font-size: 22px;
-  font-weight: 600;
-  padding: 8px;
-  border: 1px solid #ac3f21;
-  border-radius: 5px;
-  background-color: #ac3f21;
-  color: white;
+  font-size: 18px;
+  font-weight: 500;
   width: 95%;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #ac3f21;
+  transition: 0.3s;
+}
+.container .flex .type .button.friends .request a button:hover {
+  box-shadow: rgba(172, 63, 33, 0.5) 0px 18px 25px -10px;
 }
 .container .flex .type .button.family a {
   width: 100%;
 }
 .container .flex .type .button.family a button {
-  font-size: 22px;
-  font-weight: 600;
-  padding: 8px;
-  border: 1px solid #be6a15;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  padding: 10px;
   border-radius: 5px;
-  background-color: #be6a15;
   color: white;
-  width: 100%;
+  background-color: #be6a15;
+  transition: 0.3s;
 }
-.container div.movePage {
-  margin-top: 40px;
+.container .flex .type .button.family a button:hover {
+  box-shadow: rgba(190, 106, 21, 0.5) 0px 18px 25px -10px;
 }
-@media screen and (min-width: 1440px) {
-  .container div.movePage {
-    margin-top: 100px;
-  }
-}
-.container div.movePage .movePage-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.container div.movePage .movePage-wrap a {
-  font-size: 15px;
-  font-weight: 600;
-  color: #3c3c3c;
-}
-.container div.movePage .movePage-wrap a:hover {
-  color: #000;
-}
-.container div.movePage .movePage-wrap a:hover::after {
-  transform: scale(1);
-}
-.container div.movePage .movePage-wrap a::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  margin-top: 10px;
-  background: #000;
-  transform: scale(0);
-  transition: transform 0.3s;
-}
-.container div.movePage .movePage-wrap a img {
-  height: 14px;
-  filter: #3c3c3c;
-}
-.container div.movePage .movePage-wrap a.prev img {
-  margin-right: 10px;
-  transform: rotate(180deg);
-}
-.container div.movePage .movePage-wrap a.next .title {
-  text-align: right;
-}
-.container div.movePage .movePage-wrap a.next img {
-  margin-left: 10px;
-}
-.container div.movePage .movePage-wrap a p {
-  display: none;
-}
-@media screen and (min-width: 1440px) {
-  .container div.movePage .movePage-wrap a p {
-    display: inline-block;
-  }
-  .container div.movePage .movePage-wrap a p .vert-bar {
-    width: 1px;
-    height: 16px;
-    margin: 0 15px;
-    vertical-align: middle;
-    background: #acacac;
-  }
-  .container div.movePage .movePage-wrap a p .title {
-    font-size: 16px;
-    font-weight: 400;
-    width: 200px;
-    color: #5c5c5c;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-}/*# sourceMappingURL=register_join_type.css.map */

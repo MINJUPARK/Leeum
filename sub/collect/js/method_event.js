@@ -1,4 +1,3 @@
-// const step = document.querySelectorAll('.process-step li');
 const method = document.querySelectorAll('.method-list > li');
 
 if(method[0].querySelector('.step-title')) {
@@ -38,5 +37,3 @@ function methodEvent() {
 }
 
 document.addEventListener("scroll", methodEvent);
-
-

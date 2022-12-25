@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
 /* -------------------------------------------------------------------------------------------------------------------- */
 .container {
   position: relative;
@@ -26,10 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 body {
@@ -191,7 +185,7 @@ header {
   position: relative;
   height: 280px;
   padding-top: 30px;
-  background: url(../image/facility_header.png);
+  background-image: url(../image/facility_header.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -232,7 +226,7 @@ header .logo-menu-wrap .logo-menu {
   }
 }
 header .logo-menu-wrap .logo-menu .logo a {
-  background: url(../../../image/logo_leeum_horizon.svg);
+  background-image: url(../../../image/logo_leeum_horizon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -342,20 +336,20 @@ header .logo-menu-wrap .logo-menu .pc-menu {
     height: 24px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.login {
-    background: url(../../../image/icon_user.svg);
+    background-image: url(../../../image/icon_user.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.reserve {
-    background: url(../../../image/icon_reserve.svg);
+    background-image: url(../../../image/icon_reserve.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 32px;
   }
   header .logo-menu-wrap .logo-menu .pc-menu .gnb.two .icon-menu li a.search {
-    background: url(../../../image/icon_search.svg);
+    background-image: url(../../../image/icon_search.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -607,7 +601,7 @@ header .breadcrumb-wrap {
     border-bottom: 0;
   }
   header .breadcrumb-wrap .breadcrumb .home a {
-    background: url(../../../image/icon_home.svg);
+    background-image: url(../../../image/icon_home.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -667,6 +661,25 @@ main .container .tabmenu-wrap .tab-nav {
   display: table;
   width: 100%;
 }
+main .container .tabmenu-wrap .tab-nav.fixed {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: fixed;
+  bottom: -2px;
+  padding-top: 20px;
+  border-top: 1px solid #d4d4d4;
+  background: #fff;
+  z-index: 1;
+}
+main .container .tabmenu-wrap .tab-nav.fixed .nav.on a:after {
+  bottom: 0;
+  top: -21px;
+  height: 3px;
+}
 main .container .tabmenu-wrap .tab-nav .nav {
   display: table-cell;
   width: 50px;
@@ -682,15 +695,30 @@ main .container .tabmenu-wrap .tab-nav .nav a {
   border-bottom: 1px solid #d4d4d4;
   height: 40px;
 }
-@media screen and (min-width: 768px) {
-  main .container .tabmenu-wrap .tab-nav .nav a {
-    font-size: 20px;
-  }
+main .container .tabmenu-wrap .tab-nav .nav a:hover {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+main .container .tabmenu-wrap .tab-nav .nav a:hover .shortcut {
+  filter: brightness(0) saturate(100%);
 }
 main .container .tabmenu-wrap .tab-nav .nav a:after {
   content: "";
   transition: 0.4s;
   width: 0px;
+}
+main .container .tabmenu-wrap .tab-nav .nav a .shortcut {
+  height: 14px;
+  margin-left: 5px;
+  margin-bottom: 1px;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(0%) saturate(0%) hue-rotate(326deg) brightness(90%) contrast(92%);
+  transition: 0.4s;
+}
+@media screen and (min-width: 768px) {
+  main .container .tabmenu-wrap .tab-nav .nav a .shortcut {
+    margin-left: 10px;
+  }
 }
 main .container .tabmenu-wrap .tab-nav .nav.on a {
   color: #000;
@@ -714,7 +742,12 @@ main .container .tabmenu-wrap .tab-nav .nav.on a:after {
   }
 }
 main .container .tabmenu-wrap .tab-con {
-  padding-top: 60px;
+  padding-top: 50px;
+}
+@media screen and (min-width: 1440px) {
+  main .container .tabmenu-wrap .tab-con {
+    padding-top: 100px;
+  }
 }
 main .container .tabmenu-wrap .tab-con .con-box {
   display: none;
@@ -726,7 +759,7 @@ main .main-img {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
-  height: 40vh;
+  height: 50vh;
 }
 @media screen and (min-width: 1440px) {
   main .main-img {
@@ -756,7 +789,7 @@ main .info .title {
     font-family: "KoPub Batang";
     font-size: 36px;
     font-weight: 400;
-    line-height: 1.8em;
+    line-height: 1.6em;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -779,18 +812,13 @@ main .info .des {
   line-height: 2em;
   color: #3c3c3c;
   word-break: normal;
-  margin-top: 44px;
-  margin-bottom: 77px;
+  margin-top: 34px;
+  margin-bottom: 144px;
 }
 @media screen and (min-width: 1440px) {
   main .info .des {
     font-size: 18px;
     font-weight: 400;
-  }
-}
-@media screen and (min-width: 1440px) {
-  main .info .des br {
-    display: none !important;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -971,16 +999,16 @@ main .M1 .M1-detail .link a {
 main .M1 .M1-detail .link a img {
   position: relative;
   top: -1px;
-  left: 12px;
+  left: 15px;
   height: 10px;
 }
 @media screen and (min-width: 1440px) {
   main .M1 .M1-detail .link a img {
-    width: 13px;
-    height: 13px;
+    width: 18px;
+    height: 14px;
     position: relative;
-    top: -2px;
-    left: 5px;
+    top: -1px;
+    left: 10px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1142,22 +1170,22 @@ main .M2 .M2-detail .link a {
     font-weight: 600;
     position: relative;
     top: -455px;
-    left: 50px;
+    left: 40px;
   }
 }
 main .M2 .M2-detail .link a img {
   position: relative;
   top: -1px;
-  left: 12px;
+  left: 15px;
   height: 10px;
 }
 @media screen and (min-width: 1440px) {
   main .M2 .M2-detail .link a img {
-    width: 13px;
-    height: 13px;
+    width: 18px;
+    height: 14px;
     position: relative;
     top: 198px;
-    left: 5px;
+    left: 10px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1336,19 +1364,18 @@ main .Kid .Kid-detail .link a {
 main .Kid .Kid-detail .link a img {
   position: relative;
   top: -1px;
-  left: 12px;
+  left: 15px;
   height: 10px;
 }
 @media screen and (min-width: 1440px) {
   main .Kid .Kid-detail .link a img {
-    width: 20px;
-    height: 15px;
-    position: relative;
-    top: -2px;
+    width: 18px;
+    height: 14px;
+    top: 0;
     left: 10px;
   }
 }
-main .container #facility.con-box {
+main .container #construction.con-box {
   display: block;
 }
 main .container .facility-box-wrap {
@@ -1373,7 +1400,7 @@ main .container .facility-box-wrap .facility-box img {
 main .container .facility-box-wrap .facility-box p:first-of-type {
   font-size: 16px;
   font-weight: 600;
-  margin: 15px 0 25px 0;
+  margin: 15px 0 10px 0;
 }
 @media screen and (min-width: 1440px) {
   main .container .facility-box-wrap .facility-box p:first-of-type {
@@ -1411,7 +1438,7 @@ main .container .facility-box-wrap .facility-box p:nth-of-type(2) {
     font-size: 18px;
   }
 }
-main .container .facility-box-wrap .facility-box p.locker {
+main .container .facility-box-wrap .facility-box p.mini-box {
   text-align: left;
   line-height: 2em;
   color: #3c3c3c;
@@ -1422,26 +1449,28 @@ main .container .facility-box-wrap .facility-box p.locker {
   border-radius: 5px;
   background: #f3f3f3;
 }
-main .container .facility-box-wrap .facility-box p.locker .type {
+main .container .facility-box-wrap .facility-box p.mini-box .type {
   font-size: 16px;
   font-weight: 600;
   width: 65px;
   color: #000;
 }
 @media screen and (min-width: 1440px) {
-  main .container .facility-box-wrap .facility-box p.locker .type {
+  main .container .facility-box-wrap .facility-box p.mini-box .type {
     font-size: 18px;
   }
 }
-main .container .facility-box-wrap .facility-box p.time {
-  display: flex;
+main .container .facility-box-wrap .facility-box p.mini-box .time {
+  font-size: 16px;
+  font-weight: 600;
 }
-main .container .facility-box-wrap .facility-box p.time span {
-  margin-left: 5px;
-}
-main .container .facility-box-wrap .facility-box p.notice {
-  margin-top: 10px;
+main .container .facility-box-wrap .facility-box p.mini-box .time span {
+  font-size: 15px;
+  font-weight: 400;
   color: #5c5c5c;
+}
+main .container .facility-box-wrap .facility-box p.mini-box .notice {
+  font-size: 14px;
 }
 main .container .facility-box-wrap .facility-box .facility-detail-more-wrap .facility-detail-more {
   display: flex;
@@ -1459,7 +1488,6 @@ main .container .facility-box-wrap .facility-box .facility-detail-more-wrap .fac
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
-  color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
   main .container .facility-box-wrap .facility-box .facility-detail-more-wrap .facility-detail-more .detail1 a, main .container .facility-box-wrap .facility-box .facility-detail-more-wrap .facility-detail-more .detail2 a {
@@ -1522,7 +1550,7 @@ main .director .background {
 main .director .director {
   position: absolute;
   top: 60px;
-  margin-left: -40px;
+  margin-left: -50px;
   width: 300px;
   height: 549px;
 }
@@ -1530,15 +1558,16 @@ main .director .director {
   main .director .director {
     position: absolute;
     top: 70px;
-    left: 510px;
+    left: 50%;
     width: 587px;
     height: 1028px;
+    transform: translateX(-39%);
   }
 }
 main .director h3 {
   position: absolute;
   top: 280px;
-  margin-left: 65px;
+  margin-left: 57px;
   color: #fff;
   line-height: 48px;
   font-size: 30px;
@@ -1546,18 +1575,19 @@ main .director h3 {
 }
 @media screen and (min-width: 1440px) {
   main .director h3 {
-    left: 695px;
+    left: 50%;
     top: 580px;
     margin-left: 0px;
     font-size: 46px;
     font-weight: 700;
     line-height: 68px;
+    transform: translateX(-50%);
   }
 }
 main .director p {
   position: absolute;
   top: 320px;
-  margin-left: 60px;
+  margin-left: 50px;
   color: #fff;
   line-height: 30px;
   opacity: 0.8;
@@ -1566,11 +1596,12 @@ main .director p {
 }
 @media screen and (min-width: 1440px) {
   main .director p {
-    left: 693px;
+    left: 50%;
     top: 640px;
     margin-left: 0px;
     font-size: 18px;
     font-weight: 200;
+    transform: translateX(-50%);
   }
 }
 main .director .award {
@@ -1600,7 +1631,7 @@ main .director .award .sub {
 main .director .director-info {
   position: absolute;
   top: 380px;
-  margin-left: -20px;
+  margin-left: -30px;
   line-height: 26px;
   text-align: center;
   color: #ffffff;
@@ -1625,8 +1656,9 @@ main .director .director-info span {
     font-size: 18px;
     line-height: 36px;
     margin-left: 0px;
-    left: 550px;
+    left: 50%;
     top: 700px;
+    transform: translateX(-50%);
   }
 }
 main .renewal-info {
@@ -1669,6 +1701,10 @@ main .renewal-info p:last-of-type {
   main .renewal-info p:last-of-type {
     margin: 60px 0 200px 130px;
   }
+}
+main .renewal-info p span {
+  display: inline;
+  vertical-align: top;
 }
 main .renewal-detail h4 {
   font-size: 18px;
@@ -1720,7 +1756,7 @@ main .renewal-detail ul li p:last-of-type {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
-  line-height: 1.5em;
+  line-height: 1.8em;
   color: #3c3c3c;
   word-break: normal;
   color: #5c5c5c;
@@ -1806,7 +1842,7 @@ footer .sitemap-banner-wrap {
   footer .sitemap-banner-wrap .sob .banner-box {
     width: 360px;
     height: 230px;
-    background: url(../../../image/footer_membership_banner.png);
+    background-image: url(../../../image/footer_membership_banner.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1926,7 +1962,7 @@ footer .site-info-wrap .site-info .contact {
   }
 }
 footer .leeum-info-wrap {
-  background: url(../../../image/footer_bg_pattern.png);
+  background-image: url(../../../image/footer_bg_pattern.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2018,6 +2054,8 @@ footer .leeum-info-wrap .leeum-info .sns-copyright .sns img {
   height: 25px;
 }
 footer .leeum-info-wrap .leeum-info .sns-copyright p {
-  font-size: 12px;
   margin-top: 20px;
-}/*# sourceMappingURL=about_facility.css.map */
+  font-size: 12px;
+  letter-spacing: -0.02em;
+  opacity: 0.7;
+}

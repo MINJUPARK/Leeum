@@ -23,7 +23,7 @@ main {
    
     .main-img {
         @include out_container();
-        height: 40vh;
+        height: 50vh;
 
         @include responsive(pc-screens) {
             @include in_container();    
@@ -46,7 +46,7 @@ main {
 
             @include responsive(pc-screens) {
                 @include batang_font(medium, $h2);
-                line-height: 1.8em;
+                line-height: 1.6em;
             }
 
             br {
@@ -67,17 +67,11 @@ main {
         .des {
             @include gothic_font(regular);
             @include content_align(justify);
-            margin-top: 44px;
-            margin-bottom: 77px;
+            margin-top: 34px;
+            margin-bottom: 144px;
 
             @include responsive(pc-screens) {
                 @include gothic_font(regular, $h6);
-            }
-
-            br {
-                @include responsive(pc-screens) {
-                    display: none !important;
-                }
             }
         }
     }
@@ -231,14 +225,14 @@ main {
 
                     img { 
                         position: relative;
-                        top:-1px; left:12px; 
+                        top:-1px; left:15px; 
                         height: 10px;
                         
                         @include responsive(pc-screens) {
-                            width: 13px;
-                            height: 13px;
+                            width: 18px;
+                            height: 14px;
                             position: relative;
-                            top: -2px; left:5px;
+                            top: -1px; left:10px;
                         }
                     }
                 }
@@ -374,20 +368,20 @@ main {
                     @include responsive(pc-screens) {
                         @include gothic_font(semibold,18px);
                         position: relative;
-                        top:-455px; left:50px;
+                        top:-455px; left:40px;
                         
                     }
                     
                     img {  
                         position: relative;
-                        top:-1px; left:12px; 
+                        top:-1px; left:15px; 
                         height: 10px;
                         
                         @include responsive(pc-screens) {
-                            width: 13px;
-                            height: 13px;
+                            width: 18px;
+                            height: 14px;
                             position: relative;
-                            top: 198px; left:5px;
+                            top: 198px; left:10px;
                         }
                     }
                 }
@@ -539,16 +533,13 @@ main {
                     }
                     
                     img {  
-                        
                         position: relative;
-                        top:-1px; left:12px; 
+                        top: -1px; left: 15px; 
                         height: 10px; 
 
                         @include responsive(pc-screens) {
-                            width: 20px;
-                            height: 15px;
-                            position: relative;
-                            top: -2px; left:10px;
+                            width: 18px; height: 14px;
+                            top: 0; left: 10px;
                         }
                     }
                 }
@@ -557,7 +548,7 @@ main {
     }
 
     .container {   
-        #facility.con-box {
+        #construction.con-box {
             display: block;
         }
             
@@ -581,7 +572,7 @@ main {
                     p {
                         &:first-of-type {
                             @include gothic_font(semibold);  
-                            margin :15px 0 25px 0;   
+                            margin :15px 0 10px 0;   
     
                             @include responsive(pc-screens) {
                                 @include gothic_font(semibold,24px);
@@ -615,7 +606,8 @@ main {
                         }
                         
                         
-                        &.locker {
+                        &.mini-box {
+                            
                             @include content_align(left, 2em);
                             margin-top: -20px;
                             margin-bottom: 50px;
@@ -632,19 +624,19 @@ main {
                                     font-size: 18px;
                                 }
                             }
-                        }
-                        
-                        &.time {
-                            display: flex;
 
-                            span {
-                                margin-left: 5px;
+                            .time {
+                                @include gothic_font(semibold);
+
+                                span {
+                                    @include gothic_font(regular, 15px);
+                                    color: $bk2;
+                                }
                             }
-                        }
-
-                        &.notice {
-                            margin-top: 10px;
-                            color: $bk2;
+    
+                            .notice {
+                                font-size: 14px;
+                            }
                         }
                     }
 
@@ -662,7 +654,6 @@ main {
                                 a {
                                     display: inline-block;
                                     @include gothic_font(medium);
-                                    color: $bk2;
                 
                                     @include responsive(pc-screens) {
                                         font-size: $h6;
@@ -724,50 +715,53 @@ main {
         .director {
             position: absolute;
             top:60px;
-            margin-left:-40px ;
+            margin-left:-50px ;
             width:300px;
             height:549px;
 
             @include responsive(pc-screens) {
                 position: absolute;
                 top:70px;
-                left:510px;
+                left:50%;
                 width:587px;
                 height:1028px;
+                transform: translateX(-39%);
             }
         }
 
         h3 {
             position: absolute;
             top:280px;
-            margin-left: 65px;
+            margin-left: 57px;
             color: #fff;
             line-height: 48px;
             @include gothic_font(bold,30px);
 
             @include responsive(pc-screens) {
-                left:695px;
-                top:580px; 
+                left:50%;
+                top:580px;
                 margin-left: 0px;
                 @include gothic_font(bold,46px);
                 line-height: 68px;
+                transform: translateX(-50%);
             }
         }
         
         p {
             position: absolute;
             top:320px;  
-            margin-left: 60px;         
+            margin-left: 50px;         
             color: #fff;
             line-height: 30px;
             opacity: 0.8;
             @include gothic_font(light,14px);
 
             @include responsive(pc-screens) {
-                left:693px;
+                left:50%;
                 top:640px;
                 margin-left: 0px;
                 @include gothic_font(light,18px);
+                transform: translateX(-50%);
             }
         }
         
@@ -797,7 +791,7 @@ main {
         .director-info {
             position: absolute;
             top:380px;
-            margin-left: -20px;
+            margin-left: -30px;
             line-height: 26px;
             text-align: center;
             color:#ffffff;
@@ -808,21 +802,22 @@ main {
                     display: none !important;
                 }
             }
-
+            
             span {
                 display: inline;
-
+                
                 @include responsive(pc-screens) {
                     display: block;
                 }
             }
-
+            
             @include responsive(pc-screens) {
                 font-size: 18px;
                 line-height: 36px;
                 margin-left: 0px;
-                left:550px;
+                left:50%;
                 top:700px;
+                transform: translateX(-50%);
             }
         }
     }
@@ -861,6 +856,11 @@ main {
                 @include responsive(pc-screens) {
                     margin: 60px 0 200px 130px;
                 }
+            }
+
+            span {
+                display: inline;
+                vertical-align: top;
             }
         }
     }
@@ -904,7 +904,7 @@ main {
 
                     &:last-of-type {
                         @include gothic_font(regular);
-                        @include content_align(center, 1.5em);
+                        @include content_align(center, 1.8em);
                         color: $bk2;
                         margin-bottom: 50px;
 

@@ -306,6 +306,15 @@ main {
 
                     .i-des {
 
+                        span {
+                            @include gothic_font(medium, 14px);
+                            color: $yellow-brown;
+
+                            @include responsive(pc-screens) {
+                                font-size: 16px;
+                            }
+                        }
+                        
                         strong {
                             width: 100%;
                             white-space: nowrap;

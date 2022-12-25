@@ -1,5 +1,4 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css");
-@import url("https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css");
+@charset 'utf-8';
 @import './style.scss';
 @import './mixin.scss';
 
@@ -28,9 +27,9 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
+// html, body {
+//     height: 100%;
+// }
 
 body {
     

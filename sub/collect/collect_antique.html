@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Author" content="박민주">
-    <meta name="Description" content="리움미술관은 명품 수집을 넘어 명장 · 명작을 발굴한 소장품을 전시하고 있습니다.">
+    <meta name="author" content="박민주">
+    <meta name="description" content="리움미술관은 명품 수집을 넘어 명장 · 명작을 발굴한 소장품을 전시하고 있습니다.">
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-kopub@1.0/kopubbatang.min.css">
     <link rel="stylesheet" type="text/css" href="./css/collect_antique.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common.js"></script>
@@ -153,7 +155,7 @@
                         </div>
                         <div class="gnb two">
                             <ul class="mini-menu">
-                                <li><a href="https://leeumstore.org/" class="store"><img src="../../image/icon_store.svg">리움스토어</a></li>
+                                <li><a href="https://leeumstore.org/" class="store"><img src="../../image/icon_store.svg">리움 스토어</a></li>
                                 <li>
                                     <div class="lang">
                                         <img src="../../image/icon_language.svg">KOR<img src="../../image/icon_arrow.svg" class="dropdown">
@@ -202,7 +204,7 @@
                     </li>
                     <li class="loc">
                         <div class="step">
-                            <a href="">고미술</a><img src="../../image/icon_dropdown.svg" class="dropdown">
+                            <a href="../collect/collect_antique.html">고미술</a><img src="../../image/icon_dropdown.svg" class="dropdown">
                         </div>
                         <ul class="opt">
                             <li><a href="../collect/collect_antique.html" class="on">고미술</a></li>
@@ -262,8 +264,8 @@
                                         <li class="title">지정 문화재</li>
                                         <li>
                                             <ul class="list">
-                                                <li><input type="checkbox" id="n-treasure"><label for="n-treasure">국보</label></li>
-                                                <li><input type="checkbox" id="treasure"><label for="treasure">보물</label></li>
+                                                <li><input type="checkbox" name="designated" id="n-treasure"><label for="n-treasure">국보</label></li>
+                                                <li><input type="checkbox" name="designated" id="treasure"><label for="treasure">보물</label></li>
                                             </ul>
                                             
                                         </li>
@@ -272,12 +274,12 @@
                                         <li class="title">시대</li>
                                         <li>
                                             <ul class="list">
-                                                <li><input type="checkbox" id="t-king"><label for="t-king">삼국시대</label></li>
-                                                <li><input type="checkbox" id="gaya"><label for="gaya">가야</label></li>
-                                                <li><input type="checkbox" id="silla"><label for="silla">신라</label></li>
-                                                <li><input type="checkbox" id="u-silla"><label for="u-silla">통일신라</label></li>
-                                                <li><input type="checkbox" id="goryeo"><label for="goryeo">고려</label></li>
-                                                <li><input type="checkbox" id="joseon"><label for="joseon">조선</label></li>
+                                                <li><input type="checkbox" name="period" id="t-king"><label for="t-king">삼국시대</label></li>
+                                                <li><input type="checkbox" name="period" id="gaya"><label for="gaya">가야</label></li>
+                                                <li><input type="checkbox" name="period" id="silla"><label for="silla">신라</label></li>
+                                                <li><input type="checkbox" name="period" id="u-silla"><label for="u-silla">통일신라</label></li>
+                                                <li><input type="checkbox" name="period" id="goryeo"><label for="goryeo">고려</label></li>
+                                                <li><input type="checkbox" name="period" id="joseon"><label for="joseon">조선</label></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -285,14 +287,14 @@
                                         <li class="title">기법 및 안료</li>
                                         <li>
                                             <ul class="list">
-                                                <li><input type="checkbox" id="coloring"><label for="coloring">채색</label></li>
-                                                <li><input type="checkbox" id="sumuk"><label for="sumuk">수묵</label></li>
-                                                <li><input type="checkbox" id="sumuk-damchae"><label for="sumuk-damchae">수묵담채</label></li>
-                                                <li><input type="checkbox" id="mukseo"><label for="mukseo">묵서</label></li>
-                                                <li><input type="checkbox" id="geumeun-ni"><label for="geumeun-ni">금은니</label></li>
-                                                <li><input type="checkbox" id="geum-ni"><label for="geum-ni">금니</label></li>
-                                                <li><input type="checkbox" id="geumeun-jang"><label for="geumeun-jang">금은장</label></li>
-                                                <li><input type="checkbox" id="najeon"><label for="najeon">나전</label></li>
+                                                <li><input type="checkbox" name="material" id="coloring"><label for="coloring">채색</label></li>
+                                                <li><input type="checkbox" name="material" id="sumuk"><label for="sumuk">수묵</label></li>
+                                                <li><input type="checkbox" name="material" id="sumuk-damchae"><label for="sumuk-damchae">수묵담채</label></li>
+                                                <li><input type="checkbox" name="material" id="mukseo"><label for="mukseo">묵서</label></li>
+                                                <li><input type="checkbox" name="material" id="geumeun-ni"><label for="geumeun-ni">금은니</label></li>
+                                                <li><input type="checkbox" name="material" id="geum-ni"><label for="geum-ni">금니</label></li>
+                                                <li><input type="checkbox" name="material" id="geumeun-jang"><label for="geumeun-jang">금은장</label></li>
+                                                <li><input type="checkbox" name="material" id="najeon"><label for="najeon">나전</label></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -300,23 +302,23 @@
                                         <li class="title">재질</li>
                                         <li>
                                             <ul class="list">
-                                                <li><input type="checkbox" id="paper"><label for="paper">종이</label></li>
-                                                <li><input type="checkbox" id="paper-mulberry"><label for="paper-mulberry">닥종이</label></li>
-                                                <li><input type="checkbox" id="tree"><label for="tree">나무</label></li>
-                                                <li><input type="checkbox" id="clay"><label for="clay">점토</label></li>
-                                                <li><input type="checkbox" id="w-clay"><label for="w-clay">백토</label></li>
-                                                <li><input type="checkbox" id="daemo"><label for="daemo">대모</label></li>
-                                                <li><input type="checkbox" id="silks"><label for="silks">비단</label></li>
-                                                <li><input type="checkbox" id="jade"><label for="jade">옥</label></li>
-                                                <li><input type="checkbox" id="gold"><label for="gold">금</label></li>
-                                                <li><input type="checkbox" id="sliver"><label for="sliver">은</label></li>
-                                                <li><input type="checkbox" id="copper"><label for="copper">동</label></li>
-                                                <li><input type="checkbox" id="bronze"><label for="bronze">청동</label></li>
-                                                <li><input type="checkbox" id="silver-inlaid"><label for="silver-inlaid">은입사</label></li>
-                                                <li><input type="checkbox" id="steel"><label for="steel">철</label></li>
-                                                <li><input type="checkbox" id="plated"><label for="plated">도금</label></li>
-                                                <li><input type="checkbox" id="glass"><label for="glass">유리</label></li>
-                                                <li><input type="checkbox" id="calm"><label for="calm">조개</label></li>
+                                                <li><input type="checkbox" name="texture" id="paper"><label for="paper">종이</label></li>
+                                                <li><input type="checkbox" name="texture" id="paper-mulberry"><label for="paper-mulberry">닥종이</label></li>
+                                                <li><input type="checkbox" name="texture" id="tree"><label for="tree">나무</label></li>
+                                                <li><input type="checkbox" name="texture" name="texture" id="clay"><label for="clay">점토</label></li>
+                                                <li><input type="checkbox" name="texture" id="w-clay"><label for="w-clay">백토</label></li>
+                                                <li><input type="checkbox" name="texture" id="daemo"><label for="daemo">대모</label></li>
+                                                <li><input type="checkbox" name="texture" id="silks"><label for="silks">비단</label></li>
+                                                <li><input type="checkbox" name="texture" id="jade"><label for="jade">옥</label></li>
+                                                <li><input type="checkbox" name="texture" id="gold"><label for="gold">금</label></li>
+                                                <li><input type="checkbox" name="texture" id="sliver"><label for="sliver">은</label></li>
+                                                <li><input type="checkbox" name="texture" id="copper"><label for="copper">동</label></li>
+                                                <li><input type="checkbox" name="texture" id="bronze"><label for="bronze">청동</label></li>
+                                                <li><input type="checkbox" name="texture" id="silver-inlaid"><label for="silver-inlaid">은입사</label></li>
+                                                <li><input type="checkbox" name="texture" id="steel"><label for="steel">철</label></li>
+                                                <li><input type="checkbox" name="texture" id="plated"><label for="plated">도금</label></li>
+                                                <li><input type="checkbox" name="texture" id="glass"><label for="glass">유리</label></li>
+                                                <li><input type="checkbox" name="texture" id="calm"><label for="calm">조개</label></li>
                                             </ul>
                                         </li>
                                     </ul>

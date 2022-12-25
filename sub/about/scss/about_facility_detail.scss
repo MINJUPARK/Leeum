@@ -15,21 +15,22 @@ header {
 main {
     @include main_sub();
     overflow-x: hidden;
+    
     .container {
         .main-img {
+            @include out_container();
+            height: 300px;
+            
+            @include responsive(pc-screens){
+                @include in_container();
+                height: 600px;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
             img{
-                margin-top: 0px;
-                width:100%;
-                height: 300px;
+                width: 100%; height: 100%;
                 object-fit: cover;
-                @include out_container();
-    
-                @include responsive(pc-screens){
-                    @include in_container();
-                    margin-top: 30px;
-                    width: 100%;
-                    height: auto;
-                }
             }
         }
 

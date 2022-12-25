@@ -13,24 +13,25 @@ header {
 }
 
 main {
-
+    overflow-x: hidden;
+    
     .num86 {
         padding-bottom: 40px;
         border-top: 2px solid $bk2;
     }
     .content-title {
-        display: flex;
-        align-items: center;
-        padding: 10px 0;
+        @include flex_between_center();
+        padding: 10px 20px;
         text-align: center;
         border-bottom: 1px solid $bk5;
 
         span:first-child {
             display: none;
 
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 display: block;
                 width: 60px;
+                text-align: left;
             }
         }
 
@@ -45,11 +46,10 @@ main {
             padding-top: 12px;
             text-align: center;
 
-            @media screen and(min-width:$break-pc) {
+            @include responsive(pc-screens) {
                 display: block;
                 padding: 8px;
                 width: 100px;
-                margin-left: 20px;
                 font-size: 15px;
             }
         }
@@ -71,19 +71,15 @@ main {
         }
 
         span {
-            padding: 10px;
             white-space: nowrap;
             color: $bk2;
-            
-            @include responsive(pc-screens){
-                padding-right: 0;
-            }
         }
 
     }
 
     .pic {
         text-align: center;
+        border-radius: 5px;
 
         img {
             width: 100%;
@@ -136,13 +132,15 @@ main {
         }
 
         .shortcut {
+            display: flex;
+            align-items: center;
             @include gothic_font(medium);
             color: $yellow-brown;
             vertical-align: middle;
 
             img {
                 height: 12px;
-                margin-left: 5px;
+                margin-left: 10px;
                 filter: $svg-yellowbrown;
             }
         }
@@ -167,15 +165,19 @@ main {
     }
 
     .import-text{
-        margin-bottom: 30px;
         padding: 24px 30px;
+        margin-bottom: 30px;
+        text-align: left;
         background-color: $bk6;
-
 
         @include responsive(pc-screens){
             align-items: flex-start;
             width: 480px;
             font-size: 18px;
+        }
+
+        th {
+            width: 25%;
         }
 
         p {

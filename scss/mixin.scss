@@ -125,10 +125,12 @@
     @if ($imgPath == sub)   { $imgPath: '../image/'; }       // (기본) 서브 페이지 전용 이미지일 때 
     @if ($imgPath == index) { $imgPath: '../../../image/'; } // (매개변수 필수) 공통으로 사용하는 아미지일 때
 
-    background: url(#{$imgPath}#{$url});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: {
+        image: url(#{$imgPath}#{$url});
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    }
 }
 
 
@@ -244,11 +246,13 @@
 
         select {
             @include full_bg('icon_arrow_bk.svg', index);
-            background-position: right 20px center;
-            background-color: #fff;
-            background-size: 10px;
             width: 37%;
             padding: 0 20px;
+            background: {
+                position: right 20px center;
+                size: 10px;
+                color: #fff;
+            }
 
             @include responsive(pc-screens) {
                 width: 15.51724137931034%;
@@ -715,13 +719,11 @@
                     }
 
                     .lang {
-                        // margin-top: 5px;
                         font-size: 18px;
                         color: $bk2;
                         
                         @include responsive(pc-screens) {
-                            // margin-top: 15px;
-                            font-size: 22px;
+                            font-size: 20px;
                         }
 
                         .name {
@@ -803,8 +805,8 @@
         position: relative;
         width: 48%;
         margin-bottom: 20px;
-        border: 1px solid $bk5;
         border-radius: 5px;
+        overflow: hidden;
 
         @include responsive(pc-screens) {
             width: 23.5%;
@@ -845,6 +847,9 @@
         .i-des {
             padding: 10px 20px 15px;
             text-overflow: ellipsis;
+            border: 1px solid $bk5;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
             overflow: hidden;
             
             @include responsive(tablet-screens) {
@@ -987,8 +992,10 @@
                 width: 120px; height: 30px;
                 padding: 0 10px;
                 @include full_bg('icon_arrow_bk.svg', index);
-                background-position: right 10px center;
-                background-size: 8px;
+                background: {
+                    position: right 10px center;
+                    size: 8px;
+                }
             }
         }
     }
@@ -1047,7 +1054,8 @@
     margin: 30px 0 60px;
     
     ul {
-        @include flex_between();
+        display: flex;
+        justify-content: center;
         margin-top: 30px;
         font-size: 14px;
 

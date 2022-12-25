@@ -4,8 +4,6 @@
 @import '../../../scss/mixin.scss';
 @import '../../../scss/mixin_header.scss';
 
-
-
 @keyframes slideup {
     from {
         margin-top: 100vh;
@@ -77,9 +75,7 @@
         }
     }
 
-    main {
-        word-break: keep-all;
-        
+    main {        
         @include responsive(tablet-screens) { font-size: 20px; }
         
         div h2 {
@@ -103,7 +99,6 @@
                 display: inline; 
             } 
         }
-
 
         section.intro-mission-wrap {
             
@@ -386,10 +381,10 @@
                     p {
                         margin-top: 40px;
                         line-height: 2em;
-                        @include gothic_font(light, 18px);
+                        @include gothic_font(light);
 
                         @include responsive(pc-screens) {
-                            line-height: 44px;
+                            font-size: $h6;
                         }
                     }
                 }
@@ -409,12 +404,10 @@
                 p {
                     margin-top: 30px;
                     @include content_align(center, 2em);
-                    @include gothic_font(medium);
                     @include line_break();
                     
                     @include responsive(tablet-screens) {
                         font-size: 18px;
-                        line-height: 36px;
                     }
                     @include responsive(pc-screens) {
                         margin-top: 45px;

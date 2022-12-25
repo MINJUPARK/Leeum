@@ -340,6 +340,7 @@ main {
         .slide-main {
             height: 350px;
             border-radius: 5px;
+            overflow: hidden;
             @include responsive (tablet-screens) {
                 height: auto;
             } 
@@ -394,7 +395,6 @@ main {
 
                 .floor-select-group {
 
-                    $tablet2: 920px;
                     @include responsive(tablet-screens) {
                         width: calc(480px / 1440px * 100%);
                     }
@@ -435,7 +435,7 @@ main {
                             @include icon_rotate(180deg);
                             width: 18px;
     
-                            @media screen and(min-width: $tablet2) {
+                            @include responsive(tablet-screens) {
                                 display: none;
                             }
                         }
@@ -458,7 +458,7 @@ main {
                             border-bottom: 1px solid $bk4;
                             cursor: pointer;
 
-                            @media screen and(min-width: $tablet2) {
+                            @include responsive(tablet-screens) {
                                 height: 52px * 1.25;
                                 line-height: 52px * 1.25;
                                 font-size: 20px + 5px;
@@ -476,12 +476,18 @@ main {
                                 color: #000;
                                 background-color: $bk6;
                                 
-                                @media screen and(min-width: $tablet2) {
+                                @include responsive(tablet-screens) {
                                     background: {
                                         image: url(../../../image/icon_arrow_tail.svg);
                                         repeat: no-repeat ;
                                         position: center right;
                                         origin: content-box;
+                                        size: 40px 15px;
+                                    }
+                                }
+
+                                @include responsive(pc-screens) {
+                                    background: {
                                         size: 50px 20px;
                                     }
                                 }
