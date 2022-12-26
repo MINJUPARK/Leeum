@@ -153,7 +153,7 @@ input[type=radio]:checked::before {
   transform: scale(1) translate(-50%, -50%);
 }
 input[type=radio]::before {
-  content: "●";
+  content: "✓";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -238,7 +238,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 @media screen and (min-width: 1440px) {
   .select {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 }
 .select .image-info {
@@ -293,7 +293,7 @@ input[type=number]::-webkit-inner-spin-button {
   .select ul.select {
     width: 40%;
     padding: 0;
-    top: 104px;
+    top: 63px;
     right: 20px;
     left: inherit;
   }
@@ -363,7 +363,6 @@ input[type=number]::-webkit-inner-spin-button {
 div.movePage {
   margin-top: 40px;
   padding: 40px 0 60px;
-  margin-top: 0;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -432,6 +431,11 @@ div.movePage .movePage-wrap a p {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+  }
+}
+@media screen and (min-width: 1440px) {
+  div.movePage {
+    margin-top: 0 !important;
   }
 }
 

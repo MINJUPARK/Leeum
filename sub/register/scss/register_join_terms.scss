@@ -4,229 +4,212 @@
 @import '../../../scss/mixin.scss';
 @import './register.scss';
 
-
-// body {
-    // overflow-y: scroll;
-    .all{
-        .container {
-    overflow-x: hidden;
-            .join-term {
-                margin-top: 120px;
-        
-                p.title {
-                    @include gothic_font(semibold, 20px);
-                    text-align: center;
-                    margin-bottom: 20px;
-                    
-                    @include responsive(pc-screens) {
-                        font-size: 28px;
-                        margin-bottom: 40px;
-                    }
+.all{
+    .container {
+        overflow-x: hidden;
+        .join-term {
+            margin-top: 80px;
+    
+            p.title {
+                @include gothic_font(semibold, 20px);
+                text-align: center;
+                margin-bottom: 20px;
+                
+                @include responsive(pc-screens) {
+                    font-size: 28px;
+                    margin-bottom: 40px;
                 }
-        
-                form {
-                    @include out_container();
-                    border-top: 2px solid #000;
-                    border-bottom: 2px solid #000;
-        
-                    @include responsive(pc-screens) {
-                        @include in_container();
+            }
+    
+            form {
+                @include out_container();
+                border-top: 2px solid #000;
+                border-bottom: 2px solid #000;
+    
+                @include responsive(pc-screens) {
+                    @include in_container();
+                }
+    
+                .agr-plus{
+                    border-bottom: 1px solid #000;
+                
+                    &:last-child {
+                        border-bottom: 0;
                     }
-        
-                    .agr-plus{
-                        border-bottom: 1px solid #000;
                     
-                        &:last-child {
-                            border-bottom: 0;
-                        }
-                        
-                        .agr {
-                            position: relative;
-                                .agr-whole{
-                                    @include flex_between_center();
-                                    padding: 15px 20px;
-        
-                                    @include responsive(pc-screens) {
-                                        padding: 20px;
-                                    }
-        
-                                    input[type=checkbox] {
-                                        width: 20px; height: 20px;
-                                        margin-right: 10px;
-                                    }
-                                    
-                                    label {
-                                        @include gothic_font(medium);
-                                        display: flex;
-                                        flex: 1;
-        
-                                        strong {
-                                            margin-left: 5px;
-                                        }
-                                    }
-        
-                                    .plus {
-                                        cursor: pointer;
-        
-                                        .status {
-                                            // font-size: 16px;
-                                            margin-right: 6px;
-                
-                                            @include responsive(pc-screens) {
-                                                font-size: 20px;
-                                                margin-right: 10px;
-                                            }
-                                        }
-                
-                                        .dropdown {
-                                            @include icon_rotate(180deg);
-                                            width: 10px;
-                                            height: 10px;
-            
-                                            @include responsive(pc-screens) {
-                                                width: 16px;
-                                                height: 8px;
-                                            }
-                                        }
-                                    }
-
+                    .agr {
+                        position: relative;
+                            .agr-whole{
+                                @include flex_between_center();
+                                padding: 15px 20px;
+    
+                                input[type=checkbox] {
+                                    width: 20px; height: 20px;
+                                    margin-right: 10px;
                                 }
                                 
-                                &:last-child {
-                                    border-bottom: 0;
-                                }
-        
-                                input[type=checkbox] + label {
-                                    font-size: 16px;
-                                    margin-left: 0;
-                                    @include responsive(pc-screens) {
-                                        font-size: 20px;
+                                label {
+                                    @include gothic_font(medium);
+                                    display: flex;
+                                    flex: 1;
+    
+                                    strong {
+                                        margin-left: 5px;
                                     }
                                 }
-        
-                                input[type=checkbox]:checked + label {
-                                    font-weight: 700;
-                                }
-        
-                                strong {
-                                    @include gothic_font(medium, 16px);
-                                    color: red;
-        
-                                    @include responsive(pc-screens) {
-                                        font-size: 20px;
-                                    }
-                                }
-        
-                            .agree {
-                                // display: none;
-                                background-color: $bk6;
-                                // overflow-y: scroll;
-                                // overflow: auto;
-                                @include responsive(pc-screens) {
-                                    background-color: $bk6;
-                                    display: block;
-                                }
-                                p {
-                                    color: $bk1;
-                                    padding: 20px;
-                                    text-align: justify;
-                                    line-height: 20px;
-        
-                                    @include responsive(pc-screens) {
-                                        font-size: 22px;
-                                        padding: 40px 60px;
-                                        line-height: 40px;
-                                    }
-        
-                                    span {
-                                        display: block;
-                                        @include gothic_font(medium);
-                                        margin-bottom: 10px;
-        
-                                        &:last-child {
-                                            margin-top: 10px;
+    
+                                .plus {
+                                    cursor: pointer;
+    
+                                    .status {
+                                        // font-size: 16px;
+                                        margin-right: 6px;
+            
+                                        @include responsive(pc-screens) {
+                                            font-size: 20px;
+                                            margin-right: 10px;
                                         }
+                                    }
+            
+                                    .dropdown {
+                                        @include icon_rotate(180deg);
+                                        width: 10px;
+                                        height: 10px;
         
                                         @include responsive(pc-screens) {
-                                            color: $bk1;
-                                            margin-bottom: 20px;
-                                            font-size: 22px;
-            
-                                            &:last-child {
-                                                margin-top: 50px;
-                                            }
+                                            width: 16px;
+                                            height: 8px;
                                         }
                                     }
                                 }
-        
-                                .pre {
-                                    height: 200px;
-                                    padding: 20px;
-                                    text-align: justify;
-                                    white-space: pre-line;
-                                    font-size: 14px;
-                                    
-                                    overflow-y: scroll;
+
+                            }
+                            
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+    
+                            input[type=checkbox] + label {
+                                font-size: 16px;
+                                margin-left: 0;
+                                @include responsive(pc-screens) {
+                                    font-size: 18px;
+                                }
+                            }
+    
+                            input[type=checkbox]:checked + label {
+                                font-weight: 700;
+                            }
+    
+                            strong {
+                                @include gothic_font(medium, 16px);
+                                color: red;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: 18px;
+                                }
+                            }
+    
+                        .agree {
+                            background-color: $bk6;
+                            overflow: auto;
+                            @include responsive(pc-screens) {
+                                background-color: $bk6;
+                                display: block;
+                            }
+                            p {
+                                color: $bk1;
+                                padding: 20px;
+                                text-align: justify;
+                                line-height: 20px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: 22px;
+                                    padding: 40px 60px;
+                                    line-height: 40px;
+                                }
+    
+                                span {
+                                    display: block;
+                                    @include gothic_font(medium);
+                                    margin-bottom: 10px;
+    
+                                    &:last-child {
+                                        margin-top: 10px;
+                                    }
+    
                                     @include responsive(pc-screens) {
-                                        font-size: 20px;
+                                        color: $bk1;
+                                        margin-bottom: 20px;
+                                        font-size: 22px;
+        
+                                        &:last-child {
+                                            margin-top: 50px;
+                                        }
                                     }
                                 }
                             }
-        
-                            .agree-person {
-                                // display: none;
-                                background-color: $bk6;
+    
+                            .pre {
+                                height: 200px;
+                                padding: 20px 55px;
+                                @include content_align(justify);
+                                white-space: pre-line;
+                            }
+                        }
+    
+                        .agree-person {
+                            background-color: $bk6;
+                            @include responsive(pc-screens) {
+                                display: block;
+                            }
+                            p {
+                                padding: 20px;
+                                color: $bk1;
+                                line-height: 20px;
+                                text-align: justify;
+    
                                 @include responsive(pc-screens) {
+                                    padding: 40px 60px;
+                                    line-height: 40px;
+                                    font-size: 22px;
+                                }
+    
+                                span {
                                     display: block;
-                                }
-                                p {
-                                    padding: 20px;
+                                    @include gothic_font(medium);
                                     color: $bk1;
-                                    line-height: 20px;
-                                    text-align: justify;
-        
+    
+                                    &:first-child {
+                                        margin-bottom: 10px;
+    
+                                        @include responsive(pc-screens) {
+                                            margin-bottom: 20px;
+                                        }
+                                    }
+    
                                     @include responsive(pc-screens) {
-                                        padding: 40px 60px;
-                                        line-height: 40px;
                                         font-size: 22px;
-                                    }
-        
-                                    span {
-                                        display: block;
-                                        @include gothic_font(medium);
-                                        color: $bk1;
-        
-                                        &:first-child {
-                                            margin-bottom: 10px;
-        
-                                            @include responsive(pc-screens) {
-                                                margin-bottom: 20px;
-                                            }
-                                        }
-        
-                                        @include responsive(pc-screens) {
-                                            font-size: 22px;
-                                            margin-bottom: 26px;
-                                        }
-                                    }
-        
-                                    .preservation {
-                                        margin-top: 30px;
-                                        @include responsive(pc-screens) {
-                                            margin-top: 60px;
-                                        }
+                                        margin-bottom: 26px;
                                     }
                                 }
-        
-                                .second-pre {
-                                    padding: 20px;
-                                    justify-content: space-between;
-                                    white-space: pre-line;
-                                    font-size: 14px;
-        
+    
+                                .preservation {
+                                    margin-top: 30px;
                                     @include responsive(pc-screens) {
-                                        font-size: 20px;
+                                        margin-top: 60px;
                                     }
+                                }
+                            }
+    
+                            .second-pre {
+                                padding: 20px;
+                                justify-content: space-between;
+                                white-space: pre-line;
+                                font-size: 14px;
+    
+                                @include responsive(pc-screens) {
+                                    font-size: 20px;
                                 }
                             }
                         }
@@ -235,4 +218,5 @@
             }
         }
     }
-// }
+}
+

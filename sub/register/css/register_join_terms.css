@@ -238,7 +238,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 @media screen and (min-width: 1440px) {
   .select {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 }
 .select .image-info {
@@ -293,7 +293,7 @@ input[type=number]::-webkit-inner-spin-button {
   .select ul.select {
     width: 40%;
     padding: 0;
-    top: 104px;
+    top: 63px;
     right: 20px;
     left: inherit;
   }
@@ -363,7 +363,6 @@ input[type=number]::-webkit-inner-spin-button {
 div.movePage {
   margin-top: 40px;
   padding: 40px 0 60px;
-  margin-top: 0;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -434,12 +433,17 @@ div.movePage .movePage-wrap a p {
     overflow: hidden;
   }
 }
+@media screen and (min-width: 1440px) {
+  div.movePage {
+    margin-top: 0 !important;
+  }
+}
 
 .all .container {
   overflow-x: hidden;
 }
 .all .container .join-term {
-  margin-top: 120px;
+  margin-top: 80px;
 }
 .all .container .join-term p.title {
   font-size: 20px;
@@ -486,11 +490,6 @@ div.movePage .movePage-wrap a p {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-}
-@media screen and (min-width: 1440px) {
-  .all .container .join-term form .agr-plus .agr .agr-whole {
-    padding: 20px;
-  }
 }
 .all .container .join-term form .agr-plus .agr .agr-whole input[type=checkbox] {
   width: 20px;
@@ -541,7 +540,7 @@ div.movePage .movePage-wrap a p {
 }
 @media screen and (min-width: 1440px) {
   .all .container .join-term form .agr-plus .agr input[type=checkbox] + label {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .all .container .join-term form .agr-plus .agr input[type=checkbox]:checked + label {
@@ -554,11 +553,12 @@ div.movePage .movePage-wrap a p {
 }
 @media screen and (min-width: 1440px) {
   .all .container .join-term form .agr-plus .agr strong {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .all .container .join-term form .agr-plus .agr .agree {
   background-color: #f3f3f3;
+  overflow: auto;
 }
 @media screen and (min-width: 1440px) {
   .all .container .join-term form .agr-plus .agr .agree {
@@ -600,16 +600,12 @@ div.movePage .movePage-wrap a p {
 }
 .all .container .join-term form .agr-plus .agr .agree .pre {
   height: 200px;
-  padding: 20px;
+  padding: 20px 55px;
   text-align: justify;
+  line-height: 2em;
+  color: #3c3c3c;
+  word-break: normal;
   white-space: pre-line;
-  font-size: 14px;
-  overflow-y: scroll;
-}
-@media screen and (min-width: 1440px) {
-  .all .container .join-term form .agr-plus .agr .agree .pre {
-    font-size: 20px;
-  }
 }
 .all .container .join-term form .agr-plus .agr .agree-person {
   background-color: #f3f3f3;

@@ -11,7 +11,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .select{
     @include responsive(pc-screens) {
-        margin-top: 100px;
+        margin-top: 60px;
     }
 
     .image-info {
@@ -62,7 +62,7 @@ input[type=number]::-webkit-inner-spin-button {
         @include responsive(pc-screens) {
             width: 40%;
             padding: 0;
-            top: 104px;
+            top: 63px;
             right: 20px;
             left: inherit;
         }
@@ -134,5 +134,8 @@ input[type=number]::-webkit-inner-spin-button {
 div.movePage {
     @include move_page();
     padding: 40px 0 60px;
-    margin-top: 0;
+
+    @include responsive(pc-screens) {
+        margin-top: 0 !important;
+    }
 }
