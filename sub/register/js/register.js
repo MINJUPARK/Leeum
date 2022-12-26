@@ -31,8 +31,11 @@ $(function() {
   
   
   function dropdown() {
+    const status = $(this).children('.status');
       $(this).children('.dropdown').toggleClass('active');
-      $(this).next().slideToggle();
+      if (status.text() == '열기') { status.text('닫기'); } 
+    else                         { status.text('열기'); }
+      $(this).parents('.agr-whole').next().slideToggle();
   }
   $('.agr .plus').on('click', dropdown);
 

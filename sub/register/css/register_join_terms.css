@@ -384,22 +384,22 @@ div.movePage .movePage-wrap a p {
   }
 }
 
-.container .join-term {
+.all .container .join-term {
   margin-top: 120px;
 }
-.container .join-term p.title {
+.all .container .join-term p.title {
   font-size: 20px;
   font-weight: 600;
   text-align: center;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term p.title {
+  .all .container .join-term p.title {
     font-size: 28px;
     margin-bottom: 40px;
   }
 }
-.container .join-term form {
+.all .container .join-term form {
   position: relative;
   left: 50%;
   right: 50%;
@@ -410,7 +410,7 @@ div.movePage .movePage-wrap a p {
   border-bottom: 2px solid #000;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form {
+  .all .container .join-term form {
     position: static;
     left: 0;
     right: 0;
@@ -418,204 +418,202 @@ div.movePage .movePage-wrap a p {
     margin: 0;
   }
 }
-.container .join-term form .agr-plus {
+.all .container .join-term form .agr-plus {
   border-bottom: 1px solid #000;
 }
-.container .join-term form .agr-plus:last-child {
+.all .container .join-term form .agr-plus:last-child {
   border-bottom: 0;
 }
-.container .join-term form .agr-plus .agr {
+.all .container .join-term form .agr-plus .agr {
   position: relative;
 }
-.container .join-term form .agr-plus .agr .agr-whole {
+.all .container .join-term form .agr-plus .agr .agr-whole {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agr-whole {
+  .all .container .join-term form .agr-plus .agr .agr-whole {
     padding: 20px;
   }
 }
-.container .join-term form .agr-plus .agr .agr-whole input[type=checkbox] {
+.all .container .join-term form .agr-plus .agr .agr-whole input[type=checkbox] {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
-.container .join-term form .agr-plus .agr .agr-whole label {
+.all .container .join-term form .agr-plus .agr .agr-whole label {
   font-size: 16px;
   font-weight: 500;
   display: flex;
   flex: 1;
 }
-.container .join-term form .agr-plus .agr .agr-whole label strong {
+.all .container .join-term form .agr-plus .agr .agr-whole label strong {
   margin-left: 5px;
 }
-.container .join-term form .agr-plus .agr .agr-whole .plus {
+.all .container .join-term form .agr-plus .agr .agr-whole .plus {
   cursor: pointer;
 }
-.container .join-term form .agr-plus .agr .agr-whole .plus span {
-  font-size: 13px;
+.all .container .join-term form .agr-plus .agr .agr-whole .plus .status {
   margin-right: 6px;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agr-whole .plus span {
-    font-size: 23px;
+  .all .container .join-term form .agr-plus .agr .agr-whole .plus .status {
+    font-size: 20px;
     margin-right: 10px;
   }
 }
-.container .join-term form .agr-plus .agr .agr-whole .plus .dropdown {
+.all .container .join-term form .agr-plus .agr .agr-whole .plus .dropdown {
   transition: 0.3s;
   width: 10px;
+  height: 10px;
 }
-.container .join-term form .agr-plus .agr .agr-whole .plus .dropdown.active {
+.all .container .join-term form .agr-plus .agr .agr-whole .plus .dropdown.active {
   transform: rotate(180deg);
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agr-whole .plus .dropdown {
-    width: 23px;
-    height: 10px;
+  .all .container .join-term form .agr-plus .agr .agr-whole .plus .dropdown {
+    width: 16px;
+    height: 8px;
   }
 }
-.container .join-term form .agr-plus .agr:last-child {
+.all .container .join-term form .agr-plus .agr:last-child {
   border-bottom: 0;
 }
-.container .join-term form .agr-plus .agr input[type=checkbox] + label {
+.all .container .join-term form .agr-plus .agr input[type=checkbox] + label {
   font-size: 16px;
   margin-left: 0;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr input[type=checkbox] + label {
+  .all .container .join-term form .agr-plus .agr input[type=checkbox] + label {
     font-size: 20px;
   }
 }
-.container .join-term form .agr-plus .agr input[type=checkbox]:checked + label {
+.all .container .join-term form .agr-plus .agr input[type=checkbox]:checked + label {
   font-weight: 700;
 }
-.container .join-term form .agr-plus .agr strong {
+.all .container .join-term form .agr-plus .agr strong {
   font-size: 16px;
   font-weight: 500;
   color: red;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr strong {
+  .all .container .join-term form .agr-plus .agr strong {
     font-size: 20px;
   }
 }
-.container .join-term form .agr-plus .agr .agree {
-  display: none;
+.all .container .join-term form .agr-plus .agr .agree {
   background-color: #f3f3f3;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree {
+  .all .container .join-term form .agr-plus .agr .agree {
     background-color: #f3f3f3;
     display: block;
   }
 }
-.container .join-term form .agr-plus .agr .agree p {
+.all .container .join-term form .agr-plus .agr .agree p {
   color: #3c3c3c;
   padding: 20px;
   text-align: justify;
   line-height: 20px;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree p {
+  .all .container .join-term form .agr-plus .agr .agree p {
     font-size: 22px;
     padding: 40px 60px;
     line-height: 40px;
   }
 }
-.container .join-term form .agr-plus .agr .agree p span {
+.all .container .join-term form .agr-plus .agr .agree p span {
   display: block;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
 }
-.container .join-term form .agr-plus .agr .agree p span:last-child {
+.all .container .join-term form .agr-plus .agr .agree p span:last-child {
   margin-top: 10px;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree p span {
+  .all .container .join-term form .agr-plus .agr .agree p span {
     color: #3c3c3c;
     margin-bottom: 20px;
     font-size: 22px;
   }
-  .container .join-term form .agr-plus .agr .agree p span:last-child {
+  .all .container .join-term form .agr-plus .agr .agree p span:last-child {
     margin-top: 50px;
   }
 }
-.container .join-term form .agr-plus .agr .agree .pre {
-  overflow-y: scroll;
+.all .container .join-term form .agr-plus .agr .agree .pre {
   height: 200px;
   padding: 20px;
   text-align: justify;
   white-space: pre-line;
   font-size: 14px;
+  overflow-y: scroll;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree .pre {
+  .all .container .join-term form .agr-plus .agr .agree .pre {
     font-size: 20px;
   }
 }
-.container .join-term form .agr-plus .agr .agree-person {
-  display: none;
+.all .container .join-term form .agr-plus .agr .agree-person {
   background-color: #f3f3f3;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree-person {
+  .all .container .join-term form .agr-plus .agr .agree-person {
     display: block;
   }
 }
-.container .join-term form .agr-plus .agr .agree-person p {
+.all .container .join-term form .agr-plus .agr .agree-person p {
   padding: 20px;
   color: #3c3c3c;
   line-height: 20px;
   text-align: justify;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree-person p {
+  .all .container .join-term form .agr-plus .agr .agree-person p {
     padding: 40px 60px;
     line-height: 40px;
     font-size: 22px;
   }
 }
-.container .join-term form .agr-plus .agr .agree-person p span {
+.all .container .join-term form .agr-plus .agr .agree-person p span {
   display: block;
   font-size: 16px;
   font-weight: 500;
   color: #3c3c3c;
 }
-.container .join-term form .agr-plus .agr .agree-person p span:first-child {
+.all .container .join-term form .agr-plus .agr .agree-person p span:first-child {
   margin-bottom: 10px;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree-person p span:first-child {
+  .all .container .join-term form .agr-plus .agr .agree-person p span:first-child {
     margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree-person p span {
+  .all .container .join-term form .agr-plus .agr .agree-person p span {
     font-size: 22px;
     margin-bottom: 26px;
   }
 }
-.container .join-term form .agr-plus .agr .agree-person p .preservation {
+.all .container .join-term form .agr-plus .agr .agree-person p .preservation {
   margin-top: 30px;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree-person p .preservation {
+  .all .container .join-term form .agr-plus .agr .agree-person p .preservation {
     margin-top: 60px;
   }
 }
-.container .join-term form .agr-plus .agr .agree-person .second-pre {
+.all .container .join-term form .agr-plus .agr .agree-person .second-pre {
   padding: 20px;
   justify-content: space-between;
   white-space: pre-line;
   font-size: 14px;
 }
 @media screen and (min-width: 1440px) {
-  .container .join-term form .agr-plus .agr .agree-person .second-pre {
+  .all .container .join-term form .agr-plus .agr .agree-person .second-pre {
     font-size: 20px;
   }
-}
+}/*# sourceMappingURL=register_join_terms.css.map */
