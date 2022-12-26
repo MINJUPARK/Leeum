@@ -153,7 +153,7 @@ input[type=radio]:checked::before {
   transform: scale(1) translate(-50%, -50%);
 }
 input[type=radio]::before {
-  content: "●";
+  content: "✓";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1212,4 +1212,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   letter-spacing: -0.02em;
   opacity: 0.7;
-}/*# sourceMappingURL=news_notice.css.map */
+}

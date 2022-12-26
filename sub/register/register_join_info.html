@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="정윤정">
-    <meta name="description" content="리움미술관 정보 입력">
+    <meta name="description" content="리움미술관 회원에 되시면 발빠른 전시 소식과 함께 다양한 혜택을 만나실 수 있습니다.">
     <link rel="icon" href="../../image/favicon_light.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="../../image/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.6/variable/pretendardvariable-jp-dynamic-subset.css">
@@ -21,7 +21,7 @@
     <div class="container">
         <div class="select">
             <div class="image-info">
-                <img src="../../image/favicon_light.svg" alt="">
+                <a href="../../index.html"><img src="../../image/favicon_light.svg" alt=""></a>
                 <div class="text">
                     <p>LEEUM</p>
                     <strong>회원가입</strong>
@@ -34,8 +34,10 @@
             </ul>
         </div>
         <div class="member" name="joinForm">
-                <h6>정보 입력</h6>
-                <!-- <p class="essential"><span class="import">*</span>필수입력사항</p> -->
+                <div class="title-box">
+                    <p class="title">정보 입력</p>
+                    <p class="essential"><span class="import">*</span>필수 입력사항</p>
+                </div>
                 <form name="join_cert">
                     <!-- <div class="field name">
                         <label class="letter" for="name"><span class="import">*</span>이름</label>
@@ -129,7 +131,7 @@
                         <div class="entry radio">
                             <label><input type="radio" name="agree" id="agree">동의</label>
                             <label><input type="radio" name="agree" id="non_agree">비동의</label>
-                            <p>※ 동의 거부 시 서비스가 제한이 될 수 있습니다.</p>
+                            <p class="warning">※ 동의 거부 시 서비스 제한이 있을 수 있습니다.</p>
                         </div>
                     </div>
                 </form>

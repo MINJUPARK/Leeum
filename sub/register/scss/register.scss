@@ -17,8 +17,10 @@ input[type=number]::-webkit-inner-spin-button {
     .image-info {
         position: relative;
         display: flex;
+        align-items: center;
         column-gap: 12px;
         margin: 20px 0 20px 0;
+        z-index: 50;
 
         img {
             width: 40px;
@@ -30,12 +32,12 @@ input[type=number]::-webkit-inner-spin-button {
 
         .text {
             p {
-                @include gothic-font(regular, 12px);
+                @include gothic_font(regular, 12px);
                 letter-spacing: 0;
                 color: $bk2;
 
                 @include responsive(pc-screens) {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
 
@@ -111,7 +113,7 @@ input[type=number]::-webkit-inner-spin-button {
                 @include element_center();
                 width: 100%;
                 text-align: center;
-                @include gothic-font(medium, 14px);
+                @include gothic_font(medium, 14px);
                 color: $bk2;
                 
                 @include responsive(tablet-screens) {
@@ -128,14 +130,36 @@ input[type=number]::-webkit-inner-spin-button {
             }
         }
     } 
+}
 
+.submit {
+    text-align: center;
+    a {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px 22px;
+        margin-top: 30px;
+        border: 0;
+        color: white;
+        background-color: $dark-brown;
+        @include gothic_font(medium, 16px);
+
+        @include responsive(pc-screens) {
+            width: 10%;
+            padding: 15px 32px;
+            font-size: 16px;
+        }
+    }
 }
 
 div.movePage {
     @include move_page();
-    padding: 40px 0 60px;
+    padding-bottom: 60px;
 
     @include responsive(pc-screens) {
-        margin-top: 0 !important;
+        margin-top: 40px !important;
     }
 }

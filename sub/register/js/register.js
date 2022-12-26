@@ -71,18 +71,19 @@ function selectAll(selectAll)  {
 
 function check() {
   var agreeAll = document.agreeAll;
-  if(!agreeAll.termStorage.checked) {
+  if(!agreeAll.termStorage.checked && !agreeAll.perInfoStorage.checked) {
+      alert("동의하지 않은 항목이 있습니다.");
+      return false;
+  }
+  else if(!agreeAll.termStorage.checked) {
       alert("이용약관 동의가 필요합니다.");
-      agreeAll.termStorage.focus();
       return false;
-  }
-
-  if(!agreeAll.perInfoStorage.checked) {
+  } else if(!agreeAll.perInfoStorage.checked) {
       alert("개인정보 수집 이용에 대한 동의가 필요합니다.");
-      agreeAll.perInfoStorage.focus();
       return false;
-  }
+  } else {
     location.href = "../register/register_join_cert.html";
+  }
 }
 
 

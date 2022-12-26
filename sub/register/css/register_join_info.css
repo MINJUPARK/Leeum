@@ -238,15 +238,17 @@ input[type=number]::-webkit-inner-spin-button {
 
 @media screen and (min-width: 1440px) {
   .select {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 }
 .select .image-info {
   position: relative;
   display: flex;
+  align-items: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
   margin: 20px 0 20px 0;
+  z-index: 50;
 }
 .select .image-info img {
   width: 40px;
@@ -264,7 +266,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .select .image-info .text strong {
@@ -293,7 +295,7 @@ input[type=number]::-webkit-inner-spin-button {
   .select ul.select {
     width: 40%;
     padding: 0;
-    top: 104px;
+    top: 63px;
     right: 20px;
     left: inherit;
   }
@@ -360,10 +362,33 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
 }
 
+.submit {
+  text-align: center;
+}
+.submit a {
+  width: 100%;
+}
+.submit input {
+  width: 100%;
+  padding: 10px 22px;
+  margin-top: 30px;
+  border: 0;
+  color: white;
+  background-color: #6e3b3b;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  .submit input {
+    width: 10%;
+    padding: 15px 32px;
+    font-size: 16px;
+  }
+}
+
 div.movePage {
   margin-top: 40px;
-  padding: 40px 0 60px;
-  margin-top: 0;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -434,34 +459,53 @@ div.movePage .movePage-wrap a p {
     overflow: hidden;
   }
 }
+@media screen and (min-width: 1440px) {
+  div.movePage {
+    margin-top: 40px !important;
+  }
+}
 
 .container {
   overflow-x: hidden;
 }
-.container .member h6 {
+.container .member {
+  margin-top: 120px;
+}
+.container .member .import {
+  margin-right: 5px;
+  color: red;
+}
+.container .member .title-box {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 30px;
+}
+.container .member .title-box .title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: 600;
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 100px;
 }
 @media screen and (min-width: 1440px) {
-  .container .member h6 {
+  .container .member .title-box .title {
     font-size: 28px;
-    font-weight: 600;
   }
 }
-.container .member p {
-  text-align: right;
+.container .member .title-box .essential {
+  margin-top: 60px;
   font-size: 14px;
   font-weight: 500;
 }
 @media screen and (min-width: 1440px) {
-  .container .member p {
-    font-size: 18px;
+  .container .member .title-box .essential {
+    margin-right: 25px;
+    font-size: 16px;
   }
-}
-.container .member .import {
-  margin-right: 4px;
-  color: red;
 }
 .container .member form {
   position: relative;
@@ -470,8 +514,8 @@ div.movePage .movePage-wrap a p {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
-  border-bottom: 2px solid #000;
-  border-top: 2px solid #000;
+  border-bottom: 2px solid #5c5c5c;
+  border-top: 2px solid #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
   .container .member form {
@@ -492,12 +536,13 @@ div.movePage .movePage-wrap a p {
 @media screen and (min-width: 1440px) {
   .container .member form input {
     font-size: 14px;
-    padding: 5px;
+    padding: 10px;
   }
 }
 .container .member form .field {
   display: flex;
-  border-bottom: 1px solid #000;
+  align-items: center;
+  border-bottom: 1px solid #acacac;
   padding: 15px 20px;
 }
 .container .member form .field .letter {
@@ -512,20 +557,20 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container .member form .field label:first-child {
-  width: 30%;
+  width: 35%;
+}
+@media screen and (min-width: 768px) {
+  .container .member form .field label:first-child {
+    width: 25%;
+  }
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field label:first-child {
-    width: 17.1428571429%;
+    width: 15%;
   }
 }
 .container .member form .field.name input:first-child, .container .member form .field.birth input:first-child, .container .member form .field.id input:first-child, .container .member form .field.pw input:first-child, .container .member form .field.pw-confirm input:first-child {
-  width: 66%;
-}
-@media screen and (min-width: 1440px) {
-  .container .member form .field.name input:first-child, .container .member form .field.birth input:first-child, .container .member form .field.id input:first-child, .container .member form .field.pw input:first-child, .container .member form .field.pw-confirm input:first-child {
-    width: 16%;
-  }
+  flex: 1;
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.name input {
@@ -556,12 +601,21 @@ div.movePage .movePage-wrap a p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
-.container .member form .field.mail .entry .write #mail {
-  width: 40%;
+.container .member form .field.mail .entry .write #mail, .container .member form .field.mail .entry .write #email_add {
+  width: 45%;
 }
-.container .member form .field.mail .entry .write #email_add {
-  width: 50%;
+@media screen and (min-width: 768px) {
+  .container .member form .field.mail .entry .write #mail, .container .member form .field.mail .entry .write #email_add {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field.mail .entry .write {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
 }
 .container .member form .field.mail .entry select {
   width: 100%;
@@ -578,11 +632,10 @@ div.movePage .movePage-wrap a p {
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.mail .entry select {
-    left: 0;
-    margin-left: 250px;
-    text-align: center;
-    width: 8.695652%;
-    padding: 4px;
+    width: 45%;
+    padding: 10px;
+    margin-top: 0;
+    text-align: left;
   }
 }
 .container .member form .field.mail .entry input {
@@ -597,19 +650,21 @@ div.movePage .movePage-wrap a p {
 .container .member form .field.address .add .flex {
   display: flex;
   justify-content: space-between;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.address .add .flex {
+    justify-content: flex-start;
     width: 100%;
   }
 }
 .container .member form .field.address .add .flex input:first-child {
-  width: 56%;
-  margin-right: 5px;
+  width: 60%;
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.address .add .flex input:first-child {
-    width: 16%;
+    width: 70%;
   }
 }
 .container .member form .field.address .add .flex input:last-child {
@@ -617,19 +672,19 @@ div.movePage .movePage-wrap a p {
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.address .add .flex input:last-child {
-    width: 13%;
+    width: 30%;
   }
 }
 .container .member form .field.address .add .flex .postcode {
-  padding: 8px 16px;
+  padding: 8px 0;
   margin-right: 0;
-  font-size: 12px;
+  font-size: 14px;
   background: #3c3c3c;
   color: white;
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.address .add .flex .postcode {
-    width: 8.608696%;
+    padding: 10px 0;
   }
 }
 .container .member form .field.address .add .alone-add {
@@ -638,27 +693,48 @@ div.movePage .movePage-wrap a p {
 .container .member form .field.address .add .alone-add input {
   width: 100%;
 }
-@media screen and (min-width: 1440px) {
-  .container .member form .field.address .add .alone-add input {
-    width: 16%;
-  }
-}
 .container .member form .field .entry {
   width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field .entry#add {
+    width: 35%;
+  }
 }
 .container .member form .field .entry:not(#add) {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field .entry:not(#add) {
+    flex-wrap: nowrap;
+    width: 35%;
+  }
+}
+.container .member form .field .entry #id {
+  width: 65%;
 }
 .container .member form .field .entry.radio {
   justify-content: flex-start !important;
 }
 .container .member form .field .entry.radio label {
-  width: 30%;
+  width: 25%;
 }
 @media screen and (min-width: 490px) {
+  .container .member form .field .entry.radio label {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container .member form .field .entry.radio label {
+    width: 15%;
+  }
+}
+@media screen and (min-width: 1440px) {
   .container .member form .field .entry.radio label {
     width: 20%;
   }
@@ -670,9 +746,16 @@ div.movePage .movePage-wrap a p {
   margin-bottom: 0;
 }
 .container .member form .field .entry button {
-  padding: 8px 16px;
+  width: 30%;
+  padding: 8px 0;
+  font-size: 14px;
   background-color: #6e3b3b;
   color: white;
+}
+@media screen and (min-width: 1440px) {
+  .container .member form .field .entry button {
+    padding: 10px 0;
+  }
 }
 .container .member form .field .entry input {
   border: 0;
@@ -692,50 +775,20 @@ div.movePage .movePage-wrap a p {
   border: 1px solid #c5c5c5;
 }
 .container .member form .field.gender input[type=radio]:checked, .container .member form .field.agree input[type=radio]:checked {
-  border: 0;
+  border: 1px solid #ac3f21;
 }
 .container .member form .field.agree {
   border-bottom: 0;
 }
-@media screen and (min-width: 1440px) {
-  .container .member form .field.agree .entry {
-    position: relative;
-    margin-bottom: 25px;
-  }
-}
-.container .member form .field.agree .entry p {
-  width: 100%;
+.container .member form .field.agree .warning {
   margin-top: 10px;
-  margin-bottom: 0;
   font-size: 14px;
   font-weight: 400;
   color: #5c5c5c;
 }
-@media screen and (min-width: 1440px) {
-  .container .member form .field.agree .entry p {
-    position: absolute;
+@media screen and (min-width: 768px) {
+  .container .member form .field.agree .warning {
+    margin-top: 0;
+    font-size: 15px;
   }
 }
-.container .member .submit {
-  text-align: center;
-}
-.container .member .submit a {
-  width: 100%;
-}
-.container .member .submit input {
-  width: 100%;
-  padding: 10px 22px;
-  margin-top: 30px;
-  border: 0;
-  color: white;
-  background-color: #6e3b3b;
-  font-size: 16px;
-  font-weight: 500;
-}
-@media screen and (min-width: 1440px) {
-  .container .member .submit input {
-    width: 10%;
-    padding: 15px 32px;
-    font-size: 16px;
-  }
-}/*# sourceMappingURL=register_join_info.css.map */

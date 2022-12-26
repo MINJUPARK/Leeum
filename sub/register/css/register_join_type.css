@@ -244,9 +244,11 @@ input[type=number]::-webkit-inner-spin-button {
 .select .image-info {
   position: relative;
   display: flex;
+  align-items: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
   margin: 20px 0 20px 0;
+  z-index: 50;
 }
 .select .image-info img {
   width: 40px;
@@ -264,7 +266,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .select .image-info .text strong {
@@ -360,9 +362,33 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
 }
 
+.submit {
+  text-align: center;
+}
+.submit a {
+  width: 100%;
+}
+.submit input {
+  width: 100%;
+  padding: 10px 22px;
+  margin-top: 30px;
+  border: 0;
+  color: white;
+  background-color: #6e3b3b;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  .submit input {
+    width: 10%;
+    padding: 15px 32px;
+    font-size: 16px;
+  }
+}
+
 div.movePage {
   margin-top: 40px;
-  padding: 40px 0 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -435,7 +461,7 @@ div.movePage .movePage-wrap a p {
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
-    margin-top: 0 !important;
+    margin-top: 40px !important;
   }
 }
 
@@ -456,6 +482,7 @@ div.movePage .movePage-wrap a p {
   margin-top: 30px;
   padding: 50px 15px;
   text-align: center;
+  transition: 0.3s;
 }
 @media screen and (min-width: 1440px) {
   .container .flex .type {
@@ -596,4 +623,4 @@ div.movePage .movePage-wrap a p {
 }
 .container .flex .type .button.family a button:hover {
   box-shadow: rgba(190, 106, 21, 0.5) 0px 18px 25px -10px;
-}/*# sourceMappingURL=register_join_type.css.map */
+}

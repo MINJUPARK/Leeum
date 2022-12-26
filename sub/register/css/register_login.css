@@ -153,7 +153,7 @@ input[type=radio]:checked::before {
   transform: scale(1) translate(-50%, -50%);
 }
 input[type=radio]::before {
-  content: "●";
+  content: "✓";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -238,15 +238,17 @@ input[type=number]::-webkit-inner-spin-button {
 
 @media screen and (min-width: 1440px) {
   .select {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 }
 .select .image-info {
   position: relative;
   display: flex;
+  align-items: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
   margin: 20px 0 20px 0;
+  z-index: 50;
 }
 .select .image-info img {
   width: 40px;
@@ -264,7 +266,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .select .image-info .text strong {
@@ -293,10 +295,7 @@ input[type=number]::-webkit-inner-spin-button {
   .select ul.select {
     width: 40%;
     padding: 0;
-<<<<<<< HEAD
-    top: 104px;
-=======
->>>>>>> 2b6521d65ec4c6bde6d2f053ca81c1126ab4d88b
+    top: 63px;
     right: 20px;
     left: inherit;
   }
@@ -363,10 +362,33 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
 }
 
+.submit {
+  text-align: center;
+}
+.submit a {
+  width: 100%;
+}
+.submit input {
+  width: 100%;
+  padding: 10px 22px;
+  margin-top: 30px;
+  border: 0;
+  color: white;
+  background-color: #6e3b3b;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  .submit input {
+    width: 10%;
+    padding: 15px 32px;
+    font-size: 16px;
+  }
+}
+
 div.movePage {
   margin-top: 40px;
-  padding: 40px 0 60px;
-  margin-top: 0;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -435,6 +457,11 @@ div.movePage .movePage-wrap a p {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+  }
+}
+@media screen and (min-width: 1440px) {
+  div.movePage {
+    margin-top: 40px !important;
   }
 }
 
@@ -563,4 +590,4 @@ div.login .login-wrap .login-tab-form .login-form .id-pw-join {
 }
 div.login .login-wrap .login-tab-form .login-form .id-pw-join span {
   font-size: 14px;
-}/*# sourceMappingURL=register_login.css.map */
+}

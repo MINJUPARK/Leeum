@@ -238,15 +238,17 @@ input[type=number]::-webkit-inner-spin-button {
 
 @media screen and (min-width: 1440px) {
   .select {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 }
 .select .image-info {
   position: relative;
   display: flex;
+  align-items: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
   margin: 20px 0 20px 0;
+  z-index: 50;
 }
 .select .image-info img {
   width: 40px;
@@ -264,7 +266,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .select .image-info .text strong {
@@ -293,7 +295,7 @@ input[type=number]::-webkit-inner-spin-button {
   .select ul.select {
     width: 40%;
     padding: 0;
-    top: 104px;
+    top: 63px;
     right: 20px;
     left: inherit;
   }
@@ -360,10 +362,33 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
 }
 
+.submit {
+  text-align: center;
+}
+.submit a {
+  width: 100%;
+}
+.submit input {
+  width: 100%;
+  padding: 10px 22px;
+  margin-top: 30px;
+  border: 0;
+  color: white;
+  background-color: #6e3b3b;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (min-width: 1440px) {
+  .submit input {
+    width: 10%;
+    padding: 15px 32px;
+    font-size: 16px;
+  }
+}
+
 div.movePage {
   margin-top: 40px;
-  padding: 40px 0 60px;
-  margin-top: 0;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -434,6 +459,11 @@ div.movePage .movePage-wrap a p {
     overflow: hidden;
   }
 }
+@media screen and (min-width: 1440px) {
+  div.movePage {
+    margin-top: 40px !important;
+  }
+}
 
 .container {
   overflow-x: hidden;
@@ -478,11 +508,25 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container div.join-info form .text {
+  display: flex;
+  align-items: center;
   padding: 15px 20px;
   border-bottom: 1px solid #acacac;
 }
+.container div.join-info form .text .box {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  width: 73%;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text .box {
+    width: 20%;
+  }
+}
 .container div.join-info form .text.id label, .container div.join-info form .text.date label, .container div.join-info form .text.phone-certify-name label {
-  width: 25%;
+  width: 27%;
   font-size: 16px;
   font-weight: 600;
 }
@@ -490,11 +534,6 @@ div.movePage .movePage-wrap a p {
   .container div.join-info form .text.id label, .container div.join-info form .text.date label, .container div.join-info form .text.phone-certify-name label {
     width: 15%;
     font-size: 18px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .container div.join-info form .text.id, .container div.join-info form .text.date, .container div.join-info form .text.phone-certify-name {
-    padding: 15px;
   }
 }
 .container div.join-info form .text.id:last-child, .container div.join-info form .text.date:last-child, .container div.join-info form .text.phone-certify-name:last-child {
@@ -517,14 +556,26 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container div.join-info form .text.id input {
+  width: 100%;
   border: 0;
 }
 .container div.join-info form .text.date input, .container div.join-info form .text.phone-certify-name input {
   border: 0;
   background-color: #f3f3f3;
 }
+.container div.join-info form .text.date .box {
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .container div.join-info form .text.date .box {
+    justify-content: flex-start;
+  }
+}
 .container div.join-info form .text.date input {
-  width: 31.25%;
+  width: 32%;
+}
+.container div.join-info form .text.date input.front {
+  flex: 1;
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form .text.date input {
@@ -532,17 +583,17 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container div.join-info form .text.date .back {
-  width: 8%;
-}
-@media screen and (min-width: 1440px) {
-  .container div.join-info form .text.date .back {
-    width: 3%;
-  }
+  width: 30px;
+  text-align: center;
 }
 .container div.join-info form .text.date .hide {
-  margin-left: 5px;
   letter-spacing: 0.1em;
   color: #acacac;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text.phone-certify-name .box {
+    width: 85%;
+  }
 }
 .container div.join-info form .text.phone-certify-name select {
   background-image: url(../../../image/icon_arrow_bk.svg);
@@ -552,17 +603,12 @@ div.movePage .movePage-wrap a p {
   background-position: right 5px center;
   background-color: #fff;
   background-size: 10px;
-  width: 15%;
+  width: 25%;
   background-color: #f3f3f3;
   border: 0;
 }
 .container div.join-info form .text.phone-certify-name select.telecom {
-  margin-right: 5px;
-}
-@media screen and (min-width: 1440px) {
-  .container div.join-info form .text.phone-certify-name select.telecom {
-    margin-right: 10px;
-  }
+  margin-right: 10px;
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form .text.phone-certify-name select {
@@ -570,34 +616,11 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container div.join-info form .text.phone-certify-name input {
-  width: 15%;
+  width: 25%;
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form .text.phone-certify-name input {
     width: 5%;
-  }
-}
-.container .submit {
-  text-align: center;
-}
-.container .submit a {
-  width: 100%;
-}
-.container .submit input {
-  width: 100%;
-  padding: 10px 22px;
-  margin-top: 30px;
-  border: 0;
-  color: white;
-  background-color: #6e3b3b;
-  font-size: 16px;
-  font-weight: 500;
-}
-@media screen and (min-width: 1440px) {
-  .container .submit input {
-    width: 10%;
-    padding: 15px 32px;
-    font-size: 16px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -752,4 +775,4 @@ div.movePage .movePage-wrap a p {
   .container div.confirm input {
     padding: 13px 20px;
   }
-}/*# sourceMappingURL=register_join_cert.css.map */
+}

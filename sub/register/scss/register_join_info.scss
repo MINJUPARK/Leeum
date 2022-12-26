@@ -8,36 +8,49 @@
     overflow-x: hidden;
 
     .member {
+        margin-top: 120px;
 
-        h6 {
-            text-align: center;
-            margin-bottom: 20px;
-            margin-top: 100px;
-    
-            @include responsive(pc-screens) {
-                @include gothic_font(semibold, 28px);
-                
-            }
-        }
-    
-        p {
-            text-align: right;
-            @include gothic_font(medium, 14px);
-    
-            @include responsive(pc-screens) {
-                font-size: 18px;
-            }
-        }
-    
         .import {
-            margin-right: 4px;
+            margin-right: 5px;
             color: red;
+        }
+
+        .title-box {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 40px;
+            margin-bottom: 30px;
+
+            .title {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                @include gothic_font(semibold, 20px);
+                text-align: center;
+                // margin-bottom: 20px;
+                
+                @include responsive(pc-screens) {
+                    font-size: 28px;
+                    // margin-bottom: 40px;
+                }
+            }
+            .essential {
+                margin-top: 60px;
+                @include gothic_font(medium, 14px);
+
+                @include responsive(pc-screens) {
+                    margin-right: 25px;
+                    font-size: 16px;
+                }
+            }
         }
     
         form {
             @include out_container();
-            border-bottom: 2px solid #000;
-            border-top: 2px solid #000;
+            border-bottom: 2px solid $bk2;
+            border-top: 2px solid $bk2;
             
             @include responsive(pc-screens) {
                 @include in_container();
@@ -52,14 +65,15 @@
                 font-size: 16px;
                 @include responsive(pc-screens) {
                     font-size: 14px;
-                    padding: 5px;
+                    padding: 10px;
                 }
             }
-    
+            
             .field {
                 display: flex;
-    
-                border-bottom: 1px solid #000;
+                align-items: center;
+                
+                border-bottom: 1px solid $bk3;
                 padding: 15px 20px;
         
                 .letter {
@@ -72,10 +86,14 @@
                     }
                 }
                 label:first-child{
-                    width: 30%;
-    
+                    width: 35%;
+                    
+                    @include responsive(tablet-screens) {
+                        width: 25%;
+                    }
+
                     @include responsive(pc-screens) {
-                        width: 17.14285714285714%;
+                        width: 15%;
                     }
                 }
                 
@@ -85,11 +103,7 @@
                 &.pw,
                 &.pw-confirm {
                     input:first-child {
-                        width: 66%;
-    
-                        @include responsive(pc-screens) {
-                            width: 16%;
-                        }
+                        flex: 1;
                     }
                 }
         
@@ -103,6 +117,7 @@
     
                 &.id {
                     display: flex;
+                    
                     input:last-child{
                         margin-right: 0;
                     }
@@ -133,9 +148,18 @@
                         
                         .write {
                             @include flex_between_center();
+                            width: 100%;
 
-                            #mail { width: 40%; }
-                            #email_add { width: 50%; }
+                            #mail, #email_add { 
+                                width: 45%; 
+
+                                @include responsive(tablet-screens) {
+                                    width: 48%;
+                                }
+                            }
+                            @include responsive(pc-screens) {
+                                column-gap: 10px;
+                            }
                         }
                         
                         select{
@@ -147,13 +171,12 @@
                             padding: 6px;
                             background-color: #fff;
                             background-size: 10px;
-                            
+
                             @include responsive(pc-screens) {
-                                left: 0;
-                                margin-left: 250px;
-                                text-align: center;
-                                width: 8.695652%;
-                                padding: 4px;
+                                width: 45%;
+                                padding: 10px;
+                                margin-top: 0;
+                                text-align: left;
                             }
                         }
     
@@ -173,38 +196,40 @@
     
                         .flex {
                             @include flex_between();
+                            column-gap: 10px;
+
                             @include responsive(pc-screens) {
+                                justify-content: flex-start;
                                 width: 100%;
                             }
     
                             input {
                                 &:first-child {                        
-                                    width: 56%;
-                                    margin-right: 5px;
-    
+                                    width: 60%;
+
                                     @include responsive(pc-screens) {
-                                        width: 16%;
+                                        width: 70%;
                                     }
                                 }
     
                                 &:last-child {
                                     width: 40%;
-    
+
                                     @include responsive(pc-screens) {
-                                        width: 13%;
+                                        width: 30%;
                                     }
                                 }
                             }
     
                             .postcode {
-                                padding: 8px 16px;
+                                padding: 8px 0;
                                 margin-right: 0;
-                                font-size: 12px;
+                                font-size: 14px;
                                 background: $bk1;
                                 color: white;
     
                                 @include responsive(pc-screens) {
-                                    width: 8.608696%;
+                                    padding: 10px 0;
                                 }
                             }
                         }
@@ -213,9 +238,6 @@
                             width: 100%;
                             input {        
                                 width: 100%;
-                                @include responsive(pc-screens) {
-                                    width: 16%;
-                                }
                             }
                         }
                     }
@@ -223,19 +245,42 @@
     
                 .entry {
                     width: 100%;
-
+                    
+                    &#add {
+                        @include responsive(pc-screens) {
+                            width: 35%;
+                        }
+                    }
                     &:not(#add) {
                         @include flex_between_center();
                         flex-wrap: wrap;
+                        column-gap: 10px;
+
+                        @include responsive(pc-screens) {
+                            flex-wrap: nowrap;
+                            width: 35%;
+                        }
+                    }
+
+                    #id {
+                        width: 65%;
                     }
 
                     &.radio {
                         justify-content: flex-start !important;
 
                         label {
-                            width: 30%;
+                            width: 25%;
 
                             @media screen and(min-width: 490px) {
+                                width: 20%;
+                            }
+
+                            @include responsive(tablet-screens) {
+                                width: 15%;
+                            }
+
+                            @include responsive(pc-screens) {
                                 width: 20%;
                             }
                         }
@@ -250,9 +295,15 @@
                     }
 
                     button {
-                        padding: 8px 16px;
+                        width: 30%;
+                        padding: 8px 0;
+                        font-size: 14px;
                         background-color: $dark-brown;
                         color: white;
+
+                        @include responsive(pc-screens) {
+                            padding: 10px 0;
+                        }
                     }
                     input {
                         border: 0;
@@ -278,7 +329,8 @@
                         border: 1px solid $bk4;
 
                         &:checked {
-                            border: 0;
+                            border: 1px solid $red-brown;
+
                         }
                     }
                 }
@@ -286,69 +338,18 @@
                 &.agree {
                     border-bottom: 0;
     
-                    .entry {
-                        @include responsive(pc-screens) {
-                            position: relative;
-                            margin-bottom: 25px;
-                        }
-                        p {
-                            width: 100%;
-                            margin-top: 10px;
-                            margin-bottom: 0;
-                            @include gothic_font(regular, 14px);
-                            color: $bk2;
-    
-                            @include responsive(pc-screens) {
-                                position: absolute;
-                            }
+                    .warning {
+                        margin-top: 10px;
+                        @include gothic_font(regular, 14px);
+                        color: $bk2;
+
+                        @include responsive(tablet-screens) {
+                            margin-top: 0;
+                            font-size: 15px;
                         }
                     }
                 }
             }
         }
-        .submit {
-            text-align: center;
-            a {
-                width: 100%;
-            }
-    
-            input {
-                width: 100%;
-                padding: 10px 22px;
-                margin-top: 30px;
-                border: 0;
-                color: white;
-                background-color: $dark-brown;
-                @include gothic_font(medium, 16px);
-        
-                @include responsive(pc-screens) {
-                    width: 10%;
-                    padding: 15px 32px;
-                    font-size: 16px;
-                }
-            }
-        }
     }
 }
-
-
-// div.movePage {
-//     @include move_page();
-//     margin-left: 20px;
-//     margin-right: 20px;
-//     .submit {
-//         text-align: center;
-//         input{
-//             padding: 10px 15px;
-//             border: 0;
-//             color: white;
-//             background-color: $dark-brown;
-//             @include gothic_font(semibold, 12px);
-    
-//             @include responsive(pc-screens) {
-//                 font-size: 16px;
-//                 padding: 10px 22px;
-//             }
-//         }
-//     }
-// }

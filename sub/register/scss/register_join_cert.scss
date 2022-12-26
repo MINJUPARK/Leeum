@@ -36,23 +36,33 @@
             }
 
             .text {
+                display: flex;
+                align-items: center;
                 padding: 15px 20px;
                 border-bottom: 1px solid $bk3;
+                
+                .box {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 5px;
+                    width: calc(100% - 27%);
+
+                    @include responsive(pc-screens) {
+                        width: 20%;
+                    }
+                }
+
                 &.id,
                 &.date,
                 &.phone-certify-name {
                     label {
-                        width: 25%;
+                        width: 27%;
                         @include gothic-font(semibold);
         
                         @include responsive(pc-screens) {
                             width: 15%;
                             font-size: 18px;
                         }
-                    }
-
-                    @include responsive(pc-screens) {
-                        padding: 15px;
                     }
         
                     &:last-child {
@@ -74,6 +84,7 @@
 
                 &.id {
                     input {
+                        width: 100%;
                         border: 0;
                     }
 
@@ -88,8 +99,25 @@
                 }   
 
                 &.date {
+
+                    .box {
+                        justify-content: space-between;
+
+                        @include responsive(tablet-screens) {
+                            justify-content: flex-start;
+                        }
+                    }
+                    
                     input {
-                        width: 31.25%;
+                        width: 32%;
+
+                        &.front {
+                            flex: 1;
+
+                            // @include responsive(tablet-screens) {
+                            //     flex: none;
+                            // }
+                        }
         
                         @include responsive(pc-screens) {
                             width: 12%;
@@ -97,15 +125,11 @@
                     } 
                     
                     .back {
-                        width: 8%;
-        
-                        @include responsive(pc-screens) {
-                            width: 3%;
-                        }
+                        width: 30px;
+                        text-align: center;
                     }
 
                     .hide {
-                        margin-left: 5px;
                         letter-spacing: 0.1em;
                         color: $bk3;
                     }
@@ -114,31 +138,31 @@
 
                 &.phone-certify-name {
 
+                    .box {
+                        @include responsive(pc-screens) {
+                            width: calc(100% - 15%);
+                        }
+                    }
                     select {
                         @include full_bg('icon_arrow_bk.svg', index);
                         background-position: right 5px center;
                         background-color: #fff;
                         background-size: 10px;
-                        width: 15%;
+                        width: 25%;
                         background-color: $bk6;
                         border: 0;
 
-                            
                         &.telecom {
-                            margin-right: 5px;
-
-                            @include responsive(pc-screens) {
-                                margin-right: 10px;
-                            }
+                            margin-right: 10px;
                         }
-                        
+
                         @include responsive(pc-screens) {
                             width: 5.517241%;
                         }
                     }
         
                     input {
-                        width: 15%;
+                        width: 25%;
         
                         @include responsive(pc-screens) {
                             width: 5%;
@@ -149,28 +173,6 @@
                 
             }
         }  
-    }
-    .submit {
-        text-align: center;
-        a {
-            width: 100%;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px 22px;
-            margin-top: 30px;
-            border: 0;
-            color: white;
-            background-color: $dark-brown;
-            @include gothic-font(medium, 16px);
-    
-            @include responsive(pc-screens) {
-                width: 10%;
-                padding: 15px 32px;
-                font-size: 16px;
-            }
-        }
     }
     
     div.all {
@@ -249,7 +251,6 @@
                         input {
                             border: 0;
                         }
-        
                     }
         
                     &.date,
@@ -263,12 +264,12 @@
                     &.date {
                         input {
                             width: 28%;
-            
+                            
                             @include responsive(pc-screens) {
                                 width: 11%;
                             }
                         } 
-                        
+
                         .back {
                             width: 7%;
             
