@@ -76,6 +76,7 @@
     }
 
     main {        
+        overflow-x: hidden;
         @include responsive(tablet-screens) { font-size: 20px; }
         
         div h2 {

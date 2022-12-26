@@ -90,7 +90,7 @@ function certify() {
   var back = document.getElementById("back");
   var phone = document.getElementById("phone");
   var phoneBack = document.getElementById("phoneBack");
-  var frontCheck = /^(?=.*[0-9]).{6}$/;
+  var frontCheck = /^([0-9][0-9]|20\d{2})(0[0-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/;
   var backCheck = /^(?=.*[1-6]).{1}$/;
   var phoneCheck = /^(?=.*[0-9]).{3,4}$/;
   var phoneBackCheck = /^(?=.*[0-9]).{4}$/;
@@ -104,11 +104,11 @@ function certify() {
     front.focus();
     return false;
   } else if (front.value == "" || back.value == "") {
-    alert("주민번호를 입력하세요.");
+    alert("주민등록번호를 입력하세요.");
     front.focus();
     return false;
   } else if (!frontCheck.test(front.value)) {
-    alert("주민번호 앞자리를 입력하세요. (ex. 901218)");
+    alert("주민등록번호(생년월일) 형식이 올바르지 않습니다.");
     front.focus();
     return false;
   } else if (!backCheck.test(back.value)) {
@@ -120,7 +120,7 @@ function certify() {
     phone.focus();
     return false;
   } else if(!phoneCheck.test(phone.value) || !phoneBackCheck.test(phoneBack.value)) {
-    alert("휴대폰번호 형식이 올바르지 않습니다. 4자리씩 입력하세요.")
+    alert("휴대폰번호 형식이 올바르지 않습니다.")
     phone.focus();
     return false;
   } else {
@@ -148,19 +148,7 @@ function joinform_check() {
   var pwCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,12}$/;
   var phoneCheck = /^(?=.*[0-9]).{10,11}$/;
 
-  if (name.value == "") {
-    alert("이름을 입력하세요.");
-    name.focus();
-    return false;
-  } else if (date.value == "") {
-    alert("생년월일을 입력하세요.");
-    date.focus();
-    return false;
-  } else if (!dateCheck.test(date.value)) {
-    alert("생년월일 형식이 올바르지 않습니다. (ex. 901218)");
-    date.focus();
-    return false;
-  } else if(!join_cert.id.value) {
+  if(!join_cert.id.value) {
     alert("아이디를 입력하세요.");
     join_cert.id.focus();
     return false;
@@ -184,14 +172,6 @@ function joinform_check() {
     alert("비밀번호가 일치하지 않습니다.");
     pw_confirm.focus();
     return false;
-  } else if (phone.value == "") {
-    alert("휴대폰 번호를 입력하세요.");
-    phone.focus();
-    return false;
-  } else if (!phoneCheck.test(phone.value)) {
-    alert("휴대폰 번호 형식이 올바르지 않습니다. (숫자 10~11자리)");
-    phone.focus();
-    return false;
   } else if (mail.value == "") {
     alert("이메일 주소의 아이디를 입력하세요.");
     mail.focus();
@@ -210,6 +190,18 @@ function joinform_check() {
   }
 }
 
+function nextFocus(arg, next, len) {
+  if (arg.value.length == len) {
+    next.focus();
+  }
+}
+
+function maxLengthCheck(object) {
+  if (object.value.length > object.maxLength){
+      object.value = object.value.slice(0, object.maxLength);
+  }
+}
+  
 function change_email() {
   var email_add = document.getElementById("email_add");
   var email_sel = document.getElementById("email_sel");

@@ -1,7 +1,8 @@
 $(function() {
     $('.faq ul>li .answer').hide();
 
-    $('.faq ul>li a').click(function(e) {
+    $('.faq ul > li > a').click(function(e) {
+        e.preventDefault();
         if($(this).next().css('display') == 'block'){
             $(this).children('img').animate({'rotate': '360deg'});
             $(this).next().slideUp(500);

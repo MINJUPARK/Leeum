@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -102,7 +106,7 @@ input[type=checkbox]:hover {
 input[type=checkbox]:checked {
   color: #fff;
   background-color: #ac3f21;
-  border-color: #d4d4d4;
+  border: 0;
 }
 input[type=checkbox]:checked::before {
   border-radius: 2px;
@@ -122,6 +126,46 @@ input[type=checkbox] + label {
   margin-left: 5px;
 }
 input[type=checkbox]:checked + label {
+  color: #ac3f21;
+  font-weight: 600;
+}
+input[type=radio] {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  outline: none !important;
+  border: 1px solid #c5c5c5 !important;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=radio]:hover {
+  background: #d4d4d4;
+}
+input[type=radio]:checked {
+  color: #fff;
+  background-color: #ac3f21;
+  border: 0 !important;
+}
+input[type=radio]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+input[type=radio]::before {
+  content: "●";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  transform: scale(0) translate(-50%, -50%);
+  overflow: hidden;
+}
+input[type=radio] + label {
+  color: #3c3c3c;
+  margin-left: 5px;
+}
+input[type=radio]:checked + label {
   color: #ac3f21;
   font-weight: 600;
 }
@@ -181,14 +225,21 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
+label {
+  line-height: 1.5em;
+  word-break: keep-all;
+}
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.select {
-  margin: 0 auto;
+@media screen and (min-width: 1440px) {
+  .select {
+    margin-top: 100px;
+  }
 }
 .select .image-info {
   position: relative;
@@ -207,22 +258,23 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .select .image-info .text p {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  color: #3c3c3c;
+  color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text p {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .select .image-info .text strong {
   margin-top: 2px;
   font-size: 22px;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text strong {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 .select ul.select {
@@ -235,13 +287,14 @@ input[type=number]::-webkit-inner-spin-button {
   justify-content: space-between;
   position: absolute;
   top: 0;
-  right: 20px;
   padding: 0 20px 0 20px;
 }
 @media screen and (min-width: 1440px) {
   .select ul.select {
-    width: 53%;
-    position: absolute;
+    width: 40%;
+    padding: 0;
+    top: 104px;
+    right: 20px;
     left: inherit;
   }
 }
@@ -249,7 +302,7 @@ input[type=number]::-webkit-inner-spin-button {
   position: relative;
   height: 45px;
   border: 1px solid #c5c5c5;
-  margin-top: 70px;
+  margin-top: 80px;
 }
 @media screen and (min-width: 1440px) {
   .select ul.select li {
@@ -273,6 +326,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .select ul.select li.on {
   background-color: #3c3c3c;
+}
+.select ul.select li.on span {
   color: white;
 }
 @media screen and (min-width: 768px) {
@@ -286,13 +341,19 @@ input[type=number]::-webkit-inner-spin-button {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  text-align: center;
   font-size: 14px;
   font-weight: 500;
-  text-align: center;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 768px) {
+  .select ul.select li span {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .select ul.select li span {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .select ul.select li span b {
@@ -301,7 +362,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 div.movePage {
   margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 40px 0 60px;
+  margin-top: 0;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -373,12 +435,17 @@ div.movePage .movePage-wrap a p {
   }
 }
 
+.container {
+  overflow-x: hidden;
+}
+.container div.join-info {
+  margin-top: 120px;
+}
 .container div.join-info p {
-  text-align: center;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
+  text-align: center;
   margin-bottom: 20px;
-  margin-top: 100px;
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info p {
@@ -393,8 +460,8 @@ div.movePage .movePage-wrap a p {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-top: 2px solid #5c5c5c;
+  border-bottom: 2px solid #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form {
@@ -411,29 +478,23 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container div.join-info form .text {
-  border-bottom: 1px solid #000;
-}
-.container div.join-info form .text.id, .container div.join-info form .text.date, .container div.join-info form .text.phone-certify-name {
-  padding: 10px 20px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #acacac;
 }
 .container div.join-info form .text.id label, .container div.join-info form .text.date label, .container div.join-info form .text.phone-certify-name label {
-  width: 19.7142857143%;
-  font-size: 13px;
+  width: 25%;
+  font-size: 16px;
   font-weight: 600;
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form .text.id label, .container div.join-info form .text.date label, .container div.join-info form .text.phone-certify-name label {
-    width: 14.2857142857%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .container div.join-info form .text.id label, .container div.join-info form .text.date label, .container div.join-info form .text.phone-certify-name label {
-    font-size: 22px;
+    width: 15%;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form .text.id, .container div.join-info form .text.date, .container div.join-info form .text.phone-certify-name {
-    padding: 20px;
+    padding: 15px;
   }
 }
 .container div.join-info form .text.id:last-child, .container div.join-info form .text.date:last-child, .container div.join-info form .text.phone-certify-name:last-child {
@@ -443,14 +504,15 @@ div.movePage .movePage-wrap a p {
 .container div.join-info form .text.id input, .container div.join-info form .text.date select,
 .container div.join-info form .text.date input, .container div.join-info form .text.phone-certify-name select,
 .container div.join-info form .text.phone-certify-name input {
-  padding: 5px;
-  font-size: 12px;
+  padding: 8px;
+  font-size: 16px;
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form .text.id select,
 .container div.join-info form .text.id input, .container div.join-info form .text.date select,
 .container div.join-info form .text.date input, .container div.join-info form .text.phone-certify-name select,
 .container div.join-info form .text.phone-certify-name input {
+    padding: 10px;
     font-size: 18px;
   }
 }
@@ -462,11 +524,11 @@ div.movePage .movePage-wrap a p {
   background-color: #f3f3f3;
 }
 .container div.join-info form .text.date input {
-  width: 23%;
+  width: 31.25%;
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form .text.date input {
-    width: 11%;
+    width: 12%;
   }
 }
 .container div.join-info form .text.date .back {
@@ -477,6 +539,11 @@ div.movePage .movePage-wrap a p {
     width: 3%;
   }
 }
+.container div.join-info form .text.date .hide {
+  margin-left: 5px;
+  letter-spacing: 0.1em;
+  color: #acacac;
+}
 .container div.join-info form .text.phone-certify-name select {
   background-image: url(../../../image/icon_arrow_bk.svg);
   background-repeat: no-repeat;
@@ -485,13 +552,17 @@ div.movePage .movePage-wrap a p {
   background-position: right 5px center;
   background-color: #fff;
   background-size: 10px;
-  width: 14%;
-  border: 0;
+  width: 15%;
   background-color: #f3f3f3;
-  margin-right: 4px;
+  border: 0;
 }
-.container div.join-info form .text.phone-certify-name select:first-child {
-  margin-right: 10px;
+.container div.join-info form .text.phone-certify-name select.telecom {
+  margin-right: 5px;
+}
+@media screen and (min-width: 1440px) {
+  .container div.join-info form .text.phone-certify-name select.telecom {
+    margin-right: 10px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form .text.phone-certify-name select {
@@ -499,7 +570,7 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container div.join-info form .text.phone-certify-name input {
-  width: 14%;
+  width: 15%;
 }
 @media screen and (min-width: 1440px) {
   .container div.join-info form .text.phone-certify-name input {
@@ -509,18 +580,24 @@ div.movePage .movePage-wrap a p {
 .container .submit {
   text-align: center;
 }
+.container .submit a {
+  width: 100%;
+}
 .container .submit input {
-  padding: 10px 15px;
+  width: 100%;
+  padding: 10px 22px;
+  margin-top: 30px;
   border: 0;
   color: white;
   background-color: #6e3b3b;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
 }
 @media screen and (min-width: 1440px) {
   .container .submit input {
+    width: 10%;
+    padding: 15px 32px;
     font-size: 16px;
-    padding: 10px 22px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -597,15 +674,16 @@ div.movePage .movePage-wrap a p {
 .container div.all div.join-info form .text.id input, .container div.all div.join-info form .text.date select,
 .container div.all div.join-info form .text.date input, .container div.all div.join-info form .text.phone-certify-name select,
 .container div.all div.join-info form .text.phone-certify-name input {
-  padding: 5px;
-  font-size: 12px;
+  padding: 8px;
+  font-size: 16px;
 }
 @media screen and (min-width: 1440px) {
   .container div.all div.join-info form .text.id select,
 .container div.all div.join-info form .text.id input, .container div.all div.join-info form .text.date select,
 .container div.all div.join-info form .text.date input, .container div.all div.join-info form .text.phone-certify-name select,
 .container div.all div.join-info form .text.phone-certify-name input {
-    font-size: 20px;
+    padding: 10px;
+    font-size: 18px;
   }
 }
 .container div.all div.join-info form .text.id input {
@@ -632,6 +710,7 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container div.all div.join-info form .text.phone-certify-name select {
+  margin-right: 8px;
   background-image: url(../../../image/icon_arrow_bk.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -639,10 +718,9 @@ div.movePage .movePage-wrap a p {
   background-position: right 5px center;
   background-color: #fff;
   background-size: 10px;
-  width: 14%;
-  border: 0;
+  width: 15%;
   background-color: #f3f3f3;
-  margin-right: 4px;
+  border: 0;
 }
 .container div.all div.join-info form .text.phone-certify-name select:first-child {
   margin-right: 10px;
@@ -674,4 +752,4 @@ div.movePage .movePage-wrap a p {
   .container div.confirm input {
     padding: 13px 20px;
   }
-}
+}/*# sourceMappingURL=register_join_cert.css.map */

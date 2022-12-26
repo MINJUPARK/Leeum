@@ -422,6 +422,7 @@ main {
 
         section.floor-info {            
             $tablet2: 920px;
+           
     
             @media screen and(min-width: $tablet2) {
                 font-size: 18px;
@@ -433,6 +434,10 @@ main {
                 }
             }
             
+            .side-tab.m1 .tab-wrap {
+                display: block;
+            }
+
             > div {
                 margin-bottom: 100px;
                 
@@ -445,6 +450,7 @@ main {
                     margin-bottom: 150px;
                 }
 
+                
                 .floor-select-group {
 
                     @media screen and(min-width: $tablet2) {
@@ -493,9 +499,11 @@ main {
                         }
                     }
 
+                    
                     .group-option {
                         display: none;
                         
+
                         @media screen and(min-width: $tablet2) {
                             display: block;
                         }

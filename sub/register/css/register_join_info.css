@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -102,7 +106,7 @@ input[type=checkbox]:hover {
 input[type=checkbox]:checked {
   color: #fff;
   background-color: #ac3f21;
-  border-color: #d4d4d4;
+  border: 0;
 }
 input[type=checkbox]:checked::before {
   border-radius: 2px;
@@ -122,6 +126,46 @@ input[type=checkbox] + label {
   margin-left: 5px;
 }
 input[type=checkbox]:checked + label {
+  color: #ac3f21;
+  font-weight: 600;
+}
+input[type=radio] {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  outline: none !important;
+  border: 1px solid #c5c5c5 !important;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=radio]:hover {
+  background: #d4d4d4;
+}
+input[type=radio]:checked {
+  color: #fff;
+  background-color: #ac3f21;
+  border: 0 !important;
+}
+input[type=radio]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+input[type=radio]::before {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  transform: scale(0) translate(-50%, -50%);
+  overflow: hidden;
+}
+input[type=radio] + label {
+  color: #3c3c3c;
+  margin-left: 5px;
+}
+input[type=radio]:checked + label {
   color: #ac3f21;
   font-weight: 600;
 }
@@ -181,14 +225,21 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
+label {
+  line-height: 1.5em;
+  word-break: keep-all;
+}
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.select {
-  margin: 0 auto;
+@media screen and (min-width: 1440px) {
+  .select {
+    margin-top: 100px;
+  }
 }
 .select .image-info {
   position: relative;
@@ -207,22 +258,23 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .select .image-info .text p {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
-  color: #3c3c3c;
+  color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text p {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .select .image-info .text strong {
   margin-top: 2px;
   font-size: 22px;
+  color: #3c3c3c;
 }
 @media screen and (min-width: 1440px) {
   .select .image-info .text strong {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 .select ul.select {
@@ -235,13 +287,14 @@ input[type=number]::-webkit-inner-spin-button {
   justify-content: space-between;
   position: absolute;
   top: 0;
-  right: 20px;
   padding: 0 20px 0 20px;
 }
 @media screen and (min-width: 1440px) {
   .select ul.select {
-    width: 53%;
-    position: absolute;
+    width: 40%;
+    padding: 0;
+    top: 104px;
+    right: 20px;
     left: inherit;
   }
 }
@@ -249,7 +302,7 @@ input[type=number]::-webkit-inner-spin-button {
   position: relative;
   height: 45px;
   border: 1px solid #c5c5c5;
-  margin-top: 70px;
+  margin-top: 80px;
 }
 @media screen and (min-width: 1440px) {
   .select ul.select li {
@@ -273,6 +326,8 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .select ul.select li.on {
   background-color: #3c3c3c;
+}
+.select ul.select li.on span {
   color: white;
 }
 @media screen and (min-width: 768px) {
@@ -286,13 +341,19 @@ input[type=number]::-webkit-inner-spin-button {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  text-align: center;
   font-size: 14px;
   font-weight: 500;
-  text-align: center;
+  color: #5c5c5c;
+}
+@media screen and (min-width: 768px) {
+  .select ul.select li span {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .select ul.select li span {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .select ul.select li span b {
@@ -301,7 +362,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 div.movePage {
   margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 40px 0 60px;
+  margin-top: 0;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -373,6 +435,9 @@ div.movePage .movePage-wrap a p {
   }
 }
 
+.container {
+  overflow-x: hidden;
+}
 .container .member h6 {
   text-align: center;
   margin-bottom: 20px;
@@ -388,7 +453,6 @@ div.movePage .movePage-wrap a p {
   text-align: right;
   font-size: 14px;
   font-weight: 500;
-  margin: 0 20px 10px 20px;
 }
 @media screen and (min-width: 1440px) {
   .container .member p {
@@ -396,8 +460,8 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container .member .import {
+  margin-right: 4px;
   color: red;
-  margin-right: 3px;
 }
 .container .member form {
   position: relative;
@@ -422,8 +486,8 @@ div.movePage .movePage-wrap a p {
   display: inline;
 }
 .container .member form input {
-  padding: 3px;
-  margin-right: 3px;
+  padding: 6px;
+  font-size: 16px;
 }
 @media screen and (min-width: 1440px) {
   .container .member form input {
@@ -434,7 +498,7 @@ div.movePage .movePage-wrap a p {
 .container .member form .field {
   display: flex;
   border-bottom: 1px solid #000;
-  padding: 10px 20px;
+  padding: 15px 20px;
 }
 .container .member form .field .letter {
   font-size: 16px;
@@ -448,7 +512,7 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container .member form .field label:first-child {
-  width: 34.2857142857%;
+  width: 30%;
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field label:first-child {
@@ -488,18 +552,29 @@ div.movePage .movePage-wrap a p {
   position: relative;
   display: flex;
 }
+.container .member form .field.mail .entry .write {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .member form .field.mail .entry .write #mail {
+  width: 40%;
+}
+.container .member form .field.mail .entry .write #email_add {
+  width: 50%;
+}
 .container .member form .field.mail .entry select {
-  position: absolute;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
   background-image: url(../../../image/icon_arrow_bk.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-position: right 3px center;
-  padding: 3px;
+  background-position: right 10px center;
+  padding: 6px;
   background-color: #fff;
   background-size: 10px;
-  width: 31.695652%;
-  right: 0;
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.mail .entry select {
@@ -521,12 +596,11 @@ div.movePage .movePage-wrap a p {
 }
 .container .member form .field.address .add .flex {
   display: flex;
-  margin-bottom: 5px;
+  justify-content: space-between;
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.address .add .flex {
     width: 100%;
-    margin-bottom: 8px;
   }
 }
 .container .member form .field.address .add .flex input:first-child {
@@ -547,8 +621,10 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container .member form .field.address .add .flex .postcode {
-  width: 35.608696%;
-  background-color: black;
+  padding: 8px 16px;
+  margin-right: 0;
+  font-size: 12px;
+  background: #3c3c3c;
   color: white;
 }
 @media screen and (min-width: 1440px) {
@@ -557,29 +633,46 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container .member form .field.address .add .alone-add {
-  margin-bottom: 5px;
+  width: 100%;
 }
 .container .member form .field.address .add .alone-add input {
-  width: 67%;
+  width: 100%;
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.address .add .alone-add input {
     width: 16%;
   }
 }
-@media screen and (min-width: 1440px) {
-  .container .member form .field.address .add .alone-add {
-    width: 100%;
-    margin-bottom: 8px;
+.container .member form .field .entry {
+  width: 100%;
+}
+.container .member form .field .entry:not(#add) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .member form .field .entry.radio {
+  justify-content: flex-start !important;
+}
+.container .member form .field .entry.radio label {
+  width: 30%;
+}
+@media screen and (min-width: 490px) {
+  .container .member form .field .entry.radio label {
+    width: 20%;
   }
 }
-.container .member form .field .entry {
-  width: 65.7142857143%;
+.container .member form .field .entry span {
+  margin-bottom: 10px;
+}
+.container .member form .field .entry span:last-child, .container .member form .field .entry span.dot {
+  margin-bottom: 0;
 }
 .container .member form .field .entry button {
+  padding: 8px 16px;
   background-color: #6e3b3b;
   color: white;
-  padding: 8px;
 }
 .container .member form .field .entry input {
   border: 0;
@@ -593,8 +686,13 @@ div.movePage .movePage-wrap a p {
 .container .member form .field .entry p {
   text-align: left;
 }
-.container .member form .field.gender label:first-child, .container .member form .field.agree label:first-child {
+.container .member form .field.gender input[type=radio], .container .member form .field.agree input[type=radio] {
   margin-right: 5px;
+  font-size: 14px;
+  border: 1px solid #c5c5c5;
+}
+.container .member form .field.gender input[type=radio]:checked, .container .member form .field.agree input[type=radio]:checked {
+  border: 0;
 }
 .container .member form .field.agree {
   border-bottom: 0;
@@ -606,11 +704,12 @@ div.movePage .movePage-wrap a p {
   }
 }
 .container .member form .field.agree .entry p {
+  width: 100%;
+  margin-top: 10px;
   margin-bottom: 0;
-  font-size: 13px;
-  font-weight: 200;
-  color: #c5c5c5;
-  margin: 6px 0 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5c5c5c;
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field.agree .entry p {
@@ -620,17 +719,23 @@ div.movePage .movePage-wrap a p {
 .container .member .submit {
   text-align: center;
 }
+.container .member .submit a {
+  width: 100%;
+}
 .container .member .submit input {
-  padding: 10px 15px;
+  width: 100%;
+  padding: 10px 22px;
+  margin-top: 30px;
   border: 0;
   color: white;
   background-color: #6e3b3b;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
 }
 @media screen and (min-width: 1440px) {
   .container .member .submit input {
+    width: 10%;
+    padding: 15px 32px;
     font-size: 16px;
-    padding: 10px 22px;
   }
-}
+}/*# sourceMappingURL=register_join_info.css.map */

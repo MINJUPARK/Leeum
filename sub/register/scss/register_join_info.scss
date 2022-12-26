@@ -5,6 +5,7 @@
 @import './register.scss';
 
 .container {
+    overflow-x: hidden;
 
     .member {
 
@@ -14,15 +15,14 @@
             margin-top: 100px;
     
             @include responsive(pc-screens) {
-                @include gothic-font(semibold, 28px);
+                @include gothic_font(semibold, 28px);
                 
             }
         }
     
         p {
             text-align: right;
-            @include gothic-font(medium, 14px);
-            margin: 0 20px 10px 20px;
+            @include gothic_font(medium, 14px);
     
             @include responsive(pc-screens) {
                 font-size: 18px;
@@ -30,8 +30,8 @@
         }
     
         .import {
-                color: red;
-                margin-right: 3px;
+            margin-right: 4px;
+            color: red;
         }
     
         form {
@@ -48,8 +48,8 @@
             }
     
             input {
-                padding: 3px;
-                margin-right: 3px;
+                padding: 6px;
+                font-size: 16px;
                 @include responsive(pc-screens) {
                     font-size: 14px;
                     padding: 5px;
@@ -60,10 +60,10 @@
                 display: flex;
     
                 border-bottom: 1px solid #000;
-                padding: 10px 20px;
+                padding: 15px 20px;
         
                 .letter {
-                    @include gothic-font(semibold);
+                    @include gothic_font(semibold);
                     display: flex;
                     align-items: center;
     
@@ -72,7 +72,7 @@
                     }
                 }
                 label:first-child{
-                    width: 34.28571428571429%;
+                    width: 30%;
     
                     @include responsive(pc-screens) {
                         width: 17.14285714285714%;
@@ -130,16 +130,23 @@
                     .entry {
                         position: relative;
                         display: flex;
-    
+                        
+                        .write {
+                            @include flex_between_center();
+
+                            #mail { width: 40%; }
+                            #email_add { width: 50%; }
+                        }
+                        
                         select{
-                            position: absolute;
+                            width: 100%;
+                            margin-top: 10px;
+                            text-align: center;
                             @include full_bg('icon_arrow_bk.svg', index);
-                            background-position: right 3px center;
-                            padding: 3px;
+                            background-position: right 10px center;
+                            padding: 6px;
                             background-color: #fff;
                             background-size: 10px;
-                            width: 31.695652%;
-                            right: 0;
                             
                             @include responsive(pc-screens) {
                                 left: 0;
@@ -165,11 +172,9 @@
                     .add {
     
                         .flex {
-                            display: flex;
-                            margin-bottom: 5px;
+                            @include flex_between();
                             @include responsive(pc-screens) {
                                 width: 100%;
-                                margin-bottom: 8px;
                             }
     
                             input {
@@ -192,8 +197,10 @@
                             }
     
                             .postcode {
-                                width: 35.608696%;
-                                background-color: black;
+                                padding: 8px 16px;
+                                margin-right: 0;
+                                font-size: 12px;
+                                background: $bk1;
                                 color: white;
     
                                 @include responsive(pc-screens) {
@@ -203,32 +210,52 @@
                         }
     
                         .alone-add {
-                            margin-bottom: 5px;
-                            
-                                input {        
-                                    width: 67%;
-                                    @include responsive(pc-screens) {
-                                        width: 16%;
-                                    }
-                                }
-    
-                            @include responsive(pc-screens) {
+                            width: 100%;
+                            input {        
                                 width: 100%;
-                                margin-bottom: 8px;
+                                @include responsive(pc-screens) {
+                                    width: 16%;
+                                }
                             }
                         }
                     }
                 }
     
                 .entry {
-                    width: 65.71428571428571%;
+                    width: 100%;
+
+                    &:not(#add) {
+                        @include flex_between_center();
+                        flex-wrap: wrap;
+                    }
+
+                    &.radio {
+                        justify-content: flex-start !important;
+
+                        label {
+                            width: 30%;
+
+                            @media screen and(min-width: 490px) {
+                                width: 20%;
+                            }
+                        }
+                    }
+
+                    span {
+                        margin-bottom: 10px;
+
+                        &:last-child, &.dot {
+                            margin-bottom: 0;
+                        }
+                    }
+
                     button {
-                    background-color: $dark-brown;
-                    color: white;
-                    padding: 8px;
+                        padding: 8px 16px;
+                        background-color: $dark-brown;
+                        color: white;
                     }
                     input {
-                    border: 0;
+                        border: 0;
                     }
     
                     @include responsive(pc-screens) {
@@ -239,17 +266,23 @@
                     p {
                         text-align: left;
                     }
+
                 }
     
                 &.gender,
                 &.agree {
-                    label:first-child {
+
+                    input[type=radio] {
                         margin-right: 5px;
+                        font-size: 14px;
+                        border: 1px solid $bk4;
+
+                        &:checked {
+                            border: 0;
+                        }
                     }
                 }
     
-    
-                
                 &.agree {
                     border-bottom: 0;
     
@@ -259,10 +292,11 @@
                             margin-bottom: 25px;
                         }
                         p {
+                            width: 100%;
+                            margin-top: 10px;
                             margin-bottom: 0;
-                            @include gothic-font(light, 13px);
-                            color: $bk4;
-                            margin: 6px 0 0 0;
+                            @include gothic_font(regular, 14px);
+                            color: $bk2;
     
                             @include responsive(pc-screens) {
                                 position: absolute;
@@ -274,16 +308,23 @@
         }
         .submit {
             text-align: center;
-            input{
-                padding: 10px 15px;
+            a {
+                width: 100%;
+            }
+    
+            input {
+                width: 100%;
+                padding: 10px 22px;
+                margin-top: 30px;
                 border: 0;
                 color: white;
                 background-color: $dark-brown;
-                @include gothic-font(semibold, 12px);
-    
+                @include gothic_font(medium, 16px);
+        
                 @include responsive(pc-screens) {
+                    width: 10%;
+                    padding: 15px 32px;
                     font-size: 16px;
-                    padding: 10px 22px;
                 }
             }
         }
@@ -302,7 +343,7 @@
 //             border: 0;
 //             color: white;
 //             background-color: $dark-brown;
-//             @include gothic-font(semibold, 12px);
+//             @include gothic_font(semibold, 12px);
     
 //             @include responsive(pc-screens) {
 //                 font-size: 16px;

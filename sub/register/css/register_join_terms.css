@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-size: 16px;
   font-family: "Pretendard JP Variable", "Pretendard JP", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Hiragino Sans", "Apple SD Gothic Neo", Meiryo, "Noto Sans JP", "Noto Sans KR", "Malgun Gothic", Osaka, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -102,7 +106,7 @@ input[type=checkbox]:hover {
 input[type=checkbox]:checked {
   color: #fff;
   background-color: #ac3f21;
-  border-color: #d4d4d4;
+  border: 0;
 }
 input[type=checkbox]:checked::before {
   border-radius: 2px;
@@ -122,6 +126,46 @@ input[type=checkbox] + label {
   margin-left: 5px;
 }
 input[type=checkbox]:checked + label {
+  color: #ac3f21;
+  font-weight: 600;
+}
+input[type=radio] {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  outline: none !important;
+  border: 1px solid #c5c5c5 !important;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=radio]:hover {
+  background: #d4d4d4;
+}
+input[type=radio]:checked {
+  color: #fff;
+  background-color: #ac3f21;
+  border: 0 !important;
+}
+input[type=radio]:checked::before {
+  border-radius: 2px;
+  transform: scale(1) translate(-50%, -50%);
+}
+input[type=radio]::before {
+  content: "●";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  transform: scale(0) translate(-50%, -50%);
+  overflow: hidden;
+}
+input[type=radio] + label {
+  color: #3c3c3c;
+  margin-left: 5px;
+}
+input[type=radio]:checked + label {
   color: #ac3f21;
   font-weight: 600;
 }
@@ -181,6 +225,11 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
+label {
+  line-height: 1.5em;
+  word-break: keep-all;
+}
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -244,6 +293,7 @@ input[type=number]::-webkit-inner-spin-button {
   .select ul.select {
     width: 40%;
     padding: 0;
+    top: 104px;
     right: 20px;
     left: inherit;
   }
@@ -252,7 +302,7 @@ input[type=number]::-webkit-inner-spin-button {
   position: relative;
   height: 45px;
   border: 1px solid #c5c5c5;
-  margin-top: 70px;
+  margin-top: 80px;
 }
 @media screen and (min-width: 1440px) {
   .select ul.select li {
@@ -312,7 +362,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 div.movePage {
   margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 40px 0 60px;
+  margin-top: 0;
 }
 @media screen and (min-width: 1440px) {
   div.movePage {
@@ -384,6 +435,9 @@ div.movePage .movePage-wrap a p {
   }
 }
 
+.container {
+  overflow-x: hidden;
+}
 .container .join-term {
   margin-top: 120px;
 }
@@ -618,4 +672,4 @@ div.movePage .movePage-wrap a p {
   .container .join-term form .agr-plus .agr .agree-person .second-pre {
     font-size: 20px;
   }
-}
+}/*# sourceMappingURL=register_join_terms.css.map */

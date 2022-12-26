@@ -33,12 +33,11 @@
                 <li class="seleted"><span>03 가입완료</span></li>
             </ul>
         </div>
-
         <div class="member" name="joinForm">
                 <h6>정보 입력</h6>
-                <p class="essential" ><span class="import">*</span>필수입력사항</p>
+                <!-- <p class="essential"><span class="import">*</span>필수입력사항</p> -->
                 <form name="join_cert">
-                    <div class="field name">
+                    <!-- <div class="field name">
                         <label class="letter" for="name"><span class="import">*</span>이름</label>
                         <div class="entry">
                             <input type="text" id="name" placeholder="이름을 입력해 주세요">
@@ -49,47 +48,41 @@
                         <div class="entry">
                             <input type="number" id="date" placeholder="생년월일 앞자리 (ex. 901218) ">
                         </div>
-                    </div>
-
+                    </div> -->
                     <div class="field id">
                         <label class="letter" for="id"><span class="import">*</span>아이디</label>
                         <div class="entry">
-                            <input type="text" id="id" placeholder="영문, 숫자 5~12자리 이내" maxlength="12" required>
+                            <input type="text" id="id" placeholder="영문, 숫자 5-12자리 이내" maxlength="12" required>
                             <button type="button" onclick="id_check()">중복확인</button>
                         </div>
                     </div>
-
                     <div class="field pw">
                         <label class="letter" for="pw"><span class="import">*</span>비밀번호</label>
                         <div class="entry">
-                            <input type="password" class="userpw" id="pw" placeholder="영문, 숫자 10~12자리 이내" maxlength="12" required>
+                            <input type="password" class="userpw" id="pw" placeholder="영문, 숫자 10-12자리 이내" maxlength="12" required>
                         </div>
                     </div>
-
                     <div class="field pw-confirm">
                         <label class="letter" for="pw_confirm"><span class="import">*</span>비밀번호 확인</label>
                         <div class="entry">
-                            <input type="password" class="userpw-confirm" id="pw_confirm" maxlength="12" placeholder="비밀번호를 한 번 더 입력">
+                            <input type="password" class="userpw-confirm" id="pw_confirm" maxlength="12">
                         </div>
                     </div>
-
-                    <div class="field tel-number">
+                    <!-- <div class="field tel-number">
                         <label class="letter" for="phone"><span class="import">*</span>휴대폰 번호</label>
                         <div class="entry">
                             <input type="tel" id="phone" placeholder="하이픈 없이 숫자만 입력해 주세요">
-                            <!-- <input type="text" value="인증완료" readonly> -->
                         </div>
-                    </div>
-                    
+                    </div> -->
                     <div class="field mail">
                         <label class="letter" for="mail"><span class="import">*</span>이메일</label>
                         <div class="entry">
                             <div class="write">
                                 <input type="email" id="mail"> 
-                                <span>@</span> 
+                                <span class="dot">@</span> 
                                 <input type="email" id="email_add" placeholder="직접 입력">
                             </div>
-                            <select id="email_sel" onchange="change_email();">
+                            <select id="email_sel" onchange="change_email()">
                                 <option>메일 선택</option>
                                 <option>naver.com</option>
                                 <option>gmail.com</option>
@@ -108,7 +101,6 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="field address">
                         <label class="letter"><span class="import">*</span>주소</label>
                         <div class="add entry" id="add">
@@ -125,18 +117,16 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="field gender">
                         <label class="letter">성별</label>
-                        <div class="entry">
+                        <div class="entry radio">
                             <label><input type="radio" name="gender" id="male">남자</label>
                             <label><input type="radio" name="gender" id="female">여자</label>
                         </div>
                     </div>
-
                     <div class="field agree">
                         <label class="letter">뉴스레터 수신동의</label>
-                        <div class="entry">
+                        <div class="entry radio">
                             <label><input type="radio" name="agree" id="agree">동의</label>
                             <label><input type="radio" name="agree" id="non_agree">비동의</label>
                             <p>※ 동의 거부 시 서비스가 제한이 될 수 있습니다.</p>

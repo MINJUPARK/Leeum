@@ -35,18 +35,18 @@
             <form action="#" method="post" name="join_cert">
                 <div class="text id">
                     <label for="name">이름</label>
-                    <input type="text" class="name" id="name" placeholder="이름을 입력해 주세요">  
+                    <input type="text" class="name" id="name" placeholder="이름을 입력하세요">  
                 </div>
                 <div class="text date">
-                    <label for="front">생년월일</label>
-                    <input type="number" class="front" id="front" placeholder="생년월일 6자리" maxlength="6" required>
+                    <label for="front">주민등록번호</label>
+                    <input type="number" class="front" id="front" placeholder="생년월일 6자리" maxlength="6" oninput="maxLengthCheck(this)" onkeyup="nextFocus(this, join_cert.back, 6)" required>
                     <span>-</span>
-                    <input type="number" class="back" id="back" maxlength="1" required>
-                    <span>●●●●●●</span>
+                    <input type="number" class="back" id="back" maxlength="1" oninput="maxLengthCheck(this)" required>
+                    <span class="hide">●●●●●●</span>
                 </div>
                 <div class="text phone-certify-name">
                     <label for="phone">휴대폰 인증</label>
-                    <select>
+                    <select class="telecom">
                         <option value="SKT">SKT</option>
                         <option value="KT">KT</option>
                         <option value="LG">LG</option>
@@ -56,13 +56,13 @@
                         <option value="011">011</option>
                     </select>
                     <span>-</span>
-                    <input type="tel" id="phone" maxlength="4" required>
+                    <input type="number" id="phone" maxlength="4" oninput="maxLengthCheck(this)" onkeyup="nextFocus(this, join_cert.phoneBack, 4)" required>
                     <span>-</span>
-                    <input type="tel" id="phoneBack" maxlength="4" required>
+                    <input type="number" id="phoneBack" maxlength="4" oninput="maxLengthCheck(this)" required>
                 </div>
             </form>
             <div class="submit">
-                <a><input type="submit" value="인증하기" onclick="certify()"></a>
+                <input type="submit" value="인증하기" onclick="certify()">
             </div>
         </div>
         <div class="movePage">

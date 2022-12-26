@@ -120,8 +120,13 @@ div.login {
                     text-align: left;
                     margin-bottom: 40px;
 
-                    .id-storage {
+
+                    input[type=checkbox] {
                         font-size: 15px;
+
+                        &:checked {
+                            border: 0;
+                        }
                     }
                 }
 

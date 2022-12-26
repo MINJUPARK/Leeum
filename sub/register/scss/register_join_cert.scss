@@ -5,14 +5,16 @@
 @import './register.scss';
 
 .container {
-
+    overflow-x: hidden;
+    
     div.join-info {
-        p {
-            text-align: center;
-            @include gothic-font(semibold, 15px);
-            margin-bottom: 20px;
-            margin-top: 100px;
+        margin-top: 120px;
 
+        p {
+            @include gothic_font(semibold, 20px);
+            text-align: center;
+            margin-bottom: 20px;
+            
             @include responsive(pc-screens) {
                 font-size: 28px;
                 margin-bottom: 40px;
@@ -20,8 +22,8 @@
         }
         form {
             @include out_container();
-            border-top: 2px solid #000;
-            border-bottom: 2px solid #000;
+            border-top: 2px solid $bk2;
+            border-bottom: 2px solid $bk2;
 
             @include responsive(pc-screens) {
                 @include in_container();
@@ -34,26 +36,23 @@
             }
 
             .text {
-                border-bottom: 1px solid #000;
+                padding: 15px 20px;
+                border-bottom: 1px solid $bk3;
                 &.id,
                 &.date,
                 &.phone-certify-name {
                     label {
-                        width: 19.71428571428571%;
-                        @include gothic-font(semibold, 13px);
+                        width: 25%;
+                        @include gothic-font(semibold);
         
                         @include responsive(pc-screens) {
-                            width: 14.28571428571429%;
-                        }
-
-                        @include responsive(pc-screens) {
-                            font-size: 22px;
+                            width: 15%;
+                            font-size: 18px;
                         }
                     }
-                    padding: 10px 20px;
 
                     @include responsive(pc-screens) {
-                        padding: 20px;
+                        padding: 15px;
                     }
         
                     &:last-child {
@@ -62,10 +61,11 @@
                     
                     select,
                     input {
-                        padding: 5px;
-                        font-size: 12px;
+                        padding: 8px;
+                        font-size: 16px;
 
                         @include responsive(pc-screens) {
+                            padding: 10px;
                             font-size: 18px;
                         }
                     }
@@ -89,10 +89,10 @@
 
                 &.date {
                     input {
-                        width: 23%;
+                        width: 31.25%;
         
                         @include responsive(pc-screens) {
-                            width: 11%;
+                            width: 12%;
                         }
                     } 
                     
@@ -103,23 +103,33 @@
                             width: 3%;
                         }
                     }
+
+                    .hide {
+                        margin-left: 5px;
+                        letter-spacing: 0.1em;
+                        color: $bk3;
+                    }
         
                 }
 
                 &.phone-certify-name {
+
                     select {
                         @include full_bg('icon_arrow_bk.svg', index);
                         background-position: right 5px center;
                         background-color: #fff;
                         background-size: 10px;
-                        width: 14%;
-                        border: 0;
+                        width: 15%;
                         background-color: $bk6;
-                        margin-right: 4px;
+                        border: 0;
 
-                        &:first-child {
-                            margin-right: 10px;
                             
+                        &.telecom {
+                            margin-right: 5px;
+
+                            @include responsive(pc-screens) {
+                                margin-right: 10px;
+                            }
                         }
                         
                         @include responsive(pc-screens) {
@@ -128,10 +138,11 @@
                     }
         
                     input {
-                        width: 14%;
+                        width: 15%;
         
                         @include responsive(pc-screens) {
                             width: 5%;
+                            
                         }
                     }
                 }
@@ -141,28 +152,26 @@
     }
     .submit {
         text-align: center;
-        input{
-            padding: 10px 15px;
+        a {
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 22px;
+            margin-top: 30px;
             border: 0;
             color: white;
             background-color: $dark-brown;
-            @include gothic-font(semibold, 12px);
+            @include gothic-font(medium, 16px);
     
             @include responsive(pc-screens) {
+                width: 10%;
+                padding: 15px 32px;
                 font-size: 16px;
-                padding: 10px 22px;
             }
         }
     }
-
-    // div.movePage {
-    //     @include move_page();
-    //     margin-left: 20px;
-    //     margin-right: 20px;
-        
-        
-    // }
-
     
     div.all {
 
@@ -225,11 +234,12 @@
                         
                         select,
                         input {
-                            padding: 5px;
-                            font-size: 12px;
-        
+                            padding: 8px;
+                            font-size: 16px;
+
                             @include responsive(pc-screens) {
-                                font-size: 20px;
+                                padding: 10px;
+                                font-size: 18px;
                             }
                         }
                         
@@ -271,14 +281,14 @@
         
                     &.phone-certify-name {
                         select {
+                            margin-right: 8px;
                             @include full_bg('icon_arrow_bk.svg', index);
                             background-position: right 5px center;
                             background-color: #fff;
                             background-size: 10px;
-                            width: 14%;
-                            border: 0;
+                            width: 15%;
                             background-color: $bk6;
-                            margin-right: 4px;
+                            border: 0;
         
                             &:first-child {
                                 margin-right: 10px;
@@ -298,7 +308,6 @@
                             }
                         }
                     }
-                    
                 }
             }  
         }
