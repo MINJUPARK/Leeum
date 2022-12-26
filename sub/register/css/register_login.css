@@ -293,7 +293,10 @@ input[type=number]::-webkit-inner-spin-button {
   .select ul.select {
     width: 40%;
     padding: 0;
+<<<<<<< HEAD
     top: 104px;
+=======
+>>>>>>> 2b6521d65ec4c6bde6d2f053ca81c1126ab4d88b
     right: 20px;
     left: inherit;
   }
