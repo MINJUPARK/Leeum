@@ -22,36 +22,9 @@ $(function() {
         adaptiveWidth: true,
         adaptiveHeight: true,
         autoplay: true,
-        infinite: true,
+        infinite: false,
         speed: 300,
     });
-
-    // $slideMain.on("afterChange", function (event, slick, currentSlide) {
-    //     $slideNav.slick("slickGoTo", currentSlide);
-    //     $slideNav.find(".slick-slide.is-active").removeClass("is-active");
-    //     $slideNav
-    //         .find('.slick-slide[data-slick-index="' + currentSlide + '"]')
-    //         .addClass("is-active");
-    // });
-
-    // $slideNav.on("init", function (event, slick) {
-    //     $(this).find(".slick-slide.slick-current").addClass("is-active");
-    // })
-    // .slick({
-	// 	slide: ".slide-item",
-	// 	slidesToShow: 3,
-	// 	slidesToScroll: 1,
-	// 	dots: false,
-	// 	focusOnSelect: false,
-	// 	infinite: true,
-	// });
-
-    // $slideNav.on("click", ".slick-slide", function (e) {
-    //     e.preventDefault();
-    //     var goToMainSlide = $(this).data("slick-index");
-    //     $slideMain.slick("slickGoTo", goToMainSlide);
-    // });
-
 
     $('.ehb-slider').slick({
         dots: true,
@@ -87,4 +60,7 @@ $(function() {
 
     $('.slick-cloned a').removeAttr('data-fancybox'); 
     $('.slick-cloned a').attr('data-fancybox-trigger', 'now');
+    $('.slick-cloned a').attr('data-fancybox-trigger', 'f0');
+    $('.slick-cloned a').attr('data-fancybox-trigger', 'f1');
+    $('.slick-cloned a').attr('data-fancybox-trigger', 'f2');
 })
