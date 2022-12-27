@@ -146,6 +146,11 @@ input[type=number]::-webkit-inner-spin-button {
         color: white;
         background-color: $dark-brown;
         @include gothic_font(medium, 16px);
+        transition: .3s;
+
+        &:hover {
+            box-shadow: rgb(172 63 33 / 30%) 0px 18px 25px -10px;
+        }
 
         @include responsive(pc-screens) {
             width: 10%;

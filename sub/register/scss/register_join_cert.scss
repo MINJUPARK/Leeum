@@ -113,10 +113,6 @@
 
                         &.front {
                             flex: 1;
-
-                            // @include responsive(tablet-screens) {
-                            //     flex: none;
-                            // }
                         }
         
                         @include responsive(pc-screens) {

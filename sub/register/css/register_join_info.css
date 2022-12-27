@@ -377,6 +377,10 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: #6e3b3b;
   font-size: 16px;
   font-weight: 500;
+  transition: 0.3s;
+}
+.submit input:hover {
+  box-shadow: rgba(172, 63, 33, 0.3) 0px 18px 25px -10px;
 }
 @media screen and (min-width: 1440px) {
   .submit input {
@@ -535,7 +539,7 @@ div.movePage .movePage-wrap a p {
 }
 @media screen and (min-width: 1440px) {
   .container .member form input {
-    font-size: 14px;
+    font-size: 18px;
     padding: 10px;
   }
 }
@@ -635,6 +639,7 @@ div.movePage .movePage-wrap a p {
     width: 45%;
     padding: 10px;
     margin-top: 0;
+    font-size: 18px;
     text-align: left;
   }
 }
@@ -685,6 +690,7 @@ div.movePage .movePage-wrap a p {
 @media screen and (min-width: 1440px) {
   .container .member form .field.address .add .flex .postcode {
     padding: 10px 0;
+    font-size: 16px;
   }
 }
 .container .member form .field.address .add .alone-add {
@@ -720,9 +726,10 @@ div.movePage .movePage-wrap a p {
 }
 .container .member form .field .entry.radio {
   justify-content: flex-start !important;
+  row-gap: 10px;
 }
 .container .member form .field .entry.radio label {
-  width: 25%;
+  width: 30%;
 }
 @media screen and (min-width: 490px) {
   .container .member form .field .entry.radio label {
@@ -754,6 +761,7 @@ div.movePage .movePage-wrap a p {
 }
 @media screen and (min-width: 1440px) {
   .container .member form .field .entry button {
+    font-size: 16px;
     padding: 10px 0;
   }
 }
@@ -781,7 +789,6 @@ div.movePage .movePage-wrap a p {
   border-bottom: 0;
 }
 .container .member form .field.agree .warning {
-  margin-top: 10px;
   font-size: 14px;
   font-weight: 400;
   color: #5c5c5c;
@@ -791,4 +798,4 @@ div.movePage .movePage-wrap a p {
     margin-top: 0;
     font-size: 15px;
   }
-}
+}/*# sourceMappingURL=register_join_info.css.map */

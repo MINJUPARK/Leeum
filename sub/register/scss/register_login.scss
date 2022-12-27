@@ -41,6 +41,7 @@ div.login {
                     height: 55px;
                     border-left: 1px solid $bk5;
                     border-bottom: 1px solid $bk5;
+                    
                     cursor: pointer;
 
                     span {
@@ -71,12 +72,12 @@ div.login {
                     &.on {
                         background-color: transparent;
                         border-bottom: 0;
-                        
                         &::after {
                             scale: 1;
                         }
                         
                         span {
+                            transition: .45s;
                             color: #000;
                             font-weight: 600;
                         }
@@ -102,6 +103,10 @@ div.login {
                     padding: 10px;
                     border-bottom: 1px solid $bk5;
 
+                    @include responsive(pc-screens) {
+                        font-size: 16px;
+                    }
+
                 }
                 .pwd-field {
                     margin-bottom: 0;
@@ -114,12 +119,19 @@ div.login {
                     color: white;
                     background-color: #000;
                     border: 0;
+                    transition: .3s;
+
+                    &:hover {
+                        box-shadow: rgb(0 0 0 / 30%) 0px 18px 25px -10px;
+                    }
+                    @include responsive(pc-screens) {
+                        font-size: 16px;
+                    }
                 }
 
                 .id-chk {
                     text-align: left;
                     margin-bottom: 40px;
-
 
                     input[type=checkbox] {
                         font-size: 15px;
@@ -128,13 +140,17 @@ div.login {
                             border: 0;
                         }
                     }
+
+                    label {
+                        font-size: 15px;
+                    }
                 }
 
                 .id-pw-join {
                     @include flex_between();
 
                     span {
-                        font-size: 14px;
+                        font-size: 14px;    
                     }
                 }
             }

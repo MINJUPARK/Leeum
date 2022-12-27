@@ -377,6 +377,10 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: #6e3b3b;
   font-size: 16px;
   font-weight: 500;
+  transition: 0.3s;
+}
+.submit input:hover {
+  box-shadow: rgba(172, 63, 33, 0.3) 0px 18px 25px -10px;
 }
 @media screen and (min-width: 1440px) {
   .submit input {
@@ -541,6 +545,7 @@ div.login .login-wrap .login-tab-form ul.login-select li.on::after {
   scale: 1;
 }
 div.login .login-wrap .login-tab-form ul.login-select li.on span {
+  transition: 0.45s;
   color: #000;
   font-weight: 600;
 }
@@ -562,6 +567,12 @@ div.login .login-wrap .login-tab-form .login-form .pwd-field {
   padding: 10px;
   border-bottom: 1px solid #d4d4d4;
 }
+@media screen and (min-width: 1440px) {
+  div.login .login-wrap .login-tab-form .login-form .text-field,
+div.login .login-wrap .login-tab-form .login-form .pwd-field {
+    font-size: 16px;
+  }
+}
 div.login .login-wrap .login-tab-form .login-form .pwd-field {
   margin-bottom: 0;
 }
@@ -573,6 +584,15 @@ div.login .login-wrap .login-tab-form .login-form .submit-btn {
   color: white;
   background-color: #000;
   border: 0;
+  transition: 0.3s;
+}
+div.login .login-wrap .login-tab-form .login-form .submit-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 25px -10px;
+}
+@media screen and (min-width: 1440px) {
+  div.login .login-wrap .login-tab-form .login-form .submit-btn {
+    font-size: 16px;
+  }
 }
 div.login .login-wrap .login-tab-form .login-form .id-chk {
   text-align: left;
@@ -584,10 +604,13 @@ div.login .login-wrap .login-tab-form .login-form .id-chk input[type=checkbox] {
 div.login .login-wrap .login-tab-form .login-form .id-chk input[type=checkbox]:checked {
   border: 0;
 }
+div.login .login-wrap .login-tab-form .login-form .id-chk label {
+  font-size: 15px;
+}
 div.login .login-wrap .login-tab-form .login-form .id-pw-join {
   display: flex;
   justify-content: space-between;
 }
 div.login .login-wrap .login-tab-form .login-form .id-pw-join span {
   font-size: 14px;
-}
+}/*# sourceMappingURL=register_login.css.map */

@@ -377,6 +377,10 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: #6e3b3b;
   font-size: 16px;
   font-weight: 500;
+  transition: 0.3s;
+}
+.submit input:hover {
+  box-shadow: rgba(172, 63, 33, 0.3) 0px 18px 25px -10px;
 }
 @media screen and (min-width: 1440px) {
   .submit input {
@@ -633,6 +637,7 @@ div.movePage .movePage-wrap a p {
   color: #3c3c3c;
   word-break: normal;
   white-space: pre-line;
+  will-change: scroll-position;
 }
 .all .container .agreeAll .join-term form .agr-plus .agr .agree-person {
   background-color: #f3f3f3;
@@ -693,4 +698,4 @@ div.movePage .movePage-wrap a p {
   .all .container .agreeAll .join-term form .agr-plus .agr .agree-person .second-pre {
     font-size: 20px;
   }
-}
+}/*# sourceMappingURL=register_join_terms.css.map */

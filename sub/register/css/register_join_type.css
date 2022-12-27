@@ -377,6 +377,10 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: #6e3b3b;
   font-size: 16px;
   font-weight: 500;
+  transition: 0.3s;
+}
+.submit input:hover {
+  box-shadow: rgba(172, 63, 33, 0.3) 0px 18px 25px -10px;
 }
 @media screen and (min-width: 1440px) {
   .submit input {
@@ -623,4 +627,4 @@ div.movePage .movePage-wrap a p {
 }
 .container .flex .type .button.family a button:hover {
   box-shadow: rgba(190, 106, 21, 0.5) 0px 18px 25px -10px;
-}
+}/*# sourceMappingURL=register_join_type.css.map */

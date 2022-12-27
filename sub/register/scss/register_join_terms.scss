@@ -160,6 +160,7 @@
                                     padding: 20px 55px;
                                     @include content_align(justify);
                                     white-space: pre-line;
+                                    will-change: scroll-position;
                                 }
                             }
         

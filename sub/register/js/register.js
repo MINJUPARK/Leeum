@@ -26,6 +26,8 @@ $(function() {
       if($this.parents('login')) {
           $all_tab.removeClass('on');
           $this.addClass('on');
+          $('#id').val('');
+          $('#pwd').val('');
       }
   });
   
@@ -147,6 +149,7 @@ function joinform_check() {
   var postcode = document.getElementById("postcode");
   var restAddress = document.getElementById("restAddress");
 
+  var emailIdCheck = /[`~!@#$%^&*|\\\'\";:\/?]/gi;
   var dateCheck = /^(?=.*[0-9]).{6}$/;
   var idCheck = /^(?=.*[a-zA-Z])(?=.*[0-6]).{5,12}$/;
   var pwCheck = /^(?=.*[a-zA-Z])(?=.*[0-9]).{10,12}$/;
@@ -180,12 +183,16 @@ function joinform_check() {
     alert("이메일 주소의 아이디를 입력하세요.");
     mail.focus();
     return false;
+  } else if(emailIdCheck.test(mail.value) == true) {
+    alert("이메일 주소의 아이디 형식이 옳지 않습니다.");
+    mail.focus();
+    return false;
   } else if (email_add.value == "") {
     alert("이메일 주소의 도메인을 입력하세요.");
     email_add.focus();
     return false;
   } else if (postcode.value == "") {
-    alert("주소를 입력하세요.");
+    alert("우편번호 찾기를 통해 주소를 입력하세요.");
     postcode.focus();
     return false;
   } else {
