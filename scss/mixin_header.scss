@@ -153,6 +153,7 @@
                                     right: 0;
                                     width: 220px;
                                     margin-top: 25px;
+                                    font-size: 15px;
                                     animation: stretch-w .5s;
 
                                     @keyframes stretch-w {
@@ -171,7 +172,8 @@
                 
                                     .search-btn {
                                         position: absolute;
-                                        top: 11px; right: 20px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
                                         width: 16px; height: 16px;
                                         background: url('/image/icon_search.svg') no-repeat center;
                                         border: 0;
