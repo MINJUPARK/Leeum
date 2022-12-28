@@ -777,10 +777,12 @@ main section.search-wrap .search-box .speed-search form[name=keyword] select {
 main section.search-wrap .search-box .speed-search form[name=keyword] input {
   width: 100%;
   padding: 0 20px;
+  font-size: 15px;
+  background-color: #fff;
 }
 @media screen and (min-width: 1440px) {
   main section.search-wrap .search-box .speed-search form[name=keyword] input {
-    width: 80%;
+    width: 85%;
     flex-wrap: nowrap;
   }
 }
