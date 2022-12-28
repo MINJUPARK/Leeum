@@ -767,6 +767,7 @@ main section.search-wrap .search-box .speed-search form[name=keyword] select {
   background-size: cover;
   width: 37%;
   padding: 0 20px;
+  font-size: 15px;
   background-position: right 20px center;
   background-size: 10px;
   background-color: #fff;
@@ -780,6 +781,8 @@ main section.search-wrap .search-box .speed-search form[name=keyword] select {
 main section.search-wrap .search-box .speed-search form[name=keyword] input {
   width: 60%;
   padding: 0 20px;
+  font-size: 15px;
+  background-color: #fff;
 }
 @media screen and (min-width: 1440px) {
   main section.search-wrap .search-box .speed-search form[name=keyword] input {
@@ -855,6 +858,9 @@ main section .list-control .sort {
 main section .list-control .sort img {
   height: 14px;
   margin-right: 10px;
+}
+main section .list-control .sort span {
+  color: #000;
 }
 @media screen and (min-width: 1440px) {
   main section .list-control .sort span, main section .list-control .sort img {

@@ -225,56 +225,6 @@ h6 {
 }
 
 /* -------------------------------------------------------------------------------------------------------------------- */
-.animate__duration-5ms {
-  --animate-duration: 500ms !important;
-  -webkit-animation-duration: 500ms;
-  animation-duration: 500ms;
-  -webkit-animation-duration: var(--animate-duration);
-  animation-duration: var(--animate-duration);
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animate__duration-15s {
-  --animate-duration: 1.5s !important;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-duration: var(--animate-duration);
-  animation-duration: var(--animate-duration);
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animate__delay-500ms {
-  --animate-delay: 500ms !important;
-  -webkit-animation-delay: 500ms;
-  animation-delay: 500ms;
-  -webkit-animation-delay: var(--animate-delay);
-  animation-delay: var(--animate-delay);
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animate__delay-1s {
-  --animate-delay: 1s !important;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  -webkit-animation-delay: var(--animate-delay);
-  animation-delay: var(--animate-delay);
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animate__delay-15s {
-  --animate-delay: 1.5s !important;
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
-  -webkit-animation-delay: var(--animate-delay);
-  animation-delay: var(--animate-delay);
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
 header {
   position: relative;
   height: 280px;
@@ -1164,6 +1114,10 @@ main section.infoBox .time-notice .tit .icon-box img {
   }
 }
 main section.infoBox .time-notice .des {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
   width: 70%;
   white-space: nowrap;
 }
@@ -1182,7 +1136,7 @@ main section.infoBox .time-notice .des time {
   }
 }
 main section.infoBox .time-notice .des .memo {
-  margin-left: 10px;
+  flex: 1;
   font-size: 14px;
   color: #5c5c5c;
 }
@@ -2523,4 +2477,54 @@ footer #banner-box {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.animate__duration-5ms {
+  --animate-duration: 500ms !important;
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-duration: var(--animate-duration);
+  animation-duration: var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__duration-15s {
+  --animate-duration: 1.5s !important;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: var(--animate-duration);
+  animation-duration: var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__delay-500ms {
+  --animate-delay: 500ms !important;
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__delay-1s {
+  --animate-delay: 1s !important;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__delay-15s {
+  --animate-delay: 1.5s !important;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }/*# sourceMappingURL=index.css.map */

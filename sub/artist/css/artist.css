@@ -923,6 +923,7 @@ main section.filter .filter-wrap .speed-search form[name=keyword] select {
   background-size: cover;
   width: 37%;
   padding: 0 20px;
+  font-size: 15px;
   background-position: right 20px center;
   background-size: 10px;
   background-color: #fff;
@@ -936,6 +937,8 @@ main section.filter .filter-wrap .speed-search form[name=keyword] select {
 main section.filter .filter-wrap .speed-search form[name=keyword] input {
   width: 60%;
   padding: 0 20px;
+  font-size: 15px;
+  background-color: #fff;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .speed-search form[name=keyword] input {
@@ -975,9 +978,10 @@ main section.filter .filter-wrap .detail-search-wrap .ds-btn {
   display: block;
   width: 100%;
   margin-bottom: 20px;
-  text-align: center;
   font-size: 14px;
   font-weight: 500;
+  text-align: center;
+  color: #000;
 }
 @media screen and (min-width: 1440px) {
   main section.filter .filter-wrap .detail-search-wrap .ds-btn {
@@ -986,6 +990,7 @@ main section.filter .filter-wrap .detail-search-wrap .ds-btn {
   }
 }
 main section.filter .filter-wrap .detail-search-wrap .ds-btn span {
+  color: #000;
   vertical-align: initial;
 }
 main section.filter .filter-wrap .detail-search-wrap .ds-btn img {
@@ -1265,6 +1270,9 @@ main section.artistList .list-control .sort {
 main section.artistList .list-control .sort img {
   height: 14px;
   margin-right: 10px;
+}
+main section.artistList .list-control .sort span {
+  color: #000;
 }
 @media screen and (min-width: 1440px) {
   main section.artistList .list-control .sort span, main section.artistList .list-control .sort img {

@@ -819,6 +819,7 @@ h6 {
   }
 }
 .slide-in main section.intro-mission-wrap .mission .mission-txt p {
+  text-align: justify;
   margin-top: 30px;
 }
 @media screen and (min-width: 1440px) {

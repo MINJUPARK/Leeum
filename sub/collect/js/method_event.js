@@ -30,7 +30,7 @@ function methodEvent() {
             method[i].classList.remove("border-effect", "opacity");
 
             if(method[0].querySelector('.step-title')) {
-                method[i].nextElementSibling.classList.remove("on");
+                // method[i].nextElementSibling.classList.remove("on");
             }
         }
     }

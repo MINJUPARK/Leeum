@@ -6,7 +6,8 @@
 
 div.login {
     @include element_center();
-
+    width: 100%;
+    
     @media screen and(min-width:391px) {
         width: 450px;
     }

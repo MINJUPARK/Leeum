@@ -846,6 +846,9 @@ main section.itemList-wrap .itemList .list-control .sort img {
   height: 14px;
   margin-right: 10px;
 }
+main section.itemList-wrap .itemList .list-control .sort span {
+  color: #000;
+}
 @media screen and (min-width: 1440px) {
   main section.itemList-wrap .itemList .list-control .sort span, main section.itemList-wrap .itemList .list-control .sort img {
     display: none;

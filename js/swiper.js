@@ -1,7 +1,8 @@
+// *_detail : 탈그리드 아이템 슬라이드
 $(function() {
 
     var swiper;
-    // *_detail : 탈그리드 아이템 슬라이드
+    
     $(window).on('load resize', function() {
 
         swiper = new Swiper(".mySwiper", {
