@@ -232,14 +232,15 @@
             position: absolute;
             left: 0; top: 0;
             width: 85%; height: 100vh;
-            background: #000;
+            background: $bk6;
     
             .bk-menu {
                 @include flex_between();
                 align-items: flex-start;
                 flex-wrap: wrap;
-                height: 20%;
+                height: 180px;
                 padding: 30px 5% 0 5%;
+                background: #000;
     
                 .logo {
                     width: 90px;
@@ -286,9 +287,7 @@
                 }
             }
             .wh-menu {
-                position: absolute;
-                bottom: 0;
-                width: 100%; height: 80%;
+                width: 100%; height: calc(100% - 180px);
                 background: #fff;
                 overflow-y: auto;
     

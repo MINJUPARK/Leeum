@@ -542,15 +542,16 @@ h6 {
   top: 0;
   width: 85%;
   height: 100vh;
-  background: #000;
+  background: #f3f3f3;
 }
 .slide-in header .mobile-menu-popup .popup .bk-menu {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  height: 20%;
+  height: 180px;
   padding: 30px 5% 0 5%;
+  background: #000;
 }
 .slide-in header .mobile-menu-popup .popup .bk-menu .logo {
   width: 90px;
@@ -595,10 +596,8 @@ h6 {
   border: 0;
 }
 .slide-in header .mobile-menu-popup .popup .wh-menu {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 80%;
+  height: calc(100% - 180px);
   background: #fff;
   overflow-y: auto;
 }
