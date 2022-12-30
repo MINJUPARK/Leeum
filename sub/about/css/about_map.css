@@ -531,6 +531,7 @@ header .mobile-menu-popup .popup .bk-menu .search-box .search {
   height: 40px;
   padding: 0 50px 0 30px;
   text-align: center;
+  font-size: 16px;
   border-radius: 50px;
   border: 0;
 }
@@ -546,6 +547,7 @@ header .mobile-menu-popup .popup .bk-menu .search-box .search-btn {
 header .mobile-menu-popup .popup .wh-menu {
   width: 100%;
   height: calc(100% - 180px);
+  padding-bottom: 120px;
   background: #fff;
   overflow-y: auto;
 }
