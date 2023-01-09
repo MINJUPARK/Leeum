@@ -1091,6 +1091,8 @@ main .r-d .request {
   main .r-d .request:hover {
     color: #fff;
     background-color: #be6a15;
+    box-shadow: rgba(190, 106, 21, 0.5) 0px 18px 25px -10px;
+    transition: all 0.4s;
   }
 }
 main .r-d .request-desc .content span {

@@ -187,6 +187,8 @@ main {
                 &:hover {
                     color: #fff;
                     background-color: $yellow-brown;
+                    box-shadow: rgb(190 106 21 / 50%) 0px 18px 25px -10px;
+                    transition: all 0.4s;
                 }
             }
         }
