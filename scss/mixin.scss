@@ -248,6 +248,7 @@
             @include full_bg('icon_arrow_bk.svg', index);
             width: 37%;
             padding: 0 20px;
+            font-size: 15px;
             background: {
                 position: right 20px center;
                 size: 10px;
@@ -263,6 +264,8 @@
         input {
             width: 60%;
             padding: 0 20px;
+            font-size: 15px;
+            background-color: #fff;
             @include responsive(pc-screens) {
                 width: 67.24137931034483%;
                 flex-wrap: nowrap;
@@ -404,8 +407,9 @@
         display: block;
         width: 100%;
         margin-bottom: 20px;
-        text-align: center;
         @include gothic_font(medium, 14px);
+        text-align: center;
+        color: #000;
 
         @include responsive(pc-screens) {
             margin-bottom: 40px;
@@ -413,6 +417,7 @@
         }
         
         span {
+            color: #000;
             vertical-align: initial;
         }
         
@@ -946,6 +951,10 @@
         img { 
             height: 14px; 
             margin-right: 10px; 
+        }
+
+        span {
+            color: #000;
         }
 
         @include responsive(pc-screens) {

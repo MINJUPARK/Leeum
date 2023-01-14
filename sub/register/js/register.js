@@ -41,7 +41,7 @@ $(function() {
   }
   $('.agr .plus').on('click', dropdown);
 
-  $('.agr-whole').on(click, "#tot-storage", function() {
+  $('.agr-whole').on('click', "#tot-storage", function() {
       var checked = $(this).is(":checked");
       if(checked){
           $(this).parents(".agr-whole").find('input').prop("checked", true);

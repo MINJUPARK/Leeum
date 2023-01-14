@@ -197,9 +197,10 @@ main {
                     background-color: transparent;
                     
                     &:hover {
-                        background-color: #be6a15;
                         color: white;
-                        transition: background 0.8s;
+                        background-color: #be6a15;
+                        box-shadow: rgb(190 106 21 / 50%) 0px 18px 25px -10px;
+                        transition: all 0.4s;
                         img{
                             filter:none;
                         }
@@ -210,6 +211,7 @@ main {
                     height:20px;
                     margin-top: 1px;
                     margin-right: 5px;
+                    transition: all 0.8s;
 
                     @include responsive(pc-screens){
                         filter:$svg-yellowbrown;  

@@ -162,16 +162,16 @@
 
                                     .searchbar {
                                         width: 100%; height: 40px;
-                                        font-size: 10px;
                                         padding: 0 40px 0 20px;
-                                        border-radius: 50px;
+                                        font-size: 15px;
                                         border: 0;
-                                        
+                                        border-radius: 50px;
                                     }
                 
                                     .search-btn {
                                         position: absolute;
-                                        top: 11px; right: 20px;
+                                        top: 50%; right: 20px;
+                                        transform: translateY(-50%);
                                         width: 16px; height: 16px;
                                         background: url('/image/icon_search.svg') no-repeat center;
                                         border: 0;
@@ -232,15 +232,16 @@
             position: absolute;
             left: 0; top: 0;
             width: 85%; height: 100vh;
-            background: #000;
+            background: $bk6;
     
             .bk-menu {
                 @include flex_between();
                 align-items: flex-start;
                 flex-wrap: wrap;
-                height: 20%;
+                height: 180px;
                 padding: 30px 5% 0 5%;
-    
+                background: #000;
+
                 .logo {
                     width: 90px;
                     padding-top: 5px;
@@ -272,6 +273,7 @@
                         width: 100%; height: 40px;
                         padding: 0 50px 0 30px;
                         text-align: center;
+                        font-size: 16px;
                         border-radius: 50px;
                         border: 0;
                     }
@@ -286,9 +288,8 @@
                 }
             }
             .wh-menu {
-                position: absolute;
-                bottom: 0;
-                width: 100%; height: 80%;
+                width: 100%; height: calc(100% - 180px);
+                padding-bottom: 120px;
                 background: #fff;
                 overflow-y: auto;
     

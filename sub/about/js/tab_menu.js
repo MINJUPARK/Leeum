@@ -54,6 +54,12 @@ $(function() {
             $this.parent().addClass('on');
             $tab_contents.hide();
             $(id).show();
+
+            if($('footer').hasClass('facility')) {
+                if(id == '#facility' || id == '#renewal') {
+                    $('footer').css('margin-top', '0');
+                }
+            }
         } else {
             $all_tab_nav.removeClass('on');
             $this.parent().addClass('on');

@@ -42,7 +42,7 @@ main {
     .img-text {
         position: relative;
         width: 100%;
-        margin: 40px auto 30px;
+        margin: 40px auto 20px;
         overflow: hidden;
         
         @include responsive(pc-screens) {
