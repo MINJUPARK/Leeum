@@ -131,7 +131,7 @@ $(function() {
       dots: true,
       infinite: true,
       touchThreshold : 100,
-      autoplay: false,
+      autoplay: true,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll: 1,
