@@ -1730,29 +1730,10 @@ main section.program .prg-slider .slide-wrap .slide-item {
 }
 main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-pic {
   opacity: 1;
-  transition-delay: 0.3s;
 }
 main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-con > * {
   opacity: 1;
   transform: none;
-}
-main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-con > *:nth-child(1) {
-  transition-delay: 0.3s;
-}
-main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-con > *:nth-child(2) {
-  transition-delay: 0.4s;
-}
-main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-con > *:nth-child(3) {
-  transition-delay: 0.5s;
-}
-main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-con > *:nth-child(4) {
-  transition-delay: 0.6s;
-}
-main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-con > *:nth-child(5) {
-  transition-delay: 0.7s;
-}
-main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-con > *:nth-child(6) {
-  transition-delay: 0.8s;
 }
 main section.program .prg-slider .slide-wrap .slide-item .slide-pic {
   position: relative;
@@ -2528,4 +2509,4 @@ footer #banner-box {
   animation-delay: var(--animate-delay);
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}/*# sourceMappingURL=index.css.map */
+}
