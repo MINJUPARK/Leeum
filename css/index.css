@@ -1733,7 +1733,6 @@ main section.program .prg-slider .slide-wrap .slide-item {
 }
 main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-pic {
   opacity: 1;
-  transition-delay: 0.3s;
 }
 main section.program .prg-slider .slide-wrap .slide-item.swiper-slide-active .slide-con > * {
   opacity: 1;
