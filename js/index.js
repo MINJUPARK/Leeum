@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(function() {
     
     $(window).on('scroll', function() {
@@ -13,14 +12,6 @@ $(function() {
         setVisible($('section.artist'), 'fadeInUp animate__delay-500ms');
     })
 })
-=======
-const video = document.querySelector(".video"); 
-if(video.paused){ 
-    setTimeout(function(){ 
-        video.play();  
-    }, 2000);
-}
->>>>>>> 9eac45eca6b19325d4451d891fcfce8508967433
 
 function setVisible(target, animate) {
     var stdPos = $(window).scrollTop() + $(window).height();
