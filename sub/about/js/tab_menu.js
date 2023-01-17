@@ -58,6 +58,8 @@ $(function() {
             if($('footer').hasClass('facility')) {
                 if(id == '#facility' || id == '#renewal') {
                     $('footer').css('margin-top', '0');
+                } else {
+                    $('footer').css('margin-top', '-450px');
                 }
             }
         } else {
@@ -80,6 +82,7 @@ $(function() {
         $(`[href='#${hash[1]}']`).parent().addClass('on');
         $('.tab-con').find('.con-box').hide();
         $('.tab-con').find(`#${hash[1]}`).show();
+        $('.facility').css('margin-top', '0');
     }
 })
 

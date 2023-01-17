@@ -64,6 +64,9 @@ a {
   color: #000;
 }
 
+header a, footer a {
+  transition: 0.3s;
+}
 header a:hover, footer a:hover {
   font-weight: bold;
 }
@@ -222,4 +225,4 @@ h5 {
 
 h6 {
   font-size: 18px;
-}/*# sourceMappingURL=common.css.map */
+}

@@ -64,6 +64,9 @@ a {
   color: #000;
 }
 
+header a, footer a {
+  transition: 0.3s;
+}
 header a:hover, footer a:hover {
   font-weight: bold;
 }
@@ -2109,4 +2112,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright p {
   footer {
     margin-top: -450px;
   }
-}/*# sourceMappingURL=about_facility.css.map */
+}

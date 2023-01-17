@@ -1,7 +1,7 @@
 const method = document.querySelectorAll('.method-list > li');
 
 if(method[0].querySelector('.step-title')) {
-    for ( i = 0; i < method.length - 1; i++) {
+    for (i = 0; i < method.length - 1; i++) {
         let arrow = document.createElement('img');
         arrow.classList.add('arrow');
         arrow.setAttribute('src', '../../image/icon_arrow_thin.svg');
@@ -16,11 +16,11 @@ let boxTop;
 let boxBottom;
 
 function methodEvent() {
-    for ( i = 0; i < method.length; i++) {
+    for (i = 0; i < method.length; i++) {
         boxTop = method[i].getBoundingClientRect().top;
         boxBottom = method[i].getBoundingClientRect().bottom;
 
-        if( boxTop < vh07 && boxBottom >= vh03) {
+        if(boxTop < vh07 && boxBottom >= vh03) {
             method[i].classList.add("border-effect", "opacity");
 
             if(method[0].querySelector('.step-title')) {
@@ -28,10 +28,6 @@ function methodEvent() {
             }
         } else {
             method[i].classList.remove("border-effect", "opacity");
-
-            if(method[0].querySelector('.step-title')) {
-                // method[i].nextElementSibling.classList.remove("on");
-            }
         }
     }
 }

@@ -325,9 +325,13 @@ main {
                 transition: all .3s;
 
                 &:hover {
-                    color: #fff;
-                    border: 1px solid $yellow-brown;
+                    color: white;
                     background-color: $yellow-brown;
+                    box-shadow: rgb(190 106 21 / 50%) 0px 18px 25px -10px;
+                    transition: all 0.4s;
+                    img{
+                        filter:none;
+                    }
                 }
             }
         }

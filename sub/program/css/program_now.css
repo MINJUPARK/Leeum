@@ -64,6 +64,9 @@ a {
   color: #000;
 }
 
+header a, footer a {
+  transition: 0.3s;
+}
 header a:hover, footer a:hover {
   font-weight: bold;
 }
@@ -1138,9 +1141,13 @@ main .img-explain-date-register .explain-date-register .request {
   transition: all 0.3s;
 }
 main .img-explain-date-register .explain-date-register .request:hover {
-  color: #fff;
-  border: 1px solid #be6a15;
+  color: white;
   background-color: #be6a15;
+  box-shadow: rgba(190, 106, 21, 0.5) 0px 18px 25px -10px;
+  transition: all 0.4s;
+}
+main .img-explain-date-register .explain-date-register .request:hover img {
+  filter: none;
 }
 main section.filter {
   background: #f3f3f3;
@@ -1852,4 +1859,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   letter-spacing: -0.02em;
   opacity: 0.7;
-}/*# sourceMappingURL=program_now.css.map */
+}

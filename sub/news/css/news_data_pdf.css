@@ -64,6 +64,9 @@ a {
   color: #000;
 }
 
+header a, footer a {
+  transition: 0.3s;
+}
 header a:hover, footer a:hover {
   font-weight: bold;
 }
@@ -1023,9 +1026,10 @@ main section .flex .workbook .text-pdf .down-img a {
   transition: all 0.3s;
 }
 main section .flex .workbook .text-pdf .down-img a:hover {
-  color: #fff;
+  color: white;
   background: #6e3b3b;
-  border: 1px solid #6e3b3b;
+  box-shadow: rgba(110, 59, 59, 0.5) 0px 18px 25px -10px;
+  transition: all 0.4s;
 }
 main section .flex .workbook .text-pdf .down-img a:nth-child(2) {
   margin-top: 15px;
@@ -1034,6 +1038,9 @@ main section .flex .workbook .text-pdf .down-img a img {
   display: none;
   height: 12px;
   margin-right: 6px;
+}
+main section .flex .workbook .text-pdf .down-img a img:hover {
+  filter: none;
 }
 @media screen and (min-width: 400px) {
   main section .flex .workbook .text-pdf .down-img a img {
@@ -1393,4 +1400,4 @@ footer .leeum-info-wrap .leeum-info .sns-copyright p {
   font-size: 12px;
   letter-spacing: -0.02em;
   opacity: 0.7;
-}/*# sourceMappingURL=news_data_pdf.css.map */
+}

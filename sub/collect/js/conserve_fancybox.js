@@ -18,7 +18,7 @@ $(function() {
     }
     
     let $fancybox;
-    // removeFancyBox();
+    
     $(window).on({
         resize : function() {
             clearTimeout($fancybox);
